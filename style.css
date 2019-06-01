@@ -244,12 +244,10 @@ nav a:hover:after {
 
 
 #mockupbox {
-	display: block;
 	position: relative;
 }
 
 #mockup {
-	display: block;
 	width: 100%;
 }
 
@@ -257,20 +255,13 @@ nav a:hover:after {
 	z-index: 10;
 	position: absolute;
 	width: 76%;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 3.5%;
-	left: 12%;
 	top: 0;
-	
+	left: 12%;
 }
 
 #screen {
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0
 }
 
 
