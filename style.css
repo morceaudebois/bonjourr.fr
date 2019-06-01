@@ -1,0 +1,460 @@
+@font-face {
+    font-family: 'sf_pro_displaylight';
+    src: url('src/fonts/sf-pro-display-light-webfont.woff2') format('woff2'),
+         url('src/fonts/sf-pro-display-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_pro_displaythin';
+    src: url('src/fonts/sf-pro-display-thin-webfont.woff2') format('woff2'),
+         url('src/fonts/sf-pro-display-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	margin: 0;
+    cursor: default;
+    background: #666;
+    color: white;
+    text-shadow: 0 1px 15px rgba(0,0,0,0.5);
+
+	font-family: sf_pro_displaythin;
+	font-size: 16px;
+}
+
+* {
+	transition: all .2s;
+}
+
+.background {
+	z-index: -1;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("src/images/avi-richards-beach.jpg");
+	background-size: cover;
+	background-position: center center;
+
+	filter: blur(30px);
+	transform: scale(1.1); 
+}
+
+p {
+	text-align: justify;
+	margin: 0;
+
+	font-size: 1.5em;
+	color: white;
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+	margin: 0;
+}
+
+h1 {
+	font-size: 6em;
+}
+
+.section_title {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 1.9em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+a, a:hover {
+	text-decoration: none!important;
+	color: white;
+}
+
+
+
+hr {
+	color: white;
+	border-bottom: 0;
+	border-top: 1px solid white;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+/*Vertical and horizontal centering*/
+.flex_center {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mockup {
+	height: 50vh;
+	background-image: url('src/images/mockup.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#fakediv {
+	opacity: 0;
+}
+
+.browser_icon {
+	max-width: 50%;
+	padding-bottom: 1.5vh;
+}
+
+.browser_link {
+	padding: 1.5em;
+	border-radius: 15px;
+}
+
+.browser_link:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+nav ul li {
+	width: 25%;
+}
+
+nav a {
+	display: block;
+	padding: 15px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.nav_center {
+	width: 100%;
+	margin: auto;
+}
+
+/*Underline animation*/
+nav a {
+  display: block;
+}
+
+nav a:after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 300ms;
+}
+
+nav a:hover:after {
+  width: 100%;
+}
+
+.signature {
+	position: relative;
+	top: 7em;
+	padding-bottom: 4em;
+	color: white;
+	font-size: .7em;
+}
+
+.signature p {
+	text-align: center;
+}
+
+.signature a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: white;
+}
+
+
+
+/*Flex responsive*/
+.content {
+	max-width: 80%;
+	margin: auto;
+	padding-right: 3%;
+	padding-left: 3%;
+}
+
+.centercontent {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#content70 {
+	width: 70%;
+	margin: auto;
+	margin-top: 4vh;
+}
+
+.Grid {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.Grid-cell {
+	flex: 1;
+}
+
+.Grid--cols-3 > .Grid-cell {
+ 	flex: 0 0 100%;
+}
+
+.Grid--1of3 > .Grid-cell:first-of-type {
+ 	flex: 0 0 100%;
+}
+
+@media (min-width: 30em) {
+ 	.Grid--1of3 > .Grid-cell:first-of-type {
+    	flex: 0 0 100%;
+	}
+}
+
+@media (min-width: 48em) {
+	.Grid--cols-3 > .Grid-cell {
+		flex: 1;
+	}
+
+	.Grid--1of3 > .Grid-cell:first-of-type {
+		flex: 0 0 30%;
+	}
+}
+
+
+#mockupbox {
+	display: block;
+	position: relative;
+}
+
+#mockup {
+	position: absolute;
+	display: block;
+	width: 100%;
+}
+
+#videobox {
+	z-index: 10;
+	position: absolute;
+	width: 76%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3.5%;
+	left: 0;
+	right: 0;
+	
+}
+
+#screen {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0
+}
+
+
+@media screen and (max-width: 1440px) {
+	h1 {
+		font-size: 5em	}
+
+	h3 {
+		font-size: 1.3em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+	}
+
+	.browser_icon {
+		max-width: 40%;
+		padding-bottom: 1.5vh;
+	}
+
+	hr {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.mockup {
+		height: 50vh;
+	}
+
+	.buttons {
+		width: 95%!important;
+	}
+}
+
+@media screen and (max-width: 753px) {
+	#mail, #nom, #objet {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.mockup {
+		margin-top: 3vh;
+		height: 20em;
+	}
+
+	nav ul li {
+		width: 100%;
+	}
+
+	.content {
+    	max-width: 90%;
+    	padding-top: 1.5em;
+	}
+
+	.buttons {
+		width: 100%!important;
+		font-size: .6em;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.mockup {
+		margin-top: 3vh;
+		height: 15em;
+	}
+
+	.centercontent {
+		height: 1150px!important;
+	}
+}
+
+/*Bootstrap correction*/
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+
+
+
+
+
+
+/* Beautiful contact form */
+
+.inputfield {
+	height: 3em;
+	margin-bottom: 1em;
+}
+
+textarea {
+	height: 10em;
+	padding-top: 0.6em;
+	min-height:5em;
+}
+
+.inputfield, textarea {
+	width: 100%;
+	border: none;
+	border-radius: 7px;
+	background-color: #F9F9F9;
+	transition: background-color 0.3s;
+	font-size: 1.3em;
+	padding-left: 1em;
+	color: #292b2c;
+}
+
+textarea:focus, .inputfield:focus {
+	background-color: #F1F1F1;
+	outline: none;
+}
+
+#nom {
+	padding-left: 0;
+}
+
+#objet {
+	padding-right: 0;
+}
+
+/* Send button */
+
+#Envoyer {
+	background-color: Transparent;
+	border: none;
+	cursor: pointer;
+	color: white;
+	background-color: none;
+
+    border-radius: 5px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 0.6em;
+    font-size: 1.5em;
+}
+
+#Envoyer:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+/*Donate section*/
+.donate_button {
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	height: 3.45em;
+	width: 15em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttons {
+	margin: auto;
+	width: 65%;
+	display: flex;
+	justify-content: space-around;
+}
+
+#paypal {
+	background: #ffc439;
+	margin-right: 1em;
+}
+
+#paypal:hover, #crypto:hover {
+	filter: brightness(0.85);
+}
+
+#paypal img {
+	height: 60%;
+}
+
+#crypto {
+	background: linear-gradient(to bottom right, #126eb9, #147fd5);
+	margin-left: 1em
+}
