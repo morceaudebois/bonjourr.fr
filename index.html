@@ -11,17 +11,19 @@
 
 </head>
 <body>
-<!-- 	<video class="aligncenter" style="padding: 0; width: 650px; height: 271px;" autoplay="autoplay" loop="loop" muted="muted" width="650" height="271"><source type="video/mp4" src="src/images/notagif.mp4"></video>
- -->
 
 	<div class="background"></div>
+
 	<div class="centercontent">
 		<div class="content">
 
 			<div class="row">
-				<div class="col-md-4">
-					<h1>Bonjourr</h1>
-					<h3>iOS 12 inspired startpage for your browser</h3>
+				<div class="col-md-4" id="titleparent">
+					<div id="title">
+						<img src="src/images/BonjourrIcon.png" id="icon">
+						<h1>Bonjourr</h1>
+						<h3>iOS 12 inspired startpage for your browser</h3>
+					</div>
 				</div>
 				<div class="col-md-8">
 					<div id="mockupbox">
@@ -65,26 +67,21 @@
 							</div>
 						</a>
 					</div>
-					
 				</div>
-
 			<hr>
 			<nav>
-				<ul>
-					<li><div class="nav_center"><a href="#">Donate</a></div></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Privacy</a></li>
-					<li><a href="#">GitHub</a></li>
-				</ul>
+					<div class="nav_center">
+						<a href="#donate">Donate</a>
+						<a href="#contact">Contact</a>
+						<a href="#privacy">Privacy</a>
+						<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
+					</div>
 			</nav>
 			</div>
-		
-			
 		</div>
-	
 	</div>
 
-	<div class="contact">
+	<div id="contact">
 		<h2 class="section_title">Contact</h2>
 
 		<form id="contactform" method="POST" action="/formulaire.php" class="col-md-8 offset-md-2">
@@ -124,15 +121,17 @@
 		<div class="col-md-8 offset-md-2">
 			<h2 class="section_title">Donate</h2>
 			<p>If you want to support our work, you can spread the word to your friends about Bonjourr or donate via the buttons below.</p>
-			<br>
+			<br style="opacity: 0;">
 			
 			<div class="buttons">
 				<div class="donate_button" id="paypal">
 					<img src="src/images/paypal.svg">
 				</div>
-				<div class="donate_button" id="crypto">
-					<p>Donate with Crypto</p>
-				</div>
+				<a href="https://commerce.coinbase.com/checkout/cb334f57-c5eb-48e5-9204-92c8c43af001">
+					<div class="donate_button" id="crypto">
+						<p>Donate with Crypto</p>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
