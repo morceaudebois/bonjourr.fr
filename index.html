@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bonjourr website</title>
+	<title>Bonjourr Startpage</title>
+	<link rel="icon" href="src/images/BonjourrIcon.png" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="src/scripts/jquery-3.4.1.min.js"></script>
@@ -22,7 +23,7 @@
 					<div id="title">
 						<img src="src/images/BonjourrIcon.png" id="icon">
 						<h1>Bonjourr</h1>
-						<h3>iOS 12 inspired startpage for your browser</h3>
+						<h3>Customizable startpage for your browser inspired by iOS</h3>
 					</div>
 				</div>
 				<div class="col-md-8">
@@ -38,32 +39,32 @@
 			<div id="content70">
 				<div class="Grid Grid--gutters Grid--cols-3">
 					<div class="Grid-cell">
-						<a href="#">
+						<a href="https://bonjourr.fr/bonjourr_firefox.xpi">
 							<div class="browser_link content-1of3">
 								<div class="flex_center">
 									<img src="src/images/firefox.png" href="firefox_icon" class="browser_icon">
 								</div>
-								<h4>Download for Firefox</h4>
+								<h4>Download beta for Firefox</h4>
 							</div>
 						</a>
 					</div>
 					<div class="Grid-cell">
-						<a href="#">
+						<a href="#useinsafari">
 							<div class="browser_link content-1of3">
 								<div class="flex_center">
 									<img src="src/images/safari.png" href="safari_icon" class="browser_icon">
 								</div>
-								<h4>Download for Safari</h4>
+								<h4>Use in Safari</h4>
 							</div>
 						</a>
 					</div>
 					<div class="Grid-cell">
-						<a href="#">
+						<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
 							<div class="browser_link content-1of3">
 								<div class="flex_center">
 									<img src="src/images/chrome.png" href="chrome_icon" class="browser_icon">
 								</div>
-								<h4>Download for Chrome</h4>
+								<h4>Download beta for Chrome</h4>
 							</div>
 						</a>
 					</div>
@@ -71,13 +72,32 @@
 			<hr>
 			<nav>
 					<div class="nav_center">
-						<a href="#donate">Donate</a>
+						<a href="#tips">Tips</a>
 						<a href="#contact">Contact</a>
+						<a href="#donate">Donate</a>
 						<a href="#privacy">Privacy</a>
 						<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
+						<a href="https://bonjourr.fr/online">Online</a>
 					</div>
 			</nav>
 			</div>
+		</div>
+	</div>
+
+	<div id="useinsafari" class="row">
+		<div class="col-md-8 offset-md-2">
+			<h2 class="section_title">Use in Safari</h2>
+			<p>Since Bonjourr is an open source project made during our free time, our budget is limited. Unfortunately, Apple requires developers to pay if they want to publish a Safari extension, which we don't want to do as of right now. You can still use Bonjourr in Safari by following the steps below.</p><br>
+		
+			<p><span class="bolder">1.</span> Download <a href="https://bonjourr.fr/bonjourr.zip">here</a> and unzip the Bonjourr package.<br><span class="bolder">2.</span> Place the Bonjourr folder in a location you'll remember, for example your Documents folder.<br><span class="bolder">3.</span> Open the preferences in Safari. In the <i>General</i> menu, set the <i>New windows open with</i> and <i>New tabs open with</i> options to <i>Homepage</i>.<br><span class="bolder">4a</span> Then, set the homepage path below to the location of index.html in the Bonjourr folder. For example, if you previously put it in your Documents folder, the path will be<code>file:///Users/username/Documents/Bonjourr/index.html</code>. Don't forget to change <code>username</code>in the path with your profile's username.<br><span class="bolder">4b</span>. Or, if you want, you can also use the online version of Bonjourr (<code>https://bonjourr.fr/online</code>) in place of the local path. You'll get the automatic updates, but you will lose speed and offline access.</p>
+
+		</div>
+	</div>
+
+	<div id="tips" class="row">
+		<div class="col-md-8 offset-md-2">
+			<h2 class="section_title">Tips</h2>
+			<p>Tip #1 · Just like on iOS, you can click and hold on a quick link icon to delete it.</p>
 		</div>
 	</div>
 
@@ -110,13 +130,6 @@
 		</form>
 	</div>
 
-	<div id="privacy" class="row">
-		<div class="col-md-8 offset-md-2">
-			<h2 class="section_title">Privacy</h2>
-			<p>Bonjourr doesn't collect any of your personnal data, whether it is your user preferences, your browser history or the maiden name of your mom. It is as simple as that.</p>
-		</div>
-	</div>
-
 	<div id="donate" class="row">
 		<div class="col-md-8 offset-md-2">
 			<h2 class="section_title">Donate</h2>
@@ -135,6 +148,15 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="privacy" class="row">
+		<div class="col-md-8 offset-md-2">
+			<h2 class="section_title">Privacy</h2>
+			<p>Bonjourr doesn't collect any of your personnal data, whether it is your user preferences, your browser history or the maiden name of your mom. It is as simple as that.</p>
+		</div>
+	</div>
+
+
 	
 	<div class="signature"></div>
 
