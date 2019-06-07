@@ -4,7 +4,6 @@
          url('src/fonts/sf-pro-display-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -15,15 +14,22 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'sf_monoregular';
+    src: url('src/fonts/sfmono-regular-webfont.woff2') format('woff2'),
+         url('src/fonts/sfmono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
-	-webkit-font-smoothing: subpixel-antialiased!important;
-	-webkit-text-stroke:100px transparent!important;
 	margin: 0;
     cursor: default;
     background: #666;
-    color: white;
+    color: white!important;
     font-size: 16px;
-    font-family: sf_pro_displaythin, Helvetica Neue, Helvetica, Arial;
+    font-family: sf_pro_displaylight, Helvetica Neue, Helvetica, Arial;
     text-shadow: 0 1px 15px rgba(0,0,0,0.5);
 	scroll-behavior: smooth;
 }
@@ -45,7 +51,7 @@ body {
 p {
 	text-align: justify;
 	margin: 0;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: white;
 }
 
@@ -163,6 +169,19 @@ nav a:after {
 
 nav a:hover:after { width: 100%; }
 
+code {
+	background: transparent;
+	color: white;
+	font-family: sf_monoregular;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+
 /*Signature*/
 .signature {
 	position: relative;
@@ -176,7 +195,7 @@ nav a:hover:after { width: 100%; }
 	text-align: center;
 }
 
-.signature a {
+.signature a, #useinsafari div p a {
 	text-decoration: none;
 	font-weight: bolder;
 	color: white;
@@ -268,6 +287,14 @@ textarea:focus, .inputfield:focus {
 #crypto {
 	background: linear-gradient(to bottom right, #126eb9, #147fd5);
 	margin-left: 1em
+}
+
+#tips div p {
+	text-align: center;
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
 }
 
 /*Bootstrap correction*/
@@ -372,9 +399,4 @@ textarea:focus, .inputfield:focus {
 		width: 100%!important;
 		font-size: .6em;
 	}
-}
-
-@media screen and (max-width: 450px) {
-
-
 }
