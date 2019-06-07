@@ -25,7 +25,6 @@
 
 body {
 	margin: 0;
-    cursor: default;
     background: #666;
     color: white!important;
     font-size: 16px;
@@ -34,17 +33,17 @@ body {
 	scroll-behavior: smooth;
 }
 
-* { transition:all .2s linear!important; }
+* { transition:all .1s linear!important; }
 
 .background {
 	z-index: -1;
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: url("src/images/avi-richards-beach.jpg");
+	background-image: url("src/images/casey-horner-unsplash.jpg");
 	background-size: cover;
 	background-position: center center;
-	filter: blur(30px);
+	filter: blur(30px) brightness(.7);
 	transform: scale(1.1); 
 }
 
@@ -72,9 +71,9 @@ h3 { font-size: 1.9em; }
 
 h4 { font-size: 1.5em; }
 
-a, a:hover {
-	text-decoration: none!important;
+a, a:hover, a:focus, a:active {
 	color: white;
+	text-decoration: none;
 }
 
 hr {
@@ -137,11 +136,16 @@ hr {
 
 .browser_link {
 	padding: 1.5em;
+	margin: 1em;
 	border-radius: 15px;
 }
 
 .browser_link:hover {
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(12, 12, 12, .4);
+}
+.browser_link:active,
+.browser_link:focus {
+	background-color: rgba(12, 12, 12, .6);
 }
 
 /*Nav*/
@@ -169,39 +173,30 @@ nav a:after {
 
 nav a:hover:after { width: 100%; }
 
+
+li {
+	list-style: none;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	margin: 1.5em 0;
+}
+
+li a, li a:hover {
+	text-decoration: underline;
+}
+
 code {
-	background: transparent;
-	color: white;
+	background: rgba(255,255,255,.8);
+	color: #222;
+	font-size: .8em;
 	font-family: sf_monoregular;
-	overflow-wrap: break-word;
-	word-wrap: break-word;
+	padding: .1em .5em;
+	text-shadow: none;
 }
 
-.bolder {
-	font-weight: bolder;
-}
-
-
-/*Signature*/
-.signature {
-	position: relative;
-	top: 7em;
-	padding-bottom: 4em;
-	color: white;
-	font-size: .7em;
-}
-
-.signature p {
-	text-align: center;
-}
-
-.signature a, #useinsafari div p a {
-	text-decoration: none;
-	font-weight: bolder;
-	color: white;
-}
 
 /* Contact form */
+
 .inputfield {
 	height: 3em;
 	margin-bottom: 1em;
@@ -217,7 +212,7 @@ textarea {
 	width: 100%;
 	border: none;
 	border-radius: 7px;
-	background-color: #F9F9F9;
+	background-color: #F1F1F1B3;
 	transition: background-color 0.3s;
 	font-size: 1.3em;
 	padding-left: 1em;
@@ -281,6 +276,10 @@ textarea:focus, .inputfield:focus {
 #paypal:hover, #crypto:hover {
 	filter: brightness(0.85);
 }
+#paypal:focus, #crypto:focus,
+#paypal:active, #crypto:active {
+	filter: brightness(0.7);
+}
 
 #paypal img { height: 60%; }
 
@@ -297,10 +296,29 @@ textarea:focus, .inputfield:focus {
 	visibility: hidden;
 }
 
+/*Signature*/
+.signature {
+	position: relative;
+	top: 7em;
+	padding-bottom: 2em;
+	color: white;
+	font-size: .7em;
+}
+
+.signature p {
+	text-align: center;
+}
+
+.signature a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: white;
+}
+
+
 /*Bootstrap correction*/
 .row {
-	margin-right: 0;
-	margin-left: 0;
+	margin: 4em 0;
 }
 
 /*Flex responsive*/
@@ -316,6 +334,7 @@ textarea:focus, .inputfield:focus {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	margin: 0;
 }
 
 #content70 {

@@ -15,7 +15,7 @@
 
 	<div class="background"></div>
 
-	<div class="centercontent">
+	<div class="centercontent row">
 		<div class="content">
 
 			<div class="row">
@@ -38,6 +38,18 @@
 			
 			<div id="content70">
 				<div class="Grid Grid--gutters Grid--cols-3">
+
+					<div class="Grid-cell">
+						<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
+							<div class="browser_link content-1of3">
+								<div class="flex_center">
+									<img src="src/images/chrome.png" href="chrome_icon" class="browser_icon">
+								</div>
+								<h4>Download beta for Chrome</h4>
+							</div>
+						</a>
+					</div>
+
 					<div class="Grid-cell">
 						<a href="https://bonjourr.fr/bonjourr_firefox.xpi">
 							<div class="browser_link content-1of3">
@@ -58,27 +70,18 @@
 							</div>
 						</a>
 					</div>
-					<div class="Grid-cell">
-						<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
-							<div class="browser_link content-1of3">
-								<div class="flex_center">
-									<img src="src/images/chrome.png" href="chrome_icon" class="browser_icon">
-								</div>
-								<h4>Download beta for Chrome</h4>
-							</div>
-						</a>
-					</div>
 				</div>
+
 			<hr>
+
 			<nav>
-					<div class="nav_center">
-						<a href="#tips">Tips</a>
-						<a href="#contact">Contact</a>
-						<a href="#donate">Donate</a>
-						<a href="#privacy">Privacy</a>
-						<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
-						<a href="https://bonjourr.fr/online">Online</a>
-					</div>
+				<div class="nav_center">
+					<a href="#contact">Contact</a>
+					<a href="#donate">Donate</a>
+					<a href="#privacy">Privacy</a>
+					<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
+					<a href="https://bonjourr.fr/online">Online</a>
+				</div>
 			</nav>
 			</div>
 		</div>
@@ -89,15 +92,24 @@
 			<h2 class="section_title">Use in Safari</h2>
 			<p>Since Bonjourr is an open source project made during our free time, our budget is limited. Unfortunately, Apple requires developers to pay if they want to publish a Safari extension, which we don't want to do as of right now. You can still use Bonjourr in Safari by following the steps below.</p><br>
 		
-			<p><span class="bolder">1.</span> Download <a href="https://bonjourr.fr/bonjourr.zip">here</a> and unzip the Bonjourr package.<br><span class="bolder">2.</span> Place the Bonjourr folder in a location you'll remember, for example your Documents folder.<br><span class="bolder">3.</span> Open the preferences in Safari. In the <i>General</i> menu, set the <i>New windows open with</i> and <i>New tabs open with</i> options to <i>Homepage</i>.<br><span class="bolder">4a</span> Then, set the homepage path below to the location of index.html in the Bonjourr folder. For example, if you previously put it in your Documents folder, the path will be<code>file:///Users/username/Documents/Bonjourr/index.html</code>. Don't forget to change <code>username</code>in the path with your profile's username.<br><span class="bolder">4b</span>. Or, if you want, you can also use the online version of Bonjourr (<code>https://bonjourr.fr/online</code>) in place of the local path. You'll get the automatic updates, but you will lose speed and offline access.</p>
+			<p>
+				<li>
+					<strong>1.</strong>
+					<a href="https://bonjourr.fr/bonjourr.zip">Download here</a> and unzip the Bonjourr package.
+				</li>
+				<li>
+					<strong>2.</strong> Place the Bonjourr folder in a location you'll remember, for example your Documents folder.
+				</li>
+				<li>
+					<strong>3.</strong> Open the preferences in Safari. In the <code>General</code> menu, set the <code>New windows open with</code> and <code>New tabs open with</code> options to <code>Homepage</code>.
+				</li>
+				<li>
+					<strong>4a.</strong> Then, set the homepage path below to the location of index.html in the Bonjourr folder. For example, if you previously put it in your Documents folder, the path will be <code>file:///Users/"username"/Documents/Bonjourr/index.html</code>. Don't forget to change <code>"username"</code> in the path with your profile's username.
+				</li>
+				<li>
+					<strong>4b.</strong> Or, if you want, you can also use the online version of Bonjourr (<code>https://bonjourr.fr/online</code>) instead. You'll get automatic updates, but you will lose speed and offline access.
+				</li>
 
-		</div>
-	</div>
-
-	<div id="tips" class="row">
-		<div class="col-md-8 offset-md-2">
-			<h2 class="section_title">Tips</h2>
-			<p>Tip #1 · Just like on iOS, you can click and hold on a quick link icon to delete it.</p>
 		</div>
 	</div>
 
@@ -152,7 +164,7 @@
 	<div id="privacy" class="row">
 		<div class="col-md-8 offset-md-2">
 			<h2 class="section_title">Privacy</h2>
-			<p>Bonjourr doesn't collect any of your personnal data, whether it is your user preferences, your browser history or the maiden name of your mom. It is as simple as that.</p>
+			<p>Bonjourr syncs your user preferences with your google chrome or firefox account. It does not collect any data, not even weather location. Bonjourr only needs one permission, browser storage.</p>
 		</div>
 	</div>
 
