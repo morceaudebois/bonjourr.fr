@@ -16,19 +16,27 @@
 
 	<div class="content">
 
+		<nav>
+			<a href="#contact">Contact</a>
+			<a href="#donate">Donate</a>
+			<a href="#privacy">Privacy</a>
+			<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
+			<a href="https://bonjourr.fr/online">Online</a>
+		</nav>
+
 		<div class="hero">
 			<div class="title">
 				<img src="src/images/BonjourrIcon.png" class="icon">
 				<h1>Bonjourr</h1>
-				<h3>Customizable startpage for your browser inspired by iOS</h3>
+				<p>Customizable startpage for your browser inspired by iOS</p>
 			</div>
 			
-			<div class="mockupbox_box">
+			<div class="mockupbox_wrapper">
 				<div id="mockupbox">
 					<img src="src/images/emptymockup.png" id="mockup">
 					<div id="videobox">
 						<img src="src/images/screenshot.jpg">
-						<video id="screen" autoplay="autoplay" loop="loop" muted="muted"><source type="video/mp4" src="src/images/notagif.mp4"></video>
+						<!-- <video id="screen" autoplay="autoplay" loop="loop" muted="muted"><source type="video/mp4" src="src/images/notagif.mp4"></video> -->
 					</div>
 				</div>
 			</div>
@@ -37,48 +45,35 @@
 
 		<div class="DLmenu">
 			<div class="browsers">
+
 				<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
-					<div class="chrome_block">
-						<img src="src/images/chrome.png" href="chrome_icon" class="browser_icon">
-						<h4>Download beta for Chrome</h4>
+					<div>
+						<img src="src/images/chrome.png" alt="chrome_icon">
+						<p>Download beta for Chrome</p>
 					</div>
 				</a>
 
 				<a href="https://bonjourr.fr/bonjourr_firefox.xpi">
-					<div class="firefox_block">
-						<img src="src/images/firefox.png" href="chrome_icon" class="browser_icon">
-						<h4>Download beta for Firefox</h4>
+					<div>
+						<img src="src/images/firefox.png" alt="chrome_icon">
+						<p>Download beta for Firefox</p>
 					</div>
 				</a>
 
 				<a href="#useinsafari">
-					<div class="safari_block">
-						<img src="src/images/safari.png" href="chrome_icon" class="browser_icon">
-						<h4>Use in Safari</h4>
+					<div>
+						<img src="src/images/safari.png" alt="chrome_icon">
+						<p>Use in Safari</p>
 					</div>
 				</a>
 			</div>
 		</div>
-		
-		<hr>
-
-		<nav>
-			<div class="nav_center">
-				<a href="#contact">Contact</a>
-				<a href="#donate">Donate</a>
-				<a href="#privacy">Privacy</a>
-				<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
-				<a href="https://bonjourr.fr/online">Online</a>
-			</div>
-		</nav>
 	</div>
 	
-	
-	
-	<div class="main">
+	<main>
 		<div id="useinsafari">
 			<div>
-				<h2 class="section_title">Use in Safari</h2>
+				<h2>Use in Safari</h2>
 				<p>Since Bonjourr is an open source project made during our free time, our budget is limited. Unfortunately, Apple requires developers to pay if they want to publish a Safari extension, which we don't want to do as of right now. You can still use Bonjourr in Safari by following the steps below.</p><br>
 			
 				<p>
@@ -104,41 +99,30 @@
 		</div>
 
 		<div id="contact">
-			<h2 class="section_title">Contact</h2>
+			<h2>Contact</h2>
 
 			<form id="contactform" method="POST" action="/formulaire.php">
 
-				<div class="contact_NES">
-					
-					<input class="inputfield" type="text" name="name" placeholder="Name">
-				
-
-				
-					<input class="inputfield" type="text" name="mail" placeholder="Email">
-				
-
-				
-					<input class="inputfield" type="text" name="subject" placeholder="Subject">
-				
+				<div class="form_desc">
+					<input type="text" name="name" placeholder="Name">
+					<input type="text" name="mail" placeholder="Email">
+					<input type="text" name="subject" placeholder="Subject">
 				</div>
 
-				
-					<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible."></textarea>
-				
+				<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible."></textarea>
 
 				<input id="token" type="hidden" name="g-recaptcha-response">
 
-				<div class="send_parent">
-					<input type="submit" value="Send your message" id="Envoyer" name="send">
+				<div class="envoyer">
+					<input type="submit" value="Send your message" name="send">
 				</div>
 			</form>
 		</div>
 
 		<div id="donate">
 			<div>
-				<h2 class="section_title">Donate</h2>
+				<h2>Donate</h2>
 				<p>If you want to support our work, you can spread the word to your friends about Bonjourr or donate via the buttons below.</p>
-				<br style="opacity: 0;">
 				
 				<div class="buttons">
 					<a href="https://www.paypal.com/pools/c/8fwJxNvvAJ">
@@ -146,6 +130,7 @@
 							<img src="src/images/paypal.svg">
 						</div>
 					</a>
+
 					<a href="https://commerce.coinbase.com/checkout/cb334f57-c5eb-48e5-9204-92c8c43af001">
 						<div class="donate_button" id="crypto">
 							<p>Donate with Crypto</p>
@@ -157,13 +142,12 @@
 
 		<div id="privacy">
 			<div>
-				<h2 class="section_title">Privacy</h2>
-				<p>Bonjourr syncs your user preferences with your Google Chrome or Firefox account. It does not collect any data, not even weather location. Bonjourr only needs one permission, browser storage.</p>
+				<h2>Privacy</h2>
+				<p>Bonjourr syncs your user preferences with your Google Chrome or Firefox account. It does not collect any data. Bonjourr only needs one permission, browser storage. You can choose to setup the weather based on your location.</p>
 			</div>
 		</div>
-	</div>
+	</main>
 
-	
 	<div class="signature"></div>
 
 </body>
