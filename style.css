@@ -35,12 +35,18 @@ body {
 
 * { transition:all .1s linear!important; }
 
+.main {
+	width: 80%;
+	max-width: 1400px;
+	margin: auto;
+}
+
 .background {
 	z-index: -1;
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: url("src/images/casey-horner-unsplash.jpg");
+	background-image: url("src/images/ardiss-hutaff-unsplash.jpg");
 	background-size: cover;
 	background-position: center center;
 	filter: blur(30px) brightness(.7);
@@ -86,29 +92,54 @@ hr {
 	margin-bottom: 2em;
 }
 
-/*Vertical and horizontal centering*/
-.flex_center {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/*Hero*/
+
+.content {
+	height: 100vh;
+	margin: auto;
+	padding-right: 3%;
+	padding-left: 3%;
+	padding-top: 10vh;
+	overflow: hidden;
 }
 
-#title {
+.hero {
+	width: 80%;
+	margin: auto;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
 }
 
-#titleparent {
+.title {
+	width: 30%;
+	text-align: center;
+	align-self: center;
+}
+
+.title h3 {
+	font-size: 30px;
+}
+
+.icon {
+	width: 60%;
+}
+
+#mockupbox {
+	position: relative;
+	width: 100%;
+}
+
+.mockupbox_box {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 /*Animated mockup*/
-#mockupbox { position: relative;}
 
-#mockup { width: 100%; }
+#mockup {
+	width: 100%;
+}
 
 #videobox {
 	z-index: 10;
@@ -120,33 +151,61 @@ hr {
 }
 
 #screen {
+	z-index: 15;
+	width: 100%;
+	position: absolute;
+}
+
+#videobox img {
+	z-index: 12;
+	position: absolute;
 	width: 100%;
 }
 
-/*Browsers section*/
-#icon {
-	width: 50%;
-	height: 50%;
+/* DL and nav*/
+.DLmenu {
+	width: 80%;
+	margin: auto;
+	margin-top: 4vh;
+}
+
+.browsers {
+	display: flex;
+	justify-content: space-around;
+}
+
+.browsers > a  {
+	padding: 1.5em;
+    margin: 1em;
+    border-radius: 15px;
+	display: block;
+	width: 32%;
+}
+
+.browsers > a:hover {
+	background-color: red;
+}
+
+.browsers > a:hover {
+	background-color: rgba(12, 12, 12, .4);
+}
+.browsers > a:active,
+.browsers > a:focus {
+	background-color: rgba(12, 12, 12, .6);
 }
 
 .browser_icon {
-	max-width: 50%;
-	padding-bottom: 1.5vh;
+	display: block;
+	width: 70%;
+	max-width: 175px;
+	margin: auto;
+	padding-bottom: 30px;
 }
 
-.browser_link {
-	padding: 1.5em;
-	margin: 1em;
-	border-radius: 15px;
-}
 
-.browser_link:hover {
-	background-color: rgba(12, 12, 12, .4);
-}
-.browser_link:active,
-.browser_link:focus {
-	background-color: rgba(12, 12, 12, .6);
-}
+
+
+
 
 /*Nav*/
 .nav_center {
@@ -186,6 +245,7 @@ li a, li a:hover {
 }
 
 code {
+	border-radius: 8px;
 	background: rgba(255,255,255,.8);
 	color: #222;
 	font-size: .8em;
@@ -197,36 +257,49 @@ code {
 
 /* Contact form */
 
+
+
+.contact_NES {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact_NES input {
+	width: 31%;
+}
+
 .inputfield {
 	height: 3em;
 	margin-bottom: 1em;
 }
 
 textarea {
+	width: 100%;
 	height: 10em;
 	padding-top: 0.6em;
 	min-height:5em;
 }
 
+
+
 .inputfield, textarea {
-	width: 100%;
 	border: none;
 	border-radius: 7px;
-	background-color: #F1F1F1B3;
+	background-color: #F1F1F1;
+	opacity: 0.85;
 	transition: background-color 0.3s;
 	font-size: 1.3em;
-	padding-left: 1em;
+
 	color: #292b2c;
 }
 
 textarea:focus, .inputfield:focus {
 	background-color: #F1F1F1;
+	opacity: 1;
 	outline: none;
 }
 
-#nom { padding-left: 0; }
 
-#objet { padding-right: 0; }
 
 /* Send button */
 #Envoyer {
@@ -292,9 +365,26 @@ textarea:focus, .inputfield:focus {
 	text-align: center;
 }
 
+
+.send_parent {
+	text-align: center;
+}
+
 .grecaptcha-badge {
 	visibility: hidden;
 }
+
+
+
+/*Flex responsive*/
+
+
+
+
+
+
+
+
 
 /*Signature*/
 .signature {
@@ -316,73 +406,23 @@ textarea:focus, .inputfield:focus {
 }
 
 
-/*Bootstrap correction*/
-.row {
-	margin: 4em 0;
-}
-
-/*Flex responsive*/
-.content {
-	max-width: 80%;
-	margin: auto;
-	padding-right: 3%;
-	padding-left: 3%;
-}
-
-.centercontent {
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	margin: 0;
-}
-
-#content70 {
-	width: 70%;
-	margin: auto;
-	margin-top: 4vh;
-}
-
-.Grid {
-	display: flex;
-	flex-flow: row;
-	flex-wrap: wrap;
-}
-
-.Grid-cell { flex: 1; }
-
-.Grid--cols-3 > .Grid-cell { flex: 0 0 100%; }
-
-.Grid--1of3 > .Grid-cell:first-of-type { flex: 0 0 100%; }
-
-@media (min-width: 30em) {
- 	.Grid--1of3 > .Grid-cell:first-of-type {
-    	flex: 0 0 100%;
-	}
-}
-
-@media (min-width: 48em) {
-	.Grid--cols-3 > .Grid-cell {
-		flex: 1;
-	}
-
-	.Grid--1of3 > .Grid-cell:first-of-type {
-		flex: 0 0 30%;
-	}
-}
 
 /*Responsive*/
+@media screen and (min-width: 1800px) {
+	.DLmenu {
+		width: 80%;
+	}
+}
+
 @media screen and (max-width: 1440px) {
+	
+
 	h1 {font-size: 5em }
 
 	h3 { font-size: 1.3em; }
 
 	h4 { font-size: 1.2em; }
 
-	.browser_icon {
-		max-width: 40%;
-		padding-bottom: 1.5vh;
-	}
 
 	hr {
 		margin-top: 1em;
@@ -397,6 +437,27 @@ textarea:focus, .inputfield:focus {
 }
 
 @media screen and (max-width: 769px) {
+	.main { width: 95%; }
+
+	.DLmenu {
+		width: 100%;
+	}
+
+	.browsers a {
+		width: 70%;
+	}
+
+	.browsers {
+		flex-wrap: wrap;
+	}
+
+	.contact_NES input {
+		width: 100%;
+	}
+	.contact_NES {
+		flex-wrap: wrap;
+	}
+	
 	#mail, #nom, #objet {
 		padding-left: 0;
 		padding-right: 0;
@@ -407,10 +468,6 @@ textarea:focus, .inputfield:focus {
 
 @media screen and (max-width: 550px) {
 
-	.content {
-    	max-width: 90%;
-    	padding-top: 1.5em;
-	}
 
 	.nav_center { flex-wrap: wrap;}
 
