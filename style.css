@@ -107,6 +107,7 @@ hr {
 nav {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	margin: 2em auto;
 }
 
@@ -157,6 +158,9 @@ li a, li a:hover {
 .title {
 	max-width: 400px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .title p {
@@ -166,6 +170,8 @@ li a, li a:hover {
 
 .icon {
 	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #mockupbox {
@@ -177,7 +183,7 @@ li a, li a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 500px;
+	max-width: 750px;
 	margin: 2em 0;
 }
 
@@ -283,7 +289,7 @@ textarea {
 #contact input, textarea {
 	border: none;
 	border-radius: 4px;
-	background-color: #fff8;
+	background-color: #ffffffc2;
 	font-size: 1.3em;
 	color: #292b2c;
 }
@@ -387,8 +393,27 @@ textarea:focus, #contact .form_desc input:focus {
 
 /*Responsive*/
 @media screen and (min-width: 1800px) {
+
+	.mockupbox_wrapper {
+		max-width: 1000px;
+	}
+
+	h1 {
+		font-size: 7em;
+	}
+
+	.title p {
+    	font-size: 30px;
+	}
+
 	.DLmenu {
 		width: 80%;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+	.hero {
+		width: auto;
 	}
 }
 
