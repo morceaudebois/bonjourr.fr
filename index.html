@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="src/scripts/jquery-3.4.1.min.js"></script>
 	<script src="src/scripts/script.js" defer></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 
 </head>
@@ -15,161 +14,140 @@
 
 	<div class="background"></div>
 
-	<div class="centercontent row">
-		<div class="content">
+	<div class="content">
 
-			<div class="row">
-				<div class="col-md-4" id="titleparent">
-					<div id="title">
-						<img src="src/images/BonjourrIcon.png" id="icon">
-						<h1>Bonjourr</h1>
-						<h3>Customizable startpage for your browser inspired by iOS</h3>
-					</div>
-				</div>
-				<div class="col-md-8">
-					<div id="mockupbox">
-						<img src="src/images/emptymockup.png" id="mockup">
-						<div id="videobox">
-							<video id="screen" autoplay="autoplay" loop="loop" muted="muted"><source type="video/mp4" src="src/images/notagif.mp4"></video>
-						</div>
+		<nav>
+			<a href="#contact">Contact</a>
+			<a href="#donate">Donate</a>
+			<a href="#privacy">Privacy</a>
+			<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
+			<a href="https://bonjourr.fr/online">Online</a>
+		</nav>
+
+		<div class="hero">
+			<div class="title">
+				<img src="src/images/BonjourrIcon.png" class="icon">
+				<h1>Bonjourr</h1>
+				<p>Customizable startpage for your browser inspired by iOS</p>
+			</div>
+			
+			<div class="mockupbox_wrapper">
+				<div id="mockupbox">
+					<img src="src/images/emptymockup.png" id="mockup">
+					<div id="videobox">
+						<img src="src/images/screenshot.jpg">
+						<video id="screen" autoplay="autoplay" loop="loop" muted="muted"><source type="video/mp4" src="src/images/notagif.mp4"></video>
 					</div>
 				</div>
 			</div>
 			
-			<div id="content70">
-				<div class="Grid Grid--gutters Grid--cols-3">
-
-					<div class="Grid-cell">
-						<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
-							<div class="browser_link content-1of3">
-								<div class="flex_center">
-									<img src="src/images/chrome.png" href="chrome_icon" class="browser_icon">
-								</div>
-								<h4>Download beta for Chrome</h4>
-							</div>
-						</a>
-					</div>
-
-					<div class="Grid-cell">
-						<a href="https://bonjourr.fr/bonjourr_firefox.xpi">
-							<div class="browser_link content-1of3">
-								<div class="flex_center">
-									<img src="src/images/firefox.png" href="firefox_icon" class="browser_icon">
-								</div>
-								<h4>Download beta for Firefox</h4>
-							</div>
-						</a>
-					</div>
-					<div class="Grid-cell">
-						<a href="#useinsafari">
-							<div class="browser_link content-1of3">
-								<div class="flex_center">
-									<img src="src/images/safari.png" href="safari_icon" class="browser_icon">
-								</div>
-								<h4>Use in Safari</h4>
-							</div>
-						</a>
-					</div>
-				</div>
-
-			<hr>
-
-			<nav>
-				<div class="nav_center">
-					<a href="#contact">Contact</a>
-					<a href="#donate">Donate</a>
-					<a href="#privacy">Privacy</a>
-					<a href="https://github.com/victorazevedo-me/Bonjourr">GitHub</a>
-					<a href="https://bonjourr.fr/online">Online</a>
-				</div>
-			</nav>
-			</div>
 		</div>
-	</div>
 
-	<div id="useinsafari" class="row">
-		<div class="col-md-8 offset-md-2">
-			<h2 class="section_title">Use in Safari</h2>
-			<p>Since Bonjourr is an open source project made during our free time, our budget is limited. Unfortunately, Apple requires developers to pay if they want to publish a Safari extension, which we don't want to do as of right now. You can still use Bonjourr in Safari by following the steps below.</p><br>
-		
-			<p>
-				<li>
-					<strong>1.</strong>
-					<a href="https://bonjourr.fr/bonjourr.zip">Download here</a> and unzip the Bonjourr package.
-				</li>
-				<li>
-					<strong>2.</strong> Place the Bonjourr folder in a location you'll remember, for example your Documents folder.
-				</li>
-				<li>
-					<strong>3.</strong> Open the preferences in Safari. In the <code>General</code> menu, set the <code>New windows open with</code> and <code>New tabs open with</code> options to <code>Homepage</code>.
-				</li>
-				<li>
-					<strong>4a.</strong> Then, set the homepage path below to the location of index.html in the Bonjourr folder. For example, if you previously put it in your Documents folder, the path will be <code>file:///Users/"username"/Documents/Bonjourr/index.html</code>. Don't forget to change <code>"username"</code> in the path with your profile's username.
-				</li>
-				<li>
-					<strong>4b.</strong> Or, if you want, you can also use the online version of Bonjourr (<code>https://bonjourr.fr/online</code>) instead. You'll get automatic updates, but you will lose speed and offline access.
-				</li>
+		<div class="DLmenu">
+			<div class="browsers">
 
-		</div>
-	</div>
+				<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
+					<div>
+						<img src="src/images/chrome.png" alt="chrome_icon">
+						<p>Download beta for Chrome</p>
+					</div>
+				</a>
 
-	<div id="contact">
-		<h2 class="section_title">Contact</h2>
+				<a href="https://bonjourr.fr/bonjourr_firefox.xpi">
+					<div>
+						<img src="src/images/firefox.png" alt="chrome_icon">
+						<p>Download beta for Firefox</p>
+					</div>
+				</a>
 
-		<form id="contactform" method="POST" action="/formulaire.php" class="col-md-8 offset-md-2">
-
-			<div class="row">
-				<div id="nom" class="col-md-4">
-					<input class="inputfield" type="text" name="name" placeholder="Name">
-				</div>
-
-				<div id="mail" class="col-md-4">	
-					<input class="inputfield" type="text" name="mail" placeholder="Email">
-				</div>
-
-				<div id="objet" class="col-md-4">
-					<input class="inputfield" type="text" name="subject" placeholder="Subject">
-				</div>
-			</div>
-
-			<div id="message">
-				<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible."></textarea>
-			</div>
-
-			<input id="token" type="hidden" name="g-recaptcha-response">
-
-			<div class="text-center"><input type="submit" value="Send your message" id="Envoyer"></div>
-		</form>
-	</div>
-
-	<div id="donate" class="row">
-		<div class="col-md-8 offset-md-2">
-			<h2 class="section_title">Donate</h2>
-			<p>If you want to support our work, you can spread the word to your friends about Bonjourr or donate via the buttons below.</p>
-			<br style="opacity: 0;">
-			
-			<div class="buttons">
-				<div class="donate_button" id="paypal">
-					<img src="src/images/paypal.svg">
-				</div>
-				<a href="https://commerce.coinbase.com/checkout/cb334f57-c5eb-48e5-9204-92c8c43af001">
-					<div class="donate_button" id="crypto">
-						<p>Donate with Crypto</p>
+				<a href="#useinsafari">
+					<div>
+						<img src="src/images/safari.png" alt="chrome_icon">
+						<p>Use in Safari</p>
 					</div>
 				</a>
 			</div>
 		</div>
 	</div>
-
-	<div id="privacy" class="row">
-		<div class="col-md-8 offset-md-2">
-			<h2 class="section_title">Privacy</h2>
-			<p>Bonjourr syncs your user preferences with your google chrome or firefox account. It does not collect any data, not even weather location. Bonjourr only needs one permission, browser storage.</p>
-		</div>
-	</div>
-
-
 	
+	<main>
+		<div id="useinsafari">
+			<div>
+				<h2>Use in Safari</h2>
+				<p>Since Bonjourr is an open source project made during our free time, our budget is limited. Unfortunately, Apple requires developers to pay if they want to publish a Safari extension, which we don't want to do as of right now. You can still use Bonjourr in Safari by following the steps below.</p><br>
+			
+				<p>
+					<li>
+						<strong>1.</strong>
+						<a href="https://bonjourr.fr/bonjourr.zip">Download here</a> and unzip the Bonjourr package.
+					</li>
+					<li>
+						<strong>2.</strong> Place the Bonjourr folder in a location you'll remember, for example your Documents folder.
+					</li>
+					<li>
+						<strong>3.</strong> Open the preferences in Safari. In the <code>General</code> menu, set the <code>New windows open with</code> and <code>New tabs open with</code> options to <code>Homepage</code>.
+					</li>
+					<li>
+						<strong>4a.</strong> Then, set the homepage path below to the location of index.html in the Bonjourr folder. For example, if you previously put it in your Documents folder, the path will be <code>file:///Users/"username"/Documents/Bonjourr/index.html</code>. Don't forget to change <code>"username"</code> in the path with your profile's username.
+					</li>
+					<li>
+						<strong>4b.</strong> Or, if you want, you can also use the online version of Bonjourr (<code>https://bonjourr.fr/online</code>) instead. You'll get automatic updates, but you will lose speed and offline access.
+					</li>
+				</p>
+
+			</div>
+		</div>
+
+		<div id="contact">
+			<h2>Contact</h2>
+
+			<form id="contactform" method="POST" action="/formulaire.php">
+
+				<div class="form_desc">
+					<input type="text" name="name" placeholder="Name">
+					<input type="text" name="mail" placeholder="Email">
+					<input type="text" name="subject" placeholder="Subject">
+				</div>
+
+				<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible."></textarea>
+
+				<input id="token" type="hidden" name="g-recaptcha-response">
+
+				<div class="envoyer">
+					<input type="submit" value="Send your message" name="send">
+				</div>
+			</form>
+		</div>
+
+		<div id="donate">
+			<div>
+				<h2>Donate</h2>
+				<p>If you want to support our work, you can spread the word to your friends about Bonjourr or donate via the buttons below.</p>
+				
+				<div class="buttons">
+					<a href="https://www.paypal.com/pools/c/8fwJxNvvAJ">
+						<div class="donate_button" id="paypal">
+							<img src="src/images/paypal.svg">
+						</div>
+					</a>
+
+					<a href="https://commerce.coinbase.com/checkout/cb334f57-c5eb-48e5-9204-92c8c43af001">
+						<div class="donate_button" id="crypto">
+							<p>Donate with Crypto</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="privacy">
+			<div>
+				<h2>Privacy</h2>
+				<p>Bonjourr syncs your user preferences with your Google Chrome or Firefox account. It does not collect any data. Bonjourr only needs one permission, browser storage. You can choose to setup the weather based on your location.</p>
+			</div>
+		</div>
+	</main>
+
 	<div class="signature"></div>
 
 </body>
