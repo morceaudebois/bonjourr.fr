@@ -29,6 +29,7 @@ body {
     font-size: 16px;
     text-shadow: 0 1px 15px rgba(0,0,0,0.5);
 	scroll-behavior: smooth;
+	overflow-wrap: break-word;
 }
 
 body,
@@ -45,13 +46,14 @@ textarea {
 .background {
 	z-index: -1;
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-image: url("src/images/ardiss-hutaff-unsplash.jpg");
-	background-size: cover;
-	background-position: center center;
-	filter: blur(30px) brightness(.7);
-	transform: scale(1.1); 
+}
+
+.background img {
+	width: 100%;
+    min-height: 500px;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 main {
@@ -64,7 +66,7 @@ main > div {
 	padding: 2em 0;
 }
 
-p {
+p, li {
 	margin: 0;
 	font-size: 1.3em;
 	color: white;
@@ -74,7 +76,7 @@ main p {
 	text-align: justify;
 }
 
-h1 {
+.title span {
 	font-size: 5em;
 	margin: 0;
 }
@@ -183,7 +185,7 @@ li a, li a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 750px;
+	max-width: 550px;
 	margin: 2em 0;
 }
 
@@ -272,9 +274,9 @@ code {
 }
 
 #contact input {
-	width: 90%;
-	padding: 1em;
-	margin: 1em;
+    width: calc(33.33% - 4em);
+    padding: 1em;
+    margin: 1em;
 }
 
 textarea {
@@ -395,10 +397,10 @@ textarea:focus, #contact .form_desc input:focus {
 @media screen and (min-width: 1800px) {
 
 	.mockupbox_wrapper {
-		max-width: 1000px;
+		max-width: 700px;
 	}
 
-	h1 {
+	.title span {
 		font-size: 7em;
 	}
 
@@ -417,11 +419,17 @@ textarea:focus, #contact .form_desc input:focus {
 	}
 }
 
+@media screen and (min-width: 1000px) {
+.title {
+		margin-right: 50px;
+	}
+}
+
 @media screen and (max-width: 769px) {
 
 	main {
 		width: auto;
-		margin: 2em;
+		margin: 1em;
 	}
 
 	nav a {
@@ -430,6 +438,12 @@ textarea:focus, #contact .form_desc input:focus {
 
 	.browsers a {
 		width: 70%;
+	}
+
+	input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 
 	.browsers,
@@ -445,4 +459,13 @@ textarea:focus, #contact .form_desc input:focus {
 	#contact textarea {
 		width: calc(100% - 3em);
 	}
+
+	#contact .form_desc input {
+        width: 100%;
+    }
+
+	#contact .envoyer input {
+		padding: 1em;
+	}
 }
+

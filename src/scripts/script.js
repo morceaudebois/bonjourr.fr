@@ -7,13 +7,13 @@ $(document).ready(function() {
 });
 
 
-// grecaptcha.ready(function() {
+grecaptcha.ready(function() {
 
-// 	grecaptcha.execute('6LfLHqcUAAAAAO0PzSW4SEPridOLlAQFWSOjl-eE', {action: 'homepage'}).then(function(token) {
+	grecaptcha.execute('6LfLHqcUAAAAAO0PzSW4SEPridOLlAQFWSOjl-eE', {action: 'homepage'}).then(function(token) {
 
-// 	  document.getElementById("token").value = token;
-// 	});
+	  document.getElementById("token").value = token;
+	});
 
-// });
+});
 
 
