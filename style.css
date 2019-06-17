@@ -76,10 +76,7 @@ main p {
 	text-align: justify;
 }
 
-.title span {
-	font-size: 5em;
-	margin: 0;
-}
+
 
 h2 {
 	font-size: 3em;
@@ -110,7 +107,7 @@ nav {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 2em auto;
+	margin: 1em auto;
 }
 
 nav a {
@@ -166,12 +163,17 @@ li a, li a:hover {
 }
 
 .title p {
-	font-size: 24px;
+	font-size: 22px;
 	text-align: center;
 }
 
+.title span {
+	font-size: 4em;
+	margin: 0;
+}
+
 .icon {
-	width: 60%;
+	width: 50%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -245,7 +247,7 @@ li a, li a:hover {
 }
 
 .browsers img {
-	width: 40%;
+	width: 128px;
 	padding: 1em;
 }
 
@@ -396,16 +398,20 @@ textarea:focus, #contact .form_desc input:focus {
 /*Responsive*/
 @media screen and (min-width: 1800px) {
 
+	.hero {
+		max-width: 60%;
+	}
+
 	.mockupbox_wrapper {
 		max-width: 700px;
 	}
 
 	.title span {
-		font-size: 7em;
+		font-size: 5em;
 	}
 
 	.title p {
-    	font-size: 30px;
+    	font-size: 26px;
 	}
 
 	.DLmenu {
@@ -413,15 +419,25 @@ textarea:focus, #contact .form_desc input:focus {
 	}
 }
 
-@media screen and (min-width: 769px) and (max-width: 1440px) {
+@media screen and (max-height: 1024px) {
+	.DLmenu {
+		margin-top: 0!important;
+	}
+
+	.browsers img {
+		width: 85px;
+}
+
+@media screen and (max-width: 1188px) {
 	.hero {
 		width: auto;
 	}
 }
 
-@media screen and (min-width: 1000px) {
-.title {
-		margin-right: 50px;
+@media screen and (min-width: 950px) {
+	.browsers a {
+		margin-right: 1.5em;
+		margin-left: 1.5em;
 	}
 }
 
@@ -469,3 +485,16 @@ textarea:focus, #contact .form_desc input:focus {
 	}
 }
 
+@media screen and (max-width:480px) {
+	.hero {
+		width: 90%;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	main > div {
+		padding: .5em 0;
+	}
+}
