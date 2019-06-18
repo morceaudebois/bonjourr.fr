@@ -157,9 +157,6 @@ li a, li a:hover {
 .title {
 	max-width: 400px;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .title p {
@@ -173,6 +170,7 @@ li a, li a:hover {
 }
 
 .icon {
+	position: relative;
 	width: 50%;
 	margin-right: auto;
 	margin-left: auto;
@@ -488,6 +486,16 @@ textarea:focus, #contact .form_desc input:focus {
 @media screen and (max-width:480px) {
 	.hero {
 		width: 90%;
+	}
+
+	.title > img,
+	.title > div {
+		display: inline;
+	}
+
+	.icon {
+		width: 3em;
+		top: .3em;
 	}
 
 	h2 {
