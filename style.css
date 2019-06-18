@@ -424,18 +424,12 @@ textarea:focus, #contact .form_desc input:focus {
 
 	.browsers img {
 		width: 85px;
+	}
 }
 
 @media screen and (max-width: 1188px) {
 	.hero {
 		width: auto;
-	}
-}
-
-@media screen and (min-width: 950px) {
-	.browsers a {
-		margin-right: 1.5em;
-		margin-left: 1.5em;
 	}
 }
 
