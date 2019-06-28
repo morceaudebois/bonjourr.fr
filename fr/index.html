@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684433-3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-136684433-3');
+	</script>
+
+	<title>Bonjourr · Page d'accueil personnalisable pour navigateur inspirée d'iOS</title>
+	<meta name="description" content="Améliorez votre expérience de navigation avec Bonjourr, une superbe page d'accueil personnalisable inspirée par iOS." />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../style.css">
+	<link rel="icon" href="../src/images/bonjourr_favicon.png" />
+	<link rel=”apple-touch-icon” href=”../src/images/bonjourr_favicon.png” />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div class="background">
+		<img src="../src/images/ardiss-hutaff-unsplash.jpg" alt="bonjourr_background">
+	</div>
+
+	<div class="content">
+
+		<nav>
+			<a href="#about" title="About Bonjourr">À propos</a>
+			<a href="#contact" title="Contact us">Contact</a>
+			<a href="#donate" title="Support our work">Faire un don</a>
+			<a href="#credits" title="Photographer's credits">Crédits</a>
+			<a href="#privacy" title="Our privacy values">Confidentialité</a>
+			<a href="https://bonjourr.fr" title="Voir le site en anglais">In english</a>
+			<a onclick="AllowOnline()" href="javascript:void(0)" title="Use the online version of Bonjourr">Online</a>
+		</nav>
+
+		<div class="hero">
+			<div class="title">
+				<img src="../src/images/BonjourrIcon.png" srcset="../src/images/BonjourrIcon_2x.png 2x" class="icon" alt="bonjourr logo">
+				<div class="hero_text">
+					<span>Bonjourr</span>
+					<h1><p>Page d'accueil personnalisable pour navigateur inspirée par iOS</p></h1>
+				</div>
+			</div>
+			
+			<div class="mockupbox_wrapper">
+				<div id="mockupbox">
+					<img src="../src/images/emptymockup.png" srcset="../src/images/emptymockup_2x.png 2x" id="mockup" alt="macbook mockup">
+					<div id="videobox">
+						<img src="../src/images/screenshot.jpg" srcset="../src/images/screenshot_2x.jpg 2x" alt="bonjourr screenshot">
+						<div id="insert_video"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="DLmenu">
+			<div class="browsers">
+
+				<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
+					<div>
+						<img src="../src/images/chrome.png" srcset="../src/images/chrome_2x.png 2x" alt="chrome_icon">
+						<p>Télécharger pour Chrome</p>
+					</div>
+				</a>
+
+				<a href="https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/">
+					<div>
+						<img src="../src/images/firefox.png" srcset="../src/images/firefox_2x.png 2x" alt="firefox_icon">
+						<p>Télécharger pour Firefox</p>
+					</div>
+				</a>
+
+				<a href="#useinsafari">
+					<div>
+						<img src="../src/images/safari.png" srcset="../src/images/safari_2x.png 2x" alt="safari_icon">
+						<p>Utiliser dans Safari</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<main>
+
+		<div id="about">
+			<div>
+				<h2>Bonjourr, qu'est-ce que c'est ?</h2>
+				<p>Bonjourr est une nouvelle <strong>page d'accueil</strong> pour votre navigateur Internet, elle apparait lorsque vous ouvrez une nouvelle fenêtre ou un nouvel onglet. Nous nous sommes <strong>inspiré du design d'iOS</strong>, et plus précisément de l'interface qui s'affiche au réveil lorsque vous utilisez la fonction Bedtime.<br><br>
+				Elle offre de <strong>nombreuses fonctionnalités</strong> telles que l'affichage <strong>de votre heure et météo locale</strong>, <strong>un accueil changeant</strong> selon l'heure de la journée et la possibilité d'utiliser vos moteurs de recherche favoris.<br><br>
+				Bonjourr est <strong>personnalisable</strong>, vous pouvez par exemple <strong>changer son arrière plan</strong>, <strong>activer ou désactiver certains éléments</strong>, <strong>ajouter des Favoris</strong> ou encore profiter du <strong>mode sombre</strong>. Elle est faite pour sembler minimaliste, mais pourtant être <strong>belle et pratique</strong> pour parfaitement s'adapter à votre workflow et vous rendre <strong>plus productif et plus serein</strong>.<br><br>
+				Bonjourr est disponible en <strong>anglais</strong> et en <strong>français</strong>.</p>
+			</div>
+
+			<a href="https://github.com/victorazevedo-me/Bonjourr" title="Watch us on GitHub" target="_blank">
+				<div class="donate_button" id="github">
+					<img src="../src/images/github.svg" alt="github logo"><p>Watch</p>
+				</div>
+			</a>
+		</div>
+
+		<div id="useinsafari">
+			<div>
+				<h2>Utiliser dans Safari</h2>
+				<p>Puisque Bonjourr est un projet open source réalisé durant notre temps libre, notre budget est limité. Malheureusement, Apple demande aux développeurs de payer s'ils souhaitent publier une extension pour Safari, ce que nous ne souhaitons pas encore faire. Vous pouvez tout de même utiliser Bonjourr dans Safari en suivant le guide ci-dessous.</p><br>
+				
+				<li>
+					<strong>1.</strong>
+					<a href="#" title="Install Bonjourr manually">Téléchargez ici</a> et dézippez le paquet de Bonjourr.
+				</li>
+				<li>
+					<strong>2.</strong> Placez le dossier Bonjourr à endroit dont vous vous souviendrez, tel que votre dossier Documents.
+				</li>
+				<li>
+					<strong>3.</strong> Ouvrez les Préférences de Safari. Dans l'onglet <code>Général</code>, mettez <code>la page d'accueil</code> aux options <code>Les nouvelles fenêtres ouvrent</code> et <code>Les nouveaux onglets ouvrent</code>.
+				</li>
+				<li>
+					<strong>4a.</strong> Ensuite, insérez le chemin du fichier index.html de votre dossier Bonjourr dans le champ <code>Page d'accueil</code>. Par exemple, <code>file:///Users/"pseudo"/Documents/Bonjourr/index.html</code> si vous avez placé le dossier dans Documents. N'oubliez pas de changer <code>"pseudo"</code> dans le chemin par le nom d'utilisateur de votre profil.
+				</li>
+				<li>
+					<strong>4b.</strong> Ou vous le souhaitez, vous pouvez utiliser la version en ligne de Bonjourr à la place (<code>https://online.bonjourr.fr/</code>). Vous aurez les mises à jour automatiques, mais vous perdrez de la rapidité à l'affichage ainsi qu'un accès hors ligne.
+				</li>
+				
+
+			</div>
+		</div>
+
+		<div id="contact">
+			<h2>Contact</h2>
+
+			<form id="contactform" method="POST" action="../formulaire.php">
+
+				<div class="form_desc">
+					<input type="text" name="name" placeholder="Nom" required>
+					<input type="email" name="mail" placeholder="Email" required>
+					<input type="text" name="subject" placeholder="Sujet" required>
+				</div>
+
+				<textarea name="message" placeholder="Une question ? Une idée ? Un bug à signaler ? Écrivez-le ici et nous vous répondrons aussi vite que possible." required></textarea>
+
+				<input id="token" type="hidden" name="g-recaptcha-response">
+
+				<div class="envoyer">
+					<input type="submit" value="Envoyer votre message" name="send">
+				</div>
+			</form>
+		</div>
+
+		<div id="donate">
+			<div>
+				<h2>Faire un don</h2>
+				<p>Si vous souhaitez soutenir notre travail, vous pouvez parler de Bonjourr autour de vous ou faire un don via les boutons ci-dessous.</p>
+				
+				<div class="buttons">
+					<a href="https://www.paypal.com/pools/c/8fwJxNvvAJ" title="Donate via PayPal">
+						<div class="donate_button" id="paypal">
+							<img src="../src/images/paypal.svg" alt="paypal logo">
+						</div>
+					</a>
+
+					<a href="https://commerce.coinbase.com/checkout/cb334f57-c5eb-48e5-9204-92c8c43af001" title="Donate in crypto">
+						<div class="donate_button" id="crypto">
+							<p>Donner en Crypto</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="credits">
+			<h2>Crédits</h2>
+			<p>La plupart de nos arrière-plans viennent d'Unsplash, une excellente plateforme de photographie stock. Nous utilisons également l'API d'Unsplash pour faire fonctionner l'option Arrière plan dynamique. Vous trouverez ci-dessous les liens vers les images originales.
+			<div class="credits_wrapper">
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/KCgADeYejng" title="See the picture on Unsplash" target="_blank">
+						<img src="../src/images/credits/avi-richards-beach.jpg" srcset="src/images/credits/avi-richards-beach_2x.jpg 2x" alt="">
+						<span>Avi Richards - Santa Monica</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/zMyZrfcLXQE" title="See the picture on Unsplash" target="_blank">
+						<img src="../src/images/credits/tyler-casey-landscape.jpg" srcset="src/images/credits/tyler-casey-landscape_2x.jpg 2x" alt="">
+						<span>Tyler Casey - Waimea Canyon</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/Tlw9fp2Z-8g" title="See the picture on Unsplash" target="_blank">
+						<img src="../src/images/credits/tahoe-beetschen-ferns.jpg" srcset="src/images/credits/tahoe-beetschen-ferns_2x.jpg 2x" alt="">
+						<span>Tahoe Beetschen - Fougère</span>
+					</a>
+				</div>
+			</div>
+			<div class="credits_wrapper">
+				<div class="image_wrapper">
+					<a href="https://www.apple.com/ios/ios-13-preview/" title="Go to apple.com" target="_blank">
+						<img src="../src/images/credits/ios13wallpaper_l.jpg" srcset="src/images/credits/ios13wallpaper_l_2x.jpg 2x" alt="">
+						<span>Apple - Fond d'écran clair d'iOS 13</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://www.apple.com/ios/ios-13-preview/" title="Go to apple.com" target="_blank">
+						<img src="../src/images/credits/ios13wallpaper_d.jpg" srcset="src/images/credits/ios13wallpaper_d_2x.jpg 2x" alt="">
+						<span>Apple - Fond d'écran sombre d'iOS 13</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/6ydKsdfcASI" title="See the picture on Unsplash" target="_blank">
+						<img src="../src/images/credits/ardiss-hutaff-unsplash.jpg" srcset="src/images/credits/ardiss-hutaff-unsplash_2x.jpg 2x" alt="">
+						<span>Ardiss Hutaff - Mt Cook au coucher du soleil</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="privacy">
+			<div>
+				<h2>Confidentialité</h2>
+				<p>Bonjourr synchronise vos préférences d'utilisateur avec votre compte Google ou Firefox. Nous ne collectons aucune de vos données. Bonjourr n'a besoin que d'une permission pour fonctionner, le stockage du navigateur. Vous pouvez choisir de configurer la météo selon votre géolocalisation.</p>
+			</div>
+		</div>
+	</main>
+
+	<div class="signature"></div>
+
+	<script src="../src/scripts/jquery-3.4.1.min.js"></script>
+	<script src="script.js" defer></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfLHqcUAAAAAO0PzSW4SEPridOLlAQFWSOjl-eE"></script>
+</body>
+</html>

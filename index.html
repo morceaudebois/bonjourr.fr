@@ -29,11 +29,13 @@
 	<div class="content">
 
 		<nav>
+			<a href="#about" title="About Bonjourr">About</a>
 			<a href="#contact" title="Contact us">Contact</a>
 			<a href="#donate" title="Support our work">Donate</a>
+			<a href="#credits" title="Photographer's credits">Credits</a>
 			<a href="#privacy" title="Our privacy values">Privacy</a>
-			<a href="https://github.com/victorazevedo-me/Bonjourr" title="Find us on GitHub">GitHub</a>
-			<a href="https://bonjourr.fr/online" title="Use the online version of Bonjourr">Online</a>
+			<a onclick="AllowOnline()" href="javascript:void(0)" title="Use the online version of Bonjourr">Online</a>
+			<a href="https://bonjourr.fr" title="Voir le site en anglais">En français</a>
 		</nav>
 
 		<div class="hero">
@@ -41,7 +43,7 @@
 				<img src="src/images/BonjourrIcon.png" srcset="src/images/BonjourrIcon_2x.png 2x" class="icon" alt="bonjourr logo">
 				<div class="hero_text">
 					<span>Bonjourr</span>
-					<p>Customizable startpage for your browser inspired by iOS</p>
+					<h1><p>Customizable startpage for your browser inspired by iOS</p></h1>
 				</div>
 			</div>
 			
@@ -50,7 +52,7 @@
 					<img src="src/images/emptymockup.png" srcset="src/images/emptymockup_2x.png 2x" id="mockup" alt="macbook mockup">
 					<div id="videobox">
 						<img src="src/images/screenshot.jpg" srcset="src/images/screenshot_2x.jpg 2x" alt="bonjourr screenshot">
-						<video id="screen" autoplay="autoplay" loop="loop" muted="muted"><source type="video/mp4" src="src/images/notagif.mp4"></video>
+						<div id="insert_video"></div>
 					</div>
 				</div>
 			</div>
@@ -63,14 +65,14 @@
 				<a href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd">
 					<div>
 						<img src="src/images/chrome.png" srcset="src/images/chrome_2x.png 2x" alt="chrome_icon">
-						<p>Download beta for Chrome</p>
+						<p>Download for Chrome</p>
 					</div>
 				</a>
 
-				<a href="https://bonjourr.fr/bonjourr_firefox.xpi">
+				<a href="https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/">
 					<div>
 						<img src="src/images/firefox.png" srcset="src/images/firefox_2x.png 2x" alt="firefox_icon">
-						<p>Download beta for Firefox</p>
+						<p>Download for Firefox</p>
 					</div>
 				</a>
 
@@ -85,6 +87,24 @@
 	</div>
 	
 	<main>
+
+		<div id="about">
+			<div>
+				<h2>What is Bonjourr?</h2>
+				<p>Bonjourr is a new <strong>home page</strong> for your Internet browser, it's what appears every time you open a new window or a new tab. We got <strong>inspiration from the looks of iOS</strong>, and more specifically by the interface you get when waking up while using the Bedtime option.<br><br>It offers <strong>several features</strong> such as giving you your <strong>local time and weather</strong>, <strong>greeting you</strong> according to the time of the day and giving you the possibility to search on your favorite search engines.<br><br>
+				Bonjourr is <strong>customizable</strong>, you can for example <strong>change its background</strong>, <strong>activate or deactivate certain elements</strong>, <strong>add Quick Links</strong> and of course, a <strong>dark mode</strong> is available. It is made to <strong>look minimal</strong>, but yet be both <strong>beautiful and practical</strong> to perfectly fit in your workflow, making you <strong>more productive an more serene</strong>.<br><br>
+				Bonjourr is available in both <strong>english</strong> and <strong>french</strong>.</p>
+			</div>
+
+			<a href="https://github.com/victorazevedo-me/Bonjourr" title="Watch us on GitHub" target="_blank">
+				<div class="donate_button" id="github">
+					<img src="src/images/github.svg" alt="github logo"><p>Watch</p>
+				</div>
+			</a>
+
+		</div>
+
+
 		<div id="useinsafari">
 			<div>
 				<h2>Use in Safari</h2>
@@ -93,7 +113,7 @@
 				
 				<li>
 					<strong>1.</strong>
-					<a href="https://bonjourr.fr/bonjourr.zip" title="Install Bonjourr manually">Download here</a> and unzip the Bonjourr package.
+					<a href="#" title="Install Bonjourr manually">Download here</a> and unzip the Bonjourr package.
 				</li>
 				<li>
 					<strong>2.</strong> Place the Bonjourr folder in a location you'll remember, for example your Documents folder.
@@ -105,12 +125,14 @@
 					<strong>4a.</strong> Then, set the homepage path below to the location of index.html in the Bonjourr folder. For example, if you previously put it in your Documents folder, the path will be <code>file:///Users/"username"/Documents/Bonjourr/index.html</code>. Don't forget to change <code>"username"</code> in the path with your profile's username.
 				</li>
 				<li>
-					<strong>4b.</strong> Or, if you want, you can also use the online version of Bonjourr (<code>https://bonjourr.fr/online</code>) instead. You'll get automatic updates, but you will lose speed and offline access.
+					<strong>4b.</strong> Or, if you want, you can also use the online version of Bonjourr (<code>https://online.bonjourr.fr/</code>) instead. You'll get automatic updates, but you will lose speed and offline access.
 				</li>
 				
 
 			</div>
 		</div>
+
+		
 
 		<div id="contact">
 			<h2>Contact</h2>
@@ -118,12 +140,12 @@
 			<form id="contactform" method="POST" action="/formulaire.php">
 
 				<div class="form_desc">
-					<input type="text" name="name" placeholder="Name">
-					<input type="text" name="mail" placeholder="Email">
-					<input type="text" name="subject" placeholder="Subject">
+					<input type="text" name="name" placeholder="Name" required>
+					<input type="email" name="mail" placeholder="Email" required>
+					<input type="text" name="subject" placeholder="Subject" required>
 				</div>
 
-				<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible."></textarea>
+				<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible." required></textarea>
 
 				<input id="token" type="hidden" name="g-recaptcha-response">
 
@@ -154,12 +176,59 @@
 			</div>
 		</div>
 
+		<div id="credits">
+			<h2>Credits</h2>
+			<p>Most of our backgrounds come from Unsplash, a great stock photography website. We also use the Unsplash API for our Dynamic background option. You'll find the links to the original pictures bellow.
+			<div class="credits_wrapper">
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/KCgADeYejng" title="See the picture on Unsplash" target="_blank">
+						<img src="src/images/credits/avi-richards-beach.jpg" srcset="src/images/credits/avi-richards-beach_2x.jpg 2x" alt="">
+						<span>Avi Richards - Santa Monica</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/zMyZrfcLXQE" title="See the picture on Unsplash" target="_blank">
+						<img src="src/images/credits/tyler-casey-landscape.jpg" srcset="src/images/credits/tyler-casey-landscape_2x.jpg 2x" alt="">
+						<span>Tyler Casey - Waimea Canyon</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/Tlw9fp2Z-8g" title="See the picture on Unsplash" target="_blank">
+						<img src="src/images/credits/tahoe-beetschen-ferns.jpg" srcset="src/images/credits/tahoe-beetschen-ferns_2x.jpg 2x" alt="">
+						<span>Tahoe Beetschen - Fern</span>
+					</a>
+				</div>
+			</div>
+			<div class="credits_wrapper">
+				<div class="image_wrapper">
+					<a href="https://www.apple.com/ios/ios-13-preview/" title="Go to apple.com" target="_blank">
+						<img src="src/images/credits/ios13wallpaper_l.jpg" srcset="src/images/credits/ios13wallpaper_l_2x.jpg 2x" alt="">
+						<span>Apple - iOS 13's light wallpaper</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://www.apple.com/ios/ios-13-preview/" title="Go to apple.com" target="_blank">
+						<img src="src/images/credits/ios13wallpaper_d.jpg" srcset="src/images/credits/ios13wallpaper_d_2x.jpg 2x" alt="">
+						<span>Apple - iOS 13's dark wallpaper</span>
+					</a>
+				</div>
+				<div class="image_wrapper">
+					<a href="https://unsplash.com/photos/6ydKsdfcASI" title="See the picture on Unsplash" target="_blank">
+						<img src="src/images/credits/ardiss-hutaff-unsplash.jpg" srcset="src/images/credits/ardiss-hutaff-unsplash_2x.jpg 2x" alt="">
+						<span>Ardiss Hutaff - Mt Cook at sunset</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
 		<div id="privacy">
 			<div>
 				<h2>Privacy</h2>
 				<p>Bonjourr syncs your user preferences with your Google Chrome or Firefox account. It does not collect any data. Bonjourr only needs one permission, browser storage. You can choose to setup the weather based on your location.</p>
 			</div>
 		</div>
+
 	</main>
 
 	<div class="signature"></div>
