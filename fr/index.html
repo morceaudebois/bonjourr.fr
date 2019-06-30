@@ -14,7 +14,7 @@
 	<title>Bonjourr · Page d'accueil personnalisable pour navigateur inspirée d'iOS</title>
 	<meta name="description" content="Améliorez votre expérience de navigation avec Bonjourr, une superbe page d'accueil personnalisable inspirée par iOS." />
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../src/style.min.css">
 	<link rel="icon" href="../src/images/bonjourr_favicon.png" />
 	<link rel=”apple-touch-icon” href=”../src/images/bonjourr_favicon.png” />
 	<meta charset="utf-8">
@@ -32,10 +32,9 @@
 			<a href="#about" title="About Bonjourr">À propos</a>
 			<a href="#contact" title="Contact us">Contact</a>
 			<a href="#donate" title="Support our work">Faire un don</a>
-			<a href="#credits" title="Photographer's credits">Crédits</a>
-			<a href="#privacy" title="Our privacy values">Confidentialité</a>
-			<a href="https://bonjourr.fr" title="Voir le site en anglais">In english</a>
-			<a onclick="AllowOnline()" href="javascript:void(0)" title="Use the online version of Bonjourr">Online</a>
+			<!-- <a href="#credits" title="More from bonjourr">More</a> -->
+			<a href="https://online.bonjourr.fr" title="Use the online version of Bonjourr" class="online">Online</a>
+			<a href="/" title="Voir le site en anglais">In english</a>
 		</nav>
 
 		<div class="hero">
@@ -228,9 +227,8 @@
 
 	<div class="signature"></div>
 
-	<script src="../src/scripts/jquery-3.4.1.min.js"></script>
-	<script src="script.js" defer></script>
-
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<script src="../src/script.min.js" defer></script>
 	<script src="https://www.google.com/recaptcha/api.js?render=6LfLHqcUAAAAAO0PzSW4SEPridOLlAQFWSOjl-eE"></script>
 </body>
 </html>

@@ -2,51 +2,19 @@
 <html>
 	<head>
 		<title>Your message has been sent</title>
-		<meta charset="utf-8"></meta>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<style>
-
-			@font-face {
-			    font-family: 'sf_pro_displaylight';
-			    src: url('src/fonts/sf-pro-display-light-webfont.woff2') format('woff2'),
-			         url('src/fonts/sf-pro-display-light-webfont.woff') format('woff');
-			    font-weight: normal;
-			    font-style: normal;
-			}
-
-			body {
-				
-				color: white;
-			    font-family: sf_pro_displaylight, Helvetica Neue, Helvetica, Arial;
-			}
-
-			.background {
-				z-index: -1;
-				position: fixed;
-				width: 100vw;
-				height: 100vh;
-				background-image: url("src/images/ardiss-hutaff-unsplash.jpg");
-				background-size: cover;
-				background-position: center center;
-				filter: blur(30px) brightness(.7);
-				transform: scale(1.25); 
-			}
-
-			.redirection {
-				width: 90%;
-				margin: auto;
-				height: 100vh;
-				display: flex;
-				justify-content: center;
-				align-items: center;				
-			}
-						
-		</style>
+		<link rel="icon" href="src/images/bonjourr_favicon.png" />
+		<link rel="apple-touch-icon" href="src/images/bonjourr_favicon.png" />
+		<link rel="stylesheet" href="src/style.min.css" />
 	</head>
 
 	<body>
 		
-		<div class="background"></div>
+		<div class="background">
+			<img src="src/images/ardiss-hutaff-unsplash.jpg" alt="bonjourr_background">
+		</div>
 
 		<div class="redirection">
 			<h2>Your message has been sent. You'll be redirected to the Bonjourr website.</h2>
@@ -69,12 +37,19 @@
 
 		  $decode = json_decode(file_get_contents($api_url), true);
 
+			function test_input($data) {
+				$data = trim($data);
+				$data = stripslashes($data);
+				$data = htmlspecialchars($data);
+				return $data;
+			}
+
 		  if ($decode['success'] == true) {
 		    
-		    $name = $_POST["name"];
-		    $mail = $_POST["mail"];
-		    $subject = $_POST["subject"];
-		    $message = $_POST["message"];
+		    $name = test_input($_POST["name"]);
+		    $mail = test_input($_POST["mail"]);
+		    $subject = test_input($_POST["subject"]);
+		    $message = test_input($_POST["message"]);
 
 		    $formattedMessage = 
 

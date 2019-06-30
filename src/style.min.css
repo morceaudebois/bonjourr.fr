@@ -1,22 +1,14 @@
 @font-face {
     font-family: 'sf_pro_displaylight';
-    src: url('src/fonts/sf-pro-display-light-webfont.woff2') format('woff2'), url('src/fonts/sf-pro-display-light-webfont.woff') format('woff');
+    src: url('fonts/sf-pro-display-light-webfont.woff2') format('woff2'), url('fonts/sf-pro-display-light-webfont.woff') format('woff');
     font-weight: normal;
     font-display: swap;
     font-style: normal
 }
 
 @font-face {
-    font-family: 'sf_pro_displaythin';
-    src: url('src/fonts/sf-pro-display-thin-webfont.woff2') format('woff2'), url('src/fonts/sf-pro-display-thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'sf_monoregular';
-    src: url('src/fonts/sfmono-regular-webfont.woff2') format('woff2'), url('src/fonts/sfmono-regular-webfont.woff') format('woff');
+    src: url('fonts/sfmono-regular-webfont.woff2') format('woff2'), url('fonts/sfmono-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -431,6 +423,93 @@ textarea:focus,
 }
 
 
+
+
+
+
+/* not-found 404 page */
+
+.redirection {
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redirection a {
+    text-decoration: underline;
+}
+.redirection a:hover {
+    opacity: .8;
+}
+
+
+
+
+
+
+/* Goodbye style */
+
+.center_popup {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    border-radius: 7px;
+    padding: 2em;
+    width: calc(100% - 8em);
+    max-width: 600px;
+    color: #222;
+    text-shadow: none;
+}
+
+.goodbye h1,
+.goodbye p {
+    text-align: center;
+    margin: .5em 0;
+    color: #292b2c;
+}
+
+.goodbye form {
+    margin: 2em auto 0 auto;
+}
+
+.goodbye textarea, .envoyer input {
+  padding: .5em 1em;
+  color: #292b2c;
+  font-size: 1.3em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #eee;
+}
+
+.goodbye textarea {
+  display: block;
+  width: 90%;
+  margin: auto;
+  min-height: 4em;
+  resize: none;
+}
+
+.goodbye .envoyer {
+    margin-top: 20px;
+    text-align: center;
+}
+.goodbye .envoyer input {
+  cursor: pointer;
+}
+
+textarea:focus,
+.goodbye .envoyer input:hover {
+    background: #ddd;
+    border-color: #bbb;
+}
 
 
 

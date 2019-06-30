@@ -23,3 +23,5 @@ RewriteRule ^(.*)$ https://bonjourr.fr/$1 [R,L]
  ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
 </IfModule>
 # END Expire headers
+
+ErrorDocument 404 /not-found/index.html

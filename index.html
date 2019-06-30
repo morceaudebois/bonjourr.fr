@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684433-3"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -13,12 +12,12 @@
 
 	<title>Bonjourr · Customizable startpage for your browser inspired by iOS</title>
 	<meta name="description" content="Improve your web browsing experience with Bonjourr, a beautiful, customizable and lightweight homepage inspired by iOS." />
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="src/images/bonjourr_favicon.png" />
-	<link rel=”apple-touch-icon” href=”src/images/bonjourr_favicon.png” />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="src/style.min.css">
+	<link rel="icon" href="src/images/bonjourr_favicon.png" />
+	<link rel=”apple-touch-icon” href=”src/images/bonjourr_favicon.png” />
 </head>
 <body>
 
@@ -32,10 +31,9 @@
 			<a href="#about" title="About Bonjourr">About</a>
 			<a href="#contact" title="Contact us">Contact</a>
 			<a href="#donate" title="Support our work">Donate</a>
-			<a href="#credits" title="Photographer's credits">Credits</a>
-			<a href="#privacy" title="Our privacy values">Privacy</a>
-			<a onclick="AllowOnline()" href="javascript:void(0)" title="Use the online version of Bonjourr">Online</a>
-			<a href="https://bonjourr.fr" title="Voir le site en anglais">En français</a>
+			<!-- <a href="#credits" title="More from Bonjourr">More</a> -->
+			<a href="https://online.bonjourr.fr" title="Use the online version of Bonjourr" class="online">Online</a>
+			<a href="/fr/" title="Access french page">En français</a>
 		</nav>
 
 		<div class="hero">
@@ -233,8 +231,8 @@
 
 	<div class="signature"></div>
 
-	<script src="src/scripts/jquery-3.4.1.min.js"></script>
-	<script src="src/scripts/script.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<script src="src/script.min.js" defer></script>
 
 	<script src="https://www.google.com/recaptcha/api.js?render=6LfLHqcUAAAAAO0PzSW4SEPridOLlAQFWSOjl-eE"></script>
 </body>
