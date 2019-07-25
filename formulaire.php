@@ -36,6 +36,8 @@
 		      . "&remoteip=" . $remoteip ;
 
 		  $decode = json_decode(file_get_contents($api_url), true);
+		  
+		  $botTrap = test_input($_POST["foo"]);
 
 			function test_input($data) {
 				$data = trim($data);
@@ -44,7 +46,13 @@
 				return $data;
 			}
 
-		  if ($decode['success'] == true) {
+			if(empty($firstname) == false) {
+				$name = test_input($_POST["name"]);
+				echo "Sale bot";
+			}
+
+
+		  else if ($decode['success'] == true) {
 		    
 		    $name = test_input($_POST["name"]);
 		    $mail = test_input($_POST["mail"]);
