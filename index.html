@@ -143,14 +143,9 @@
 					<input type="text" name="subject" placeholder="Subject" required>
 				</div>
 
-				<div id="fooDiv">
-					<label for="foo">Leave this field blank</label>
-					<input type="text" name="foo" id="foo">
-				</div>
-
 				<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible." required></textarea>
 
-				<input id="token" type="hidden" name="g-recaptcha-response">
+				<input type="hidden" name="from" value="contact">
 
 				<div class="envoyer">
 					<input type="submit" value="Send your message" name="send">
@@ -238,7 +233,5 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="src/script.min.js" defer></script>
-
-	<script src="https://www.google.com/recaptcha/api.js?render=6LfLHqcUAAAAAO0PzSW4SEPridOLlAQFWSOjl-eE"></script>
 </body>
 </html>

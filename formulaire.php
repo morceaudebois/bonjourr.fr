@@ -1,7 +1,100 @@
+<?php
+
+	ob_start();
+
+    function sanitizeString(string $s) {
+    	return filter_var($s, FILTER_SANITIZE_STRING);
+    }
+
+    function validateMail(string $s) {
+
+    	$success = filter_var($s, FILTER_VALIDATE_EMAIL);
+    	return ($success ? $s : false);
+    }
+
+    function randomHash() {
+
+    	$hash = "";
+
+    	for ($i=0; $i < 8; $i++) { 
+    		
+    		$hash = $hash . chr(mt_rand(97, 122));
+    	}
+
+    	return $hash;
+    }
+    
+    $err = [];
+    $hash = randomHash();
+
+    if ($_POST["from"] == "goodbye") {
+    	
+    	$from = "Désinstallation Bonjourr";
+
+    } else if ($_POST["from"] == "contact") {
+
+    	$from = "Contact Bonjourr";
+    	
+    	if (!empty($_POST["name"])
+	    	&& !empty($_POST["mail"])
+	    	&& !empty($_POST["subject"])) {
+
+	    	$name = sanitizeString($_POST["name"]);
+	   		$mail = validateMail(sanitizeString($_POST["mail"]));
+	   	 	$subject = sanitizeString($_POST["subject"]);
+
+	   	 	if (!$mail) array_push($err, "Mail is not correct");
+	    	
+
+	    } else {
+	    	array_push($err, "All the fields have not been filled");
+	    }
+
+    } else {
+
+    	array_push($err, "Can't decide where the form come from");
+    }
+
+
+
+    if (!empty($_POST["message"])) {
+
+    	$message = sanitizeString($_POST["message"]);
+    	if (strlen($message) < 20) array_push($err, "Message too short");
+
+    } else {
+
+    	array_push($err, "Message has not been filled");
+    }
+
+    $intro = ($_POST["from"] == "contact" ? "$hash - $name ( $mail )" : "$hash");
+
+    $formattedMessage = 
+
+		"<div>
+			<span>$intro</span>
+			<p><b>$subject</b></p>
+			<p>$message</p>
+		</div>";
+
+	$to = "victor.azevedo@mail.com, mail@tahoe.be";
+	$header = "Content-type: text/html; charset=iso-8859-1";
+
+    if (count($err)) {
+    	
+    	$title = "Error";
+
+    } else {
+
+    	$title = "Message sent !";
+    	mail($to, $from, $formattedMessage, $header);
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Your message has been sent</title>
+		<title><?= $title ?></title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,70 +110,38 @@
 		</div>
 
 		<div class="redirection">
-			<h2>Your message has been sent. You'll be redirected to the Bonjourr website.</h2>
+
+			<?php if (empty($err)): ?>
+			
+				<h2>Message Sent - You'll be redirected to the Bonjourr website.</h2>
+		    	
+			<?php endif; ?>
+
+			<?php if (count($err)): ?>
+
+				<h2>Error - You'll be redirected to the Bonjourr website.</h2>
+				<p><?= join(', ', $err) ?></p>
+
+			<?php endif; ?>
+			
 		</div>
 
-		<?php
-
-
-		    // Ma clé privée
-		  $secret = "6LfLHqcUAAAAALmzB362BenKdu5nFcW4ud7QHbey";
-		  // Paramètre renvoyé par le recaptcha
-		  $response = $_POST['g-recaptcha-response'];
-		  // On récupère l'IP de l'utilisateur
-		  $remoteip = $_SERVER['REMOTE_ADDR'];
-
-		  $api_url = "https://www.google.com/recaptcha/api/siteverify?secret=" 
-		      . $secret
-		      . "&response=" . $response
-		      . "&remoteip=" . $remoteip ;
-
-		  $decode = json_decode(file_get_contents($api_url), true);
-		  
-		  $botTrap = test_input($_POST["foo"]);
-
-			function test_input($data) {
-				$data = trim($data);
-				$data = stripslashes($data);
-				$data = htmlspecialchars($data);
-				return $data;
-			}
-
-			if(empty($firstname) == false) {
-				$name = test_input($_POST["name"]);
-				echo "Sale bot";
-			}
-
-
-		  else if ($decode['success'] == true) {
-		    
-		    $name = test_input($_POST["name"]);
-		    $mail = test_input($_POST["mail"]);
-		    $subject = test_input($_POST["subject"]);
-		    $message = test_input($_POST["message"]);
-
-		    $formattedMessage = 
-
-		    "<div>
-		    <p>Message sent from the Bonjourr website form.</p>
-		      <p>Nom : $name</p>
-		      <p>Email : $mail</p>
-		      <p>Message : <br><br>$message</p>
-		    </div>";
-
-		    // send email
-		    mail("mail@tahoe.be", $subject, $formattedMessage, "Content-type: text/html; charset=iso-8859-1");
-		  }
-		?>
+		
 		<script>
 
-		setTimeout(function() {
-			window.location.replace("https://bonjourr.fr/");
-		}, 4000);
+			/*setTimeout(function() {
+				window.location.replace("https://bonjourr.fr/");
+			}, 4000);*/
 
 		</script>
 
-
 	</body>
+
+	<?php
+
+	$content = ob_get_clean();
+	echo $content
+
+	?>
 </html>
 
