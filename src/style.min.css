@@ -40,10 +40,12 @@ textarea {
 }
 
 .background img {
+    filter: blur(10px);
     width: 100%;
     min-height: 500px;
     width: 100vw;
     height: 110vh;
+    transform: scale(1.2);
     object-fit: cover
 }
 
