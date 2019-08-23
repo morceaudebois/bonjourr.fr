@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'sf_pro_displaylight';
+  src: url("../fonts/sf-pro-display-light-webfont.woff2") format("woff2"), url("../fonts/sf-pro-display-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'sf_monoregular';
+  src: url("../fonts/sfmono-regular-webfont.woff2") format("woff2"), url("../fonts/sfmono-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+body {
+  margin: 0;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+  scroll-behavior: smooth;
+  overflow-wrap: break-word;
+  font-family: sf_pro_displaylight; }
+
+p {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.background {
+  background-image: url("../images/beach.jpg");
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: .6;
+  z-index: -1; }
+
+.social {
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: row; }
+  .social svg {
+    width: 40px;
+    height: 40px;
+    padding: 10px; }
+    .social svg path {
+      transition: all .1s; }
+      .social svg path:hover {
+        fill: #fff; }
+      .social svg path:active {
+        opacity: .7; }
+
+button {
+  font-size: 1.6em;
+  border: 0;
+  min-width: 7em;
+  min-height: 2em;
+  padding: 0;
+  margin: 1em auto;
+  background-color: #ffffffc9;
+  border-radius: 7px;
+  transition: all .1s;
+  cursor: pointer;
+  color: #292b2c;
+  font-family: 'sf_pro_displaylight'; }
+  button:hover {
+    background-color: #fff; }
+  button:active {
+    opacity: .7; }
+
+.hero {
+  width: 100%;
+  height: 80vh;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
+  .hero h1 {
+    font-size: 7em;
+    margin: 0; }
+  .hero .slideshow {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; }
+    .hero .slideshow .r_arrow svg, .hero .slideshow .l_arrow svg {
+      width: 50px; }
+      .hero .slideshow .r_arrow svg path, .hero .slideshow .l_arrow svg path {
+        transition: all .1s; }
+        .hero .slideshow .r_arrow svg path:hover, .hero .slideshow .l_arrow svg path:hover {
+          fill: #fff; }
+        .hero .slideshow .r_arrow svg path:active, .hero .slideshow .l_arrow svg path:active {
+          opacity: .7; }
+    .hero .slideshow img {
+      margin: 0 1em;
+      max-width: 50em;
+      box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.9); }
+  .hero h2 {
+    font-size: 2em;
+    margin: 0; }
+  .hero .chevronLink {
+    width: 60px;
+    min-height: 33px;
+    transition: all .1s; }
+    .hero .chevronLink path {
+      transition: all .1s; }
+      .hero .chevronLink path:hover {
+        fill: #fff; }
+      .hero .chevronLink path:active {
+        opacity: .7; }

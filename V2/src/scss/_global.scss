@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'sf_pro_displaylight';
+    src: url('../fonts/sf-pro-display-light-webfont.woff2') format('woff2'), url('../fonts/sf-pro-display-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'sf_monoregular';
+    src: url('../fonts/sfmono-regular-webfont.woff2') format('woff2'), url('../fonts/sfmono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+    scroll-behavior: smooth;
+    overflow-wrap: break-word;
+    font-family: sf_pro_displaylight;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+@mixin svgHover {
+	path {
+		transition: all .1s;
+
+		&:hover {
+			fill: #fff;
+		}
+
+		&:active {
+			opacity: .7;
+		}
+	}
+}
