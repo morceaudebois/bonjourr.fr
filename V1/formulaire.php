@@ -86,8 +86,13 @@
 
     } else {
 
+    	//fake 'message sent' if it contains an URL
+    	$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+    	$hasURL = preg_match($reg_exUrl, $text);
+    	
+    	if (!$hasURL) mail($to, $from, $formattedMessage, $header);
+
     	$title = "Message sent !";
-    	mail($to, $from, $formattedMessage, $header);
     }
 ?>
 
