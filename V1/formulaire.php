@@ -31,20 +31,23 @@
     	
     	$from = "Désinstallation Bonjourr";
 
+    } else if ($_POST["from"] == "goodbye_chrome") {
+    	
+    	$from = "Désinstallation Bonjourr Chrome";
+
+    } else if ($_POST["from"] == "goodbye_firefox") {
+    	
+    	$from = "Désinstallation Bonjourr Firefox";
+        $mail = validateMail(sanitizeString($_POST["mail"]));
+
     } else if ($_POST["from"] == "contact") {
 
     	$from = "Contact Bonjourr";
     	
-    	if (!empty($_POST["name"])
-	    	&& !empty($_POST["mail"])
-	    	&& !empty($_POST["subject"])) {
+    	if (!empty($_POST["name"]) && !empty($_POST["subject"])) {
 
 	    	$name = sanitizeString($_POST["name"]);
-	   		$mail = validateMail(sanitizeString($_POST["mail"]));
 	   	 	$subject = sanitizeString($_POST["subject"]);
-
-	   	 	if (!$mail) array_push($err, "Mail is not correct");
-	    	
 
 	    } else {
 	    	array_push($err, "All the fields have not been filled");
@@ -56,6 +59,10 @@
     }
 
 
+    if (!empty($_POST["mail"])) {
+    	$mail = validateMail(sanitizeString($_POST["mail"]));
+    	if (!$mail) array_push($err, "Mail is not correct");
+    }
 
     if (!empty($_POST["message"])) {
 
@@ -73,6 +80,7 @@
 
 		"<div>
 			<span>$intro</span>
+            <p>$mail</p>
 			<p><b>$subject</b></p>
 			<p>$message</p>
 		</div>";
@@ -134,9 +142,9 @@
 		
 		<script>
 
-			/*setTimeout(function() {
+			setTimeout(function() {
 				window.location.replace("https://bonjourr.fr/");
-			}, 4000);*/
+			}, 6000);
 
 		</script>
 
