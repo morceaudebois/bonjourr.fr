@@ -97,12 +97,12 @@ nav a {
     padding: 1em;
     text-align: center;
     font-size: 1.5em;
-    color: #fffb
+    color: #fffb;
+    transition: color .05s ease-in;
 }
 
 nav a:hover {
     color: #fff;
-    text-decoration: underline;
 }
 
 nav a img {
@@ -110,10 +110,11 @@ nav a img {
     filter: contrast(0) brightness(2);
     height: 1.1em;
     margin-top: .2em;
+    transition: opacity .05s ease-in;
 }
 
 nav a img:hover {
-    filter: contrast(0);
+    opacity: .8;
 }
 
 .title {
@@ -215,7 +216,7 @@ textarea {
     width: calc(100% - 4em);
     min-height: 8em;
     margin: 0 1em;
-    padding: 1em
+    padding: 1em;
 }
 
 #contact input,
@@ -224,7 +225,8 @@ textarea {
     border-radius: 4px;
     background-color: #ffffffc2;
     font-size: 1.3em;
-    color: #292b2c
+    color: #292b2c;
+    transition: background-color .05s ease-in;
 }
 
 textarea:focus,
