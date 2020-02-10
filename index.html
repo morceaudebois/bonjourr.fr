@@ -18,8 +18,14 @@
 	<meta property="twitter:image" content="https://bonjourr.fr/src/images/preview.jpg">
 
 	<link rel="stylesheet" href="src/style.css">
-	<link rel="icon" href="src/images/bonjourr_favicon.png" />
-	<link rel=”apple-touch-icon” href=”src/images/bonjourr_favicon.png” />
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#d58e5b">
+	<meta name="theme-color" content="#ffffff">
+
+	<script src="src/script.js" defer></script>
 </head>
 <body>
 
@@ -52,14 +58,14 @@
 			</div>
 
 			<div id="screens">
-				<img src="src/images/preview.png" alt="bonjourr screenshot">
+				<img src="src/images/preview.jpg" alt="bonjourr screenshot" draggable="false">
 			</div>
 		</div>
 
 		<div class="DLmenu">
-			<a id="mainDownload" href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd"><img src="src/images/chrome.svg" alt="chrome_icon">Get Bonjourr on Chrome</a>
+			<a id="mainDownload" href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd"><img id="dl_icon" src="src/images/chrome.svg" alt="chrome_icon">Get Bonjourr on Chrome</a>
 
-			<a href="#useinsafari">Or other versions</a>
+			<a href="#otherdl">Or other versions</a>
 		</div>
 	</div>
 	
@@ -122,8 +128,5 @@
 	</main>
 
 	<div id="signature"></div>
-
-	<script src="src/script.min.js"></script>
-
 </body>
 </html>
