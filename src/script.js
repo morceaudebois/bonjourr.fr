@@ -1,19 +1,46 @@
-const id = name => document.getElementById(name);
-
-const checkMobile = (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false);
 
 window.onload = function() {
 
 	//signature aleatoire
-	let victor = "<a href='https://victor-azevedo.me/'>Victor Azevedo</a>";
-	let tahoe = "<a href='https://tahoe.be'>Tahoe Beetschen</a>";
+	const signature = document.getElementById('signature'),
+		victor = "<a href='https://victor-azevedo.me/'>Victor Azevedo</a>",
+		tahoe = "<a href='https://tahoe.be'>Tahoe Beetschen</a>",
+		concat = (Math.random() > .5 ? `${victor} & ${tahoe}` : `${tahoe} & ${victor}`);
 
-	if (Math.random() > .5) {
-		id('signature').innerHTML = `<p>Made in France with ❤️<br> by ${victor} & ${tahoe}`
-	} else {
-		id('signature').innerHTML = `<p>Made in France with ❤️<br> by ${tahoe} & ${victor}`
+	signature.innerHTML = "<p>Made in France with ❤️<br> by " + concat;
+
+
+
+
+	//download for different browsers
+	const dl_a = document.getElementById("mainDownload"),
+		dl_img = document.getElementById("dl_icon"),
+		dl_desc = document.getElementById("dl_desc");
+
+	if (navigator.userAgent.indexOf("Firefox") !== -1) {
+		dl_a.href = "https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/";
+		dl_desc.innerText = "Get Bonjourr on Firefox";
+		dl_img.src = "src/images/firefox.svg";
 	}
-
-    //rajoute la video
-	id('insert_video').innerHTML = '<video id="screen" autoplay="autoplay" loop="loop" muted="muted"><source type="video/mp4" src="src/images/notagif.mp4"></video>';
+	else if (navigator.userAgent.indexOf("OPR") !== -1) {
+		dl_a.href = "https://online.bonjourr.fr";
+		dl_desc.innerText = "Try Bonjourr online";
+		dl_img.style.display = "none";
+	}
+	else if (navigator.userAgent.indexOf("Safari") !== -1) {
+		dl_a.href = "#otherdl";
+		dl_desc.innerText = "How to install on Safari";
+		dl_img.src = "src/images/safari.svg";
+	}
+	else if (navigator.userAgent.indexOf("Chrome") !== -1) {
+		dl_a.href = "https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd";
+		dl_desc.innerText = "Get Bonjourr on Chrome";
+		dl_img.src = "src/images/chrome.svg";
+	}
+	
+	else {
+		dl_a.href = "https://online.bonjourr.fr";
+		dl_desc.innerText = "Try Bonjourr online";
+		dl_img.style.display = "none";
+	}
 }

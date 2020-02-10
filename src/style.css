@@ -172,14 +172,14 @@ nav a img:hover {
     border: 2px solid white;
     border-radius: 4px;
     padding: .5em 1em;
-    transition: all .2s;
+    transition: background .2s;
 }
 
 #mainDownload:hover {
     background: #1115;
     border: 2px solid #bbb;
     color: #eee;
-    transition: all .1s;
+    transition: background .1s;
 }
 
 #mainDownload img {
@@ -193,7 +193,11 @@ nav a img:hover {
 }
 
 #contact h2 {
-    margin-left: 1rem;
+    margin-left: 3rem;
+}
+
+#contact form {
+    margin: 2em;
 }
 
 #contact .form_desc {
