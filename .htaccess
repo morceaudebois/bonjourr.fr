@@ -7,6 +7,8 @@ RewriteRule ^/?$ "http\:\/\/bonjourr\.fr\/" [R=301,L]
 
 ErrorDocument 404 /not-found/index.html
 
+
+
 # BEGIN Expire headers
 <IfModule mod_expires.c>
  ExpiresActive On

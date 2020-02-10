@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684433-3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-136684433-3');
+	</script>
+
+	<title>Bonjourr · Minimalist new tab page for Chrome and Firefox</title>
+	<meta name="description" content="Improve your web browsing experience with Bonjourr, a beautiful, customizable and lightweight homepage inspired by iOS." />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="https://bonjourr.fr/src/images/preview.jpg">
+	<meta property="twitter:image" content="https://bonjourr.fr/src/images/preview.jpg">
+
+	<link rel="stylesheet" href="src/style.css">
+	<link rel="icon" href="src/images/bonjourr_favicon.png" />
+	<link rel=”apple-touch-icon” href=”src/images/bonjourr_favicon.png” />
+</head>
+<body>
+
+	<div class="background">
+		<img src="src/images/ardiss-hutaff-unsplash.jpg" alt="bonjourr_background">
+	</div>
+
+	<div class="content">
+
+		<nav>
+			<a href="#contact" title="Contact us">Contact</a>
+			<a href="#donate" title="Support our work">Donate</a>
+			<!-- <a href="#credits" title="More from Bonjourr">More</a> -->
+			<a href="https://online.bonjourr.fr" title="Use the online version of Bonjourr" id="online">Online</a>
+			<!-- <a href="/fr/" title="Access french page">En français</a> -->
+			<a href="https://twitter.com/BonjourrTeam" title="Get our latest news">
+				<img src="src/images/twitter.svg" alt="twitter icon">
+			</a>
+			<a href="https://github.com/victorazevedo-me/Bonjourr">
+				<img src="src/images/github.svg" alt="github icon">
+			</a>
+		</nav>
+
+		<div class="hero">
+			<div class="title">
+				<img src="src/images/icon.png" srcset="src/images/icon_2x.png 2x" class="icon" alt="bonjourr logo">
+				<h1>Bonjourr</h1>
+				<br>
+				<p>Customizable startpage inspired by iOS</p>
+			</div>
+
+			<div id="screens">
+				<img src="src/images/preview.png" alt="bonjourr screenshot">
+			</div>
+		</div>
+
+		<div class="DLmenu">
+			<a id="mainDownload" href="https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd"><img src="src/images/chrome.svg" alt="chrome_icon">Get Bonjourr on Chrome</a>
+
+			<a href="#useinsafari">Or other versions</a>
+		</div>
+	</div>
+	
+	<main>
+
+		<div id="contact">
+			<h2>Contact</h2>
+
+			<form id="contactform" method="POST" action="/formulaire.php">
+
+				<div class="form_desc">
+					<input type="text" name="name" placeholder="Name" required>
+					<input type="email" name="mail" placeholder="Email" required>
+					<input type="text" name="subject" placeholder="Subject" required>
+				</div>
+
+				
+				<textarea name="message" placeholder="A question? A bug report? An idea? Write it here and we'll answer as quickly as possible." required></textarea>
+
+				<input type="hidden" name="from" value="contact">
+
+
+				<div class="envoyer">
+					<input type="submit" value="Send your message" name="send">
+				</div>
+			</form>
+		</div>
+
+		<div id="donate">
+			<div>
+				<h2>Donate</h2>
+				<p>If you want to support our work, you can spread the word to your friends about Bonjourr or donate via the buttons below.</p>
+				
+				<div class="buttons">
+					<a href="https://www.paypal.com/pools/c/8fwJxNvvAJ" title="Donate via PayPal">
+						<div class="donate_button" id="paypal">
+							<img src="src/images/paypal.svg" alt="paypal logo">
+						</div>
+					</a>
+
+					<a href="https://commerce.coinbase.com/checkout/cb334f57-c5eb-48e5-9204-92c8c43af001" title="Donate in crypto">
+						<div class="donate_button" id="crypto">
+							<p>Donate with Crypto</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div id="privacy">
+				<div>
+					<h2>Privacy</h2>
+					<p>Bonjourr syncs your user preferences with your Google Chrome or Firefox sync account. It does not collect any data. Bonjourr needs 2 permissions:</p>
+					<li>Browser Storage, to save huge custom backgrounds.</li>
+					<li>Geolocalisation, to display precise weather information with ease.</li>
+				</div>
+			</div>
+		</div>
+		
+
+	</main>
+
+	<div id="signature"></div>
+
+	<script src="src/script.min.js"></script>
+
+</body>
+</html>

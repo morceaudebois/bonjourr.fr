@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'sf_pro_displaylight';
+    src: url('fonts/sf-pro-display-light-webfont.woff2') format('woff2'), url('fonts/sf-pro-display-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'sf_monoregular';
+    src: url('fonts/sfmono-regular-webfont.woff2') format('woff2'), url('fonts/sfmono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+    scroll-behavior: smooth;
+    overflow-wrap: break-word
+}
+
+body,
+input,
+textarea {
+    font-family: sf_pro_displaylight, Helvetica Neue, Helvetica, Arial
+}
+
+.background {
+    z-index: -1;
+    position: fixed
+}
+
+.background img {
+    filter: blur(10px) brightness(.7);
+    width: 100%;
+    min-height: 500px;
+    width: 100vw;
+    height: 110vh;
+    transform: scale(1.2);
+    object-fit: cover
+}
+
+p,
+li {
+    margin: 0;
+    font-size: 1.3em;
+    color: white
+}
+
+main p {
+    text-align: justify
+}
+
+main>div {
+    margin-top: 5em;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: initial;
+    margin: 0px
+}
+
+h2 {
+    margin: .5em 0;
+    font-size: 3em;
+}
+
+a {
+    color: white;
+    text-decoration: none
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em auto
+}
+
+a {
+    outline: 0;
+}
+
+nav a {
+    padding: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    color: #fffb
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+nav a img {
+    opacity: .5;
+    filter: contrast(0) brightness(2);
+    height: 1.1em;
+    margin-top: .2em;
+}
+
+nav a img:hover {
+    filter: contrast(0);
+}
+
+.title {
+    margin: 0 2em 4em 2em;
+}
+
+.title * {
+    display: inline;
+}
+
+.icon {
+    width: 5em;
+    margin: 0 1em -.75em 0;
+}
+
+.hero {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+#screens {
+    max-width: 450px;
+}
+
+#screens img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px #222;
+}
+
+.DLmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em
+}
+
+.DLmenu a {
+    margin: 0 1em;
+    font-size: 1.3em;
+}
+
+#mainDownload {
+    display: flex;
+    align-items: center;
+    background: #fff1;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: .5em 1em;
+    transition: all .2s;
+}
+
+#mainDownload:hover {
+    background: #1115;
+    border: 2px solid #bbb;
+    color: #eee;
+    transition: all .1s;
+}
+
+#mainDownload img {
+    width: 2em;
+    margin-right: 1em;
+}
+
+#contact {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#contact h2 {
+    margin-left: 1rem;
+}
+
+#contact .form_desc {
+    display: flex;
+    justify-content: space-between
+}
+
+#contact input {
+    width: calc(33.33% - 4em);
+    padding: 1em;
+    margin: 1em
+}
+
+textarea {
+    width: calc(100% - 4em);
+    min-height: 8em;
+    margin: 0 1em;
+    padding: 1em
+}
+
+#contact input,
+textarea {
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffffc2;
+    font-size: 1.3em;
+    color: #292b2c
+}
+
+textarea:focus,
+#contact .form_desc input:focus {
+    background-color: #fffd
+}
+
+#contact .envoyer {
+    text-align: center
+}
+
+#contact .envoyer input {
+    cursor: pointer;
+    display: inline;
+    padding: 1em 3em;
+    width: auto
+}
+
+#contact .envoyer input:hover {
+    background-color: #fff
+}
+
+#donate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#donate>div {
+    max-width: 500px;
+    padding: 3em;
+}
+
+.buttons {
+    margin: 2em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.donate_button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 3.45em;
+    width: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.buttons a {
+    margin: 1em;
+}
+
+#paypal {
+    background: #ffc439;
+}
+
+#paypal:hover,
+#crypto:hover,
+.image_wrapper:hover {
+    filter: brightness(0.85)
+}
+
+#paypal:focus,
+#crypto:focus,
+.image_wrapper:focus,
+#paypal:active,
+#crypto:active,
+.image_wrapper:active {
+    filter: brightness(0.7)
+}
+
+#paypal img {
+    height: 60%
+}
+
+#crypto {
+    background: linear-gradient(to bottom right, #126eb9, #147fd5)
+}
+
+#privacy li {
+    margin: 1em 0 0 2em;
+}
+
+#signature {
+    margin: 7em auto 2em auto;
+    color: white;
+    font-size: .7em
+}
+
+#signature p {
+    text-align: center
+}
+
+#signature a {
+    font-weight: bolder
+}
+
+
+/* not-found 404 page */
+
+.redirection {
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redirection a {
+    text-decoration: underline;
+}
+
+.redirection a:hover {
+    opacity: .8;
+}
+
+
+/* Goodbye style */
+
+.center_popup {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    border-radius: 7px;
+    padding: 2em;
+    width: calc(100% - 8em);
+    max-width: 600px;
+    color: #222;
+    text-shadow: none;
+}
+
+.goodbye h1,
+.goodbye p {
+    text-align: center;
+    margin: .5em 0;
+    color: #292b2c;
+}
+
+.goodbye form {
+    margin: 2em auto 0 auto;
+}
+
+.goodbye textarea,
+.goodbye input,
+.envoyer input {
+    padding: .5em 1em;
+    color: #292b2c;
+    font-size: 1.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #eee;
+}
+
+.goodbye textarea {
+    display: block;
+    width: 90%;
+    margin: auto;
+    min-height: 4em;
+    resize: none;
+}
+
+.goodbye input[name="mail"] {
+    display: block;
+    width: 90%;
+    min-height: 1em;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.goodbye .envoyer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.goodbye .envoyer input {
+    cursor: pointer;
+}
+
+textarea:focus,
+.goodbye .envoyer input:hover {
+    background: #ddd;
+    border-color: #bbb;
+}
+
+@media screen and (max-width: 769px) {
+    .browsers,
+    #contact .form_desc {
+        flex-wrap: wrap
+    }
+    #contact .form_desc input,
+    #contact textarea {
+        margin: .5em
+    }
+    #contact textarea {
+        width: calc(100% - 3em)
+    }
+    #contact .form_desc input {
+        width: 100%
+    }
+    #contact .envoyer input {
+        padding: 1em
+    }
+}
