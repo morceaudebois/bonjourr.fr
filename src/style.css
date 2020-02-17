@@ -174,7 +174,7 @@ nav a img:hover {
     font-size: 1.3em;
 }
 
-#mainDownload {
+.downloadButton {
     display: flex;
     align-items: center;
     background: #fff1;
@@ -184,16 +184,46 @@ nav a img:hover {
     transition: background .2s;
 }
 
-#mainDownload:hover {
+.downloadButton:hover {
     background: #1115;
     border: 2px solid #bbb;
     color: #eee;
     transition: background .1s;
 }
 
-#mainDownload img {
+.downloadButton img {
     width: 2em;
     margin-right: 1em;
+}
+
+
+#safariSection {
+    height: 0px;
+    opacity: 0;
+    max-width: 1100px;
+    margin: auto;
+    padding: 3em;
+}
+
+#safariSection.visible {
+    height: auto;
+    opacity: 1;
+}
+
+#safariSection iframe {
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+    width: 755px;
+    height: 424px;
+    max-width: 100%;
+    max-height: calc((100vw) / (16/9));
+}
+
+
+#safariDownload {
+    max-width: 250px;
+    margin: auto;
 }
 
 #contact {
@@ -435,6 +465,7 @@ textarea:focus,
 }
 
 @media screen and (max-width: 720px) {
+
 
     #contact .form_desc {
         flex-wrap: wrap

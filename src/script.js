@@ -27,7 +27,7 @@ function browserDetection() {
 
 	const isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
 		isFirefox = typeof InstallTrigger !== 'undefined',
-		isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
+		isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1,
 		isChrome = !!window.chrome;
 
 	if (isMobile || isOpera) {
@@ -41,9 +41,10 @@ function browserDetection() {
 		dl_img.src = "src/images/firefox.svg";
 	}
 	else if (isSafari) {
-		dl_a.href = "#otherdl";
+		dl_a.href = "#safariSection";
 		dl_desc.innerText = "How to install on Safari";
 		dl_img.src = "src/images/safari.svg";
+		document.getElementById("safariSection").classList.add("visible");
 	}
 	else if (isChrome) {
 		dl_a.href = "https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd";
