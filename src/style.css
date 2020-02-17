@@ -315,13 +315,17 @@ textarea:focus,
 }
 
 #signature {
-    margin: 7em auto 2em auto;
+    padding: 3em 0;
+    margin-top: 5em;
+    background: rgba(16,12,5,.6);
     color: white;
-    font-size: .7em
+    font-size: .7em;
+    text-align: center;
 }
 
 #signature p {
-    text-align: center
+    display: inline-block;
+    text-align: left
 }
 
 #signature a {
@@ -422,8 +426,8 @@ textarea:focus,
     border-color: #bbb;
 }
 
-@media screen and (max-width: 769px) {
-    .browsers,
+@media screen and (max-width: 720px) {
+
     #contact .form_desc {
         flex-wrap: wrap
     }
@@ -439,5 +443,39 @@ textarea:focus,
     }
     #contact .envoyer input {
         padding: 1em
+    }
+
+    body {font-size: 14px}
+
+    h1 {font-size: 4em}
+
+    .title p {font-size: 1.3em}
+
+    nav a {
+        font-size: 1.2em;
+        padding: .5em;
+    }
+
+    img.icon {
+        width: 3.5em;
+        margin: 0 .75em -.5em 0;
+    }
+
+    .DLmenu {
+        flex-wrap: wrap;
+    }
+
+    .DLmenu > a {
+        margin: .5em 1em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    h1 {font-size: 3em}
+
+    img.icon {
+        width: 3em;
+        margin: 0 .5em -.5em 0;
     }
 }
