@@ -144,6 +144,7 @@ nav a img:hover {
 }
 
 #screens {
+    position: relative;
     max-width: 450px;
 }
 
@@ -151,6 +152,13 @@ nav a img:hover {
     width: 100%;
     border-radius: 4px;
     box-shadow: 0px 0px 20px #222;
+}
+
+#screens #img_below {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .DLmenu {
