@@ -1,9 +1,9 @@
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://bonjourr.fr/$1 [R,L]
-
-RewriteCond %{HTTP_HOST} ^www\.bonjourr\.fr$
-RewriteRule ^/?$ "http\:\/\/bonjourr\.fr\/" [R=301,L]
+#RewriteEngine On
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://bonjourr.fr/$1 [R,L]
+#
+#RewriteCond %{HTTP_HOST} ^www\.bonjourr\.fr$
+#RewriteRule ^/?$ "http\:\/\/bonjourr\.fr\/" [R=301,L]
 
 ErrorDocument 404 /not-found/index.html
 

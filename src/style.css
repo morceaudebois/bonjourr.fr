@@ -52,6 +52,11 @@ li {
     color: white
 }
 
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
 main p {
     text-align: justify
 }
@@ -227,7 +232,6 @@ nav a img:hover {
 }
 
 #contact {
-    max-width: 1000px;
     margin: auto;
 }
 
@@ -289,12 +293,11 @@ textarea:focus,
 
 #donate {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
 }
 
 #donate>div {
-    max-width: 500px;
     padding: 3em;
 }
 
@@ -483,6 +486,8 @@ textarea:focus,
     #contact .envoyer input {
         padding: 1em
     }
+
+    #donate { flex-wrap: wrap; }
 
     body {font-size: 14px}
 
