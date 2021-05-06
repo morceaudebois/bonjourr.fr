@@ -9,7 +9,20 @@ function signature() {
 		tahoe = "<a href='https://tahoe.be'>Tahoe Beetschen</a>",
 		concat = (Math.random() > .5 ? `${victor} & ${tahoe}` : `${tahoe} & ${victor}`);
 
-	signature.innerHTML = "<p>Made in France with ❤️<br> by " + concat;
+	if (getLanguage() === 'fr') {
+		signature.innerHTML = "<p>Fabriqué en France avec ❤️<br> par " + concat;
+	} else {
+		signature.innerHTML = "<p>Made in France with ❤️<br> by " + concat;
+	}
+	
+}
+
+function getLanguage() {
+	if (window.location.href.includes('/fr')) {
+		return 'fr'
+	} else {
+		return 'en'
+	}
 }
 
 function previewSlideshow(time) {
@@ -22,7 +35,13 @@ function previewSlideshow(time) {
 	imgnode.id = "img_below";
 	imgnode.setAttribute("alt", "bonjourr screenshot");
 	imgnode.setAttribute("draggable", "false");
-	imgnode.src = "src/images/preview2.jpg";
+
+	if (getLanguage() === 'fr') {
+		imgnode.src = "../src/images/preview2.jpg";
+	} else {
+		imgnode.src = "src/images/preview2.jpg";
+	}
+	
 
 	document.getElementById("screens").appendChild(imgnode);
 
