@@ -85,7 +85,7 @@
 			<p>$message</p>
 		</div>";
 
-	$to = "victor.azevedo@mail.com, mail@tahoe.be";
+	$to = "mail@tahoe.be";
 	$header = "Content-type: text/html; charset=iso-8859-1";
 
     if (count($err)) {
