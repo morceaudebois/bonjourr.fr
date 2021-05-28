@@ -254,6 +254,9 @@ nav a img:hover {
     margin: 1em
 }
 
+#contact a { text-decoration: underline;}
+#contact p { padding: 0 3rem; }
+
 textarea {
     width: calc(100% - 4em);
     min-height: 8em;
