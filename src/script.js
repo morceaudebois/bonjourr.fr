@@ -63,6 +63,8 @@ function previewSlideshow(time) {
 
 function browserDetection() {
 
+	const isFrench = window.location.href.includes('/fr');
+
 	const dl_a = document.getElementById("mainDownload"),
 		dl_img = document.getElementById("dl_icon"),
 		dl_desc = document.getElementById("dl_desc");
@@ -73,39 +75,69 @@ function browserDetection() {
 		isFirefox = typeof InstallTrigger !== 'undefined',
 		isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1,
 		isChrome = !!window.chrome;
+		
 
 	if (isMobile || isOpera) {
 		dl_a.href = "https://online.bonjourr.fr";
-		dl_desc.innerText = "Try Bonjourr online";
 		dl_img.style.display = "none";
+
+		if (isFrench) {
+			dl_desc.innerText = "Essayer Bonjourr Online";
+		} else {
+			dl_desc.innerText = "Try Bonjourr online";
+		}
 	}
 	else if (isFirefox) {
 		dl_a.href = "https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/";
-		dl_desc.innerText = "Get Bonjourr on Firefox";
-		dl_img.src = "src/images/firefox.svg";
+		
+
+		if (isFrench) {
+			dl_desc.innerText = "Obtenir Bonjourr sur Firefox";
+			dl_img.src = "../src/images/firefox.svg";
+		} else {
+			dl_desc.innerText = "Get Bonjourr on Firefox";
+			dl_img.src = "src/images/firefox.svg";
+		}
 	}
 	else if (isSafari) {
 		dl_a.href = "#safariSection";
-		dl_desc.innerText = "How to install on Safari";
-		dl_img.src = "src/images/safari.svg";
+		
+		let content; 
 
-		const content = '<div id="safariSection"><h2>Bonjourr for Safari</h2><iframe src="https://www.youtube.com/embed/tSe3zX_bL-8" frameborder="0" allowfullscreen></iframe><a id="safariDownload" class="downloadButton" href="dl/Bonjourr.zip"><img id="dl_icon" src="src/images/safari.svg" alt="safari_icon"><span id="dl_desc">Download Bonjourr for Safari</span></a></div>';
-
-		// document.querySelector('main').prepend(content);
+		if (isFrench) {
+			dl_desc.innerText = "Installer Bonjourr sur Safari";
+			content = '<div id="safariSection"><h2>Bonjourr sur Safari</h2><iframe src="https://www.youtube.com/embed/tSe3zX_bL-8" frameborder="0" allowfullscreen></iframe><a id="safariDownload" class="downloadButton" href="dl/Bonjourr.zip"><img id="dl_icon" src="src/images/safari.svg" alt="safari_icon"><span id="dl_desc">Download Bonjourr for Safari</span></a></div>';
+			dl_img.src = "../src/images/safari.svg";
+		} else {
+			dl_desc.innerText = "How to install on Safari";
+			content = '<div id="safariSection"><h2>Bonjourr for Safari</h2><iframe src="https://www.youtube.com/embed/tSe3zX_bL-8" frameborder="0" allowfullscreen></iframe><a id="safariDownload" class="downloadButton" href="dl/Bonjourr.zip"><img id="dl_icon" src="src/images/safari.svg" alt="safari_icon"><span id="dl_desc">Download Bonjourr for Safari</span></a></div>';
+			dl_img.src = "src/images/safari.svg";
+		}
 
 		document.querySelector('main').insertAdjacentHTML('afterbegin', content);
-
 		document.getElementById("safariSection").classList.add("visible");
 	}
 	else if (isChrome) {
 		dl_a.href = "https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd";
-		dl_desc.innerText = "Get Bonjourr on Chrome";
-		dl_img.src = "src/images/chrome.svg";
+		
+
+		if (isFrench) {
+			dl_desc.innerText = "Obtenir Bonjourr sur Chrome";
+			dl_img.src = "../src/images/chrome.svg";
+		} else {
+			dl_desc.innerText = "Get Bonjourr on Chrome";
+			dl_img.src = "src/images/chrome.svg";
+		}
 	}
 	
 	else {
 		dl_a.href = "https://online.bonjourr.fr";
-		dl_desc.innerText = "Try Bonjourr online";
 		dl_img.style.display = "none";
+
+		if (isFrench) {
+			dl_desc.innerText = "Essayer Bonjourr Online";
+		} else {
+			dl_desc.innerText = "Try Bonjourr Online";
+		}
 	}
 }
