@@ -173,6 +173,8 @@ nav a img:hover {
 	align-items: center;
 	margin: auto;
 	margin-top: 2em;
+	opacity: 0;
+	transition: opacity 0.05s 0.02s;
 }
 
 .DLmenu a {
@@ -378,6 +380,10 @@ textarea:focus,
 
 #signature a {
 	font-weight: bolder;
+}
+
+#signature a:hover {
+	text-decoration: underline;
 }
 
 /* not-found 404 page */

@@ -1,143 +1,112 @@
-window.onload = function() {
-	previewSlideshow(6000) //transition time
-	signature()
-	browserDetection()
-}
-
 function signature() {
-	const signature = document.getElementById('signature'),
-		victor = "<a href='https://victor-azevedo.me/'>Victor Azevedo</a>",
+	const victor = "<a href='https://victr.me/'>Victor Azevedo</a>",
 		tahoe = "<a href='https://tahoe.be'>Tahoe Beetschen</a>",
-		concat = (Math.random() > .5 ? `${victor} & ${tahoe}` : `${tahoe} & ${victor}`);
+		concat = Math.random() > 0.5 ? `${victor} & ${tahoe}` : `${tahoe} & ${victor}`,
+		texte = getLanguage() === 'fr' ? 'Fabriqué en France avec ❤️<br> par' : 'Made in France with ❤️<br> by'
 
-	if (getLanguage() === 'fr') {
-		signature.innerHTML = "<p>Fabriqué en France avec ❤️<br> par " + concat;
-	} else {
-		signature.innerHTML = "<p>Made in France with ❤️<br> by " + concat;
-	}
-	
+	document.querySelector('#signature').innerHTML = `<p>${texte} ${concat}</p>`
 }
 
 function getLanguage() {
-	if (window.location.href.includes('/fr')) {
-		return 'fr'
-	} else {
-		return 'en'
-	}
+	return window.location.href.includes('/fr') ? 'fr' : 'en'
 }
 
 function previewSlideshow(time) {
-
 	/*prepare img pour l'overlay
 	cet element n'est pas dans le l'index pour ne pas
 	charger 2 images en meme temps*/
 
-	let imgnode = document.createElement("img");
-	imgnode.id = "img_below";
-	imgnode.setAttribute("alt", "bonjourr screenshot");
-	imgnode.setAttribute("draggable", "false");
+	let imgnode = document.createElement('img')
+	imgnode.id = 'img_below'
+	imgnode.setAttribute('alt', 'bonjourr screenshot')
+	imgnode.setAttribute('draggable', 'false')
 
-	if (getLanguage() === 'fr') {
-		imgnode.src = "../src/images/preview2.jpg";
-	} else {
-		imgnode.src = "src/images/preview2.jpg";
-	}
-	
+	if (getLanguage() === 'fr') imgnode.src = '../'
+	imgnode.src += 'src/images/preview2.jpg'
 
-	document.getElementById("screens").appendChild(imgnode);
+	document.getElementById('screens').appendChild(imgnode)
 
 	//toggle below opacity (-1s transition)
-	let changed = false;
-	let interval = setInterval(function() {
-
-		document.getElementById('img_below').style.opacity = (changed ? "0" : "1")
-		changed = (changed ? false : true) //toggle
-
+	let changed = false
+	setInterval(function () {
+		document.getElementById('img_below').style.opacity = changed ? '0' : '1'
+		changed = !changed
 	}, time)
 }
 
-
-
-
-
-
 function browserDetection() {
+	function safariSection() {
+		let content =
+			'<div id="safariSection"><h2>Bonjourr for Safari</h2><iframe src="https://www.youtube.com/embed/tSe3zX_bL-8" frameborder="0" allowfullscreen></iframe><a id="safariDownload" class="downloadButton" href="https://github.com/victrme/Bonjourr/releases/"><img id="dl_icon" src="src/images/safari.svg" alt="safari_icon"><span id="dl_desc">Download Bonjourr for Safari</span></a></div>'
 
-	const isFrench = window.location.href.includes('/fr');
+		if (isFrench) {
+			content = content.replaceAll(' for ', ' sur ').replace('Download ', 'Télécharger ').replace('src/', '../src/')
+		}
 
-	const dl_a = document.getElementById("mainDownload"),
-		dl_img = document.getElementById("dl_icon"),
-		dl_desc = document.getElementById("dl_desc");
+		document.querySelector('main').insertAdjacentHTML('afterbegin', content)
+		document.getElementById('safariSection').classList.add('visible')
+	}
 
-	const isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false);
+	function setDownloadIcon(from) {
+		downloadImage.src = `${isFrench ? '../' : ''}src/images/${from}.svg`
+	}
 
-	const isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
+	const isFrench = window.location.href.includes('/fr'),
+		downloadButton = document.getElementById('mainDownload'),
+		downloadImage = document.getElementById('dl_icon'),
+		downloadDesc = document.getElementById('dl_desc'),
+		isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+		isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
 		isFirefox = typeof InstallTrigger !== 'undefined',
 		isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1,
-		isChrome = !!window.chrome;
-		
+		isChrome = !!window.chrome
+
+	const which = {
+		href: 'https://online.bonjourr.fr',
+		desc: 'Try Bonjourr Online',
+		icon: 'chrome',
+	}
+
+	if (isFirefox) {
+		which.href = 'https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/'
+		which.desc = 'Get Bonjourr on Firefox'
+		which.icon = 'firefox'
+	}
+
+	if (isChrome) {
+		which.href = 'https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd'
+		which.desc = 'Get Bonjourr on Chrome'
+	}
+
+	if (isSafari) {
+		safariSection()
+		downloadButton.href = '#safariSection'
+		which.desc = 'How to install on Safari'
+		which.icon = 'safari'
+	}
 
 	if (isMobile || isOpera) {
-		dl_a.href = "https://online.bonjourr.fr";
-		dl_img.style.display = "none";
-
-		if (isFrench) {
-			dl_desc.innerText = "Essayer Bonjourr Online";
-		} else {
-			dl_desc.innerText = "Try Bonjourr online";
-		}
+		which.href = 'https://online.bonjourr.fr'
+		which.desc = 'Try Bonjourr Online'
+		downloadImage.style.display = 'none'
 	}
-	else if (isFirefox) {
-		dl_a.href = "https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/";
-		
 
-		if (isFrench) {
-			dl_desc.innerText = "Obtenir Bonjourr sur Firefox";
-			dl_img.src = "../src/images/firefox.svg";
-		} else {
-			dl_desc.innerText = "Get Bonjourr on Firefox";
-			dl_img.src = "src/images/firefox.svg";
-		}
+	if (isFrench) {
+		which.desc = which.desc
+			.replace('Get ', 'Obtenir ')
+			.replace('Try ', 'Essayer')
+			.replace('How to install on', 'Installer sur')
 	}
-	else if (isSafari) {
-		dl_a.href = "#safariSection";
-		
-		let content; 
 
-		if (isFrench) {
-			dl_desc.innerText = "Installer Bonjourr sur Safari";
-			content = '<div id="safariSection"><h2>Bonjourr sur Safari</h2><iframe src="https://www.youtube.com/embed/tSe3zX_bL-8" frameborder="0" allowfullscreen></iframe><a id="safariDownload" class="downloadButton" href="dl/Bonjourr.zip"><img id="dl_icon" src="src/images/safari.svg" alt="safari_icon"><span id="dl_desc">Download Bonjourr for Safari</span></a></div>';
-			dl_img.src = "../src/images/safari.svg";
-		} else {
-			dl_desc.innerText = "How to install on Safari";
-			content = '<div id="safariSection"><h2>Bonjourr for Safari</h2><iframe src="https://www.youtube.com/embed/tSe3zX_bL-8" frameborder="0" allowfullscreen></iframe><a id="safariDownload" class="downloadButton" href="dl/Bonjourr.zip"><img id="dl_icon" src="src/images/safari.svg" alt="safari_icon"><span id="dl_desc">Download Bonjourr for Safari</span></a></div>';
-			dl_img.src = "src/images/safari.svg";
-		}
+	downloadButton.href = which.href
+	downloadDesc.innerText = which.desc
+	setDownloadIcon(which.icon)
 
-		document.querySelector('main').insertAdjacentHTML('afterbegin', content);
-		document.getElementById("safariSection").classList.add("visible");
-	}
-	else if (isChrome) {
-		dl_a.href = "https://chrome.google.com/webstore/detail/bonjourr-startpage/dlnejlppicbjfcfcedcflplfjajinajd";
-		
+	document.querySelector('.DLmenu').style.opacity = '1'
+}
 
-		if (isFrench) {
-			dl_desc.innerText = "Obtenir Bonjourr sur Chrome";
-			dl_img.src = "../src/images/chrome.svg";
-		} else {
-			dl_desc.innerText = "Get Bonjourr on Chrome";
-			dl_img.src = "src/images/chrome.svg";
-		}
-	}
-	
-	else {
-		dl_a.href = "https://online.bonjourr.fr";
-		dl_img.style.display = "none";
-
-		if (isFrench) {
-			dl_desc.innerText = "Essayer Bonjourr Online";
-		} else {
-			dl_desc.innerText = "Try Bonjourr Online";
-		}
-	}
+window.onload = function () {
+	previewSlideshow(6000)
+	signature()
+	browserDetection()
 }
