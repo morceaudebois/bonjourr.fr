@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+$mainFont: 'Inter', Helvetica, sans-serif;
+$transitionTime: .2s;
+$blackish: #4E4E4E;
+$whitish: #F3F3F3;
+
+html, body, .layout {
+    min-height: 100vh;
+    margin: unset;
+    font-family: $mainFont;
+    color: $blackish;
+
+    a {
+        color: $blackish;
+    }
+}
+
+* {
+    text-decoration: none;
+}
+
+@mixin sidePadding() {
+    padding: 0 1em;
+}

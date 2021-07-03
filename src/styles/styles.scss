@@ -1,0 +1,42 @@
+@import 'global';
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: absolute; 
+    width: 100%;
+    box-sizing: border-box;
+    @include sidePadding();
+
+    ul.links {
+        padding: unset;
+        text-align: right;
+
+        a {
+            margin-left: 15px;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
+            transition: border $transitionTime;
+    
+            svg {
+                margin-right: 7px;
+            }
+
+            &:hover {
+                border-color: $blackish;
+            }
+        }
+    }
+
+}
+
+.content {
+    padding-top: 69px;
+}
+
+
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

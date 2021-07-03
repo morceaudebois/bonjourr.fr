@@ -1,22 +1,16 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
-class Footer extends React.Component {
-    render() {
-        return (
-            <section id="footer">
-                <ul className="icons">
-                    <li><a href="#" className="icon alt fa-twitter"><span className="label">Twitter</span></a></li>
-                    <li><a href="#" className="icon alt fa-facebook"><span className="label">Facebook</span></a></li>
-                    <li><a href="#" className="icon alt fa-instagram"><span className="label">Instagram</span></a></li>
-                    <li><a href="#" className="icon alt fa-github"><span className="label">GitHub</span></a></li>
-                    <li><a href="#" className="icon alt fa-envelope"><span className="label">Email</span></a></li>
-                </ul>
-                <ul className="copyright">
-                    <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
-            </section>
-        )
-    }
+const victor = <a href='https://victr.me/'>Victor Azevedo</a>
+const tahoe = <a href='https://tahoe.be'>Tahoe Beetschen</a>
+const sig = Math.random(0.5) > 0.5 ? <span>{victor} & {tahoe}</span> : <span>{tahoe} & {victor}</span>
+
+export default function Footer() {
+    return (
+        <footer>
+            <span>© 2019-{new Date().getFullYear()} Bonjourr</span>
+            <span>Made in France with ❤️<br></br>by {sig}</span>
+            <span>Contact us on <Link to="/">Telegram</Link> or <Link to="/">email</Link></span>
+        </footer>
+    )
 }
-
-export default Footer
