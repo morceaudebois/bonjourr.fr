@@ -7,24 +7,24 @@ import { faQuestionCircle, faEnvelope, faGlobeAmericas, faDonate } from '@fortaw
 export default function Navbar() {
     return (
         <nav>
-            <h1>Bonjourr</h1>
+            <h1 id="logo">Bonjourr</h1>
 
             <ul className="links">
                 <Link to="/">
                     <FontAwesomeIcon icon={faQuestionCircle} />
-                    Why Bonjourr
+                    Bonjourr
                 </Link>
-                
+
                 <Link to="/">
                     <FontAwesomeIcon icon={faEnvelope} />
                     Contact
                 </Link>
-                
+
                 <Link to="/">
                     <FontAwesomeIcon icon={faGlobeAmericas} />
-                    Try online
+                    Online
                 </Link>
-                
+
                 <Link to="/">
                     <FontAwesomeIcon icon={faDonate} />
                     Donate

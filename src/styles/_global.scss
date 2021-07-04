@@ -20,6 +20,70 @@ html, body, .layout {
     text-decoration: none;
 }
 
-@mixin sidePadding() {
-    padding: 0 1em;
+
+
+// Small devices
+@mixin sm {
+    @media (max-width: 576px) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (max-width: 768px) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (max-width: 992px) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (max-width: 1200px) {
+        @content;
+    }
+ }
+
+
+
+
+
+
+
+
+ @mixin sidePadding() {
+    padding-right: 1em; padding-left: 1em;
+
+    @include sm {
+        padding-right: .5em; padding-left: .5em;
+    }
+}
+
+
+
+
+
+a.button {
+    display: block;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 12px;
+    border: 0px;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(7px);
+    color: white;
+
+    .icon {
+        margin-right: 5px;
+    }
+
+    > * {
+        display: inline;
+    }
 }

@@ -32,6 +32,25 @@ nav {
 
 .content {
     padding-top: 69px;
+    @include sidePadding();
+
+    #hero {
+        background-image: url('../assets/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg');
+        background-size: cover;
+        min-height: 500px;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        color: $whitish;
+
+        .filter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(7px);
+        }
+    }
 }
 
 
@@ -39,4 +58,23 @@ nav {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @include sidePadding();
+
+    span {
+        &#signature { text-align: center; }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    @include md {
+        grid-template-columns: 1fr;
+        text-align: center;
+
+        > span {
+            margin-bottom: 1em;
+        }
+    }
 }

@@ -6,7 +6,7 @@ export default function notFound() {
 
         <Layout>
             <div>
-                <h2>404 🤷‍♂️</h2>
+                <h2>404 <span role='img' aria-label='shrug-emoji'>🤷‍♂️</span></h2>
             </div>
         </Layout>
         
