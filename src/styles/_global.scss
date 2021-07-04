@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@350&display=swap');
 
-$mainFont: 'Inter', Helvetica, sans-serif;
+$mainFont: Inter, Helvetica, sans-serif;
 $transitionTime: .2s;
 $blackish: #4E4E4E;
 $whitish: #F3F3F3;
 
 html, body, .layout {
-    min-height: 100vh;
+    height: 100%;
     margin: unset;
-    font-family: $mainFont;
     color: $blackish;
 
     a {
@@ -18,9 +17,13 @@ html, body, .layout {
 
 * {
     text-decoration: none;
+    font-family: $mainFont;
+    font-weight: 350;
 }
 
-
+@mixin textShadow {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
 
 // Small devices
 @mixin sm {
@@ -38,14 +41,14 @@ html, body, .layout {
  
  // Large devices
  @mixin lg {
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
         @content;
     }
  }
  
  // Extra large devices
  @mixin xl {
-    @media (max-width: 1200px) {
+    @media (min-width: 1200px) {
         @content;
     }
  }
@@ -54,15 +57,31 @@ html, body, .layout {
 
 
 
-
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
  @mixin sidePadding() {
-    padding-right: 1em; padding-left: 1em;
+    
+    @include xl {
+        padding-right: 4em; padding-left: 4em;
+    }
+
+    @include lg {
+        padding-right: 2em; padding-left: 2em;
+    }
+
+    @include md {
+        padding-right: 1em; padding-left: 1em;
+    }
 
     @include sm {
         padding-right: .5em; padding-left: .5em;
     }
+    
 }
 
 
@@ -70,14 +89,15 @@ html, body, .layout {
 
 
 a.button {
-    display: block;
-    width: 10em;
+    width: 100%;
     height: 2.5em;
     border-radius: 12px;
     border: 0px;
     background: rgba(30, 30, 30, 0.7);
     backdrop-filter: blur(7px);
     color: white;
+    margin-bottom: 12px;
+    @include center;
 
     .icon {
         margin-right: 5px;

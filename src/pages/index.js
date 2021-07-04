@@ -7,6 +7,7 @@ import '../styles/styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 
+import heroImage from '../assets/heroImage.png'
 
 export default function index() {
 
@@ -14,24 +15,25 @@ export default function index() {
             <Layout>
                 
                 <section id="hero">
-                    {/* <div className="filter"></div> */}
-                    <div>
+                    <span className="filter"></span>
+                    <div className='left'>
                         <h1>Bonjourr</h1>
                         <h2>Startpage for your browser</h2>
 
                         <DownloadButton />
 
-                        <button>
-                            <FontAwesomeIcon icon={faGlobeAmericas} />
+
+                        <a href='https://online.bonjourr.fr' className="button">
+                            <FontAwesomeIcon icon={faGlobeAmericas} className='icon' />
                             <span>Try online</span>
-                        </button>
+                        </a>
                     </div>
 
-                    <div>
+                    <div className='right'>
                         <StaticImage
                             src="../assets/heroImage.png"
                             alt="A dinosaur"
-                            layout="constrained"
+                            width={800}
                             placeholder= 'dominantColor'
                         />
                     </div>

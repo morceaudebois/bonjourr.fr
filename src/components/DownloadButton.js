@@ -1,6 +1,7 @@
 import React from 'react'
 import { browserName } from "react-device-detect";
 import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 let link, icon;
 switch (browserName) {
@@ -16,12 +17,14 @@ switch (browserName) {
         link = 'try online'
 }
 
+const image = getImage('../assets/' + browserName + '.svg')
 
 export default function downloadButton() {
     return (
         <a href={link} className="button">
-            <div className="icon">{icon}</div>
+            {/* <div className="icon">{icon}</div> */}
             <span>Download</span>
+            <GatsbyImage image={image} alt={browserName} />
         </a>
     )
 }
