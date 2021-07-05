@@ -5,22 +5,29 @@ $transitionTime: .2s;
 $blackish: #4E4E4E;
 $whitish: #F3F3F3;
 
+
 html, body, .layout {
     height: 100%;
     margin: unset;
     color: $blackish;
+    position: relative;
 
-    a {
-        color: $blackish;
+    p, h1, h2, h3, h4, h5, h6 { margin: unset; }
+
+    p {
+        font-size: 1.3em;
+        text-align: justify;
     }
-
-    h1, h2, h3, h4, h5, h6 { margin: unset; }
 }
 
 * {
     text-decoration: none;
     font-family: $mainFont;
     font-weight: 350;
+}
+
+a {
+    color: $blackish;
 }
 
 @mixin textShadow {
@@ -67,6 +74,12 @@ html, body, .layout {
     align-items: center;
 }
 
+@mixin centerColumns() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
 @mixin sidePadding() {
 
     @include xl {
@@ -102,6 +115,8 @@ a.button {
     margin-bottom: 12px;
     padding: .3em;
     transition: background $transitionTime ease-in;
+    box-sizing: border-box;
+    height: 50px;
     @include center;
 
     &:hover {
@@ -116,4 +131,15 @@ a.button {
         img { width: 100%; }
         @include center();
     }
+}
+
+
+
+
+hr {
+    display: block;
+    border: unset;
+    border-bottom: 2px solid white;
+    width: 80px;
+    margin: 1.5em 0;
 }

@@ -43,6 +43,7 @@ nav {
         text-align: center;
         font-size: 35px;
         font-weight: 400;
+        margin-bottom: 1.5em;
     }
 
     #hero {
@@ -76,9 +77,7 @@ nav {
 
         > div {
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; 
+            @include centerColumns;
 
             &.left {
                 min-width: 310px;
@@ -89,9 +88,6 @@ nav {
                 &.left { margin-right: unset;}
             }
 
-            @include lg {
-                &.left { margin-right: 2em;}
-            }
 
             @include xl {
                 &.left {
@@ -121,12 +117,17 @@ nav {
         }
     }
 
+    section {
+        padding-top: 5em; padding-bottom: 5em;
+    }
+
     #open, #donate { color: white; @include textShadow() }
+
     #main > * , #open > * , #further > * , #donate > *  {
         @include marginAuto();
 
         @include lg {
-            width: 80vw
+            width: 90vw
         }
 
         @include xl {
@@ -140,7 +141,6 @@ nav {
 
     #main {
         color: white;
-        padding-top: 5em; padding-bottom: 5em;
         background: linear-gradient(0.25turn, #140A17, #160E1E, #140A17);
 
         h4 { font-size: 2em;  }
@@ -155,18 +155,34 @@ nav {
                 max-width: 800px;
                 margin: auto;
                 text-align: center;
-                font-size: 1.2em;
             }
+        }
+
+        #dynBackgrounds .right, #custom .left {
+            @include centerColumns;
+        }
+
+        #dynBackgrounds .left, #custom .right {
+            @include center;
         }
 
         #dynBackgrounds, #custom {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-column-gap: 2em;
 
             // flex wrap equivalent
             @include md {
                 grid-template-columns: repeat(auto-fit, 100%);
             }
+        }
+
+        #custom .right {
+            @include md {
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+
         }
 
         #more {
@@ -183,7 +199,7 @@ nav {
             .listContainer {
                 display: flex;
                 justify-content: center;
-                font-size: 1.3em;
+                font-size: 1.5em;
                 line-height: 1.5em;
 
                 .left { text-align: right; margin-right: 1em;}
@@ -201,25 +217,48 @@ nav {
         background:linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1)), url(/meiying-ng-OrwkD-iWgqg-unsplash.jpg);
         background-size: cover;
         background-position: center;
-        height: 66vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        min-height: 66vh;
+        @include centerColumns;
 
         h3 { text-align: center;}
     }
 
     #further {
         background-color: $whitish;
-        height: 40vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        min-height: 40vh;
+        @include centerColumns;
 
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 30px;
+
+            @include md {
+                grid-template-columns: repeat(auto-fit, 100%);
+                > div {
+                    margin-bottom: 2em;
+
+                    &:last-child { margin-bottom: unset; }
+                }
+            }
+
+            > div {
+                display: grid;
+                box-sizing: border-box;
+
+                .button {
+                    align-self: end;
+                }
+            }
+            
+            h5 {
+                font-size: 1.6em;
+                margin-bottom: 1em;
+            }
+
+            p {
+                margin-bottom: 1em;
+            }
         }
 
         
@@ -229,6 +268,21 @@ nav {
         background:linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3)), url(/ray-hennessy-DAHUS8W4rNE-unsplash.jpg);
         background-size: cover;
         background-position: center;
+
+        p {
+            margin-bottom: 2em;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 2em;
+            width: 100%;
+
+            @include md {
+                grid-template-columns: repeat(auto-fit, 100%);
+            }
+        }
     }
 }
 
@@ -239,6 +293,13 @@ footer {
     justify-content: space-between;
     align-items: center;
     min-height: 5em;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    background: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(5px);
+    color: white;
     @include sidePadding();
 
     span {
@@ -251,6 +312,10 @@ footer {
         &:first-child, &:last-child  {
             flex-grow: 1;
             flex-basis: 0;
+        }
+
+        a {
+            color: white;
         }
         
     }

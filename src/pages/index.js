@@ -103,6 +103,7 @@ export default function index() {
 
                     <div className="container">
                         <div>
+                            <h5>Contact us</h5>
                             <p>Come and hang out on Bonjourr’s official Telegram group. You can tell us about your ideas and read about the latest news about its development.</p>
                             <a href='https://t.me/BonjourrStartpage' className="button">
                                 <StaticImage src="../assets/telegram.svg" alt="telegram logo" width={70} className='icon'/>
@@ -111,6 +112,7 @@ export default function index() {
                         </div>
 
                         <div>
+                            <h5>Documentation</h5>
                             <p>Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code snippets so you can go even further into customisation.</p>
                             <a href='/' className="button">
                                 <span role='img' aria-label='happy-emoji' className='icon'>📖</span>
@@ -119,6 +121,7 @@ export default function index() {
                         </div>
 
                         <div>
+                            <h5>Fork Bonjourr</h5>
                             <p>Fork Bonjourr and add your own features on our GitHub repositories. We’re open to pull requests!</p>
                             <a href='https://github.com/victrme/Bonjourr' className="button">
                                 <StaticImage src="../assets/github.svg" alt="github logo" width={70} className='icon'/>
@@ -132,15 +135,19 @@ export default function index() {
                     <h3>Donate <span role='img' aria-label='happy-emoji'>😊</span></h3>
                     <p>Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn any money out of this project, apart from donations. Supporting our work financially is very important if you want us to keep updating it, and we appreciate every single donation.</p>
 
-                    <a href='https://ko-fi.com/bonjourr' className="button">
-                        <StaticImage src="../assets/ko-fi.svg" alt="ko-fi logo" width={70} className='icon'/>
-                        <span>Donate</span>
-                    </a>
+                    <div className="buttons">
+                        <a href='https://ko-fi.com/bonjourr' className="button">
+                            <StaticImage src="../assets/ko-fi.svg" alt="ko-fi logo" width={70} className='icon'/>
+                            <span>Donate</span>
+                        </a>
 
-                    <a href='https://commerce.coinbase.com/charges/Y2DYYZCG' className="button">
-                        <StaticImage src="../assets/btc.svg" alt="bitcoin logo" width={70} className='icon'/>
-                        <span>Donate in crypto</span>
-                    </a>
+                        <a href='https://commerce.coinbase.com/charges/Y2DYYZCG' className="button">
+                            <StaticImage src="../assets/btc.svg" alt="bitcoin logo" width={70} className='icon'/>
+                            <span>Donate in crypto</span>
+                        </a>
+                    </div>
+
+
                 </section>
             
             </Layout>
