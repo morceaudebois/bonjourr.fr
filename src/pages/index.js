@@ -32,12 +32,12 @@ export default function index() {
                 </section>
 
                 <section id="main">
-                    <div className="intro">
+                    <div id="intro">
                         <h3>Minimalist & lightweight startpage</h3>
-                        <p>Bonjourr replaces your new tab page for something more refined and minimal. We took inspiration from Apple’s design language to create something that both looks amazing and feels great to use in your daily life.</p>
+                        <p>Bonjourr replaces your new tab page for something more refined and minimal. We took inspiration from Apple’s design language to create a startpage that both looks amazing and feels great to use in your daily life.</p>
                     </div>
 
-                    <div className="dynBackgrounds">
+                    <div id="dynBackgrounds">
                         <div className="left">
                             <StaticImage
                                 src="../assets/wolf.png"
@@ -53,7 +53,7 @@ export default function index() {
                         </div>
                     </div>
 
-                    <div className="custom">
+                    <div id="custom">
                         <div className="left">
                             <h4>Customisable</h4>
                             <hr></hr>
@@ -69,7 +69,7 @@ export default function index() {
                         </div>
                     </div>
 
-                    <div className="more">
+                    <div id="more">
                         <h4>A few more features</h4>
                         <div className="left">
                             <ul>
@@ -95,7 +95,7 @@ export default function index() {
                     <p>Bonjourr is made by two independant developpers who love things well made and <i>actually</i> think privacy is important. You can use Bonjourr straight away, without having to create or log into any account because we do not collect any data.</p>
                 </section>
 
-                <section className="further">
+                <section id="further">
                     <h3>Want to go further?</h3>
 
                     <div className="container">
@@ -109,7 +109,7 @@ export default function index() {
 
                         <div>
                             <p>Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code snippets so you can go even further into customisation.</p>
-                            <a href='#' className="button">
+                            <a href='/' className="button">
                                 <span role='img' aria-label='happy-emoji' className='icon'>📖</span>
                                 <span>Documentation</span>
                             </a>
@@ -125,7 +125,7 @@ export default function index() {
                     </div>
                 </section>
 
-                <section className="donate">
+                <section id="donate">
                     <h3>Donate <span role='img' aria-label='happy-emoji'>😊</span></h3>
                     <p>Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn any money out of this project, apart from donations. Supporting our work financially is very important if you want us to keep updating it, and we appreciate every single donation.</p>
 

@@ -35,6 +35,10 @@ nav {
 }
 
 .content {
+    > * {
+        @include sidePadding();
+    }
+
     #hero {
         background-image: url('/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg');
         background-size: cover;
@@ -44,7 +48,6 @@ nav {
         padding-top: 69px;
         position: relative;
         @include center();
-        @include sidePadding();
 
         // sinon le .filter passe par dessus
         * { z-index: 1; }
@@ -109,6 +112,33 @@ nav {
             backdrop-filter: blur(13px);
             top: 0;
             z-index: 0;
+        }
+    }
+
+    #main {
+        color: white;
+        padding-top: 5em; padding-bottom: 5em;
+        background: linear-gradient(0.25turn, #140A17, #160E1E, #140A17);
+
+        h3 {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 400;
+        }
+
+        h4 {
+            font-size: 2em;
+        }
+        
+        p { text-align: justify; }
+
+        #intro {
+            p {
+                max-width: 800px;
+                margin: auto;
+                text-align: center;
+                font-size: 1.2em;
+            }
         }
     }
 }

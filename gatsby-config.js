@@ -9,9 +9,11 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    {
+    `gatsby-plugin-image`, {
+      resolve: "gatsby-plugin-anchor-links",
+      options: { duration: 600 }
+    },
+    `gatsby-transformer-sharp`, {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {

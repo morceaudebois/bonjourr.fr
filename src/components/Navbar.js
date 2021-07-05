@@ -1,8 +1,8 @@
-import { Link } from 'gatsby'
 import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionCircle, faEnvelope, faGlobeAmericas, faDonate } from '@fortawesome/free-solid-svg-icons'
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function Navbar() {
     return (
@@ -10,25 +10,25 @@ export default function Navbar() {
             <h1 id="logo">Bonjourr</h1>
 
             <ul className="links">
-                <Link to="/">
+                <AnchorLink to="/#main">
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     Bonjourr
-                </Link>
+                </AnchorLink>
 
-                <Link to="/">
+                <AnchorLink to="/#further">
                     <FontAwesomeIcon icon={faEnvelope} />
                     Contact
-                </Link>
+                </AnchorLink>
 
-                <Link to="/">
+                <a href="https://online.bonjourr.fr">
                     <FontAwesomeIcon icon={faGlobeAmericas} />
                     Online
-                </Link>
+                </a>
 
-                <Link to="/">
+                <AnchorLink to="/#donate">
                     <FontAwesomeIcon icon={faDonate} />
                     Donate
-                </Link>
+                </AnchorLink>
             </ul>
         </nav>
     )
