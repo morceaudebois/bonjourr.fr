@@ -9,8 +9,10 @@ export default function Footer() {
     return (
         <footer>
             <span>© 2019-{new Date().getFullYear()} Bonjourr</span>
+
             <span id="signature">Made in France with <span role='img' aria-label='heart-emoji'>❤️</span><br></br>by {sig}</span>
-            <span>Contact us on <Link to="/">Telegram</Link> or <Link to="/">email</Link></span>
+            
+            <span id='contact'>Contact us on <Link to="/">Telegram</Link> or <Link to="/">email</Link></span>
         </footer>
     )
 }

@@ -25,33 +25,35 @@ html, body, .layout {
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-// Small devices
-@mixin sm {
-    @media (max-width: 576px) {
-        @content;
+
+// mixins pour responsive 
+    // Small devices
+    @mixin sm {
+        @media (max-width: 576px) {
+            @content;
+        }
     }
- }
- 
- // Medium devices
- @mixin md {
-    @media (max-width: 768px) {
-        @content;
+    
+    // Medium devices
+    @mixin md {
+        @media (max-width: 768px) {
+            @content;
+        }
     }
- }
- 
- // Large devices
- @mixin lg {
-    @media (max-width: 1200px) {
-        @content;
+    
+    // Large devices
+    @mixin lg {
+        @media (max-width: 1200px) {
+            @content;
+        }
     }
- }
- 
- // Extra large devices
- @mixin xl {
-    @media (min-width: 1200px) {
-        @content;
+    
+    // Extra large devices
+    @mixin xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
     }
- }
 
 
 
@@ -64,7 +66,7 @@ html, body, .layout {
 }
 
 @mixin sidePadding() {
-    
+
     @include xl {
         padding-right: 4em; padding-left: 4em;
     }
@@ -105,10 +107,8 @@ a.button {
         margin-right: 5px;
         width: 30px;
         font-size: 1.5em;
-        @include center();
-    }
 
-    > * {
-        display: inline;
+        img { width: 100%; }
+        @include center();
     }
 }

@@ -29,9 +29,8 @@ export default function index() {
                     <div className='right'>
                         <StaticImage
                             src="../assets/heroImage.png"
-                            alt="A dinosaur"
+                            alt="Bonjourr screenshot"
                             width={800}
-                            placeholder= 'dominantColor'
                         />
                     </div>
                 </section>
