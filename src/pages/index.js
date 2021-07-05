@@ -95,7 +95,7 @@ export default function index() {
                 
                 <section id='open'>
                     <h3><span role='img' aria-label='lock-emoji'>🔒</span> Free, open source and privacy focused</h3>
-                    <p>Bonjourr is made by two independant developpers who love things well made and <i>actually</i> think privacy is important. You can use Bonjourr straight away, without having to create or log into any account because we do not collect any data.</p>
+                    <p>Bonjourr is made by two independent developpers who love things well made and <i>actually</i> think privacy is important. You can use Bonjourr straight away, without having to create or log into any account because we do not collect any data.</p>
                 </section>
 
                 <section id="further">

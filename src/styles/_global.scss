@@ -5,36 +5,6 @@ $transitionTime: .2s;
 $blackish: #4E4E4E;
 $whitish: #F3F3F3;
 
-
-html, body, .layout {
-    height: 100%;
-    margin: unset;
-    color: $blackish;
-    position: relative;
-
-    p, h1, h2, h3, h4, h5, h6 { margin: unset; }
-
-    p {
-        font-size: 1.3em;
-        text-align: justify;
-    }
-}
-
-* {
-    text-decoration: none;
-    font-family: $mainFont;
-    font-weight: 350;
-}
-
-a {
-    color: $blackish;
-}
-
-@mixin textShadow {
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-
 // mixins pour responsive 
     // Small devices
     @mixin sm {
@@ -63,6 +33,42 @@ a {
             @content;
         }
     }
+
+
+html, body, .layout {
+    height: 100%;
+    margin: unset;
+    color: $blackish;
+    position: relative;
+
+    p, h1, h2, h3, h4, h5, h6 { margin: unset; }
+
+    p {
+        font-size: 1.3em;
+        text-align: justify;
+
+        @include sm {
+            font-size: 1.1em;
+        }
+    }
+}
+
+* {
+    text-decoration: none;
+    font-family: $mainFont;
+    font-weight: 350;
+}
+
+a {
+    color: $blackish;
+}
+
+@mixin textShadow {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 
 
@@ -145,4 +151,8 @@ hr {
     border-bottom: 2px solid white;
     width: 80px;
     margin: 1.5em 0;
+
+    @include sm {
+        margin: 1em 0;
+    }
 }
