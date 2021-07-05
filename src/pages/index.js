@@ -42,7 +42,7 @@ export default function index() {
                             <StaticImage
                                 src="../assets/wolf.png"
                                 alt="Bonjourr dynamic backgrounds screenshot"
-                                width={500}
+                                width={700}
                             />
                         </div>
 
@@ -64,29 +64,32 @@ export default function index() {
                             <StaticImage
                                 src="../assets/cursive.png"
                                 alt="Bonjourr dynamic backgrounds screenshot"
-                                width={500}
+                                width={700}
                             />
                         </div>
                     </div>
 
                     <div id="more">
                         <h4>A few more features</h4>
-                        <div className="left">
-                            <ul>
-                                <li>Quick Links</li>
-                                <li>Search bar</li>
-                                <li>Google Fonts</li>
-                                <li>Multilanguage</li>
-                            </ul>
+                        <div className="listContainer">
+                            <div className="left">
+                                <ul>
+                                    <li>Quick Links</li>
+                                    <li>Search bar</li>
+                                    <li>Google Fonts</li>
+                                    <li>Multilanguage</li>
+                                </ul>
+                            </div>
+                            <div className="right">
+                                <ul>
+                                    <li>Dark mode</li>
+                                    <li>Weather</li>
+                                    <li>Hide elements</li>
+                                    <li>Custom CSS</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className="right">
-                            <ul>
-                                <li>Dark mode</li>
-                                <li>Weather</li>
-                                <li>Hide elements</li>
-                                <li>Custom CSS</li>
-                            </ul>
-                        </div>
+
                     </div>
                 </section>
                 

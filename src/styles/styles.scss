@@ -39,6 +39,12 @@ nav {
         @include sidePadding();
     }
 
+    h3 {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 400;
+    }
+
     #hero {
         background-image: url('/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg');
         background-size: cover;
@@ -115,22 +121,34 @@ nav {
         }
     }
 
+    #open, #donate { color: white; @include textShadow() }
+    #main > * , #open > * , #further > * , #donate > *  {
+        @include marginAuto();
+
+        @include lg {
+            width: 80vw
+        }
+
+        @include xl {
+            max-width: 1200px
+        }
+
+        @include md {
+            width: unset;
+        }
+    }
+
     #main {
         color: white;
         padding-top: 5em; padding-bottom: 5em;
         background: linear-gradient(0.25turn, #140A17, #160E1E, #140A17);
 
-        h3 {
-            text-align: center;
-            font-size: 2.5em;
-            font-weight: 400;
-        }
-
-        h4 {
-            font-size: 2em;
-        }
+        h4 { font-size: 2em;  }
         
         p { text-align: justify; }
+
+        > * {  margin-bottom: 3em; }
+        div:last-child { margin-bottom: unset;}
 
         #intro {
             p {
@@ -140,16 +158,71 @@ nav {
                 font-size: 1.2em;
             }
         }
+
+        #dynBackgrounds, #custom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            // flex wrap equivalent
+            @include md {
+                grid-template-columns: repeat(auto-fit, 100%);
+            }
+        }
+
+        #more {
+            h4 {
+                text-align: center;
+                margin: unset;
+            }
+
+            ul {
+                list-style: none;
+                padding: unset;
+            }
+
+            .listContainer {
+                display: flex;
+                justify-content: center;
+                font-size: 1.3em;
+                line-height: 1.5em;
+
+                .left { text-align: right; margin-right: 1em;}
+                .right { text-align: left; }
+                
+            }
+        }
     }
 
-    #open {
+
+
+
+
+    #open, #donate {
         background:linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1)), url(/meiying-ng-OrwkD-iWgqg-unsplash.jpg);
         background-size: cover;
         background-position: center;
+        height: 66vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 { text-align: center;}
     }
 
     #further {
         background-color: $whitish;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 30px;
+        }
+
+        
     }
 
     #donate {
