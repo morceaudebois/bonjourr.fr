@@ -37,7 +37,7 @@ nav {
 
 .content {
     #hero {
-        background-image: url('../assets/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg');
+        background-image: url('/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg');
         background-size: cover;
         min-height: 66vh;
         display: flex;
@@ -63,21 +63,43 @@ nav {
 
         h2 {
             @include textShadow();
+            margin: 15px 0 30px 0;
         }
 
-        img {
-            margin: auto;
-            max-height: 100%;
-            width: 100%;
-            object-fit: contain!important;
-        }
+        // img {
+        //     margin: auto;
+        //     max-height: 100%;
+        //     width: 100%;
+        //     object-fit: contain;
+        // }
 
         > div {
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center; 
-            &.left { margin-right: 3em;}
+
+            &.left {
+                min-width: 310px;
+            }
+
+            @include lg {
+                &.left { margin-right: 2em;}
+            }
+
+            @include xl {
+                &.left {
+                    margin-right: 4em;
+                    min-width: 410px;
+                    h1 {
+                        font-size: 5em;
+                    }
+                    h2 {
+                        font-size: 2em;
+                        margin: 20px 0 40px 0;
+                    }
+                }
+            }
 
             @include md {
                 height: unset;
@@ -91,7 +113,6 @@ nav {
             width: 100%;
             height: 100%;
             background: rgba(68, 68, 68, 0.1);
-
             backdrop-filter: blur(13px);
             top: 0;
             z-index: 0;

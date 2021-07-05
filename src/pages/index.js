@@ -7,8 +7,6 @@ import '../styles/styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 
-import heroImage from '../assets/heroImage.png'
-
 export default function index() {
 
         return (
@@ -21,7 +19,6 @@ export default function index() {
                         <h2>Startpage for your browser</h2>
 
                         <DownloadButton />
-
 
                         <a href='https://online.bonjourr.fr' className="button">
                             <FontAwesomeIcon icon={faGlobeAmericas} className='icon' />
