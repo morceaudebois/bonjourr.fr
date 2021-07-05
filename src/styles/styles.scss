@@ -3,11 +3,25 @@
 nav {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-items: center;
     position: absolute; 
     width: 100%;
     box-sizing: border-box;
     z-index: 10;
     @include sidePadding();
+    padding-top: .5em;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        #logo { display: none; }
+        ul.links { width: 100%; }
+    }
+
+    #logo {
+        height: 50px;
+        position: relative; 
+        img { height: 100%; }
+    }
 
     ul.links {
         padding: unset;
@@ -15,12 +29,18 @@ nav {
         @include center();
         justify-content: flex-end;
 
+        @include sm {
+            justify-content: center;
+        }
+
         a {
-            margin-left: 15px;
+            margin-left: 25px;
             border-bottom: 2px solid transparent;
-            padding-bottom: 5px;
+            padding-bottom: 5px; padding-top: 5px;
             transition: border $transitionTime;
             color: white;
+
+            &:first-child { margin-left: unset; }
     
             svg {
                 margin-right: 7px;
@@ -62,6 +82,7 @@ nav {
         // passe en lignes en mobile
         @include md {
             flex-wrap: wrap;
+            h1, h2 { text-align: center;}
         }
 
         h1 {
@@ -141,7 +162,7 @@ nav {
 
     #main {
         color: white;
-        background: linear-gradient(0.25turn, #140A17, #160E1E, #140A17);
+        background: linear-gradient(0.25turn, #140A17, #231730, #140A17);
 
         h4 { font-size: 2em;  }
         
@@ -220,6 +241,14 @@ nav {
         min-height: 66vh;
         @include centerColumns;
 
+        @include xl {
+            p {
+                width: 70vw;
+                max-width: 1000px;
+            }
+        }
+
+
         h3 { text-align: center;}
     }
 
@@ -269,18 +298,34 @@ nav {
         background-size: cover;
         background-position: center;
 
+        // ajoute la taille du footer au padding 
+        padding-bottom: calc(5em + 80px);
+        @include md { padding-bottom: calc(5em + 160px); }
+
         p {
             margin-bottom: 2em;
         }
 
         .buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 2em;
             width: 100%;
+            display:flex;
+            justify-content: center;
 
-            @include md {
-                grid-template-columns: repeat(auto-fit, 100%);
+            .button {
+                margin: unset;
+
+                &:first-child {
+                    margin-right: 1em;
+
+                    @include sm {
+                        margin-right: unset;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+
+            @include sm {
+                flex-wrap: wrap;
             }
         }
     }

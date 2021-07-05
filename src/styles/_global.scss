@@ -116,8 +116,11 @@ a.button {
     padding: .3em;
     transition: background $transitionTime ease-in;
     box-sizing: border-box;
-    height: 50px;
+    height: 55px;
     @include center;
+    max-width: 300px;
+        @include marginAuto();
+
 
     &:hover {
         background: rgba(30, 30, 30, 0.8);

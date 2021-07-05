@@ -7,7 +7,9 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 export default function Navbar() {
     return (
         <nav>
-            <h1 id="logo">Bonjourr</h1>
+            <h1 id="logo">
+                <img src='/logo.png'alt="bonjourr logo"/>
+            </h1>
 
             <ul className="links">
                 <AnchorLink to="/#main">
