@@ -141,6 +141,22 @@ nav {
             }
         }
     }
+
+    #open {
+        background:linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1)), url(/meiying-ng-OrwkD-iWgqg-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #further {
+        background-color: $whitish;
+    }
+
+    #donate {
+        background:linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3)), url(/ray-hennessy-DAHUS8W4rNE-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 
