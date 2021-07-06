@@ -22,7 +22,7 @@ export default function index() {
                         <div className="container">
                             <DownloadButton />
 
-                            <a href='https://online.bonjourr.fr' className="button">
+                            <a href='https://online.bonjourr.fr' target='_blank' rel="noreferrer" className="button">
                                 <FontAwesomeIcon icon={faGlobeAmericas} className='icon' />
                                 <span>Try online</span>
                             </a>
