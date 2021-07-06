@@ -4,6 +4,7 @@ import DownloadButton from "../components/DownloadButton"
 import { StaticImage } from "gatsby-plugin-image"
 import '../styles/styles.scss'
 
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 
@@ -18,12 +19,18 @@ export default function index() {
                         <h1>Bonjourr</h1>
                         <h2>Startpage for your browser</h2>
 
-                        <DownloadButton />
+                        <div className="container">
+                            <DownloadButton />
 
-                        <a href='https://online.bonjourr.fr' className="button">
-                            <FontAwesomeIcon icon={faGlobeAmericas} className='icon' />
-                            <span>Try online</span>
-                        </a>
+                            <a href='https://online.bonjourr.fr' className="button">
+                                <FontAwesomeIcon icon={faGlobeAmericas} className='icon' />
+                                <span>Try online</span>
+                            </a>
+                        </div>
+
+                        <Link to='/download' className='link'><i>Searching for other browsers?</i></Link>
+
+
                     </div>
 
                     <div className='right'>

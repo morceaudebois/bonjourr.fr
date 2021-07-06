@@ -67,13 +67,6 @@ a {
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
-
-
-
-
 @mixin center() {
     display: flex;
     justify-content: center;
@@ -125,8 +118,7 @@ a.button {
     height: 55px;
     @include center;
     max-width: 300px;
-        @include marginAuto();
-
+    @include marginAuto();
 
     &:hover {
         background: rgba(30, 30, 30, 0.8);
@@ -154,5 +146,13 @@ hr {
 
     @include sm {
         margin: 1em 0;
+    }
+}
+
+section {
+    padding-top: 5em; padding-bottom: 5em;
+
+    @include sm {
+        padding-top: 3em; padding-bottom: 3em;
     }
 }
