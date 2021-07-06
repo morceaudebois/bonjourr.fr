@@ -21,5 +21,13 @@ module.exports = {
         }
       }
     }
-  ]
+  ],
+  siteMetadata: {
+    title: 'Bonjourr · Startpage for you browser',
+    description: 'Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.',
+    url: 'https://bonjourr.fr',
+    image : '/logo.png',
+    author : 'Tahoe Beetschen',
+    type : 'website'
+  }
 }

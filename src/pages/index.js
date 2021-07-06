@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import DownloadButton from "../components/DownloadButton"
+import Seo from "../components/Seo"
 import { StaticImage } from "gatsby-plugin-image"
 import '../styles/styles.scss'
 
@@ -12,6 +13,7 @@ export default function index() {
 
         return (
             <Layout>
+                <Seo />
                 
                 <section id="hero">
                     <span className="filter"></span>
