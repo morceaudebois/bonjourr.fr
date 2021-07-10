@@ -19,9 +19,17 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     `gatsby-plugin-image`,
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-plugin-anchor-links",
       options: { duration: 600 }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
+      },
     },
   ],
 }
