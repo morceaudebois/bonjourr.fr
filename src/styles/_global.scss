@@ -104,7 +104,7 @@ a {
 }
 
 
-section {
+section, .section {
     padding-top: 5em; padding-bottom: 5em;
 
     @include sm {

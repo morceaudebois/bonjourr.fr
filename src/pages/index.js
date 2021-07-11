@@ -1,21 +1,27 @@
 import React from "react"
 import Layout from "../components/Layout"
 import DownloadButton from "../components/DownloadButton"
-import Seo from "../components/Seo"
+
 import { StaticImage } from "gatsby-plugin-image"
 import '../styles/styles.scss'
 
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 
-export default function index() {
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
+
+export default function index({data}) {
+
+    const heroImage = getImage(data.heroImage.childImageSharp.gatsbyImageData);
+    const openImage = [`linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1))`, getImage(data.openImage.childImageSharp.gatsbyImageData)];
+    const donateImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3))`, getImage(data.donateImage.childImageSharp.gatsbyImageData)];
 
         return (
-            <Layout>
-                <Seo />
+            <Layout> 
                 
-                <section id="hero">
+                <BgImage image={heroImage} id="hero" className='section'>
                     <span className="filter"></span>
                     <div className='left'>
                         <h1>Bonjourr</h1>
@@ -32,13 +38,12 @@ export default function index() {
 
                         <Link to='/download' className='link'><i>Searching for other browsers?</i></Link>
 
-
                     </div>
 
                     <div className='right'>
-                        <StaticImage src="../assets/heroImage.png" alt="Bonjourr screenshot" width={800} />
+                        <StaticImage src="../assets/heroImage.png" alt="Bonjourr screenshot" width={800} placeholder="blurred"/>
                     </div>
-                </section>
+                </BgImage>
 
                 <section id="main">
                     <div id="intro">
@@ -52,6 +57,7 @@ export default function index() {
                                 src="../assets/wolf.png"
                                 alt="Bonjourr dynamic backgrounds screenshot"
                                 width={700}
+                                placeholder="blurred"
                             />
                         </div>
 
@@ -102,10 +108,10 @@ export default function index() {
                     </div>
                 </section>
                 
-                <section id='open'>
+                <BgImage image={openImage} id="open" className='section'>
                     <h3><span role='img' aria-label='lock-emoji'>🔒</span> Free, open source and privacy focused</h3>
                     <p>Bonjourr is made by two independent developpers who love things well made and <i>actually</i> think privacy is important. You can use Bonjourr straight away, without having to create or log into any account because we do not collect any data.</p>
-                </section>
+                </BgImage>
 
                 <section id="further">
                     <h3>Want to go further?</h3>
@@ -140,7 +146,7 @@ export default function index() {
                     </div>
                 </section>
 
-                <section id="donate">
+                <BgImage image={donateImage} id="donate" className='section'>
                     <h3>Donate <span role='img' aria-label='happy-emoji'>😊</span></h3>
                     <p>Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn any money out of this project, apart from donations. Supporting our work financially is very important if you want us to keep updating it, and we appreciate every single donation.</p>
 
@@ -157,8 +163,43 @@ export default function index() {
                     </div>
 
 
-                </section>
+                </BgImage>
             
             </Layout>
     )
 }
+
+export const query = graphql`
+    query {
+        heroImage: file(relativePath: { eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg" }) {
+            childImageSharp {
+                gatsbyImageData(
+                    width: 1000
+                    quality: 90
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                )
+            }
+        },
+        openImage: file(relativePath: { eq: "meiying-ng-OrwkD-iWgqg-unsplash.jpg" }) {
+            childImageSharp {
+                gatsbyImageData(
+                    width: 1100
+                    quality: 95
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                )
+            }
+        },
+        donateImage: file(relativePath: { eq: "ray-hennessy-DAHUS8W4rNE-unsplash.jpg" }) {
+            childImageSharp {
+                gatsbyImageData(
+                    width: 1100
+                    quality: 95
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                )
+            }
+        },
+    }
+`

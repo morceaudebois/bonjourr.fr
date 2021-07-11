@@ -23,7 +23,6 @@ h4 {
 }
 
 #hero {
-    background-image: url('/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg');
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.15);
 
     @supports (backdrop-filter: none) {
@@ -219,9 +218,6 @@ h4 {
 
 
 #open, #donate {
-    background:linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1)), url(/meiying-ng-OrwkD-iWgqg-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
     min-height: 66vh;
     @include centerColumns;
 
@@ -282,10 +278,6 @@ h4 {
 }
 
 #donate {
-    background:linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3)), url(/ray-hennessy-DAHUS8W4rNE-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-
     // ajoute la taille du footer au padding 
     padding-bottom: calc(5em + 80px);
     @include md { padding-bottom: calc(5em + 160px); }

@@ -18,6 +18,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     {
@@ -29,6 +30,13 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/src/projects/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `backgrounds`,
+        path: `${__dirname}/src/assets/backgrounds/`,
       },
     },
   ],
