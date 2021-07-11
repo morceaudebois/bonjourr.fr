@@ -38,8 +38,15 @@ export default function Seo ({ title, description, url, image, author, type , ke
 
 				return (
 					<Helmet
-						title={title}
+						title={metaTitle}
+						metaescription={metaDescription}
+						htmlAttributes={{ lang: 'en' }}
+						
 						meta={[
+							{
+								name: "description",
+								content: metaDescription,
+							},
 							{
 								property: "og:url",
 								content: metaUrl,

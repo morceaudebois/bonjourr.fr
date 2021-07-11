@@ -1,9 +1,6 @@
 @import 'global';
 
 nav {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
     position: absolute; 
     width: 100%;
     box-sizing: border-box;
@@ -14,7 +11,7 @@ nav {
     @include sm {
         grid-template-columns: 1fr;
         #logo { display: none; }
-        ul.links { width: 100%; }
+        .links { width: 100%; }
     }
 
     #logo {
@@ -23,7 +20,7 @@ nav {
         img { height: 100%; }
     }
 
-    ul.links {
+    .links {
         padding: unset;
         text-align: right;
         @include center();

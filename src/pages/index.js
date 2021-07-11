@@ -41,7 +41,7 @@ export default function index({data}) {
                     </div>
 
                     <div className='right'>
-                        <StaticImage src="../assets/heroImage.png" alt="Bonjourr screenshot" width={800} placeholder="blurred"/>
+                        <StaticImage src="../assets/heroImage.png" alt="Bonjourr screenshot" width={700} quality={90} placeholder="blurred" />
                     </div>
                 </BgImage>
 
@@ -56,8 +56,10 @@ export default function index({data}) {
                             <StaticImage
                                 src="../assets/wolf.png"
                                 alt="Bonjourr dynamic backgrounds screenshot"
-                                width={700}
+                                width={50}
+                                quality= {90}
                                 placeholder="blurred"
+                                layout="fullWidth"
                             />
                         </div>
 
@@ -79,7 +81,10 @@ export default function index({data}) {
                             <StaticImage
                                 src="../assets/cursive.png"
                                 alt="Bonjourr dynamic backgrounds screenshot"
-                                width={700}
+                                width={600}
+                                quality= {90}
+                                placeholder="blurred"
+                                layout="fullWidth"
                             />
                         </div>
                     </div>
@@ -118,7 +123,7 @@ export default function index({data}) {
 
                     <div className="container">
                         <div>
-                            <h5>Contact us</h5>
+                            <h4>Contact us</h4>
                             <p>Come and hang out on Bonjourr’s official Telegram group. You can tell us about your ideas and read about the latest news about its development.</p>
                             <a href='https://t.me/BonjourrStartpage' className="button">
                                 <StaticImage src="../assets/telegram.svg" alt="telegram logo" width={70} className='icon'/>
@@ -127,7 +132,7 @@ export default function index({data}) {
                         </div>
 
                         <div>
-                            <h5>Documentation</h5>
+                            <h4>Documentation</h4>
                             <p>Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code snippets so you can go even further into customisation.</p>
                             <a href='/' className="button">
                                 <span role='img' aria-label='happy-emoji' className='icon'>📖</span>
@@ -136,7 +141,7 @@ export default function index({data}) {
                         </div>
 
                         <div>
-                            <h5>Fork Bonjourr</h5>
+                            <h4>Fork Bonjourr</h4>
                             <p>Fork Bonjourr and add your own features on our GitHub repositories. We’re open to pull requests!</p>
                             <a href='https://github.com/victrme/Bonjourr' className="button">
                                 <StaticImage src="../assets/github.svg" alt="github logo" width={70} className='icon'/>

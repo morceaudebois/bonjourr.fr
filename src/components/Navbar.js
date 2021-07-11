@@ -7,11 +7,11 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 export default function Navbar() {
     return (
         <nav>
-            <h1 id="logo">
+            {/* <h1 id="logo">
                 <img src='/logo.png'alt="bonjourr logo"/>
-            </h1>
+            </h1> */}
 
-            <ul className="links">
+            <div className="links">
                 <AnchorLink to="/#main">
                     <FontAwesomeIcon icon={faQuestionCircle} />
                     Bonjourr
@@ -31,7 +31,7 @@ export default function Navbar() {
                     <FontAwesomeIcon icon={faDonate} />
                     Donate
                 </AnchorLink>
-            </ul>
+            </div>
         </nav>
     )
 }
