@@ -1,6 +1,6 @@
 ---
 title: Le titre
-stack: allez
+subtitle: quelque chose
 slug: autre-chose
 featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 ---

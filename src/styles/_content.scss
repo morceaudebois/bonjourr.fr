@@ -2,23 +2,31 @@
     @include sidePadding();
 }
 
-h3 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 1.5em;
-
-    @include sm {
-        font-size: 25px;
+section, .section {
+    h3 {
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 1.5em;
+    
+        @include sm {
+            font-size: 25px;
+        }
     }
-}
-
-h4 {
-    font-size: 2em;
-    font-weight: bold;
+    
+    h4 {
+        font-size: 2em;
+        font-weight: bold;
+    
+        @include sm {
+            font-size: 1.3em;
+        }
+    }
+    
+    padding-top: 5em; padding-bottom: 5em;
 
     @include sm {
-        font-size: 1.3em;
+        padding-top: 3em; padding-bottom: 3em;
     }
 }
 

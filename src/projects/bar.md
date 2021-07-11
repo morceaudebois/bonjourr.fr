@@ -1,6 +1,6 @@
 ---
 title: aaaaah 
-stack: HTML & CSS
+subtitle: bon
 slug: the-dojo-coffee-house
 featured: ../assets/backgrounds/ray-hennessy-DAHUS8W4rNE-unsplash.jpg
 ---

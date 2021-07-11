@@ -1,16 +1,40 @@
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import React from "react"
+import Layout from "../components/Layout"
+import * as documentStyles from "../styles/document.module.scss"
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
 
 export default function Document({ data }) {
     const  { html } = data.markdownRemark
-    const { title, stack, featured } = data.markdownRemark.frontmatter
+    const { title, subtitle, featured } = data.markdownRemark.frontmatter
+    const documents = data.allMarkdownRemark.nodes
 
   return (
-    <div>
-      <h1>{title}</h1>
+    <Layout>
+      <div>
+        <BgImage image={getImage(featured)} className={documentStyles.hero}>
+          <h1>{title}</h1>
+          <p>{subtitle}</p>
+        </BgImage>
+      </div>
 
-      <div dangerouslySetInnerHTML={{__html: html}} />
-    </div>
+      <article>
+        <div className="docNav">
+          <ul>
+            {documents.map(document => (
+                <li key={document.id}><Link to={'/documentation/' + document.frontmatter.slug}>{document.frontmatter.title}</Link></li>
+            ))}
+            </ul>
+        </div>
+
+        <div dangerouslySetInnerHTML={{__html: html}} />
+      </article>
+
+        
+
+    </Layout>
+
   )
 }
 
@@ -20,13 +44,26 @@ export const query = graphql`
       html
       frontmatter {
         title
+        subtitle
         featured {
           childImageSharp {
-            fluid {
-              src
-            }
+            gatsbyImageData(
+              width: 1100
+              quality: 95
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
+      }
+    },
+    allMarkdownRemark {
+      nodes {
+          frontmatter {
+          slug
+          title
+      }
+      id
       }
     }
   }

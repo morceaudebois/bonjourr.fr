@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuestionCircle, faEnvelope, faGlobeAmericas, faDonate } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faEnvelope, faGlobeAmericas, faDonate } from '@fortawesome/free-solid-svg-icons'
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Link } from "gatsby"
 
 export default function Navbar() {
     return (
@@ -12,15 +13,21 @@ export default function Navbar() {
             </h1> */}
 
             <div className="links">
-                <AnchorLink to="/#main">
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    Bonjourr
-                </AnchorLink>
-
                 <AnchorLink to="/#further">
                     <FontAwesomeIcon icon={faEnvelope} />
                     Contact
                 </AnchorLink>
+
+                <Link to="/documentation">
+                    <FontAwesomeIcon icon={faBook} />
+                    Help
+
+                    {/* <div className='sublinks'>
+                        <Link to="/documentation/the-dojo-coffee-house"><FontAwesomeIcon icon={faBook} />Use Bonjourr</Link>
+                        <Link to="/documentation"><FontAwesomeIcon icon={faBook} />CSS Snippets</Link>
+                        <Link to="/documentation"><FontAwesomeIcon icon={faBook} />Other stuff</Link>
+                    </div> */}
+                </Link>
 
                 <a href="https://online.bonjourr.fr">
                     <FontAwesomeIcon icon={faGlobeAmericas} />

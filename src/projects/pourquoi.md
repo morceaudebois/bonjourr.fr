@@ -1,6 +1,6 @@
 ---
 title: Pourquoi ?
-stack: allez
+subtitle: là
 slug: pourquoi
 featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 ---
