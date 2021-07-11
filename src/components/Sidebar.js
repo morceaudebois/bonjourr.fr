@@ -21,7 +21,7 @@ export default function Sidebar() {
         <div>
             <ul>
                 {projects.map(project => (
-                    <li key={project.id}><Link to={'/doc/' + project.frontmatter.slug}>{project.frontmatter.title}</Link></li>
+                    <li key={project.id}><Link to={'/documentation/' + project.frontmatter.slug}>{project.frontmatter.title}</Link></li>
                 ))}
             </ul>
         </div>

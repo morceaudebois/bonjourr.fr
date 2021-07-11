@@ -36,7 +36,7 @@ export default function index({data}) {
                             </a>
                         </div>
 
-                        <Link to='/download' className='link'><i>Searching for other browsers?</i></Link>
+                        <Link to='/documentation' className='link'><i>Searching for other browsers?</i></Link>
 
                     </div>
 
