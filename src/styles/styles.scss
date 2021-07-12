@@ -96,7 +96,6 @@ footer {
     position: absolute;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 2em;
     background: rgba(51, 51, 51, 0.5);
     backdrop-filter: blur(5px);
     color: white;
@@ -137,6 +136,5 @@ footer {
 .homepage {
     footer {
         bottom: 0;
-        margin-top: unset;
     }
 }

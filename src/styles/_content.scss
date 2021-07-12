@@ -1,8 +1,5 @@
-> * {
-    @include sidePadding();
-}
-
 section, .section {
+    @include sidePadding();
     h3 {
         text-align: center;
         font-size: 35px;
@@ -134,7 +131,7 @@ section, .section {
 
 }
 
-#main > * , #open > * , #further > * , #donate > *  {
+#main > * , #open > * , #further > * , #donate > *, #docHero .hero > *, article {
     @include marginAuto();
 
     @include lg {

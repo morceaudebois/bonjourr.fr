@@ -1,0 +1,82 @@
+@import 'global';
+
+
+
+.hero, article {
+    @include sidePadding;
+}
+
+.hero {
+    height: 33vh; 
+    min-height: 250px;
+    color: white;
+    display: flex;
+
+    .empty { flex: 1; }
+
+    .theContent {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: .7em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+article {
+    display: flex;
+    margin: 2em 0; 
+
+    .docNav {
+        flex: 1;
+        line-height: 1.7em;
+        font-size: 1.1em;
+
+        ul {
+            position: sticky;
+            top: 2em;
+            margin: unset;
+        }
+
+
+        a {
+            &:before {
+                content: '| ';
+                visibility: hidden;
+            }
+
+            &.active {
+                font-weight: bold;
+
+                &:before {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .html {
+        flex: 4;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 2em;
+            margin: .5em 0;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+    }
+}

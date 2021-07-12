@@ -1,9 +1,10 @@
 import { Link, graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
-import * as documentStyles from "../styles/document.module.scss"
+import "../styles/document.scss"
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
+import Helmet from 'react-helmet'
 
 export default function Document({ data }) {
     const  { html } = data.markdownRemark
@@ -12,10 +13,17 @@ export default function Document({ data }) {
 
   return (
     <Layout>
-      <div>
-        <BgImage image={getImage(featured)} className={documentStyles.hero}>
-          <h1>{title}</h1>
-          <p>{subtitle}</p>
+      <Helmet>
+        <body className="documentation" />
+      </Helmet>
+
+      <div id="docHero">
+        <BgImage image={getImage(featured)} className='hero'>
+          <div className="empty"></div>
+          <div className="theContent">
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
+          </div>
         </BgImage>
       </div>
 
@@ -23,12 +31,18 @@ export default function Document({ data }) {
         <div className="docNav">
           <ul>
             {documents.map(document => (
-                <li key={document.id}><Link to={'/documentation/' + document.frontmatter.slug}>{document.frontmatter.title}</Link></li>
+                <li key={document.id}>
+                    <Link
+                      to= {'/documentation/' + document.frontmatter.slug}  
+                      activeClassName="active">
+                        {document.frontmatter.title}
+                    </Link >
+                  </li>
             ))}
             </ul>
         </div>
 
-        <div dangerouslySetInnerHTML={{__html: html}} />
+        <div className="html" dangerouslySetInnerHTML={{__html: html}} />
       </article>
 
         
