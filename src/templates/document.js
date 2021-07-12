@@ -19,11 +19,14 @@ export default function Document({ data }) {
 
       <div id="docHero">
         <BgImage image={getImage(featured)} className='hero'>
-          <div className="empty"></div>
-          <div className="theContent">
-            <h1>{title}</h1>
-            <h2>{subtitle}</h2>
+          <div className="container">
+            <div className="empty"></div>
+            <div className="theContent">
+              <h1>{title}</h1>
+              <h2>{subtitle}</h2>
+            </div>
           </div>
+
         </BgImage>
       </div>
 

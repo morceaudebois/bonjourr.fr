@@ -1,18 +1,15 @@
 import React from "react"
-import Layout from "../components/Layout"
-import DownloadButton from "../components/DownloadButton"
-
-import { StaticImage } from "gatsby-plugin-image"
-import '../styles/styles.scss'
-
 import { Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import Helmet from 'react-helmet'
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 
-import { getImage } from 'gatsby-plugin-image';
-import { BgImage } from 'gbimage-bridge';
-
-import Helmet from 'react-helmet'
+import Layout from "../components/Layout"
+import DownloadButton from "../components/DownloadButton"
+import '../styles/styles.scss'
 
 export default function index({data}) {
 
@@ -181,6 +178,7 @@ export default function index({data}) {
     )
 }
 
+// required queries because new syntax isn't available for background images yet
 export const query = graphql`
     query {
         heroImage: file(relativePath: { eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg" }) {
