@@ -45,7 +45,6 @@ html, body, .layout {
 
     p {
         font-size: 1.3em;
-        text-align: justify;
 
         @include sm {
             font-size: 1.1em;
@@ -105,6 +104,22 @@ a {
     margin-right: auto; margin-left: auto;
 }
 
+@mixin maxWidth() {
+    @include marginAuto();
+
+    @include lg {
+        width: 90vw
+    }
+
+    @include xl {
+        max-width: 1200px
+    }
+
+    @include md {
+        width: unset;
+    }
+}
+
 
 a.button {
     width: 100%;
@@ -123,8 +138,8 @@ a.button {
     // @include marginAuto();
 
     @supports (backdrop-filter: none) {
-        background: rgba(30, 30, 30, 0.6);
-        backdrop-filter: blur(7px);
+        background: rgba(30, 30, 30, 0.4);
+        backdrop-filter: blur(2px);
     }
 
     &:hover {

@@ -132,19 +132,7 @@ section, .section {
 }
 
 #main > * , #open > * , #further > * , #donate > *, #docHero .hero > *, article {
-    @include marginAuto();
-
-    @include lg {
-        width: 90vw
-    }
-
-    @include xl {
-        max-width: 1200px
-    }
-
-    @include md {
-        width: unset;
-    }
+    @include maxWidth;
 }
 
 #open, #donate { color: white; @include textShadow() }
@@ -153,9 +141,7 @@ section, .section {
     color: white;
     background: linear-gradient(0.25turn, #140A17, #231730, #140A17);
 
-    p { text-align: justify; }
-
-    > * {  margin-bottom: 3em; }
+    > * {  margin-bottom: 5em; }
     div:last-child { margin-bottom: unset;}
 
     #intro {
@@ -238,17 +224,18 @@ section, .section {
 }
 
 #further {
-    background-color: #fffbf8;
+    background-color: #fafafd;
     min-height: 40vh;
     @include centerColumns;
 
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 30px;
+        grid-column-gap: 3em;
 
         @include md {
             grid-template-columns: repeat(auto-fit, 100%);
+            
             > div {
                 margin-bottom: 2em;
 
@@ -259,6 +246,9 @@ section, .section {
         > div {
             display: grid;
             box-sizing: border-box;
+            border-radius: 20px;
+            padding: 30px;
+            background-color: #f4f3f6; 
 
             .button {
                 align-self: end;
@@ -269,6 +259,7 @@ section, .section {
             font-size: 1.6em;
             margin-bottom: 1em;
             font-weight: unset;
+            align-self: flex-start;
             
             @include sm {
                 font-size: 1.3em;
@@ -277,6 +268,7 @@ section, .section {
 
         p {
             margin-bottom: 1em;
+            align-self: flex-start;
         }
     }
 
