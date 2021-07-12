@@ -18,7 +18,7 @@ export default function Navbar() {
                     Contact
                 </AnchorLink>
 
-                <Link to="/documentation">
+                <Link to="/use-bonjourr/">
                     <FontAwesomeIcon icon={faBook} />
                     Help
 

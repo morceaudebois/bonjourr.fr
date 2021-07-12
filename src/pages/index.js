@@ -43,7 +43,7 @@ export default function index({data}) {
                         </a>
                     </div>
 
-                    <Link to='/documentation' className='link'><i>Searching for other browsers?</i></Link>
+                    <Link to='/use-bonjourr' className='link'><i>Searching for other browsers?</i></Link>
 
                 </div>
 
@@ -141,10 +141,10 @@ export default function index({data}) {
                     <div>
                         <h4>Documentation</h4>
                         <p>Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code snippets so you can go even further into customisation.</p>
-                        <a href='/' className="button">
+                        <Link to='/use-bonjourr' className="button">
                             <span role='img' aria-label='happy-emoji' className='icon'>📖</span>
                             <span>Documentation</span>
-                        </a>
+                        </Link>
                     </div>
 
                     <div>

@@ -33,10 +33,11 @@ export default function Document({ data }) {
             {documents.map(document => (
                 <li key={document.id}>
                     <Link
-                      to= {'/documentation/' + document.frontmatter.slug}  
+                      to= {'/' + document.frontmatter.slug}  
                       activeClassName="active">
                         {document.frontmatter.title}
                     </Link >
+
                   </li>
             ))}
             </ul>
@@ -44,9 +45,6 @@ export default function Document({ data }) {
 
         <div className="html" dangerouslySetInnerHTML={{__html: html}} />
       </article>
-
-        
-
     </Layout>
 
   )

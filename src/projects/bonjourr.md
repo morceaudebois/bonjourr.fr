@@ -7,7 +7,7 @@ featured: ../assets/backgrounds/ray-hennessy-DAHUS8W4rNE-unsplash.jpg
 
 ### Chrome and Brave
 
-You can download Bonjourr for Chrome and Brave directly [on the Chrome Web Store](#).
+You can download Bonjourr for Chrome and Brave directly on the [Chrome Web Store](#).
 
 ### Firefox
 
@@ -29,7 +29,7 @@ Once you’ve installed Bonjourr, you’ll need to enable it for it to be active
 
 ### Opera
 
-Unfortunately, Bonjourr is not available nor usable in any way on Opera. According to their acceptance criteria, 'Extensions cannot replace Opera’s default start page.’
+Unfortunately, Bonjourr is not available nor usable in any way on Opera. According to their acceptance criteria, *Extensions cannot replace Opera’s default start page*.
 https://dev.opera.com/extensions/acceptance-criteria/
 
 
