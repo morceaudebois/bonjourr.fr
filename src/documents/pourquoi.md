@@ -1,12 +1,12 @@
 ---
-title: Pourquoi ?
-subtitle: là
-slug: pourquoi
+title: Custom profiles
+subtitle: 
+slug: profiles
 featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 ---
 
-bite ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem ninja ipsum modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in ninja futurum.
+#### Cyberpunk 2077
 
-### Lorem ninja ipsum dolor
-
-Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem ninja ipsum modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in ninja futurum.
+```css
+{"background_blur":0,"background_bright":0.71,"clock":{"ampm":false,"analog":false,"face":"none","seconds":false,"timezone":"auto"},"css":"* #w_icon { display: none }\n* #date, #credit a { color: #00d8f3 }\n\n#interface #main {\n    align-items: flex-start\n}\n\n* #clock {\n    color: #fdf800;\n    text-shadow: 5px 5px #00d8f3\n}\n\n* #greetings, * #weather_desc {\n    text-shadow: none;\n    text-align: left;\n    background-color: #fdf800;\n    padding: 10px 20px;\n    color: black\n}","dark":"enable","dynamic":{"collection":"He87uFs-2zg","every":"tabs","time":0},"font":{"availWeights":["400","500","600","700","800","900"],"family":"Orbitron","size":"15","url":"https://fonts.googleapis.com/css?family=Orbitron:700","weight":"700"},"hide":[[0,0],[0,0,1],[0],[0]],"reviewPopup":1,"searchbar":false}
+```

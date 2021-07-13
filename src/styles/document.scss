@@ -1,4 +1,5 @@
 @import 'global';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 // Styles for documentation
 
@@ -102,9 +103,21 @@ article {
             margin: .7em 0;
         }
 
+        h4 {
+            font-size: 1.4em;
+        }
+
         p {
             margin-bottom: 1em;
             line-height: 1.4em;
+        }
+
+        pre {
+            margin-bottom: 2.5em;
+
+            code {
+                font-family: 'Roboto Mono', monospace;
+            }
         }
 
         a {
