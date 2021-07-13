@@ -56,11 +56,11 @@ article {
     }
 
     .docNav {
-        flex: 1;
         line-height: 1.7em;
         font-size: 1.1em;
         box-sizing: border-box;
-
+        flex: 1; 
+        flex-shrink: 0; 
         @include md {
             @include marginAuto;
             margin-bottom: 1em;
@@ -90,8 +90,7 @@ article {
     }
 
     .html {
-        flex: 4;
-
+        flex: 4; 
         *:first-child { margin-top: unset; }
 
         h1, h2, h3, h4, h5, h6 {

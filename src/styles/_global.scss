@@ -160,8 +160,6 @@ a.button {
     }
 }
 
-
-
 hr {
     display: block;
     border: unset;
@@ -178,3 +176,20 @@ ul {
     list-style: none;
     padding: unset;
 }
+
+
+pre {
+    white-space: break-spaces;
+    overflow: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    code {
+        background-color: #f5f7f9;
+        border-radius: 20px;
+        padding: 20px;
+        display: block;
+    }
+}
+
+
