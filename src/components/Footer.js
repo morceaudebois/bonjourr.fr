@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const victor = <a href='https://victr.me/'>Victor Azevedo</a>
 const tahoe = <a href='https://tahoe.be'>Tahoe Beetschen</a>
@@ -13,7 +12,7 @@ export default function Footer() {
 
                 <span id="signature">Made in France with <span role='img' aria-label='heart-emoji'>❤️</span><br></br>by {sig}</span>
                 
-                <span id='contact'>Contact us on <Link to="/">Telegram</Link> or <Link to="/">email</Link></span>
+                <span id='contact'>Contact us on <a href="https://t.me/BonjourrStartpage">Telegram</a> or <a href="mailto:bonjourr.app@protonmail.com">email</a></span>
             </div>
         </footer>
     )

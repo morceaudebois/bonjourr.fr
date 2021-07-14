@@ -20,7 +20,23 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     `gatsby-plugin-image`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 690,
+              quality: 90
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-anchor-links",
       options: { duration: 600 }
@@ -37,6 +53,13 @@ module.exports = {
       options: {
         name: `backgrounds`,
         path: `${__dirname}/src/assets/backgrounds/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdownImages`,
+        path: `${__dirname}/src/assets/documentation`,
       },
     },
   ],

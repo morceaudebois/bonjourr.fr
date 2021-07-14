@@ -3,6 +3,17 @@
 
 // Styles for documentation
 
+body {
+    @media (prefers-color-scheme: dark) {
+        background: rgb(39, 39, 39);
+        article, .docNav a { color: rgb(240, 240, 240); }
+
+        pre code {
+            background-color:rgb(68, 68, 68)
+        }
+    }
+}
+
 .hero, article {
     @include sidePadding;
 }
@@ -50,7 +61,11 @@
 
 article {
     display: flex;
-    margin: 2em 0; 
+    margin: 2em 0;
+
+    code {
+        font-family: 'Roboto Mono', monospace;
+    }
 
     @include md {
         flex-direction: column;
@@ -114,18 +129,21 @@ article {
 
         pre {
             margin-bottom: 2.5em;
-
-            code {
-                font-family: 'Roboto Mono', monospace;
-            }
         }
 
         a {
             opacity: .7;
+            color: #0766d9;
+
             &:hover {
-                color: #0766d9;
                 text-decoration: underline;
             }
+
+            @media (prefers-color-scheme: dark) {
+                opacity: 1;
+                color: #318cfc;
+            }
+            
         }
     }
 }
