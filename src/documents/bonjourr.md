@@ -29,10 +29,6 @@ Bonjourr is available on the [Microsoft Edge Addons](https://microsoftedge.micro
 
 Once you’ve installed Bonjourr, you’ll need to enable it for it to be active. Enter `edge://extensions` in your adress bar, locate Bonjourr and click on the switch.
 
-### 🛑 Opera
-
-Unfortunately, Bonjourr is not available nor usable in any way on Opera. According to [their acceptance criteria](https://dev.opera.com/extensions/acceptance-criteria/), *Extensions cannot replace Opera’s default start page*. 
-
 ### 🔶 Bonjourr on iOS
 
 Unfortunately, Safari on iOS doesn’t allow developpers to replace its startpage. However, you can install it as a web app by visiting online.bonjourr.fr, going to the Share menu and then ‘Add to Home Screen’. iOS will then create an icon on you homescreen that will start Bonjourr when you open it.
@@ -42,3 +38,7 @@ The other way would be to start using another browser than Safari, like [Firefox
 ### 🔶 Bonjourr on Android
 
 I don't know
+
+### 🛑 Opera
+
+Unfortunately, Bonjourr is not available nor usable in any way on Opera. According to [their acceptance criteria](https://dev.opera.com/extensions/acceptance-criteria/), *Extensions cannot replace Opera’s default start page*. 

@@ -2,7 +2,7 @@
 title: CSS snippets
 subtitle: Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those CSS snippets in their dedicated section of the settings to unlock some new possibilities.
 slug: css-snippet
-featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
+featured: ../assets/backgrounds/daniel-plan-Ryrv5z2A18w-unsplash.jpg
 ---
 
 #### I don't care about artist exposure
@@ -75,3 +75,6 @@ featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
     color: black
 }
 ```
+
+
+*Want your own CSS snippet here? [Contact us](/#further)!*

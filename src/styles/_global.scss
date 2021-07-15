@@ -65,7 +65,7 @@ a {
 }
 
 @mixin textShadow {
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 @mixin center() {
@@ -146,7 +146,7 @@ a.button {
         background: rgba(30, 30, 30, 0.6);
 
         @supports (backdrop-filter: none) {
-            background: rgba(30, 30, 30, 0.8);
+            background: rgba(30, 30, 30, 0.6);
         }
     }
 

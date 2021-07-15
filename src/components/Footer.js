@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'gatsby'
 
 const victor = <a href='https://victr.me/'>Victor Azevedo</a>
 const tahoe = <a href='https://tahoe.be'>Tahoe Beetschen</a>
@@ -8,7 +9,7 @@ export default function Footer() {
     return (
         <footer>
             <div className="container">
-                <span>© 2019-{new Date().getFullYear()} Bonjourr</span>
+                <span>© 2019-{new Date().getFullYear()}<Link to='/' > Bonjourr</Link></span>
 
                 <span id="signature">Made in France with <span role='img' aria-label='heart-emoji'>❤️</span><br></br>by {sig}</span>
                 

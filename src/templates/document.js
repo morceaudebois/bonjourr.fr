@@ -11,7 +11,7 @@ export default function Document({ data }) {
     const { title, subtitle, featured } = data.markdownRemark.frontmatter
     const documents = data.allMarkdownRemark.nodes
 
-    const heroImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.2), rgba(64, 64, 64, 0.1))`, getImage(featured)]
+    const heroImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.4), rgba(64, 64, 64, 0.3))`, getImage(featured)]
 
   return (
     <Layout>

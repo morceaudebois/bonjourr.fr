@@ -41,7 +41,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            @include textShadow;
 
             @include md {
                 width: 100%!important;
@@ -142,6 +142,10 @@ article {
             @media (prefers-color-scheme: dark) {
                 opacity: 1;
                 color: #318cfc;
+            }
+
+            &.gatsby-resp-image-link {
+                opacity: 1;
             }
             
         }
