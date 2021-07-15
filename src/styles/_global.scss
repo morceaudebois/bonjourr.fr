@@ -143,7 +143,7 @@ a.button {
     }
 
     &:hover {
-        background: rgba(30, 30, 30, 0.9);
+        background: rgba(30, 30, 30, 0.6);
 
         @supports (backdrop-filter: none) {
             background: rgba(30, 30, 30, 0.8);

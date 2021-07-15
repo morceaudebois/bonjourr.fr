@@ -14,13 +14,17 @@ switch (browserName) {
         icon = '/chrome.svg'
         break;
     case 'Safari':
+        link = '/use-bonjourr#-safari'
+        label = 'Use on Safari'
+        icon = '/safari.svg'
+        break;
     case 'Mobile Safari':
-        link = '/download'
+        link = '/use-bonjourr#-bonjourr-on-ios'
         label = 'Use on iOS'
         icon = '/safari.svg'
         break;
     case 'Edge':
-        link = '/download'
+        link = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
         icon = '/edge.svg'
         break;
     default:

@@ -14,7 +14,6 @@ import '../styles/styles.scss'
 export default function index({data}) {
 
     const heroImage = getImage(data.heroImage.childImageSharp.gatsbyImageData);
-    console.log((data.heroImage.childImageSharp.gatsbyImageData));
     const openImage = [`linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1))`, getImage(data.openImage.childImageSharp.gatsbyImageData)];
     const donateImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3))`, getImage(data.donateImage.childImageSharp.gatsbyImageData)];
 
@@ -23,6 +22,7 @@ export default function index({data}) {
 
             <Helmet>
                 <body className="homepage" />
+                <meta name="theme-color" content="#367f9e" />
             </Helmet>
             
             <BgImage image={heroImage} id="hero" className='section'>

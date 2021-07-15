@@ -2,7 +2,7 @@
 title: Use Bonjourr 
 subtitle: There are plenty of ways you can use Bonjourr on your devices. Let’s talk about all of them.
 slug: use-bonjourr
-featured: ../assets/backgrounds/ray-hennessy-DAHUS8W4rNE-unsplash.jpg
+featured: ../assets/backgrounds/danist-bviex5lwf3s-unsplash.jpg
 ---
 
 ### ✅ Chrome and Brave
@@ -25,7 +25,7 @@ If you’d like to help us financially, because we would still love to publish B
 
 Bonjourr is available on the [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid) store.
 
-![Enable Bonjourr on Ddge](../assets/documentation/edge.png)
+![Enable Bonjourr on Edge](../assets/documentation/edge.png)
 
 Once you’ve installed Bonjourr, you’ll need to enable it for it to be active. Enter `edge://extensions` in your adress bar, locate Bonjourr and click on the switch.
 

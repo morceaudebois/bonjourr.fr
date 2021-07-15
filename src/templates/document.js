@@ -11,14 +11,18 @@ export default function Document({ data }) {
     const { title, subtitle, featured } = data.markdownRemark.frontmatter
     const documents = data.allMarkdownRemark.nodes
 
+    const heroImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.2), rgba(64, 64, 64, 0.1))`, getImage(featured)]
+
   return (
     <Layout>
       <Helmet>
         <body className="documentation" />
+        <title>{title} · Bonjourr's Documentation</title> 
+        <meta name="description" content={subtitle} />
       </Helmet>
 
       <div id="docHero">
-        <BgImage image={getImage(featured)} className='hero'>
+        <BgImage image={heroImage} className='hero'>
           <div className="container">
             <div className="empty"></div>
             <div className="theContent">
