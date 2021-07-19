@@ -65,6 +65,12 @@ article {
 
     code {
         font-family: 'Roboto Mono', monospace;
+        background-color: #f5f7f9;
+        border-radius: 10px;
+        padding: 2px 4px;
+        box-sizing: border-box;
+        font-size: .85em;
+        color: #eb5757;
     }
 
     @include md {
@@ -109,22 +115,37 @@ article {
         flex: 4; 
         *:first-child { margin-top: unset; }
 
+        ul {
+            list-style: inside;
+            padding: initial;
+
+            font-size: 1.3em;
+            @include sm {
+                font-size: 1.1em;
+            }
+        }
+
         h1, h2, h3, h4, h5, h6 {
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         h3 {
-            font-size: 1.8em;
-            margin: .7em 0;
+            font-size: 1.3em;
+            // margin: .7em 0;
         }
 
         h4 {
             font-size: 1.4em;
         }
 
-        p {
+        p, ul {
             margin-bottom: 1em;
-            line-height: 1.4em;
+            line-height: 1.5em;
+        }
+
+        strong {
+            font-weight: bold;
         }
 
         pre {

@@ -65,7 +65,7 @@ a {
 }
 
 @mixin textShadow {
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
 }
 
 @mixin center() {
@@ -185,10 +185,11 @@ pre {
     word-break: break-word;
 
     code {
-        background-color: #f5f7f9;
-        border-radius: 20px;
-        padding: 20px;
         display: block;
+        // !important for document css
+        padding: 20px!important;
+        color: inherit!important;
+        font-size: inherit!important;
     }
 }
 

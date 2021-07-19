@@ -41,7 +41,8 @@ export default function Document({ data }) {
                 <li key={document.id}>
                     <Link
                       to= {'/' + document.frontmatter.slug}  
-                      activeClassName="active">
+                      activeClassName="active"
+                      partiallyActive={true}>
                         {document.frontmatter.title}
                     </Link >
 
