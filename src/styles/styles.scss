@@ -9,6 +9,9 @@ nav {
     padding-top: .5em;
     
     .container {
+        display: flex;
+        @include center;
+        justify-content: space-between;
         @include maxWidth;
 
         @include sm {
@@ -18,9 +21,12 @@ nav {
         }
     
         #logo {
-            height: 50px;
+            // height: 50px;
+            
+            @include textShadow();
             position: relative; 
             img { height: 100%; }
+            a { color: white; }
         }
     
         .links {

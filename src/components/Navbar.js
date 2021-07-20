@@ -3,15 +3,20 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faEnvelope, faGlobeAmericas, faDonate } from '@fortawesome/free-solid-svg-icons'
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { Link } from "gatsby"
+
+import {Link, useI18next, Trans} from 'gatsby-plugin-react-i18next';
 
 export default function Navbar() {
+
+    const {languages, originalPath} = useI18next();
+
     return (
         <nav>
             <div className="container">
-                {/* <h1 id="logo">
-                    <img src='/logo.png'alt="bonjourr logo"/>
-                </h1> */}
+                <h1 id="logo">
+                    {/* <img src='/logo.png'alt="bonjourr logo"/> */}
+                    <Link to='/' alt="Go to homepage">Bonjourr</Link>
+                </h1>
 
                 <div className="links">
                     <AnchorLink to="/#further">
@@ -19,9 +24,9 @@ export default function Navbar() {
                         Contact
                     </AnchorLink>
 
-                    <Link to="/use-bonjourr/">
+                    <Link to="/help/">
                         <FontAwesomeIcon icon={faBook} />
-                        Help
+                        <Trans>Help</Trans>
 
                         {/* <div className='sublinks'>
                             <Link to="/documentation/the-dojo-coffee-house"><FontAwesomeIcon icon={faBook} />Use Bonjourr</Link>
@@ -37,9 +42,19 @@ export default function Navbar() {
 
                     <AnchorLink to="/#donate">
                         <FontAwesomeIcon icon={faDonate} />
-                        Donate
+                        <Trans>Donate</Trans>
                     </AnchorLink>
                 </div>
+
+                <ul className="languages">
+                    {languages.map((lng) => (
+                    <li key={lng}>
+                        <Link to={originalPath} language={lng}>
+                        {lng}
+                        </Link>
+                    </li>
+                    ))}
+                </ul>
             </div>
         </nav>
     )
