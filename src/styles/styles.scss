@@ -1,7 +1,8 @@
 @import 'global';
 
 nav {
-    position: absolute; 
+    // position: absolute;
+    position: relative;
     width: 100%;
     box-sizing: border-box;
     z-index: 10;
