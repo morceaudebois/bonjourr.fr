@@ -91,6 +91,25 @@ nav {
                 margin-left: 25px;
             }
         }
+
+        .languages {
+            display: flex;
+
+            li {
+                a {
+                    color: white;
+                    @include textShadow;
+
+                    &[aria-current='page'] {
+                        display: none;
+                    }
+                }  
+                
+                &:first-child {
+                    margin-right: 5px;
+                }
+            }
+        }
     }
 
 

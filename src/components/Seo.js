@@ -1,8 +1,11 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, StaticQuery } from "gatsby"
+import { I18nextContext } from 'gatsby-plugin-react-i18next';
 
-export default function Seo ({ title, description, url, image, author, type , keywords }) {
+export default function Seo ({ title, description, siteUrl, image, author, type , keywords }) {
+	const context = React.useContext(I18nextContext);
+	
 	return (
 		<StaticQuery
 			query={graphql`
@@ -11,7 +14,7 @@ export default function Seo ({ title, description, url, image, author, type , ke
                         siteMetadata {
                             title
                             description
-                            url
+                            siteUrl
                             image
                             author
                             type
@@ -23,7 +26,7 @@ export default function Seo ({ title, description, url, image, author, type , ke
 			render={data => {
 				const metaTitle = title || data.site.siteMetadata.title
 				const metaDescription = description || data.site.siteMetadata.description
-				const metaUrl = url || data.site.siteMetadata.url
+				const metaUrl = siteUrl || data.site.siteMetadata.siteUrl
 				const metaImage = image || data.site.siteMetadata.image
 				const metaAuthor = author || data.site.siteMetadata.author
                 const metaType = type || data.site.siteMetadata.type
@@ -40,7 +43,7 @@ export default function Seo ({ title, description, url, image, author, type , ke
 					<Helmet
 						title={metaTitle}
 						metaescription={metaDescription}
-						htmlAttributes={{ lang: 'en' }}
+						htmlAttributes={{ lang: context.language }}
 						
 						meta={[
 							{

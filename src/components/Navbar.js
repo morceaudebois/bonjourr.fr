@@ -37,7 +37,7 @@ export default function Navbar() {
 
                     <a href="https://online.bonjourr.fr">
                         <FontAwesomeIcon icon={faGlobeAmericas} />
-                        Online
+                        <Trans>Online</Trans>
                     </a>
 
                     <AnchorLink to="/#donate">

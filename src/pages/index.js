@@ -18,7 +18,6 @@ const IndexPage = ({data}) => {
     const heroImage = getImage(data.heroImage.childImageSharp.gatsbyImageData);
     const openImage = [`linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1))`, getImage(data.openImage.childImageSharp.gatsbyImageData)];
     const donateImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3))`, getImage(data.donateImage.childImageSharp.gatsbyImageData)];
-    
 
     return (
         <Layout> 
@@ -160,7 +159,7 @@ const IndexPage = ({data}) => {
             </section>
 
             <BgImage image={donateImage} id="donate" className='section'>
-                <h3><Trans>Donate</Trans><span role='img' aria-label='happy-emoji'>😊</span></h3>
+                <h3><Trans>Donate</Trans><span role='img' aria-label='happy-emoji'> 😊</span></h3>
 
                 <p><Trans>Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn any money out of this project, apart from donations. Supporting our work financially is very important if you want us to keep updating it, and we appreciate every single donation.</Trans></p>
 

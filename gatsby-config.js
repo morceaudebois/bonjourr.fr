@@ -4,21 +4,24 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const siteUrl = process.env.URL || 'http://localhost:8000/'
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: 'Bonjourr · Startpage for you browser',
     description: 'Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.',
-    url: 'https://bonjourr.fr',
+    siteUrl: siteUrl,
     image : '/logo.png',
     author : 'Tahoe Beetschen',
-    type : 'website'
+    type : 'website',
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -78,7 +81,7 @@ module.exports = {
         languages: [`en`, `fr`],
         defaultLanguage: `en`,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        siteUrl: `http://localhost:8000/`,
+        siteUrl: siteUrl,
         // you can pass any i18next options
         // pass following options to allow message content as a key
         i18nextOptions: {
@@ -88,18 +91,8 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false
         },
-        pages: [
-          {
-            matchPath: '/:lang?/blog/:uid',
-            getLanguageFromPath: true,
-            excludeLanguages: ['es']
-          },
-          {
-            matchPath: '/preview',
-            languages: ['en']
-          }
-        ]
+ 
       }
-    }
+    },
   ],
 }
