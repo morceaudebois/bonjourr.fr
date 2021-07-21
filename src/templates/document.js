@@ -1,4 +1,5 @@
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { Link } from 'gatsby-plugin-react-i18next';
 import React from "react"
 import Layout from "../components/Layout"
 import "../styles/document.scss"
@@ -59,7 +60,7 @@ export default function Document({ data }) {
 }
 
 export const query = graphql`
-  query test($slug: String) {
+  query test($slug: String, $language: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -84,6 +85,15 @@ export const query = graphql`
           title
       }
       id
+      }
+    },
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
       }
     }
   }

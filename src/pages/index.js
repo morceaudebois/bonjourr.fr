@@ -119,7 +119,7 @@ const IndexPage = ({data}) => {
             </section>
             
             <BgImage image={openImage} id="open" className='section'>
-                <h3><span role='img' aria-label='lock-emoji'>🔒</span><Trans>Free, open source and privacy focused</Trans></h3>
+                <h3><span role='img' aria-label='lock-emoji'>🔒</span> <Trans>Free, open source and privacy focused</Trans></h3>
                 <p><Trans>Bonjourr is made by two independent developpers who love things well made and <i>actually</i> think privacy is important. You can use Bonjourr straight away, without having to create or log into any account because we do not collect any data.</Trans></p>
             </BgImage>
 

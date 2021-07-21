@@ -1,8 +1,18 @@
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
 
-
 const Goodbye = () => {
+
+    // gets source browser name
+    const browserName = (new URLSearchParams(window.location.search)).get('from')
+    
+
+
+
+
+
+
+
 
     const [formState, setFormState] = useState({
         name: "",
@@ -56,6 +66,16 @@ const Goodbye = () => {
                     onChange={handleChange}
                     value={formState.email}
                     placeholder="Email"
+                />
+
+                <input
+                    id="browserSource"
+                    type="text"
+                    name="Source browser"
+                    onChange={handleChange}
+                    value={formState.browserSource}
+                    placeholder="The version of Bonjourr you're coming from"
+                    
                 />
 
                 <button type="submit">Submit</button>
