@@ -63,7 +63,6 @@ const IndexPage = ({data}) => {
                         <StaticImage
                             src="../assets/wolf.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
-                            width={50}
                             quality= {90}
                             placeholder="blurred"
                             layout="fullWidth"
@@ -88,7 +87,6 @@ const IndexPage = ({data}) => {
                         <StaticImage
                             src="../assets/cursive.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
-                            width={600}
                             quality= {90}
                             placeholder="blurred"
                             layout="fullWidth"
