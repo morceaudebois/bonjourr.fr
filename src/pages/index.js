@@ -1,17 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Helmet from 'react-helmet'
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
+
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDesktop } from '@fortawesome/free-solid-svg-icons'
 
-import Layout from "../components/Layout"
 import DownloadButton from "../components/DownloadButton"
 import '../styles/styles.scss'
 
 import {Link, Trans } from 'gatsby-plugin-react-i18next';
+
+// fix huge fontawesome
+config.autoAddCss = false
 
 const IndexPage = ({data}) => {
 

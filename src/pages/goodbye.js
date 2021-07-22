@@ -11,11 +11,11 @@ const Goodbye = (props) => {
 
     const [formState, setFormState] = useState({
         message: "",
-        email: "",
-        browser: (new URLSearchParams(props.location.search)).get("from")
+        email: ""
     })
 
     const encode = (data) => {
+        console.log(data);
         return Object.keys(data)
             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
             .join("&")
@@ -34,10 +34,10 @@ const Goodbye = (props) => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
                 "form-name": "contact",
+                browser: (new URLSearchParams(props.location.search)).get("from"),
                 ...formState
             })
         })
-
 
         .then(() => alert("Success!"))
         .catch(error => alert(error));
