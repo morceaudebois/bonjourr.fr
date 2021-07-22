@@ -9,17 +9,13 @@ import { BgImage } from 'gbimage-bridge';
 const Goodbye = (props) => {
     const heroImage = getImage(props.data.heroImage.childImageSharp.gatsbyImageData);
 
-    // gets source browser name
-    const browserName = (new URLSearchParams(props.location.search)).get("from");
-
     const [formState, setFormState] = useState({
         message: "",
         email: "",
-        browserSource: browserName
+        browser: (new URLSearchParams(props.location.search)).get("from")
     })
 
     const encode = (data) => {
-        console.log(data)
         return Object.keys(data)
             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
             .join("&")
@@ -36,12 +32,17 @@ const Goodbye = (props) => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...formState })
-          })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
-    
-          e.preventDefault();
+            body: encode({
+                "form-name": "contact",
+                ...formState
+            })
+        })
+
+
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+        e.preventDefault();
     }
 
     return (

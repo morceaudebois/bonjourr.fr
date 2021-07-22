@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faEnvelope, faGlobeAmericas, faDonate } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faEnvelope, faGlobeAmericas, faDonate, faDesktop } from '@fortawesome/free-solid-svg-icons'
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import {Link, useI18next, Trans} from 'gatsby-plugin-react-i18next';
@@ -27,16 +27,10 @@ export default function Navbar() {
                     <Link to="/help/">
                         <FontAwesomeIcon icon={faBook} />
                         <Trans>Help</Trans>
-
-                        {/* <div className='sublinks'>
-                            <Link to="/documentation/the-dojo-coffee-house"><FontAwesomeIcon icon={faBook} />Use Bonjourr</Link>
-                            <Link to="/documentation"><FontAwesomeIcon icon={faBook} />CSS Snippets</Link>
-                            <Link to="/documentation"><FontAwesomeIcon icon={faBook} />Other stuff</Link>
-                        </div> */}
                     </Link>
 
                     <a href="https://online.bonjourr.fr">
-                        <FontAwesomeIcon icon={faGlobeAmericas} />
+                        <FontAwesomeIcon icon={faDesktop} />
                         <Trans>Online</Trans>
                     </a>
 
@@ -50,6 +44,7 @@ export default function Navbar() {
                     {languages.map((lng) => (
                     <li key={lng}>
                         <Link to={originalPath} language={lng}>
+                        <FontAwesomeIcon icon={faGlobeAmericas} />
                         {lng}
                         </Link>
                     </li>

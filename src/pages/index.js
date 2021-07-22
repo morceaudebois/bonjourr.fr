@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faDesktop } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from "../components/Layout"
 import DownloadButton from "../components/DownloadButton"
@@ -18,8 +18,6 @@ const IndexPage = ({data}) => {
     const heroImage = getImage(data.heroImage.childImageSharp.gatsbyImageData);
     const openImage = [`linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1))`, getImage(data.openImage.childImageSharp.gatsbyImageData)];
     const donateImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3))`, getImage(data.donateImage.childImageSharp.gatsbyImageData)];
-
-    console.log(data)
 
     return (
         <Layout> 
@@ -42,7 +40,7 @@ const IndexPage = ({data}) => {
                         <DownloadButton />
 
                         <a href='https://online.bonjourr.fr' target='_blank' rel="noreferrer" className="button">
-                            <FontAwesomeIcon icon={faGlobeAmericas} className='icon' />
+                            <FontAwesomeIcon icon={faDesktop} className='icon' />
                             <span><Trans>Try online</Trans></span>
                         </a>
                     </div>
