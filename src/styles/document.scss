@@ -3,17 +3,6 @@
 
 // Styles for documentation
 
-body {
-    @media (prefers-color-scheme: dark) {
-        background: rgb(39, 39, 39);
-        article, .docNav a { color: rgb(240, 240, 240); }
-
-        pre code {
-            background-color:rgb(68, 68, 68)
-        }
-    }
-}
-
 .hero, article {
     @include sidePadding;
 }
@@ -186,6 +175,17 @@ article {
                 opacity: 1;
             }
             
+        }
+    }
+}
+
+body {
+    @media (prefers-color-scheme: dark) {
+        background: rgb(39, 39, 39);
+        article, .docNav a { color: rgb(240, 240, 240); }
+
+        code {
+            background-color:rgb(68, 68, 68)
         }
     }
 }

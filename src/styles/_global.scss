@@ -65,7 +65,7 @@ a {
 }
 
 @mixin textShadow {
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
 }
 
 @mixin center() {

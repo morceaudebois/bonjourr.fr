@@ -161,6 +161,7 @@ footer {
     }
 }
 
+
 .goodbye #hero > #formContainer {
     @include marginAuto;
     margin-bottom: 2em;
@@ -213,5 +214,13 @@ footer {
             color: white;
         }
     }
+}
 
+.documentation footer {
+    @media (prefers-color-scheme: light) {
+        background-color: #f5f7f9;
+        color: $blackish;
+
+        > .container span a { color: $blackish; }
+    }
 }
