@@ -1,9 +1,28 @@
 import React from 'react'
-import { browserName } from "react-device-detect";
+import { Trans } from 'gatsby-plugin-react-i18next';
 
 let link, icon;
-let label = "Download";
-switch (browserName) {
+let label = <Trans>Download</Trans>;
+
+
+function detectBrowser() { 
+    if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) !== -1 ) {
+        return 'Opera';
+    } else if(navigator.userAgent.indexOf("Chrome") !== -1 ) {
+        return 'Chrome';
+    } else if(navigator.userAgent.indexOf("Safari") !== -1) {
+        return 'Safari';
+    } else if(navigator.userAgent.indexOf("Firefox") !== -1 ){
+        return 'Firefox';
+    } else if((navigator.userAgent.indexOf("MSIE") !== -1 ) || (!!document.documentMode === true )) {
+        return 'IE';//crap
+    } else {
+        return 'Unknown';
+    }
+} 
+
+
+switch (detectBrowser()) {
     case 'Firefox':
         link = 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
         icon = '/firefox.svg'
@@ -30,14 +49,14 @@ switch (browserName) {
     default:
         icon = '/logo.png'
         link = 'https://online.bonjourr.fr'
-        label = 'Use Bonjourr'
+        label = <Trans>Use Bonjourr</Trans>;
 }
 
 export default function downloadButton() {
     return (
         <a href={link} className="button">
             <div className="icon">
-                <img src={icon} alt={browserName + ' logo'}/>
+                <img src={icon} alt={detectBrowser() + ' logo'}/>
             </div>
             <span>{label}</span>
         </a>
