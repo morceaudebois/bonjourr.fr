@@ -5,27 +5,19 @@ const Goodbye = () => {
 
     // gets source browser name
     const browserName = (new URLSearchParams(window.location.search)).get('from')
-    
-
-
-
-
-
-
-
 
     const [formState, setFormState] = useState({
-        name: "",
-        email: ""
+        message: "",
+        email: "",
+        browserSource: browserName
     })
 
     const encode = (data) => {
         return Object.keys(data)
             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
+            .join("&")
     }
     
-
     const handleChange = e => {
         setFormState({
             ...formState,
@@ -47,16 +39,26 @@ const Goodbye = () => {
 
     return (
         <Layout>
+            <h2>Thank you for using Bonjourr.</h2>
+            <p>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks! <span role='img' aria-label='happy-emoji'>😊</span></p>
             <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact" />
-                <label htmlFor="name">Name</label>
-                <input
-                    id="name"
+
+                {/* <input
+                    id="browserSource"
+                    type="hidden"
+                    name="browserSource"
+                    onChange={handleChange}
+                    value={browserName}
+                /> */}
+
+                <textarea
+                    id="message"
                     type="text"
-                    name="name"
+                    name="message"
                     onChange={handleChange}
                     value={formState.name}
-                    placeholder="Nom"
+                    placeholder="Your message..."
                 />
 
                 <input
@@ -65,20 +67,10 @@ const Goodbye = () => {
                     name="email"
                     onChange={handleChange}
                     value={formState.email}
-                    placeholder="Email"
+                    placeholder="Email (optionnal)"
                 />
 
-                <input
-                    id="browserSource"
-                    type="text"
-                    name="Source browser"
-                    onChange={handleChange}
-                    value={formState.browserSource}
-                    placeholder="The version of Bonjourr you're coming from"
-                    
-                />
-
-                <button type="submit">Submit</button>
+                <button type="submit">Send your message</button>
             </form>
         </Layout>
     )
