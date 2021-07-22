@@ -45,6 +45,7 @@ nav {
         .languages {
             display: flex;
             justify-content: flex-end;
+            margin: unset;
 
             @include sm {
                 margin-right: 20px;
@@ -160,7 +161,7 @@ footer {
     }
 }
 
-.goodbye #hero > .container {
+.goodbye #hero > #formContainer {
     @include marginAuto;
     margin-bottom: 2em;
 

@@ -11,6 +11,7 @@ const Goodbye = (props) => {
 
     const [formState, setFormState] = useState({
         message: "",
+        browserSource: (new URLSearchParams(props.location.search)).get("from") || "",
         email: ""
     })
 
@@ -34,15 +35,18 @@ const Goodbye = (props) => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
                 "form-name": "contact",
-                browser: (new URLSearchParams(props.location.search)).get("from"),
                 ...formState
             })
         })
 
-        .then(() => alert("Success!"))
+        .then(() => success())
         .catch(error => alert(error));
 
         e.preventDefault();
+    }
+
+    function success() {
+        document.getElementById("formContainer").innerHTML = '<h2>Thank you for your message, it has been sent.<h2>';
     }
 
     return (
@@ -56,20 +60,20 @@ const Goodbye = (props) => {
             <BgImage image={heroImage} id="hero" className='section'>
                 <span className="filter"></span>
 
-                <div className="container">
+                <div id='formContainer'>
                     <h2>Thank you for using Bonjourr.</h2>
                     <p>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks! <span role='img' aria-label='happy-emoji'>😊</span></p>
 
-                    <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <form id="form" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact" />
 
-                        {/* <input
+                        <input
                             id="browserSource"
                             type="hidden"
                             name="browserSource"
                             onChange={handleChange}
-                            value={browserName}
-                        /> */}
+                            value={formState.browserSource}
+                        />
 
                         <textarea
                             id="message"

@@ -46,16 +46,29 @@ body {
             @include md {
                 width: 100%!important;
             }
+
+            @include sm {
+                margin-top: 50px;
+            }
         }
     }
 
     h1 {
         font-weight: bold;
         margin-bottom: .7em;
+
+        @include sm {
+            margin-bottom: .4em;
+            font-size: 1.5em;
+        }
     }
 
     h2 {
         font-size: 1.4em;
+
+        @include sm {
+            font-size: 1.1em;
+        }
     }
 }
 
@@ -84,7 +97,6 @@ article {
         flex: 1; 
         flex-shrink: 0; 
         @include md {
-            @include marginAuto;
             margin-bottom: 1em;
         }
 
