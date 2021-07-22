@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import Layout from '../components/Layout'
 
-const Goodbye = () => {
+const Goodbye = (props) => {
 
     // gets source browser name
-    const browserName = (new URLSearchParams(window.location.search)).get('from')
+    const browserName = (new URLSearchParams(props.location.search)).get("from");
+
 
     const [formState, setFormState] = useState({
         message: "",
