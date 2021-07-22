@@ -1,8 +1,7 @@
 @import 'global';
 
 nav {
-    // position: absolute;
-    position: relative;
+    position: absolute;
     width: 100%;
     box-sizing: border-box;
     z-index: 10;
@@ -134,7 +133,7 @@ footer {
     color: white;
     @include sidePadding();
 
-    .container {
+    > .container {
         @include maxWidth;
         width: 100%;
         display: flex;
@@ -174,10 +173,65 @@ footer {
     }
 }
 
-.homepage {
+.homepage, .goodbye {
     footer {
         bottom: 0;
         // background: unset;
         // backdrop-filter: unset;
     }
+}
+
+.goodbye #hero > .container {
+    @include marginAuto;
+    margin-bottom: 2em;
+
+    > * {
+        max-width: 600px;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            width: 100%;
+        }
+
+        input, textarea, button {
+            padding: 0.5em 1em;
+            color: #292b2c;
+            font-size: 1.2em;
+            border: 0px; 
+            border-radius: 10px;
+
+            margin-top: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 62px;
+
+            &:after {
+                pointer-events: none;
+                content: "↓";
+                font-size: 14px;
+                position: absolute;
+                height: 22px;
+                width: 20px;
+                text-align: center;
+                bottom: 2px;
+                right: -2px;
+                background-color: #efefef;
+                color: #777;
+            }
+        }
+
+        button {
+            @include marginAuto;
+            cursor: pointer;
+            max-width: 300px;
+            color: white;
+        }
+    }
+
 }
