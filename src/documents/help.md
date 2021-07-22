@@ -6,9 +6,9 @@ featured: ../assets/backgrounds/daniel-plan-Ryrv5z2A18w-unsplash.jpg
 ---
 
 ## 💵 Donations 💶
-A few donations can help a lot when it comes to open source software. It motivates us to pour more time into Bonjourr, it helps us realise people care about our work and more financial ressources can open new doors for the future.
+A few donations go a long way when it comes to open source software. It motivates us to pour more time into Bonjourr, it helps us realise people care about our work and it can open new doors for the future.
 
-You can donate in [regular money](https://ko-fi.com/bonjourr) or [crypto](https://commerce.coinbase.com/charges/Y2DYYZCG).
+You can donate in [regular money](https://ko-fi.com/bonjourr) or [crypto money](https://commerce.coinbase.com/charges/Y2DYYZCG).
 
 ## 👨‍💻 Contributions 👩‍💻
 You have some coding skills and a feature in mind you could implement into Bonjourr? Check out the [GitHub repository](https://github.com/victrme/Bonjourr/) and head to our [Telegram discussion group](https://t.me/BonjourrStartpage), we'd be glad to chat about it!

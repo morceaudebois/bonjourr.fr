@@ -31,7 +31,7 @@ Once you’ve installed Bonjourr, you’ll need to enable it for it to be active
 
 ## 🔶 Bonjourr on iOS
 
-Unfortunately, Safari on iOS doesn’t allow developpers to replace its startpage. However, you can install it as a web app by visiting online.bonjourr.fr, going to the Share menu and then ‘Add to Home Screen’. iOS will then create an icon on you homescreen that will start Bonjourr when you open it.
+Unfortunately, Safari on iOS doesn’t allow developpers to replace its startpage. However, you can install it as a web app by visiting [online.bonjourr.fr](https://online.bonjourr.fr), going to the Share menu and then ‘Add to Home Screen’. iOS will then create an icon on you homescreen that will start Bonjourr when you open it.
 
 The other way would be to start using another browser than Safari, like [Firefox](https://apps.apple.com/fr/app/navigateur-web-firefox/id989804926), which allows its users to replace their startpage. You can then add `online.bonjourr.fr` as a startpage.
 

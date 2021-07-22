@@ -84,6 +84,8 @@ article {
         box-sizing: border-box;
         font-size: .85em;
         color: #eb5757;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     @include md {
@@ -96,6 +98,7 @@ article {
         box-sizing: border-box;
         flex: 1; 
         flex-shrink: 0; 
+        min-width: 150px; 
         @include md {
             margin-bottom: 1em;
         }
