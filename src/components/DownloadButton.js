@@ -1,5 +1,5 @@
 import React from 'react'
-import { Trans } from 'gatsby-plugin-react-i18next';
+import { Trans, Link } from 'gatsby-plugin-react-i18next';
 import { browserName } from "react-device-detect";
 
 export default function downloadButton() {
@@ -20,12 +20,12 @@ export default function downloadButton() {
                 break;
             case 'Safari':
                 link = '/use-bonjourr#-safari'
-                label = 'Use on Safari'
+                label = <Trans>Use on Safari</Trans>;
                 icon = '/safari.svg'
                 break;
             case 'Mobile Safari':
                 link = '/use-bonjourr#-bonjourr-on-ios'
-                label = 'Use on iOS'
+                label = <Trans>Use on iOS</Trans>;
                 icon = '/safari.svg'
                 break;
             case 'Edge':
@@ -38,14 +38,31 @@ export default function downloadButton() {
                 label = <Trans>Use Bonjourr</Trans>;
         }
 
-        return (
-            <a href={link} className="button">
-                <div className="icon">
-                    <img src={icon} alt={browserName + ' logo'}/>
-                </div>
-                <span>{label}</span>
-            </a>
-        )
+        let linkContent = () => {
+            return (
+                <React.Fragment>
+                    <div className="icon">
+                        <img src={icon} alt={browserName + ' logo'}/>
+                    </div>
+                    <span>{label}</span>
+                </React.Fragment>
+            )
+        } 
+
+        if (link.includes('https')) {
+            return (
+                <a href={link} className="button">
+                    {linkContent()}
+                </a>
+            )
+        } else {
+            return (
+                <Link to={link} className="button">
+                    {linkContent()}
+                </Link>
+            )
+        }
+
     } else {
         return null
     }
