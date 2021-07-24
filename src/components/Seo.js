@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { graphql, StaticQuery } from "gatsby"
 import { I18nextContext } from 'gatsby-plugin-react-i18next';
 
-export default function SEO ({ title, description, siteUrl, image, keywords }) {
+export default function Seo ({ title, description, siteUrl, image, keywords }) {
 	const context = React.useContext(I18nextContext);
 	
 	return (

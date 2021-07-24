@@ -56,7 +56,13 @@ const IndexPage = ({data}) => {
                 </div>
 
                 <div className='right'>
-                    <StaticImage src="../assets/heroImage.png" alt="Bonjourr screenshot" width={700} quality={90} placeholder="blurred" />
+                    <StaticImage
+                        src="../assets/heroImage.png"
+                        alt="Bonjourr screenshot"
+                        width={600}
+                        quality={90}
+                        placeholder="blurred"
+                    />
                 </div>
             </BgImage>
 
@@ -73,7 +79,7 @@ const IndexPage = ({data}) => {
                             alt="Bonjourr dynamic backgrounds screenshot"
                             quality= {90}
                             placeholder="blurred"
-                            layout="fullWidth"
+                            width= {580}
                         />
                     </div>
 
@@ -97,7 +103,7 @@ const IndexPage = ({data}) => {
                             alt="Bonjourr dynamic backgrounds screenshot"
                             quality= {90}
                             placeholder="blurred"
-                            layout="fullWidth"
+                            width= {580}
                         />
                     </div>
                 </div>
