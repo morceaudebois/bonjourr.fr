@@ -31,6 +31,7 @@ const IndexPage = ({data}) => {
             <Helmet>
                 <body className="homepage" />
                 <meta name="theme-color" content="#367f9e" />
+                <link rel="preload" as="image" href="/heroImage2x.webp"/>
             </Helmet>
             
             <div id="hero" className='section'>
@@ -62,8 +63,8 @@ const IndexPage = ({data}) => {
                         loading="eager"
                     /> */}
 
-                    {/* <img src="/heroImage.webp" srcset="/heroImage2x.webp 2x" alt="Bonjourr screenshot" width="1000px" height="653px"/>
-                     */}
+                    <img src="/heroImage.webp" srcset="/heroImage2x.webp 2x" alt="Bonjourr screenshot" width="1000px" height="653px"/>
+                    
                 </div>
             </div>
 
