@@ -3,33 +3,17 @@ import { Helmet } from "react-helmet"
 import { graphql, StaticQuery } from "gatsby"
 import { I18nextContext } from 'gatsby-plugin-react-i18next';
 
-export default function Seo ({ title, description, siteUrl, image, author, type , keywords }) {
+export default function SEO ({ title, description, siteUrl, image, keywords }) {
 	const context = React.useContext(I18nextContext);
 	
 	return (
 		<StaticQuery
-			query={graphql`
-                query DefaultSEOQuery {
-                    site {
-                        siteMetadata {
-                            title
-                            description
-                            siteUrl
-                            image
-                            author
-                            type
-                        }
-                    }
-                }
-            `}
 
 			render={data => {
-				const metaTitle = title || data.site.siteMetadata.title
+				const metaTitle = 'Bonjourr · ' + (title || data.site.siteMetadata.title)
 				const metaDescription = description || data.site.siteMetadata.description
 				const metaUrl = siteUrl || data.site.siteMetadata.siteUrl
 				const metaImage = image || data.site.siteMetadata.image
-				const metaAuthor = author || data.site.siteMetadata.author
-                const metaType = type || data.site.siteMetadata.type
 				const metaKeywords = keywords || [
 					"extension",
 					"startpage",
@@ -40,67 +24,42 @@ export default function Seo ({ title, description, siteUrl, image, author, type 
 				]
 
 				return (
-					<Helmet
-						title={metaTitle}
-						metaescription={metaDescription}
-						htmlAttributes={{ lang: context.language }}
+					<Helmet htmlAttributes={{ lang: context.language }}>
+						<title>{metaTitle}</title>
+
+						<meta name="description" content={metaDescription}/>
+						<meta property="og:url" content={metaUrl} />
+						<meta property="og:type" content='website' />
+						<meta property="og:title" content={metaTitle} />
+						<meta property="og:description" content={metaDescription} />
+						<meta property="og:image" content={metaImage} />
+						<meta name="keywords" content={metaKeywords}/>
+
+						<meta property="twitter:card" content='summary' />
+						<meta property="twitter:creator" content='BonjourrTeam' />
+						<meta property="twitter:title" content={metaTitle} />
+						<meta property="twitter:description" content={metaDescription} />
+						<meta property="twitter:image" content={metaImage} />
+					</Helmet>
 						
-						meta={[
-							{
-								name: "description",
-								content: metaDescription,
-							},
-							{
-								property: "og:url",
-								content: metaUrl,
-							},
-							{
-								property: "og:type",
-								content: metaType,
-							},
-							{
-								property: "og:title",
-								content: metaTitle,
-							},
-							{
-								property: "og:description",
-								content: metaDescription,
-							},
-							{
-								property: "og:image",
-								content: metaImage,
-							},
-							{
-								property: "twitter:card",
-								content: metaDescription,
-							},
-							{
-								property: "twitter:creator",
-								content: metaAuthor,
-							},
-							{
-								property: "twitter:title",
-								content: metaTitle,
-							},
-							{
-								property: "twitter:description",
-								content: metaDescription,
-							},
-							{
-								property: "twitter:image",
-								content: metaImage,
-							},
-						].concat(
-							metaKeywords && metaKeywords.length > 0
-								? {
-										name: "keywords",
-										content: metaKeywords.join(", "),
-								  }
-								: []
-						)}
-					/>
 				)
 			}}
+
+			query={graphql`
+				query DefaultSEOQuery {
+					site {
+						siteMetadata {
+							title
+							description
+							siteUrl
+							image
+							author
+							type
+						}
+					}
+				}
+			`}
+
 		/>
 	)
 }

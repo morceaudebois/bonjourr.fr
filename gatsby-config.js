@@ -9,7 +9,7 @@ const siteUrl = process.env.URL || 'http://localhost:8000/'
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Bonjourr · Startpage for you browser',
+    title: 'Startpage for you browser',
     description: 'Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.',
     siteUrl: siteUrl,
     image : '/logo.png',
@@ -17,6 +17,18 @@ module.exports = {
     type : 'website',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Bonjourr's website`,
+        short_name: `Bonjourr`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: 'src/assets/favicon.png'
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
