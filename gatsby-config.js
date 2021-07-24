@@ -34,6 +34,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
+    `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,

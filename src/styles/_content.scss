@@ -28,33 +28,34 @@ section, .section {
 }
 
 #hero {
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.15);
-
-    @supports (backdrop-filter: none) {
-        box-shadow: unset;
-        
-        // blur
-        .filter {
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            background: rgba(68, 68, 68, 0.1);
-            backdrop-filter: blur(13px);
-            top: 0;
-            z-index: 0;
-        }
-    }
-
-    background-size: cover;
     min-height: 66vh;
     display: flex;
     color: white;
-    padding-top: 69px;
     position: relative;
     @include center();
 
-    // sinon le .filter passe par dessus
+    .background {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.05);
+            background-image: url('/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.webp');
+            background-size: cover;
+            background-position: center center;
+            filter: blur(13px);
+            display: block;
+            width: 100%; height: 100%;
+            transform: scale(1.1);
+        }
+    }
+
+
+    // sinon le .background passe par dessus
     * { z-index: 1; }
 
     // passe en lignes en mobile
@@ -106,6 +107,14 @@ section, .section {
             }
         }
 
+        &.right {
+            img {
+                width: 100%;
+                max-width: 700px;
+                height: auto; 
+            }
+        }
+
         @include md {
             height: unset;
             &.left { margin-right: unset;}
@@ -151,6 +160,8 @@ section, .section {
             text-align: center;
         }
     }
+
+    .gatsby-image-wrapper > div { max-width: unset!important; }
 
     #dynBackgrounds .right, #custom .left {
         @include centerColumns;

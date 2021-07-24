@@ -21,7 +21,7 @@ config.autoAddCss = false
 
 const IndexPage = ({data}) => {
 
-    const heroImage = getImage(data.heroImage.childImageSharp.gatsbyImageData);
+    // const heroImage = getImage(data.heroImage.childImageSharp.gatsbyImageData);
     const openImage = [`linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1))`, getImage(data.openImage.childImageSharp.gatsbyImageData)];
     const donateImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3))`, getImage(data.donateImage.childImageSharp.gatsbyImageData)];
 
@@ -32,12 +32,9 @@ const IndexPage = ({data}) => {
                 <body className="homepage" />
                 <meta name="theme-color" content="#367f9e" />
             </Helmet>
-
             
-
-            
-            <BgImage image={heroImage} id="hero" className='section'>
-                <span className="filter"></span>
+            <div id="hero" className='section'>
+                <span className="background"></span>
                 <div className='left' >
                     <h1>Bonjourr</h1>
                     <h2><Trans>Startpage for your browser</Trans></h2>
@@ -56,15 +53,19 @@ const IndexPage = ({data}) => {
                 </div>
 
                 <div className='right'>
-                    <StaticImage
+                    {/* <StaticImage
                         src="../assets/heroImage.png"
                         alt="Bonjourr screenshot"
                         width={600}
                         quality={90}
                         placeholder="blurred"
-                    />
+                        loading="eager"
+                    /> */}
+
+                    {/* <img src="/heroImage.webp" srcset="/heroImage2x.webp 2x" alt="Bonjourr screenshot" width="1000px" height="653px"/>
+                     */}
                 </div>
-            </BgImage>
+            </div>
 
             <section id="main" >
                 <div id="intro">
@@ -77,9 +78,9 @@ const IndexPage = ({data}) => {
                         <StaticImage
                             src="../assets/wolf.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
-                            quality= {90}
+                            quality= {85}
                             placeholder="blurred"
-                            width= {580}
+                            width= {480}
                         />
                     </div>
 
@@ -101,9 +102,9 @@ const IndexPage = ({data}) => {
                         <StaticImage
                             src="../assets/cursive.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
-                            quality= {90}
+                            quality= {85}
                             placeholder="blurred"
-                            width= {580}
+                            width= {480}
                         />
                     </div>
                 </div>
