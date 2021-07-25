@@ -3,12 +3,13 @@
 
 // Styles for documentation
 
-.hero, article {
+.hero,
+article {
     @include sidePadding;
 }
 
 .hero {
-    height: 33vh; 
+    height: 33vh;
     min-height: 250px;
     color: white;
     display: flex;
@@ -33,7 +34,7 @@
             @include textShadow;
 
             @include md {
-                width: 100%!important;
+                width: 100% !important;
             }
 
             @include sm {
@@ -44,10 +45,10 @@
 
     h1 {
         font-weight: bold;
-        margin-bottom: .7em;
+        margin-bottom: 0.7em;
 
         @include sm {
-            margin-bottom: .4em;
+            margin-bottom: 0.4em;
             font-size: 1.5em;
         }
     }
@@ -71,7 +72,7 @@ article {
         border-radius: 10px;
         padding: 2px 4px;
         box-sizing: border-box;
-        font-size: .85em;
+        font-size: 0.85em;
         color: #eb5757;
         overflow-wrap: break-word;
         word-break: break-word;
@@ -85,9 +86,9 @@ article {
         line-height: 1.7em;
         font-size: 1.1em;
         box-sizing: border-box;
-        flex: 1; 
-        flex-shrink: 0; 
-        min-width: 150px; 
+        flex: 1;
+        flex-shrink: 0;
+        min-width: 150px;
         @include md {
             margin-bottom: 1em;
         }
@@ -96,7 +97,7 @@ article {
             position: sticky;
             top: 2em;
             margin: unset;
-            padding-right: .5em;
+            padding-right: 0.5em;
         }
 
         a {
@@ -116,8 +117,10 @@ article {
     }
 
     .html {
-        flex: 4; 
-        *:first-child { margin-top: unset; }
+        flex: 4;
+        *:first-child {
+            margin-top: unset;
+        }
 
         ul {
             list-style: inside;
@@ -129,7 +132,12 @@ article {
             }
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: bold;
             margin-bottom: 10px;
 
@@ -145,7 +153,8 @@ article {
             font-size: 1.4em;
         }
 
-        p, ul {
+        p,
+        ul {
             margin-bottom: 1em;
             line-height: 1.5em;
         }
@@ -159,7 +168,7 @@ article {
         }
 
         a {
-            opacity: .7;
+            opacity: 0.7;
             color: #0766d9;
 
             &:hover {
@@ -174,7 +183,6 @@ article {
             &.gatsby-resp-image-link {
                 opacity: 1;
             }
-            
         }
     }
 }
@@ -182,10 +190,13 @@ article {
 body {
     @media (prefers-color-scheme: dark) {
         background: rgb(39, 39, 39);
-        article, .docNav a { color: rgb(240, 240, 240); }
+        article,
+        .docNav a {
+            color: rgb(240, 240, 240);
+        }
 
         code {
-            background-color:rgb(68, 68, 68)
+            background-color: rgb(68, 68, 68);
         }
     }
 }

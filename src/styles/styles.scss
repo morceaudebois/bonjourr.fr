@@ -6,8 +6,8 @@ nav {
     box-sizing: border-box;
     z-index: 10;
     @include sidePadding();
-    padding-top: .5em;
-    
+    padding-top: 0.5em;
+
     .container {
         display: flex;
         @include center;
@@ -16,35 +16,44 @@ nav {
 
         @include sm {
             grid-template-columns: 1fr;
-            #logo { display: none; }
-            .links { width: 100%; }
+            #logo {
+                display: none;
+            }
+            .links {
+                width: 100%;
+            }
         }
 
-        >*:first-child, >*:last-child  {
+        > *:first-child,
+        > *:last-child {
             flex-grow: 1;
             flex-basis: 0;
         }
-    
+
         #logo {
             @include textShadow();
 
             @include md {
-                margin-right: 10px; 
+                margin-right: 10px;
             }
 
-            position: relative; 
-            img { height: 100%; }
-            a { color: white; }
+            position: relative;
+            img {
+                height: 100%;
+            }
+            a {
+                color: white;
+            }
         }
-    
+
         .links {
             padding: unset;
             text-align: right;
             @include center();
-    
+
             @include sm {
                 justify-content: flex-start;
-            }            
+            }
         }
 
         .languages {
@@ -57,20 +66,23 @@ nav {
             }
 
             li a[aria-current='page'] {
-                    display: none;
-            } 
+                display: none;
+            }
         }
 
         a {
             border-bottom: 2px solid transparent;
-            padding-bottom: 9px; padding-top: 9px;
+            padding-bottom: 9px;
+            padding-top: 9px;
             transition: border $transitionTime;
             color: white;
             position: relative;
             margin-left: 25px;
             @include textShadow;
-            
-            svg { margin-right: 7px; }
+
+            svg {
+                margin-right: 7px;
+            }
 
             &:hover {
                 border-color: white;
@@ -89,18 +101,16 @@ nav {
                 }
             }
 
-            &:first-child { margin-left: unset; }
+            &:first-child {
+                margin-left: unset;
+            }
         }
-
     }
-
-
 }
 
 .content {
     @import 'content';
 }
-
 
 footer {
     min-height: 5em;
@@ -123,44 +133,50 @@ footer {
         align-items: center;
 
         span {
-            &#signature { text-align: center; }
-    
+            &#signature {
+                text-align: center;
+            }
+
             &#contact {
                 text-align: right;
             }
-    
-            &:first-child, &:last-child  {
+
+            &:first-child,
+            &:last-child {
                 flex-grow: 1;
                 flex-basis: 0;
             }
-    
+
             a {
                 color: white;
                 font-weight: 400;
             }
-            
         }
 
         @include md {
             flex-wrap: wrap;
             padding: 1em 0;
-    
-            span, span#contact { width: 100%;
+
+            span,
+            span#contact {
+                width: 100%;
                 text-align: center;
                 margin-bottom: 1em;
-    
-                &:last-child { margin-bottom: unset; }
+
+                &:last-child {
+                    margin-bottom: unset;
+                }
             }
         }
     }
 }
 
-.homepage, .goodbye {
+.homepage,
+.goodbye {
     footer {
         bottom: 0;
     }
 }
-
 
 .goodbye #hero > #formContainer {
     @include marginAuto;
@@ -178,11 +194,13 @@ footer {
             width: 100%;
         }
 
-        input, textarea, button {
+        input,
+        textarea,
+        button {
             padding: 0.5em 1em;
             color: #292b2c;
             font-size: 1.2em;
-            border: 0px; 
+            border: 0px;
             border-radius: 10px;
 
             margin-top: 1em;
@@ -207,6 +225,8 @@ footer {
         background-color: #f5f7f9;
         color: $blackish;
 
-        > .container span a { color: $blackish; }
+        > .container span a {
+            color: $blackish;
+        }
     }
 }

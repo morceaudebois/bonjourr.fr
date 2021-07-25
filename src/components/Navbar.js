@@ -1,21 +1,28 @@
 import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faEnvelope, faGlobeAmericas, faDonate, faDesktop } from '@fortawesome/free-solid-svg-icons'
-import { AnchorLink } from "gatsby-plugin-anchor-links"
+import {
+    faBook,
+    faEnvelope,
+    faGlobeAmericas,
+    faDonate,
+    faDesktop,
+} from '@fortawesome/free-solid-svg-icons'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
-import {Link, useI18next, Trans} from 'gatsby-plugin-react-i18next';
+import { Link, useI18next, Trans } from 'gatsby-plugin-react-i18next'
 
 export default function Navbar() {
-
-    const {language, languages, originalPath} = useI18next();
-    const lang = (language === 'en') ? '' : 'fr/'
+    const { language, languages, originalPath } = useI18next()
+    const lang = language === 'en' ? '' : 'fr/'
 
     return (
         <nav>
             <div className="container">
                 <h1 id="logo">
-                    <Link to='/' alt="Go to homepage">Bonjourr</Link>
+                    <Link to="/" alt="Go to homepage">
+                        Bonjourr
+                    </Link>
                 </h1>
 
                 <div className="links">
@@ -41,13 +48,13 @@ export default function Navbar() {
                 </div>
 
                 <ul className="languages">
-                    {languages.map((lng) => (
-                    <li key={lng}>
-                        <Link to={originalPath} language={lng}>
-                        <FontAwesomeIcon icon={faGlobeAmericas} />
-                            {lng}
-                        </Link>
-                    </li>
+                    {languages.map(lng => (
+                        <li key={lng}>
+                            <Link to={originalPath} language={lng}>
+                                <FontAwesomeIcon icon={faGlobeAmericas} />
+                                {lng}
+                            </Link>
+                        </li>
                     ))}
                 </ul>
             </div>

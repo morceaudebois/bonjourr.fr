@@ -1,71 +1,91 @@
 import React, { useState } from 'react'
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Helmet from 'react-helmet'
 import '../styles/styles.scss'
-import { getImage } from 'gatsby-plugin-image';
-import { BgImage } from 'gbimage-bridge';
+import { getImage } from 'gatsby-plugin-image'
+import { BgImage } from 'gbimage-bridge'
 
-const Goodbye = (props) => {
-    const heroImage = getImage(props.data.heroImage.childImageSharp.gatsbyImageData);
+const Goodbye = props => {
+    const heroImage = getImage(
+        props.data.heroImage.childImageSharp.gatsbyImageData
+    )
 
     const [formState, setFormState] = useState({
-        message: "",
-        browserSource: (new URLSearchParams(props.location.search)).get("from") || "",
-        email: ""
+        message: '',
+        browserSource:
+            new URLSearchParams(props.location.search).get('from') || '',
+        email: '',
     })
 
-    const encode = (data) => {
-        console.log(data);
+    const encode = data => {
+        console.log(data)
         return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&")
+            .map(
+                key =>
+                    encodeURIComponent(key) +
+                    '=' +
+                    encodeURIComponent(data[key])
+            )
+            .join('&')
     }
-    
+
     const handleChange = e => {
         setFormState({
             ...formState,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         })
     }
 
     const handleSubmit = e => {
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({
-                "form-name": "contact",
-                ...formState
-            })
+                'form-name': 'contact',
+                ...formState,
+            }),
         })
+            .then(() => success())
+            .catch(error => alert(error))
 
-        .then(() => success())
-        .catch(error => alert(error));
-
-        e.preventDefault();
+        e.preventDefault()
     }
 
     function success() {
-        document.getElementById("formContainer").innerHTML = '<h2>Thank you for your message, it has been sent.<h2>';
+        document.getElementById('formContainer').innerHTML =
+            '<h2>Thank you for your message, it has been sent.<h2>'
     }
 
     return (
         <Layout>
-
             <Helmet>
                 <body className="goodbye" />
                 <meta name="theme-color" content="#367f9e" />
                 <meta name={`robots`} content={`noindex, nofollow`} />
             </Helmet>
 
-            <BgImage image={heroImage} id="hero" className='section'>
+            <BgImage image={heroImage} id="hero" className="section">
                 <span className="filter"></span>
 
-                <div id='formContainer'>
+                <div id="formContainer">
                     <h2>Thank you for using Bonjourr.</h2>
-                    <p>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks! <span role='img' aria-label='happy-emoji'>😊</span></p>
+                    <p>
+                        We're sorry to see you go. If you have time, tell us
+                        what would make Bonjourr better, thanks!{' '}
+                        <span role="img" aria-label="happy-emoji">
+                            😊
+                        </span>
+                    </p>
 
-                    <form id="form" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <form
+                        id="form"
+                        onSubmit={handleSubmit}
+                        name="contact"
+                        method="post"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                    >
                         <input type="hidden" name="form-name" value="contact" />
 
                         <input
@@ -105,17 +125,21 @@ const Goodbye = (props) => {
 export default Goodbye
 
 export const query = graphql`
-    query($language: String!) {
-        locales: allLocale(filter: {language: {eq: $language}}) {
+    query ($language: String!) {
+        locales: allLocale(filter: { language: { eq: $language } }) {
             edges {
                 node {
-                ns
-                data
-                language
+                    ns
+                    data
+                    language
                 }
             }
-        },
-        heroImage: file(relativePath: { eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg" }) {
+        }
+        heroImage: file(
+            relativePath: {
+                eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg"
+            }
+        ) {
             childImageSharp {
                 gatsbyImageData(
                     width: 1000
@@ -124,6 +148,6 @@ export const query = graphql`
                     formats: [AUTO, WEBP, AVIF]
                 )
             }
-        },
+        }
     }
 `

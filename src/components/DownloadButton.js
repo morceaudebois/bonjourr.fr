@@ -1,53 +1,56 @@
 import React from 'react'
-import { Trans, Link } from 'gatsby-plugin-react-i18next';
-import { browserName } from "react-device-detect";
+import { Trans, Link } from 'gatsby-plugin-react-i18next'
+import { browserName } from 'react-device-detect'
 
 export default function downloadButton() {
-    let link, icon;
-    let label = <Trans>Download</Trans>;
+    let link, icon
+    let label = <Trans>Download</Trans>
 
     // checks for window existence or server side rendering fails
     if (typeof window !== `undefined`) {
         switch (browserName) {
             case 'Firefox':
-                link = 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
+                link =
+                    'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
                 icon = '/firefox.svg'
-                break;
+                break
             case 'Chrome':
             case 'Chrome WebView':
-                link = 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd?hl=fr&authuser=0'
+                link =
+                    'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd?hl=fr&authuser=0'
                 icon = '/chrome.svg'
-                break;
+                break
             case 'Safari':
                 link = '/use-bonjourr#-safari'
-                label = <Trans>Use on Safari</Trans>;
+                label = <Trans>Use on Safari</Trans>
                 icon = '/safari.svg'
-                break;
+                break
             case 'Mobile Safari':
                 link = '/use-bonjourr#-bonjourr-on-ios'
-                label = <Trans>Use on iOS</Trans>;
+                label = <Trans>Use on iOS</Trans>
                 icon = '/safari.svg'
-                break;
+                break
             case 'Edge':
-                link = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+                link =
+                    'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
                 icon = '/edge.svg'
-                break;
+                break
             default:
                 icon = '/logo.png'
                 link = 'https://online.bonjourr.fr'
-                label = <Trans>Use Bonjourr</Trans>;
+                label = <Trans>Use Bonjourr</Trans>
         }
 
         let linkContent = () => {
             return (
                 <React.Fragment>
                     <div className="icon">
-                        <img src={icon} alt={browserName + ' logo'}/>
+                        <img src={icon} alt={browserName + ' logo'} />
                     </div>
                     <span>{label}</span>
                 </React.Fragment>
             )
-        } 
+        }
 
         if (link.includes('https')) {
             return (
@@ -62,7 +65,6 @@ export default function downloadButton() {
                 </Link>
             )
         }
-
     } else {
         return null
     }
