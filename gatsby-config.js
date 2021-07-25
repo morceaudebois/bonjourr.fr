@@ -22,18 +22,24 @@ module.exports = {
       options: {
         name: `Bonjourr's website`,
         short_name: `Bonjourr`,
-        start_url: `/`,
+        start_url: siteUrl,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: 'src/assets/favicon.png'
+        icon: 'src/assets/favicon.png',
+        "prefer_related_applications": true
       },
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/goodbye', '/fr/goodbye', '/fr/404']
+      }
+    },
     `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
     {

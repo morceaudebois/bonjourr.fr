@@ -21,7 +21,6 @@ config.autoAddCss = false
 
 const IndexPage = ({data}) => {
 
-    // const heroImage = getImage(data.heroImage.childImageSharp.gatsbyImageData);
     const openImage = [`linear-gradient(0deg, rgba(148, 148, 148, 0.1), rgba(148, 148, 148, 0.1))`, getImage(data.openImage.childImageSharp.gatsbyImageData)];
     const donateImage = [`linear-gradient(0deg, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0.3))`, getImage(data.donateImage.childImageSharp.gatsbyImageData)];
 
@@ -54,17 +53,8 @@ const IndexPage = ({data}) => {
                 </div>
 
                 <div className='right'>
-                    {/* <StaticImage
-                        src="../assets/heroImage.png"
-                        alt="Bonjourr screenshot"
-                        width={600}
-                        quality={90}
-                        placeholder="blurred"
-                        loading="eager"
-                    /> */}
-
-                    <img src="/heroImage.webp" srcset="/heroImage2x.webp 2x" alt="Bonjourr screenshot" width="1000px" height="653px"/>
-                    
+                    {/* No StaticImage since it's above the fold and needs to be f a s t */}
+                    <img src="/heroImage.webp" srcset="/heroImage2x.webp 2x" alt="Bonjourr screenshot" width='500' height='326'/>  
                 </div>
             </div>
 
@@ -130,7 +120,6 @@ const IndexPage = ({data}) => {
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </section>
             
@@ -146,6 +135,7 @@ const IndexPage = ({data}) => {
                     <div>
                         <h4><Trans>Contact us</Trans></h4>
                         <p><Trans>Come and hang out on Bonjourr’s official Telegram group. You can tell us about your ideas and read about the latest news about its development.</Trans></p>
+
                         <a href='https://t.me/BonjourrStartpage' className="button">
                             <StaticImage src="../assets/telegram.svg" alt="telegram logo" width={70} className='icon'/>
                             <span><Trans>Bonjourr's Telegram</Trans></span>
@@ -188,10 +178,7 @@ const IndexPage = ({data}) => {
                         <span><Trans>Donate in crypto</Trans></span>
                     </a>
                 </div>
-
-
             </BgImage>
-        
         </Layout>
     )
 }
@@ -208,16 +195,6 @@ export const query = graphql`
                 data
                 language
                 }
-            }
-        },
-        heroImage: file(relativePath: { eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg" }) {
-            childImageSharp {
-                gatsbyImageData(
-                    width: 1000
-                    quality: 90
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP, AVIF]
-                )
             }
         },
         openImage: file(relativePath: { eq: "meiying-ng-OrwkD-iWgqg-unsplash.jpg" }) {

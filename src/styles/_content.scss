@@ -81,13 +81,16 @@ section, .section {
 
     > div {
         height: 100%;
+        flex-grow: 1;
         @include centerColumns;
 
         &.left {
             min-width: 310px;
 
+
             .container { 
                 display: flex;
+                justify-content: center;
 
                 .button:first-child {
                     margin-right: 1em;
@@ -101,6 +104,10 @@ section, .section {
                 margin: 1em 0;
                 @include textShadow;
 
+                @include md {
+                    text-align: center;
+                }
+
                 &:hover {
                     opacity: 1;
                 }
@@ -108,9 +115,9 @@ section, .section {
         }
 
         &.right {
+            max-width: 650px;
             img {
                 width: 100%;
-                max-width: 700px;
                 height: auto; 
             }
         }
@@ -124,6 +131,7 @@ section, .section {
             &.left {
                 margin-right: 4em;
                 min-width: 410px;
+                max-width: 450px;
                 h1 {
                     font-size: 5em;
                 }
@@ -229,7 +237,6 @@ section, .section {
             max-width: 1000px;
         }
     }
-
 
     h3 { text-align: center;}
 }

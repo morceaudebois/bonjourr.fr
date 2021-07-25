@@ -27,6 +27,11 @@ nav {
     
         #logo {
             @include textShadow();
+
+            @include md {
+                margin-right: 10px; 
+            }
+
             position: relative; 
             img { height: 100%; }
             a { color: white; }
@@ -53,10 +58,7 @@ nav {
 
             li a[aria-current='page'] {
                     display: none;
-            }
-     
-
-            
+            } 
         }
 
         a {
@@ -156,8 +158,6 @@ footer {
 .homepage, .goodbye {
     footer {
         bottom: 0;
-        // background: unset;
-        // backdrop-filter: unset;
     }
 }
 

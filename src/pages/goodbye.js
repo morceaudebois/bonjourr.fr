@@ -55,6 +55,7 @@ const Goodbye = (props) => {
             <Helmet>
                 <body className="goodbye" />
                 <meta name="theme-color" content="#367f9e" />
+                <meta name={`robots`} content={`noindex, nofollow`} />
             </Helmet>
 
             <BgImage image={heroImage} id="hero" className='section'>
@@ -103,7 +104,6 @@ const Goodbye = (props) => {
 
 export default Goodbye
 
-// required queries because new syntax isn't available for background images yet
 export const query = graphql`
     query($language: String!) {
         locales: allLocale(filter: {language: {eq: $language}}) {
