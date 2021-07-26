@@ -71,11 +71,11 @@ const IndexPage = ({ data }) => {
                 <div className="right">
                     {/* No StaticImage since it's above the fold and needs to be f a s t */}
                     <img
-                        src="/heroImage.webp"
-                        srcset="/heroImage2x.webp 2x"
+                        src="/illu.png"
+                        srcset="/illu.png 2x"
                         alt="Bonjourr screenshot"
-                        width="500"
-                        height="326"
+                        width="613"
+                        height="377"
                     />
                 </div>
             </div>
@@ -98,7 +98,7 @@ const IndexPage = ({ data }) => {
                 <div id="dynBackgrounds">
                     <div className="left">
                         <StaticImage
-                            src="../assets/wolf.png"
+                            src="../assets/dyn.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
                             quality={85}
                             placeholder="blurred"
@@ -139,7 +139,7 @@ const IndexPage = ({ data }) => {
 
                     <div className="right">
                         <StaticImage
-                            src="../assets/cursive.png"
+                            src="../assets/customise.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
                             quality={85}
                             placeholder="blurred"

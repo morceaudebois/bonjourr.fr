@@ -10,8 +10,7 @@ export default function downloadButton() {
     if (typeof window !== `undefined`) {
         switch (browserName) {
             case 'Firefox':
-                link =
-                    'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
+                link = 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
                 icon = '/firefox.svg'
                 break
             case 'Chrome':

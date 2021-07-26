@@ -134,6 +134,11 @@ a {
     }
 }
 
+@mixin screenshotShadow() {
+    -webkit-filter: drop-shadow(0px 10px 37px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 10px 37px rgba(0, 0, 0, 0.3));
+}
+
 button,
 .button {
     width: 100%;

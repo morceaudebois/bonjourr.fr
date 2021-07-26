@@ -7,26 +7,18 @@ import { getImage } from 'gatsby-plugin-image'
 import { BgImage } from 'gbimage-bridge'
 
 const Goodbye = props => {
-    const heroImage = getImage(
-        props.data.heroImage.childImageSharp.gatsbyImageData
-    )
+    const heroImage = getImage(props.data.heroImage.childImageSharp.gatsbyImageData)
 
     const [formState, setFormState] = useState({
         message: '',
-        browserSource:
-            new URLSearchParams(props.location.search).get('from') || '',
+        browserSource: new URLSearchParams(props.location.search).get('from') || '',
         email: '',
     })
 
     const encode = data => {
         console.log(data)
         return Object.keys(data)
-            .map(
-                key =>
-                    encodeURIComponent(key) +
-                    '=' +
-                    encodeURIComponent(data[key])
-            )
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
             .join('&')
     }
 
@@ -71,8 +63,8 @@ const Goodbye = props => {
                 <div id="formContainer">
                     <h2>Thank you for using Bonjourr.</h2>
                     <p>
-                        We're sorry to see you go. If you have time, tell us
-                        what would make Bonjourr better, thanks!{' '}
+                        We're sorry to see you go. If you have time, tell us what would make
+                        Bonjourr better, thanks!{' '}
                         <span role="img" aria-label="happy-emoji">
                             😊
                         </span>
@@ -136,9 +128,7 @@ export const query = graphql`
             }
         }
         heroImage: file(
-            relativePath: {
-                eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg"
-            }
+            relativePath: { eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg" }
         ) {
             childImageSharp {
                 gatsbyImageData(

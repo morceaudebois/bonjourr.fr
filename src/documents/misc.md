@@ -6,7 +6,7 @@ featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 ---
 
 ## Various tips and tricks
-- Bonjourr doesn't show all its settings by default. If you're an advanced user or just curious, you'll want to enable them all at the top of the settings pannel.
+- Bonjourr doesn't show all its settings by default. If you're an advanced user or just curious, you'll want to enable them all at the top of the settings panel.
 - Hitting the `escape` key opens the settings.
 - When the searchbar is enabled, you can start typing right away and it will write in the search bar (as long as you're focused on the page). 
 

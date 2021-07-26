@@ -24,8 +24,7 @@ export default function Footer() {
             text: 'Tahoe Beetschen',
         }
 
-        let signatures =
-            Math.random(0.5) > 0.5 ? [tahoe, victor] : [victor, tahoe]
+        let signatures = Math.random(0.5) > 0.5 ? [tahoe, victor] : [victor, tahoe]
 
         return (
             <footer>
@@ -41,15 +40,13 @@ export default function Footer() {
                             ❤️
                         </span>
                         <br></br>
-                        <Trans>by</Trans>{' '}
-                        <AuthorLink props={signatures[0]}></AuthorLink> &{' '}
+                        <Trans>by</Trans> <AuthorLink props={signatures[0]}></AuthorLink> &{' '}
                         <AuthorLink props={signatures[1]}></AuthorLink>
                     </span>
 
                     <span id="contact">
                         <Trans>Contact us on</Trans>{' '}
-                        <a href="https://t.me/BonjourrStartpage">Telegram</a>{' '}
-                        <Trans>or</Trans>{' '}
+                        <a href="https://t.me/BonjourrStartpage">Telegram</a> <Trans>or</Trans>{' '}
                         <a href="mailto:bonjourr.app@protonmail.com">email</a>
                     </span>
                 </div>

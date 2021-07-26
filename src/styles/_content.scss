@@ -1,29 +1,32 @@
-section, .section {
+section,
+.section {
     @include sidePadding();
     h3 {
         text-align: center;
         font-size: 35px;
         font-weight: bold;
         margin-bottom: 1.5em;
-    
+
         @include sm {
             font-size: 25px;
         }
     }
-    
+
     h4 {
         font-size: 2em;
         font-weight: bold;
-    
+
         @include sm {
             font-size: 1.3em;
         }
     }
-    
-    padding-top: 5em; padding-bottom: 5em;
+
+    padding-top: 5em;
+    padding-bottom: 5em;
 
     @include sm {
-        padding-top: 3em; padding-bottom: 3em;
+        padding-top: 3em;
+        padding-bottom: 3em;
     }
 }
 
@@ -41,7 +44,7 @@ section, .section {
         width: 100%;
 
         &:before {
-            content: "";
+            content: '';
             position: absolute;
             // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.05);
             background-image: url('/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.webp');
@@ -49,19 +52,24 @@ section, .section {
             background-position: center center;
             filter: blur(13px);
             display: block;
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             transform: scale(1.1);
         }
     }
 
-
     // sinon le .background passe par dessus
-    * { z-index: 1; }
+    * {
+        z-index: 1;
+    }
 
     // passe en lignes en mobile
     @include md {
         flex-wrap: wrap;
-        h1, h2 { text-align: center;}
+        h1,
+        h2 {
+            text-align: center;
+        }
     }
 
     h1 {
@@ -70,7 +78,7 @@ section, .section {
         @include textShadow();
 
         @include sm {
-            margin-top: .5em;
+            margin-top: 0.5em;
         }
     }
 
@@ -87,8 +95,7 @@ section, .section {
         &.left {
             min-width: 310px;
 
-
-            .container { 
+            .container {
                 display: flex;
                 justify-content: center;
 
@@ -99,7 +106,7 @@ section, .section {
 
             .link {
                 color: white;
-                opacity: .8;
+                opacity: 0.8;
                 transition: opacity $transitionTime ease-in;
                 margin: 1em 0;
                 @include textShadow;
@@ -118,13 +125,16 @@ section, .section {
             max-width: 650px;
             img {
                 width: 100%;
-                height: auto; 
+                height: auto;
+                @include screenshotShadow;
             }
         }
 
         @include md {
             height: unset;
-            &.left { margin-right: unset;}
+            &.left {
+                margin-right: unset;
+            }
         }
 
         @include xl {
@@ -142,24 +152,33 @@ section, .section {
             }
         }
     }
-
-
-
-
 }
 
-#main > * , #open > * , #further > * , #donate > *, #docHero .hero > *, article {
+#main > *,
+#open > *,
+#further > *,
+#donate > *,
+#docHero .hero > *,
+article {
     @include maxWidth;
 }
 
-#open, #donate { color: white; @include textShadow() }
+#open,
+#donate {
+    color: white;
+    @include textShadow();
+}
 
 #main {
     color: white;
-    background: linear-gradient(0.25turn, #140A17, #231730, #140A17);
+    background: linear-gradient(0.25turn, #140a17, #231730, #140a17);
 
-    > * {  margin-bottom: 5em; }
-    div:last-child { margin-bottom: unset;}
+    > * {
+        margin-bottom: 5em;
+    }
+    div:last-child {
+        margin-bottom: unset;
+    }
 
     #intro {
         p {
@@ -169,17 +188,26 @@ section, .section {
         }
     }
 
-    .gatsby-image-wrapper > div { max-width: unset!important; }
+    .gatsby-image-wrapper {
+        @include screenshotShadow;
 
-    #dynBackgrounds .right, #custom .left {
+        & > div {
+            max-width: unset !important;
+        }
+    }
+
+    #dynBackgrounds .right,
+    #custom .left {
         @include centerColumns;
     }
 
-    #dynBackgrounds .left, #custom .right {
+    #dynBackgrounds .left,
+    #custom .right {
         @include center;
     }
 
-    #dynBackgrounds, #custom {
+    #dynBackgrounds,
+    #custom {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 2em;
@@ -195,7 +223,6 @@ section, .section {
             grid-column-start: 1;
             grid-row-start: 1;
         }
-
     }
 
     #more {
@@ -219,15 +246,19 @@ section, .section {
                 font-size: 1.3em;
             }
 
-            .left { text-align: right; margin-right: 1em;}
-            .right { text-align: left; }
-            
+            .left {
+                text-align: right;
+                margin-right: 1em;
+            }
+            .right {
+                text-align: left;
+            }
         }
     }
 }
 
-
-#open, #donate {
+#open,
+#donate {
     min-height: 66vh;
     @include centerColumns;
 
@@ -238,7 +269,9 @@ section, .section {
         }
     }
 
-    h3 { text-align: center;}
+    h3 {
+        text-align: center;
+    }
 }
 
 #further {
@@ -253,11 +286,13 @@ section, .section {
 
         @include md {
             grid-template-columns: repeat(auto-fit, 100%);
-            
+
             > div {
                 margin-bottom: 2em;
 
-                &:last-child { margin-bottom: unset; }
+                &:last-child {
+                    margin-bottom: unset;
+                }
             }
         }
 
@@ -266,19 +301,19 @@ section, .section {
             box-sizing: border-box;
             border-radius: 20px;
             padding: 30px;
-            background-color: #f4f3f6; 
+            background-color: #f4f3f6;
 
             .button {
                 align-self: end;
             }
         }
-        
+
         h4 {
             font-size: 1.6em;
             margin-bottom: 1em;
             font-weight: unset;
             align-self: flex-start;
-            
+
             @include sm {
                 font-size: 1.3em;
             }
@@ -289,14 +324,14 @@ section, .section {
             align-self: flex-start;
         }
     }
-
-    
 }
 
 #donate {
-    // ajoute la taille du footer au padding 
+    // ajoute la taille du footer au padding
     padding-bottom: calc(5em + 80px);
-    @include md { padding-bottom: calc(5em + 160px); }
+    @include md {
+        padding-bottom: calc(5em + 160px);
+    }
 
     p {
         margin-bottom: 2em;
@@ -304,7 +339,7 @@ section, .section {
 
     .buttons {
         width: 100%;
-        display:flex;
+        display: flex;
         justify-content: center;
 
         .button {

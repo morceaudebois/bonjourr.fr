@@ -54,10 +54,7 @@ export default function Document({ data }) {
                     </ul>
                 </div>
 
-                <div
-                    className="html"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                />
+                <div className="html" dangerouslySetInnerHTML={{ __html: html }} />
             </article>
         </Layout>
     )
