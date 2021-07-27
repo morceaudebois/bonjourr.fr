@@ -3,11 +3,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Helmet from 'react-helmet'
 import '../styles/styles.scss'
-import { getImage } from 'gatsby-plugin-image'
-import { BgImage } from 'gbimage-bridge'
 
 const Goodbye = props => {
-
     const [formState, setFormState] = useState({
         message: '',
         browserSource: new URLSearchParams(props.location.search).get('from') || '',

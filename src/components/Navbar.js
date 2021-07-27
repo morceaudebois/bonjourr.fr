@@ -1,13 +1,7 @@
 import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faBook,
-    faEnvelope,
-    faGlobeAmericas,
-    faDonate,
-    faDesktop,
-} from '@fortawesome/free-solid-svg-icons'
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import { Link, useI18next, Trans } from 'gatsby-plugin-react-i18next'
@@ -20,37 +14,23 @@ export default function Navbar() {
         <nav>
             <div className="container">
                 <div className="links">
-
                     <Link to="/" id="homeLink">
-                        {/* <FontAwesomeIcon icon={faBook} /> */}
                         <Trans>Home</Trans>
                     </Link>
-                    <AnchorLink to={'/' + lang + '#further'}>
-                        {/* <FontAwesomeIcon icon={faEnvelope} /> */}
-                        Contact
-                    </AnchorLink>
+                    <AnchorLink to={'/' + lang + '#further'}>Contact</AnchorLink>
 
                     <Link to="/help">
-                        {/* <FontAwesomeIcon icon={faBook} /> */}
                         <Trans>Help</Trans>
                     </Link>
 
                     <a href="https://online.bonjourr.fr">
-                        {/* <FontAwesomeIcon icon={faDesktop} /> */}
                         <Trans>Online</Trans>
                     </a>
 
                     <AnchorLink to={'/' + lang + '#donate'}>
-                        {/* <FontAwesomeIcon icon={faDonate} /> */}
                         <Trans>Donate</Trans>
                     </AnchorLink>
                 </div>
-
-                {/* <h1 id="logo">
-                    <Link to="/" alt="Go to homepage">
-                        Bonjourr
-                    </Link>
-                </h1> */}
 
                 <ul className="languages">
                     {languages.map(lng => (
