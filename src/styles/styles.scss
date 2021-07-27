@@ -6,7 +6,13 @@ nav {
     box-sizing: border-box;
     z-index: 10;
     @include sidePadding();
-    padding-top: 0.5em;
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+
+    @include sm {
+        padding-top: .5em;
+        padding-bottom: unset;
+    }
 
     .container {
         display: flex;
@@ -30,26 +36,31 @@ nav {
             flex-basis: 0;
         }
 
-        #logo {
-            @include textShadow();
+        // #logo {
+        //     position: relative;
 
-            @include md {
-                margin-right: 10px;
-            }
+        //     @include textShadow();
 
-            position: relative;
-            img {
-                height: 100%;
-            }
-            a {
-                color: white;
-            }
-        }
+        //     @include md {
+        //         margin-right: 10px;
+        //     }
+
+        //     img {
+        //         height: 100%;
+        //     }
+
+        //     a {
+        //         color: white;
+        //         padding-bottom: 4px;
+        //         padding-top: 4px;
+        //     }
+        // }
 
         .links {
             padding: unset;
             text-align: right;
             @include center();
+            justify-content: flex-start;
 
             @include sm {
                 justify-content: flex-start;
@@ -78,6 +89,8 @@ nav {
             color: white;
             position: relative;
             margin-left: 25px;
+            font-size: 1.3em;
+            
             @include textShadow;
 
             svg {
@@ -89,11 +102,12 @@ nav {
             }
 
             @include sm {
-                font-size: 14.5px;
+                font-size: 1em;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin-left: 15px;
 
                 svg {
                     margin: unset;
@@ -169,6 +183,11 @@ footer {
             }
         }
     }
+}
+
+.homepage {
+    #homeLink { display: none; }
+    .links a:nth-child(2) { margin-left: unset; }
 }
 
 .homepage,

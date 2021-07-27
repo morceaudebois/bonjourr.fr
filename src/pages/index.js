@@ -71,8 +71,8 @@ const IndexPage = ({ data }) => {
                 <div className="right">
                     {/* No StaticImage since it's above the fold and needs to be f a s t */}
                     <img
-                        src="/illu.png"
-                        srcset="/illu.png 2x"
+                        src="/illu.webp"
+                        srcset="/illu2x.webp 2x"
                         alt="Bonjourr screenshot"
                         width="613"
                         height="377"
@@ -141,7 +141,7 @@ const IndexPage = ({ data }) => {
                         <StaticImage
                             src="../assets/customise.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
-                            quality={85}
+                            quality={90}
                             placeholder="blurred"
                             width={480}
                         />

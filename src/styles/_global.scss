@@ -154,8 +154,7 @@ button,
     height: 55px;
     @include center;
     max-width: 300px;
-    // @include marginAuto();
-
+    
     @supports (backdrop-filter: none) {
         background: rgba(30, 30, 30, 0.4);
         backdrop-filter: blur(2px);

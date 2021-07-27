@@ -19,33 +19,38 @@ export default function Navbar() {
     return (
         <nav>
             <div className="container">
-                <h1 id="logo">
-                    <Link to="/" alt="Go to homepage">
-                        Bonjourr
-                    </Link>
-                </h1>
-
                 <div className="links">
+
+                    <Link to="/" id="homeLink">
+                        {/* <FontAwesomeIcon icon={faBook} /> */}
+                        <Trans>Home</Trans>
+                    </Link>
                     <AnchorLink to={'/' + lang + '#further'}>
-                        <FontAwesomeIcon icon={faEnvelope} />
+                        {/* <FontAwesomeIcon icon={faEnvelope} /> */}
                         Contact
                     </AnchorLink>
 
                     <Link to="/help">
-                        <FontAwesomeIcon icon={faBook} />
+                        {/* <FontAwesomeIcon icon={faBook} /> */}
                         <Trans>Help</Trans>
                     </Link>
 
                     <a href="https://online.bonjourr.fr">
-                        <FontAwesomeIcon icon={faDesktop} />
+                        {/* <FontAwesomeIcon icon={faDesktop} /> */}
                         <Trans>Online</Trans>
                     </a>
 
                     <AnchorLink to={'/' + lang + '#donate'}>
-                        <FontAwesomeIcon icon={faDonate} />
+                        {/* <FontAwesomeIcon icon={faDonate} /> */}
                         <Trans>Donate</Trans>
                     </AnchorLink>
                 </div>
+
+                {/* <h1 id="logo">
+                    <Link to="/" alt="Go to homepage">
+                        Bonjourr
+                    </Link>
+                </h1> */}
 
                 <ul className="languages">
                     {languages.map(lng => (

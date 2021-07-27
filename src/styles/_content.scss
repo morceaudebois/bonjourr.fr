@@ -31,10 +31,11 @@ section,
 }
 
 #hero {
-    min-height: 66vh;
     display: flex;
     color: white;
     position: relative;
+    height: 66vh;
+    min-height: 550px;
     @include center();
 
     .background {
@@ -46,11 +47,11 @@ section,
         &:before {
             content: '';
             position: absolute;
-            // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.05);
-            background-image: url('/willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.webp');
+            background-image: url('/mitch-meyers-YQD1Xljt4xo-unsplash.webp');
             background-size: cover;
             background-position: center center;
-            filter: blur(13px);
+            filter: blur(5px);
+
             display: block;
             width: 100%;
             height: 100%;
@@ -123,6 +124,8 @@ section,
 
         &.right {
             max-width: 650px;
+            margin-left: 1em;
+
             img {
                 width: 100%;
                 height: auto;
@@ -176,6 +179,7 @@ article {
     > * {
         margin-bottom: 5em;
     }
+
     div:last-child {
         margin-bottom: unset;
     }
@@ -193,6 +197,10 @@ article {
 
         & > div {
             max-width: unset !important;
+        }
+
+        @include md {
+            margin-bottom: 1.5em!important;
         }
     }
 
