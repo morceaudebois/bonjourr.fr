@@ -7,7 +7,6 @@ import { getImage } from 'gatsby-plugin-image'
 import { BgImage } from 'gbimage-bridge'
 
 const Goodbye = props => {
-    const heroImage = getImage(props.data.heroImage.childImageSharp.gatsbyImageData)
 
     const [formState, setFormState] = useState({
         message: '',
@@ -57,8 +56,8 @@ const Goodbye = props => {
                 <meta name={`robots`} content={`noindex, nofollow`} />
             </Helmet>
 
-            <BgImage image={heroImage} id="hero" className="section">
-                <span className="filter"></span>
+            <div id="hero" className="section">
+                <span className="background"></span>
 
                 <div id="formContainer">
                     <h2>Thank you for using Bonjourr.</h2>
@@ -109,7 +108,7 @@ const Goodbye = props => {
                         <button type="submit">Send your message</button>
                     </form>
                 </div>
-            </BgImage>
+            </div>
         </Layout>
     )
 }
@@ -125,18 +124,6 @@ export const query = graphql`
                     data
                     language
                 }
-            }
-        }
-        heroImage: file(
-            relativePath: { eq: "willian-justen-de-vasconcellos-8sHZE1CXG4w-unsplash.jpg" }
-        ) {
-            childImageSharp {
-                gatsbyImageData(
-                    width: 1000
-                    quality: 90
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP, AVIF]
-                )
             }
         }
     }

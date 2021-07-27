@@ -137,6 +137,7 @@ footer {
     background: rgba(51, 51, 51, 0.5);
     backdrop-filter: blur(5px);
     color: white;
+    z-index: 1000;
     @include sidePadding();
 
     > .container {
@@ -197,44 +198,50 @@ footer {
     }
 }
 
-.goodbye #hero > #formContainer {
-    @include marginAuto;
-    margin-bottom: 2em;
+.goodbye #hero {
+    height: 100vh;
+    box-sizing: border-box;
 
-    > * {
-        max-width: 600px;
-    }
-
-    form {
-        display: flex;
-        flex-wrap: wrap;
-
+    > #formContainer {
+    
+        margin-bottom: 2em;
+    
         > * {
-            width: 100%;
-        }
-
-        input,
-        textarea,
-        button {
-            padding: 0.5em 1em;
-            color: #292b2c;
-            font-size: 1.2em;
-            border: 0px;
-            border-radius: 10px;
-
-            margin-top: 1em;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 62px;
-        }
-
-        button {
             @include marginAuto;
-            cursor: pointer;
-            max-width: 300px;
-            color: white;
+            max-width: 600px;
+        }
+    
+        form {
+            display: flex;
+            flex-wrap: wrap;
+    
+            > * {
+                width: 100%;
+            }
+    
+            input,
+            textarea,
+            button {
+                padding: 0.5em 1em;
+                color: #292b2c;
+                font-size: 1.2em;
+                border: 0px;
+                border-radius: 10px;
+    
+                margin-top: 1em;
+            }
+    
+            textarea {
+                resize: vertical;
+                min-height: 62px;
+            }
+    
+            button {
+                @include marginAuto;
+                cursor: pointer;
+                max-width: 300px;
+                color: white;
+            }
         }
     }
 }
