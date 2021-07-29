@@ -49,6 +49,7 @@ article {
         padding-top: 40px;
 
         @include sm {
+            padding-top: 10px;
             margin-bottom: 0.4em;
             font-size: 1.5em;
         }
