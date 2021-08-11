@@ -15,9 +15,13 @@ You can download Bonjourr for Firefox directly on the [Firefox Addons page](http
 
 ## 🔶 Safari
 
-Bonjourr is currently unavailable on Safari. Since we don’t earn any money with Bonjourr, it wouldn’t make sense for us to pay for an Apple Developper account since those are quite pricey, which means we aren’t able to publish it on their store.
+Bonjourr is currently unavailable natively on Safari. Since we don’t earn any money with Bonjourr, it wouldn’t make sense for us to pay for an Apple Developper account since those are quite pricey, which means we aren’t able to publish it on their store.
 
-However, there is still a way to use Bonjourr with Safari…
+However, there is still a way to use Bonjourr with Safari. Simply head to Safari's preferences (⌘ + comma) and set your homepage as `https://online.bonjourr.fr`. Set both new windows and new tabs to open with your homepage, and that's it!
+
+![Configure Bonjourr on Safari](../assets/documentation/safari.png)
+
+Thanks to caching, Bonjourr will keep your settings and feel almost as fast as a local page. Keep in mind though that deleting your cache will also reset Bonjourr, so **consider keeping a copy of its settings somewhere in a notes app** (Show all settings → Export code).
 
 If you’d like to help us financially, because we would still love to publish Bonjourr on Safari, you can [donate here](https://ko-fi.com/bonjourr).
 
