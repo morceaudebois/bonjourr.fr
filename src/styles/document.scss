@@ -69,7 +69,7 @@ article {
     display: flex;
     margin: 2em 0;
 
-    code {
+    code, .hljs {
         font-family: 'Roboto Mono', monospace;
         background-color: #f5f7f9;
         border-radius: 10px;
@@ -199,7 +199,7 @@ body {
             color: rgb(240, 240, 240);
         }
 
-        code {
+        code, .hljs {
             background-color: rgb(68, 68, 68);
         }
     }
