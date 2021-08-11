@@ -1,14 +1,14 @@
-import { graphql } from 'gatsby'
-import { Link } from 'gatsby-plugin-react-i18next'
 import React from 'react'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import { BgImage } from 'gbimage-bridge'
+import { getImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby-plugin-react-i18next'
+import hljs from 'highlight.js'
 import Layout from '../components/Layout'
 import '../styles/document.scss'
-import { getImage } from 'gatsby-plugin-image'
-import { BgImage } from 'gbimage-bridge'
-import Helmet from 'react-helmet'
 
 export default function Document({ data }) {
-    const { html } = data.markdownRemark
     const { title, subtitle, featured } = data.markdownRemark.frontmatter
     const documents = data.allMarkdownRemark.nodes
 
@@ -16,6 +16,20 @@ export default function Document({ data }) {
         `linear-gradient(0deg, rgba(64, 64, 64, 0.4), rgba(64, 64, 64, 0.3))`,
         getImage(featured),
     ]
+
+    // replaces codes in temp div, returns html string
+    const highlightCode = html => {
+        const tempDiv = document.createElement('div')
+        tempDiv.innerHTML = html
+        tempDiv.querySelectorAll('code').forEach(code => hljs.highlightElement(code))
+        return tempDiv.innerHTML
+    }
+
+    // Only highlight code for Profiles & Snippets
+    const content =
+        title === 'Custom profiles' || title === 'CSS snippets'
+            ? highlightCode(data.markdownRemark.html)
+            : data.markdownRemark.html
 
     return (
         <Layout>
@@ -54,7 +68,7 @@ export default function Document({ data }) {
                     </ul>
                 </div>
 
-                <div className="html" dangerouslySetInnerHTML={{ __html: html }} />
+                <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
             </article>
         </Layout>
     )
