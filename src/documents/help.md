@@ -1,7 +1,8 @@
 ---
 title: I wanna help!
-subtitle: There are four main ways you can help us out.
+subtitle:
 slug: help
+orderData: 3
 featured: ../assets/backgrounds/daniel-plan-Ryrv5z2A18w-unsplash.jpg
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Use Bonjourr
-subtitle: Here are all the ways you can use Bonjourr on your devices
+subtitle: 
 slug: use-bonjourr
+orderData: 1
 featured: ../assets/backgrounds/danist-bviex5lwf3s-unsplash.jpg
 ---
 

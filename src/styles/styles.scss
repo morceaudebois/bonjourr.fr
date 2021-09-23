@@ -138,7 +138,7 @@ footer {
 
     > .container {
         @include maxWidth;
-        margin-top: 3em;
+        margin-top: 2em;
         margin-bottom: 2em;
         width: 100%;
         display: flex;
@@ -147,6 +147,7 @@ footer {
 
         span {
             &#signature {
+                text-align: center;
             }
 
             &#contact {

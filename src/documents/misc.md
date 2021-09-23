@@ -1,7 +1,8 @@
 ---
 title: Miscellaneous
-subtitle: All sorts of infos and advice about Bonjourr.
+subtitle:
 slug: misc
+orderData: 2
 featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 ---
 

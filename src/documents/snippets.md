@@ -1,7 +1,8 @@
 ---
-title: CSS snippets
+title: Style snippets
 subtitle: Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
 slug: css-snippet
+orderData: 4
 featured: ../assets/backgrounds/daniel-plan-Ryrv5z2A18w-unsplash.jpg
 ---
 

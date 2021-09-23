@@ -2,6 +2,7 @@
 title: Custom profiles
 subtitle: Here are some pre-made themes you can import at the bottom of the settings of Bonjourr.
 slug: profiles
+orderData: 5
 featured: ../assets/backgrounds/peter-thomas-w_OD0b4CfeU-unsplash.jpg
 ---
 

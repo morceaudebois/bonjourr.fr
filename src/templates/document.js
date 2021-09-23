@@ -45,7 +45,6 @@ export default function Document({ data }) {
                         <div className="empty"></div>
                         <div className="theContent">
                             <h1>{title}</h1>
-                            <h2>{subtitle}</h2>
                         </div>
                     </div>
                 </BgImage>
@@ -68,7 +67,15 @@ export default function Document({ data }) {
                     </ul>
                 </div>
 
-                <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+                <div className="content">
+                    {/* displays subtitle only if there's one */}
+                    {subtitle ? (
+                        <p class="subtitle" dangerouslySetInnerHTML={{ __html: subtitle }}></p>
+                    ) : (
+                        ''
+                    )}
+                    <span dangerouslySetInnerHTML={{ __html: content }}></span>
+                </div>
             </article>
         </Layout>
     )
@@ -93,7 +100,7 @@ export const query = graphql`
                 }
             }
         }
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { order: ASC, fields: frontmatter___orderData }) {
             nodes {
                 frontmatter {
                     slug

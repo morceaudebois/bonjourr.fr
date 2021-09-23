@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import { Link, useI18next, Trans } from 'gatsby-plugin-react-i18next'
@@ -36,7 +34,7 @@ export default function Navbar() {
                     {languages.map(lng => (
                         <li key={lng}>
                             <Link to={originalPath} language={lng}>
-                                <FontAwesomeIcon icon={faGlobeAmericas} />
+                                <span role="img" aria-label="globe-emoji"> {' '} 🌍 </span>
                                 {lng}
                             </Link>
                         </li>
