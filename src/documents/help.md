@@ -1,5 +1,5 @@
 ---
-title: I wanna help!
+title: Contribute
 subtitle:
 slug: help
 orderData: 3

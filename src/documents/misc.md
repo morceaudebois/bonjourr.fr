@@ -1,5 +1,5 @@
 ---
-title: Miscellaneous
+title: Features overview
 subtitle:
 slug: misc
 orderData: 2

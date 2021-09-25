@@ -27,7 +27,7 @@ export default function Document({ data }) {
 
     // Only highlight code for Profiles & Snippets
     const content =
-        title === 'Custom profiles' || title === 'CSS snippets'
+        title === 'Custom profiles' || title === 'Style snippets'
             ? highlightCode(data.markdownRemark.html)
             : data.markdownRemark.html
 

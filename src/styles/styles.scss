@@ -247,13 +247,17 @@ footer {
     }
 }
 
-.documentation footer {
-    @media (prefers-color-scheme: light) {
-        background-color: #f5f7f9;
-        color: $blackish;
+.documentation {
+    nav #docsLink { display: none; }
 
-        > .container span a {
+    footer {
+        @media (prefers-color-scheme: light) {
+            background-color: #f5f7f9;
             color: $blackish;
+    
+            > .container span a {
+                color: $blackish;
+            }
         }
     }
 }
