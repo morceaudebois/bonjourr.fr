@@ -49,7 +49,6 @@ const Goodbye = props => {
         <Layout>
             <Helmet>
                 <body className="goodbye" />
-                <meta name="theme-color" content="#367f9e" />
                 <meta name={`robots`} content={`noindex, nofollow`} />
             </Helmet>
 

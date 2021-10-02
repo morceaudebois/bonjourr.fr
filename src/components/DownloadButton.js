@@ -20,12 +20,12 @@ export default function downloadButton() {
                 icon = '/chrome.svg'
                 break
             case 'Safari':
-                link = '/use-bonjourr#-safari'
+                link = '/use-bonjourr#-safari-desktop'
                 label = <Trans>Use on Safari</Trans>
                 icon = '/safari.svg'
                 break
             case 'Mobile Safari':
-                link = '/use-bonjourr#-bonjourr-on-ios'
+                link = '/use-bonjourr#-ios-and-android'
                 label = <Trans>Use on iOS</Trans>
                 icon = '/safari.svg'
                 break

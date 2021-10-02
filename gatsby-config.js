@@ -24,7 +24,7 @@ module.exports = {
         short_name: `Bonjourr`,
         start_url: siteUrl,
         background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        theme_color: `#36717e`,
         display: `standalone`,
         icon: 'src/assets/favicon.png',
         "prefer_related_applications": true

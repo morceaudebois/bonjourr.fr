@@ -36,26 +36,6 @@ nav {
             flex-basis: 0;
         }
 
-        // #logo {
-        //     position: relative;
-
-        //     @include textShadow();
-
-        //     @include md {
-        //         margin-right: 10px;
-        //     }
-
-        //     img {
-        //         height: 100%;
-        //     }
-
-        //     a {
-        //         color: white;
-        //         padding-bottom: 4px;
-        //         padding-top: 4px;
-        //     }
-        // }
-
         .links {
             padding: unset;
             text-align: right;
@@ -72,12 +52,18 @@ nav {
             justify-content: flex-end;
             margin: unset;
 
-            @include sm {
-                margin-right: 20px;
-            }
+            li a {
+                &[aria-current='page'] {
+                    display: none;
+                }
 
-            li a[aria-current='page'] {
-                display: none;
+                @include sm {
+                    flex-direction: row;
+
+                    span {
+                        margin-right: 7px;
+                    }
+                }
             }
         }
 
@@ -143,7 +129,7 @@ footer {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
 
         span {
             &#signature {

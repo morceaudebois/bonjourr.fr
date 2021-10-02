@@ -13,12 +13,16 @@ featured: ../assets/backgrounds/danist-bviex5lwf3s-unsplash.jpg
 -   [Safari (soon™️)](#)
 -   [Edge](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid)
 
-## 🌍 Using Online
+## 📱 iOS and Android
 
--   As a mobile web app: In the browser menu, select 'Add to Home Screen' or 'Install'
--   For most browser, go to Settings => Homepage => Open this page => `https://online.bonjourr.fr`
--   For Safari desktop, while we work on the extension. Head to Safari's preferences (⌘ + comma) and set your homepage as `https://online.bonjourr.fr`. Set both new windows and new tabs to open with your homepage
-    ![Configure Bonjourr on Safari](../assets/documentation/safari.png)
+-   As a mobile web app: in the Share menu of your browser, select 'Add to Home Screen' or 'Install'.
+-   As a browser homepage: go to Settings => Homepage => Open this page => `https://online.bonjourr.fr`. You can use a third party browser like Firefox if you want to do this on iOS.
+
+## 🧭 Safari desktop
+
+For Safari desktop, while we work on the extension. Head to Safari's preferences (⌘ + comma) and set your homepage as `https://online.bonjourr.fr`. Set both new windows and new tabs to open with your homepage
+
+![Configure Bonjourr on Safari](../assets/documentation/safari.png)
 
 Deleting your cache will also reset Bonjourr, so **consider keeping a copy of its settings somewhere in a notes app** (Show all settings → Export code).
 

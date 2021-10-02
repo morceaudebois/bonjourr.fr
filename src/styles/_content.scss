@@ -9,6 +9,8 @@ section,
 
         @include sm {
             font-size: 25px;
+            margin-bottom: 1em;
+            text-align: left;
         }
     }
 
@@ -80,12 +82,19 @@ section,
 
         @include sm {
             margin-top: 0.5em;
+            font-size: 3em;
+            text-align: left;
         }
     }
 
     h2 {
         margin: 15px 0 20px 0;
         @include textShadow();
+
+        @include sm {
+            font-size: 1.4em;
+            text-align: left;
+        }
     }
 
     > div {
@@ -116,6 +125,10 @@ section,
                     text-align: center;
                 }
 
+                @include sm {
+                    text-align: left;
+                }
+
                 &:hover {
                     opacity: 1;
                 }
@@ -125,6 +138,8 @@ section,
         &.right {
             max-width: 650px;
             margin-left: 1em;
+
+            @include md { margin-left: unset; }
 
             img {
                 width: 100%;
@@ -189,6 +204,10 @@ article {
             max-width: 800px;
             margin: auto;
             text-align: center;
+
+            @include md {
+                text-align: left;
+            }
         }
     }
 

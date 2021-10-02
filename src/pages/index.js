@@ -33,7 +33,6 @@ const IndexPage = ({ data }) => {
         <Layout>
             <Helmet>
                 <body className="homepage" />
-                <meta name="theme-color" content="#367f9e" />
                 <link rel="preload" as="image" href="/heroImage2x.webp" />
             </Helmet>
 
