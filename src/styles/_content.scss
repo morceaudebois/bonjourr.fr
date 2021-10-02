@@ -1,0 +1,370 @@
+section,
+.section {
+    @include sidePadding();
+    h3 {
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 1.5em;
+
+        @include sm {
+            font-size: 25px;
+        }
+    }
+
+    h4 {
+        font-size: 2em;
+        font-weight: bold;
+
+        @include sm {
+            font-size: 1.3em;
+        }
+    }
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    @include sm {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+}
+
+#hero {
+    display: flex;
+    color: white;
+    position: relative;
+    height: 66vh;
+    min-height: 550px;
+    @include center();
+
+    .background {
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-image: url('/mitch-meyers-YQD1Xljt4xo-unsplash.webp');
+            background-size: cover;
+            background-position: center center;
+            filter: blur(5px);
+
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: scale(1.1);
+        }
+    }
+
+    // sinon le .background passe par dessus
+    * {
+        z-index: 1;
+    }
+
+    // passe en lignes en mobile
+    @include md {
+        flex-wrap: wrap;
+        h1,
+        h2 {
+            text-align: center;
+        }
+    }
+
+    h1 {
+        font-size: 4em;
+        margin: unset;
+        @include textShadow();
+
+        @include sm {
+            margin-top: 0.5em;
+        }
+    }
+
+    h2 {
+        margin: 15px 0 20px 0;
+        @include textShadow();
+    }
+
+    > div {
+        height: 100%;
+        flex-grow: 1;
+        @include centerColumns;
+
+        &.left {
+            min-width: 310px;
+
+            .container {
+                display: flex;
+                justify-content: center;
+
+                .button:first-child {
+                    margin-right: 1em;
+                }
+            }
+
+            .link {
+                color: white;
+                opacity: 0.8;
+                transition: opacity $transitionTime ease-in;
+                margin: 1em 0;
+                @include textShadow;
+
+                @include md {
+                    text-align: center;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.right {
+            max-width: 650px;
+            margin-left: 1em;
+
+            img {
+                width: 100%;
+                height: auto;
+                @include screenshotShadow;
+            }
+        }
+
+        @include md {
+            height: unset;
+            &.left {
+                margin-right: unset;
+            }
+        }
+
+        @include xl {
+            &.left {
+                margin-right: 4em;
+                min-width: 410px;
+                max-width: 450px;
+                h1 {
+                    font-size: 5em;
+                }
+                h2 {
+                    font-size: 1.8em;
+                    margin: 20px 0 40px 0;
+                }
+            }
+        }
+    }
+}
+
+#main > *,
+#open > *,
+#further > *,
+#donate > *,
+#docHero .hero > *,
+article {
+    @include maxWidth;
+}
+
+#open,
+#donate {
+    color: white;
+    @include textShadow();
+}
+
+#main {
+    color: white;
+    background: linear-gradient(0.25turn, #140a17, #231730, #140a17);
+
+    > * {
+        margin-bottom: 5em;
+    }
+
+    div:last-child {
+        margin-bottom: unset;
+    }
+
+    #intro {
+        p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    .gatsby-image-wrapper {
+        @include screenshotShadow;
+
+        & > div {
+            max-width: unset !important;
+        }
+
+        @include md {
+            margin-bottom: 1.5em !important;
+        }
+    }
+
+    #dynBackgrounds .right,
+    #custom .left {
+        @include centerColumns;
+    }
+
+    #dynBackgrounds .left,
+    #custom .right {
+        @include center;
+    }
+
+    #dynBackgrounds,
+    #custom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
+
+        // flex wrap equivalent
+        @include md {
+            grid-template-columns: repeat(auto-fit, 100%);
+        }
+    }
+
+    #custom .right {
+        @include md {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+    }
+
+    #more {
+        h4 {
+            text-align: center;
+            margin: unset;
+        }
+
+        ul {
+            list-style: none;
+            padding: unset;
+        }
+
+        .listContainer {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5em;
+            line-height: 1.5em;
+
+            @include sm {
+                font-size: 1.3em;
+            }
+
+            .left {
+                text-align: right;
+                margin-right: 1em;
+            }
+            .right {
+                text-align: left;
+            }
+        }
+    }
+}
+
+#open,
+#donate {
+    min-height: 66vh;
+    @include centerColumns;
+
+    @include xl {
+        p {
+            width: 70vw;
+            max-width: 1000px;
+        }
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+#further {
+    background-color: #fafafd;
+    min-height: 40vh;
+    @include centerColumns;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 3em;
+
+        @include md {
+            grid-template-columns: repeat(auto-fit, 100%);
+
+            > div {
+                margin-bottom: 2em;
+
+                &:last-child {
+                    margin-bottom: unset;
+                }
+            }
+        }
+
+        > div {
+            display: grid;
+            box-sizing: border-box;
+            border-radius: 20px;
+            padding: 30px;
+            background-color: #f4f3f6;
+
+            .button {
+                align-self: end;
+            }
+        }
+
+        h4 {
+            font-size: 1.6em;
+            margin-bottom: 1em;
+            font-weight: unset;
+            align-self: flex-start;
+
+            @include sm {
+                font-size: 1.3em;
+            }
+        }
+
+        p {
+            margin-bottom: 1em;
+            align-self: flex-start;
+        }
+    }
+}
+
+#donate {
+    // ajoute la taille du footer au padding
+    padding-bottom: calc(5em + 80px);
+    @include md {
+        padding-bottom: calc(5em + 160px);
+    }
+
+    p {
+        margin-bottom: 2em;
+    }
+
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .button {
+            margin: unset;
+
+            &:first-child {
+                margin-right: 1em;
+
+                @include sm {
+                    margin-right: unset;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+
+        @include sm {
+            flex-wrap: wrap;
+        }
+    }
+}
