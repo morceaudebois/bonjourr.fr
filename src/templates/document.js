@@ -17,19 +17,25 @@ export default function Document({ data }) {
         getImage(featured),
     ]
 
-    // replaces codes in temp div, returns html string
-    const highlightCode = html => {
-        const tempDiv = document.createElement('div')
-        tempDiv.innerHTML = html
-        tempDiv.querySelectorAll('code').forEach(code => hljs.highlightElement(code))
-        return tempDiv.innerHTML
-    }
+    let content
+    if (typeof window !== `undefined`) {
+        // replaces codes in temp div, returns html string
+        const highlightCode = html => {
+            const tempDiv = document.createElement('div')
+            tempDiv.innerHTML = html
+            tempDiv.querySelectorAll('code').forEach(code => hljs.highlightElement(code))
+            return tempDiv.innerHTML
+        }
 
-    // Only highlight code for Profiles & Snippets
-    const content =
+        // Only highlight code for Profiles & Snippets
+        content =
         title === 'Custom profiles' || title === 'Style snippets'
             ? highlightCode(data.markdownRemark.html)
             : data.markdownRemark.html
+    }
+
+    
+
 
     return (
         <Layout>
