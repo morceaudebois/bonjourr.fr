@@ -4,9 +4,9 @@ import { graphql } from 'gatsby'
 import { BgImage } from 'gbimage-bridge'
 import { getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby-plugin-react-i18next'
-import hljs from 'highlight.js'
 import Layout from '../components/Layout'
 import '../styles/document.scss'
+import '../styles/highlight.scss'
 
 export default function Document({ data }) {
     const { title, subtitle, featured } = data.markdownRemark.frontmatter
@@ -16,23 +16,6 @@ export default function Document({ data }) {
         `linear-gradient(0deg, rgba(64, 64, 64, 0.4), rgba(64, 64, 64, 0.3))`,
         getImage(featured),
     ]
-
-    let content
-    if (typeof window !== `undefined`) {
-        // replaces codes in temp div, returns html string
-        const highlightCode = html => {
-            const tempDiv = document.createElement('div')
-            tempDiv.innerHTML = html
-            tempDiv.querySelectorAll('code').forEach(code => hljs.highlightElement(code))
-            return tempDiv.innerHTML
-        }
-
-        // Only highlight code for Profiles & Snippets
-        content =
-            title === 'Custom profiles' || title === 'Style snippets'
-                ? highlightCode(data.markdownRemark.html)
-                : data.markdownRemark.html
-    }
 
     return (
         <Layout>
@@ -77,7 +60,7 @@ export default function Document({ data }) {
                     ) : (
                         ''
                     )}
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
                 </div>
             </article>
         </Layout>

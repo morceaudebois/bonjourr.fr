@@ -1,6 +1,4 @@
 @import 'global';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('/node_modules/highlight.js/scss/atom-one-dark.scss');
 
 // Styles for documentation
 
@@ -45,37 +43,45 @@ article {
     }
 
     h1 {
-        font-weight: bold;
-        margin-bottom: 0.7em;
-        padding-top: 40px;
-        font-size: 40px;
+        font-weight: 500;
+        font-size: 60px;
 
-        @include sm {
-            padding-top: 10px;
-            margin-bottom: 0.4em;
-            font-size: 1.5em;
+        @include md {
+            font-size: 40px;
         }
-    }
-
-    h2 {
-        font-size: 1.4em;
 
         @include sm {
-            font-size: 1.1em;
+            font-size: 30px;
         }
     }
 }
 
 article {
+    position: relative;
     display: flex;
     margin: 60px 0 120px 0;
+    font-size: 16px;
 
     @include md {
         margin: 30px 0 60px 0;
     }
 
-    code,
-    .hljs {
+    @include md {
+        flex-direction: column;
+    }
+
+    code[class*='language-'],
+    pre[class*='language-'] {
+        word-break: break-all;
+        white-space: break-spaces;
+    }
+
+    code.language-json,
+    pre.language-json {
+        white-space: normal;
+    }
+
+    code.language-text {
         font-family: 'Roboto Mono', monospace;
         background-color: #f5f7f9;
         border-radius: 6px;
@@ -83,14 +89,6 @@ article {
         font-size: 14px;
         box-sizing: border-box;
         overflow-wrap: break-word;
-
-        &.language-json {
-            word-break: break-all;
-        }
-    }
-
-    @include md {
-        flex-direction: column;
     }
 
     .docNav {
@@ -98,7 +96,7 @@ article {
         box-sizing: border-box;
         flex: 1;
         flex-shrink: 0;
-        min-width: 150px;
+        min-width: 220px;
 
         @include md {
             margin-bottom: 2em;
@@ -118,7 +116,7 @@ article {
             }
 
             &.active {
-                font-weight: bold;
+                font-weight: 500;
 
                 &:before {
                     visibility: visible;
@@ -129,13 +127,13 @@ article {
 
     .content {
         flex: 4;
+
         *:first-child {
             margin-top: unset;
         }
 
         .subtitle {
-            margin-bottom: 2em;
-            font-weight: 400;
+            margin-bottom: 3em;
         }
 
         h1,
@@ -145,10 +143,12 @@ article {
         h5,
         h6 {
             margin: 40px 0 20px 0;
+            font-weight: 500;
         }
 
         h2 {
-            margin: 45px 0 25px 0;
+            margin: 60px 0 25px 0;
+            font-size: 1.7em;
         }
 
         ul {
@@ -163,7 +163,7 @@ article {
         }
 
         strong {
-            font-weight: bold;
+            font-weight: 500;
         }
 
         pre {

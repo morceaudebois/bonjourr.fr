@@ -148,7 +148,7 @@ footer {
 
             a {
                 color: white;
-                font-weight: 400;
+                font-weight: 500;
             }
         }
 
@@ -234,13 +234,15 @@ footer {
 }
 
 .documentation {
-    nav #docsLink { display: none; }
+    nav #docsLink {
+        display: none;
+    }
 
     footer {
         @media (prefers-color-scheme: light) {
             background-color: #f5f7f9;
             color: $blackish;
-    
+
             > .container span a {
                 color: $blackish;
             }
