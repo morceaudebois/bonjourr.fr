@@ -8,10 +8,9 @@ import { BgImage } from 'gbimage-bridge'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDesktop } from '@fortawesome/free-solid-svg-icons'
 
-import DownloadButton from '../components/DownloadButton'
+
+import DownloadButtons from '../components/DownloadButtons'
 import '../styles/styles.scss'
 
 import { Link, Trans } from 'gatsby-plugin-react-i18next'
@@ -44,21 +43,7 @@ const IndexPage = ({ data }) => {
                         <Trans>Startpage for your browser</Trans>
                     </h2>
 
-                    <div className="container">
-                        <DownloadButton />
-
-                        <a
-                            href="https://online.bonjourr.fr"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="button"
-                        >
-                            <FontAwesomeIcon icon={faDesktop} className="icon" />
-                            <span>
-                                <Trans>Try online</Trans>
-                            </span>
-                        </a>
-                    </div>
+                    <DownloadButtons />      
 
                     <Link to="/use-bonjourr" className="link">
                         <i>
