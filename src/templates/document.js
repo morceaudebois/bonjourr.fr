@@ -29,13 +29,10 @@ export default function Document({ data }) {
 
         // Only highlight code for Profiles & Snippets
         content =
-        title === 'Custom profiles' || title === 'Style snippets'
-            ? highlightCode(data.markdownRemark.html)
-            : data.markdownRemark.html
+            title === 'Custom profiles' || title === 'Style snippets'
+                ? highlightCode(data.markdownRemark.html)
+                : data.markdownRemark.html
     }
-
-    
-
 
     return (
         <Layout>
@@ -80,7 +77,7 @@ export default function Document({ data }) {
                     ) : (
                         ''
                     )}
-                    <span dangerouslySetInnerHTML={{ __html: content }}></span>
+                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
                 </div>
             </article>
         </Layout>
