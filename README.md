@@ -21,6 +21,7 @@ Welcome to Bonjourr's website repository. This website is made with Gatsby and R
 ## 🤔 Known bugs/things to do
 
 - [ ] Find how to translate documentation
+- [ ] Add screenshots to custom profiles and style snippets
 - [ ] On goodbye page, footer signature refreshes as you type
 - [ ] Better documentation navigation (on mobile)
 - [ ] When you refresh a doc page, all languages appear in the switcher

@@ -70,17 +70,6 @@ article {
         flex-direction: column;
     }
 
-    code[class*='language-'],
-    pre[class*='language-'] {
-        word-break: break-all;
-        white-space: break-spaces;
-    }
-
-    code.language-json,
-    pre.language-json {
-        white-space: normal;
-    }
-
     code.language-text {
         font-family: 'Roboto Mono', monospace;
         background-color: #f5f7f9;
@@ -166,9 +155,7 @@ article {
             font-weight: 500;
         }
 
-        pre {
-            margin-bottom: 2.5em;
-        }
+
 
         a {
             opacity: 0.7;
@@ -196,11 +183,6 @@ body {
         article,
         .docNav a {
             color: rgb(240, 240, 240);
-        }
-
-        code,
-        .hljs {
-            background-color: rgb(68, 68, 68);
         }
     }
 }
