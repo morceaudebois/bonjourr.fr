@@ -18,7 +18,7 @@ Welcome to Bonjourr's website repository. This website is made with Gatsby and R
 
     You can help by translating this website in your language. Head to `gatsby-config.js` and add your language's code in `gatsby-plugin-react-i18next`. Then duplicate the base folder in `/locales`, change its name and start translating!
 
-## 🤔 Known bugs/things to do
+## 🐛 Known bugs/things to do
 
 - [x] Download button not working properly
 - [ ] Find how to translate documentation
