@@ -12,7 +12,7 @@ export default function Seo({ title, description, siteUrl, image, keywords }) {
                 const metaTitle = 'Bonjourr · ' + (title || data.site.siteMetadata.title)
                 const metaDescription = description || data.site.siteMetadata.description
                 const metaUrl = siteUrl || data.site.siteMetadata.siteUrl
-                const metaImage = image || data.site.siteMetadata.image
+                // const metaImage = image || data.site.siteMetadata.image
                 const metaKeywords = keywords || [
                     'extension',
                     'startpage',
@@ -33,7 +33,6 @@ export default function Seo({ title, description, siteUrl, image, keywords }) {
                         <meta property="og:description" content={metaDescription} />
                         <meta property="og:image" content="/twitter.jpg" />
                         <meta name="keywords" content={metaKeywords} />
-                        
                         <meta property="twitter:card" content="summary_large_image" />
                         <meta property="twitter:image" content="/twitter.jpg" />
                         <meta property="twitter:creator" content="BonjourrTeam" />
