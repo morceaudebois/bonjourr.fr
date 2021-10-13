@@ -185,4 +185,17 @@ body {
             color: rgb(240, 240, 240);
         }
     }
+    
+    &.profiles .gatsby-resp-image-wrapper {
+        // !important because else I'd need to make 2 requests in gatsby-config
+        max-width: 100%!important;
+        border-radius: 14px;
+        overflow: hidden; 
+    }
+
+    &.css-snippet {
+        h3 { margin-bottom: 5px; }
+    }
+
+
 }

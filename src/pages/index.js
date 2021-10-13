@@ -31,7 +31,6 @@ const IndexPage = ({ data }) => {
         <Layout>
             <Helmet>
                 <body className="homepage" />
-                <link rel="preload" as="image" href="/heroImage2x.webp" />
             </Helmet>
 
             <div id="hero" className="section">

@@ -22,8 +22,8 @@ Welcome to Bonjourr's website repository. This website is made with Gatsby and R
 
 - [x] Download button not working properly
 - [ ] Find how to translate documentation
-- [ ] Add screenshots to custom profiles and style snippets
+- [x] Add screenshots to custom profiles and style snippets
 - [ ] On goodbye page, footer signature refreshes as you type
 - [ ] Better documentation navigation (on mobile)
 - [x] When you refresh a doc page, all languages appear in the switcher
-
+- [ ] When language redirection is on (in gatsby-plugin-react-i18next), there's a redirect loop in Safari in some situations

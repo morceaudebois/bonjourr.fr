@@ -9,7 +9,7 @@ import '../styles/document.scss'
 import '../styles/highlight.scss'
 
 export default function Document({ data }) {
-    const { title, subtitle, featured } = data.markdownRemark.frontmatter
+    const { title, subtitle, featured, slug } = data.markdownRemark.frontmatter
     const documents = data.allMarkdownRemark.nodes
 
     const heroImage = [
@@ -20,7 +20,7 @@ export default function Document({ data }) {
     return (
         <Layout>
             <Helmet>
-                <body className="documentation" />
+                <body className={"documentation " + slug} />
                 <title>{title} · Bonjourr's Documentation</title>
                 <meta name="description" content={subtitle} />
             </Helmet>
@@ -68,10 +68,11 @@ export default function Document({ data }) {
 }
 
 export const query = graphql`
-    query test($slug: String, $language: String!) {
+    query documents($slug: String, $language: String!) {
         markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             html
             frontmatter {
+                slug
                 title
                 subtitle
                 featured {
