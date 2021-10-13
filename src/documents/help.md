@@ -10,7 +10,7 @@ featured: ../assets/backgrounds/daniel-plan-Ryrv5z2A18w-unsplash.jpg
 
 A few donations go a long way when it comes to open source software. It motivates us to pour more time into Bonjourr, it helps us realise people care about our work and it can open new doors for the future.
 
-You can donate in [regular money](https://ko-fi.com/bonjourr) or [crypto money](https://commerce.coinbase.com/charges/Y2DYYZCG).
+You can donate in [regular money](https://ko-fi.com/bonjourr) or [crypto money](https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b).
 
 ## 👨‍💻 Contributions
 

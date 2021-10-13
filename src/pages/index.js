@@ -9,7 +9,6 @@ import { BgImage } from 'gbimage-bridge'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
-
 import DownloadButtons from '../components/DownloadButtons'
 import '../styles/styles.scss'
 
@@ -43,7 +42,7 @@ const IndexPage = ({ data }) => {
                         <Trans>Startpage for your browser</Trans>
                     </h2>
 
-                    <DownloadButtons />      
+                    <DownloadButtons />
 
                     <Link to="/use-bonjourr" className="link">
                         <i>
@@ -298,7 +297,10 @@ const IndexPage = ({ data }) => {
                         </span>
                     </a>
 
-                    <a href="https://commerce.coinbase.com/charges/Y2DYYZCG" className="button">
+                    <a
+                        href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
+                        className="button"
+                    >
                         <StaticImage
                             src="../assets/btc.svg"
                             alt="bitcoin logo"
