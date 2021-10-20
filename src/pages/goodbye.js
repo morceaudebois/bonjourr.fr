@@ -89,7 +89,7 @@ const Goodbye = props => {
                             name="message"
                             onChange={handleChange}
                             value={formState.name}
-                            placeholder="Your message..."
+                            placeholder="Your message"
                         />
 
                         <input

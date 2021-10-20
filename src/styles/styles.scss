@@ -116,8 +116,8 @@ footer {
     position: absolute;
     width: 100%;
     box-sizing: border-box;
-    background: rgba(51, 51, 51, 0.5);
-    backdrop-filter: blur(5px);
+    background-color: #fff1;
+    backdrop-filter: blur(15px);
     color: white;
     z-index: 1000;
     @include sidePadding();
@@ -198,9 +198,14 @@ footer {
             max-width: 600px;
         }
 
+        h2 {
+            font-size: 4em;
+        }
+
         form {
             display: flex;
             flex-wrap: wrap;
+            margin-top: 2em;
 
             > * {
                 width: 100%;
@@ -209,18 +214,34 @@ footer {
             input,
             textarea,
             button {
-                padding: 0.5em 1em;
-                color: #292b2c;
-                font-size: 1.2em;
+                margin-top: 1em;
+                padding: 1em;
                 border: 0px;
                 border-radius: 10px;
+                font-family: inherit;
+                font-size: 1em;
+                font-weight: 300;
+                color: #fff;
 
-                margin-top: 1em;
+                background-color: #fff3;
+                backdrop-filter: blur(15px);
+                transition: background-color 0.2s;
+
+                &:focus {
+                    background-color: #0001;
+                    outline: 1px solid #fffa;
+                }
             }
 
             textarea {
                 resize: vertical;
                 min-height: 62px;
+                padding: 1em;
+            }
+
+            input::placeholder,
+            textarea::placeholder {
+                color: #ddd;
             }
 
             button {
