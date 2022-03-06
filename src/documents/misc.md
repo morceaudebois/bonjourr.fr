@@ -27,6 +27,10 @@ Bonjourr uses the [Unsplash API](https://unsplash.com/developers) to fetch its b
 -   [During the day](<https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)>) or [at night](<https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)>)
 -   2 hours around [sunrise (Noon)](<https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)>) and [sunset (Evening)](<https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)>)
 
+## ☁️ Syncing
+
+Bonjourr is compatible with the syncing features of both [Firefox](https://www.mozilla.org/fr/firefox/sync/) and [Chrome](https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop). If you log into your Mozilla/Google account on your browser and enable syncing, Bonjourr should get synced to other instances of the same browser on other computers. This is true for all Bonjourr settings as well as Quick Links.
+
 ### Custom Unsplash collection
 
 You can make your own collection of images using [Unsplash](https://unsplash.com/). To do so, you'll need to create an Unsplash account and add all your images to a new collection. Once you're pleased with your selection, you need the collection's ID present in its URL. You will spot it easily since it's the string of random letters and numbers. For example, if your collection's URL is `https://unsplash.com/collections/2170139/wolfdogs-of-unsplash`, the ID is `2170139`.
