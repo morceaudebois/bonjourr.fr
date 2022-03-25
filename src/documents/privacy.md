@@ -1,8 +1,6 @@
 ---
 title: Privacy policy
-subtitle:
 slug: privacy
-orderData: 2
 featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 ---
 
