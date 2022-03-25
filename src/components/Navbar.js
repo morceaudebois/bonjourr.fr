@@ -1,12 +1,11 @@
 import React from 'react'
-
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
-
 import { Link, useI18next, Trans } from 'gatsby-plugin-react-i18next'
 
 export default function Navbar() {
-    const { language, languages, originalPath } = useI18next()
-    const lang = language === 'en' ? '' : 'fr/'
+    const { language, originalPath } = useI18next()
+    const langPath = language === 'en' ? '' : 'fr/'
+    const otherLang = language === 'en' ? 'fr' : 'en'
 
     return (
         <nav>
@@ -24,23 +23,21 @@ export default function Navbar() {
                         <Trans>Docs</Trans>
                     </Link>
 
-                    <AnchorLink to={'/' + lang + '#donate'}>
+                    <AnchorLink to={'/' + langPath + '#donate'}>
                         <Trans>Donate</Trans>
                     </AnchorLink>
 
-                    <AnchorLink to={'/' + lang + '#further'}>Contact</AnchorLink>
+                    <AnchorLink to={'/' + langPath + '#further'}>Contact</AnchorLink>
                 </div>
 
-                <ul className="languages">
-                    {languages.map(lng => (
-                        <li key={lng}>
-                            <Link to={originalPath} language={lng}>
-                                <span role="img" aria-label="globe-emoji"> {' '} 🌍 </span>
-                                {lng}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <div className="languages">
+                    <Link to={originalPath} language={otherLang}>
+                        <span role="img" aria-label="globe-emoji">
+                            🌍
+                        </span>
+                        {' ' + otherLang}
+                    </Link>
+                </div>
             </div>
         </nav>
     )
