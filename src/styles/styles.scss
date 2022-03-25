@@ -53,10 +53,6 @@ nav {
             margin: unset;
 
             li a {
-                &[aria-current='page'] {
-                    display: none;
-                }
-
                 @include sm {
                     flex-direction: row;
 
@@ -255,6 +251,12 @@ footer {
 }
 
 .documentation {
+    &.privacy {
+        .docNav {
+            display: none;
+        }
+    }
+
     nav #docsLink {
         display: none;
     }

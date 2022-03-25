@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { Trans } from 'gatsby-plugin-react-i18next'
+import { Link, Trans } from 'gatsby-plugin-react-i18next'
 
 export default function Footer() {
     if (typeof window !== `undefined`) {
@@ -32,6 +31,12 @@ export default function Footer() {
                     <span>
                         © 2019-{new Date().getFullYear()}
                         <Link to="/"> Bonjourr</Link>
+                        <br />
+                        <Link to="/privacy">
+                            <small>
+                                <Trans>Privacy policy</Trans>
+                            </small>
+                        </Link>
                     </span>
 
                     <span id="signature">

@@ -20,7 +20,7 @@ export default function Document({ data }) {
     return (
         <Layout>
             <Helmet>
-                <body className={"documentation " + slug} />
+                <body className={'documentation ' + slug} />
                 <title>{title} · Bonjourr's Documentation</title>
                 <meta name="description" content={subtitle} />
             </Helmet>
@@ -39,27 +39,31 @@ export default function Document({ data }) {
             <article>
                 <div className="docNav">
                     <ul>
-                        {documents.map(document => (
-                            <li key={document.id}>
-                                <Link
-                                    to={'/' + document.frontmatter.slug}
-                                    activeClassName="active"
-                                    partiallyActive={true}
-                                >
-                                    {document.frontmatter.title}
-                                </Link>
-                            </li>
-                        ))}
+                        {documents.map(
+                            ({ id, frontmatter }) =>
+                                // Don't show privacy policy in docs nav
+                                frontmatter.slug !== 'privacy' && (
+                                    <li key={id}>
+                                        <Link
+                                            to={'/' + frontmatter.slug}
+                                            activeClassName="active"
+                                            partiallyActive={true}
+                                        >
+                                            {frontmatter.title}
+                                        </Link>
+                                    </li>
+                                )
+                        )}
                     </ul>
                 </div>
 
                 <div className="content">
-                    {/* displays subtitle only if there's one */}
-                    {subtitle ? (
-                        <p class="subtitle" dangerouslySetInnerHTML={{ __html: subtitle }}></p>
-                    ) : (
-                        ''
-                    )}
+                    {
+                        // displays subtitle only if there's one
+                        subtitle && (
+                            <p class="subtitle" dangerouslySetInnerHTML={{ __html: subtitle }}></p>
+                        )
+                    }
                     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
                 </div>
             </article>

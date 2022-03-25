@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 $mainFont: Inter, Helvetica, sans-serif;
-$transitionTime: 0.2s;
+$transitionTime: 0.1s;
 $blackish: #4e4e4e;
 $whitish: #f3f3f3;
 
@@ -41,7 +41,6 @@ body,
     font-size: 17px;
     height: 100%;
     margin: unset;
-    color: $blackish;
     position: relative;
     font-family: $mainFont;
     font-weight: 300;
@@ -139,7 +138,7 @@ button,
     color: white;
     margin-bottom: 12px;
     padding: 0.3em;
-    transition: background $transitionTime ease-in;
+    transition: background $transitionTime ease-out;
     box-sizing: border-box;
     height: 55px;
     @include center;
