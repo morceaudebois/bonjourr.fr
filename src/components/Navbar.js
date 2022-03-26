@@ -1,11 +1,12 @@
 import React from 'react'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { Link, useI18next, Trans } from 'gatsby-plugin-react-i18next'
+import GatsbyLink from 'gatsby-link'
 
 export default function Navbar() {
     const { language, originalPath } = useI18next()
-    const langPath = language === 'en' ? '' : 'fr/'
-    const otherLang = language === 'en' ? 'fr' : 'en'
+    const isFr = language === 'fr'
+    const langPath = isFr ? 'fr' : ''
 
     return (
         <nav>
@@ -19,9 +20,9 @@ export default function Navbar() {
                         <Trans>Online</Trans>
                     </a>
 
-                    <Link to="/use-bonjourr" id="docsLink">
+                    <GatsbyLink to="/use-bonjourr" language="en">
                         <Trans>Docs</Trans>
-                    </Link>
+                    </GatsbyLink>
 
                     <AnchorLink to={'/' + langPath + '#donate'}>
                         <Trans>Donate</Trans>
@@ -30,12 +31,15 @@ export default function Navbar() {
                     <AnchorLink to={'/' + langPath + '#further'}>Contact</AnchorLink>
                 </div>
 
-                <div className="languages">
-                    <Link to={originalPath} language={otherLang}>
+                <div
+                    className="languages"
+                    style={{ display: originalPath !== '/' && 'none' }} // Only display lang switch on homepage
+                >
+                    <Link to={originalPath} language={isFr ? 'en' : 'fr'}>
                         <span role="img" aria-label="globe-emoji">
                             🌍
                         </span>
-                        {' ' + otherLang}
+                        {isFr ? ' en' : ' fr'}
                     </Link>
                 </div>
             </div>

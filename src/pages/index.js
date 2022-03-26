@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import GatsbyLink from 'gatsby-link'
 import { Link, Trans } from 'gatsby-plugin-react-i18next'
 import { StaticImage } from 'gatsby-plugin-image'
 import { getImage } from 'gatsby-plugin-image'
@@ -229,14 +230,14 @@ const IndexPage = ({ data }) => {
                                 customisation.
                             </Trans>
                         </p>
-                        <Link to="/use-bonjourr" className="button">
+                        <GatsbyLink to="/use-bonjourr" className="button">
                             <span role="img" aria-label="happy-emoji" className="icon">
                                 📖
                             </span>
                             <span>
                                 <Trans>Documentation</Trans>
                             </span>
-                        </Link>
+                        </GatsbyLink>
                     </div>
 
                     <div>
