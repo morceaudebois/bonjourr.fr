@@ -113,6 +113,32 @@ module.exports = {
                     keySeparator: false,
                     nsSeparator: false,
                 },
+                pages: [
+                    {
+                        matchPath: '/use-bonjourr',
+                        languages: ['en'],
+                    },
+                    {
+                        matchPath: '/misc',
+                        languages: ['en'],
+                    },
+                    {
+                        matchPath: '/help',
+                        languages: ['en'],
+                    },
+                    {
+                        matchPath: '/profiles',
+                        languages: ['en'],
+                    },
+                    {
+                        matchPath: '/css-snippet',
+                        languages: ['en'],
+                    },
+                    {
+                        matchPath: '/privacy',
+                        languages: ['en'],
+                    },
+                ],
             },
         },
     ],

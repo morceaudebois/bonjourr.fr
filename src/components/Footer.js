@@ -1,17 +1,17 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { Trans } from 'gatsby-plugin-react-i18next'
+import GatsbyLink from 'gatsby-link'
+import { Link, Trans } from 'gatsby-plugin-react-i18next'
+
+const AuthorLink = ({ href, title, text }) => {
+    return (
+        <a href={href} title={title}>
+            {text}
+        </a>
+    )
+}
 
 export default function Footer() {
     if (typeof window !== `undefined`) {
-        const AuthorLink = ({ props }) => {
-            return (
-                <a href={props.href} title={props.title}>
-                    {props.text}
-                </a>
-            )
-        }
-
         const victor = {
             href: 'https://victr.me',
             title: "Victor's portfolio",
@@ -32,6 +32,10 @@ export default function Footer() {
                     <span>
                         © 2019-{new Date().getFullYear()}
                         <Link to="/"> Bonjourr</Link>
+                        <br />
+                        <GatsbyLink to="/privacy" language="en">
+                            <small>Privacy policy</small>
+                        </GatsbyLink>
                     </span>
 
                     <span id="signature">
@@ -40,8 +44,8 @@ export default function Footer() {
                             ❤️
                         </span>
                         <br></br>
-                        <Trans>by</Trans> <AuthorLink props={signatures[0]}></AuthorLink> &{' '}
-                        <AuthorLink props={signatures[1]}></AuthorLink>
+                        <Trans>by</Trans> <AuthorLink {...signatures[0]} /> &{' '}
+                        <AuthorLink {...signatures[1]} />
                     </span>
 
                     <span id="contact">

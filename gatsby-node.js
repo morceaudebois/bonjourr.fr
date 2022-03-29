@@ -13,11 +13,11 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `)
 
-    data.allMarkdownRemark.nodes.forEach( node => {
+    data.allMarkdownRemark.nodes.forEach(({ frontmatter }) => {
         actions.createPage({
-            path: '/' + node.frontmatter.slug,
+            path: '/' + frontmatter.slug,
             component: path.resolve('./src/templates/document.js'),
-            context: { slug: node.frontmatter.slug }
+            context: { slug: frontmatter.slug },
         })
     })
 }

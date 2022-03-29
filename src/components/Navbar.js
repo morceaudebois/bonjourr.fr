@@ -1,12 +1,12 @@
 import React from 'react'
-
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
-
 import { Link, useI18next, Trans } from 'gatsby-plugin-react-i18next'
+import GatsbyLink from 'gatsby-link'
 
 export default function Navbar() {
-    const { language, languages, originalPath } = useI18next()
-    const lang = language === 'en' ? '' : 'fr/'
+    const { language, originalPath } = useI18next()
+    const isFr = language === 'fr'
+    const langPath = isFr ? 'fr' : ''
 
     return (
         <nav>
@@ -20,27 +20,28 @@ export default function Navbar() {
                         <Trans>Online</Trans>
                     </a>
 
-                    <Link to="/use-bonjourr" id="docsLink">
+                    <GatsbyLink to="/use-bonjourr" language="en">
                         <Trans>Docs</Trans>
-                    </Link>
+                    </GatsbyLink>
 
-                    <AnchorLink to={'/' + lang + '#donate'}>
+                    <AnchorLink to={'/' + langPath + '#donate'}>
                         <Trans>Donate</Trans>
                     </AnchorLink>
 
-                    <AnchorLink to={'/' + lang + '#further'}>Contact</AnchorLink>
+                    <AnchorLink to={'/' + langPath + '#further'}>Contact</AnchorLink>
                 </div>
 
-                <ul className="languages">
-                    {languages.map(lng => (
-                        <li key={lng}>
-                            <Link to={originalPath} language={lng}>
-                                <span role="img" aria-label="globe-emoji"> {' '} 🌍 </span>
-                                {lng}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <div
+                    className="languages"
+                    style={{ display: originalPath !== '/' && 'none' }} // Only display lang switch on homepage
+                >
+                    <Link to={originalPath} language={isFr ? 'en' : 'fr'}>
+                        <span role="img" aria-label="globe-emoji">
+                            🌍
+                        </span>
+                        {isFr ? ' en' : ' fr'}
+                    </Link>
+                </div>
             </div>
         </nav>
     )
