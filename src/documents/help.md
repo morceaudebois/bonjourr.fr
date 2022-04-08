@@ -18,9 +18,9 @@ You have some coding skills and a feature in mind you could implement into Bonjo
 
 ## 🇬🇧 Translations
 
-Thanks to our contributors, Bonjourr is currently available in 13 languages (English, French, Slovene, Swedish, Polish, Brasilian Portuguese, Dutch, Italian, Spanish, Russian, Simplified Chinese, German & Norwegian). This is great, but since we're constantly adding new features to Bonjourr, a lot of those translations have become incomplete.
+Thanks to our contributors, Bonjourr is currently available in 13 languages (English, French, Slovene, Swedish, Polish, Brasilian Portuguese, Dutch, Italian, Spanish, Russian, Simplified Chinese, German, Norwegian & Ukrainian). This is great, but since we're constantly adding new features to Bonjourr, some translations might have become incomplete.
 
-If you spot a missing string, or if you'd like to add other languages, you can head to [this file on GitHub](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.js), translate it and create a pull request.
+If you spot a missing string or if you'd like to add other languages, you can head to [this file on GitHub](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.js), translate it and create a pull request.
 
 ## ⭐️ Reviews
 

@@ -10,7 +10,7 @@ featured: ../assets/backgrounds/danist-bviex5lwf3s-unsplash.jpg
 
 -   [Chrome & Brave](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd?hl=fr&authuser=0)
 -   [Firefox](https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/)
--   [Safari (soon™️)](#)
+-   [Safari (soon™️)](#-safari-desktop)
 -   [Edge](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid)
 
 ## 📱 iOS and Android
@@ -24,7 +24,7 @@ For Safari desktop, while we work on the extension. Head to Safari's preferences
 
 ![Configure Bonjourr on Safari](../assets/documentation/safari.png)
 
-Deleting your cache will also reset Bonjourr, so **consider keeping a copy of its settings somewhere in a notes app** (Show all settings → Export code).
+When using this method, deleting your cache will also reset Bonjourr, so **consider keeping a copy of its settings somewhere in a notes app** (Show all settings → Export code).
 
 <!-- Bonjourr is available on the  store.
 ![Enable Bonjourr on Edge](../assets/documentation/edge.png)
