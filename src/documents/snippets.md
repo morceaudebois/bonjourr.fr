@@ -23,6 +23,14 @@ _Removes shadows from interface elements._
 }
 ```
 
+### More shadows
+_Makes interface texts more readable with shadows_
+```css
+body #interface {
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+```
+
 ### I like my backgrounds fast.
 _Faster background transition on startup._
 ```css
