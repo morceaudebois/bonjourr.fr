@@ -31,10 +31,10 @@ export default function Seo({ title, description, siteUrl, image, keywords }) {
                         <meta property="og:type" content="website" />
                         <meta property="og:title" content={metaTitle} />
                         <meta property="og:description" content={metaDescription} />
-                        <meta property="og:image" content="/twitter.jpg" />
+                        <meta property="og:image" content="https://bonjourr.fr/twitter.jpg" />
                         <meta name="keywords" content={metaKeywords} />
                         <meta property="twitter:card" content="summary_large_image" />
-                        <meta property="twitter:image" content="/twitter.jpg" />
+                        <meta property="twitter:image" content="https://bonjourr.fr/twitter.jpg" />
                         <meta property="twitter:creator" content="BonjourrTeam" />
                         <meta property="twitter:title" content={metaTitle} />
                         <meta property="twitter:description" content={metaDescription} />
