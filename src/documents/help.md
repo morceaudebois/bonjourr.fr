@@ -20,13 +20,13 @@ If you're feeling creative, you can also suggest or create [CSS snippets](https:
 
 ## 🇬🇧 Translations
 
-Thanks to our contributors, Bonjourr is currently available in 14 languages (English, French, Slovene, Swedish, Polish, Brasilian Portuguese, Dutch, Italian, Spanish, Russian, Simplified Chinese, German, Norwegian & Ukrainian). This is great, but since we're constantly adding new features to Bonjourr, some translations might have become incomplete.
+Thanks to our contributors, Bonjourr is currently available in 15 languages (English, French, Slovene, Swedish, Polish, Brasilian Portuguese, Dutch, Italian, Spanish, Russian, Simplified Chinese, German, Ukrainian, Turkish and Indonesian). This is great, but some translations might have become incomplete as we've added more features.
 
 If you spot a missing string, you can head to [this file on GitHub](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.js), translate it and create a pull request.
 
-If you'd like to add a new language, you can use [this commit](https://github.com/victrme/Bonjourr/commit/7831760d74b403b0a4e285cb0880e07b74507dee) as an example.
-
-We've recently added the overview.md file, which means you can now translate Bonjourr's description in browser extensions stores as well.
+There are two other files you can edit when translating Bonjourr:
+- `/_locales/yourlang/messages.json` for the title and subtitle of Bonjourr's extension store pages
+- `/_locales/yourlang/overview.md` for Bonjourr's full description on extension store pages
 
 ## ⭐️ Reviews
 
