@@ -23,8 +23,7 @@ export default function downloadButtons() {
                 icon = '/chrome.svg'
                 break
             case 'Safari':
-                link = '/use-bonjourr#-safari-desktop'
-                label = <Trans>Use on Safari</Trans>
+                link = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
                 icon = '/safari.svg'
                 break
             case 'Mobile Safari':

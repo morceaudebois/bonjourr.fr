@@ -20,7 +20,7 @@ If you're feeling creative, you can also suggest or create [CSS snippets](https:
 
 ## 🇬🇧 Translations
 
-Thanks to our contributors, Bonjourr is currently available in 15 languages (English, French, Slovene, Swedish, Polish, Brasilian Portuguese, Dutch, Italian, Spanish, Russian, Simplified Chinese, German, Ukrainian, Turkish and Indonesian). This is great, but some translations might have become incomplete as we've added more features.
+Thanks to our contributors, Bonjourr is currently available in 16 languages (English, French, Slovene, Swedish, Polish, Brasilian Portuguese, Dutch, Italian, Spanish, Russian, Simplified Chinese, German, Ukrainian, Danish, Turkish and Indonesian). This is great, but some translations might have become incomplete as we've added more features.
 
 If you spot a missing string, you can head to [this file on GitHub](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.js), translate it and create a pull request.
 
@@ -30,4 +30,4 @@ There are two other files you can edit when translating Bonjourr:
 
 ## ⭐️ Reviews
 
-The simplest way to help us out is to leave a review on the extension stores, either on [Firefox](https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/), [Chrome](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd?hl=fr&authuser=0) or even [Edge](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid). You can also tell your friends about Bonjourr, because if you love it, they probably will too.
+The simplest way to help us out is to leave a review on the extension stores, either on [Firefox](https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/), [Chrome](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd?hl=fr&authuser=0), [Safari](https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236) or even [Edge](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid). You can also tell your friends about Bonjourr, because if you love it, they probably will too.

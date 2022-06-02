@@ -10,14 +10,14 @@ featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 
 -   `escape` key opens settings.
 -   When the searchbar is enabled, typing anywhere will focus the searchbar. However, browsers focus their address bar by default, so you'll have to click anywhere on Bonjourr first.
--   When enabling the custom search engine option, the searchbar becomes compatible with all search engines. That also includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
+-   When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
 <!-- -   If you're an advanced user or just curious, you'll want to enable them all at the top of the settings panel.Bonjourr doesn't show all its settings by default.  -->
 
 ## 🔖 About Quick Links
 
-You can add up to 30 Quick Links directly from settings, and edit them when you right click on them.
+You can add and import Quick Links from the settings, and edit them when you right click on them.
 
-An easy way to add a custom icon to your Quick Link is to upload it on somewhere like Imgur, and use that link as an icon. Or convert your icon to a DataURI. URI must must be <8kb
+An easy way to add a custom icon to your Quick Link is to upload it on somewhere like Imgur, and use that link as an icon. You can also convert your icon to a Data URI (max 8kB).
 
 ⚠️ **Notice**: as a security measure, local paths like `file://`, browser settings links like `about:config` or `chrome://extensions` can't be added. However, `localhost:` links will work just fine.
 

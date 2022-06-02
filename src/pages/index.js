@@ -160,7 +160,7 @@ const IndexPage = ({ data }) => {
                                     <Trans>Weather</Trans>
                                 </li>
                                 <li>
-                                    <Trans>Hide elements</Trans>
+                                    <Trans>Quotes</Trans>
                                 </li>
                                 <li>
                                     <Trans>Custom CSS</Trans>
