@@ -18,7 +18,7 @@ featured: ../assets/backgrounds/danist-bviex5lwf3s-unsplash.jpg
 -   As a mobile web app: in the Share menu of your browser, select 'Add to Home Screen' or 'Install'.
 -   As a browser homepage: go to Settings => Homepage => Open this page => `https://online.bonjourr.fr`. You can use a third party browser like Firefox if you want to do this on iOS.
 
-Bonjourr will be available as an real extension for Safari on iOS in the coming months.
+Bonjourr will be available as a real extension for Safari on iOS and iPadOS in the coming months.
 
 
 <!-- Bonjourr is available on the  store.
