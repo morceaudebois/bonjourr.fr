@@ -56,7 +56,7 @@ _Makes Quick Link lower._
 ```
 
 ### Links are all I need
-_Hides everything but Quick Links (and center them)._
+_Hides everything but Quick Links (and centers them)._
 ```css
 #interface #time, #interface #main, #interface #sb_container, #interface #quotes_container {
     display: none;
