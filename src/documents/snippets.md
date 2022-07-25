@@ -55,6 +55,18 @@ _Makes Quick Link lower._
 }
 ```
 
+### Links are all I need
+_Hides everything but Quick Links (and center them)._
+```css
+#interface #time, #interface #main, #interface #sb_container, #interface #quotes_container {
+    display: none;
+}
+
+#interface #linkblocks {
+    flex-grow: unset;
+}
+```
+
 ### Unicolor is the new meta
 _Makes background a uniform color. Replace 'rebeccapurple' with your color of choice._
 ```css
