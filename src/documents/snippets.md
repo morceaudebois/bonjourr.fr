@@ -14,20 +14,22 @@ _Hides Unsplash photo author credits._
 }
 ```
 
-### No more shadows
-_Removes shadows from interface elements._
+### I want my own greeting
+_Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
 ```css
-* #date::before,
-* #weather::before {
-    box-shadow: none !important;
+#greetings:before {
+ content: "Your custom greeting";
+ visibility: visible;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ text-align: center; 
 }
-```
 
-### More shadows
-_Makes interface texts more readable with shadows_
-```css
-body #interface {
-    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+#greetings { 
+ visibility: hidden;
+ position: relative;
 }
 ```
 
@@ -39,13 +41,6 @@ _Faster background transition on startup._
 }
 ```
 
-### Links are too small!
-_Makes Quick Links larger._
-```css
-* #linkblocks_inner {
-    transform: scale(1.2);
-}
-```
 
 ### Links are too high!
 _Makes Quick Link lower._
