@@ -25,6 +25,7 @@ _Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
  left: 0;
  width: 100%;
  text-align: center; 
+ text-transform: none;
 }
 
 #greetings { 
