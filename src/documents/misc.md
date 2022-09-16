@@ -8,12 +8,11 @@ featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 
 ## 🛠️ Various tips and tricks
 
--   `escape` key opens settings.
--   When the searchbar is enabled, typing anywhere will focus the searchbar. However, browsers focus their address bar by default, so you'll have to click anywhere on Bonjourr first.
+-   Hover your mouse on the background credits to see exif infos
 -   When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
-<!-- -   If you're an advanced user or just curious, you'll want to enable them all at the top of the settings panel.Bonjourr doesn't show all its settings by default.  -->
+-   ~~When the searchbar is enabled, typing anywhere will focus the searchbar.~~ disabled for accessibility reasons
 
-## 🔖 About Quick Links
+## 🔖 Quick Links
 
 You can add and import Quick Links from the settings, and edit them when you right click on them.
 
@@ -21,7 +20,7 @@ An easy way to add a custom icon to your Quick Link is to upload it on somewhere
 
 ⚠️ **Notice**: as a security measure, local paths like `file://`, browser settings links like `about:config` or `chrome://extensions` can't be added. However, `localhost:` links will work just fine.
 
-## 🌄 About backgrounds
+## 🌄 Backgrounds
 
 Bonjourr uses the [Unsplash API](https://unsplash.com/developers) to fetch its backgrounds. We select them manually and store them in four different collections that change according to the time of the day:
 
@@ -42,4 +41,22 @@ Switch your background type from Dynamic to Custom, and you'll be able to drag a
 
 Bonjourr is compatible with the syncing features of both [Firefox](https://www.mozilla.org/fr/firefox/sync/) and [Chrome](https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop). If you log into your Mozilla/Google account on your browser and enable syncing, Bonjourr should get synced to other instances of the same browser on other computers. This is true for all Bonjourr settings as well as Quick Links.
 
+## ⌨️ Keybindings
 
+| Keys                | Action                  |
+| ------------------- | ----------------------- |
+| Escape              | Opens / closes settings |
+| E (focused on link) | Edits links             |
+
+### Notes
+
+You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `Cmd` on MacOS.
+
+| Keys             | Action          |
+| ---------------- | --------------- |
+| Ctrl + Enter     | Apply changes   |
+| Ctrl + Shift + C | Adds checkboxes |
+| Ctrl + I         | Italics         |
+| Ctrl + B         | Bold            |
+| Ctrl + S         | Strike          |
+| Ctrl + U         | URL             |

@@ -11,6 +11,9 @@ featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
 | Unsplash       | Fetches background images          | On startup & every hour by default. On collection change.                                                      |
 | Google Fonts   | Fetches list of most popular fonts | On “font family” input focus. If font list storage is lost.                                                    |
 
+<br />
+<br />
+
 | Permissions       | Actions                         | Frequency                                                   |
 | ----------------- | ------------------------------- | ----------------------------------------------------------- |
 | Unlimited Storage | Allows more than 1MB per item   | Only used for storing local backgrounds                     |
