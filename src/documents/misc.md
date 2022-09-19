@@ -37,9 +37,15 @@ Head back to Bonjourr and paste the ID in the **Unsplash collection** field. You
 
 Switch your background type from Dynamic to Custom, and you'll be able to drag and drop your own images from your computer to Bonjourr.
 
-## ☁️ Syncing
+## ⚙️ Settings management
 
-Bonjourr is compatible with the syncing features of both [Firefox](https://www.mozilla.org/fr/firefox/sync/) and [Chrome](https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop). If you log into your Mozilla/Google account on your browser and enable syncing, Bonjourr should get synced to other instances of the same browser on other computers. This is true for all Bonjourr settings as well as Quick Links.
+Bonjourr allows you to export all your settings into a file. You can use this feature if you want to save them or share them to someone. You will in turn be able to import said settings into any instance of Bonjourr.
+
+To do so, simply go to the bottom of your settings pannel, then click Export as file in the settings management. Your file will be downloaded. On your other instance of Bonjourr, you can then go to the Import tab of the settings management and drop your file. Bonjourr will reload and all your settings will be applied.
+
+### Browser syncing
+
+Bonjourr is compatible with the automatic syncing features of both [Firefox](https://www.mozilla.org/fr/firefox/sync/) and [Chrome](https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop). If you log into your Mozilla/Google account on your browser and have syncing enabled in your browser, Bonjourr should get synced to other instances of the same browser on other computers. This is true for all Bonjourr settings as well as Quick Links.
 
 ## ⌨️ Keybindings
 
@@ -50,7 +56,7 @@ Bonjourr is compatible with the syncing features of both [Firefox](https://www.m
 
 ### Notes
 
-You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `Cmd` on MacOS.
+You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `cmd` on macOS.
 
 | Keys             | Action          |
 | ---------------- | --------------- |
