@@ -7,7 +7,9 @@ featured: ../assets/backgrounds/daniel-plan-Ryrv5z2A18w-unsplash.jpg
 ---
 
 ### I don't care about artist exposure
+
 _Hides Unsplash photo author credits._
+
 ```css
 #credit {
     display: none;
@@ -15,188 +17,176 @@ _Hides Unsplash photo author credits._
 ```
 
 ### I want my own greeting
+
 _Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
+
 ```css
 #greetings:before {
- content: "Your custom greeting";
- visibility: visible;
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- text-align: center; 
- text-transform: none;
+    content: 'Your custom greeting';
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: none;
 }
 
-#greetings { 
- visibility: hidden;
- position: relative;
+#greetings {
+    visibility: hidden;
+    position: relative;
 }
 ```
 
 ### I like my backgrounds fast.
+
 _Faster background transition on startup._
+
 ```css
-* #background_overlay {
-    transition: transform 0.2s, opacity 0s !important;
+#background_overlay {
+    transition: transform 0.2s, opacity 0s;
 }
 ```
 
+### Widgets are too low!
 
-### Links are too high!
-_Makes Quick Link lower._
+_Makes Widgets higher._
+
 ```css
-* #interface #linkblocks {
-    align-items: center;
+#interface #widgets {
+    justify-content: flex-start;
+}
+```
+
+### Now they're too high...
+
+_Makes Widgets lower._
+
+```css
+#interface #widgets {
+    justify-content: flex-end;
+    padding-bottom: 2em;
 }
 ```
 
 ### Links are all I need
-_Hides everything but Quick Links (and centers them)._
-```css
-#interface #time, #interface #main, #interface #sb_container, #interface #quotes_container {
-    display: none;
-}
 
-#interface #linkblocks {
-    flex-grow: unset;
+_Hides everything but Quick Links (and centers them)._
+
+```css
+#interface #time,
+#interface #main,
+#interface #sb_container,
+#interface #notes_container,
+#interface #quotes_container {
+    display: none;
 }
 ```
 
 ### Unicolor is the new meta
+
 _Makes background a uniform color. Replace 'rebeccapurple' with your color of choice._
+
 ```css
-* #background {
+#background {
     opacity: 0;
 }
-* #background_overlay {
+#background_overlay {
     background-color: rebeccapurple;
 }
 ```
 
 ### 23 what, carrots?
+
 _Adds a C after the temperature._
+
 ```css
-* #widget p::after {
+#tempContainer p::after {
     content: 'C';
 }
 ```
 
 ### I like my clocks thick
+
 _Makes analog clock thicker._
+
 ```css
-* #interface #time #time-container #analogClock #center {
-    width: 16px;
-    height: 16px;
+#interface {
+    --anlg-w: 4px; /* Change size here */
 }
-* #interface #time #time-container #analogClock span {
-    width: 8px;
-    margin-left: -4px;
+#interface #time #time-container #analogClock #center {
+    width: calc(var(--anlg-w) * 4);
+    height: calc(var(--anlg-w) * 4);
 }
-* #interface #time #time-container span#analogSeconds {
-    width: 4px;
+#interface #time #time-container #analogClock {
+    border-width: calc(var(--anlg-w) * 2);
 }
-* #interface #time #time-container #analogClock {
-    border-width: 8px;
+#interface #time #time-container #analogClock span {
+    width: calc(var(--anlg-w) * 2);
+    margin-left: calc(var(--anlg-w) * -1);
+}
+#interface #time #time-container #analogClock span#analogSeconds {
+    width: var(--anlg-w);
 }
 ```
 
-### Left-aligned interface
-_Aligns interface to the left instead of center._
+### Left or right aligned interface
+
+_Aligns interface to the sides instead of center._
+
 ```css
+#interface {
+    width: 70%;
+    margin: auto;
+
+    /* Remove the one you DON'T want */
+
+    /* Right */
+    --flex: flex-end;
+    --text: right;
+
+    /* Left */
+    --flex: flex-start;
+    --text: left;
+}
+
 #interface #main,
-#interface #time,
-#interface #sb_container,
-#interface #linkblocks {
-    margin-left: 23%;
-    align-items: flex-start;
+#interface #time {
+    align-items: var(--flex);
 }
 
-#interface #main #weather #widget {
-    justify-content: flex-start;
+#interface #greetings,
+#interface #weather,
+#interface #widgets #quotes_container,
+#interface #widgets #quotes_container #author {
+    text-align: var(--text);
 }
 
-#interface #main #greetings {
-    text-align: left;
+#interface #main #weather #tempContainer {
+    justify-content: var(--flex);
 }
 
-#interface #sb_container #searchbar {
-    margin-left: 0px;
+#interface #widgets {
+    align-self: var(--flex);
 }
 
-#interface #linkblocks #linkblocks_inner {
-    justify-content: flex-start;
-}
-```
-
-### Right-aligned interface
-_Aligns interface to the right instead of center._
-```css
-#interface #main,
-#interface #time,
-#interface #sb_container,
-#interface #linkblocks {
-    margin-right: 23%;
-    align-items: flex-end;
-}
-
-#interface #main #weather #widget {
-    justify-content: flex-end;
-}
-
-#interface #main #greetings {
-    text-align: right;
-}
-
-#interface #sb_container {
-    width: auto;
-}
-
-#interface #sb_container #searchbar {
-    margin-right: 0px;
-}
-
-#interface #linkblocks #linkblocks_inner {
-    justify-content: flex-end;
+#interface #widgets #linkblocks,
+#interface #widgets #sb_container {
+    margin: 0;
+    align-self: var(--flex);
 }
 ```
 
 ### Rolex 😎
+
 _Makes analog clock look like a Rolex._
+
 ```css
-* #interface #time #time-container #analogClock, * #interface #time #time-container #analogClock:hover {
+* #interface #time #time-container #analogClock,
+* #interface #time #time-container #analogClock:hover {
     border-width: 1px;
     background-size: cover;
-    background-image: url('https://bonjourr.fr/rolex.png')!important;
-}
-```
-
-### You're breathtaking!
-_Cyberpunk 2077 inspired colors._
-```css
-* #w_icon {
-    display: none;
-}
-* #date,
-#credit a {
-    color: #00d8f3;
-}
-
-#interface #main {
-    align-items: flex-start;
-}
-
-* #clock {
-    color: #fdf800;
-    text-shadow: 5px 5px #00d8f3;
-}
-
-* #greetings,
-* #weather_desc {
-    text-shadow: none;
-    background-color: #fdf800;
-    padding: 10px 20px;
-    color: black;
+    background-image: url('https://bonjourr.fr/rolex.png') !important;
 }
 ```
 
