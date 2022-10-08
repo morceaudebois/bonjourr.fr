@@ -14,6 +14,12 @@ import Layout from '../components/Layout'
 import DownloadButtons from '../components/DownloadButtons'
 import '../styles/styles.scss'
 
+import GithubIcon from '../assets/icons/further/github.svg'
+import DocsIcon from '../assets/icons/further/docs.svg'
+import TelegramIcon from '../assets/icons/further/telegram.svg'
+import KofiIcon from '../assets/icons/donate/ko-fi.svg'
+import BtcIcon from '../assets/icons/donate/btc.svg'
+
 // fix huge fontawesome
 config.autoAddCss = false
 
@@ -207,12 +213,7 @@ const IndexPage = ({ data }) => {
                         </p>
 
                         <a href="https://t.me/BonjourrStartpage" className="button">
-                            <StaticImage
-                                src="../assets/telegram.svg"
-                                alt="telegram logo"
-                                width={70}
-                                className="icon"
-                            />
+                            <img src={TelegramIcon} className="icon" alt="" />
                             <span>
                                 <Trans>Bonjourr's Telegram</Trans>
                             </span>
@@ -231,9 +232,7 @@ const IndexPage = ({ data }) => {
                             </Trans>
                         </p>
                         <GatsbyLink to="/use-bonjourr" className="button">
-                            <span role="img" aria-label="happy-emoji" className="icon">
-                                📖
-                            </span>
+                            <img src={DocsIcon} className="icon" alt="" />
                             <span>
                                 <Trans>Documentation</Trans>
                             </span>
@@ -251,12 +250,7 @@ const IndexPage = ({ data }) => {
                             </Trans>
                         </p>
                         <a href="https://github.com/victrme/Bonjourr" className="button">
-                            <StaticImage
-                                src="../assets/github.svg"
-                                alt="github logo"
-                                width={70}
-                                className="icon"
-                            />
+                            <img src={GithubIcon} className="icon" alt="" />
                             <span>
                                 <Trans>GitHub repository</Trans>
                             </span>
@@ -285,12 +279,7 @@ const IndexPage = ({ data }) => {
 
                 <div className="buttons">
                     <a href="https://ko-fi.com/bonjourr" className="button">
-                        <StaticImage
-                            src="../assets/ko-fi.svg"
-                            alt="ko-fi logo"
-                            width={70}
-                            className="icon"
-                        />
+                        <img src={KofiIcon} className="icon" alt="" />
                         <span>
                             <Trans>Donate</Trans>
                         </span>
@@ -300,12 +289,7 @@ const IndexPage = ({ data }) => {
                         href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
                         className="button"
                     >
-                        <StaticImage
-                            src="../assets/btc.svg"
-                            alt="bitcoin logo"
-                            width={70}
-                            className="icon"
-                        />
+                        <img src={BtcIcon} className="icon" alt="" />
                         <span>
                             <Trans>Donate in crypto</Trans>
                         </span>
