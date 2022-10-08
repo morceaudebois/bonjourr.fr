@@ -7,7 +7,7 @@ import { faDesktop } from '@fortawesome/free-solid-svg-icons'
 import ChromeIcon from '../assets/icons/browsers/chrome.svg'
 import EdgeIcon from '../assets/icons/browsers/edge.svg'
 import FirefoxIcon from '../assets/icons/browsers/firefox.svg'
-import SafariIcon from '../assets/icons/browsers/Safari.svg'
+import SafariIcon from '../assets/icons/browsers/safari.svg'
 
 const platforms = {
     Firefox: {

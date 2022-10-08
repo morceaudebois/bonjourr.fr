@@ -86,10 +86,10 @@ const IndexPage = ({ data }) => {
                 <div id="dynBackgrounds">
                     <div className="left">
                         <StaticImage
-                            src="../assets/dyn.png"
+                            src="../assets/dynamic.png"
                             alt="Bonjourr dynamic backgrounds screenshot"
-                            quality={85}
                             placeholder="blurred"
+                            quality={85}
                             width={480}
                         />
                     </div>
