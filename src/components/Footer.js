@@ -33,9 +33,12 @@ export default function Footer() {
                         © 2019-{new Date().getFullYear()}
                         <Link to="/"> Bonjourr</Link>
                         <br />
+
                         <GatsbyLink to="/privacy" language="en">
                             <small>Privacy policy</small>
-                        </GatsbyLink>
+                        </GatsbyLink> | 
+                    
+                        <small><a href="https://github.com/morceaudebois/bonjourr.fr"><Trans> This website is on GitHub.</Trans></a></small>
                     </span>
 
                     <span id="signature">

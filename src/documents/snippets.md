@@ -6,16 +6,6 @@ orderData: 4
 featured: ../assets/backgrounds/daniel-plan-Ryrv5z2A18w-unsplash.jpg
 ---
 
-### I don't care about artist exposure
-
-_Hides Unsplash photo author credits._
-
-```css
-#credit {
-    display: none;
-}
-```
-
 ### I want my own greeting
 
 _Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
@@ -35,6 +25,31 @@ _Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
 #greetings {
     visibility: hidden;
     position: relative;
+}
+```
+
+### I need more vertical space
+
+_By default, Bonjourr reserves some space for the footer area (background credits and settings icon) so that the rest of the interface won't overflow on it. This snippet gets rid of that reserved space and will give more vertical room to your widgets. It can help if you have a small screen and lots of widgets, but might result in overflowing issues in some situations._
+
+```css
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+#interface {
+    max-height: 100vh;
+}
+```
+
+### I don't care about artist exposure
+
+_Hides Unsplash photo author credits._
+
+```css
+#credit {
+    display: none;
 }
 ```
 
@@ -189,5 +204,7 @@ _Makes analog clock look like a Rolex._
     background-image: url('https://bonjourr.fr/rolex.png') !important;
 }
 ```
+
+<br><br>
 
 _Want your own style snippet here? [Contact us](/#further)!_

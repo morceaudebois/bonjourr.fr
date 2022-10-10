@@ -6,7 +6,7 @@
   Bonjourr's website
 </h1>
 
-Welcome to Bonjourr's website repository. This website is made with Gatsby and React, and is hosted on Netlify. If you're searching for Bonjourr's repository, head to [here](https://github.com/victrme/Bonjourr) instead.
+Welcome to Bonjourr's website repository. This website is made with Gatsby and React, and is hosted on Netlify. If you're searching for Bonjourr's repository, head [here](https://github.com/victrme/Bonjourr) instead.
 
 ## 🤔 What do?
 
@@ -27,3 +27,4 @@ Welcome to Bonjourr's website repository. This website is made with Gatsby and R
 - [ ] Better documentation navigation (on mobile)
 - [x] When you refresh a doc page, all languages appear in the switcher
 - [ ] When language redirection is on (in gatsby-plugin-react-i18next), there's a redirect loop in Safari in some situations
+- [ ] French "other browsers" link is broken
