@@ -27,4 +27,4 @@ Welcome to Bonjourr's website repository. This website is made with Gatsby and R
 - [ ] Better documentation navigation (on mobile)
 - [x] When you refresh a doc page, all languages appear in the switcher
 - [ ] When language redirection is on (in gatsby-plugin-react-i18next), there's a redirect loop in Safari in some situations
-- [ ] French "other browsers" link is broken
+- [x] French "other browsers" link is broken

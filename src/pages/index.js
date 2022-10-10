@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import GatsbyLink from 'gatsby-link'
-import { Link, Trans } from 'gatsby-plugin-react-i18next'
+import { Trans } from 'gatsby-plugin-react-i18next'
 import { StaticImage } from 'gatsby-plugin-image'
 import { getImage } from 'gatsby-plugin-image'
 import { BgImage } from 'gbimage-bridge'
@@ -49,11 +49,11 @@ const IndexPage = ({ data }) => {
 
                     <DownloadButtons />
 
-                    <Link to="/use-bonjourr" className="link">
+                    <a href="/use-bonjourr" className="link">
                         <i>
                             <Trans>Searching for other browsers?</Trans>
                         </i>
-                    </Link>
+                    </a>
                 </div>
 
                 <div className="right">
