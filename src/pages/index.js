@@ -163,7 +163,7 @@ const IndexPage = ({ data }) => {
                                     <Trans>Dark mode</Trans>
                                 </li>
                                 <li>
-                                    <Trans>Weather</Trans>
+                                    <Trans>Notes & checkboxes</Trans>
                                 </li>
                                 <li>
                                     <Trans>Quotes</Trans>

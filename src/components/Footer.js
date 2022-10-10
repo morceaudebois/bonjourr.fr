@@ -35,18 +35,18 @@ export default function Footer() {
                         <br />
 
                         <GatsbyLink to="/privacy" language="en">
-                            <small>Privacy policy</small>
-                        </GatsbyLink> | 
+                            <small><Trans>Privacy policy</Trans></small>
+                        </GatsbyLink> | {' '}
                     
-                        <small><a href="https://github.com/morceaudebois/bonjourr.fr"><Trans> This website is on GitHub.</Trans></a></small>
+                        <small><a href="https://github.com/morceaudebois/bonjourr.fr"><Trans>This website is on GitHub.</Trans></a></small>
                     </span>
 
                     <span id="signature">
                         <Trans>Made in France with</Trans>{' '}
-                        <span role="img" aria-label="heart-emoji">
-                            ❤️
-                        </span>
+                        <span role="img" aria-label="heart-emoji">❤️</span>
+
                         <br></br>
+                        
                         <Trans>by</Trans> <AuthorLink {...signatures[0]} /> &{' '}
                         <AuthorLink {...signatures[1]} />
                     </span>
