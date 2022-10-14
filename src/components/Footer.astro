@@ -1,0 +1,109 @@
+---
+import Trans from './Trans.astro'
+import Signatures from './Signatures.svelte'
+import useTranslation from '../locales/useTranslation'
+
+const { isFrench } = useTranslation(Astro)
+---
+
+<footer>
+	<div class='container'>
+		<div id='legal'>
+			<p>
+				© 2019 <a href={isFrench() ? '/fr/' : '/'}>Bonjourr</a>
+			</p>
+
+			<p>
+				<a href='privacy'>
+					<small><Trans text='Privacy policy' /></small>
+				</a>
+			</p>
+
+			<p>
+				<a href='https://github.com/morceaudebois/bonjourr.fr'>
+					<small>
+						<Trans text='This website is on GitHub.' />
+					</small>
+				</a>
+			</p>
+		</div>
+
+		<div id='signature'>
+			<p>
+				<Trans text='Made in France with ❤️' />
+			</p>
+
+			<p>
+				<Trans text='by' />
+				<Signatures client:visible />
+			</p>
+		</div>
+
+		<div id='contact'>
+			<p>
+				<Trans text='Contact us' />
+			</p>
+
+			<p>
+				<a href='https://t.me/BonjourrStartpage'>Telegram</a> ·
+				<a href='mailto:bonjourr.app@protonmail.com'>email</a>
+			</p>
+		</div>
+	</div>
+</footer>
+
+<style lang='scss'>
+	@import '../styles/_global.scss';
+
+	footer {
+		width: 100%;
+		background-color: #222;
+		backdrop-filter: blur(15px);
+		color: white;
+		z-index: 2;
+
+		#signature {
+			text-align: center;
+		}
+
+		#contact {
+			text-align: right;
+		}
+
+		#legal,
+		#contact {
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		a {
+			color: white;
+			font-weight: 500;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: auto;
+			padding: 2em;
+
+			@include maxWidth;
+
+			@include md {
+				flex-wrap: wrap;
+				padding: 1em 0;
+
+				#contact {
+					width: 100%;
+					text-align: center;
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+</style>

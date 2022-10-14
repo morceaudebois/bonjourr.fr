@@ -1,0 +1,66 @@
+---
+import Footer from '../components/Footer.astro'
+import Naviguation from '../components/Naviguation.astro'
+import useTranslation from '../locales/useTranslation'
+
+import favicon from '../assets/favicon.ico'
+
+const { t } = useTranslation(Astro)
+const { title, lang } = Astro.props
+
+const metaTitle = t('Startpage for you browser')
+const metaDescription = t(
+	'Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.'
+)
+const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage', 'minimalism', 'lightweight']
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+	<head>
+		<title>{title}</title>
+		<meta name='viewport' content='width=device-width' />
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+		<meta name='description' content={metaDescription} />
+		<meta property='og:title' content={metaTitle} />
+		<meta property='og:description' content={metaDescription} />
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content='https://bonjourr.fr/' />
+		<meta property='og:image' content='https://bonjourr.fr/twitter.jpg' />
+		<meta name='keywords' content={metaKeywords.join(',')} />
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:image' content='https://bonjourr.fr/twitter.jpg' />
+		<meta name='twitter:creator' content='BonjourrTeam' />
+		<meta name='twitter:title' content={metaTitle} />
+		<meta name='twitter:description' content={metaDescription} />
+		<link rel='shortcut icon' href={favicon} type='image/x-icon' />
+	</head>
+	<body>
+		<Naviguation />
+
+		<slot />
+
+		<Footer />
+		<style is:global>
+			@import '../styles/_global.scss';
+
+			:root {
+				--max-width: 1200px;
+			}
+
+			html,
+			body {
+				height: 100%;
+				margin: unset;
+				position: relative;
+				font-family: 'Inter', Helvetica, sans-serif;
+				font-size: 18px;
+				font-weight: 300;
+			}
+
+			p {
+				line-height: 1.5em;
+			}
+		</style>
+	</body>
+</html>

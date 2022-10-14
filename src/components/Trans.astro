@@ -1,0 +1,7 @@
+---
+import useTranslation from '../locales/useTranslation'
+const { t } = useTranslation(Astro)
+const { text } = Astro.props
+---
+
+<slot>{t(text)}</slot>

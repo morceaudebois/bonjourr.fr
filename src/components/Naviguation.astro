@@ -1,0 +1,145 @@
+---
+import Trans from './Trans.astro'
+import useTranslation from '../locales/useTranslation'
+
+const { isFrench } = useTranslation(Astro)
+const fr = isFrench()
+const locale = fr ? '/fr/' : '/'
+---
+
+<nav>
+	<div class='container'>
+		<div class='links'>
+			<a href={locale} id='homeLink'>
+				<Trans text='Home' />
+			</a>
+
+			<a href='https://online.bonjourr.fr'>
+				<Trans text='Online' />
+			</a>
+
+			<a href={locale + 'docs/platforms'}>
+				<Trans text='Docs' />
+			</a>
+
+			<a href={locale + '#donate'}>
+				<Trans text='Donate' />
+			</a>
+
+			<a href={locale + '#further'}>Contact</a>
+		</div>
+
+		<div class='languages'>
+			<a href={fr ? Astro.url.pathname.substring(3) : '/fr' + Astro.url.pathname}>
+				<span role='img' aria-label='globe-emoji'>🌍</span>
+				{fr ? 'en' : 'fr'}
+			</a>
+		</div>
+	</div>
+</nav>
+
+<style lang='scss'>
+	@import '../styles/_global.scss';
+
+	nav {
+		position: absolute;
+		width: 100%;
+		padding-top: 2em;
+		padding-bottom: 0.5em;
+		box-sizing: border-box;
+		z-index: 10;
+
+		@include sidePadding();
+
+		@include sm {
+			padding-top: 0.5em;
+			padding-bottom: unset;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+
+			@include maxWidth;
+
+			@include sm {
+				grid-template-columns: 1fr;
+
+				#logo {
+					display: none;
+				}
+
+				.links {
+					width: 100%;
+				}
+			}
+
+			.links {
+				padding: unset;
+				text-align: right;
+
+				@include sm {
+					justify-content: flex-start;
+				}
+			}
+
+			.languages {
+				display: flex;
+				justify-content: flex-end;
+				margin: unset;
+
+				li a {
+					@include sm {
+						flex-direction: row;
+
+						span {
+							margin-right: 7px;
+						}
+					}
+				}
+			}
+
+			a {
+				border-bottom: 2px solid transparent;
+				padding-bottom: 9px;
+				padding-top: 9px;
+				transition: border $transitionTime;
+				color: white;
+				font-weight: 500;
+				position: relative;
+				margin-left: 25px;
+				font-size: 17px;
+
+				@include textShadow;
+
+				svg {
+					margin-right: 7px;
+				}
+
+				&:hover {
+					border-color: white;
+				}
+
+				@include sm {
+					font-size: 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					margin-left: 15px;
+
+					svg {
+						margin: unset;
+						margin-bottom: 5px;
+					}
+				}
+
+				&:first-child {
+					margin-left: unset;
+				}
+			}
+		}
+	}
+</style>
