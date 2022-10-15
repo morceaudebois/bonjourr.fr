@@ -1,0 +1,42 @@
+---
+import Trans from '../components/Trans.astro'
+import useTranslation from '../locales/useTranslation'
+
+const { t, isFrench } = useTranslation(Astro)
+const locale = isFrench() ? '/fr/' : '/'
+---
+
+<div id='hero'>
+	<span class='background'></span>
+
+	<div class='message'>
+		<h2>
+			<Trans text='Your message has been sent, thank you!' />
+		</h2>
+
+		<a href={locale} class='button'>
+			<Trans text='Back to home' />
+		</a>
+	</div>
+</div>
+
+<style>
+	div#hero {
+		height: 100vh;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.message {
+		height: 40vh;
+	}
+
+	h2 {
+		margin: 2em 0;
+	}
+
+	a {
+		margin: auto;
+	}
+</style>

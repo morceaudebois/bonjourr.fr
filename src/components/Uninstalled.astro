@@ -1,0 +1,123 @@
+---
+import Trans from '../components/Trans.astro'
+import useTranslation from '../locales/useTranslation'
+
+const { isFrench } = useTranslation(Astro)
+const locale = isFrench() ? '/fr/' : '/'
+---
+
+<div id='hero'>
+	<span class='background'></span>
+
+	<div id='formContainer'>
+		<h2>
+			<Trans text='Thank you for using Bonjourr.' />
+		</h2>
+		<p>
+			<Trans text={`We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!`} />
+			<span role='img' aria-label='happy-emoji'> 😊</span>
+		</p>
+
+		<form
+			id='form'
+			action={locale + 'submit'}
+			name='contact'
+			method='post'
+			data-netlify='true'
+			data-netlify-honeypot='bot-field'
+		>
+			<input type='hidden' name='form-name' value='contact' />
+			<input type='hidden' name='browser' id='browser' />
+
+			<label>
+				<Trans text='Email (optionnal)' />
+			</label>
+			<input id='email' type='email' name='email' />
+
+			<label>
+				<Trans text='Your message' />
+			</label>
+			<textarea id='message' name='message' required></textarea>
+
+			<button type='submit'>
+				<Trans text='Send' />
+			</button>
+		</form>
+	</div>
+</div>
+
+<style lang='scss'>
+	@import '../styles/_global.scss';
+
+	.background:before {
+		background-image: url('../assets/greens.jpg');
+		background-size: cover;
+	}
+
+	#hero {
+		height: 100vh;
+		box-sizing: border-box;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#formContainer {
+		min-height: 60vh;
+		max-width: 550px;
+
+		h2 {
+			font-size: 3em;
+		}
+	}
+
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	form > * {
+		width: 100%;
+	}
+
+	label {
+		margin: 1em 0 0 0;
+	}
+
+	input,
+	textarea,
+	button {
+		margin: 0.5em 0;
+		padding: 1em;
+		border: 0px;
+		border-radius: 10px;
+		font-family: inherit;
+		font-size: 1em;
+		font-weight: 300;
+		color: #fff;
+
+		background-color: #fff2;
+		backdrop-filter: blur(15px);
+		transition: background-color 0.1s;
+	}
+
+	input:focus,
+	textarea:focus,
+	button:focus {
+		background-color: #fff3;
+		outline: 3px solid #0072eeaa;
+	}
+
+	textarea {
+		resize: vertical;
+		min-height: 70px;
+		padding: 1em;
+	}
+
+	button {
+		max-width: 300px;
+		margin-top: 2em;
+		color: white;
+		cursor: pointer;
+	}
+</style>

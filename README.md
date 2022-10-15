@@ -11,6 +11,8 @@
 │       │   │   ├── help
 │       │   │   ├── profiles
 │       │   │   └── styles
+│       │   ├── goodbye
+│       │   ├── submit
 │       │   ├── privacy
 │       │   └── index
 │       ├── docs/
@@ -19,6 +21,8 @@
 │       │   ├── help
 │       │   ├── profiles
 │       │   └── styles
+│       ├── goodbye
+│       ├── submit
 │       ├── privacy
 │       └── index
 └── package.json

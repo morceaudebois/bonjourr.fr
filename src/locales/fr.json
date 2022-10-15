@@ -1,6 +1,7 @@
 {
 	"Startpage for your browser": "Page d'accueil de navigateur",
 	"Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.": "Améliorez votre expérience de navigation avec Bonjourr, une superbe page d'accueil personnalisable inspirée par iOS.",
+	"Home": "Accueil",
 	"Donate": "Dons",
 	"Help": "Aider",
 	"Try online": "Démo en ligne",
@@ -41,5 +42,12 @@
 	"by": "par",
 	"Privacy policy": "Politique de confidentialité",
 	"This website is on GitHub.": "Ce site est sur GitHub.",
-	"Notes & checkboxes": "Notes & to-do list"
+	"Notes & checkboxes": "Notes & to-do list",
+	"Thank you for using Bonjourr.": "Merci d'avoir utilisé Bonjourr.",
+	"We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!": "On est désolé de vous voir partir. Si vous avez du temps, dites-nous comment on pourrait améliorer Bonjourr, merci !",
+	"Email (optionnal)": "Adresse mail (optionnel)",
+	"Your message": "Votre message",
+	"Send": "Envoyer",
+	"Your message has been sent, thank you!": "Votre message a été envoyé, merci !",
+	"Back to home": "Retour à l'accueil"
 }
