@@ -11,10 +11,10 @@ const locale = isFrench() ? '/fr/' : '/'
 
 	<div id='formContainer'>
 		<h2>
-			<Trans text='Thank you for using Bonjourr.' />
+			<Trans>Thank you for using Bonjourr.</Trans>
 		</h2>
 		<p>
-			<Trans text={`We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!`} />
+			<Trans>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!</Trans>
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</p>
 
@@ -30,17 +30,17 @@ const locale = isFrench() ? '/fr/' : '/'
 			<input type='hidden' name='browser' id='browser' />
 
 			<label>
-				<Trans text='Email (optionnal)' />
+				<Trans>Email (optionnal)</Trans>
 			</label>
 			<input id='email' type='email' name='email' />
 
 			<label>
-				<Trans text='Your message' />
+				<Trans>Your message</Trans>
 			</label>
 			<textarea id='message' name='message' required></textarea>
 
 			<button type='submit'>
-				<Trans text='Send' />
+				<Trans>Send</Trans>
 			</button>
 		</form>
 	</div>

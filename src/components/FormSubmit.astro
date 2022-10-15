@@ -2,7 +2,7 @@
 import Trans from '../components/Trans.astro'
 import useTranslation from '../locales/useTranslation'
 
-const { t, isFrench } = useTranslation(Astro)
+const { isFrench } = useTranslation(Astro)
 const locale = isFrench() ? '/fr/' : '/'
 ---
 
@@ -11,11 +11,11 @@ const locale = isFrench() ? '/fr/' : '/'
 
 	<div class='message'>
 		<h2>
-			<Trans text='Your message has been sent, thank you!' />
+			<Trans>Your message has been sent, thank you!</Trans>
 		</h2>
 
 		<a href={locale} class='button'>
-			<Trans text='Back to home' />
+			<Trans>Back to home</Trans>
 		</a>
 	</div>
 </div>

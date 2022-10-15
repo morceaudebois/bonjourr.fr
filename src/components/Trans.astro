@@ -1,13 +1,12 @@
 ---
 import useTranslation from '../locales/useTranslation'
 const { t } = useTranslation(Astro)
-const { text } = Astro.props
-let html = ''
+let text = ''
 
-// if (Astro.slots.has('default')) {
-// 	html = await Astro.slots.render('default')
-// 	console.log(html)
-// }
+if (Astro.slots.has('default')) {
+	text = await Astro.slots.render('default')
+	text = text.replace(/[\n\r\s\t]+/g, ' ').trim()
+}
 ---
 
-<slot>{t(text)}</slot>
+<Fragment set:html={t(text)} />

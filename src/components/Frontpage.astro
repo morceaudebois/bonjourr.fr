@@ -25,17 +25,17 @@ const locale = isFrench() ? '/fr/' : '/'
 	<div class='left'>
 		<h1>Bonjourr</h1>
 		<p>
-			<Trans text='Startpage for your browser' />
+			<Trans>Startpage for your browser</Trans>
 		</p>
 
 		<Download client:load>
-			<Trans text='Download' slot='Download' />
-			<Trans text='Try online' slot='Online' />
+			<Trans slot='Download'>Download</Trans>
+			<Trans slot='Online'>Try online</Trans>
 		</Download>
 
 		<a href='/use-bonjourr' class='link'>
 			<i>
-				<Trans text='Searching for other browsers?' />
+				<Trans>Searching for other browsers?</Trans>
 			</i>
 		</a>
 	</div>
@@ -49,7 +49,7 @@ const locale = isFrench() ? '/fr/' : '/'
 	<div class='section-wrapper'>
 		<div id='intro'>
 			<h2>
-				<Trans text='Minimalist & lightweight startpage' />
+				<Trans>Minimalist & lightweight startpage</Trans>
 			</h2>
 			<p>
 				<Trans
@@ -71,15 +71,16 @@ const locale = isFrench() ? '/fr/' : '/'
 
 			<div class='right'>
 				<h3>
-					<Trans text='Dynamic Backgrounds' />
+					<Trans>Dynamic Backgrounds</Trans>
 				</h3>
 
 				<hr />
 
 				<p>
-					<Trans
-						text={`Bonjourr uses a manually selected collection of the best photos Unsplash has to offer. The mood of the photos changes according to the time of the day, from noon to the end of the night.`}
-					/>
+					<Trans>
+						Bonjourr uses a manually selected collection of the best photos Unsplash has to offer. The mood of the
+						photos changes according to the time of the day, from noon to the end of the night.
+					</Trans>
 				</p>
 			</div>
 		</div>
@@ -87,13 +88,14 @@ const locale = isFrench() ? '/fr/' : '/'
 		<div id='custom' class='image-row'>
 			<div class='left'>
 				<h3>
-					<Trans text='Customisable' />
+					<Trans>Customisable</Trans>
 				</h3>
 				<hr />
 				<p>
-					<Trans
-						text={`Because minimalism doesn’t rhyme with lack of features, Bonjourr is stuffed with options. Add in your personal touch by changing the font, adding your own backgrounds or changing the look of your clock.`}
-					/>
+					<Trans>
+						Because minimalism doesn’t rhyme with lack of features, Bonjourr is stuffed with options. Add in your
+						personal touch by changing the font, adding your own backgrounds or changing the look of your clock.
+					</Trans>
 				</p>
 			</div>
 
@@ -104,38 +106,38 @@ const locale = isFrench() ? '/fr/' : '/'
 
 		<div id='more'>
 			<h3>
-				<Trans text='A few more features' />
+				<Trans>A few more features</Trans>
 			</h3>
 			<div class='listContainer'>
 				<div class='left'>
 					<ul>
 						<li>
-							<Trans text='Quick Links' />
+							<Trans>Quick Links</Trans>
 						</li>
 						<li>
-							<Trans text='Search bar' />
+							<Trans>Search bar</Trans>
 						</li>
 						<li>
-							<Trans text='Google Fonts' />
+							<Trans>Google Fonts</Trans>
 						</li>
 						<li>
-							<Trans text='Multilanguage' />
+							<Trans>Multilanguage</Trans>
 						</li>
 					</ul>
 				</div>
 				<div class='right'>
 					<ul>
 						<li>
-							<Trans text='Dark mode' />
+							<Trans>Dark mode</Trans>
 						</li>
 						<li>
-							<Trans text='Notes & checkboxes' />
+							<Trans>Notes & checkboxes</Trans>
 						</li>
 						<li>
-							<Trans text='Quotes' />
+							<Trans>Quotes</Trans>
 						</li>
 						<li>
-							<Trans text='Custom CSS' />
+							<Trans>Custom CSS</Trans>
 						</li>
 					</ul>
 				</div>
@@ -148,12 +150,14 @@ const locale = isFrench() ? '/fr/' : '/'
 	<div class='section-wrapper'>
 		<h2>
 			<span role='img' aria-label='lock-emoji'> 🔒</span>{' '}
-			<Trans text='Free, open source and privacy focused' />
+			<Trans>Free, open source and privacy focused</Trans>
 		</h2>
 		<p>
-			<Trans
-				text={`Bonjourr is made by two independent developpers who love things well made and actually think privacy is important. You can use Bonjourr straight away, without having to create or log into any account because we do not collect any data.`}
-			/>
+			<Trans>
+				Bonjourr is made by two independent developpers who love things well made and actually think privacy is
+				important. You can use Bonjourr straight away, without having to create or log into any account because we do
+				not collect any data.
+			</Trans>
 		</p>
 	</div>
 </section>
@@ -163,57 +167,59 @@ const locale = isFrench() ? '/fr/' : '/'
 		<div class='container'>
 			<div>
 				<h2>
-					<Trans text='Want to go further?' />
+					<Trans>Want to go further?</Trans>
 				</h2>
 			</div>
 			<div>
 				<h3>
-					<Trans text='Contact us' />
+					<Trans>Contact us</Trans>
 				</h3>
 				<p>
-					<Trans
-						text={`Come and hang out on Bonjourr’s official Telegram group. You can tell us about your ideas and read about the latest news about its development.`}
-					/>
+					<Trans>
+						Come and hang out on Bonjourr’s official Telegram group. You can tell us about your ideas and read
+						about the latest news about its development.
+					</Trans>
 				</p>
 
 				<a href='https://t.me/BonjourrStartpage' class='button'>
 					<img width='64' src={TelegramIcon} class='icon' alt='' loading='lazy' />
 					<span>
-						<Trans text={`Bonjourr's Telegram`} />
+						<Trans>Bonjourr's Telegram</Trans>
 					</span>
 				</a>
 			</div>
 
 			<div>
 				<h3>
-					<Trans text='Documentation' />
+					<Trans>Documentation</Trans>
 				</h3>
 				<p>
-					<Trans
-						text={`Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code snippets so you can go even further into customisation.`}
-					/>
+					<Trans>
+						Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code snippets so you can go
+						even further into customisation.
+					</Trans>
 				</p>
 				<a href={locale + 'docs/platforms'} class='button'>
 					<img width='64' src={DocsIcon} class='icon' alt='' loading='lazy' />
 					<span>
-						<Trans text='Documentation' />
+						<Trans>Documentation</Trans>
 					</span>
 				</a>
 			</div>
 
 			<div>
 				<h3>
-					<Trans text='Fork Bonjourr' />
+					<Trans>Fork Bonjourr</Trans>
 				</h3>
 				<p>
-					<Trans
-						text={`Fork Bonjourr and add your own features on our GitHub repositories. We’re open to pull requests!`}
-					/>
+					<Trans>
+						Fork Bonjourr and add your own features on our GitHub repositories. We’re open to pull requests!
+					</Trans>
 				</p>
 				<a href='https://github.com/victrme/Bonjourr' class='button'>
 					<img width='64' src={GithubIcon} class='icon' alt='' loading='lazy' />
 					<span>
-						<Trans text='GitHub repository' />
+						<Trans>GitHub repository</Trans>
 					</span>
 				</a>
 			</div>
@@ -224,28 +230,30 @@ const locale = isFrench() ? '/fr/' : '/'
 <section id='donate'>
 	<div class='section-wrapper'>
 		<h2>
-			<Trans text='Donate' />
+			<Trans>Donate</Trans>
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</h2>
 
 		<p>
-			<Trans
-				text={`Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn any money out of this project, apart from donations. Supporting our work financially is very important if you want us to keep updating it, and we appreciate every single donation.`}
-			/>
+			<Trans>
+				Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn any money out of this
+				project, apart from donations. Supporting our work financially is very important if you want us to keep
+				updating it, and we appreciate every single donation.
+			</Trans>
 		</p>
 
 		<div class='buttons'>
 			<a href='https://ko-fi.com/bonjourr' class='button'>
 				<img width='64' src={KofiIcon} class='icon' alt='' loading='lazy' />
 				<span>
-					<Trans text='Donate' />
+					<Trans>Donate</Trans>
 				</span>
 			</a>
 
 			<a href='https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b' class='button'>
 				<img width='64' src={BtcIcon} class='icon' alt='' loading='lazy' />
 				<span>
-					<Trans text='Donate in crypto' />
+					<Trans>Donate in crypto</Trans>
 				</span>
 			</a>
 		</div>
