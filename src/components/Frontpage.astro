@@ -1,9 +1,5 @@
 ---
-import Download from './Download.svelte'
 import Trans from './Trans.astro'
-
-import Illustration from '../assets/illustration/illu.webp'
-import Illustration2x from '../assets/illustration/illu2x.webp'
 
 import DynamicImage from '../assets/dynamic.webp'
 import DynamicImage2x from '../assets/dynamic2x.webp'
@@ -15,35 +11,17 @@ import TelegramIcon from '../assets/icons/further/telegram.svg'
 import KofiIcon from '../assets/icons/donate/ko-fi.svg'
 import BtcIcon from '../assets/icons/donate/btc.svg'
 
+import Hero from './Hero.astro'
+import Landing from './Frontpage/Landing.astro'
+
 import useTranslation from '../locales/useTranslation'
 const { isFrench } = useTranslation(Astro)
 const locale = isFrench() ? '/fr/' : '/'
 ---
 
-<div id='hero' class='section'>
-	<span class='background'></span>
-	<div class='left'>
-		<h1>Bonjourr</h1>
-		<p>
-			<Trans>Startpage for your browser</Trans>
-		</p>
-
-		<Download client:load>
-			<Trans slot='Download'>Download</Trans>
-			<Trans slot='Online'>Try online</Trans>
-		</Download>
-
-		<a href='/use-bonjourr' class='link'>
-			<i>
-				<Trans>Searching for other browsers?</Trans>
-			</i>
-		</a>
-	</div>
-
-	<div class='right'>
-		<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='613' height='377' />
-	</div>
-</div>
+<Hero>
+	<Landing />
+</Hero>
 
 <section id='main'>
 	<div class='section-wrapper'>
@@ -52,9 +30,11 @@ const locale = isFrench() ? '/fr/' : '/'
 				<Trans>Minimalist & lightweight startpage</Trans>
 			</h2>
 			<p>
-				<Trans
-					text={`Bonjourr replaces your new tab page for something more refined and minimal. We took inspiration from Apple’s design language to create a startpage that both looks amazing and feels great to use in your daily life.`}
-				/>
+				<Trans>
+					Bonjourr replaces your new tab page for something more refined and minimal. We took inspiration from
+					Apple’s design language to create a startpage that both looks amazing and feels great to use in your daily
+					life.
+				</Trans>
 			</p>
 		</div>
 

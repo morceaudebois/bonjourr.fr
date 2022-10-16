@@ -73,4 +73,16 @@
 	.button:first-child {
 		margin-right: 1em;
 	}
+
+	a.button {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		white-space: nowrap;
+	}
+
+	@media only screen and (max-width: 450px) {
+		.container {
+			flex-direction: column;
+		}
+	}
 </style>

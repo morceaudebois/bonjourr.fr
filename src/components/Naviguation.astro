@@ -29,117 +29,53 @@ const locale = fr ? '/fr/' : '/'
 			<a href={locale + '#further'}>Contact</a>
 		</div>
 
-		<div class='languages'>
-			<a href={fr ? Astro.url.pathname.substring(3) : '/fr' + Astro.url.pathname}>
-				<span role='img' aria-label='globe-emoji'>🌍</span>
-				{fr ? 'en' : 'fr'}
-			</a>
-		</div>
+		<a href={fr ? Astro.url.pathname.substring(3) : '/fr' + Astro.url.pathname} class='language'>
+			<span role='img' aria-label='globe-emoji'>🌍</span>
+			{fr ? 'en' : 'fr'}
+		</a>
 	</div>
 </nav>
 
-<style lang='scss'>
-	@import '../styles/_global.scss';
-
+<style>
 	nav {
 		position: absolute;
 		width: 100%;
-		padding-top: 2em;
-		padding-bottom: 0.5em;
-		box-sizing: border-box;
-		z-index: 10;
+		z-index: 3;
+	}
 
-		@include sidePadding();
+	nav .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 2em;
+		max-width: 1200px;
+		margin: auto;
+	}
 
-		@include sm {
-			padding-top: 0.5em;
-			padding-bottom: unset;
-		}
+	.language {
+		display: flex;
+		gap: 0.2em;
+	}
 
-		.container {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			width: 100%;
+	nav .links:hover a {
+		opacity: 0.8;
+	}
 
-			@include maxWidth;
+	nav .links:hover a:hover {
+		opacity: 1;
+		border-color: white;
+	}
 
-			@include sm {
-				grid-template-columns: 1fr;
+	a {
+		position: relative;
+		padding: 0.4em 0;
+		font-weight: 500;
+		line-height: 2em;
+		border-bottom: 2px solid transparent;
+		transition: border 0.1s;
+	}
 
-				#logo {
-					display: none;
-				}
-
-				.links {
-					width: 100%;
-				}
-			}
-
-			.links {
-				padding: unset;
-				text-align: right;
-
-				@include sm {
-					justify-content: flex-start;
-				}
-			}
-
-			.languages {
-				display: flex;
-				justify-content: flex-end;
-				margin: unset;
-
-				li a {
-					@include sm {
-						flex-direction: row;
-
-						span {
-							margin-right: 7px;
-						}
-					}
-				}
-			}
-
-			a {
-				border-bottom: 2px solid transparent;
-				padding-bottom: 9px;
-				padding-top: 9px;
-				transition: border $transitionTime;
-				color: white;
-				font-weight: 500;
-				position: relative;
-				margin-left: 25px;
-				font-size: 17px;
-
-				@include textShadow;
-
-				svg {
-					margin-right: 7px;
-				}
-
-				&:hover {
-					border-color: white;
-				}
-
-				@include sm {
-					font-size: 15px;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-					margin-left: 15px;
-
-					svg {
-						margin: unset;
-						margin-bottom: 5px;
-					}
-				}
-
-				&:first-child {
-					margin-left: unset;
-				}
-			}
-		}
+	.links a {
+		margin-right: 1.5em;
 	}
 </style>
