@@ -66,6 +66,13 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 				line-height: 1.5em;
 			}
 
+			section h2 {
+				text-align: center;
+				font-size: 2em;
+				font-weight: 500;
+				margin-bottom: 1.5em;
+			}
+
 			button,
 			.button {
 				width: 100%;
@@ -83,6 +90,10 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 				transition: background-color $transitionTime ease-out;
 
 				@include center();
+			}
+
+			#further a.button {
+				backdrop-filter: none;
 			}
 
 			button:hover {
