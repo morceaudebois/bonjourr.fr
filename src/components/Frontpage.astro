@@ -1,6 +1,7 @@
 ---
 import Trans from './Trans.astro'
 
+import LandingBackground from '../assets/seaside.webp'
 import DynamicImage from '../assets/dynamic.webp'
 import DynamicImage2x from '../assets/dynamic2x.webp'
 import CustomiseImage from '../assets/customise.png'
@@ -8,14 +9,15 @@ import CustomiseImage from '../assets/customise.png'
 import KofiIcon from '../assets/icons/donate/ko-fi.svg'
 import BtcIcon from '../assets/icons/donate/btc.svg'
 
-import Hero from './Hero.astro'
+import Background from './Background.astro'
 import Landing from './Frontpage/Landing.astro'
 import Further from './Frontpage/Further.astro'
 ---
 
-<Hero>
+<section id='hero'>
+	<Background src={LandingBackground} />
 	<Landing />
-</Hero>
+</section>
 
 <section id='main'>
 	<div class='section-wrapper'>
@@ -175,6 +177,21 @@ import Further from './Frontpage/Further.astro'
 
 <style lang='scss'>
 	@import '../styles/global.scss';
+
+	#hero {
+		display: flex;
+		position: relative;
+		padding: 4em;
+		justify-content: center;
+		align-items: center;
+		min-height: calc(90vh - 8em);
+	}
+
+	@media only screen and (max-width: 500px) {
+		#hero {
+			padding: 6em 2em;
+		}
+	}
 
 	h2 {
 		text-align: center;
@@ -442,7 +459,8 @@ import Further from './Frontpage/Further.astro'
 	}
 
 	#open,
-	#donate {
+	#donate,
+	#further {
 		min-height: 80vh;
 		@include centerColumns;
 

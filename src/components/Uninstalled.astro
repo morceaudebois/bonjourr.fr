@@ -1,15 +1,17 @@
 ---
 import Trans from '../components/Trans.astro'
 import useTranslation from '../locales/useTranslation'
+import Background from './Background.astro'
+
+import BackgroundImage from '../assets/greens.jpg'
 
 const { isFrench } = useTranslation(Astro)
 const locale = isFrench() ? '/fr/' : '/'
 ---
 
-<div id='hero'>
-	<span class='background'></span>
-
-	<div id='formContainer'>
+<Background src={BackgroundImage} />
+<section>
+	<div id='form-container'>
 		<h2>
 			<Trans>Thank you for using Bonjourr.</Trans>
 		</h2>
@@ -44,30 +46,23 @@ const locale = isFrench() ? '/fr/' : '/'
 			</button>
 		</form>
 	</div>
-</div>
+</section>
 
-<style lang='scss'>
-	@import '../styles/_global.scss';
-
-	.background:before {
-		background-image: url('../assets/greens.jpg');
-		background-size: cover;
-	}
-
-	#hero {
-		height: 100vh;
-		box-sizing: border-box;
+<style>
+	section {
+		padding: 6em 2em;
+		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
-	#formContainer {
-		min-height: 60vh;
+	#form-container {
+		height: 900px;
 		max-width: 550px;
+	}
 
-		h2 {
-			font-size: 3em;
-		}
+	h2 {
+		font-size: 3em;
 	}
 
 	form {
@@ -89,7 +84,7 @@ const locale = isFrench() ? '/fr/' : '/'
 	button {
 		margin: 0.5em 0;
 		padding: 1em;
-		border: 0px;
+		border: 1px solid #fff2;
 		border-radius: 10px;
 		font-family: inherit;
 		font-size: 1em;
@@ -105,7 +100,7 @@ const locale = isFrench() ? '/fr/' : '/'
 	textarea:focus,
 	button:focus {
 		background-color: #fff3;
-		outline: 3px solid #0072eeaa;
+		outline: 3px solid #0072eecc;
 	}
 
 	textarea {
@@ -119,5 +114,15 @@ const locale = isFrench() ? '/fr/' : '/'
 		margin-top: 2em;
 		color: white;
 		cursor: pointer;
+	}
+
+	@media only screen and (max-width: 500px) {
+		section {
+			padding-top: 8em;
+		}
+
+		h2 {
+			font-size: 2em;
+		}
 	}
 </style>

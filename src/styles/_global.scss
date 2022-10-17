@@ -42,11 +42,6 @@ body {
 	}
 }
 
-a {
-	color: $blackish;
-	text-decoration: none;
-}
-
 @mixin textShadow {
 	text-shadow: 0 0px 50px rgba(0, 0, 0, 0.4);
 }
