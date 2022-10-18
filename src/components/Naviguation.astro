@@ -47,8 +47,9 @@ const locale = fr ? '/fr/' : '/'
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 2em;
+		gap: 2em;
 		max-width: 1200px;
+		padding: 2em;
 		margin: auto;
 	}
 
@@ -79,5 +80,15 @@ const locale = fr ? '/fr/' : '/'
 
 	.links a {
 		margin-right: 1.5em;
+	}
+
+	@media only screen and (max-width: 500px) {
+		nav .container {
+			align-items: flex-start;
+		}
+
+		.language {
+			padding: 0;
+		}
 	}
 </style>
