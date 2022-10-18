@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte'
 	import { detect } from 'detect-browser'
 
 	import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
@@ -7,40 +8,39 @@
 	import FirefoxIcon from '../../assets/icons/browsers/firefox.svg'
 	import SafariIcon from '../../assets/icons/browsers/safari.svg'
 
-	const platforms = {
-		firefox: {
-			link: 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/',
-			icon: FirefoxIcon,
-		},
-		chrome: {
-			link: 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd',
-			icon: ChromeIcon,
-		},
-		'edge-chromium': {
-			link: 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid',
-			icon: EdgeIcon,
-		},
-		safari: {
-			link: 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236',
-			icon: SafariIcon,
-		},
-		ios: {
-			link: '/use-bonjourr#-ios-and-android',
-			icon: SafariIcon,
-		},
-	}
-
 	let icon = ''
 	let link = ''
 
-	$: {
-		const browserName = detect().name
+	onMount(() => {
+		switch (detect().name) {
+			case 'firefox': {
+				link = 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
+				icon = FirefoxIcon
+				break
+			}
 
-		if (browserName in platforms) {
-			icon = platforms[browserName].icon
-			link = platforms[browserName].link
+			case 'edge-chromium': {
+				link = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+				icon = EdgeIcon
+				break
+			}
+			case 'safari': {
+				link = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
+				icon = SafariIcon
+				break
+			}
+			case 'ios': {
+				link = '/use-bonjourr#-ios-and-android'
+				icon = SafariIcon
+				break
+			}
+			default: {
+				link =
+					'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd'
+				icon = ChromeIcon
+			}
 		}
-	}
+	})
 </script>
 
 <div class="container">
