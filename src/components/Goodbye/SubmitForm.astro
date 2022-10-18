@@ -1,9 +1,9 @@
 ---
-import Trans from '../components/Trans.astro'
-import Background from './Background.astro'
-import useTranslation from '../locales/useTranslation'
+import Trans from '../../components/Trans.astro'
+import Background from '../Background.astro'
+import useTranslation from '../../locales/useTranslation'
 
-import BackgroundImage from '../assets/greens.jpg'
+import BackgroundImage from '../../assets/greens.jpg'
 
 const { isFrench } = useTranslation(Astro)
 const locale = isFrench() ? '/fr/' : '/'

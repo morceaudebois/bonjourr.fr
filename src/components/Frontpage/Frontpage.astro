@@ -1,19 +1,21 @@
 ---
-import Trans from './Trans.astro'
+import Trans from '../Trans.astro'
 
-import LandingBackground from '../assets/seaside.webp'
+import LandingImage from '../../assets/seaside.webp'
+import OpenImage from '../../assets/mountains.webp'
+import DonateImage from '../../assets/greens.webp'
 
-import KofiIcon from '../assets/icons/donate/ko-fi.svg'
-import BtcIcon from '../assets/icons/donate/btc.svg'
+import KofiIcon from '../../assets/icons/donate/ko-fi.svg'
+import BtcIcon from '../../assets/icons/donate/btc.svg'
 
-import Background from './Background.astro'
-import Landing from './Frontpage/Landing.astro'
-import Further from './Frontpage/Further.astro'
-import Showcase from './Frontpage/Showcase.astro'
+import Background from '../Background.astro'
+import Landing from './Landing.astro'
+import Further from './Further.astro'
+import Showcase from './Showcase.astro'
 ---
 
 <section id='hero'>
-	<Background src={LandingBackground} />
+	<Background src={LandingImage} blur='1' />
 	<Landing />
 </section>
 
@@ -22,6 +24,8 @@ import Showcase from './Frontpage/Showcase.astro'
 </section>
 
 <section id='open'>
+	<Background src={OpenImage} />
+
 	<div class='section-wrapper'>
 		<h2>
 			<span role='img' aria-label='lock-emoji'> 🔒</span>{' '}
@@ -42,6 +46,8 @@ import Showcase from './Frontpage/Showcase.astro'
 </section>
 
 <section id='donate'>
+	<Background src={DonateImage} />
+
 	<div class='section-wrapper'>
 		<h2>
 			<Trans>Donate</Trans>
@@ -75,20 +81,20 @@ import Showcase from './Frontpage/Showcase.astro'
 </section>
 
 <style lang='scss'>
-	@import '../styles/global.scss';
-
 	#hero {
 		display: flex;
 		position: relative;
-		padding: 4em;
+		padding: 8em 4em;
+		padding-top: 8em;
 		justify-content: center;
 		align-items: center;
-		min-height: calc(90vh - 8em);
+		min-height: calc(90vh - 16em);
 	}
 
 	@media only screen and (max-width: 500px) {
 		#hero {
-			padding: 6em 2em;
+			padding: 10em 2em;
+			min-height: 400px;
 		}
 	}
 
@@ -97,12 +103,6 @@ import Showcase from './Frontpage/Showcase.astro'
 		font-size: 35px;
 		font-weight: 500;
 		margin-bottom: 1.5em;
-
-		@include sm {
-			font-size: 25px;
-			margin-bottom: 1em;
-			text-align: left;
-		}
 	}
 
 	h3 {
@@ -112,14 +112,7 @@ import Showcase from './Frontpage/Showcase.astro'
 	}
 
 	section {
-		@include sidePadding();
-
 		padding: 4em;
-
-		@include sm {
-			padding-top: 3em;
-			padding-bottom: 3em;
-		}
 	}
 
 	.section-wrapper {
@@ -129,17 +122,10 @@ import Showcase from './Frontpage/Showcase.astro'
 
 	#open,
 	#donate {
+		position: relative;
 		color: white;
 		background-position: 50% 50%;
 		background-size: cover;
-	}
-
-	#open {
-		background-image: url('../assets/mountains.webp');
-	}
-
-	#donate {
-		background-image: url('../assets/greens.webp');
 	}
 
 	#showcase {

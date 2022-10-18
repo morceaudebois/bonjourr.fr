@@ -26,6 +26,7 @@ import CustomiseImage from '../../assets/customise.webp'
 				srcset={DynamicImage2x + ' 2x'}
 				alt='Bonjourr dynamic backgrounds screenshot'
 				width='560'
+				height='372'
 			/>
 		</div>
 
@@ -60,7 +61,7 @@ import CustomiseImage from '../../assets/customise.webp'
 		</div>
 
 		<div class='right'>
-			<img src={CustomiseImage} alt='Bonjourr dynamic backgrounds screenshot' width='560' />
+			<img src={CustomiseImage} alt='Bonjourr dynamic backgrounds screenshot' width='560' height='342' />
 		</div>
 	</div>
 
@@ -111,8 +112,14 @@ import CustomiseImage from '../../assets/customise.webp'
 		margin: auto;
 	}
 
-	.image-row {
-		margin: 8em 0;
+	#intro p {
+		max-width: 800px;
+		margin: auto;
+		text-align: center;
+	}
+
+	img {
+		object-fit: contain;
 	}
 
 	h3 {
@@ -129,17 +136,12 @@ import CustomiseImage from '../../assets/customise.webp'
 		margin: 1.5em 0;
 	}
 
-	#intro p {
-		max-width: 800px;
-		margin: auto;
-		text-align: center;
-	}
-
 	.image-row {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 4em;
+		margin: 8em 0;
 	}
 
 	#more h3 {

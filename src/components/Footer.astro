@@ -53,8 +53,6 @@ const { isFrench } = useTranslation(Astro)
 </footer>
 
 <style lang='scss'>
-	@import '../styles/_global.scss';
-
 	footer {
 		position: absolute;
 		bottom: 0;
@@ -71,8 +69,7 @@ const { isFrench } = useTranslation(Astro)
 		justify-content: space-between;
 		margin: auto;
 		padding: 2em;
-
-		@include maxWidth;
+		max-width: 1200px;
 	}
 
 	#signature {

@@ -1,26 +1,36 @@
 ---
-const { src } = Astro.props
+const { src, blur } = Astro.props
 ---
 
-<div class='background' style={src && 'background-image: url(' + src + ')'}>
-	<div class='overlay'></div>
+<div>
+	<img src={src} alt='' style={blur && 'filter: blur(' + blur + 'em)'} />
 </div>
 
 <style>
-	.background {
+	img,
+	div {
 		position: absolute;
-		height: 100%;
-		width: 100%;
+		user-select: none;
+		pointer-events: none;
+		touch-action: none;
 		z-index: -1;
-		background-size: cover;
-		background-position: 0% center;
 	}
 
-	.overlay {
-		position: absolute;
+	img {
+		top: -2em;
+		left: -2em;
+		height: calc(100% + 4em);
+		width: calc(100% + 4em);
+		background-size: cover;
+		background-position: 0% center;
+		object-fit: cover;
+	}
+
+	div {
 		top: 0;
 		width: 100%;
 		height: 100%;
-		backdrop-filter: blur(12px);
+		overflow: hidden;
+		background-color: #222;
 	}
 </style>

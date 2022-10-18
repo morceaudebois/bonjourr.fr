@@ -1,5 +1,5 @@
 ---
-import Download from '../Download.svelte'
+import Download from './Download.svelte'
 import Trans from '../Trans.astro'
 
 import Illustration from '../../assets/illustration/illu.webp'
@@ -27,7 +27,7 @@ import Illustration2x from '../../assets/illustration/illu2x.webp'
 		</div>
 	</div>
 
-	<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' />
+	<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' height='356' />
 </div>
 
 <style>
@@ -36,8 +36,11 @@ import Illustration2x from '../../assets/illustration/illu2x.webp'
 		margin: 0;
 	}
 
+	img {
+		object-fit: contain;
+	}
+
 	.wrapper {
-		height: 80vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -55,7 +58,7 @@ import Illustration2x from '../../assets/illustration/illu2x.webp'
 	}
 
 	.link {
-		margin-top: 1em;
+		margin-top: 1.5em;
 	}
 
 	.link a {
@@ -79,9 +82,27 @@ import Illustration2x from '../../assets/illustration/illu2x.webp'
 	}
 
 	@media only screen and (max-width: 1100px) {
+		img {
+			width: 400px;
+		}
+
+		.wrapper {
+			gap: 2em;
+		}
+
+		.title {
+			font-size: 1.4em;
+		}
+	}
+
+	@media only screen and (max-width: 900px) {
 		.wrapper {
 			flex-direction: column;
-			gap: 6em;
+			gap: 4em;
+		}
+
+		img {
+			width: 480px;
 		}
 
 		.left {
@@ -99,8 +120,12 @@ import Illustration2x from '../../assets/illustration/illu2x.webp'
 			font-size: 1.4em;
 		}
 
+		.wrapper {
+			height: auto;
+		}
+
 		img {
-			width: 100%;
+			display: none;
 		}
 	}
 </style>

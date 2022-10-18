@@ -1,6 +1,7 @@
 ---
 import Layout from './Layout.astro'
 import useTranslation from '../locales/useTranslation'
+import Background from '../components/Background.astro'
 
 type Heading = { text: string; slug: string; depth: number }
 
@@ -26,15 +27,9 @@ const currentURL = frontmatter.url
 ---
 
 <Layout title={frontmatter.title + " · Bonjourr's documentation"}>
-	<div id='docHero'>
-		<div class='hero' style={`background-image: url('${frontmatter.featured}')`}>
-			<div class='container'>
-				<div class='empty'></div>
-				<div class='theContent'>
-					<h1>{frontmatter.title}</h1>
-				</div>
-			</div>
-		</div>
+	<div id='hero'>
+		<Background src={frontmatter.featured} />
+		<h1>{frontmatter.title}</h1>
 	</div>
 
 	<article class={frontmatter.slug}>
@@ -67,61 +62,24 @@ const currentURL = frontmatter.url
 </Layout>
 
 <style is:global lang='scss'>
-	@import '../styles/_global.scss';
-
-	.hero,
-	article {
-		@include sidePadding;
-	}
-
-	.hero {
-		height: 33vh;
-		min-height: 250px;
+	#hero {
+		position: relative;
+		height: 30vh;
+		padding-top: 2em;
+		min-height: 300px;
 		color: white;
 		display: flex;
+		align-items: center;
 		background-size: cover;
 		background-position: center;
 
-		.container {
-			display: flex;
-			width: 100%;
-
-			.empty {
-				flex: 1;
-
-				@include md {
-					display: none;
-				}
-			}
-
-			.theContent {
-				flex: 4;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				@include textShadow;
-
-				@include md {
-					width: 100% !important;
-				}
-
-				@include sm {
-					margin-top: 50px;
-				}
-			}
-		}
-
 		h1 {
 			font-weight: 500;
-			font-size: 60px;
-
-			@include md {
-				font-size: 40px;
-			}
-
-			@include sm {
-				font-size: 30px;
-			}
+			font-size: 3em;
+			width: 60%;
+			margin: auto;
+			padding: 0 1em;
+			max-width: 1200px;
 		}
 	}
 
@@ -154,10 +112,12 @@ const currentURL = frontmatter.url
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin: 5em auto 0 auto;
-		padding-bottom: 16em;
+		margin: auto;
+		padding: 4em 2em 14em 2em;
+		min-height: calc(70vh - 18em);
 		font-size: 16px;
 		gap: 4em;
+		background-color: #2a2a2a;
 	}
 
 	.docs-nav {
@@ -199,9 +159,9 @@ const currentURL = frontmatter.url
 			}
 		}
 
-		@include md {
-			margin-bottom: 2em;
-		}
+		// @include md {
+		// 	margin-bottom: 2em;
+		// }
 	}
 
 	.content {
@@ -289,25 +249,18 @@ const currentURL = frontmatter.url
 		}
 	}
 
-	body {
-		@media (prefers-color-scheme: dark) {
-			background: rgb(39, 39, 39);
-			article,
-			.docNav a {
-				color: rgb(240, 240, 240);
-			}
+	@media only screen and (max-width: 500px) {
+		#hero h1 {
+			padding: 2em 0 0 0;
+			font-size: 2em;
 		}
 
-		&.css-snippet {
-			h3 {
-				margin-bottom: 5px;
-			}
+		.content h2 {
+			font-size: 1.5em;
+		}
+
+		article {
+			padding-bottom: 4em;
 		}
 	}
-
-	// @media only screen and (max-width: 1100px) {
-	// 	article {
-	// 		flex-direction: column;
-	// 	}
-	// }
 </style>

@@ -1,12 +1,11 @@
 <script>
 	import { detect } from 'detect-browser'
-	import '../styles/_global.scss'
 
-	import DesktopIcon from '../assets/icons/browsers/desktop.svg'
-	import ChromeIcon from '../assets/icons/browsers/chrome.svg'
-	import EdgeIcon from '../assets/icons/browsers/edge.svg'
-	import FirefoxIcon from '../assets/icons/browsers/firefox.svg'
-	import SafariIcon from '../assets/icons/browsers/safari.svg'
+	import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
+	import ChromeIcon from '../../assets/icons/browsers/chrome.svg'
+	import EdgeIcon from '../../assets/icons/browsers/edge.svg'
+	import FirefoxIcon from '../../assets/icons/browsers/firefox.svg'
+	import SafariIcon from '../../assets/icons/browsers/safari.svg'
 
 	const platforms = {
 		firefox: {
@@ -47,9 +46,7 @@
 <div class="container">
 	<a href="{link}" class="button">
 		<div class="icon">
-			{#if link && icon}
-				<img src="{icon}" alt="" />
-			{/if}
+			<img src="{icon}" alt="" style="{'opacity: ' + (icon ? 1 : 0)}" />
 		</div>
 		<span>
 			<slot name="Download" />
@@ -68,16 +65,7 @@
 	.container {
 		display: flex;
 		justify-content: center;
-	}
-
-	.button:first-child {
-		margin-right: 1em;
-	}
-
-	a.button {
-		padding-left: 1.5em;
-		padding-right: 1.5em;
-		white-space: nowrap;
+		gap: 1em;
 	}
 
 	@media only screen and (max-width: 450px) {
