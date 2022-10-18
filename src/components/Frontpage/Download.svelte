@@ -62,6 +62,10 @@
 </div>
 
 <style>
+	a {
+		min-width: 200px;
+	}
+
 	.container {
 		display: flex;
 		justify-content: center;
