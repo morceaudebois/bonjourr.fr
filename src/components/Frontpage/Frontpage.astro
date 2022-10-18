@@ -20,7 +20,9 @@ import Showcase from './Showcase.astro'
 </section>
 
 <section id='showcase'>
-	<Showcase />
+	<div class='section-wrapper'>
+		<Showcase />
+	</div>
 </section>
 
 <section id='open'>
@@ -42,7 +44,9 @@ import Showcase from './Showcase.astro'
 </section>
 
 <section id='further'>
-	<Further />
+	<div class='section-wrapper'>
+		<Further />
+	</div>
 </section>
 
 <section id='donate'>
@@ -81,6 +85,19 @@ import Showcase from './Showcase.astro'
 </section>
 
 <style lang='scss'>
+	h2 {
+		text-align: center;
+		font-size: 35px;
+		font-weight: 500;
+		margin-bottom: 1.5em;
+	}
+
+	h3 {
+		font-size: 2em;
+		font-weight: 500;
+		text-align: center;
+	}
+
 	#hero {
 		display: flex;
 		position: relative;
@@ -98,25 +115,19 @@ import Showcase from './Showcase.astro'
 		}
 	}
 
-	h2 {
-		text-align: center;
-		font-size: 35px;
-		font-weight: 500;
-		margin-bottom: 1.5em;
-	}
-
-	h3 {
-		font-size: 2em;
-		font-weight: 500;
-		text-align: center;
-	}
-
-	section {
-		padding: 4em;
-	}
-
 	.section-wrapper {
 		margin: auto;
+		padding: 2em;
+		max-width: 1200px;
+	}
+
+	#showcase {
+		color: white;
+		background: linear-gradient(0.25turn, #140a17, #231730, #140a17);
+	}
+
+	#open .section-wrapper,
+	#donate .section-wrapper {
 		max-width: 700px;
 	}
 
@@ -128,9 +139,9 @@ import Showcase from './Showcase.astro'
 		background-size: cover;
 	}
 
-	#showcase {
-		color: white;
-		background: linear-gradient(0.25turn, #140a17, #231730, #140a17);
+	#open p,
+	#donate p {
+		text-shadow: 0px 0px 1em #222;
 	}
 
 	#open,
@@ -155,7 +166,7 @@ import Showcase from './Showcase.astro'
 		flex-wrap: wrap;
 		justify-content: center;
 		width: 100%;
-		column-gap: 1em;
+		gap: 1em;
 		margin-top: 3em;
 	}
 </style>
