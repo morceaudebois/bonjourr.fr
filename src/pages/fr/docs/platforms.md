@@ -4,7 +4,7 @@ subtitle:
 slug: use-bonjourr
 orderData: 1
 layout: ../../../layouts/Docs.astro
-featured: ../../../backgrounds/jellyfish.jpg
+featured: /backgrounds/danist-bviex5lwf3s.webp
 ---
 
 ## 🖥️ Comme extension de navigateur

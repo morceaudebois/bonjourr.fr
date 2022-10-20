@@ -4,7 +4,7 @@ subtitle: Here are some pre-made themes you can import at the bottom of the sett
 slug: profiles
 orderData: 5
 layout: '../../layouts/Docs.astro'
-featured: ../../backgrounds/blue-shore.jpg
+featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 ---
 
 ### Cyberpunk 2077

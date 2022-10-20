@@ -4,7 +4,7 @@ subtitle: Bonjourr is customisable through its settings interface, but there are
 slug: css
 orderData: 4
 layout: '../../layouts/Docs.astro'
-featured: ../../backgrounds/hill-house.jpg
+featured: /backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
 
 ### I want my own greeting

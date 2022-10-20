@@ -4,7 +4,7 @@ subtitle:
 slug: help
 orderData: 3
 layout: '../../layouts/Docs.astro'
-featured: /backgrounds/cliffs.jpg
+featured: /backgrounds/jonny-gios-gBr5Hmx1STc.webp
 ---
 
 ## 💵 Donations
