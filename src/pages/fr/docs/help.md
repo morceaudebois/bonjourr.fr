@@ -4,7 +4,7 @@ subtitle:
 slug: help
 orderData: 3
 layout: ../../../layouts/Docs.astro
-featured: /backgrounds/cliffs.jpg
+featured: ../../../backgrounds/cliffs.jpg
 ---
 
 ## 💵 Dons
