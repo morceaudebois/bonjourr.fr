@@ -4,7 +4,7 @@ subtitle:
 slug: help
 orderData: 3
 layout: '../../layouts/Docs.astro'
-featured: /backgrounds/cliffs.jpg
+featured: /backgrounds/jonny-gios-gBr5Hmx1STc.webp
 ---
 
 ## 💵 Donations
@@ -26,12 +26,12 @@ There are two ways you can help out if you spot missing strings in a language or
 -   if you're familiar with how GitHub works, you can head to [this file](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.js), translate it and create a pull request
 -   if you aren't familiar with GitHub, you need to download [this file](https://raw.githubusercontent.com/victrme/Bonjourr/master/src/scripts/lang.js), edit it and then send it directly to us (either [via email](mailto:bonjourr.app@protonmail.com) or to [our Telegram group](https://t.me/BonjourrStartpage)).
 
-⚠️ Either way, don't forget to add your name and link at the top of the file so we can credit you! ⚠️
+⚠️ Don't forget to add your name and link at the top of the file so we can credit you!
 
-You can also help translate Bonjourr's extension store pages, check out these files on [our repository](https://github.com/victrme/Bonjourr/):
+<!-- You can also help translate Bonjourr's extension store pages, check out these files on [our repository](https://github.com/victrme/Bonjourr/):
 
 -   `/_locales/yourlang/messages.json` for the title and subtitle of Bonjourr's extension store pages
--   `/_locales/yourlang/overview.md` for Bonjourr's full description on extension store pages
+-   `/_locales/yourlang/overview.md` for Bonjourr's full description on extension store pages -->
 
 ## 👨‍💻 Contributions
 

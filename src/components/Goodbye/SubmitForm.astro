@@ -1,13 +1,16 @@
 ---
-import Trans from '../components/Trans.astro'
-import useTranslation from '../locales/useTranslation'
+import Trans from '../../components/Trans.astro'
+import Background from '../Background.astro'
+import useTranslation from '../../locales/useTranslation'
+
+import BackgroundImage from '../../assets/greens.webp'
 
 const { isFrench } = useTranslation(Astro)
 const locale = isFrench() ? '/fr/' : '/'
 ---
 
-<div id='hero'>
-	<span class='background'></span>
+<section>
+	<Background src={BackgroundImage} />
 
 	<div class='message'>
 		<h2>
@@ -18,14 +21,15 @@ const locale = isFrench() ? '/fr/' : '/'
 			<Trans>Back to home</Trans>
 		</a>
 	</div>
-</div>
+</section>
 
 <style>
-	div#hero {
-		height: 100vh;
+	section {
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-direction: column;
+		min-height: 100vh;
+		padding: 0 2em;
 	}
 
 	.message {

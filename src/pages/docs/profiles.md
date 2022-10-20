@@ -4,12 +4,12 @@ subtitle: Here are some pre-made themes you can import at the bottom of the sett
 slug: profiles
 orderData: 5
 layout: '../../layouts/Docs.astro'
-featured: ../../backgrounds/blue-shore.jpg
+featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 ---
 
 ### Cyberpunk 2077
 
-![Cyberpunk 2077 Bonjourr theme](../documentation/cyberpunk.jpeg)
+![Cyberpunk 2077 Bonjourr theme](../documentation/profiles/cyberpunk.webp)
 
 ```json
 {
@@ -36,7 +36,7 @@ featured: ../../backgrounds/blue-shore.jpg
 
 ### The Space Enthusiast
 
-![Space Bonjourr theme](../documentation/SPACE.jpeg)
+![Space Bonjourr theme](../documentation/profiles/space.webp)
 
 ```json
 {
@@ -65,7 +65,7 @@ featured: ../../backgrounds/blue-shore.jpg
 
 ### Floral
 
-![Floral Bonjourr theme](../documentation/floral.jpeg)
+![Floral Bonjourr theme](../documentation/profiles/floral.webp)
 
 ```json
 {
@@ -91,7 +91,7 @@ featured: ../../backgrounds/blue-shore.jpg
 
 ### Not Momentum
 
-![Not Momentum Bonjourr theme](../documentation/not_momentum.jpeg)
+![Not Momentum Bonjourr theme](../documentation/profiles/not_momentum.webp)
 
 ```json
 {

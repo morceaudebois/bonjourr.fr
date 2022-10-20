@@ -1,6 +1,7 @@
 ---
 import Layout from './Layout.astro'
 import useTranslation from '../locales/useTranslation'
+import Background from '../components/Background.astro'
 
 type Heading = { text: string; slug: string; depth: number }
 
@@ -26,18 +27,12 @@ const currentURL = frontmatter.url
 ---
 
 <Layout title={frontmatter.title + " · Bonjourr's documentation"}>
-	<div id='docHero'>
-		<div class='hero' style={`background-image: url('${frontmatter.featured}')`}>
-			<div class='container'>
-				<div class='empty'></div>
-				<div class='theContent'>
-					<h1>{frontmatter.title}</h1>
-				</div>
-			</div>
-		</div>
+	<div id='hero'>
+		<Background src={frontmatter.featured} />
+		<h1>{frontmatter.title}</h1>
 	</div>
 
-	<article>
+	<article class={frontmatter.slug}>
 		<div class='docs-nav'>
 			<ul>
 				{
@@ -67,86 +62,62 @@ const currentURL = frontmatter.url
 </Layout>
 
 <style is:global lang='scss'>
-	@import '../styles/_global.scss';
-
-	.hero,
-	article {
-		@include sidePadding;
-	}
-
-	.hero {
-		height: 33vh;
-		min-height: 250px;
+	#hero {
+		position: relative;
+		height: 30vh;
+		padding-top: 2em;
+		min-height: 300px;
 		color: white;
 		display: flex;
+		align-items: center;
 		background-size: cover;
 		background-position: center;
 
-		.container {
-			display: flex;
-			width: 100%;
-
-			.empty {
-				flex: 1;
-
-				@include md {
-					display: none;
-				}
-			}
-
-			.theContent {
-				flex: 4;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				@include textShadow;
-
-				@include md {
-					width: 100% !important;
-				}
-
-				@include sm {
-					margin-top: 50px;
-				}
-			}
-		}
-
 		h1 {
 			font-weight: 500;
-			font-size: 60px;
-
-			@include md {
-				font-size: 40px;
-			}
-
-			@include sm {
-				font-size: 30px;
-			}
+			font-size: 3em;
+			width: 60%;
+			margin: auto;
+			padding: 0 1em;
+			max-width: 1200px;
 		}
+	}
+
+	code {
+		border-radius: 3px;
+		padding: 2px 10px;
+		font-size: 14px;
+		font-weight: 600;
+		color: #e6db74;
+		background-color: #333;
+		overflow-wrap: break-word;
+	}
+
+	pre {
+		tab-size: 1.5em;
+		padding: 1.5em;
+		border-radius: 0.5em;
+	}
+
+	article.profiles pre {
+		white-space: normal;
+	}
+
+	pre > code {
+		background-color: transparent;
 	}
 
 	article {
 		position: relative;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		margin: 60px auto 120px auto;
-		max-width: 1400px;
-		column-gap: 4em;
+		margin: auto;
+		padding: 4em 2em 14em 2em;
+		min-height: calc(70vh - 18em);
 		font-size: 16px;
-
-		@include md {
-			flex-direction: column;
-		}
-
-		code.language-text {
-			font-family: 'Roboto Mono', monospace;
-			background-color: #f5f7f9;
-			border-radius: 6px;
-			padding: 2px 10px;
-			font-size: 14px;
-			box-sizing: border-box;
-			overflow-wrap: break-word;
-		}
+		gap: 4em;
+		background-color: #2a2a2a;
 	}
 
 	.docs-nav {
@@ -188,13 +159,14 @@ const currentURL = frontmatter.url
 			}
 		}
 
-		@include md {
-			margin-bottom: 2em;
-		}
+		// @include md {
+		// 	margin-bottom: 2em;
+		// }
 	}
 
 	.content {
 		max-width: 700px;
+		width: 100%;
 
 		.subtitle {
 			margin-bottom: 3em;
@@ -206,16 +178,16 @@ const currentURL = frontmatter.url
 		h4,
 		h5,
 		h6 {
-			margin: 40px 0 20px 0;
+			margin: 0 0 20px 0;
+			padding-top: 60px;
 			font-weight: 500;
 
 			&:first-child {
-				margin-top: 0;
+				padding-top: 0;
 			}
 		}
 
 		h2 {
-			margin: 60px 0 25px 0;
 			font-size: 1.8em;
 		}
 
@@ -277,19 +249,18 @@ const currentURL = frontmatter.url
 		}
 	}
 
-	body {
-		@media (prefers-color-scheme: dark) {
-			background: rgb(39, 39, 39);
-			article,
-			.docNav a {
-				color: rgb(240, 240, 240);
-			}
+	@media only screen and (max-width: 500px) {
+		#hero h1 {
+			padding: 2em 0 0 0;
+			font-size: 2em;
 		}
 
-		&.css-snippet {
-			h3 {
-				margin-bottom: 5px;
-			}
+		.content h2 {
+			font-size: 1.5em;
+		}
+
+		article {
+			padding-bottom: 4em;
 		}
 	}
 </style>

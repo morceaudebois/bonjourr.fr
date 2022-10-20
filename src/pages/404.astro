@@ -1,0 +1,66 @@
+---
+import Background from '../components/Background.astro'
+import Layout from '../layouts/Layout.astro'
+import Image from '../assets/seaside.webp'
+
+import useTranslation from '../locales/useTranslation'
+
+const { t, isFrench } = useTranslation(Astro)
+---
+
+<script is:inline>
+	const oldURLs = ['/use-bonjourr', '/misc', '/profiles', '/styles']
+	let path = location.pathname
+
+	if (oldURLs.includes(path)) {
+		path = path.replace('misc', 'overview')
+		path = path.replace('use-bonjourr', 'platforms')
+		path = path.replace('/', '/docs/')
+
+		if (navigator.language === 'fr') {
+			path = path.replace('/docs/', '/fr/docs/')
+		}
+
+		location.assign(path)
+	}
+</script>
+
+<Layout title='404! · Bonjourr Startpage' id='404' lang='en'>
+	<Background src={Image} blur='2' />
+
+	<div class='wrapper'>
+		<h1>
+			<span>4</span>
+			<span>0</span>
+			<span>4</span>
+		</h1>
+		<a href={isFrench() ? '/fr/' : '/'} class='button'>{t('Back to home')}</a>
+	</div>
+</Layout>
+
+<style>
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 20em;
+	}
+
+	h1 {
+		display: inline-flex; /* removes whitespaces nodes on firefox */
+		margin-top: 0;
+		font-size: 10em;
+		text-shadow: 0.07em 0.07em #fff3;
+		letter-spacing: 0;
+		cursor: default;
+	}
+
+	h1 span {
+		transition: transform 0.15s;
+	}
+
+	h1 span:hover {
+		transform: scale(0.8);
+	}
+</style>

@@ -1,0 +1,134 @@
+---
+import Trans from '../Trans.astro'
+
+import GithubIcon from '../../assets/icons/further/github.svg'
+import DocsIcon from '../../assets/icons/further/docs.svg'
+import TelegramIcon from '../../assets/icons/further/telegram.svg'
+
+import useTranslation from '../../locales/useTranslation'
+
+const { isFrench } = useTranslation(Astro)
+const locale = isFrench() ? '/fr/' : '/'
+---
+
+<div class='container'>
+	<div>
+		<h2>
+			<Trans>Want to go further?</Trans>
+		</h2>
+	</div>
+	<div>
+		<h3>
+			<Trans>Contact us</Trans>
+		</h3>
+		<p>
+			<Trans>
+				Come and hang out on Bonjourr’s official Telegram group. You can tell us about your ideas and read about the
+				latest news about its development.
+			</Trans>
+		</p>
+
+		<a href='https://t.me/BonjourrStartpage' class='button'>
+			<img width='64' src={TelegramIcon} class='icon' alt='' />
+			<span>
+				<Trans>Bonjourr's Telegram</Trans>
+			</span>
+		</a>
+	</div>
+
+	<div>
+		<h3>
+			<Trans>Documentation</Trans>
+		</h3>
+		<p>
+			<Trans>
+				Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code snippets so you can go even
+				further into customisation.
+			</Trans>
+		</p>
+		<a href={locale + 'docs/platforms'} class='button'>
+			<img width='64' src={DocsIcon} class='icon' alt='' />
+			<span>
+				<Trans>Documentation</Trans>
+			</span>
+		</a>
+	</div>
+
+	<div>
+		<h3>
+			<Trans>Fork Bonjourr</Trans>
+		</h3>
+		<p>
+			<Trans>Fork Bonjourr and add your own features on our GitHub repositories. We’re open to pull requests!</Trans>
+		</p>
+		<a href='https://github.com/victrme/Bonjourr' class='button'>
+			<img width='64' src={GithubIcon} class='icon' alt='' />
+			<span>
+				<Trans>GitHub repository</Trans>
+			</span>
+		</a>
+	</div>
+</div>
+
+<style>
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(calc(50% - 3em), 35em));
+		gap: 3em;
+		margin: auto;
+		width: fit-content;
+	}
+
+	.container > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border-radius: 20px;
+		padding: 30px;
+		color: white;
+	}
+
+	.container > div:nth-child(1) {
+		display: flex;
+		place-items: center;
+		place-content: center;
+		color: #222;
+	}
+	.container > div:nth-child(2) {
+		background-color: #579ceb;
+	}
+	.container > div:nth-child(3) {
+		background-color: #127c8d;
+	}
+	.container > div:nth-child(4) {
+		background-color: #333333;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 2em;
+		font-weight: 500;
+		margin-bottom: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		font-weight: 500;
+		margin: 0;
+	}
+
+	p {
+		margin: 2em 0;
+		align-self: flex-start;
+	}
+
+	a {
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 800px) {
+		.container {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

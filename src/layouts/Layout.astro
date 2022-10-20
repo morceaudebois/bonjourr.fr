@@ -6,7 +6,7 @@ import useTranslation from '../locales/useTranslation'
 import favicon from '../assets/favicon.ico'
 
 const { t } = useTranslation(Astro)
-const { title, lang } = Astro.props
+const { title, lang, id } = Astro.props
 
 const metaTitle = t('Startpage for you browser')
 const metaDescription = t(
@@ -19,6 +19,7 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 <html lang={lang}>
 	<head>
 		<title>{title}</title>
+
 		<meta name='viewport' content='width=device-width' />
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
 		<meta name='description' content={metaDescription} />
@@ -33,16 +34,20 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 		<meta name='twitter:creator' content='BonjourrTeam' />
 		<meta name='twitter:title' content={metaTitle} />
 		<meta name='twitter:description' content={metaDescription} />
+
 		<link rel='shortcut icon' href={favicon} type='image/x-icon' />
+		<link rel='preconnect' href='https://fonts.gstatic.com/' />
 	</head>
-	<body>
+	<body id={id && id}>
 		<Naviguation />
 
 		<slot />
 
 		<Footer />
+
 		<style is:global lang='scss'>
-			@import '../styles/_global.scss';
+			@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 			html,
 			body {
@@ -51,45 +56,72 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 				font-family: 'Inter', Helvetica, sans-serif;
 				font-size: 17px;
 				font-weight: 300;
+				color: white;
+				min-height: 100vh;
+				scroll-behavior: smooth;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
 			}
 
 			p {
 				line-height: 1.5em;
 			}
 
-			#hero {
+			#frontpage h2 {
+				text-align: center;
+				font-size: 2em;
+				font-weight: 500;
+				margin-bottom: 1.5em;
+			}
+
+			button,
+			.button {
 				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.7em;
+				width: 100%;
+				max-width: 300px;
+				padding: 0.6em 1.2em;
+				border-radius: 12px;
+				border: 1px solid #fff2;
+				background-color: #fff2;
 				color: white;
-				position: relative;
-				height: 90vh;
-				min-height: 550px;
+				font-weight: bolder;
+				white-space: nowrap;
+				box-sizing: border-box;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				transition: background-color 0.1s ease-out;
+
+				&:hover {
+					background-color: #fff6;
+				}
+
+				img {
+					width: 30px;
+					height: 30px;
+					object-fit: contain;
+				}
 			}
 
-			#hero h1,
-			#hero h2 {
-				font-weight: 300;
+			#further a.button {
+				backdrop-filter: none;
 			}
 
-			.background {
-				position: absolute;
-				overflow: hidden;
-				height: 100%;
-				width: 100%;
-				z-index: -1;
+			@media only screen and (max-width: 700px) {
+				body {
+					font-size: 16px;
+				}
 			}
 
-			.background:before {
-				content: '';
-				position: absolute;
-				background-image: url('../assets/seaside.webp');
-				background-size: cover;
-				background-position: 0% center;
-				filter: blur(12px);
-
-				display: block;
-				width: 100%;
-				height: 100%;
-				transform: scale(1.1);
+			@media only screen and (max-width: 500px) {
+				h3 {
+					font-size: 1.6em;
+				}
 			}
 		</style>
 	</body>

@@ -10,6 +10,7 @@ Thumbs.db
 
 # Project dependencies
 .cache
+.netlify
 node_modules
 yarn-error.log
 package-lock.json

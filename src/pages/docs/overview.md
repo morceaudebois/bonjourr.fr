@@ -4,7 +4,7 @@ subtitle:
 slug: overview
 orderData: 2
 layout: '../../layouts/Docs.astro'
-featured: ../../backgrounds/night-mountain.jpg
+featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 ---
 
 ## Various tips and tricks

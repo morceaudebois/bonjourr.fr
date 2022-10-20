@@ -1,5 +1,5 @@
 import type { AstroGlobal } from 'astro'
-import FrenchDict from '../locales/fr.json'
+import FrenchDict from './fr.json'
 
 export default function useTranslation(Astro: AstroGlobal) {
 	function locale() {
