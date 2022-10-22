@@ -1,0 +1,116 @@
+---
+import DocsHero from './DocsHero.astro'
+import HeroImage from '../../assets/mountains.webp'
+import useTranslation from '../../locales/useTranslation'
+
+const { isFrench } = useTranslation(Astro)
+const locale = isFrench() ? '/fr/' : '/'
+---
+
+<DocsHero title={`Bonjourr's documentation`} src={HeroImage} />
+<main>
+	<ul>
+		<li>
+			<a href={locale + 'docs/platforms'}>
+				<h2>🖥️ Use bonjourr</h2>
+				<p>Access all platforms and browsers</p>
+			</a>
+		</li>
+		<li>
+			<a href={locale + 'docs/overview'}>
+				<h2>📃 Feature Overview</h2>
+				<p>Read on what is possible with Bonjourr</p>
+			</a>
+		</li>
+		<li>
+			<a href={locale + 'docs/styles'}>
+				<h2>🎨 Style snippets</h2>
+				<p>Add some more flavor to your page with bits of code</p>
+			</a>
+		</li>
+		<li>
+			<a href={locale + 'docs/profiles'}>
+				<h2>🖼️ Custom Profiles</h2>
+				<p>Import fully customized pages made by us</p>
+			</a>
+		</li>
+		<li>
+			<a href='/docs/help'>
+				<h2>🫶 Contribute</h2>
+				<p>If you want to be more involved with Bonjourr</p>
+			</a>
+		</li>
+	</ul>
+</main>
+
+<style>
+	main {
+		background-color: #2a2a2a;
+		min-height: calc(70vh - 20em);
+		padding: 6em 2em 12em 2em;
+	}
+
+	ul {
+		display: grid;
+		grid-auto-flow: dense;
+		padding: 0;
+		margin: 0 auto;
+		max-width: 1200px;
+		justify-content: center;
+		grid-template-columns: repeat(auto-fill, 360px);
+		list-style: none;
+		gap: 2em;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	li {
+		border-radius: 8px;
+		border: 1px solid #fff2;
+		background-color: #fff1;
+		transition: background-color 0.2s;
+	}
+
+	li a {
+		display: block;
+		padding: 1em 2em;
+	}
+
+	li:nth-child(1):hover {
+		background-color: #5870a8;
+	}
+
+	li:nth-child(2):hover {
+		background-color: #a87658;
+	}
+
+	li:nth-child(3):hover {
+		background-color: #a89858;
+	}
+
+	li:nth-child(4):hover {
+		background-color: #7f9297;
+	}
+
+	li:nth-child(5):hover {
+		background-color: #8458a8;
+	}
+
+	@media only screen and (max-width: 900px) {
+		main {
+			padding-bottom: 16em;
+		}
+	}
+
+	@media only screen and (max-width: 500px) {
+		main {
+			padding-bottom: 6em;
+		}
+
+		ul {
+			grid-template-columns: repeat(auto-fill, 320px);
+		}
+	}
+</style>

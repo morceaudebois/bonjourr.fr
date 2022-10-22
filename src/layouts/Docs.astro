@@ -1,7 +1,7 @@
 ---
 import Layout from './Layout.astro'
 import useTranslation from '../locales/useTranslation'
-import Background from '../components/Background.astro'
+import DocsHero from '../components/Docs/DocsHero.astro'
 
 type Heading = { text: string; slug: string; depth: number }
 
@@ -14,7 +14,7 @@ const postsFR = await Astro.glob('../pages/fr/docs/*.md')
 
 // Choose which docs to use
 let posts = (isFrench() ? postsFR : postsEN).map((post) => {
-	return { url: post.url, frontmatter: post.frontmatter }
+	return { headings: post.getHeadings(), url: post.url, frontmatter: post.frontmatter }
 })
 
 // Sort by orderData
@@ -27,15 +27,28 @@ const currentURL = frontmatter.url
 ---
 
 <Layout title={frontmatter.title + " · Bonjourr's documentation"}>
-	<div id='hero'>
-		<Background src={frontmatter.featured} />
-		<h1>{frontmatter.title}</h1>
-	</div>
+	<DocsHero src={frontmatter.featured} title={frontmatter.title} />
 
 	<article class={frontmatter.slug}>
 		<div class='docs-nav'>
-			<ul>
-				{
+			{
+				posts.map(({ headings, url, frontmatter }) => (
+					<details>
+						<summary>
+							<a href={url}>{frontmatter.title}</a>
+						</summary>
+						<ul>
+							{headings.map(({ text, slug }) => (
+								<li>
+									<a href={'#' + slug}>{text}</a>
+								</li>
+							))}
+						</ul>
+					</details>
+				))
+			}
+
+			<!-- {
 					posts.map(({ url, frontmatter }) => (
 						<li class={currentURL === url ? 'active' : ''}>
 							<a href={url}>{frontmatter.title}</a>
@@ -50,8 +63,7 @@ const currentURL = frontmatter.url
 							)}
 						</li>
 					))
-				}
-			</ul>
+				} -->
 		</div>
 
 		<div class='content'>
@@ -62,27 +74,6 @@ const currentURL = frontmatter.url
 </Layout>
 
 <style is:global lang='scss'>
-	#hero {
-		position: relative;
-		height: 30vh;
-		padding-top: 2em;
-		min-height: 300px;
-		color: white;
-		display: flex;
-		align-items: center;
-		background-size: cover;
-		background-position: center;
-
-		h1 {
-			font-weight: 500;
-			font-size: 3em;
-			width: 60%;
-			margin: auto;
-			padding: 0 1em;
-			max-width: 1200px;
-		}
-	}
-
 	code {
 		border-radius: 3px;
 		padding: 2px 10px;
@@ -124,6 +115,10 @@ const currentURL = frontmatter.url
 		line-height: 1.7em;
 		min-width: 300px;
 		list-style: outside;
+
+		summary::marker {
+			font-size: 2em;
+		}
 
 		a {
 			color: #fff;

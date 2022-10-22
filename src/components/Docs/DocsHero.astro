@@ -1,0 +1,32 @@
+---
+import Background from '../Background.astro'
+const { src, title } = Astro.props
+---
+
+<div id='hero'>
+	<Background src={src} />
+	<h1>{title}</h1>
+</div>
+
+<style>
+	#hero {
+		position: relative;
+		height: 30vh;
+		padding-top: 2em;
+		min-height: 300px;
+		color: white;
+		display: flex;
+		align-items: center;
+		background-size: cover;
+		background-position: center;
+	}
+
+	#hero h1 {
+		font-weight: 500;
+		font-size: 3em;
+		width: 60%;
+		margin: auto;
+		padding: 0 1em;
+		max-width: 1200px;
+	}
+</style>
