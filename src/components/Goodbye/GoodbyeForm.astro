@@ -1,12 +1,12 @@
 ---
 import Trans from '../../components/Trans.astro'
-import useTranslation from '../../locales/useTranslation'
 import Background from '../Background.astro'
+import useTranslation from '../../locales/useTranslation'
 
 import BackgroundImage from '../../assets/greens.webp'
 
 const { isFrench } = useTranslation(Astro)
-const locale = isFrench() ? '/fr/' : '/'
+const locale = isFrench ? '/fr/' : '/'
 ---
 
 <Background src={BackgroundImage} />

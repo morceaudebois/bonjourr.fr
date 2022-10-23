@@ -1,16 +1,14 @@
 ---
 import Trans from './Trans.astro'
+import Link from './Link.astro'
 import Signatures from './Signatures.svelte'
-import useTranslation from '../locales/useTranslation'
-
-const { isFrench } = useTranslation(Astro)
 ---
 
 <footer>
 	<div class='container'>
 		<div id='legal'>
 			<p>
-				© 2019 <a href={isFrench() ? '/fr/' : '/'}>Bonjourr</a>
+				© 2019 <Link href='/'>Bonjourr</Link>
 			</p>
 
 			<p>

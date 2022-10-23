@@ -1,9 +1,9 @@
 ---
-const { src, blur } = Astro.props
+const { blur } = Astro.props
 ---
 
 <div>
-	<img src={src} alt='' style={blur && 'filter: blur(' + blur + 'em)'} />
+	<img {...Astro.props} alt='' style={blur && 'filter: blur(' + blur + 'em)'} />
 </div>
 
 <style>
@@ -21,8 +21,6 @@ const { src, blur } = Astro.props
 		left: -2em;
 		height: calc(100% + 4em);
 		width: calc(100% + 4em);
-		background-size: cover;
-		background-position: 0% center;
 		object-fit: cover;
 	}
 

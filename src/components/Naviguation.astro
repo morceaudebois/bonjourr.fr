@@ -1,37 +1,36 @@
 ---
 import Trans from './Trans.astro'
+import Link from './Link.astro'
 import useTranslation from '../locales/useTranslation'
 
 const { isFrench } = useTranslation(Astro)
-const fr = isFrench()
-const locale = fr ? '/fr/' : '/'
 ---
 
 <nav>
 	<div class='container'>
 		<div class='links'>
-			<a href={locale} id='homeLink'>
+			<Link href='/' id='homeLink'>
 				<Trans>Home</Trans>
-			</a>
+			</Link>
 
 			<a href='https://online.bonjourr.fr'>
 				<Trans>Online</Trans>
 			</a>
 
-			<a href={locale + 'docs'}>
+			<Link href='/docs'>
 				<Trans>Docs</Trans>
-			</a>
+			</Link>
 
-			<a href={locale + '#donate'}>
+			<Link href='/#donate'>
 				<Trans>Donate</Trans>
-			</a>
+			</Link>
 
-			<a href={locale + '#further'}>Contact</a>
+			<Link href='/#further'>Contact</Link>
 		</div>
 
-		<a href={fr ? Astro.url.pathname.substring(3) : '/fr' + Astro.url.pathname} class='language'>
+		<a href={isFrench ? Astro.url.pathname.substring(3) : '/fr' + Astro.url.pathname} class='language'>
 			<span role='img' aria-label='globe-emoji'>🌍</span>
-			{fr ? 'en' : 'fr'}
+			{isFrench ? 'en' : 'fr'}
 		</a>
 	</div>
 </nav>

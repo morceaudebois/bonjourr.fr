@@ -1,14 +1,10 @@
 ---
 import Trans from '../Trans.astro'
+import Link from '../Link.astro'
 
 import GithubIcon from '../../assets/icons/further/github.svg'
 import DocsIcon from '../../assets/icons/further/docs.svg'
 import TelegramIcon from '../../assets/icons/further/telegram.svg'
-
-import useTranslation from '../../locales/useTranslation'
-
-const { isFrench } = useTranslation(Astro)
-const locale = isFrench() ? '/fr/' : '/'
 ---
 
 <div class='container'>
@@ -46,12 +42,12 @@ const locale = isFrench() ? '/fr/' : '/'
 				further into customisation.
 			</Trans>
 		</p>
-		<a href={locale + 'docs/'} class='button'>
+		<Link href='/docs/' class='button'>
 			<img width='64' src={DocsIcon} class='icon' alt='' />
 			<span>
 				<Trans>Documentation</Trans>
 			</span>
-		</a>
+		</Link>
 	</div>
 
 	<div>
@@ -120,10 +116,6 @@ const locale = isFrench() ? '/fr/' : '/'
 	p {
 		margin: 2em 0;
 		align-self: flex-start;
-	}
-
-	a {
-		text-align: center;
 	}
 
 	@media only screen and (max-width: 800px) {

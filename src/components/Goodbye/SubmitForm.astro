@@ -1,12 +1,9 @@
 ---
+import Link from '../Link.astro'
 import Trans from '../../components/Trans.astro'
 import Background from '../Background.astro'
-import useTranslation from '../../locales/useTranslation'
 
 import BackgroundImage from '../../assets/greens.webp'
-
-const { isFrench } = useTranslation(Astro)
-const locale = isFrench() ? '/fr/' : '/'
 ---
 
 <section>
@@ -17,9 +14,9 @@ const locale = isFrench() ? '/fr/' : '/'
 			<Trans>Your message has been sent, thank you!</Trans>
 		</h2>
 
-		<a href={locale} class='button'>
+		<Link href='/' class='button'>
 			<Trans>Back to home</Trans>
-		</a>
+		</Link>
 	</div>
 </section>
 

@@ -13,7 +13,7 @@ const postsEN = await Astro.glob('../pages/docs/*.md')
 const postsFR = await Astro.glob('../pages/fr/docs/*.md')
 
 // Choose which docs to use
-let posts = (isFrench() ? postsFR : postsEN).map((post) => {
+let posts = (isFrench ? postsFR : postsEN).map((post) => {
 	return { headings: post.getHeadings(), url: post.url, frontmatter: post.frontmatter }
 })
 
@@ -32,38 +32,21 @@ const currentURL = frontmatter.url
 	<article class={frontmatter.slug}>
 		<div class='docs-nav'>
 			{
-				posts.map(({ headings, url, frontmatter }) => (
-					<details>
-						<summary>
-							<a href={url}>{frontmatter.title}</a>
-						</summary>
-						<ul>
-							{headings.map(({ text, slug }) => (
-								<li>
-									<a href={'#' + slug}>{text}</a>
-								</li>
-							))}
-						</ul>
-					</details>
+				posts.map(({ url, frontmatter }) => (
+					<li class={currentURL === url ? 'active' : ''}>
+						<a href={url}>{frontmatter.title}</a>
+						{currentURL === url && (
+							<ul>
+								{headings.map(({ text, slug }: Heading) => (
+									<li>
+										<a href={'#' + slug}>{text}</a>
+									</li>
+								))}
+							</ul>
+						)}
+					</li>
 				))
 			}
-
-			<!-- {
-					posts.map(({ url, frontmatter }) => (
-						<li class={currentURL === url ? 'active' : ''}>
-							<a href={url}>{frontmatter.title}</a>
-							{currentURL === url && (
-								<ul>
-									{headings.map(({ text, slug, depth }: Heading) => (
-										<li style={`text-indent: calc(${depth - 1}em)`}>
-											<a href={'#' + slug}>{text}</a>
-										</li>
-									))}
-								</ul>
-							)}
-						</li>
-					))
-				} -->
 		</div>
 
 		<div class='content'>

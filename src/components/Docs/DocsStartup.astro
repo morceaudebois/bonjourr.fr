@@ -1,44 +1,42 @@
 ---
 import DocsHero from './DocsHero.astro'
+import Link from '../Link.astro'
 import HeroImage from '../../assets/mountains.webp'
-import useTranslation from '../../locales/useTranslation'
-
-const { isFrench } = useTranslation(Astro)
-const locale = isFrench() ? '/fr/' : '/'
 ---
 
 <DocsHero title={`Bonjourr's documentation`} src={HeroImage} />
+
 <main>
 	<ul>
 		<li>
-			<a href={locale + 'docs/platforms'}>
+			<Link href='/docs/platforms'>
 				<h2>🖥️ Use bonjourr</h2>
 				<p>Access all platforms and browsers</p>
-			</a>
+			</Link>
 		</li>
 		<li>
-			<a href={locale + 'docs/overview'}>
+			<Link href='/docs/overview'>
 				<h2>📃 Feature Overview</h2>
 				<p>Read on what is possible with Bonjourr</p>
-			</a>
+			</Link>
 		</li>
 		<li>
-			<a href={locale + 'docs/styles'}>
+			<Link href='/docs/styles'>
 				<h2>🎨 Style snippets</h2>
 				<p>Add some more flavor to your page with bits of code</p>
-			</a>
+			</Link>
 		</li>
 		<li>
-			<a href={locale + 'docs/profiles'}>
+			<Link href='/docs/profiles'>
 				<h2>🖼️ Custom Profiles</h2>
 				<p>Import fully customized pages made by us</p>
-			</a>
+			</Link>
 		</li>
 		<li>
-			<a href='/docs/help'>
+			<Link href='/docs/help'>
 				<h2>🫶 Contribute</h2>
 				<p>If you want to be more involved with Bonjourr</p>
-			</a>
+			</Link>
 		</li>
 	</ul>
 </main>
