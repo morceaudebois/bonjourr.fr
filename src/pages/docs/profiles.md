@@ -2,7 +2,7 @@
 title: Custom profiles
 subtitle: Here are some pre-made themes you can import at the bottom of the settings of Bonjourr.
 slug: profiles
-orderData: 5
+orderData: 4
 layout: '../../layouts/Docs.astro'
 featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 ---

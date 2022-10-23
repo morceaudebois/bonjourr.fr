@@ -1,7 +1,7 @@
 ---
 title: Utiliser Bonjourr
 subtitle:
-slug: use-bonjourr
+slug: platforms
 orderData: 1
 layout: ../../../layouts/Docs.astro
 featured: /backgrounds/danist-bviex5lwf3s.webp

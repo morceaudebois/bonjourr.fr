@@ -1,41 +1,59 @@
 ---
 import DocsHero from './DocsHero.astro'
 import Link from '../Link.astro'
+import Trans from '../Trans.astro'
 import HeroImage from '../../assets/mountains.webp'
+import useTranslation from '../../locales/useTranslation'
+
+const { isFrench, t } = useTranslation(Astro)
+
+//
+// Get title translation from markdowns just to be sure
+
+const postsEN = await Astro.glob('../../pages/docs/*.md')
+const postsFR = await Astro.glob('../../pages/fr/docs/*.md')
+
+let titles: { [key: string]: string } = {}
+
+;(isFrench ? postsFR : postsEN).forEach((post) => {
+	if (post.frontmatter) {
+		titles[post.frontmatter.slug] = post.frontmatter.title
+	}
+})
 ---
 
-<DocsHero title={`Bonjourr's documentation`} src={HeroImage} />
+<DocsHero title={t(`Bonjourr's documentation`)} src={HeroImage} />
 
 <main>
 	<ul>
 		<li>
 			<Link href='/docs/platforms'>
-				<h2>🖥️ Use bonjourr</h2>
-				<p>Access all platforms and browsers</p>
+				<h2>🖥️ {titles['platforms']}</h2>
+				<p><Trans>Access all platforms and browsers</Trans></p>
 			</Link>
 		</li>
 		<li>
 			<Link href='/docs/overview'>
-				<h2>📃 Feature Overview</h2>
-				<p>Read on what is possible with Bonjourr</p>
+				<h2>📃 {titles['overview']}</h2>
+				<p><Trans>Read on what is possible with Bonjourr</Trans></p>
 			</Link>
 		</li>
 		<li>
 			<Link href='/docs/styles'>
-				<h2>🎨 Style snippets</h2>
-				<p>Add some more flavor to your page with bits of code</p>
+				<h2>🎨 {titles['css']}</h2>
+				<p><Trans>Add some more flavor to your page with bits of code</Trans></p>
 			</Link>
 		</li>
 		<li>
 			<Link href='/docs/profiles'>
-				<h2>🖼️ Custom Profiles</h2>
-				<p>Import fully customized pages made by us</p>
+				<h2>🖼️ {titles['profiles']}</h2>
+				<p><Trans>Import fully customized pages made by us</Trans></p>
 			</Link>
 		</li>
 		<li>
 			<Link href='/docs/help'>
-				<h2>🫶 Contribute</h2>
-				<p>If you want to be more involved with Bonjourr</p>
+				<h2>🫶 {titles['help']}</h2>
+				<p><Trans>If you want to be more involved with Bonjourr</Trans></p>
 			</Link>
 		</li>
 	</ul>

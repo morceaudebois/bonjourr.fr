@@ -2,7 +2,7 @@
 title: Morceaux de code sympatoche
 subtitle: Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
 slug: css
-orderData: 4
+orderData: 3
 layout: ../../../layouts/Docs.astro
 featured: /backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---

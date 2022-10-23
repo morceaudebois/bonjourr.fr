@@ -2,7 +2,7 @@
 title: Contribute
 subtitle:
 slug: help
-orderData: 3
+orderData: 5
 layout: '../../layouts/Docs.astro'
 featured: /backgrounds/jonny-gios-gBr5Hmx1STc.webp
 ---
