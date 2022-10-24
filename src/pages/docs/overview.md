@@ -38,6 +38,10 @@ Head back to Bonjourr and paste the ID in the **Unsplash collection** field. You
 
 Switch your background type from Dynamic to Custom, and you'll be able to drag and drop your own images from your computer to Bonjourr.
 
+## Fonts
+
+Bonjourr gets its fonts from Google Fonts. If you want to see previews of the fonts Bonjourr offers, please visit [this page](https://fonts.google.com/).
+
 ## Settings management
 
 Bonjourr allows you to export all your settings into a file. You can use this feature if you want to save them or share them to someone. You will in turn be able to import said settings into any instance of Bonjourr.

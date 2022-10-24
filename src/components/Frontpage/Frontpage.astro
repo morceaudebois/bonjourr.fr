@@ -108,6 +108,12 @@ import Showcase from './Showcase.astro'
 		min-height: calc(80vh - 16em);
 	}
 
+	@media only screen and (max-height: 1000px) and (min-width: 700px) {
+		#hero {
+			min-height: calc(100vh - 16em);
+		}
+	}
+
 	.section-wrapper {
 		margin: auto;
 		padding: 1.5em;
