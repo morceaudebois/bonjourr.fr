@@ -1,19 +1,19 @@
 ---
 title: Morceaux de code sympatoche
-subtitle: Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
+subtitle: Bonjourr est personnalisable par le biais de son interface de paramètres, mais vous pouvez faire bien d'autres choses ! Copiez et collez ces extraits de style dans leur section dédiée des paramètres pour débloquer de nouvelles possibilités.
 slug: css
 orderData: 3
 layout: ../../../layouts/Docs.astro
 featured: /backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
 
-### I want my own greeting
+### Je veux mon propre message d'accueil
 
-_Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
+_Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-midi, etc._
 
 ```css
 #greetings:before {
-	content: 'Your custom greeting';
+	content: "Votre message d'accueil personnalisé";
 	visibility: visible;
 	position: absolute;
 	top: 0;
@@ -29,9 +29,9 @@ _Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
 }
 ```
 
-### I need more vertical space
+### J'ai besoin de plus d'espace vertical
 
-_By default, Bonjourr reserves some space for the footer area (background credits and settings icon) so that the rest of the interface won't overflow on it. This snippet gets rid of that reserved space and will give more vertical room to your widgets. It can help if you have a small screen and lots of widgets, but might result in overflowing issues in some situations._
+_Par défaut, Bonjourr réserve un certain espace pour le pied de page (les crédits et icône des paramètres) afin que le reste de l'interface ne déborde pas dessus. Ce code supprime cet espace réservé et donne plus d'espace vertical à vos widgets. Cela peut être utile si vous avez un petit écran et beaucoup de widgets, mais peut entraîner des problèmes de débordement dans certaines situations._
 
 ```css
 footer {
@@ -44,9 +44,9 @@ footer {
 }
 ```
 
-### I don't care about artist exposure
+### Je me fiche de l'exposition de l'artiste
 
-_Hides Unsplash photo author credits._
+_Cache les crédits d'auteur de la photo Unsplash._
 
 ```css
 #credit {
@@ -54,9 +54,9 @@ _Hides Unsplash photo author credits._
 }
 ```
 
-### I like my backgrounds fast.
+### J'aime que mes arrière-plans soient rapides.
 
-_Faster background transition on startup._
+_Transition d'arrière-plan plus rapide au démarrage._
 
 ```css
 #background_overlay {
@@ -64,9 +64,9 @@ _Faster background transition on startup._
 }
 ```
 
-### Widgets are too low!
+### Les widgets sont trop bas !
 
-_Makes Widgets higher._
+_Rend les widgets plus élevés._
 
 ```css
 #interface #widgets {
@@ -74,9 +74,9 @@ _Makes Widgets higher._
 }
 ```
 
-### Now they're too high...
+### Maintenant, ils sont trop élevés....
 
-_Makes Widgets lower._
+_Rend les widgets plus bas._
 
 ```css
 #interface #widgets {
@@ -85,9 +85,9 @@ _Makes Widgets lower._
 }
 ```
 
-### Links are all I need
+### Les liens sont tout ce dont j'ai besoin
 
-_Hides everything but Quick Links (and centers them)._
+_Masque tout sauf les liens rapides (et les centre)._
 
 ```css
 #interface #time,
@@ -99,9 +99,9 @@ _Hides everything but Quick Links (and centers them)._
 }
 ```
 
-### Unicolor is the new meta
+### L'unicolore est la nouvelle méta
 
-_Makes background a uniform color. Replace 'rebeccapurple' with your color of choice._
+_Donne une couleur uniforme à l'arrière-plan. Remplacez "rebeccapurple" par la couleur de votre choix._
 
 ```css
 #background {
@@ -112,9 +112,9 @@ _Makes background a uniform color. Replace 'rebeccapurple' with your color of ch
 }
 ```
 
-### 23 what, carrots?
+### 23 quoi, carottes ?
 
-_Adds a C after the temperature._
+_Ajoute un C après la température._
 
 ```css
 #tempContainer p::after {
@@ -122,13 +122,13 @@ _Adds a C after the temperature._
 }
 ```
 
-### I like my clocks thick
+### J'aime mes horloges épaisses
 
-_Makes analog clock thicker._
+_Rend l'horloge analogique plus épaisse._
 
 ```css
 #interface {
-	--anlg-w: 4px; /* Change size here */
+	--anlg-w: 4px; /* Changez la taille ici */
 }
 #interface #time #time-container #analogClock #center {
 	width: calc(var(--anlg-w) * 4);
@@ -146,22 +146,22 @@ _Makes analog clock thicker._
 }
 ```
 
-### Left or right aligned interface
+### Interface alignée à gauche ou à droite
 
-_Aligns interface to the sides instead of center._
+_Aligne l'interface sur les côtés au lieu du centre._
 
 ```css
 #interface {
 	width: 70%;
 	margin: auto;
 
-	/* Remove the one you DON'T want */
+	/* Retirez celui que vous ne voulez PAS */
 
-	/* Right */
+	/* Droite */
 	--flex: flex-end;
 	--text: right;
 
-	/* Left */
+	/* Gauche */
 	--flex: flex-start;
 	--text: left;
 }
@@ -195,7 +195,7 @@ _Aligns interface to the sides instead of center._
 
 ### Rolex 😎
 
-_Makes analog clock look like a Rolex._
+_Fait ressembler une horloge analogique à une Rolex._
 
 ```css
 * #interface #time #time-container #analogClock,
@@ -208,4 +208,4 @@ _Makes analog clock look like a Rolex._
 
 <br><br>
 
-_Want your own style snippet here? [Contact us](/#further)!_
+_Vous voulez votre propre extrait de style ici ? [Contactez nous](/#further)!_

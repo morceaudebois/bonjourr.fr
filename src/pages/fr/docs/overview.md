@@ -9,63 +9,63 @@ featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 
 ## Choses diverses
 
--   Hover your mouse on the background credits to see exif infos
--   When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
--   ~~When the searchbar is enabled, typing anywhere will focus the searchbar.~~ disabled for accessibility reasons
+-   Passez votre souris sur les crédits du fond d'écran pour voir les infos exif.
+-   En activant l'option de moteur de recherche personnalisé, la barre de recherche devient compatible avec tous les moteurs de recherche, ce qui inclut des choses comme YouTube (`https://www.youtube.com/results?search_query=%s`).
+-   ~~Lorsque la barre de recherche est activée, il suffit de taper n'importe où pour que la barre de recherche s'affiche~~ désactivé pour des raisons d'accessibilité.
 
 ## Quick links
 
-You can add and import Quick Links from the settings, and edit them when you right click on them.
+Vous pouvez ajouter et importer des liens à partir des paramètres, et les modifier en faisant un clic droit dessus.
 
-An easy way to add a custom icon to your Quick Link is to upload it on somewhere like Imgur, and use that link as an icon. You can also convert your icon to a Data URI (max 8kB).
+Une façon simple d'ajouter une icône personnalisée à votre lien rapide est de la télécharger sur un site comme Imgur, et d'utiliser ce lien comme icône. Vous pouvez également convertir votre icône en une URI de données (max 8kB).
 
-⚠️ **Notice**: as a security measure, local paths like `file://`, browser settings links like `about:config` or `chrome://extensions` can't be added. However, `localhost:` links will work just fine.
+⚠️ **Attention**: par mesure de sécurité, les chemins locaux comme `file://`, des liens sur les paramètres du navigateur comme `about:config` ou `chrome://extensions` ne peut pas être ajouté. Cependant, les liens `localhost:` fonctionneront très bien.
 
 ## Fond d'écran
 
-Bonjourr uses the [Unsplash API](https://unsplash.com/developers) to fetch its backgrounds. We select them manually and store them in four different collections that change according to the time of the day:
+Bonjourr utilise [l'API Unsplash](https://unsplash.com/developers) pour récupérer ses arrière-plans. Nous les sélectionnons manuellement et les stockons dans quatre collections différentes qui changent selon l'heure de la journée :
 
--   [During the day](<https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)>) or [at night](<https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)>)
--   2 hours around [sunrise (Noon)](<https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)>) and [sunset (Evening)](<https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)>)
+-   [Pendant la journée](<https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)>) ou [la nuit](<https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)>)
+-   2 heures entre [le lever du soleil (Noon)](<https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)>) et [le coucher de soleil (Evening)](<https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)>)
 
 ### Collection Unsplash personnalisé
 
-You can make your own collection of images using [Unsplash](https://unsplash.com/). To do so, you'll need to create an Unsplash account and add all your images to a new collection. Once you're pleased with your selection, you need the collection's ID present in its URL. You will spot it easily since it's the string of random letters and numbers. For example, if your collection's URL is `https://unsplash.com/collections/2170139/wolfdogs-of-unsplash`, the ID is `2170139`.
+Vous pouvez créer votre propre collection d'images en utilisant [Unsplash](https://unsplash.com/). Pour ce faire, vous devez créer un compte Unsplash et ajouter toutes vos images à une nouvelle collection. Une fois que vous êtes satisfait de votre sélection, vous avez besoin de l'ID de la collection présent dans son URL. Vous le repérerez facilement puisqu'il s'agit d'une chaîne de lettres et de chiffres aléatoires. Par exemple, si l'URL de votre collection est `https://unsplash.com/collections/2170139/wolfdogs-of-unsplash`, l'ID est `2170139`.
 
-Head back to Bonjourr and paste the ID in the **Unsplash collection** field. You can add multiple collections by separating them with a comma.
+Retournez sur Bonjourr et collez l'ID dans le champ **Collection Unsplash**. Vous pouvez ajouter plusieurs collections en les séparant par une virgule.
 
 ### Images locale
 
-Switch your background type from Dynamic to Custom, and you'll be able to drag and drop your own images from your computer to Bonjourr.
+Passez du type d'arrière-plan Dynamique à Personnalisé, et vous pourrez faire glisser et déposer vos propres images de votre ordinateur vers Bonjourr.
 
 ## Gestion des paramètres
 
-Bonjourr allows you to export all your settings into a file. You can use this feature if you want to save them or share them to someone. You will in turn be able to import said settings into any instance of Bonjourr.
+Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Vous pouvez utiliser cette fonction si vous souhaitez les sauvegarder ou les partager avec quelqu'un. Vous pourrez à votre tour importer ces paramètres dans n'importe quelle instance de Bonjourr.
 
-To do so, simply go to the bottom of your settings pannel, then click Export as file in the settings management. Your file will be downloaded. On your other instance of Bonjourr, you can then go to the Import tab of the settings management and drop your file. Bonjourr will reload and all your settings will be applied.
+Pour ce faire, il suffit d'aller en bas de votre panneau de paramètres, puis de cliquer sur Exporter comme fichier dans la gestion des paramètres. Votre fichier sera téléchargé. Sur votre autre instance de Bonjourr, vous pouvez alors aller dans l'onglet Importation de la gestion des paramètres et déposer votre fichier. Bonjourr rechargera la page et tous vos paramètres seront appliqués.
 
 ### Synchronisation du navigateur
 
-Bonjourr is compatible with the automatic syncing features of both [Firefox](https://www.mozilla.org/fr/firefox/sync/) and [Chrome](https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop). If you log into your Mozilla/Google account on your browser and have syncing enabled in your browser, Bonjourr should get synced to other instances of the same browser on other computers. This is true for all Bonjourr settings as well as Quick Links.
+Bonjourr est compatible avec les fonctions de synchronisation automatique des deux applications suivantes [Firefox](https://www.mozilla.org/firefox/sync/) et [Chrome](https://support.google.com/chrome/answer/185277). Si vous vous connectez à votre compte Mozilla/Google sur votre navigateur et que la synchronisation est activée dans votre navigateur, Bonjourr devrait être synchronisé avec d'autres instances du même navigateur sur d'autres ordinateurs. Cela fonctionne pour tous les paramètres de Bonjourr ainsi que pour les liens rapides.
 
 ## Raccourcis clavier
 
-### Global
+### Général
 
-| Keys                | Action                  |
-| ------------------- | ----------------------- |
-| Escape              | Opens / closes settings |
-| E (focused on link) | Edits links             |
+| Keys                  | Action                       |
+| --------------------- | ---------------------------- |
+| Echap                 | Ouvre / ferme les paramêtres |
+| E (ciblé sur un lien) | Modifie le lien              |
 
 ### Notes
 
-You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `cmd` on macOS.
+Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre Note. Remplacez `Ctrl` par `cmd` sous macOS.
 
-| Keys             | Action          |
-| ---------------- | --------------- |
-| Ctrl + Enter     | Apply changes   |
-| Ctrl + Shift + C | Adds checkboxes |
-| Ctrl + I         | Italics         |
-| Ctrl + B         | Bold            |
-| Ctrl + S         | Strike          |
-| Ctrl + U         | URL             |
+| Keys           | Action                   |
+| -------------- | ------------------------ |
+| Ctrl + Entrée  | Applique les changements |
+| Ctrl + Maj + C | Ajoute case à cocher     |
+| Ctrl + I       | Italique                 |
+| Ctrl + B       | Gras                     |
+| Ctrl + S       | Barré                    |
+| Ctrl + U       | URL                      |

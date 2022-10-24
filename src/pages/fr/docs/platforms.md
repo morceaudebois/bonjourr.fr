@@ -11,15 +11,15 @@ featured: /backgrounds/danist-bviex5lwf3s.webp
 
 -   [Chrome & Brave](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd?hl=fr&authuser=0)
 -   [Firefox](https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/)
--   [Safari for macOS](https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236)
 -   [Edge](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid)
+-   [Safari macOS](https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236)
 
-## 📱 iOS and Android
+## 📱 iOS et Android
 
--   As a mobile web app: in the Share menu of your browser, select 'Add to Home Screen' or 'Install'.
--   As a browser homepage: go to Settings => Homepage => Open this page => `https://online.bonjourr.fr`. You can use a third party browser like Firefox if you want to do this on iOS.
+-   En tant qu'application web mobile : dans le menu "Partager" de votre navigateur, sélectionnez "Ajouter à l'écran d'accueil" ou "Installer".
+-   Comme page d'accueil du navigateur : allez dans Paramètres => Page d'accueil => Ouvrir cette page => `https://online.bonjourr.fr`. Vous pouvez utiliser un navigateur tiers comme Firefox si vous voulez faire cela sur iOS.
 
-Bonjourr will be available as a real extension for Safari on iOS and iPadOS in the coming months.
+Bonjourr sera disponible sous la forme d'une véritable extension pour Safari sur iOS et iPadOS dans les mois à venir.
 
 <!-- Bonjourr is available on the  store.
 ![Enable Bonjourr on Edge](../assets/documentation/edge.png)

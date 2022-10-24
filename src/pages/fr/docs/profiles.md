@@ -1,6 +1,6 @@
 ---
 title: Profiles customisés
-subtitle: Here are some pre-made themes you can import at the bottom of the settings of Bonjourr.
+subtitle: Voici quelques thèmes préétablis que vous pouvez importer en bas des paramètres de Bonjourr.
 slug: profiles
 orderData: 4
 layout: ../../../layouts/Docs.astro
@@ -9,7 +9,7 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 
 ### Cyberpunk 2077
 
-![Cyberpunk 2077 Bonjourr theme](/documentation/profiles/cyberpunk.webp)
+![Thème Cyberpunk 2077 Bonjourr](/documentation/profiles/cyberpunk.webp)
 
 ```json
 {
@@ -40,9 +40,9 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 }
 ```
 
-### The Space Enthusiast
+### Le passionné de l'espace
 
-![Space Bonjourr theme](/documentation/profiles/space.webp)
+![Thème Espace Bonjourr](/documentation/profiles/space.webp)
 
 ```json
 {
@@ -71,7 +71,7 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 
 ### Floral
 
-![Floral Bonjourr theme](/documentation/profiles/floral.webp)
+![Thème floral Bonjourr](/documentation/profiles/floral.webp)
 
 ```json
 {
@@ -95,9 +95,9 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 }
 ```
 
-### Not Momentum
+### Pas Momentum
 
-![Not Momentum Bonjourr theme](/documentation/profiles/not_momentum.webp)
+![Thème Pas Momentum Bonjourr](/documentation/profiles/not_momentum.webp)
 
 ```json
 {
@@ -126,4 +126,4 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 
 <br><br>
 
-_Want your own custom profile here? [Contact us](/#further)!_
+_Vous voulez votre propre profil personnalisé ici ? [Contactez nous](/#further)!_
