@@ -9,7 +9,7 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 
 ### Cyberpunk 2077
 
-![Cyberpunk 2077 Bonjourr theme](../documentation/profiles/cyberpunk.webp)
+![Cyberpunk 2077 Bonjourr theme](/documentation/profiles/cyberpunk.webp)
 
 ```json
 {
@@ -36,7 +36,7 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 
 ### The Space Enthusiast
 
-![Space Bonjourr theme](../documentation/profiles/space.webp)
+![Space Bonjourr theme](/documentation/profiles/space.webp)
 
 ```json
 {
@@ -65,7 +65,7 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 
 ### Floral
 
-![Floral Bonjourr theme](../documentation/profiles/floral.webp)
+![Floral Bonjourr theme](/documentation/profiles/floral.webp)
 
 ```json
 {
@@ -91,7 +91,7 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 
 ### Not Momentum
 
-![Not Momentum Bonjourr theme](../documentation/profiles/not_momentum.webp)
+![Not Momentum Bonjourr theme](/documentation/profiles/not_momentum.webp)
 
 ```json
 {
