@@ -1,9 +1,9 @@
 ---
 import Trans from '../Trans.astro'
 
-import DynamicImage from '../../assets/dynamic.webp'
-import DynamicImage2x from '../../assets/dynamic2x.webp'
-import CustomiseImage from '../../assets/customise.webp'
+import DynamicImage from '../../assets/illustrations/dynamic.webp'
+import DynamicImage2x from '../../assets/illustrations/dynamic2x.webp'
+import CustomiseImage from '../../assets/illustrations/customise.webp'
 ---
 
 <div id='intro'>
@@ -134,7 +134,7 @@ import CustomiseImage from '../../assets/customise.webp'
 		justify-content: center;
 		align-items: center;
 		gap: 4em;
-		margin: 8em 0;
+		margin: 6em 0;
 	}
 
 	#more h3 {
@@ -194,6 +194,11 @@ import CustomiseImage from '../../assets/customise.webp'
 	@media only screen and (max-width: 500px) {
 		.listContainer {
 			font-size: 1em;
+		}
+
+		.image-row {
+			margin: 4em 0;
+			gap: 1em;
 		}
 	}
 </style>
