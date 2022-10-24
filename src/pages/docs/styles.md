@@ -85,6 +85,16 @@ _Makes Widgets lower._
 }
 ```
 
+### Hide link titles
+
+_Can be useful if you only need Quick Links icons and want them to be vertically centered._
+
+```css
+#interface #widgets #linkblocks li.block a > span {
+	display: none;
+}
+```
+
 ### Links are all I need
 
 _Hides everything but Quick Links (and centers them)._
