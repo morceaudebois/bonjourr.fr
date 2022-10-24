@@ -1,0 +1,43 @@
+---
+import Link from '../Link.astro'
+import Trans from '../../components/Trans.astro'
+import Background from '../Background.astro'
+
+import BackgroundImage from '../../assets/greens.webp'
+---
+
+<section>
+	<Background src={BackgroundImage} />
+
+	<div class='message'>
+		<h2>
+			<Trans>Your message has been sent, thank you!</Trans>
+		</h2>
+
+		<Link href='/' class='button'>
+			<Trans>Back to home</Trans>
+		</Link>
+	</div>
+</section>
+
+<style>
+	section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		padding: 0 2em;
+	}
+
+	.message {
+		height: 40vh;
+	}
+
+	h2 {
+		margin: 2em 0;
+	}
+
+	a {
+		margin: auto;
+	}
+</style>

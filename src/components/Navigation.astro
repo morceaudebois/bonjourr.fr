@@ -1,0 +1,94 @@
+---
+import Trans from './Trans.astro'
+import Link from './Link.astro'
+import useTranslation from '../locales/useTranslation'
+
+const { isFrench } = useTranslation(Astro)
+---
+
+<nav>
+	<div class='container'>
+		<div class='links'>
+			<Link href='/' id='homeLink'>
+				<Trans>Home</Trans>
+			</Link>
+
+			<a href='https://online.bonjourr.fr'>
+				<Trans>Online</Trans>
+			</a>
+
+			<Link href='/docs'>
+				<Trans>Docs</Trans>
+			</Link>
+
+			<Link href='/#donate'>
+				<Trans>Donate</Trans>
+			</Link>
+
+			<Link href='/#further'>Contact</Link>
+		</div>
+
+		<a href={isFrench ? Astro.url.pathname.substring(3) : '/fr' + Astro.url.pathname} class='language'>
+			<span role='img' aria-label='globe-emoji'>🌍</span>
+			{isFrench ? 'en' : 'fr'}
+		</a>
+	</div>
+</nav>
+
+<style>
+	nav {
+		position: absolute;
+		width: 100%;
+		z-index: 3;
+	}
+
+	nav .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2em;
+		max-width: 1200px;
+		padding: 2em;
+		margin: auto;
+	}
+
+	.language {
+		display: flex;
+		gap: 0.2em;
+	}
+
+	nav .links:hover a {
+		opacity: 0.8;
+	}
+
+	nav .links:hover a:hover {
+		opacity: 1;
+		border-color: white;
+		border-bottom: 2px solid white;
+		transition: border-color 0.15s;
+	}
+
+	a {
+		position: relative;
+		padding: 0.4em 0;
+		font-weight: 500;
+		line-height: 2em;
+		border-bottom: 0px solid transparent;
+		transition: border 0.1s;
+	}
+
+	.links a {
+		margin-right: 1.5em;
+	}
+
+	@media only screen and (max-width: 500px) {
+		nav .container {
+			align-items: flex-start;
+			padding: 1.5em;
+		}
+
+		.language {
+			padding: 0;
+		}
+	}
+</style>

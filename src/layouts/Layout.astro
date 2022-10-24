@@ -1,0 +1,137 @@
+---
+import Footer from '../components/Footer.astro'
+import Navigation from '../components/Navigation.astro'
+import useTranslation from '../locales/useTranslation'
+
+import favicon from '../assets/favicon.ico'
+
+const { t } = useTranslation(Astro)
+const { title, lang, id } = Astro.props
+
+const metaTitle = t('Startpage for you browser')
+const metaDescription = t(
+	'Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.'
+)
+const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage', 'minimalism', 'lightweight']
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+	<head>
+		<title>{title}</title>
+
+		<meta name='viewport' content='width=device-width' />
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+		<meta name='description' content={metaDescription} />
+		<meta property='og:title' content={metaTitle} />
+		<meta property='og:description' content={metaDescription} />
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content='https://bonjourr.fr/' />
+		<meta property='og:image' content='https://bonjourr.fr/twitter.jpg' />
+		<meta name='keywords' content={metaKeywords.join(',')} />
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:image' content='https://bonjourr.fr/twitter.jpg' />
+		<meta name='twitter:creator' content='BonjourrTeam' />
+		<meta name='twitter:title' content={metaTitle} />
+		<meta name='twitter:description' content={metaDescription} />
+
+		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+		<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+		<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+		<link rel='mask-icon' href='/safari-pinned-tab.svg' color='#3da4ff' />
+
+		<link rel='preconnect' href='https://fonts.gstatic.com/' />
+	</head>
+	<body id={id && id}>
+		<Navigation />
+
+		<slot />
+
+		<Footer />
+
+		<style is:global lang='scss'>
+			@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+			html,
+			body {
+				position: relative;
+				margin: unset;
+				font-family: 'Inter', Helvetica, sans-serif;
+				font-size: 17px;
+				font-weight: 300;
+				color: white;
+				min-height: 100vh;
+				scroll-behavior: smooth;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+			}
+
+			p {
+				line-height: 1.5em;
+			}
+
+			#frontpage h2 {
+				text-align: center;
+				font-size: 2em;
+				font-weight: 500;
+				margin-bottom: 1.25em;
+			}
+
+			button,
+			.button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.7em;
+				width: 100%;
+				max-width: 300px;
+				padding: 0.6em 1.2em;
+				border-radius: 12px;
+				border: 1px solid #fff2;
+				background-color: #fff2;
+				color: white;
+				font-weight: bolder;
+				white-space: nowrap;
+				box-sizing: border-box;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				transition: background-color 0.1s ease-out;
+
+				&:hover {
+					background-color: #fff6;
+				}
+
+				img {
+					width: 30px;
+					height: 30px;
+					object-fit: contain;
+				}
+			}
+
+			#further a.button {
+				backdrop-filter: none;
+			}
+
+			@media only screen and (max-width: 700px) {
+				body {
+					font-size: 16px;
+				}
+			}
+
+			@media only screen and (max-width: 500px) {
+
+				#frontpage h2 {
+					font-size: 1.6em;
+				}
+
+				h3 {
+					font-size: 1.6em;
+				}
+			}
+		</style>
+	</body>
+</html>

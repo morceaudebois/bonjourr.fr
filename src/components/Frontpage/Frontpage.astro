@@ -1,0 +1,194 @@
+---
+import Trans from '../Trans.astro'
+
+import LandingImage from '../../assets/turtle.webp'
+import OpenImage from '../../assets/mountains.webp'
+import DonateImage from '../../assets/greens.webp'
+
+import KofiIcon from '../../assets/icons/donate/ko-fi.svg'
+import BtcIcon from '../../assets/icons/donate/btc.svg'
+
+import Background from '../Background.astro'
+import Landing from './Landing.astro'
+import Further from './Further.astro'
+import Showcase from './Showcase.astro'
+---
+
+<section id='hero'>
+	<Background src={LandingImage} blur='.5' />
+	<Landing />
+</section>
+
+<section id='showcase'>
+	<div class='section-wrapper'>
+		<Showcase />
+	</div>
+</section>
+
+<section id='open'>
+	<Background src={OpenImage} />
+
+	<div class='section-wrapper'>
+		<h2>
+			<span role='img' aria-label='lock-emoji'> 🔒</span>{' '}
+			<Trans>Free, open source and privacy focused</Trans>
+		</h2>
+		<p>
+			<Trans>
+				Bonjourr is made by two independent developpers who love things well made and actually think privacy is
+				important. You can use Bonjourr straight away, without having to create or log into any account because we do
+				not collect any data.
+			</Trans>
+		</p>
+	</div>
+</section>
+
+<section id='further'>
+	<div class='section-wrapper'>
+		<Further />
+	</div>
+</section>
+
+<section id='donate'>
+	<Background src={DonateImage} />
+
+	<div class='section-wrapper'>
+		<h2>
+			<Trans>Donate</Trans>
+			<span role='img' aria-label='happy-emoji'> 😊</span>
+		</h2>
+
+		<p>
+			<Trans>
+				Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn any money out of this
+				project, apart from donations. Supporting our work financially is very important if you want us to keep
+				updating it, and we appreciate every single donation.
+			</Trans>
+		</p>
+
+		<div class='buttons'>
+			<a href='https://ko-fi.com/bonjourr' class='button'>
+				<img width='64' src={KofiIcon} class='icon' alt='' />
+				<span>
+					<Trans>Donate</Trans>
+				</span>
+			</a>
+
+			<a href='https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b' class='button'>
+				<img width='64' src={BtcIcon} class='icon' alt='' />
+				<span>
+					<Trans>Donate in crypto</Trans>
+				</span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<style lang='scss'>
+	h2 {
+		text-align: center;
+		font-size: 35px;
+		font-weight: 500;
+		margin-bottom: 1.25em;
+	}
+
+	h3 {
+		font-size: 2em;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	#hero {
+		display: flex;
+		position: relative;
+		padding: 8em 4em;
+		padding-top: 8em;
+		justify-content: center;
+		align-items: center;
+		min-height: calc(80vh - 16em);
+	}
+
+	@media only screen and (max-height: 1000px) and (min-width: 700px) {
+		#hero {
+			min-height: calc(100vh - 16em);
+		}
+	}
+
+	.section-wrapper {
+		margin: auto;
+		padding: 1.5em;
+		max-width: 1200px;
+	}
+
+	#showcase {
+		color: white;
+		background: linear-gradient(0.25turn, #140a17, #231730, #140a17);
+	}
+
+	#open .section-wrapper,
+	#donate .section-wrapper {
+		max-width: 700px;
+	}
+
+	#open,
+	#donate {
+		position: relative;
+		color: white;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	#open p,
+	#donate p {
+		text-shadow: 0px 0px 1em #222;
+	}
+
+	#open,
+	#donate,
+	#further {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 70vh;
+	}
+
+	#further {
+		min-height: 80vh;
+		background-color: #fafafd;
+	}
+
+	#donate {
+		padding-bottom: 10em;
+	}
+
+	#donate .buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+		gap: 1em;
+		margin-top: 3em;
+	}
+	
+
+	@media only screen and (max-width: 500px) {
+		#hero {
+			padding: 10em 2em;
+			min-height: 200px;
+		}
+
+		#donate {
+			padding-bottom: unset;
+		}
+
+		#donate h2 {
+			margin-top: unset;
+		}
+	}
+
+	@media only screen and (max-width: 390px) {
+		#further .section-wrapper {
+			padding: 2em 1em;
+		}
+	}
+</style>

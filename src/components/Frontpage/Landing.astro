@@ -1,0 +1,132 @@
+---
+import Download from './Download.svelte'
+import Trans from '../Trans.astro'
+import Link from '../Link.astro'
+
+import Illustration from '../../assets/illustrations/illu.webp'
+import Illustration2x from '../../assets/illustrations/illu2x.webp'
+---
+
+<div class='wrapper'>
+	<div class='left'>
+		<div class='title'>
+			<h1>Bonjourr</h1>
+			<p><Trans>Startpage for your browser</Trans></p>
+		</div>
+
+		<Download client:load>
+			<Trans slot='Download'>Download</Trans>
+			<Trans slot='Online'>Try online</Trans>
+		</Download>
+
+		<div class='link'>
+			<Link href='/docs/platforms'>
+				<i>
+					<Trans>Searching for other browsers?</Trans>
+				</i>
+			</Link>
+		</div>
+	</div>
+
+	<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' height='356' />
+</div>
+
+<style>
+	h1,
+	p {
+		margin: 0;
+	}
+
+	img {
+		object-fit: contain;
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8vw;
+	}
+
+	.title {
+		font-size: 2em;
+		margin-bottom: 1.25em;
+	}
+
+	.title h1 {
+		font-size: 2.5em;
+		font-weight: 200;
+	}
+
+	.link {
+		margin-top: 1.5em;
+	}
+
+	.link a {
+		opacity: 0.8;
+		transition: all 0.1s;
+	}
+
+	.link a:hover {
+		opacity: 1;
+		text-decoration: underline;
+	}
+
+	@media only screen and (max-width: 1300px) {
+		img {
+			width: 480px;
+		}
+
+		.title {
+			font-size: 1.6em;
+		}
+	}
+
+	@media only screen and (max-width: 1100px) {
+		img {
+			width: 400px;
+		}
+
+		.wrapper {
+			gap: 2em;
+		}
+
+		.title {
+			font-size: 1.4em;
+		}
+	}
+
+	@media only screen and (max-width: 900px) {
+		.wrapper {
+			flex-direction: column;
+			gap: 4em;
+		}
+
+		img {
+			width: 480px;
+		}
+
+		.left {
+			text-align: center;
+			margin-right: 0;
+		}
+
+		.title {
+			margin-bottom: 1em;
+		}
+	}
+
+	@media only screen and (max-width: 580px) {
+		.title {
+			font-size: 1.4em;
+		}
+
+		.wrapper {
+			height: auto;
+		}
+
+		img {
+			display: none;
+		}
+	}
+</style>

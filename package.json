@@ -1,56 +1,27 @@
 {
-  "name": "bonjourr.fr",
-  "private": true,
-  "description": "Website for Bonjourr Startpage",
-  "version": "0.1.0",
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "gatsby": "^4.24.0",
-    "gatsby-background-image": "^1.5.3",
-    "gatsby-plugin-anchor-links": "^1.2.1",
-    "gatsby-plugin-image": "^2.24.0",
-    "gatsby-plugin-manifest": "^4.24.0",
-    "gatsby-plugin-preact": "^6.24.0",
-    "gatsby-plugin-react-helmet": "^5.24.0",
-    "gatsby-plugin-react-i18next": "^1.1.1",
-    "gatsby-plugin-sass": "^5.24.0",
-    "gatsby-plugin-sharp": "^4.24.0",
-    "gatsby-plugin-sitemap": "^5.24.0",
-    "gatsby-remark-autolink-headers": "^5.24.0",
-    "gatsby-remark-images": "^6.24.0",
-    "gatsby-remark-prismjs": "^6.24.0",
-    "gatsby-source-filesystem": "^4.24.0",
-    "gatsby-transformer-remark": "^5.24.0",
-    "gatsby-transformer-sharp": "^4.24.0",
-    "gbimage-bridge": "^0.2.2",
-    "i18next": "^19.9.2",
-    "preact": "^10.5.14",
-    "preact-render-to-string": "^5.1.19",
-    "prismjs": "^1.25.0",
-    "react": "^17.0.1",
-    "react-device-detect": "^1.17.0",
-    "react-dom": "^17.0.1",
-    "react-i18next": "^11.11.3",
-    "sass": "^1.35.1",
-    "sharp": "^0.30.6"
-  },
-  "resolutions": {
-    "package-json": "^7.0.0",
-    "sanitize-html": "^2.7.2"
-  },
-  "devDependencies": {
-    "prettier": "2.3.2"
-  }
+	"name": "@example/basics",
+	"type": "module",
+	"version": "0.1.O",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/svelte": "^1.0.1",
+		"astro": "^1.4.7",
+		"svelte": "^3.46.4",
+		"detect-browser": "^5.3.0"
+	},
+	"devDependencies": {
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.5.5",
+		"rollup": "^3.0.1",
+		"sass": "^1.55.0",
+		"typescript": "^4.8.4",
+		"vite": "^3.1.7"
+	}
 }
