@@ -66,6 +66,10 @@
 		min-width: 200px;
 	}
 
+	.icon {
+		display: flex;
+	}
+
 	.container {
 		display: flex;
 		justify-content: center;

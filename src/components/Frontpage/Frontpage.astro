@@ -89,7 +89,7 @@ import Showcase from './Showcase.astro'
 		text-align: center;
 		font-size: 35px;
 		font-weight: 500;
-		margin-bottom: 1.5em;
+		margin-bottom: 1.25em;
 	}
 
 	h3 {
@@ -105,12 +105,12 @@ import Showcase from './Showcase.astro'
 		padding-top: 8em;
 		justify-content: center;
 		align-items: center;
-		min-height: calc(90vh - 16em);
+		min-height: calc(80vh - 16em);
 	}
 
 	.section-wrapper {
 		margin: auto;
-		padding: 2em;
+		padding: 1.5em;
 		max-width: 1200px;
 	}
 
@@ -143,7 +143,7 @@ import Showcase from './Showcase.astro'
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 80vh;
+		min-height: 70vh;
 	}
 
 	#further {
@@ -162,11 +162,20 @@ import Showcase from './Showcase.astro'
 		gap: 1em;
 		margin-top: 3em;
 	}
+	
 
 	@media only screen and (max-width: 500px) {
 		#hero {
 			padding: 10em 2em;
-			min-height: 400px;
+			min-height: 200px;
+		}
+
+		#donate {
+			padding-bottom: unset;
+		}
+
+		#donate h2 {
+			margin-top: unset;
 		}
 	}
 

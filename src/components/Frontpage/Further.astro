@@ -90,12 +90,15 @@ import TelegramIcon from '../../assets/icons/further/telegram.svg'
 		place-content: center;
 		color: #222;
 	}
+
 	.container > div:nth-child(2) {
 		background-color: #579ceb;
 	}
+
 	.container > div:nth-child(3) {
 		background-color: #127c8d;
 	}
+
 	.container > div:nth-child(4) {
 		background-color: #333333;
 	}
@@ -104,7 +107,7 @@ import TelegramIcon from '../../assets/icons/further/telegram.svg'
 		text-align: center;
 		font-size: 2em;
 		font-weight: 500;
-		margin-bottom: 1.5em;
+		margin-bottom: 1.25em;
 	}
 
 	h3 {
@@ -114,7 +117,7 @@ import TelegramIcon from '../../assets/icons/further/telegram.svg'
 	}
 
 	p {
-		margin: 2em 0;
+		margin: 1.5em 0;
 		align-self: flex-start;
 	}
 
@@ -123,4 +126,15 @@ import TelegramIcon from '../../assets/icons/further/telegram.svg'
 			grid-template-columns: 1fr;
 		}
 	}
+
+	@media only screen and (max-width: 500px) {
+		.container > div:nth-child(1) {
+			padding: 0px
+		}
+
+		.container > div:nth-child(1) h2 {
+			margin-bottom: 0px!important;
+		}
+	}
+
 </style>

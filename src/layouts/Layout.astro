@@ -1,6 +1,6 @@
 ---
 import Footer from '../components/Footer.astro'
-import Naviguation from '../components/Naviguation.astro'
+import Navigation from '../components/Navigation.astro'
 import useTranslation from '../locales/useTranslation'
 
 import favicon from '../assets/favicon.ico'
@@ -43,7 +43,7 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 		<link rel='preconnect' href='https://fonts.gstatic.com/' />
 	</head>
 	<body id={id && id}>
-		<Naviguation />
+		<Navigation />
 
 		<slot />
 
@@ -78,7 +78,7 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 				text-align: center;
 				font-size: 2em;
 				font-weight: 500;
-				margin-bottom: 1.5em;
+				margin-bottom: 1.25em;
 			}
 
 			button,
@@ -123,6 +123,11 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 			}
 
 			@media only screen and (max-width: 500px) {
+
+				#frontpage h2 {
+					font-size: 1.6em;
+				}
+
 				h3 {
 					font-size: 1.6em;
 				}
