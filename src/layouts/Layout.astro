@@ -3,8 +3,6 @@ import Footer from '../components/Footer.astro'
 import Navigation from '../components/Navigation.astro'
 import useTranslation from '../locales/useTranslation'
 
-import favicon from '../assets/favicon.ico'
-
 const { t } = useTranslation(Astro)
 const { title, lang, id } = Astro.props
 
@@ -123,7 +121,6 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 			}
 
 			@media only screen and (max-width: 500px) {
-
 				#frontpage h2 {
 					font-size: 1.6em;
 				}
