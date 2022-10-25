@@ -3,13 +3,13 @@ import Trans from '../../components/Trans.astro'
 import Background from '../Background.astro'
 import useTranslation from '../../locales/useTranslation'
 
-import BackgroundImage from '../../assets/greens.webp'
+import BackgroundImage from '../../assets/fields.webp'
 
 const { isFrench } = useTranslation(Astro)
 const locale = isFrench ? '/fr/' : '/'
 ---
 
-<Background src={BackgroundImage} />
+<Background src={BackgroundImage} blur='1' />
 <section>
 	<div id='form-container'>
 		<h2>
