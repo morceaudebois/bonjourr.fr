@@ -85,6 +85,14 @@ _Makes Widgets lower._
 }
 ```
 
+### I want transparent links!
+_Some site icons come as PNGs with a transparent background. This snippet will remove Bonjourr's default white background for links and make these icons shine._
+```css
+#interface #widgets #linkblocks li.block a img {
+	background: transparent;
+}
+```
+
 ### Hide link titles
 
 _Can be useful if you only need Quick Links icons and want them to be vertically centered._
