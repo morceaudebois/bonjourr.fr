@@ -90,6 +90,11 @@ _Some site icons come as PNGs with a transparent background. This snippet will r
 ```css
 #interface #widgets #linkblocks li.block a img {
 	background: transparent;
+	box-shadow: unset;
+}
+
+#interface #widgets #linkblocks li.block a img:hover {
+	box-shadow: unset;
 }
 ```
 
