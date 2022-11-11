@@ -19,19 +19,16 @@ La façon la plus simple de nous aider est de laisser un commentaire sur les sto
 
 ## 🇬🇧 Traductions
 
-Grâce à nos contributeurs, Bonjourr est actuellement disponible dans environ 16 langues ! C'est formidable, mais il se peut que certaines traductions soient devenues incomplètes au fur et à mesure que nous avons ajouté des fonctionnalités.
+Grâce à nos contributeurs, Bonjourr est actuellement disponible en 19 langues ! Voici ce que vous pouvez faire pour ajouter une nouvelle langue ou corriger certaines erreurs de traduction :
 
-Si vous repérez des chaînes de caractères manquantes dans une langue ou si vous souhaitez les améliorer, vous pouvez nous aider de deux manières :
+-   Le premier fichier à modifier est [/src/scripts/lang.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts) où se trouvent toutes les traductions.
+-   Ensuite allez dans [/\_locale/](https://github.com/victrme/Bonjourr/blob/master/_locales/). Dans votre dossier specifique à votre langue, modifiez:
+    -   `messages.json` pour le titre et le sous-titre de l'extension.
+    -   `overview.md` pour la description complète sur les boutiques d'applications.
 
--   Si vous êtes familier avec le fonctionnement de GitHub, vous pouvez vous rendre [sur ce fichier](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.js), traduisez-le et créez une pull request
--   si vous n'êtes pas familier avec GitHub, vous devez télécharger [ce fichier](https://raw.githubusercontent.com/victrme/Bonjourr/master/src/scripts/lang.js), l'éditer, puis nous l'envoyer directement (soit [via email](mailto:bonjourr.app@protonmail.com) soit sur notre [groupe Telegram](https://t.me/BonjourrStartpage)).
+Si vous connaissez GitHub, vous pouvez créer une pull request. Sinon, vous pouvez nous envoyer directement les fichiers modifiés [via email](mailto:bonjourr.app@protonmail.com) ou sur [notre groupe Telegram](https://t.me/BonjourrStartpage)).
 
 ⚠️ N'oubliez pas d'ajouter votre nom et votre lien en haut du fichier pour que nous puissions vous créditer !
-
-<!-- You can also help translate Bonjourr's extension store pages, check out these files on [our repository](https://github.com/victrme/Bonjourr/):
-
--   `/_locales/yourlang/messages.json` for the title and subtitle of Bonjourr's extension store pages
--   `/_locales/yourlang/overview.md` for Bonjourr's full description on extension store pages -->
 
 ## 👨‍💻 Contributions
 

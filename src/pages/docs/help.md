@@ -2,7 +2,7 @@
 title: Contribute
 subtitle:
 slug: help
-orderData: 5
+orderData: 3
 layout: '../../layouts/Docs.astro'
 featured: /backgrounds/jonny-gios-gBr5Hmx1STc.webp
 ---
@@ -19,19 +19,16 @@ The simplest way to help us out is to leave a review on the extension stores, ei
 
 ## 🇬🇧 Translations
 
-Thanks to our contributors, Bonjourr is currently available in about 16 languages! This is great, but some translations might have become incomplete as we've added more features.
+Thanks to our contributors, Bonjourr is currently available in 19 languages! Here's what you can do to add a new language or fix some translation errors:
 
-There are two ways you can help out if you spot missing strings in a language or want to improve them:
+-   First file to modify is [/src/scripts/lang.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts) where all the translations are located.
+-   Then go to [/\_locale/](https://github.com/victrme/Bonjourr/blob/master/_locales/). In your language folder, modify:
+    -   `messages.json` for the extension's title and subtitle.
+    -   `overview.md` for the full description on store pages.
 
--   if you're familiar with how GitHub works, you can head to [this file](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.js), translate it and create a pull request
--   if you aren't familiar with GitHub, you need to download [this file](https://raw.githubusercontent.com/victrme/Bonjourr/master/src/scripts/lang.js), edit it and then send it directly to us (either [via email](mailto:bonjourr.app@protonmail.com) or to [our Telegram group](https://t.me/BonjourrStartpage)).
+If you are familiar with GitHub, you can create a pull request. If not, you can directly send us the modified files [via email](mailto:bonjourr.app@protonmail.com) or to [our Telegram group](https://t.me/BonjourrStartpage)).
 
 ⚠️ Don't forget to add your name and link at the top of the file so we can credit you!
-
-<!-- You can also help translate Bonjourr's extension store pages, check out these files on [our repository](https://github.com/victrme/Bonjourr/):
-
--   `/_locales/yourlang/messages.json` for the title and subtitle of Bonjourr's extension store pages
--   `/_locales/yourlang/overview.md` for Bonjourr's full description on extension store pages -->
 
 ## 👨‍💻 Contributions
 
