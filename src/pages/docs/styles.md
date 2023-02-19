@@ -135,6 +135,29 @@ _Makes background a uniform color. Replace 'rebeccapurple' with your color of ch
 }
 ```
 
+
+### My fonts shall be black (or any other color 😯)
+
+_Changes font color to black. Can help if you mainly use bright backgrounds. Change "black" to a color code if you'd like another specific color._
+
+```css
+body #interface, #linkblocks span, {
+   color: black!important;
+}
+```
+
+### And my clock shall be black too
+
+```css
+#interface #time #time-container #analogClock {
+	border-color: black!important;
+}
+
+#minutes, #center, #hours {
+	background-color: black!important;
+}
+```
+
 ### 23 what, carrots?
 
 _Adds a C after the temperature._
@@ -225,7 +248,7 @@ _Makes analog clock look like a Rolex._
 * #interface #time #time-container #analogClock:hover {
 	border-width: 1px;
 	background-size: cover;
-	background-image: url('https://bonjourr.fr/rolex.png') !important;
+	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
 }
 ```
 
