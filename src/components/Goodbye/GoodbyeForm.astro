@@ -39,7 +39,7 @@ const locale = isFrench ? '/fr/' : '/'
 			<label>
 				<Trans>Your message</Trans>
 			</label>
-			<textarea id='message' name='message' required></textarea>
+			<textarea id='message' name='message' minlength="80" required></textarea>
 
 			<button type='submit'>
 				<Trans>Send</Trans>
@@ -57,7 +57,7 @@ const locale = isFrench ? '/fr/' : '/'
 	}
 
 	#form-container {
-		margin-top: 10vh;
+		margin-top: 5vh;
 		max-width: 550px;
 	}
 
