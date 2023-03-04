@@ -1,13 +1,15 @@
 ---
 title: Style snippets
-subtitle: Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
+subtitle:
 slug: css
 orderData: 3
 layout: '../../layouts/Docs.astro'
 featured: /backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
 
-### I want my own greeting
+Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
+
+## I want my own greeting
 
 _Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
 
@@ -29,7 +31,7 @@ _Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc._
 }
 ```
 
-### I need more vertical space
+## I need more vertical space
 
 _By default, Bonjourr reserves some space for the footer area (background credits and settings icon) so that the rest of the interface won't overflow on it. This snippet gets rid of that reserved space and will give more vertical room to your widgets. It can help if you have a small screen and lots of widgets, but might result in overflowing issues in some situations._
 
@@ -44,7 +46,7 @@ footer {
 }
 ```
 
-### I don't care about artist exposure
+## I don't care about artist exposure
 
 _Hides Unsplash photo author credits._
 
@@ -54,7 +56,7 @@ _Hides Unsplash photo author credits._
 }
 ```
 
-### I like my backgrounds fast.
+## I like my backgrounds fast.
 
 _Faster background transition on startup._
 
@@ -64,7 +66,7 @@ _Faster background transition on startup._
 }
 ```
 
-### Widgets are too low!
+## Widgets are too low!
 
 _Makes Widgets higher._
 
@@ -74,7 +76,7 @@ _Makes Widgets higher._
 }
 ```
 
-### Now they're too high...
+## Now they're too high...
 
 _Makes Widgets lower._
 
@@ -85,8 +87,10 @@ _Makes Widgets lower._
 }
 ```
 
-### I want transparent links!
+## I want transparent links!
+
 _Some site icons come as PNGs with a transparent background. This snippet will remove Bonjourr's default white background for links and make these icons shine._
+
 ```css
 #interface #widgets #linkblocks li.block a img {
 	background: transparent;
@@ -98,7 +102,7 @@ _Some site icons come as PNGs with a transparent background. This snippet will r
 }
 ```
 
-### Hide link titles
+## Hide link titles
 
 _Can be useful if you only need Quick Links icons and want them to be vertically centered._
 
@@ -108,7 +112,7 @@ _Can be useful if you only need Quick Links icons and want them to be vertically
 }
 ```
 
-### Links are all I need
+## Links are all I need
 
 _Hides everything but Quick Links (and centers them)._
 
@@ -122,7 +126,7 @@ _Hides everything but Quick Links (and centers them)._
 }
 ```
 
-### Unicolor is the new meta
+## Unicolor is the new meta
 
 _Makes background a uniform color. Replace 'rebeccapurple' with your color of choice._
 
@@ -135,30 +139,32 @@ _Makes background a uniform color. Replace 'rebeccapurple' with your color of ch
 }
 ```
 
-
-### My fonts shall be black (or any other color 😯)
+## My fonts shall be black (or any other color 😯)
 
 _Changes font color to black. Can help if you mainly use bright backgrounds. Change "black" to a color code if you'd like another specific color._
 
 ```css
-body #interface, #linkblocks span, {
-   color: black!important;
+body #interface,
+#linkblocks span {
+	color: black !important;
 }
 ```
 
-### And my clock shall be black too
+## And my clock shall be black too
 
 ```css
 #interface #time #time-container #analogClock {
-	border-color: black!important;
+	border-color: black !important;
 }
 
-#minutes, #center, #hours {
-	background-color: black!important;
+#minutes,
+#center,
+#hours {
+	background-color: black !important;
 }
 ```
 
-### 23 what, carrots?
+## 23 what, carrots?
 
 _Adds a C after the temperature._
 
@@ -168,7 +174,7 @@ _Adds a C after the temperature._
 }
 ```
 
-### I like my clocks thick
+## I like my clocks thick
 
 _Makes analog clock thicker._
 
@@ -192,7 +198,7 @@ _Makes analog clock thicker._
 }
 ```
 
-### Left or right aligned interface
+## Left or right aligned interface
 
 _Aligns interface to the sides instead of center._
 
@@ -239,7 +245,7 @@ _Aligns interface to the sides instead of center._
 }
 ```
 
-### Rolex 😎
+## Rolex 😎
 
 _Makes analog clock look like a Rolex._
 

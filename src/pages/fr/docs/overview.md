@@ -11,7 +11,6 @@ featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 
 -   Passez votre souris sur les crédits du fond d'écran pour voir les infos exif.
 -   En activant l'option de moteur de recherche personnalisé, la barre de recherche devient compatible avec tous les moteurs de recherche, ce qui inclut des choses comme YouTube (`https://www.youtube.com/results?search_query=%s`).
--   ~~Lorsque la barre de recherche est activée, il suffit de taper n'importe où pour que la barre de recherche s'affiche~~ désactivé pour des raisons d'accessibilité.
 
 ## Quick links
 

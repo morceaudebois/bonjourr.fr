@@ -1,11 +1,14 @@
 ---
 title: Profiles customisés
-subtitle: Voici quelques thèmes préétablis que vous pouvez importer en bas des paramètres de Bonjourr.
+subtitle:
 slug: profiles
 orderData: 4
 layout: ../../../layouts/Docs.astro
 featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 ---
+
+Voici quelques thèmes préétablis que vous pouvez importer en bas des paramètres de Bonjourr.
+Vous voulez votre propre profil personnalisé ici ? [Contactez nous!](/#further)
 
 ### Cyberpunk 2077
 
@@ -123,7 +126,3 @@ featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
 	"showall": true
 }
 ```
-
-<br><br>
-
-_Vous voulez votre propre profil personnalisé ici ? [Contactez nous](/#further)!_

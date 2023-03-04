@@ -7,11 +7,10 @@ layout: '../../layouts/Docs.astro'
 featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 ---
 
-## Various tips and tricks
+## General
 
 -   Hover your mouse on the background credits to see exif infos
 -   When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
--   ~~When the searchbar is enabled, typing anywhere will focus the searchbar.~~ disabled for accessibility reasons
 
 ## Quick Links
 

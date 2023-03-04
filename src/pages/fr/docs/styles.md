@@ -1,13 +1,15 @@
 ---
 title: Morceaux de code sympatoche
-subtitle: Bonjourr est personnalisable par le biais de son interface de paramètres, mais vous pouvez faire bien d'autres choses ! Copiez et collez ces extraits de style dans leur section dédiée des paramètres pour débloquer de nouvelles possibilités.
+subtitle:
 slug: css
 orderData: 3
 layout: ../../../layouts/Docs.astro
 featured: /backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
 
-### Je veux mon propre message d'accueil
+Bonjourr est personnalisable par le biais de son interface de paramètres, mais vous pouvez faire bien d'autres choses ! Copiez et collez ces extraits de style dans leur section dédiée des paramètres pour débloquer de nouvelles possibilités.
+
+## Je veux mon propre message d'accueil
 
 _Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-midi, etc._
 
@@ -29,7 +31,7 @@ _Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-mid
 }
 ```
 
-### J'ai besoin de plus d'espace vertical
+## J'ai besoin de plus d'espace vertical
 
 _Par défaut, Bonjourr réserve un certain espace pour le pied de page (les crédits et icône des paramètres) afin que le reste de l'interface ne déborde pas dessus. Ce code supprime cet espace réservé et donne plus d'espace vertical à vos widgets. Cela peut être utile si vous avez un petit écran et beaucoup de widgets, mais peut entraîner des problèmes de débordement dans certaines situations._
 
@@ -44,7 +46,7 @@ footer {
 }
 ```
 
-### Je me fiche de l'exposition de l'artiste
+## Je me fiche de l'exposition de l'artiste
 
 _Cache les crédits d'auteur de la photo Unsplash._
 
@@ -54,7 +56,7 @@ _Cache les crédits d'auteur de la photo Unsplash._
 }
 ```
 
-### J'aime que mes arrière-plans soient rapides.
+## J'aime que mes arrière-plans soient rapides.
 
 _Transition d'arrière-plan plus rapide au démarrage._
 
@@ -64,7 +66,7 @@ _Transition d'arrière-plan plus rapide au démarrage._
 }
 ```
 
-### Les widgets sont trop bas !
+## Les widgets sont trop bas !
 
 _Rend les widgets plus élevés._
 
@@ -74,7 +76,7 @@ _Rend les widgets plus élevés._
 }
 ```
 
-### Maintenant, ils sont trop élevés....
+## Maintenant, ils sont trop élevés....
 
 _Rend les widgets plus bas._
 
@@ -85,7 +87,7 @@ _Rend les widgets plus bas._
 }
 ```
 
-### Les liens sont tout ce dont j'ai besoin
+## Les liens sont tout ce dont j'ai besoin
 
 _Masque tout sauf les liens rapides (et les centre)._
 
@@ -99,7 +101,7 @@ _Masque tout sauf les liens rapides (et les centre)._
 }
 ```
 
-### L'unicolore est la nouvelle méta
+## L'unicolore est la nouvelle méta
 
 _Donne une couleur uniforme à l'arrière-plan. Remplacez "rebeccapurple" par la couleur de votre choix._
 
@@ -112,7 +114,7 @@ _Donne une couleur uniforme à l'arrière-plan. Remplacez "rebeccapurple" par la
 }
 ```
 
-### 23 quoi, carottes ?
+## 23 quoi, carottes ?
 
 _Ajoute un C après la température._
 
@@ -122,7 +124,7 @@ _Ajoute un C après la température._
 }
 ```
 
-### J'aime mes horloges épaisses
+## J'aime mes horloges épaisses
 
 _Rend l'horloge analogique plus épaisse._
 
@@ -146,7 +148,7 @@ _Rend l'horloge analogique plus épaisse._
 }
 ```
 
-### Interface alignée à gauche ou à droite
+## Interface alignée à gauche ou à droite
 
 _Aligne l'interface sur les côtés au lieu du centre._
 
@@ -193,7 +195,7 @@ _Aligne l'interface sur les côtés au lieu du centre._
 }
 ```
 
-### Rolex 😎
+## Rolex 😎
 
 _Fait ressembler une horloge analogique à une Rolex._
 
