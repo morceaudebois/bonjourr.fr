@@ -2,12 +2,24 @@
 import Trans from '../../components/Trans.astro'
 import Background from '../Background.astro'
 import useTranslation from '../../locales/useTranslation'
-
 import BackgroundImage from '../../assets/fields.webp'
 
 const { isFrench } = useTranslation(Astro)
 const locale = isFrench ? '/fr/' : '/'
 ---
+
+<script>
+	import { detect } from 'detect-browser'
+
+	window.addEventListener('load', function () {
+		const input = document.querySelector<HTMLInputElement>('#browser')
+		const browser = detect()
+
+		if (input && typeof browser === 'object') {
+			input.value = `Uses ${browser?.name} ${browser?.version} on ${browser?.os}`
+		}
+	})
+</script>
 
 <Background src={BackgroundImage} blur='1' />
 <section>
@@ -39,7 +51,7 @@ const locale = isFrench ? '/fr/' : '/'
 			<label>
 				<Trans>Your message</Trans>
 			</label>
-			<textarea id='message' name='message' minlength="80" required></textarea>
+			<textarea id='message' name='message' minlength='80' required></textarea>
 
 			<button type='submit'>
 				<Trans>Send</Trans>
