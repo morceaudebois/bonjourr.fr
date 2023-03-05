@@ -11,13 +11,27 @@ const locale = isFrench ? '/fr/' : '/'
 <script>
 	import { detect } from 'detect-browser'
 
-	window.addEventListener('load', function () {
+	function addBrowserDataToForm() {
 		const input = document.querySelector<HTMLInputElement>('#browser')
 		const browser = detect()
 
 		if (input && typeof browser === 'object') {
 			input.value = `Uses ${browser?.name} ${browser?.version} on ${browser?.os}`
 		}
+	}
+
+	function mockSubmitOnShortMessages(e: Event) {
+		const messagebox = document.querySelector<HTMLTextAreaElement>('form #message')
+
+		if ((messagebox?.value.length || 0) < 20) {
+			e.preventDefault()
+			document.querySelector<HTMLAnchorElement>('#mocksubmit')?.click()
+		}
+	}
+
+	window.addEventListener('load', function () {
+		addBrowserDataToForm()
+		document.querySelector('form')?.addEventListener('submit', mockSubmitOnShortMessages)
 	})
 </script>
 
@@ -31,6 +45,8 @@ const locale = isFrench ? '/fr/' : '/'
 			<Trans>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!</Trans>
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</p>
+
+		<a id='mocksubmit' href={locale + 'submit'}></a>
 
 		<form
 			id='form'
@@ -51,7 +67,7 @@ const locale = isFrench ? '/fr/' : '/'
 			<label>
 				<Trans>Your message</Trans>
 			</label>
-			<textarea id='message' name='message' minlength='80' required></textarea>
+			<textarea id='message' name='message' required></textarea>
 
 			<button type='submit'>
 				<Trans>Send</Trans>
@@ -66,6 +82,12 @@ const locale = isFrench ? '/fr/' : '/'
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	#mocksubmit {
+		opacity: 0;
+		user-select: none;
+		pointer-events: none;
 	}
 
 	#form-container {
