@@ -9,56 +9,13 @@ featured: /backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 
 Bonjourr est personnalisable par le biais de son interface de paramètres, mais vous pouvez faire bien d'autres choses ! Copiez et collez ces extraits de style dans leur section dédiée des paramètres pour débloquer de nouvelles possibilités.
 
-## Je veux mon propre message d'accueil
+Vous voulez votre propre extrait de style ici ? [Contactez nous !](/#further)
 
-_Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-midi, etc._
+## Fond d'écran
 
-```css
-#greetings:before {
-	content: "Votre message d'accueil personnalisé";
-	visibility: visible;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	text-transform: none;
-}
+### J'aime que mes arrière-plans soient rapides.
 
-#greetings {
-	visibility: hidden;
-	position: relative;
-}
-```
-
-## J'ai besoin de plus d'espace vertical
-
-_Par défaut, Bonjourr réserve un certain espace pour le pied de page (les crédits et icône des paramètres) afin que le reste de l'interface ne déborde pas dessus. Ce code supprime cet espace réservé et donne plus d'espace vertical à vos widgets. Cela peut être utile si vous avez un petit écran et beaucoup de widgets, mais peut entraîner des problèmes de débordement dans certaines situations._
-
-```css
-footer {
-	position: absolute;
-	bottom: 0;
-}
-
-#interface {
-	max-height: 100vh;
-}
-```
-
-## Je me fiche de l'exposition de l'artiste
-
-_Cache les crédits d'auteur de la photo Unsplash._
-
-```css
-#credit {
-	display: none;
-}
-```
-
-## J'aime que mes arrière-plans soient rapides.
-
-_Transition d'arrière-plan plus rapide au démarrage._
+Transition d'arrière-plan plus rapide au démarrage.
 
 ```css
 #background_overlay {
@@ -66,67 +23,29 @@ _Transition d'arrière-plan plus rapide au démarrage._
 }
 ```
 
-## Les widgets sont trop bas !
+### L'unicolore est la nouvelle méta
 
-_Rend les widgets plus élevés._
+Donne une couleur uniforme à l'arrière-plan. Remplacez "#234" par la couleur de votre choix.
 
 ```css
-#interface #widgets {
-	justify-content: flex-start;
+#background_overlay {
+	background-color: #234;
 }
-```
 
-## Maintenant, ils sont trop élevés....
-
-_Rend les widgets plus bas._
-
-```css
-#interface #widgets {
-	justify-content: flex-end;
-	padding-bottom: 2em;
-}
-```
-
-## Les liens sont tout ce dont j'ai besoin
-
-_Masque tout sauf les liens rapides (et les centre)._
-
-```css
-#interface #time,
-#interface #main,
-#interface #sb_container,
-#interface #notes_container,
-#interface #quotes_container {
+/* Cache aussi les ombres */
+#main::before,
+#time::before,
+#background,
+#background-bis {
 	display: none;
 }
 ```
 
-## L'unicolore est la nouvelle méta
+## Horloge
 
-_Donne une couleur uniforme à l'arrière-plan. Remplacez "rebeccapurple" par la couleur de votre choix._
+### J'aime mes horloges épaisses
 
-```css
-#background {
-	opacity: 0;
-}
-#background_overlay {
-	background-color: rebeccapurple;
-}
-```
-
-## 23 quoi, carottes ?
-
-_Ajoute un C après la température._
-
-```css
-#tempContainer p::after {
-	content: 'C';
-}
-```
-
-## J'aime mes horloges épaisses
-
-_Rend l'horloge analogique plus épaisse._
+Rend l'horloge analogique plus épaisse.
 
 ```css
 #interface {
@@ -148,56 +67,9 @@ _Rend l'horloge analogique plus épaisse._
 }
 ```
 
-## Interface alignée à gauche ou à droite
+### Rolex 😎
 
-_Aligne l'interface sur les côtés au lieu du centre._
-
-```css
-#interface {
-	width: 70%;
-	margin: auto;
-
-	/* Retirez celui que vous ne voulez PAS */
-
-	/* Droite */
-	--flex: flex-end;
-	--text: right;
-
-	/* Gauche */
-	--flex: flex-start;
-	--text: left;
-}
-
-#interface #main,
-#interface #time {
-	align-items: var(--flex);
-}
-
-#interface #greetings,
-#interface #weather,
-#interface #widgets #quotes_container,
-#interface #widgets #quotes_container #author {
-	text-align: var(--text);
-}
-
-#interface #main #weather #tempContainer {
-	justify-content: var(--flex);
-}
-
-#interface #widgets {
-	align-self: var(--flex);
-}
-
-#interface #widgets #linkblocks,
-#interface #widgets #sb_container {
-	margin: 0;
-	align-self: var(--flex);
-}
-```
-
-## Rolex 😎
-
-_Fait ressembler une horloge analogique à une Rolex._
+Fait ressembler une horloge analogique à une Rolex.
 
 ```css
 * #interface #time #time-container #analogClock,
@@ -208,6 +80,92 @@ _Fait ressembler une horloge analogique à une Rolex._
 }
 ```
 
-<br><br>
+## Bienvenue
 
-_Vous voulez votre propre extrait de style ici ? [Contactez nous](/#further)!_
+### Je veux mon propre message d'accueil
+
+Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-midi, etc.
+
+```css
+#greetings:before {
+	content: "Votre message d'accueil personnalisé";
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	text-transform: none;
+}
+
+#greetings {
+	visibility: hidden;
+	position: relative;
+}
+```
+
+## Liens
+
+### Je veux des liens transparents !
+
+Certaines icônes de sites sont des PNG avec un fond transparent. Ce code supprimera le fond blanc par défaut de Bonjourr pour les liens et fera briller ces icônes.
+
+```css
+#interface #linkblocks li.block a img {
+	background: transparent;
+	box-shadow: unset;
+}
+
+#interface #linkblocks li.block a img:hover {
+	box-shadow: unset;
+}
+```
+
+## Police
+
+### Mes polices de caractères seront noires (ou une autre couleur 😯)
+
+Change la couleur de la police en noir. Utile si vous utilisez principalement des arrière-plans clairs. Remplacez "black" par un code couleur si vous souhaitez une autre couleur spécifique.
+
+```css
+body #interface,
+#linkblocks span {
+	color: black !important;
+}
+```
+
+### And my clock shall be black too
+
+```css
+#interface #time #time-container #analogClock {
+	border-color: black !important;
+}
+
+#minutes,
+#center,
+#hours {
+	background-color: black !important;
+}
+```
+
+## Autre
+
+### Je me fiche de l'exposition de l'artiste
+
+Cache les crédits d'auteur de la photo Unsplash.
+
+```css
+#credit {
+	display: none;
+}
+```
+
+### 23 quoi, carottes ?
+
+Ajoute un C après la température.
+
+```css
+#tempContainer p::after {
+	content: 'C';
+}
+```
