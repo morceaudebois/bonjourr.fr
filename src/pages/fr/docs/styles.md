@@ -169,3 +169,48 @@ Ajoute un C après la température.
 	content: 'C';
 }
 ```
+
+### Pas de GPU, seulement le CPU 😠
+
+Désactive la propriété de style `backdrop-filter` très gourmande en ressources graphiques sur certains éléments.
+
+```css
+#bookmarks_container,
+#bookmarks,
+#element-mover,
+.move-overlay {
+	backdrop-filter: none !important;
+}
+
+#editlink,
+#bookmarks,
+#element-mover {
+	background-color: #f2f2f7;
+}
+
+body.dark #editlink,
+body.dark #bookmarks,
+body.dark #element-mover,
+body.autodark #editlink,
+body.autodark #bookmarks,
+body.autodark #element-mover {
+	background-color: #222;
+}
+```
+
+### Pour les ordinateurs qui traînent
+
+Désactive la plupart des transitions et des animations des paramètres. Vous pouvez également ajouter les styles ci-dessus pour améliorer les performances.
+
+```css
+#settings .as,
+#settings,
+.move-overlay {
+	transition: none;
+}
+
+#interface {
+	transform: translateX(0) !important;
+	transition: none !important;
+}
+```

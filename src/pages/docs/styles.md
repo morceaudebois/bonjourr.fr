@@ -169,3 +169,48 @@ Adds a C after the temperature.
 	content: 'C';
 }
 ```
+
+### No GPU, only CPU 😠
+
+This disables graphics intensive `backdrop-filter` style property on some elements.
+
+```css
+#bookmarks_container,
+#bookmarks,
+#element-mover,
+.move-overlay {
+	backdrop-filter: none !important;
+}
+
+#editlink,
+#bookmarks,
+#element-mover {
+	background-color: #f2f2f7;
+}
+
+body.dark #editlink,
+body.dark #bookmarks,
+body.dark #element-mover,
+body.autodark #editlink,
+body.autodark #bookmarks,
+body.autodark #element-mover {
+	background-color: #222;
+}
+```
+
+### For laggy computers
+
+Disables most settings transitions and animations. You can also add the styles above to improve performances.
+
+```css
+#settings .as,
+#settings,
+.move-overlay {
+	transition: none;
+}
+
+#interface {
+	transform: translateX(0) !important;
+	transition: none !important;
+}
+```
