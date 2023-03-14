@@ -1,0 +1,49 @@
+---
+import Trans from './Trans.astro'
+import ResetLayout from '../assets/1.16.0-bug.png'
+---
+
+<div id='alert-banner'>
+	<div>
+		<p>
+			<Trans>
+				If you had searchbar, notes or quotes enabled when you updated to 1.16.0, your page likely broke. We're really
+				sorry about that ! 😥
+			</Trans>
+		</p>
+		<p>
+			<Trans>You can fix this issue by going clicking on "reset layout", after showing all settings.</Trans>
+		</p>
+	</div>
+
+	<div>
+		<img src={ResetLayout} />
+	</div>
+</div>
+
+<style>
+	div#alert-banner {
+		display: flex;
+		gap: 2em;
+		max-width: 510px;
+		align-items: center;
+		padding: 1em 2em;
+		background: #fffc;
+		border-radius: 8px;
+		color: #222;
+		font-weight: 500;
+		margin: 0 auto;
+		margin-bottom: 5vh;
+	}
+
+	p {
+		font-size: 0.9em;
+		line-height: 1.2em;
+	}
+
+	img {
+		text-align: center;
+		width: 200px;
+		border-radius: 8px;
+	}
+</style>

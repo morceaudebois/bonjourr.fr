@@ -12,10 +12,12 @@ import Background from '../Background.astro'
 import Landing from './Landing.astro'
 import Further from './Further.astro'
 import Showcase from './Showcase.astro'
+import AlertBanner from '../AlertBanner.astro'
 ---
 
 <section id='hero'>
 	<Background src={LandingImage} blur='.5' />
+	<AlertBanner />
 	<Landing />
 </section>
 
@@ -100,6 +102,7 @@ import Showcase from './Showcase.astro'
 
 	#hero {
 		display: flex;
+		flex-direction: column;
 		position: relative;
 		padding: 8em 4em;
 		padding-top: 8em;
@@ -169,7 +172,6 @@ import Showcase from './Showcase.astro'
 		gap: 1em;
 		margin-top: 3em;
 	}
-	
 
 	@media only screen and (max-width: 500px) {
 		#hero {
