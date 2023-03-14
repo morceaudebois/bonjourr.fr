@@ -12,6 +12,16 @@ featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 -   Hover your mouse on the background credits to see exif infos
 -   When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
 
+## Page layouts
+
+There are 3 different page layouts to choose from: single, double and triple column. Each layout saves the position and alignment of your widgets independently.
+
+These options only affect the current layout:
+
+-   Widget toggle (Enable switches)
+-   All options in grid toolbox
+-   Reset layout
+
 ## Quick Links
 
 You can add and import Quick Links from the settings, and edit them when you right click on them.

@@ -12,6 +12,16 @@ featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 -   Passez votre souris sur les crédits du fond d'écran pour voir les infos exif.
 -   En activant l'option de moteur de recherche personnalisé, la barre de recherche devient compatible avec tous les moteurs de recherche, ce qui inclut des choses comme YouTube (`https://www.youtube.com/results?search_query=%s`).
 
+## Mise en page
+
+Vous avez le choix entre trois mises en page différentes : simple, double et triple colonne. Chaque mise en page enregistre la position et l'alignement de vos widgets de manière indépendante.
+
+Ces options n'affectent que la mise en page actuelle :
+
+-   Toggle des widgets (Boutons Activer)
+-   Toutes les options de mise en page dans la boîte à outils
+-   Réinitialiser la mise en page
+
 ## Quick links
 
 Vous pouvez ajouter et importer des liens à partir des paramètres, et les modifier en faisant un clic droit dessus.
