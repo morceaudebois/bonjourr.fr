@@ -42,13 +42,15 @@ const locale = isFrench ? '/fr/' : '/'
 			<Trans>Thank you for using Bonjourr.</Trans>
 		</h2>
 		<p>
-			<Trans>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!</Trans>
+			<Trans>We're sorry to see you go.
+				<!-- If you have time, tell us what would make Bonjourr better, thanks! -->
+			</Trans>
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</p>
 
 		<a id='mocksubmit' href={locale + 'submit'}></a>
 
-		<form
+		<!-- <form
 			id='form'
 			action={locale + 'submit'}
 			name='contact'
@@ -72,7 +74,8 @@ const locale = isFrench ? '/fr/' : '/'
 			<button type='submit'>
 				<Trans>Send</Trans>
 			</button>
-		</form>
+		</form> -->
+
 	</div>
 </section>
 
