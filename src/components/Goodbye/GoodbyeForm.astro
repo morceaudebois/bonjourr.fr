@@ -52,7 +52,7 @@ const locale = isFrench ? '/fr/' : '/'
 
 			const sumbittedThisMonth = submissions.filter((sub) => new Date(sub.created_at) > startDate)
 
-			if (sumbittedThisMonth.length < 99) {
+			if (sumbittedThisMonth.length <= 99) {
 				// Quits before applying removeAttribute
 				return
 			}
