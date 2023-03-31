@@ -29,8 +29,42 @@ const locale = isFrench ? '/fr/' : '/'
 		}
 	}
 
+	async function limitFormSubmissionsPerMonths() {
+		let submissions: { [key in string]: string }[] = []
+
+		// Get last 100 submissions from netlify API
+		try {
+			const URL = 'https://api.netlify.com/api/v1/sites/41da761d-f84a-4b2a-9545-fd53ff8781fa/submissions'
+			const auth = atob('QmVhcmVyIFVLZlRBSHNpdFhnWEJMX3lOVWNNSXF2VEdaVDJ5b1VpU3Z5RVJGOTlIY3M=')
+			const formAPI = await fetch(URL, { headers: { Authorization: auth } })
+			submissions = await formAPI.json()
+		} catch (error) {
+			console.log('API failed: disable netlify')
+		}
+
+		if (submissions.length > 0) {
+			const date = new Date()
+			const startDate = new Date()
+
+			// Set day before month to avoid issues with 30/31 months
+			startDate.setDate(21)
+			startDate.setMonth(date.getDate() < 21 ? date.getMonth() - 1 : date.getMonth())
+
+			const sumbittedThisMonth = submissions.filter((sub) => new Date(sub.created_at) > startDate)
+
+			if (sumbittedThisMonth.length < 99) {
+				// Quits before applying removeAttribute
+				return
+			}
+		}
+
+		// Disables Netlify form submission
+		document.getElementById('form')?.removeAttribute('data-netlify')
+	}
+
 	window.addEventListener('load', function () {
 		addBrowserDataToForm()
+		limitFormSubmissionsPerMonths()
 		document.querySelector('form')?.addEventListener('submit', mockSubmitOnShortMessages)
 	})
 </script>
@@ -42,15 +76,13 @@ const locale = isFrench ? '/fr/' : '/'
 			<Trans>Thank you for using Bonjourr.</Trans>
 		</h2>
 		<p>
-			<Trans>We're sorry to see you go.
-				<!-- If you have time, tell us what would make Bonjourr better, thanks! -->
-			</Trans>
+			<Trans>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!</Trans>
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</p>
 
 		<a id='mocksubmit' href={locale + 'submit'}></a>
 
-		<!-- <form
+		<form
 			id='form'
 			action={locale + 'submit'}
 			name='contact'
@@ -74,8 +106,7 @@ const locale = isFrench ? '/fr/' : '/'
 			<button type='submit'>
 				<Trans>Send</Trans>
 			</button>
-		</form> -->
-
+		</form>
 	</div>
 </section>
 
