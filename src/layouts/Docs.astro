@@ -1,29 +1,9 @@
 ---
 import Layout from './Layout.astro'
-import useTranslation from '../locales/useTranslation'
 import DocsHero from '../components/Docs/DocsHero.astro'
+import DocsNav from '../components/Docs/DocsNav.astro'
 
-type Heading = { text: string; slug: string; depth: number }
-
-const { isFrench } = useTranslation(Astro)
 const { frontmatter } = Astro.props
-
-// URL needs to be literal
-const postsEN = await Astro.glob('../pages/docs/*.md')
-const postsFR = await Astro.glob('../pages/fr/docs/*.md')
-
-// Choose which docs to use
-let posts = (isFrench ? postsFR : postsEN).map((post) => {
-	return { headings: post.getHeadings(), url: post.url, frontmatter: post.frontmatter }
-})
-
-// Sort by orderData
-posts.sort((a, b) => {
-	return a.frontmatter.orderData - b.frontmatter.orderData
-})
-
-// set current variable to not be confused with mapped frontmatter
-const currentURL = frontmatter.url
 ---
 
 <script>
@@ -82,32 +62,7 @@ const currentURL = frontmatter.url
 	<DocsHero src={frontmatter.featured} title={frontmatter.title} />
 
 	<article class={frontmatter.slug}>
-		<nav class='docs-nav'>
-			<ul>
-				{
-					posts.map(({ url, frontmatter, headings }) => (
-						<li>
-							<details open={currentURL === url && 'page'} aria-current={currentURL === url && 'page'}>
-								<summary>
-									<a href={url}>{frontmatter.title}</a>
-								</summary>
-
-								<ul class='headings-list'>
-									{headings.map(
-										({ text, slug, depth }: Heading) =>
-											depth === 2 && (
-												<li class={'headings-item item-' + slug}>
-													<a href={url + '#' + slug}>{text}</a>
-												</li>
-											)
-									)}
-								</ul>
-							</details>
-						</li>
-					))
-				}
-			</ul>
-		</nav>
+		<DocsNav frontmatter={frontmatter} />
 
 		<div class='content'>
 			<slot />
@@ -140,6 +95,7 @@ const currentURL = frontmatter.url
 		tab-size: 1.5em;
 		padding: 1.5em;
 		border-radius: 0.5em;
+		border: 1px solid #fff1;
 	}
 
 	article.profiles pre {
@@ -153,70 +109,18 @@ const currentURL = frontmatter.url
 	article {
 		position: relative;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 		margin: auto;
+		justify-content: center;
 		padding: 4em 2em 14em 2em;
 		min-height: calc(70vh - 18em);
 		font-size: 16px;
 		gap: 4em;
 	}
 
-	.docs-nav {
-		line-height: 1.7em;
-		min-width: 300px;
-		list-style: outside;
-
-		summary {
-			cursor: pointer;
-			user-select: none;
-		}
-
-		a {
-			padding: 0.4em 1em;
-			border-radius: 4px;
-			background-color: transparent;
-
-			&:hover {
-				opacity: 1;
-				background-color: #fff3;
-			}
-		}
-
-		> ul {
-			position: sticky;
-			top: 2em;
-			gap: 1.5em;
-			display: flex;
-			flex-direction: column;
-			font-weight: 400;
-			padding-left: 0;
-			list-style: none;
-		}
-
-		ul.headings-list {
-			margin-top: 0.5em;
-			font-weight: 200;
-			list-style: none;
-			padding-left: 1em;
-
-			li {
-				padding: 0.2em;
-
-				&[aria-current='true'] a {
-					opacity: 1;
-					background-color: #fff2;
-				}
-
-				a {
-					opacity: 0.8;
-				}
-			}
-		}
-	}
-
 	.content {
+		padding-bottom: 5em;
 		max-width: 700px;
+		min-width: 360px;
 		width: 100%;
 
 		h2,
@@ -289,6 +193,16 @@ const currentURL = frontmatter.url
 			@media (prefers-color-scheme: dark) {
 				border-color: #666;
 			}
+		}
+	}
+
+	@media only screen and (max-width: 700px) {
+		article {
+			flex-direction: column;
+		}
+
+		.content {
+			min-width: 100%;
 		}
 	}
 

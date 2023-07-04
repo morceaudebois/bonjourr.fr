@@ -7,14 +7,14 @@ layout: '../../layouts/Docs.astro'
 featured: /backgrounds/danist-bviex5lwf3s.webp
 ---
 
-## 🖥️ As a desktop extension
+## As a desktop extension
 
 -   [Chrome & Brave](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd?hl=fr&authuser=0)
 -   [Firefox](https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/)
 -   [Safari for macOS](https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236)
 -   [Edge](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid)
 
-## 📱 iOS and Android
+## iOS and Android
 
 -   As a mobile web app: in the Share menu of your browser, select 'Add to Home Screen' or 'Install'.
 -   As a browser homepage: go to Settings => Homepage => Open this page => `https://online.bonjourr.fr`. You can use a third party browser like Firefox if you want to do this on iOS.
