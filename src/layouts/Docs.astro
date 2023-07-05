@@ -6,56 +6,6 @@ import DocsNav from '../components/Docs/DocsNav.astro'
 const { frontmatter } = Astro.props
 ---
 
-<script>
-	window.onload = function () {
-		let load = true
-		let headingsList: string[] = []
-		const allItems = document.querySelectorAll('.headings-item')
-
-		// add headings ids to the list
-		document.querySelectorAll('.content h2, .content h3').forEach((item: Element) => headingsList.push(item.id))
-
-		const callback = (entries: IntersectionObserverEntry[]) => {
-			entries.forEach((entry) => {
-				//
-				// Only care about intersection from top of page
-				if (entry.intersectionRect.y < 100) {
-					// to prevent selecting random headings on startup
-					if (load) return
-
-					// id to index, if intersecting is true it means we're going up
-					// therefore activate the heading above, index - 1
-					const currentIndex = headingsList.indexOf(entry.target.id) + (entry.isIntersecting ? -1 : 0)
-
-					// sets all aria-current
-					allItems.forEach((li) => {
-						li.classList.contains('item-' + headingsList[currentIndex])
-							? li.setAttribute('aria-current', 'true')
-							: li.removeAttribute('aria-current')
-					})
-				}
-			})
-
-			if (load) {
-				// On first observe, set heading specified in docs URL
-				const locationHeading = document.querySelector('.headings-item.item-' + location.hash.replace('#', ''))
-				locationHeading?.setAttribute('aria-current', 'true')
-				load = false
-			}
-		}
-
-		const observer = new IntersectionObserver(callback, {
-			root: null,
-			rootMargin: '-30px',
-			threshold: 1.0,
-		})
-
-		document.querySelectorAll('.content h2, .content h3').forEach((h) => {
-			observer.observe(h)
-		})
-	}
-</script>
-
 <Layout title={frontmatter.title + " · Bonjourr's documentation"}>
 	<div id='gradient-background'></div>
 

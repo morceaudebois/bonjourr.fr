@@ -13,7 +13,6 @@ const { isFrench } = useTranslation(Astro)
 const postsEN = await Astro.glob('../../pages/docs/*.md')
 const postsFR = await Astro.glob('../../pages/fr/docs/*.md')
 
-// Choose which docs to use
 let posts = (isFrench ? postsFR : postsEN).map((post) => ({
     frontmatter: post.frontmatter,
     headings: post.getHeadings(),
@@ -25,9 +24,63 @@ posts.sort((a, b) => {
     return a.frontmatter.orderData - b.frontmatter.orderData
 })
 
-// set current variable to not be confused with mapped frontmatter
 const currentURL = frontmatter.url
 ---
+
+<script>
+    window.onload = function () {
+        let load = true
+        let ids: string[] = []
+        let lastHeading: Element | null | undefined
+        const headings = document.querySelectorAll('.content h2')
+        const currentPageUL = document.querySelector('nav details[open="page"] ul')
+
+        headings.forEach((item: Element) => {
+            ids.push(item.id)
+        })
+
+        const callback = (entries: IntersectionObserverEntry[]) => {
+            entries.forEach((entry) => {
+                //
+                // Only care about intersection from top of page
+                if (entry.intersectionRect.y < 100) {
+                    // to prevent selecting random headings on startup
+                    if (load) return
+
+                    let currentIndex = ids.indexOf(entry.target.id)
+                    currentIndex += entry.isIntersecting ? -1 : 0
+                    currentIndex = Math.max(0, currentIndex)
+
+                    const heading = currentPageUL?.querySelector('.item-' + ids[currentIndex])
+
+                    if (heading) {
+                        lastHeading?.removeAttribute('aria-current')
+                        heading?.setAttribute('aria-current', 'true')
+                        lastHeading = heading
+                    }
+                }
+            })
+
+            // On first observe, set heading specified in docs URL
+            if (load) {
+                let heading: Element | null | undefined
+
+                if (location.hash === '') {
+                    heading = currentPageUL?.firstElementChild
+                } else {
+                    heading = document.querySelector('.headings-item.item-' + location.hash.replace('#', ''))
+                }
+
+                heading?.setAttribute('aria-current', 'true')
+                lastHeading = heading
+                load = false
+            }
+        }
+
+        const observer = new IntersectionObserver(callback, { rootMargin: '-20px', threshold: 1.0 })
+        headings.forEach((h) => observer.observe(h))
+    }
+</script>
 
 <nav>
     <ul>
@@ -38,7 +91,9 @@ const currentURL = frontmatter.url
                         <summary>
                             <a href={url}>{frontmatter.title}</a>
                             <div class='summary-marker'>
-                                <span>⮜</span>
+                                <span>
+                                    <img src='/misc/triangle.svg' width='10' height='10' alt='' />
+                                </span>
                             </div>
                         </summary>
 
@@ -116,9 +171,13 @@ const currentURL = frontmatter.url
             }
         }
 
-        details[open] .summary-marker span {
+        details .summary-marker span {
             display: inline-block;
             transform: rotate(-90deg);
+        }
+
+        details[open] .summary-marker span {
+            transform: rotate(-180deg);
         }
 
         ul.headings-list {
