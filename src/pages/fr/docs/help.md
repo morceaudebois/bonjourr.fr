@@ -19,16 +19,19 @@ La façon la plus simple de nous aider est de laisser un commentaire sur les sto
 
 ## Traductions
 
-Grâce à nos contributeurs, Bonjourr est actuellement disponible en 19 langues ! Voici ce que vous pouvez faire pour ajouter une nouvelle langue ou corriger certaines erreurs de traduction :
+Grâce à nos contributeurs, Bonjourr est actuellement disponible en 21 langues! Voici comment vous pouvez mettre à jour ou ajouter une langue:
 
--   Le premier fichier à modifier est [/src/scripts/lang.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts) où se trouvent toutes les traductions.
--   Ensuite allez dans [/\_locale/](https://github.com/victrme/Bonjourr/blob/master/_locales/). Dans votre dossier specifique à votre langue, modifiez:
-    -   `messages.json` pour le titre et le sous-titre de l'extension.
-    -   `overview.md` pour la description complète sur les boutiques d'applications.
+Les traductions se trouvent dans le dossier [/\_locales/](https://github.com/victrme/Bonjourr/tree/master/_locales) sur Github. Chaque dossier de langue contient ces fichiers:
 
-Si vous connaissez GitHub, vous pouvez créer une pull request. Sinon, vous pouvez nous envoyer directement les fichiers modifiés [via email](mailto:bonjourr.app@protonmail.com) ou sur [notre groupe Telegram](https://t.me/BonjourrStartpage)).
+-   `translations.json` pour la traduction principale.
+-   `messages.json` pour le titre et le sous-titre de l'extension.
+-   `overview.md` pour la description complète sur les pages de la boutique.
 
-⚠️ N'oubliez pas d'ajouter votre nom et votre lien en haut du fichier pour que nous puissions vous créditer !
+Pour ajouter une nouvelle langue, copiez le dossier `en` vers la langue souhaitée. Vous devez également ajouter le code pays et le nom à la liste dans [/src/scripts/lang.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts).
+
+Si vous êtes familier avec GitHub, vous pouvez créer une pull request. Sinon, vous pouvez nous envoyer directement les fichiers modifiés [par e-mail](mailto:bonjourr.app@protonmail.com) ou [sur notre groupe Telegram](https://t.me/BonjourrStartpage).
+
+⚠️ N'oubliez pas d'inclure votre nom et un lien pour que nous puissions vous créditer !
 
 ## Contributions
 
