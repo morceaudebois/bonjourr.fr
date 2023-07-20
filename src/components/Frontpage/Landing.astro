@@ -28,7 +28,9 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 		</div>
 	</div>
 
-	<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' height='356' />
+	<picture>
+		<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' height='356' />
+	</picture>
 </div>
 
 <style>
@@ -37,7 +39,12 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 		margin: 0;
 	}
 
+	picture {
+		max-width: 480px;
+	}
+
 	img {
+		width: 100%;
 		object-fit: contain;
 	}
 
@@ -73,20 +80,12 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 	}
 
 	@media only screen and (max-width: 1300px) {
-		img {
-			width: 480px;
-		}
-
 		.title {
 			font-size: 1.6em;
 		}
 	}
 
 	@media only screen and (max-width: 1100px) {
-		img {
-			width: 400px;
-		}
-
 		.wrapper {
 			gap: 2em;
 		}
@@ -100,10 +99,6 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 		.wrapper {
 			flex-direction: column;
 			gap: 4em;
-		}
-
-		img {
-			width: 480px;
 		}
 
 		.left {

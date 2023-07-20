@@ -15,7 +15,7 @@ import Showcase from './Showcase.astro'
 ---
 
 <section id='hero'>
-	<Background src={LandingImage} blur='.5' />
+	<Background src={LandingImage} blur='.5' brightness='.9' />
 	<Landing />
 </section>
 
@@ -26,12 +26,12 @@ import Showcase from './Showcase.astro'
 </section>
 
 <section id='open'>
-	<Background src={OpenImage} />
+	<Background src={OpenImage} blur='.5' brightness='.8' />
 
 	<div class='section-wrapper'>
 		<h2>
-			<span role='img' aria-label='lock-emoji'> 🔒</span>{' '}
 			<Trans>Free, open source and privacy focused</Trans>
+			<span role='img' aria-label='lock-emoji'> 🔒</span>
 		</h2>
 		<p>
 			<Trans>
@@ -50,7 +50,7 @@ import Showcase from './Showcase.astro'
 </section>
 
 <section id='donate'>
-	<Background src={DonateImage} />
+	<Background src={DonateImage} blur='.5' brightness='.8' />
 
 	<div class='section-wrapper'>
 		<h2>
@@ -85,15 +85,8 @@ import Showcase from './Showcase.astro'
 </section>
 
 <style lang='scss'>
-	h2 {
-		text-align: center;
-		font-size: 35px;
-		font-weight: 500;
-		margin-bottom: 1.25em;
-	}
-
 	h3 {
-		font-size: 2em;
+		font-size: 1.5em;
 		font-weight: 500;
 		text-align: center;
 	}
@@ -106,29 +99,24 @@ import Showcase from './Showcase.astro'
 		padding-top: 8em;
 		justify-content: center;
 		align-items: center;
-		min-height: calc(80vh - 16em);
+		min-height: calc(80vh - 7em);
 	}
 
 	@media only screen and (max-height: 1000px) and (min-width: 700px) {
 		#hero {
-			min-height: calc(100vh - 16em);
+			min-height: calc(100vh - 7em);
 		}
 	}
 
 	.section-wrapper {
 		margin: auto;
-		padding: 1.5em;
+		padding: 3em 2em;
 		max-width: 1200px;
 	}
 
 	#showcase {
 		color: white;
 		background: linear-gradient(0.25turn, #140a17, #231730, #140a17);
-	}
-
-	#open .section-wrapper,
-	#donate .section-wrapper {
-		max-width: 700px;
 	}
 
 	#open,
@@ -139,9 +127,9 @@ import Showcase from './Showcase.astro'
 		background-size: cover;
 	}
 
-	#open p,
-	#donate p {
-		text-shadow: 0px 0px 1em #222;
+	#open .section-wrapper,
+	#donate .section-wrapper {
+		max-width: 600px;
 	}
 
 	#open,
@@ -150,16 +138,12 @@ import Showcase from './Showcase.astro'
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 70vh;
+		min-height: 700px;
 	}
 
 	#further {
-		min-height: 80vh;
+		min-height: 900px;
 		background-color: #fafafd;
-	}
-
-	#donate {
-		padding-bottom: 10em;
 	}
 
 	#donate .buttons {
