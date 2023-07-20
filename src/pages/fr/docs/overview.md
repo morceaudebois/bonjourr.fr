@@ -70,11 +70,10 @@ Bonjourr est compatible avec les fonctions de synchronisation automatique des de
 
 Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre Note. Remplacez `Ctrl` par `cmd` sous macOS.
 
-| Keys           | Action                   |
-| -------------- | ------------------------ |
-| Ctrl + Entrée  | Applique les changements |
-| Ctrl + Maj + C | Ajoute case à cocher     |
-| Ctrl + I       | Italique                 |
-| Ctrl + B       | Gras                     |
-| Ctrl + S       | Barré                    |
-| Ctrl + U       | URL                      |
+| Keys           | Action         |
+| -------------- | -------------- |
+| Ctrl + Maj + 1 | Grand titre    |
+| Ctrl + Maj + 2 | Moyen titre    |
+| Ctrl + Maj + 3 | Petit titre    |
+| Ctrl + Maj + 4 | Liste à puce   |
+| Ctrl + Maj + 5 | List de tâches |

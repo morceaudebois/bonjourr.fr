@@ -70,13 +70,12 @@ Bonjourr is compatible with the automatic syncing features of both [Firefox](htt
 
 ### Notes
 
-You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `cmd` on macOS.
+You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `Cmd` on macOS.
 
-| Keys             | Action          |
-| ---------------- | --------------- |
-| Ctrl + Enter     | Apply changes   |
-| Ctrl + Shift + C | Adds checkboxes |
-| Ctrl + I         | Italics         |
-| Ctrl + B         | Bold            |
-| Ctrl + S         | Strike          |
-| Ctrl + U         | URL             |
+| Keys             | Action            |
+| ---------------- | ----------------- |
+| Ctrl + Shift + 1 | To big heading    |
+| Ctrl + Shift + 2 | To medium heading |
+| Ctrl + Shift + 3 | To small heading  |
+| Ctrl + Shift + 4 | To bullet list    |
+| Ctrl + Shift + 5 | To todo list      |
