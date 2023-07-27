@@ -1,11 +1,48 @@
 ---
-import Download from './Download.svelte'
 import Trans from '../Trans.astro'
 import Link from '../Link.astro'
 
 import Illustration from '../../assets/illustrations/illu.webp'
 import Illustration2x from '../../assets/illustrations/illu2x.webp'
 ---
+
+<script>
+	import { detect } from 'detect-browser'
+
+	const platforms = {
+		firefox: {
+			id: 'firefox',
+			link: 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/',
+		},
+		chrome: {
+			id: 'chrome',
+			link: 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd',
+		},
+		'edge-chromium': {
+			id: 'edge',
+			link: 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid',
+		},
+		safari: {
+			id: 'safari',
+			link: 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236',
+		},
+		ios: {
+			id: 'safari',
+			link: '/docs/platforms#ios-and-android',
+		},
+	}
+
+	const { name } = detect() ?? { name: '' }
+
+	if (name in platforms) {
+		const { link, id } = platforms[name as keyof typeof platforms]
+		document.getElementById('download-link')?.setAttribute('href', link)
+		document.getElementById('download-icon')?.setAttribute('src', '/browsers/' + id + '.svg')
+		document.getElementById('download-icon')?.setAttribute('style', 'opacity: 1')
+	} else {
+		document.getElementById('download-link')?.setAttribute('style', 'display: none')
+	}
+</script>
 
 <div class='wrapper'>
 	<div class='left'>
@@ -14,10 +51,23 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 			<p><Trans>Startpage for your browser</Trans></p>
 		</div>
 
-		<Download client:load>
-			<Trans slot='Download'>Download</Trans>
-			<Trans slot='Online'>Try online</Trans>
-		</Download>
+		<div class='container'>
+			<a id='download-link' href='' class='button'>
+				<div class='icon'>
+					<img id='download-icon' src='' alt='' />
+				</div>
+				<span>
+					<Trans slot='Download'>Download</Trans>
+				</span>
+			</a>
+
+			<a href='https://online.bonjourr.fr' rel='noreferrer' class='button'>
+				<img src='/browsers/desktop.svg' class='icon' alt='' />
+				<span>
+					<Trans slot='Online'>Try online</Trans>
+				</span>
+			</a>
+		</div>
 
 		<div class='link'>
 			<Link href='/docs/platforms'>
@@ -28,7 +78,7 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 		</div>
 	</div>
 
-	<picture>
+	<picture id='illustration'>
 		<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' height='356' />
 	</picture>
 </div>
@@ -46,6 +96,10 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 	img {
 		width: 100%;
 		object-fit: contain;
+	}
+
+	#download-icon {
+		opacity: 0;
 	}
 
 	.wrapper {
@@ -77,6 +131,26 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 	.link a:hover {
 		opacity: 1;
 		text-decoration: underline;
+	}
+
+	a {
+		min-width: 200px;
+	}
+
+	.icon {
+		display: flex;
+	}
+
+	.container {
+		display: flex;
+		gap: 1em;
+	}
+
+	@media only screen and (max-width: 450px) {
+		.container {
+			align-items: center;
+			flex-direction: column;
+		}
 	}
 
 	@media only screen and (max-width: 1300px) {
@@ -120,7 +194,7 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 			height: auto;
 		}
 
-		img {
+		#illustration {
 			display: none;
 		}
 	}
