@@ -19,16 +19,19 @@ The simplest way to help us out is to leave a review on the extension stores, ei
 
 ## Translations
 
-Thanks to our contributors, Bonjourr is currently available in 19 languages! Here's what you can do to add a new language or fix some translation errors:
+Thanks to our contributors, Bonjourr is currently available in 21 languages! Here's how you can update or add a language:
 
--   First file to modify is [/src/scripts/lang.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts) where all the translations are located.
--   Then go to [/\_locale/](https://github.com/victrme/Bonjourr/blob/master/_locales/). In your language folder, modify:
-    -   `messages.json` for the extension's title and subtitle.
-    -   `overview.md` for the full description on store pages.
+Translations are located in the [/\_locales/](https://github.com/victrme/Bonjourr/tree/master/_locales) folder on Github. Each language folder contains these files:
 
-If you are familiar with GitHub, you can create a pull request. If not, you can directly send us the modified files [via email](mailto:bonjourr.app@protonmail.com) or to [our Telegram group](https://t.me/BonjourrStartpage)).
+-   `translations.json` for the main translation.
+-   `messages.json` for the extension's title and subtitle.
+-   `overview.md` for the full description on store pages.
 
-⚠️ Don't forget to add your name and link at the top of the file so we can credit you!
+To add a new language, copy the `en` folder to your desired language. You also need to add the country code and name to the list in [/src/scripts/lang.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts).
+
+If you are familiar with GitHub, you can create a pull request. If not, you can directly send us the modified files [via email](mailto:bonjourr.app@protonmail.com) or to [our Telegram group](https://t.me/BonjourrStartpage).
+
+⚠️ Don't forget to join your name and link so we can credit you!
 
 ## Contributions
 

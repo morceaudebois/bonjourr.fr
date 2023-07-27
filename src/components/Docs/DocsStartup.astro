@@ -61,16 +61,18 @@ let titles: { [key: string]: string } = {}
 
 <style>
 	main {
+		display: flex;
+		place-items: center;
+		padding: 6em 2em 12em;
 		background-color: #2a2a2a;
-		min-height: calc(70vh - 20em);
-		padding: 6em 2em 12em 2em;
 	}
 
 	ul {
 		display: grid;
 		grid-auto-flow: dense;
-		padding: 0;
 		margin: 0 auto;
+		padding: 0;
+		width: 100%;
 		max-width: 1200px;
 		justify-content: center;
 		grid-template-columns: repeat(auto-fill, 360px);

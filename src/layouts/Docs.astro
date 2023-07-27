@@ -31,6 +31,11 @@ const { frontmatter } = Astro.props
 		background: linear-gradient(#323235, #222225);
 	}
 
+	main,
+	article {
+		min-height: calc(100vh - 330px - 8em);
+	}
+
 	code {
 		border-radius: 3px;
 		padding: 2px 10px;
@@ -62,7 +67,6 @@ const { frontmatter } = Astro.props
 		margin: auto;
 		justify-content: center;
 		padding: 4em 2em;
-		min-height: calc(70vh - 18em);
 		font-size: 16px;
 		gap: 4em;
 	}
