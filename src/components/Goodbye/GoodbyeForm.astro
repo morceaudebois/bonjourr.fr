@@ -69,7 +69,7 @@ const locale = isFrench ? '/fr/' : '/'
 	})
 </script>
 
-<Background src={BackgroundImage} blur='1' />
+<Background src={BackgroundImage} blur='2' />
 <section>
 	<div id='form-container'>
 		<h2>
@@ -116,6 +116,7 @@ const locale = isFrench ? '/fr/' : '/'
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		min-height: calc(100vh - 140px);
 	}
 
 	#mocksubmit {

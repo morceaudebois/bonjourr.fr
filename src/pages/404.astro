@@ -8,20 +8,20 @@ import Image from '../assets/fields.webp'
 ---
 
 <script is:inline>
-	const oldURLs = ['/use-bonjourr', '/misc', '/profiles', '/styles']
-	let path = location.pathname
+const oldURLs = ['/use-bonjourr', '/misc', '/profiles', '/styles']
+let path = location.pathname
 
-	if (oldURLs.includes(path)) {
-		path = path.replace('misc', 'overview')
-		path = path.replace('use-bonjourr', 'platforms')
-		path = path.replace('/', '/docs/')
+if (oldURLs.includes(path)) {
+	path = path.replace('misc', 'overview')
+	path = path.replace('use-bonjourr', 'platforms')
+	path = path.replace('/', '/docs/')
 
-		if (navigator.language === 'fr') {
-			path = path.replace('/docs/', '/fr/docs/')
-		}
-
-		location.assign(path)
+	if (navigator.language === 'fr') {
+		path = path.replace('/docs/', '/fr/docs/')
 	}
+
+	location.assign(path)
+}
 </script>
 
 <Layout title='404! · Bonjourr Startpage' id='404' lang='en'>
@@ -45,7 +45,7 @@ import Image from '../assets/fields.webp'
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding-top: 20em;
+		min-height: calc(100vh - 140px);
 	}
 
 	h1 {
