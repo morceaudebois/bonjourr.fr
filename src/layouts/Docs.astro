@@ -4,6 +4,7 @@ import DocsHero from '../components/Docs/DocsHero.astro'
 import DocsNav from '../components/Docs/DocsNav.astro'
 
 const { frontmatter } = Astro.props
+const isPrivacyPage = frontmatter?.slug === 'privacy'
 ---
 
 <Layout title={frontmatter.title + " · Bonjourr's documentation"}>
@@ -12,7 +13,7 @@ const { frontmatter } = Astro.props
 	<DocsHero src={frontmatter.featured} title={frontmatter.title} />
 
 	<article class={frontmatter.slug}>
-		<DocsNav frontmatter={frontmatter} />
+		{!isPrivacyPage && <DocsNav frontmatter={frontmatter} />}
 
 		<div class='content'>
 			<slot />

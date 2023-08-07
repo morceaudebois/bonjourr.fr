@@ -1,32 +1,56 @@
 ---
-title: Privacy policy
+title: Politique de confidentialité
 slug: privacy
 layout: ../../layouts/Docs.astro
-featured: ../assets/backgrounds/meiying-ng-OrwkD-iWgqg-unsplash.jpg
+featured: ../../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
 
-| APIs           | Actions                            | Frequency                                                                                                      |
-| -------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Openweathermap | Fetches weather data               | Every 30min when tab is active. On Location / Language change. No requests when description & icon are hidden. |
-| ipapi.co       | Get approximate location           | Once on startup, every time settings are reset.                                                                |
-| Unsplash       | Fetches background images          | On startup & every hour by default. On collection change.                                                      |
-| Google Fonts   | Fetches list of most popular fonts | On “font family” input focus. If font list storage is lost.                                                    |
+## APIs tierces
 
-<br />
-<br />
+-   **Openweathermap**  
+     Récupère la météo. Se déclenche toutes les 30 minutes quand l'onglet est actif. En cas de changement de position ou de langue. Pas de requète quand la description et l'icône sont cachées.
 
-| Permissions       | Actions                         | Frequency                                                   |
-| ----------------- | ------------------------------- | ----------------------------------------------------------- |
-| Unlimited Storage | Allows more than 1MB per item   | Only used for storing local backgrounds                     |
-| Geolocation       | Get precise location            | On startup and on geolocation option change.                |
-| Bookmarks         | Get a list of browser bookmarks | Optional. Only requested when using bookmark import option. |
+-   **Unsplash**  
+     Récupère les images d'arrière-plan. Au démarrage et toutes les heures par défaut. Au changement de collection.
 
-## Settings storage
+-   **Google Fonts**  
+     Récupère la liste des polices les plus populaires. Quand on clique sur la zone de texte "Police". Quand il n'y a plus de cache.
 
-We, [the Bonjourr team](https://github.com/victrme/Bonjourr#authors), do not have access to any of your settings. We do not use telemetry. Your page only sends requests to the relevent APIs. By default, Bonjourr will synchronize its settings with your browser account if available.
+## APIs maison
 
--   **Chrome extension:** Synced to your Google account if you are signed in to Chrome with your account & have sync enabled with “Extensions” option enabled in the "Manage what you sync” tab.
+Ces API ont été créées par et pour Bonjourr, et sont open source. Tout le monde peut les forker et les héberger en utilisant les fonctions edge Netlify ou les Cloudflare Workers.
 
--   **Firefox extension:** Synced to your Firefox account the same way as Chrome. “Add-ons” must be enabled in the “Choose what to sync” tab.
+-   **Favicon fetcher**  
+     Récupère la favicon des sites web. Se déclenche lors de l'ajout d'un nouveau favoris.  
+     [Code source](https://github.com/victrme/favicon-fetcher)
 
--   **Online, Safari & Non-synced Extensions**: Settings are stored locally using the Web Storage API.
+-   **Citations**  
+     Obtient une liste aléatoire de citations. Une fois au démarrage, et après avoir changé de type de citation ou toutes les 20 citations.  
+     [Code source](https://github.com/victrme/i18n-quotes)
+
+-   **Geol**  
+     Obtient la localisation approximative. Une fois au démarrage, à chaque fois que les paramètres sont réinitialisés.  
+     [Code source](https://github.com/victrme/geol)
+
+## Permissions
+
+Les extensions sont plus sécurisées que les pages web, ce qui signifie que Bonjourr doit demander des permissions pour fonctionner correctement. En savoir plus sur les permissions sur [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
+
+-   **Stockage illimité**
+    Autorise plus de 1 Mo par élément. Utilisé uniquement pour le stockage des arrière-plans locaux, mais inutilisé depuis la version 1.17.0.
+
+-   **Géolocalisation**
+    Obtenir la localisation précise. Au démarrage et lorsque la météo est mise à jour: voir openweathermap.
+
+-   **Favoris**  
+    Obtenir une liste des favoris du navigateur. Facultatif. N'est demandé que lors de l'utilisation de l'option d'importation de favoris.
+
+## Stockage des paramètres
+
+Nous, [l'équipe Bonjourr](https://github.com/victrme/Bonjourr#authors), n'avons accès à aucun de vos paramètres. Nous n'utilisons pas de télémétrie. Votre page n'envoie que des requêtes aux API pertinentes. Par défaut, Bonjourr synchronisera ses paramètres avec le compte de votre navigateur s'il est disponible.
+
+-   **Extension Chrome:** Synchronisée avec votre compte Google si vous êtes connecté à Chrome avec votre compte et que la synchronisation est activée avec l'option "Extensions" dans l'onglet "Gérer ce que vous synchronisez".
+
+-   **Extension Firefox:** Synchronisée avec votre compte Firefox de la même manière que pour Chrome. L'option "Add-ons" doit être activée dans l'onglet "Choisir ce que vous synchronisez".
+
+-   **Online et Safari** : Les paramètres sont stockés localement à l'aide de l'API de stockage Web.
