@@ -1,6 +1,7 @@
 ---
 title: Style snippets
 subtitle:
+lang: en
 slug: css
 orderData: 3
 layout: '../../layouts/Docs.astro'

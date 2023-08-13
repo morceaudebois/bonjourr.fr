@@ -1,6 +1,7 @@
 ---
 title: Custom profiles
 subtitle:
+lang: en
 slug: profiles
 orderData: 4
 layout: '../../layouts/Docs.astro'

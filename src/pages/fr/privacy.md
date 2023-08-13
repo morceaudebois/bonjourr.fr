@@ -1,5 +1,6 @@
 ---
 title: Politique de confidentialité
+lang: fr
 slug: privacy
 layout: ../../layouts/Docs.astro
 featured: ../../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
@@ -36,10 +37,10 @@ Ces API ont été créées par et pour Bonjourr, et sont open source. Tout le mo
 
 Les extensions sont plus sécurisées que les pages web, ce qui signifie que Bonjourr doit demander des permissions pour fonctionner correctement. En savoir plus sur les permissions sur [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
 
--   **Stockage illimité**
+-   **Stockage illimité**  
     Autorise plus de 1 Mo par élément. Utilisé uniquement pour le stockage des arrière-plans locaux, mais inutilisé depuis la version 1.17.0.
 
--   **Géolocalisation**
+-   **Géolocalisation**  
     Obtenir la localisation précise. Au démarrage et lorsque la météo est mise à jour: voir openweathermap.
 
 -   **Favoris**  
@@ -49,8 +50,11 @@ Les extensions sont plus sécurisées que les pages web, ce qui signifie que Bon
 
 Nous, [l'équipe Bonjourr](https://github.com/victrme/Bonjourr#authors), n'avons accès à aucun de vos paramètres. Nous n'utilisons pas de télémétrie. Votre page n'envoie que des requêtes aux API pertinentes. Par défaut, Bonjourr synchronisera ses paramètres avec le compte de votre navigateur s'il est disponible.
 
--   **Extension Chrome:** Synchronisée avec votre compte Google si vous êtes connecté à Chrome avec votre compte et que la synchronisation est activée avec l'option "Extensions" dans l'onglet "Gérer ce que vous synchronisez".
+-   **Extension Chrome**  
+    Synchronisée avec votre compte Google si vous êtes connecté à Chrome avec votre compte et que la synchronisation est activée avec l'option "Extensions" dans l'onglet "Gérer ce que vous synchronisez".
 
--   **Extension Firefox:** Synchronisée avec votre compte Firefox de la même manière que pour Chrome. L'option "Add-ons" doit être activée dans l'onglet "Choisir ce que vous synchronisez".
+-   **Extension Firefox**  
+    Synchronisée avec votre compte Firefox de la même manière que pour Chrome. L'option "Add-ons" doit être activée dans l'onglet "Choisir ce que vous synchronisez".
 
--   **Online et Safari** : Les paramètres sont stockés localement à l'aide de l'API de stockage Web.
+-   **Online et Safari**  
+    Les paramètres sont stockés localement à l'aide de l'API de stockage Web.

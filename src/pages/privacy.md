@@ -1,5 +1,6 @@
 ---
 title: Privacy policy
+lang: en
 slug: privacy
 layout: '../layouts/Docs.astro'
 featured: ../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
@@ -49,8 +50,11 @@ Extensions are more secured than webpages, that means Bonjourr needs to ask for 
 
 We, [the Bonjourr team](https://github.com/victrme/Bonjourr#authors), do not have access to any of your settings. We do not use telemetry. Your page only sends requests to the relevent APIs. By default, Bonjourr will synchronize its settings with your browser account if available.
 
--   **Chrome extension:** Synced to your Google account if you are signed in to Chrome with your account & have sync enabled with “Extensions” option enabled in the "Manage what you sync” tab.
+-   **Chrome extension**  
+    Synced to your Google account if you are signed in to Chrome with your account & have sync enabled with “Extensions” option enabled in the "Manage what you sync” tab.
 
--   **Firefox extension:** Synced to your Firefox account the same way as Chrome. “Add-ons” must be enabled in the “Choose what to sync” tab.
+-   **Firefox extension**  
+    Synced to your Firefox account the same way as Chrome. “Add-ons” must be enabled in the “Choose what to sync” tab.
 
--   **Online and Safari**: Settings are stored locally using the Web Storage API.
+-   **Online and Safari**  
+    Settings are stored locally using the Web Storage API.

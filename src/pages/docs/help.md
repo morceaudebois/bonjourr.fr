@@ -1,6 +1,7 @@
 ---
 title: Contribute
 subtitle:
+lang: en
 slug: help
 orderData: 3
 layout: '../../layouts/Docs.astro'

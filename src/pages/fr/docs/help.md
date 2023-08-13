@@ -1,6 +1,7 @@
 ---
 title: Contribuer
 subtitle:
+lang: fr
 slug: help
 orderData: 5
 layout: ../../../layouts/Docs.astro

@@ -1,6 +1,7 @@
 ---
 title: Features overview
 subtitle:
+lang: en
 slug: overview
 orderData: 2
 layout: '../../layouts/Docs.astro'

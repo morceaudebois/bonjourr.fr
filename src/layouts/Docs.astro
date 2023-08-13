@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props
 const isPrivacyPage = frontmatter?.slug === 'privacy'
 ---
 
-<Layout title={frontmatter.title + " · Bonjourr's documentation"}>
+<Layout title={frontmatter.title + " · Bonjourr's documentation"} lang={frontmatter.lang}>
 	<div id='gradient-background'></div>
 
 	<DocsHero src={frontmatter.featured} title={frontmatter.title} />

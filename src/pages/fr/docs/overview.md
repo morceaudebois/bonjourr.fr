@@ -1,6 +1,7 @@
 ---
 title: Liste de fonctionnalitées
 subtitle:
+lang: fr
 slug: overview
 orderData: 2
 layout: ../../../layouts/Docs.astro

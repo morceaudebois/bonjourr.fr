@@ -1,6 +1,7 @@
 ---
 title: Use Bonjourr
 subtitle:
+lang: en
 slug: platforms
 orderData: 1
 layout: '../../layouts/Docs.astro'

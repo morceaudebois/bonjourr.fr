@@ -1,6 +1,7 @@
 ---
 title: Morceaux de code sympatoche
 subtitle:
+lang: fr
 slug: css
 orderData: 3
 layout: ../../../layouts/Docs.astro
