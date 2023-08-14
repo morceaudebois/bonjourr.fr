@@ -52,17 +52,21 @@ Rend l'horloge analogique plus épaisse.
 #interface {
 	--anlg-w: 4px; /* Changez la taille ici */
 }
+
 #interface #time #time-container #analogClock #center {
 	width: calc(var(--anlg-w) * 4);
 	height: calc(var(--anlg-w) * 4);
 }
+
 #interface #time #time-container #analogClock {
 	border-width: calc(var(--anlg-w) * 2);
 }
+
 #interface #time #time-container #analogClock span {
 	width: calc(var(--anlg-w) * 2);
 	margin-left: calc(var(--anlg-w) * -1);
 }
+
 #interface #time #time-container #analogClock span#analogSeconds {
 	width: var(--anlg-w);
 }
