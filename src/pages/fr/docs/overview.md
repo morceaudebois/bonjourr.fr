@@ -62,19 +62,19 @@ Bonjourr est compatible avec les fonctions de synchronisation automatique des de
 
 ### Général
 
-| Keys                  | Action                       |
+| Touches                  | Action                       |
 | --------------------- | ---------------------------- |
-| Echap                 | Ouvre / ferme les paramêtres |
+| Échap                 | Ouvre / ferme les paramètres |
 | E (ciblé sur un lien) | Modifie le lien              |
 
 ### Notes
 
 Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre Note. Remplacez `Ctrl` par `cmd` sous macOS.
 
-| Keys           | Action         |
+| Touches           | Action         |
 | -------------- | -------------- |
 | Ctrl + Maj + 1 | Grand titre    |
 | Ctrl + Maj + 2 | Moyen titre    |
 | Ctrl + Maj + 3 | Petit titre    |
 | Ctrl + Maj + 4 | Liste à puce   |
-| Ctrl + Maj + 5 | List de tâches |
+| Ctrl + Maj + 5 | Liste de tâches |
