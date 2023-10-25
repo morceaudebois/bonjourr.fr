@@ -15,7 +15,7 @@ const metaDescription = t(
 const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage', 'minimalism', 'lightweight']
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={lang}>
 	<head>
 		<title>{title}</title>
@@ -46,98 +46,99 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 		<slot />
 
 		<Footer />
-
-		<style is:global lang='scss'>
-			* {
-				box-sizing: border-box;
-			}
-
-			html,
-			body {
-				position: relative;
-				margin: unset;
-				font-family: 'Inter Variable', Helvetica, sans-serif;
-				font-size: 16px;
-				font-weight: 300;
-				color: white;
-				min-height: 100vh;
-				scroll-behavior: smooth;
-			}
-
-			a {
-				color: white;
-				text-decoration: none;
-			}
-
-			li,
-			p {
-				line-height: 1.7em;
-				letter-spacing: 0.2px;
-			}
-
-			h2 {
-				font-weight: 500;
-				letter-spacing: -0.5px;
-			}
-
-			#frontpage h2 {
-				font-size: 2em;
-				font-weight: 500;
-				text-align: center;
-				letter-spacing: -0.5px;
-				margin-bottom: 1.25em;
-			}
-
-			button,
-			.button {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 0.7em;
-				width: 100%;
-				max-width: 260px;
-				padding: 0.6em 1.2em;
-				border-radius: 12px;
-				border: 1px solid #fff2;
-				background-color: #ffffff18;
-				color: white;
-				font-weight: bolder;
-				white-space: nowrap;
-				box-sizing: border-box;
-				backdrop-filter: blur(10px);
-				-webkit-backdrop-filter: blur(10px);
-				transition: background-color 0.1s ease-out;
-
-				&:hover {
-					background-color: #fff3;
-				}
-
-				img {
-					width: 30px;
-					height: 30px;
-					object-fit: contain;
-				}
-			}
-
-			#further a.button {
-				backdrop-filter: none;
-			}
-
-			@media only screen and (max-width: 700px) {
-				body {
-					font-size: 16px;
-				}
-			}
-
-			@media only screen and (max-width: 500px) {
-				#frontpage h2 {
-					font-size: 1.6em;
-				}
-
-				h3 {
-					font-size: 1.6em;
-				}
-			}
-		</style>
 	</body>
 </html>
+
+<style is:global>
+	* {
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		position: relative;
+		margin: unset;
+		font-family: 'Inter Variable', Helvetica, sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		color: white;
+		min-height: 100vh;
+		scroll-behavior: smooth;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	li,
+	p {
+		line-height: 1.7em;
+		letter-spacing: 0.2px;
+	}
+
+	h2 {
+		font-weight: 500;
+		letter-spacing: -0.5px;
+	}
+
+	#frontpage h2 {
+		font-size: 2em;
+		font-weight: 500;
+		text-align: center;
+		letter-spacing: -0.5px;
+		margin-bottom: 1.25em;
+	}
+
+	button,
+	.button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.7em;
+		width: 100%;
+		max-width: 260px;
+		padding: 0.6em 1.2em;
+		border-radius: 12px;
+		border: 1px solid #fff2;
+		background-color: #ffffff18;
+		color: white;
+		font-weight: bolder;
+		white-space: nowrap;
+		box-sizing: border-box;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		transition: background-color 0.1s ease-out;
+	}
+	button:hover,
+	.button:hover {
+		background-color: #fff3;
+	}
+
+	button img,
+	.button img {
+		width: 30px;
+		height: 30px;
+		object-fit: contain;
+	}
+
+	#further a.button {
+		backdrop-filter: none;
+	}
+
+	@media only screen and (max-width: 700px) {
+		body {
+			font-size: 16px;
+		}
+	}
+
+	@media only screen and (max-width: 500px) {
+		#frontpage h2 {
+			font-size: 1.6em;
+		}
+
+		h3 {
+			font-size: 1.6em;
+		}
+	}
+</style>

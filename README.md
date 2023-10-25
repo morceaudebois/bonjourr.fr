@@ -32,8 +32,6 @@
 
 Les pages index.astro sont juste la pour avoir la bonne route, sinon tout se trouve dans `/src/components/Frontpage.astro`.
 
-Le style doit se trouver sous le composant le plus possible (d'ou le frontpage.astro cheum). Mais parcequ'il y a des mixins sass, obligé de référencer `_global.scss` partout. Dans l'idéal il faudrait mettre des media queries dans chaque composants.
-
 Le SEO est direct dans la page de Layout: `/src/layouts/Layout.astro`
 
 Le javascript nécessaire sur la frontpage utilise des composants Svelte, ex: `/src/components/Signatures.svelte`
