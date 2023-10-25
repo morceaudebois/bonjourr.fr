@@ -4,9 +4,7 @@ import Trans from '../Trans.astro'
 import LandingImage from '../../assets/turtle.webp'
 import OpenImage from '../../assets/mountains.webp'
 import DonateImage from '../../assets/greens.webp'
-
-import KofiIcon from '../../assets/icons/donate/ko-fi.svg'
-import BtcIcon from '../../assets/icons/donate/btc.svg'
+import { btc, kofi } from '../../assets/icons/donate'
 
 import Background from '../Background.astro'
 import Landing from './Landing.astro'
@@ -68,14 +66,14 @@ import Showcase from './Showcase.astro'
 
 		<div class='buttons'>
 			<a href='https://ko-fi.com/bonjourr' class='button'>
-				<img width='64' src={KofiIcon} class='icon' alt='' />
+				<img width='64' src={kofi} class='icon' alt='' />
 				<span>
 					<Trans>Donate</Trans>
 				</span>
 			</a>
 
 			<a href='https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b' class='button'>
-				<img width='64' src={BtcIcon} class='icon' alt='' />
+				<img width='64' src={btc} class='icon' alt='' />
 				<span>
 					<Trans>Donate in crypto</Trans>
 				</span>
