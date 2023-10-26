@@ -1,6 +1,6 @@
 [build]
-#  command = 'npx pnpm install --store=node_modules/.pnpm-store && pnpm run build'
-#  publish = "dist"
+  command = 'pnpm run build'
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20.9.0"
