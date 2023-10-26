@@ -1,9 +1,9 @@
 ---
+import { Picture } from 'astro:assets'
 import Trans from '../Trans.astro'
 
-import DynamicImage from '../../assets/illustrations/dynamic.webp'
-import DynamicImage2x from '../../assets/illustrations/dynamic2x.webp'
-import CustomiseImage from '../../assets/illustrations/customise.webp'
+import DynamicImage from '../../assets/illustrations/dynamic.png'
+import CustomiseImage from '../../assets/illustrations/customise.png'
 ---
 
 <div id='intro'>
@@ -20,12 +20,13 @@ import CustomiseImage from '../../assets/illustrations/customise.webp'
 
 <div id='dynamic' class='image-row'>
 	<div class='left'>
-		<img
+		<Picture
 			src={DynamicImage}
-			srcset={DynamicImage2x + ' 2x'}
-			alt='Bonjourr dynamic backgrounds screenshot'
+			formats={['webp', 'avif']}
+			densities={[2]}
 			width='560'
 			height='372'
+			alt='Bonjourr dynamic backgrounds screenshot'
 		/>
 	</div>
 
@@ -60,7 +61,13 @@ import CustomiseImage from '../../assets/illustrations/customise.webp'
 	</div>
 
 	<div class='right'>
-		<img src={CustomiseImage} alt='Bonjourr dynamic backgrounds screenshot' width='560' height='342' />
+		<Picture
+			src={CustomiseImage}
+			formats={['webp', 'avif']}
+			width='560'
+			height='342'
+			alt='Bonjourr dynamic backgrounds screenshot'
+		/>
 	</div>
 </div>
 

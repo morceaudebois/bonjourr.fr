@@ -3,14 +3,30 @@ import Layout from './Layout.astro'
 import DocsHero from '../components/Docs/DocsHero.astro'
 import DocsNav from '../components/Docs/DocsNav.astro'
 
+import danist from '../assets/docs/danist-bviex5lwf3s.webp'
+import joe from '../assets/docs/joe-eitzen-ByDY5eqhP.webp'
+import jonny from '../assets/docs/jonny-gios-gBr5Hmx1STc.webp'
+import kir from '../assets/docs/kir-simakov-ZN3Hsru3SIM.webp'
+import neha from '../assets/docs/neha-maheen-mahfin-IskqApmpcAw.webp'
+
 const { frontmatter } = Astro.props
 const isPrivacyPage = frontmatter?.slug === 'privacy'
+
+const images = {
+	platforms: danist,
+	overview: neha,
+	profiles: joe,
+	help: jonny,
+	css: kir,
+}
+
+const heroImage = images[frontmatter.slug as keyof typeof images] ?? joe
 ---
 
 <Layout title={frontmatter.title + " · Bonjourr's documentation"} lang={frontmatter.lang}>
 	<div id='gradient-background'></div>
 
-	<DocsHero src={frontmatter.featured} title={frontmatter.title} />
+	<DocsHero src={heroImage} title={frontmatter.title} />
 
 	<article class={frontmatter.slug}>
 		{!isPrivacyPage && <DocsNav frontmatter={frontmatter} />}

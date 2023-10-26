@@ -1,9 +1,9 @@
 ---
+import { Picture } from 'astro:assets'
 import Trans from '../Trans.astro'
 import Link from '../Link.astro'
 
-import Illustration from '../../assets/illustrations/illu.webp'
-import Illustration2x from '../../assets/illustrations/illu2x.webp'
+import Illustration from '../../assets/illustrations/illustration.png'
 import { desktop } from '../../assets/icons/browsers'
 ---
 
@@ -56,7 +56,7 @@ import { desktop } from '../../assets/icons/browsers'
 		<div class='container'>
 			<a id='download-link' href='' class='button'>
 				<div class='icon'>
-					<img id='download-icon' src='' alt='' />
+					<img id='download-icon' src='' alt='' width='30' />
 				</div>
 				<span>
 					<Trans slot='Download'>Download</Trans>
@@ -64,7 +64,7 @@ import { desktop } from '../../assets/icons/browsers'
 			</a>
 
 			<a href='https://online.bonjourr.fr' rel='noreferrer' class='button'>
-				<img src={desktop} class='icon' alt='' />
+				<img src={desktop} class='icon' alt='' width='30' />
 				<span>
 					<Trans slot='Online'>Try online</Trans>
 				</span>
@@ -80,9 +80,15 @@ import { desktop } from '../../assets/icons/browsers'
 		</div>
 	</div>
 
-	<picture id='illustration'>
-		<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' height='356' />
-	</picture>
+	<Picture
+		id='illustration'
+		src={Illustration}
+		width='480'
+		densities={[2]}
+		loading='eager'
+		formats={['avif', 'webp']}
+		alt='Bonjourr screenshot'
+	/>
 </div>
 
 <style>
