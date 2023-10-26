@@ -9,35 +9,44 @@ import { desktop } from '../../assets/icons/browsers'
 
 <script>
 	import { detect } from 'detect-browser'
-	import { firefox, chrome, edge, safari } from '../../assets/icons/browsers'
-
-	const platforms = {
-		firefox: {
-			icon: firefox,
-			link: 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/',
-		},
-		chrome: {
-			icon: chrome,
-			link: 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd',
-		},
-		'edge-chromium': {
-			icon: edge,
-			link: 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid',
-		},
-		safari: {
-			icon: safari,
-			link: 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236',
-		},
-		ios: {
-			icon: safari,
-			link: '/docs/platforms#ios-and-android',
-		},
-	}
 
 	const { name } = detect() ?? { name: '' }
+	let icon = ''
+	let link = ''
 
-	if (name in platforms) {
-		const { link, icon } = platforms[name as keyof typeof platforms]
+	switch (name) {
+		case 'firefox': {
+			icon = (await import('../../assets/icons/browsers/firefox.svg')).default.src
+			link = 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
+			break
+		}
+
+		case 'chrome': {
+			icon = (await import('../../assets/icons/browsers/chrome.svg')).default.src
+			link = 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd'
+			break
+		}
+
+		case 'edge-chromium': {
+			icon = (await import('../../assets/icons/browsers/edge.svg')).default.src
+			link = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+			break
+		}
+
+		case 'safari': {
+			icon = (await import('../../assets/icons/browsers/safari.svg')).default.src
+			link = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
+			break
+		}
+
+		case 'ios': {
+			icon = (await import('../../assets/icons/browsers/safari.svg')).default.src
+			link = '/docs/platforms#ios-and-android'
+			break
+		}
+	}
+
+	if (name) {
 		document.getElementById('download-link')?.setAttribute('href', link)
 		document.getElementById('download-icon')?.setAttribute('src', icon)
 		document.getElementById('download-icon')?.setAttribute('style', 'opacity: 1')
