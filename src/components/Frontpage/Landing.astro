@@ -1,10 +1,10 @@
 ---
-import { Picture } from 'astro:assets'
+import { Image, Picture } from 'astro:assets'
 import Trans from '../Trans.astro'
 import Link from '../Link.astro'
 
 import Illustration from '../../assets/illustrations/illustration.png'
-import { desktop } from '../../assets/icons/browsers'
+import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 ---
 
 <script>
@@ -73,7 +73,7 @@ import { desktop } from '../../assets/icons/browsers'
 			</a>
 
 			<a href='https://online.bonjourr.fr' rel='noreferrer' class='button'>
-				<img src={desktop} class='icon' alt='' width='30' />
+				<Image src={DesktopIcon} class='icon' alt='' width='30' />
 				<span>
 					<Trans slot='Online'>Try online</Trans>
 				</span>
