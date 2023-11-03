@@ -4,7 +4,7 @@ import Trans from '../components/Trans.astro'
 import Layout from '../layouts/Layout.astro'
 import Link from '../components/Link.astro'
 
-import Image from '../assets/fields.webp'
+import Image from '../assets/backgrounds/sasha-set-GURzQwO8Li0.jpg'
 ---
 
 <script is:inline>
@@ -25,7 +25,7 @@ if (oldURLs.includes(path)) {
 </script>
 
 <Layout title='404! · Bonjourr Startpage' id='404' lang='en'>
-	<Background src={Image} blur='2' />
+	<Background src={Image} blur='2' brightness='.8' width='300' />
 
 	<div class='wrapper'>
 		<h1>

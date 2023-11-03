@@ -1,43 +1,54 @@
 ---
+import { Image, Picture } from 'astro:assets'
 import Trans from '../Trans.astro'
 import Link from '../Link.astro'
 
-import Illustration from '../../assets/illustrations/illu.webp'
-import Illustration2x from '../../assets/illustrations/illu2x.webp'
+import Illustration from '../../assets/illustrations/illustration.png'
+import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 ---
 
 <script>
 	import { detect } from 'detect-browser'
 
-	const platforms = {
-		firefox: {
-			id: 'firefox',
-			link: 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/',
-		},
-		chrome: {
-			id: 'chrome',
-			link: 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd',
-		},
-		'edge-chromium': {
-			id: 'edge',
-			link: 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid',
-		},
-		safari: {
-			id: 'safari',
-			link: 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236',
-		},
-		ios: {
-			id: 'safari',
-			link: '/docs/platforms#ios-and-android',
-		},
+	const { name } = detect() ?? { name: '' }
+	let icon = ''
+	let link = ''
+
+	switch (name) {
+		case 'firefox': {
+			icon = (await import('../../assets/icons/browsers/firefox.svg')).default.src
+			link = 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
+			break
+		}
+
+		case 'chrome': {
+			icon = (await import('../../assets/icons/browsers/chrome.svg')).default.src
+			link = 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd'
+			break
+		}
+
+		case 'edge-chromium': {
+			icon = (await import('../../assets/icons/browsers/edge.svg')).default.src
+			link = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+			break
+		}
+
+		case 'safari': {
+			icon = (await import('../../assets/icons/browsers/safari.svg')).default.src
+			link = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
+			break
+		}
+
+		case 'ios': {
+			icon = (await import('../../assets/icons/browsers/safari.svg')).default.src
+			link = '/docs/platforms#ios-and-android'
+			break
+		}
 	}
 
-	const { name } = detect() ?? { name: '' }
-
-	if (name in platforms) {
-		const { link, id } = platforms[name as keyof typeof platforms]
+	if (name) {
 		document.getElementById('download-link')?.setAttribute('href', link)
-		document.getElementById('download-icon')?.setAttribute('src', '/browsers/' + id + '.svg')
+		document.getElementById('download-icon')?.setAttribute('src', icon)
 		document.getElementById('download-icon')?.setAttribute('style', 'opacity: 1')
 	} else {
 		document.getElementById('download-link')?.setAttribute('style', 'display: none')
@@ -54,7 +65,7 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 		<div class='container'>
 			<a id='download-link' href='' class='button'>
 				<div class='icon'>
-					<img id='download-icon' src='' alt='' />
+					<img id='download-icon' src='' alt='' width='30' />
 				</div>
 				<span>
 					<Trans slot='Download'>Download</Trans>
@@ -62,7 +73,7 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 			</a>
 
 			<a href='https://online.bonjourr.fr' rel='noreferrer' class='button'>
-				<img src='/browsers/desktop.svg' class='icon' alt='' />
+				<Image src={DesktopIcon} class='icon' alt='' width='30' />
 				<span>
 					<Trans slot='Online'>Try online</Trans>
 				</span>
@@ -78,9 +89,15 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 		</div>
 	</div>
 
-	<picture id='illustration'>
-		<img src={Illustration} srcset={Illustration2x + ' 2x'} alt='Bonjourr screenshot' width='580' height='356' />
-	</picture>
+	<Picture
+		id='illustration'
+		src={Illustration}
+		width='480'
+		densities={[2]}
+		loading='eager'
+		formats={['avif', 'webp']}
+		alt='Bonjourr screenshot'
+	/>
 </div>
 
 <style>
@@ -93,7 +110,7 @@ import Illustration2x from '../../assets/illustrations/illu2x.webp'
 		max-width: 480px;
 	}
 
-	img {
+	picture img {
 		width: 100%;
 		object-fit: contain;
 	}

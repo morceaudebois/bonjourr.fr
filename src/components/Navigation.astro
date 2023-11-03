@@ -57,6 +57,11 @@ const { isFrench } = useTranslation(Astro)
 		gap: 0.2em;
 	}
 
+	nav .links {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	nav .links:hover a {
 		opacity: 0.8;
 	}
@@ -70,7 +75,7 @@ const { isFrench } = useTranslation(Astro)
 
 	a {
 		position: relative;
-		padding: 0.4em 0;
+		padding: 0.3em 0;
 		font-weight: 500;
 		line-height: 2em;
 		border-bottom: 0px solid transparent;

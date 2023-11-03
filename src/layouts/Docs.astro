@@ -3,14 +3,30 @@ import Layout from './Layout.astro'
 import DocsHero from '../components/Docs/DocsHero.astro'
 import DocsNav from '../components/Docs/DocsNav.astro'
 
+import danist from '../assets/docs/danist-bviex5lwf3s.webp'
+import joe from '../assets/docs/joe-eitzen-ByDY5eqhP.webp'
+import jonny from '../assets/docs/jonny-gios-gBr5Hmx1STc.webp'
+import kir from '../assets/docs/kir-simakov-ZN3Hsru3SIM.webp'
+import neha from '../assets/docs/neha-maheen-mahfin-IskqApmpcAw.webp'
+
 const { frontmatter } = Astro.props
 const isPrivacyPage = frontmatter?.slug === 'privacy'
+
+const images = {
+	platforms: danist,
+	overview: neha,
+	profiles: joe,
+	help: jonny,
+	css: kir,
+}
+
+const heroImage = images[frontmatter.slug as keyof typeof images] ?? joe
 ---
 
 <Layout title={frontmatter.title + " · Bonjourr's documentation"} lang={frontmatter.lang}>
 	<div id='gradient-background'></div>
 
-	<DocsHero src={frontmatter.featured} title={frontmatter.title} />
+	<DocsHero src={heroImage} title={frontmatter.title} />
 
 	<article class={frontmatter.slug}>
 		{!isPrivacyPage && <DocsNav frontmatter={frontmatter} />}
@@ -21,7 +37,7 @@ const isPrivacyPage = frontmatter?.slug === 'privacy'
 	</article>
 </Layout>
 
-<style is:global lang='scss'>
+<style is:global>
 	#gradient-background {
 		position: fixed;
 		top: 0;
@@ -77,51 +93,51 @@ const isPrivacyPage = frontmatter?.slug === 'privacy'
 		max-width: 700px;
 		min-width: 360px;
 		width: 100%;
+	}
 
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			margin: 0 0 0.5em 0;
-			font-weight: 500;
+	.content a {
+		color: #5ca5ff;
+	}
 
-			&:first-child {
-				padding-top: 0;
-			}
+	.content a:hover {
+		text-decoration: underline;
+	}
+
+	.content h2,
+	.content h3,
+	.content h4,
+	.content h5,
+	.content h6 {
+		margin: 0 0 0.5em 0;
+		font-weight: 500;
+
+		&:first-child {
+			padding-top: 0;
 		}
+	}
 
-		h2 {
-			padding-top: 2.2em;
-			font-size: 1.8em;
-		}
+	.content h2 {
+		padding-top: 2.2em;
+		font-size: 1.8em;
+	}
 
-		h3 {
-			padding-top: 1.5em;
-		}
+	.content h3 {
+		padding-top: 1.5em;
+	}
 
-		p,
-		ul,
-		code {
-			margin-bottom: 1em;
-			color: #e7e6ea;
-		}
+	.content p,
+	.content ul,
+	.content code {
+		margin-bottom: 1em;
+		color: #e7e6ea;
+	}
 
-		strong {
-			font-weight: 500;
-		}
+	.content strong {
+		font-weight: 500;
+	}
 
-		img {
-			width: 100%;
-		}
-
-		a {
-			color: #5ca5ff;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
+	.content img {
+		width: 100%;
 	}
 
 	table {
@@ -129,20 +145,22 @@ const isPrivacyPage = frontmatter?.slug === 'privacy'
 		max-width: 100%;
 		border-collapse: collapse;
 		word-break: break-word;
+	}
 
-		th {
-			padding: 1em;
-			text-align: left;
-		}
+	th {
+		padding: 1em;
+		text-align: left;
+	}
 
+	td {
+		padding: 1em;
+		border: 1px solid #ccc;
+		max-width: 500px;
+	}
+
+	@media (prefers-color-scheme: dark) {
 		td {
-			padding: 1em;
-			border: 1px solid #ccc;
-			max-width: 500px;
-
-			@media (prefers-color-scheme: dark) {
-				border-color: #666;
-			}
+			border-color: #666;
 		}
 	}
 

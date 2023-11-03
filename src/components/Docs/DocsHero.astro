@@ -1,10 +1,11 @@
 ---
 import Background from '../Background.astro'
+
 const { src, title } = Astro.props
 ---
 
 <div id='hero'>
-	<Background src={src} blur='.5' brightness='.9' />
+	<Background width='800' src={src} blur='.5' brightness='.9' />
 	<h1>{title}</h1>
 </div>
 

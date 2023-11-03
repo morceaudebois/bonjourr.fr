@@ -2,9 +2,7 @@
 import Trans from '../Trans.astro'
 import Link from '../Link.astro'
 
-import GithubIcon from '../../assets/icons/further/github.svg'
-import DocsIcon from '../../assets/icons/further/docs.svg'
-import TelegramIcon from '../../assets/icons/further/telegram.svg'
+import { telegram, github, docs } from '../../assets/icons/further'
 ---
 
 <div class='container'>
@@ -25,7 +23,7 @@ import TelegramIcon from '../../assets/icons/further/telegram.svg'
 		</p>
 
 		<a href='https://t.me/BonjourrStartpage' class='button'>
-			<img width='64' src={TelegramIcon} class='icon' alt='' />
+			<img width='64' src={telegram} class='icon' alt='' />
 			<span>
 				<Trans>Bonjourr's Telegram</Trans>
 			</span>
@@ -43,7 +41,7 @@ import TelegramIcon from '../../assets/icons/further/telegram.svg'
 			</Trans>
 		</p>
 		<Link href='/docs/' class='button'>
-			<img width='64' src={DocsIcon} class='icon' alt='' />
+			<img width='64' src={docs} class='icon' alt='' />
 			<span>
 				<Trans>Documentation</Trans>
 			</span>
@@ -58,7 +56,7 @@ import TelegramIcon from '../../assets/icons/further/telegram.svg'
 			<Trans>Fork Bonjourr and add your own features on our GitHub repositories. We’re open to pull requests!</Trans>
 		</p>
 		<a href='https://github.com/victrme/Bonjourr' class='button'>
-			<img width='64' src={GithubIcon} class='icon' alt='' />
+			<img width='64' src={github} class='icon' alt='' />
 			<span>
 				<Trans>GitHub repository</Trans>
 			</span>
