@@ -19,7 +19,11 @@ featured: ../../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 
 ## APIs maison
 
-Ces API ont été créées par et pour Bonjourr, et sont open source. Tout le monde peut les forker et les héberger en utilisant les fonctions edge Netlify ou les Cloudflare Workers.
+Ces API ont été créées par et pour Bonjourr, sont open source et libre de droit. Tout le monde peut les forker et les héberger. Hosté sur Cloudflare, nous avons accès au [analytics du réseau Cloudflare](https://developers.cloudflare.com/analytics/types-of-analytics/), comme le nombre de requêtes et leur provenance par serveur.
+
+-   **Bonjourr APIs**  
+     Un proxy pour toute les APIs que Bonjourr utilise. Se déclenche dès qu'on fait une requête vers un service, sauf Google fonts.  
+    [Code source](https://github.com/victrme/bonjourr-apis)
 
 -   **Favicon fetcher**  
      Récupère la favicon des sites web. Se déclenche lors de l'ajout d'un nouveau favoris.  
@@ -29,19 +33,13 @@ Ces API ont été créées par et pour Bonjourr, et sont open source. Tout le mo
      Obtient une liste aléatoire de citations. Une fois au démarrage, et après avoir changé de type de citation ou toutes les 20 citations.  
      [Code source](https://github.com/victrme/i18n-quotes)
 
--   **Geol**  
-     Obtient la localisation approximative. Une fois au démarrage, à chaque fois que les paramètres sont réinitialisés.  
-     [Code source](https://github.com/victrme/geol)
+-   **Search Suggestions**  
+     Obtient des suggestions de recherche depuis Google, Duckduckgo et d'autre. L'API est un web scraper et n'utilise pas directement les services de ces fournisseurs. Aucune donnée n'est enregistré.  
+    [Code source](https://github.com/victrme/search-suggestions)
 
 ## Permissions
 
 Les extensions sont plus sécurisées que les pages web, ce qui signifie que Bonjourr doit demander des permissions pour fonctionner correctement. En savoir plus sur les permissions sur [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
-
--   **Stockage illimité**  
-    Autorise plus de 1 Mo par élément. Utilisé uniquement pour le stockage des arrière-plans locaux, mais inutilisé depuis la version 1.17.0.
-
--   **Géolocalisation**  
-    Obtenir la localisation précise. Au démarrage et lorsque la météo est mise à jour: voir openweathermap.
 
 -   **Favoris**  
     Obtenir une liste des favoris du navigateur. Facultatif. N'est demandé que lors de l'utilisation de l'option d'importation de favoris.
