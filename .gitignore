@@ -10,6 +10,7 @@ Thumbs.db
 
 # Project dependencies
 .cache
+.wrangler
 .netlify
 node_modules
 yarn-error.log
