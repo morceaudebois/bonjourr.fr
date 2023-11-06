@@ -35,14 +35,13 @@ const locale = isFrench ? '/fr/' : '/'
 
 		<a id='mocksubmit' href={locale + 'submit'}></a>
 
-		<form id='form' action='submit' method='POST' name='contact'>
-			<input type='hidden' name='form-name' value='contact' />
+		<form id='form' action='/submit' method='POST' name='contact'>
 			<input type='hidden' name='browser' id='browser' />
 
-			<label>
+			<!-- <label>
 				<Trans>Email (optional)</Trans>
 			</label>
-			<input id='email' type='email' name='email' />
+			<input id='email' type='email' name='email' /> -->
 
 			<label>
 				<Trans>Your message</Trans>

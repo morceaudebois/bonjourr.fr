@@ -3,24 +3,24 @@ interface Env {
 }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
-	console.log(context)
-
 	try {
-		let input = await context.request.formData()
-		let pretty = JSON.stringify([...input], null, 2)
+		const formData = await context.request.formData()
+		const device = formData.get('browser')
+		const message = formData.get('message')
+		const timestamp = Date.now()
+		const date = new Date().toLocaleString('fr-FR', { timeZone: 'UTC' })
 
-		// Create a prepared statement with our query
-		const ps = context.env.BONJOURR_DB.prepare('SELECT * from users')
-		const data = await ps.first()
+		const ps = await context.env.BONJOURR_DB.prepare(
+			'INSERT INTO form_entries (timestamp, date, device, message) VALUES (?, ?, ?, ?);'
+		)
+			.bind(timestamp, date, device, message)
+			.run()
 
-		console.log(data)
+		console.log(ps)
 
-		return new Response(pretty, {
-			headers: {
-				'Content-Type': 'application/json;charset=utf-8',
-			},
-		})
+		return new Response('done')
+		//
 	} catch (err) {
-		return new Response('Error parsing JSON content', { status: 400 })
+		return new Response(err, { status: 400 })
 	}
 }
