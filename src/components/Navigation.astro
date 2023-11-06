@@ -44,11 +44,10 @@ const { isFrench } = useTranslation(Astro)
 
 	nav .container {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
-		gap: 2em;
+		column-gap: 2em;
 		max-width: 1200px;
-		padding: 2em 4em;
+		padding: 2.5em 4em;
 		margin: auto;
 	}
 
@@ -60,6 +59,7 @@ const { isFrench } = useTranslation(Astro)
 	nav .links {
 		display: flex;
 		flex-wrap: wrap;
+		column-gap: 2.5em;
 	}
 
 	nav .links:hover a {
@@ -73,27 +73,17 @@ const { isFrench } = useTranslation(Astro)
 		transition: border-color 0.15s;
 	}
 
-	a {
+	.container a {
 		position: relative;
-		padding: 0.3em 0;
+		padding: 0.5em 0;
 		font-weight: 500;
-		line-height: 2em;
-		border-bottom: 0px solid transparent;
+		border-bottom: 2px solid transparent;
 		transition: border 0.1s;
-	}
-
-	.links a {
-		margin-right: 1.5em;
 	}
 
 	@media only screen and (max-width: 500px) {
 		nav .container {
-			align-items: flex-start;
 			padding: 1.5em;
-		}
-
-		.language {
-			padding: 0;
 		}
 	}
 </style>

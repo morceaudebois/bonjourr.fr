@@ -46,7 +46,7 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 		}
 	}
 
-	if (name) {
+	if (icon && link) {
 		document.getElementById('download-link')?.setAttribute('href', link)
 		document.getElementById('download-icon')?.setAttribute('src', icon)
 		document.getElementById('download-icon')?.setAttribute('style', 'opacity: 1')
@@ -106,15 +106,6 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 		margin: 0;
 	}
 
-	picture {
-		max-width: 480px;
-	}
-
-	picture img {
-		width: 100%;
-		object-fit: contain;
-	}
-
 	#download-icon {
 		opacity: 0;
 	}
@@ -129,6 +120,10 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 	.title {
 		font-size: 2em;
 		margin-bottom: 1.25em;
+	}
+
+	#illustration {
+		object-fit: contain;
 	}
 
 	.title h1 {
@@ -154,39 +149,22 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 		min-width: 200px;
 	}
 
-	.icon {
-		display: flex;
-	}
-
 	.container {
 		display: flex;
 		gap: 1em;
-	}
-
-	@media only screen and (max-width: 450px) {
-		.container {
-			align-items: center;
-			flex-direction: column;
-		}
 	}
 
 	@media only screen and (max-width: 1300px) {
 		.title {
 			font-size: 1.6em;
 		}
-	}
 
-	@media only screen and (max-width: 1100px) {
-		.wrapper {
-			gap: 2em;
-		}
-
-		.title {
-			font-size: 1.4em;
+		#illustration {
+			width: 420px;
 		}
 	}
 
-	@media only screen and (max-width: 900px) {
+	@media only screen and (max-width: 1000px) {
 		.wrapper {
 			flex-direction: column;
 			gap: 4em;
@@ -207,12 +185,15 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 			font-size: 1.4em;
 		}
 
-		.wrapper {
-			height: auto;
-		}
-
 		#illustration {
 			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 450px) {
+		.container {
+			align-items: center;
+			flex-direction: column;
 		}
 	}
 </style>
