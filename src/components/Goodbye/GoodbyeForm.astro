@@ -11,6 +11,13 @@ const locale = isFrench ? '/fr/' : '/'
 <script>
 	import { detect } from 'detect-browser'
 
+	// document.getElementById('form')?.addEventListener('submit', async (ev: FormDataEvent) => {
+	// 	const data = new URLSearchParams(new FormData(ev.target as HTMLFormElement))
+	// 	ev.preventDefault()
+	// 	console.log(ev)
+	// 	console.log(await fetch('/submit', { method: 'POST', body: data }))
+	// })
+
 	window.addEventListener('load', function () {
 		const input = document.querySelector<HTMLInputElement>('#browser')
 		const browser = detect()
@@ -33,9 +40,7 @@ const locale = isFrench ? '/fr/' : '/'
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</p>
 
-		<a id='mocksubmit' href={locale + 'submit'}></a>
-
-		<form id='form' action='/submit' method='POST' name='contact'>
+		<form id='form' action='/submit' method='post' name='contact'>
 			<input type='hidden' name='browser' id='browser' />
 
 			<!-- <label>

@@ -16,11 +16,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 			.bind(timestamp, date, device, message)
 			.run()
 
-		console.log(ps)
-
-		return new Response('done')
+		return new Response('Message has been sent !')
 		//
-	} catch (err) {
+	} catch (err: any) {
 		return new Response(err, { status: 400 })
 	}
 }
