@@ -1,4 +1,5 @@
 ---
+import Link from '../Link.astro'
 import Trans from '../../components/Trans.astro'
 import Background from '../Background.astro'
 import useTranslation from '../../locales/useTranslation'
@@ -11,20 +12,23 @@ const locale = isFrench ? '/fr/' : '/'
 <script>
 	import { detect } from 'detect-browser'
 
-	// document.getElementById('form')?.addEventListener('submit', async (ev: FormDataEvent) => {
-	// 	const data = new URLSearchParams(new FormData(ev.target as HTMLFormElement))
-	// 	ev.preventDefault()
-	// 	console.log(ev)
-	// 	console.log(await fetch('/submit', { method: 'POST', body: data }))
-	// })
-
 	window.addEventListener('load', function () {
+		const section = document.querySelector<HTMLElement>('section')
+		const form = document.querySelector<HTMLFormElement>('form')
 		const input = document.querySelector<HTMLInputElement>('#browser')
 		const browser = detect()
 
 		if (input && typeof browser === 'object') {
 			input.value = `Uses ${browser?.name} ${browser?.version} on ${browser?.os}`
 		}
+
+		form?.addEventListener('submit', async (ev: SubmitEvent) => {
+			ev.preventDefault()
+
+			fetch('/submit', { method: 'POST', body: new FormData(form) }).then(() => {
+				section?.classList.add('submitted')
+			})
+		})
 	})
 </script>
 
@@ -40,13 +44,8 @@ const locale = isFrench ? '/fr/' : '/'
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</p>
 
-		<form id='form' action='/submit' method='post' name='contact'>
+		<form id='form' name='contact'>
 			<input type='hidden' name='browser' id='browser' />
-
-			<!-- <label>
-				<Trans>Email (optional)</Trans>
-			</label>
-			<input id='email' type='email' name='email' /> -->
 
 			<label>
 				<Trans>Your message</Trans>
@@ -58,6 +57,16 @@ const locale = isFrench ? '/fr/' : '/'
 			</button>
 		</form>
 	</div>
+
+	<div id='message-submitted'>
+		<h2>
+			<Trans>Your message has been sent, thank you!</Trans>
+		</h2>
+
+		<Link href={locale} class='button'>
+			<Trans>Back to home</Trans>
+		</Link>
+	</div>
 </section>
 
 <style>
@@ -67,6 +76,14 @@ const locale = isFrench ? '/fr/' : '/'
 		justify-content: center;
 		align-items: center;
 		min-height: calc(100vh - 140px);
+	}
+
+	section.submitted #form-container {
+		display: none;
+	}
+
+	section.submitted #message-submitted {
+		display: block;
 	}
 
 	#mocksubmit {
@@ -137,6 +154,19 @@ const locale = isFrench ? '/fr/' : '/'
 		color: white;
 		font-weight: bolder;
 		cursor: pointer;
+	}
+
+	#message-submitted {
+		display: none;
+		height: 40vh;
+	}
+
+	#message-submitted h2 {
+		margin: 2em 0;
+	}
+
+	#message-submitted a {
+		margin: auto;
 	}
 
 	@media only screen and (max-width: 500px) {

@@ -10,7 +10,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		const timestamp = Date.now()
 		const date = new Date().toLocaleString('fr-FR', { timeZone: 'UTC' })
 
-		const ps = await context.env.BONJOURR_DB.prepare(
+		await context.env.BONJOURR_DB.prepare(
 			'INSERT INTO form_entries (timestamp, date, device, message) VALUES (?, ?, ?, ?);'
 		)
 			.bind(timestamp, date, device, message)
@@ -19,6 +19,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		return new Response('Message has been sent !')
 		//
 	} catch (err: any) {
+		console.warn(err)
 		return new Response(err, { status: 400 })
 	}
 }
