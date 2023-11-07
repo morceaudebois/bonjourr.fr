@@ -19,15 +19,19 @@ const locale = isFrench ? '/fr/' : '/'
 		const browser = detect()
 
 		if (input && typeof browser === 'object') {
-			input.value = `Uses ${browser?.name} ${browser?.version} on ${browser?.os}`
+			input.value = `${browser?.name} ${browser?.version} ${browser?.os}`
 		}
 
 		form?.addEventListener('submit', async (ev: SubmitEvent) => {
 			ev.preventDefault()
 
-			fetch('/submit', { method: 'POST', body: new FormData(form) }).then(() => {
-				section?.classList.add('submitted')
-			})
+			const response = await fetch('/submit', { method: 'POST', body: new FormData(form) })
+
+			if (response.status !== 200) {
+				console.log('sike')
+			}
+
+			section?.classList.add('submitted')
 		})
 	})
 </script>
@@ -86,12 +90,6 @@ const locale = isFrench ? '/fr/' : '/'
 		display: block;
 	}
 
-	#mocksubmit {
-		opacity: 0;
-		user-select: none;
-		pointer-events: none;
-	}
-
 	#form-container {
 		margin-top: 5vh;
 		max-width: 550px;
@@ -144,7 +142,7 @@ const locale = isFrench ? '/fr/' : '/'
 
 	textarea {
 		resize: vertical;
-		min-height: 70px;
+		min-height: 150px;
 		padding: 1em;
 	}
 
