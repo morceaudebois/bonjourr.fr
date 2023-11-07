@@ -1,4 +1,5 @@
 ---
+import Link from '../Link.astro'
 import Trans from '../../components/Trans.astro'
 import Background from '../Background.astro'
 import useTranslation from '../../locales/useTranslation'
@@ -11,61 +12,27 @@ const locale = isFrench ? '/fr/' : '/'
 <script>
 	import { detect } from 'detect-browser'
 
-	function addBrowserDataToForm() {
+	window.addEventListener('load', function () {
+		const section = document.querySelector<HTMLElement>('section')
+		const form = document.querySelector<HTMLFormElement>('form')
 		const input = document.querySelector<HTMLInputElement>('#browser')
 		const browser = detect()
 
 		if (input && typeof browser === 'object') {
-			input.value = `Uses ${browser?.name} ${browser?.version} on ${browser?.os}`
-		}
-	}
-
-	function mockSubmitOnShortMessages(e: Event) {
-		const messagebox = document.querySelector<HTMLTextAreaElement>('form #message')
-
-		if ((messagebox?.value.length || 0) < 20) {
-			e.preventDefault()
-			document.querySelector<HTMLAnchorElement>('#mocksubmit')?.click()
-		}
-	}
-
-	async function limitFormSubmissionsPerMonths() {
-		let submissions: { [key in string]: string }[] = []
-
-		// Get last 100 submissions from netlify API
-		try {
-			const URL = 'https://api.netlify.com/api/v1/sites/41da761d-f84a-4b2a-9545-fd53ff8781fa/submissions'
-			const auth = atob('QmVhcmVyIFVLZlRBSHNpdFhnWEJMX3lOVWNNSXF2VEdaVDJ5b1VpU3Z5RVJGOTlIY3M=')
-			const formAPI = await fetch(URL, { headers: { Authorization: auth } })
-			submissions = await formAPI.json()
-		} catch (error) {
-			console.log('API failed: disable netlify')
+			input.value = `${browser?.name} ${browser?.version} ${browser?.os}`
 		}
 
-		if (submissions.length > 0) {
-			const date = new Date()
-			const startDate = new Date()
+		form?.addEventListener('submit', async (ev: SubmitEvent) => {
+			ev.preventDefault()
 
-			// Set day before month to avoid issues with 30/31 months
-			startDate.setDate(21)
-			startDate.setMonth(date.getDate() < 21 ? date.getMonth() - 1 : date.getMonth())
+			const response = await fetch('/submit', { method: 'POST', body: new FormData(form) })
 
-			const sumbittedThisMonth = submissions.filter((sub) => new Date(sub.created_at) > startDate)
-
-			if (sumbittedThisMonth.length <= 99) {
-				// Quits before applying removeAttribute
-				return
+			if (response.status !== 200) {
+				console.log('sike')
 			}
-		}
 
-		// Disables Netlify form submission
-		document.getElementById('form')?.removeAttribute('data-netlify')
-	}
-
-	window.addEventListener('load', function () {
-		addBrowserDataToForm()
-		limitFormSubmissionsPerMonths()
-		document.querySelector('form')?.addEventListener('submit', mockSubmitOnShortMessages)
+			section?.classList.add('submitted')
+		})
 	})
 </script>
 
@@ -81,23 +48,8 @@ const locale = isFrench ? '/fr/' : '/'
 			<span role='img' aria-label='happy-emoji'> 😊</span>
 		</p>
 
-		<a id='mocksubmit' href={locale + 'submit'}></a>
-
-		<form
-			id='form'
-			action={locale + 'submit'}
-			name='contact'
-			method='post'
-			data-netlify='true'
-			data-netlify-honeypot='bot-field'
-		>
-			<input type='hidden' name='form-name' value='contact' />
+		<form id='form' name='contact'>
 			<input type='hidden' name='browser' id='browser' />
-
-			<label>
-				<Trans>Email (optional)</Trans>
-			</label>
-			<input id='email' type='email' name='email' />
 
 			<label>
 				<Trans>Your message</Trans>
@@ -108,6 +60,16 @@ const locale = isFrench ? '/fr/' : '/'
 				<Trans>Send</Trans>
 			</button>
 		</form>
+	</div>
+
+	<div id='message-submitted'>
+		<h2>
+			<Trans>Your message has been sent, thank you!</Trans>
+		</h2>
+
+		<Link href={locale} class='button'>
+			<Trans>Back to home</Trans>
+		</Link>
 	</div>
 </section>
 
@@ -120,10 +82,12 @@ const locale = isFrench ? '/fr/' : '/'
 		min-height: calc(100vh - 140px);
 	}
 
-	#mocksubmit {
-		opacity: 0;
-		user-select: none;
-		pointer-events: none;
+	section.submitted #form-container {
+		display: none;
+	}
+
+	section.submitted #message-submitted {
+		display: block;
 	}
 
 	#form-container {
@@ -178,7 +142,7 @@ const locale = isFrench ? '/fr/' : '/'
 
 	textarea {
 		resize: vertical;
-		min-height: 70px;
+		min-height: 150px;
 		padding: 1em;
 	}
 
@@ -188,6 +152,19 @@ const locale = isFrench ? '/fr/' : '/'
 		color: white;
 		font-weight: bolder;
 		cursor: pointer;
+	}
+
+	#message-submitted {
+		display: none;
+		height: 40vh;
+	}
+
+	#message-submitted h2 {
+		margin: 2em 0;
+	}
+
+	#message-submitted a {
+		margin: auto;
 	}
 
 	@media only screen and (max-width: 500px) {

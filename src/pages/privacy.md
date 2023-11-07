@@ -19,29 +19,27 @@ featured: ../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 
 ## Homemade APIs
 
-These APIs were made by and for Bonjourr, and are open source. Anyone can fork and host them using Netlify edge functions or Cloudflare Workers.
+These APIs were created by and for Bonjourr, are open source and royalty free. Anyone can fork and host them. Hosted on Cloudflare, we have access to [Cloudflare network analytics](https://developers.cloudflare.com/analytics/types-of-analytics/), such as the number of requests and their origin per server.
+
+-   **Bonjourr APIs**  
+    A proxy for all APIs that Bonjourr uses. Fires when you make a request to a service, except Google fonts.  
+    [Source code](https://github.com/victrme/bonjourr-apis)
 
 -   **Favicon fetcher**  
-    Fetches websites favicon. Triggers when adding a new quick link.  
+    Retrieves the favicon of websites. Fires when adding a new favorites.  
     [Source code](https://github.com/victrme/favicon-fetcher)
 
 -   **Quotes**  
-    Gets a random list of quotes. Once on startup, and after changing quote type or every 20 quotes.  
+    Gets a random list of quotes. Once at startup, and after changing quote type or every 20 quotes.  
     [Source code](https://github.com/victrme/i18n-quotes)
 
--   **Geol**  
-    Gets approximate location. Once on startup, every time settings are reset.  
-    [Source code](https://github.com/victrme/geol)
+-   **Search Suggestions**  
+    Gets search suggestions from Google, Duckduckgo and others. The API is a web scraper and does not directly use the services of these providers. No data is saved.  
+    [Source code](https://github.com/victrme/search-suggestions)
 
 ## Permissions
 
 Extensions are more secured than webpages, that means Bonjourr needs to ask for permission to function properly. More about permissions on [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
-
--   **Unlimited Storage**  
-    Allows more than 1 Mo per item. Only used for storing local backgrounds, but is unused since 1.17.0.
-
--   **Geolocation**  
-    Get precise location. On startup and when weather is updated: see openweathermap.
 
 -   **Bookmarks**  
     Get a list of browser bookmarks. Optional. Only requested when using bookmark import option.
