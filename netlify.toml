@@ -1,7 +1,0 @@
-[build]
-  command = 'pnpm run build'
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "20.9.0"
-  NPM_FLAGS = "--version"
