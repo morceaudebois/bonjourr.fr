@@ -12,7 +12,7 @@ const metaTitle = t('Minimalist startpage for you browser')
 const metaDescription = t(
 	'Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.'
 )
-const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage', 'minimalism', 'lightweight']
+const metaKeywords = 'extension, startpage, homepage, browser startpage, minimalism, lightweight'
 ---
 
 <!doctype html>
@@ -28,13 +28,14 @@ const metaKeywords = ['extension', 'startpage', 'homepage', 'browser startpage',
 		<meta property='og:type' content='website' />
 		<meta property='og:url' content='https://bonjourr.fr/' />
 		<meta property='og:image' content='https://bonjourr.fr/twitter.jpg' />
-		<meta name='keywords' content={metaKeywords.join(',')} />
+		<meta name='keywords' content={metaKeywords} />
 		<meta name='twitter:card' content='summary_large_image' />
 		<meta name='twitter:image' content='https://bonjourr.fr/twitter.jpg' />
 		<meta name='twitter:creator' content='BonjourrTeam' />
 		<meta name='twitter:title' content={metaTitle} />
 		<meta name='twitter:description' content={metaDescription} />
 
+		<link rel='sitemap' href='/sitemap-index.xml' />
 		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
 		<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
 		<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
