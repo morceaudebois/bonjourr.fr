@@ -15,6 +15,7 @@ Thumbs.db
 .astro
 .vscode
 node_modules
+package-lock.json
 
 # Build directory
 /dist
