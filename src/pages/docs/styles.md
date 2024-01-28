@@ -33,9 +33,6 @@ Makes background a uniform color. Replace '#234' with your color of choice.
 	background-color: #234;
 }
 
-/* This also hides shadows */
-#main::before,
-#time::before,
 #background,
 #background-bis {
 	display: none;
@@ -50,24 +47,24 @@ Makes analog clock thicker.
 
 ```css
 #interface {
-	--anlg-w: 4px; /* Change size here */
+	--anlg-w: 6px; /* Change size here */
 }
 
-#interface #time #time-container #analogClock #center {
+#analogClock #center {
 	width: calc(var(--anlg-w) * 4);
 	height: calc(var(--anlg-w) * 4);
 }
 
-#interface #time #time-container #analogClock {
+#analogClock {
 	border-width: calc(var(--anlg-w) * 2);
 }
 
-#interface #time #time-container #analogClock span {
+#analogClock span {
 	width: calc(var(--anlg-w) * 2);
 	margin-left: calc(var(--anlg-w) * -1);
 }
 
-#interface #time #time-container #analogClock span#analogSeconds {
+#analogClock #analogSeconds {
 	width: var(--anlg-w);
 }
 ```
@@ -77,8 +74,8 @@ Makes analog clock thicker.
 Makes analog clock look like a Rolex.
 
 ```css
-* #interface #time #time-container #analogClock,
-* #interface #time #time-container #analogClock:hover {
+#analogClock,
+#analogClock:hover {
 	border-width: 1px;
 	background-size: cover;
 	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
@@ -116,12 +113,13 @@ Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc.
 Some site icons come as PNGs with a transparent background. This snippet will remove Bonjourr's default white background for links and make these icons shine.
 
 ```css
-#interface #linkblocks li.block a img {
+li.block div {
+	border-color: transparent;
 	background: transparent;
 	box-shadow: unset;
 }
 
-#interface #linkblocks li.block a img:hover {
+li.block div:hover {
 	box-shadow: unset;
 }
 ```
@@ -133,23 +131,24 @@ Some site icons come as PNGs with a transparent background. This snippet will re
 Changes font color to black. Can help if you mainly use bright backgrounds. Change "black" to a color code if you'd like another specific color.
 
 ```css
-body #interface,
-#linkblocks span {
-	color: black !important;
+#linkblocks span,
+#interface,
+#credit,
+#credit a {
+	color: black;
 }
 ```
 
 ### And my clock shall be black too
 
 ```css
-#interface #time #time-container #analogClock {
-	border-color: black !important;
+#analogClock {
+	border-color: black;
 }
 
-#minutes,
-#center,
-#hours {
-	background-color: black !important;
+#analogClock #center,
+#analogClock span {
+	background-color: black;
 }
 ```
 
@@ -160,7 +159,7 @@ body #interface,
 Hides Unsplash photo author credits.
 
 ```css
-#credit {
+#creditContainer {
 	display: none;
 }
 ```
@@ -170,6 +169,7 @@ Hides Unsplash photo author credits.
 Adds a C after the temperature.
 
 ```css
+#current::after,
 #tempContainer p::after {
 	content: 'C';
 }
