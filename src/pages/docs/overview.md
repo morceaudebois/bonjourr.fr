@@ -8,28 +8,15 @@ layout: '../../layouts/Docs.astro'
 featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 ---
 
-## General
+## Interface
 
 -   Hover your mouse on the background credits to see exif infos
--   When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
 
-## Page layouts
+## Hide settings icon
 
-There are 3 different page layouts to choose from: single, double and triple column. Each layout saves the position and alignment of your widgets independently.
+When selecting the "Hide settings icon", the icon is still clickable at the same position as before. You can also open the settings menu by pressing the `Escape` key.
 
-These options only affect the current layout:
-
--   Widget toggle (Enable switches)
--   All options in grid toolbox
--   Reset layout
-
-## Quick Links
-
-You can add and import Quick Links from the settings, and edit them when you right click on them.
-
-An easy way to add a custom icon to your Quick Link is to upload it on somewhere like Imgur, and use that link as an icon. You can also convert your icon to a Data URI (max 8kB).
-
-⚠️ **Notice**: as a security measure, local paths like `file://`, browser settings links like `about:config` or `chrome://extensions` can't be added. However, `localhost:` links will work just fine.
+<video src="/documentation/videos/hide-icon.mp4" controls muted></video>
 
 ## Backgrounds
 
@@ -48,9 +35,43 @@ Head back to Bonjourr and paste the ID in the **Unsplash collection** field. You
 
 Switch your background type from Dynamic to Custom, and you'll be able to drag and drop your own images from your computer to Bonjourr.
 
+## Quick Links
+
+You can add and import Quick Links from the settings, and edit them when you right click on them.
+
+An easy way to add a custom icon to your Quick Link is to upload it on somewhere like Imgur, and use that link as an icon. You can also convert your icon to a Data URI (max 8kB).
+
+⚠️ **Notice**: as a security measure, local paths like `file://`, browser settings links like `about:config` or `chrome://extensions` can't be added. However, `localhost:` links will work just fine.
+
+### Link folders
+
+Links folders are pretty cool. You can drag and drop them. Dragging a folder on another will add the content of the dragged folder in the target. Deleting a folder with links inside will also delete those links.
+
+### Link pages
+
+You can organize your links even more with link pages. To add a page, right click next to the default page. You cannot remove the default page, you can rename it. Deleting a page will remove the links inside.
+
+<video src="/documentation/videos/link-pages.mp4" controls muted></video>
+
+## Search bar
+
+When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
+
 ## Fonts
 
-Bonjourr gets its fonts from Google Fonts. If you want to see previews of the fonts Bonjourr offers, please visit [this page](https://fonts.google.com/).
+Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts Bonjourr offers, please visit [this page](https://fontsource.com/).
+
+## Page layouts
+
+There are 3 different page layouts to choose from: single, double and triple column. Each layout saves the position and alignment of your widgets independently.
+
+These options only affect the current layout:
+
+-   Widget toggle (Enable switches)
+-   All options in grid toolbox
+-   Reset layout
+
+<video src="/documentation/videos/move-elem.mp4" controls muted></video>
 
 ## Settings management
 
