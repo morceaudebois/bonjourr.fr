@@ -1,0 +1,678 @@
+<div id='settings-mockup'>
+	<div class='settings-title'>
+		<h2 class='trn'>General</h2>
+	</div>
+
+	<div class='param'>
+		<div class='showall wrapper'>
+			<label for='i_showall' class='trn'>Show all settings</label>
+			<input id='i_showall' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='choose_language wrapper'>
+			<label for='i_lang' class='trn'>Language</label>
+			<select id='i_lang' class='lang'>
+				<option value='en'>English</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='darkmode wrapper'>
+			<label for='i_dark' class='trn'>Dark mode</label>
+			<select id='i_dark' class='theme'>
+				<option value='system' class='trn'>System</option>
+				<option value='auto' class='trn'>At night</option>
+				<option value='enable' class='trn'>Enabled</option>
+				<option value='disable' class='trn'>Disabled</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper' id='tabtitle'>
+			<span class='trn'>Tab appearance</span>
+
+			<div>
+				<input type='text' name='favicon' id='i_favicon' maxlength='2' placeholder='🌤' aria-label='Tab favicon' />
+				<input
+					type='text'
+					name='tabtitle'
+					id='i_tabtitle'
+					maxlength='80'
+					placeholder='New tab'
+					aria-label='Tab title'
+					autocomplete='off'
+					spellcheck='false'
+				/>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_settingshide' class='trn'>Hide settings icon</label>
+			<input id='i_settingshide' class='switch' type='checkbox' />
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Background</h2>
+	</div>
+
+	<div class='param'>
+		<div class='wrapper'>
+			<label for='i_type' class='trn'>Background type</label>
+			<select id='i_type'>
+				<option value='unsplash' class='trn'>Unsplash</option>
+				<option value='local' class='trn'>Local file</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper freq_wrap'>
+			<label for='i_qtfreq' class='trn'>Frequency</label>
+			<div>
+				<select id='i_qtfreq'>
+					<option value='tabs' class='trn'>Every tab</option>
+					<option value='hour' class='trn'>Every hour</option>
+					<option value='day' class='trn'>Every day</option>
+					<option value='pause' class='trn'>Pause</option>
+				</select>
+				<button id='i_qtrefresh' class='input-btn refresh-btn' aria-label='Choose another quote'>
+					<span>↻</span>
+				</button>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_collection' class='trn'>Unsplash collection</label>
+
+			<input type='text' name='collection' id='i_collection' autocomplete='off' placeholder='2nVzlQADDIE' />
+		</div>
+
+		<!-- <hr />
+
+		<label class='uploadContainer'>
+			<p class='trn'>Upload background here</p>
+			<input id='i_bgfile' type='file' name='background_file' multiple tabindex='0' />
+		</label> -->
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_blur' class='trn'>Blur intensity</label>
+			<input id='i_blur' type='range' name='background_blur' min='0' max='50' value='0' step='1' class='range' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_bright' class='trn'>Brightness</label>
+			<input id='i_bright' type='range' class='range' name='background_bright' min='0' max='1' value='.80' step='.01' />
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Quick Links</h2>
+	</div>
+
+	<div class='param'>
+		<div class='wrapper'>
+			<label for='i_addlink' class='trn'>Add link</label>
+			<form id='addlink-inputs'>
+				<input
+					type='text'
+					name='addlink-title'
+					id='i_addlink-title'
+					maxlength='64'
+					placeholder='Title'
+					aria-label='Add title to new link'
+				/>
+				<input
+					type='text'
+					name='addlink-url'
+					id='i_addlink-url'
+					minlength='3'
+					maxlength='512'
+					placeholder='example.com'
+					aria-label='Add URL to new link'
+					autocomplete='off'
+					spellcheck='false'
+					required='true'
+				/>
+				<button type='submit' id='i_addlink' class='input-btn'>
+					<span>✓</span>
+				</button>
+			</form>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='b_importbookmarks' class='trn'>Import bookmarks</label>
+			<button id='b_importbookmarks' class='param-btn trn'>Import</button>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_syncbookmarks' class='trn'>Sync new bookmarks</label>
+			<input id='i_syncbookmarks' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_linktabs' class='trn'>Link pages</label>
+			<input id='i_linktabs' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_linknewtab' class='trn'>Open in new tab</label>
+			<input id='i_linknewtab' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_row' class='trn'>Links per row</label>
+			<input id='i_row' type='range' name='i_row' min='1' max='16' step='1' value='8' class='range' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_linkstyle' class='trn'>Style</label>
+			<select id='i_linkstyle'>
+				<option value='large' class='trn'>Large</option>
+				<option value='medium' class='trn'>Medium</option>
+				<option value='small' class='trn'>Small</option>
+				<option value='inline' class='trn'>Inline</option>
+				<option value='text' class='trn'>Text</option>
+			</select>
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Time & Date</h2>
+	</div>
+
+	<div class='param'>
+		<div class='analog wrapper'>
+			<label for='i_analog' class='trn'>Analog clock</label>
+			<input id='i_analog' class='switch opt-hider' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_clockface' class='trn'>Clock face</label>
+			<select id='i_clockface' class=''>
+				<option value='none' class='trn'>None</option>
+				<option value='number' class='trn'>Numbers</option>
+				<option value='roman' class='trn'>Romans</option>
+				<option value='marks' class='trn'>Marks</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div id='w_clockstyle' class='wrapper'>
+			<label for='i_clockstyle' class='trn'>Clock style</label>
+			<select id='i_clockstyle' class=''>
+				<option value='round' class='trn'>Round</option>
+				<option value='square' class='trn'>Square</option>
+				<option value='transparent' class='trn'>Transparent</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div id='w_ampm' class='wrapper'>
+			<label for='i_ampm' class='trn'>12-Hour Time</label>
+			<input id='i_ampm' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='seconds wrapper'>
+			<label for='i_seconds' class='trn'>Show Seconds</label>
+			<input id='i_seconds' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_dateformat' class='trn'>Date format</label>
+			<select id='i_dateformat'>
+				<option value='eu' class='trn'>Day date month</option>
+				<option value='us' class='trn'>Day, month date</option>
+				<option value='cn' class='trn'>Month date day</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_clocksize' class='trn'>Clock size</label>
+			<input
+				id='i_clocksize'
+				name='i_clocksize'
+				type='range'
+				min='0.25'
+				max='2.25'
+				step='.125'
+				value='1'
+				class='range'
+			/>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_timezone' class='trn'>Time zone</label>
+			<select id='i_timezone' class=''>
+				<option value='auto' class='trn'>Automatic</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_timehide' class='trn'>Show</label>
+			<select id='i_timehide'>
+				<option value='all' class='trn'>Clock and date</option>
+				<option value='date' class='trn'>Clock only</option>
+				<option value='clock' class='trn'>Date only</option>
+			</select>
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Weather & Greetings</h2>
+	</div>
+
+	<div class='param'>
+		<div class='w_auto wrapper'>
+			<label for='i_geol' class='trn'>Geolocation</label>
+			<select id='i_geol'>
+				<option value='off' class='trn'>Off</option>
+				<option value='approximate' class='trn'>Approximate</option>
+				<option value='precise' class='trn'>Precise</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_units' class='trn'>Unit</label>
+			<select id='i_units'>
+				<option value='metric' class='trn'>Celsius</option>
+				<option value='imperial' class='trn'>Fahrenheit</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_forecast' class='trn'>Forecast</label>
+			<select id='i_forecast'>
+				<option value='auto' class='trn'>Automatic</option>
+				<option value='always' class='trn'>Always show</option>
+				<option value='never' class='trn'>Never show</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_temp' class='trn'>Temperature</label>
+			<select id='i_temp'>
+				<option value='actual' class='trn'>Actual</option>
+				<option value='feelslike' class='trn'>Feels like</option>
+				<option value='both' class='trn'>Both</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_moreinfo' class='trn'>Detailed weather</label>
+			<select id='i_moreinfo' class='opt-hider'>
+				<option value='none' class='trn'>None</option>
+				<option value='msnw'>MSN Weather</option>
+				<option value='yhw'>Yahoo Weather</option>
+				<option value='windy'>Windy.com</option>
+				<option value='custom' class='trn'>Custom provider</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_provider' class='trn'>Provider URL</label>
+			<input id='i_provider' name='provider' type='text' placeholder='https://www.weatherbug.com/' maxlength='512' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_weatherhide' class='trn'>Show</label>
+			<select id='i_weatherhide'>
+				<option value='all' class='trn'>Description and icon</option>
+				<option value='icon' class='trn'>Description only</option>
+				<option value='desc' class='trn'>Icon only</option>
+				<option value='disabled' class='trn'>Disabled</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='greethide wrapper'>
+			<label for='i_greethide' class='trn'>Greetings</label>
+			<input id='i_greethide' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_greeting' class='trn'>Greeting name</label>
+			<input type='text' id='i_greeting' placeholder='Name' />
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Notes</h2>
+	</div>
+
+	<div class='param'>
+		<div class='wrapper'>
+			<label for='i_notesalign' class='trn'>Text alignment</label>
+			<select id='i_notesalign'>
+				<option value='left' class='trn'>Left</option>
+				<option value='center' class='trn'>Center</option>
+				<option value='right' class='trn'>Right</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_noteswidth' class='trn'>Width</label>
+			<input id='i_noteswidth' type='range' class='range' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_notesopacity' class='trn'>Opacity</label>
+			<input id='i_notesopacity' type='range' name='i_notesopacity' min='0' max='1' step='.1' value='.1' class='range' />
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Search bar</h2>
+	</div>
+
+	<div class='param'>
+		<div class='wrapper'>
+			<label for='i_sbnewtab' class='trn'>Open in new tab</label>
+			<input id='i_sbnewtab' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_sbsuggestions' class='trn'>Suggestions</label>
+			<input id='i_sbsuggestions' class='switch' type='checkbox' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_sbengine' class='trn'>Search engine</label>
+			<select id='i_sbengine' class='choose_search opt-hider'>
+				<option value='google'>Google</option>
+				<option value='custom' class='trn'>Custom</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_sbrequest' class='trn'>URL request</label>
+
+			<div class='superinput'>
+				<input id='i_sbrequest' name='sbrequest' type='text' placeholder='Search query: %s' maxlength='512' />
+				<span class='si-status'><i></i></span>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_sbplaceholder' class='trn'>Placeholder text</label>
+			<input
+				type='text'
+				name='sbplaceholder'
+				id='i_sbplaceholder'
+				autocomplete='off'
+				maxlength='48'
+				placeholder='Search'
+			/>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_sbopacity' class='trn'>Opacity</label>
+			<input id='i_sbopacity' type='range' name='i_sbopacity' min='0' max='1' step='.1' value='.1' class='range' />
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Quotes</h2>
+	</div>
+
+	<div class='param'>
+		<div class='as as_quote_type'>
+			<div class='wrapper'>
+				<label for='i_qtauthor' class='trn'>Always show author</label>
+				<input id='i_qtauthor' class='switch' type='checkbox' />
+			</div>
+
+			<hr />
+
+			<div class='wrapper'>
+				<label for='i_qttype' class='trn'>Quote type</label>
+				<div>
+					<select id='i_qttype'>
+						<option value='classic' class='trn'>Classic</option>
+						<option value='inspirobot'>Inspirobot</option>
+						<option value='kaamelott'>Kaamelott</option>
+						<option value='user' class='trn'>Custom</option>
+					</select>
+				</div>
+			</div>
+
+			<div id='quotes_userlist' class='dropdown'>
+				<hr />
+
+				<div class='wrapper'>
+					<label for='i_qtlist' class='trn'>Custom quotes</label>
+				</div>
+
+				<textarea id='i_qtlist' placeholder='Author, Your quote.
+Author, Your second quote.'></textarea>
+			</div>
+
+			<hr />
+		</div>
+
+		<div class='wrapper freq_wrap'>
+			<label for='i_qtfreq' class='trn'>Frequency</label>
+			<div>
+				<select id='i_qtfreq'>
+					<option value='tabs' class='trn'>Every tab</option>
+					<option value='hour' class='trn'>Every hour</option>
+					<option value='day' class='trn'>Every day</option>
+					<option value='pause' class='trn'>Pause</option>
+				</select>
+				<button id='i_qtrefresh' class='input-btn refresh-btn' aria-label='Choose another quote'>
+					<span>↻</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Fonts</h2>
+	</div>
+
+	<div class='param'>
+		<div class='wrapper'>
+			<label for='i_customfont' class='trn'>Font family</label>
+			<input id='i_customfont' type='text' placeholder='Inter' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_weight' class='trn'>Weight</label>
+			<select id='i_weight'>
+				<option value='400'>Normal</option>
+			</select>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_size' class='trn'>Size</label>
+			<input id='i_size' type='range' name='fontsize' min='5' max='26' step='.05' class='range' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_textshadow' class='trn'>Shadow</label>
+			<input id='i_textshadow' type='range' name='textshadow' min='0' max='1' step='.025' class='range' />
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Page layout</h2>
+	</div>
+
+	<div class='param'>
+		<div class='wrapper'>
+			<label for='b_editmove' class='trn'>Open layout toolbox</label>
+			<button id='b_editmove' class='param-btn trn'>Open</button>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<span class='trn'>Layout columns</span>
+			<div class='wrapper'>
+				<div id='grid-layout' class='mover'>
+					<button data-layout='single' aria-label='Single column layout'></button>
+					<button data-layout='double' aria-label='Double column layout'>
+						<span></span>
+					</button>
+					<button data-layout='triple' aria-label='Triple column layout'>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_pagewidth' class='trn'>Page width</label>
+			<input id='i_pagewidth' class='range' type='range' />
+		</div>
+
+		<hr />
+
+		<div class='wrapper'>
+			<label for='i_pagegap' class='trn'>Page gap</label>
+			<input id='i_pagegap' type='range' class='range' />
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 id='lbl-css' class='trn'>Custom Style</h2>
+	</div>
+
+	<textarea id='cssEditor' placeholder='Type in your custom CSS'> </textarea>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Updates</h2>
+	</div>
+
+	<div class='param'>
+		<div class='wrapper'>
+			<label for='i_announce' class='trn'>Announcements</label>
+			<select id='i_announce'>
+				<option class='trn' value='all'>All</option>
+				<option class='trn' value='major'>Major changes</option>
+				<option class='trn' value='off'>Disabled</option>
+			</select>
+		</div>
+	</div>
+
+	<div class='settings-title'>
+		<h2 class='trn'>Settings management</h2>
+	</div>
+
+	<div class='param'>
+		<div class='importexport-tabs'>
+			<button id='s_export' class='trn opt-hider'>Export</button>
+			<button id='s_import' class='trn opt-hider'>Import</button>
+			<div class='glider'></div>
+		</div>
+
+		<div id='export' class='shown'>
+			<textarea id='area_export' autocorrect='off' spellcheck='false' aria-labelledby='s_export'></textarea>
+
+			<div>
+				<button id='b_exportcopy' class='inline-btn trn'>Copy text</button>
+
+				<div id='save_wrapper'>
+					<button id='b_exportfile' class='inline-btn trn'>Export as file</button>
+					<a id='downloadfile' href='' download='' aria-hidden='true' tabindex='-1'>export download link</a>
+				</div>
+			</div>
+		</div>
+
+		<div id='import'>
+			<label id='importFile' class='uploadContainer'>
+				<p class='trn'>Drop file to import settings</p>
+				<input id='i_importfile' type='file' name='import_file' tabindex='0' />
+			</label>
+
+			<div>
+				<input id='i_importtext' type='text' placeholder='or paste as text' aria-labelledby='importtext' />
+				<button id='b_importtext' class='inline-btn trn'>Import</button>
+			</div>
+		</div>
+	</div>
+
+	<div id='resetContainer'>
+		<div class='param'>
+			<div id='reset_first' class='wrapper shown'>
+				<button id='b_resetconf' class='inline-btn trn'>Reset settings</button>
+			</div>
+		</div>
+	</div>
+</div>
