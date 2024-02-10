@@ -6,53 +6,72 @@ layout: ../../layouts/Docs.astro
 featured: ../../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
 
-## APIs tierces
+## Services externes
+
+Pour profiter de toutes les fonctionnalités, Bonjourr doit communiquer avec des services externes. Presque toutes les requêtes envoyées par la page passent par [notre API open source](https://github.com/victrme/bonjourr-apis) avant d'accéder aux autres services. Cela nous permet de garder nos clés d'accès sécurisées et offre également une couche d'anonymat pour les utilisateurs, un peu comme un VPN.
+
+Notre API est déployée sur Cloudflare Workers, ce qui signifie que nous avons accès aux [analyses réseau de Cloudflare](https://developers.cloudflare.com/analytics/types-of-analytics/), comme le nombre de requêtes et leur origine par serveur.
+
+### api.bonjourr.lol
 
 -   **Openweathermap**  
-     Récupère la météo. Se déclenche toutes les 30 minutes quand l'onglet est actif. En cas de changement de position ou de langue. Pas de requète quand la description et l'icône sont cachées.
+    Récupère les données météo. Se déclenche toutes les 30 minutes lorsque l'onglet est actif. Quand on change de localisation ou de langue. Aucune requête lorsque la description et l'icône sont masquées.  
+    [Politique de confidentialité](https://openweather.co.uk/privacy-policy#data_me_collect)
 
 -   **Unsplash**  
-     Récupère les images d'arrière-plan. Au démarrage et toutes les heures par défaut. Au changement de collection.
+    Récupère des images. Au démarrage et quand on change de collection.  
+    [Conditions de l'API](https://unsplash.com/api-terms)
 
--   **Google Fonts**  
-     Récupère la liste des polices les plus populaires. Quand on clique sur la zone de texte "Police". Quand il n'y a plus de cache.
-
-## APIs maison
-
-Ces API ont été créées par et pour Bonjourr, sont open source et libre de droit. Tout le monde peut les forker et les héberger. Hosté sur Cloudflare, nous avons accès au [analytics du réseau Cloudflare](https://developers.cloudflare.com/analytics/types-of-analytics/), comme le nombre de requêtes et leur provenance par serveur.
-
--   **Bonjourr APIs**  
-     Un proxy pour toute les APIs que Bonjourr utilise. Se déclenche dès qu'on fait une requête vers un service, sauf Google fonts.  
-    [Code source](https://github.com/victrme/bonjourr-apis)
+-   **Fontsource**  
+    Récupère la liste des polices les plus populaires. Lorsque le focus est sur "la famille de polices". Quand on perd le cache.  
+    [Plus d'informations](https://fontsource.org/docs/getting-started/introduction)
 
 -   **Favicon fetcher**  
-     Récupère la favicon des sites web. Se déclenche lors de l'ajout d'un nouveau favoris.  
-     [Code source](https://github.com/victrme/favicon-fetcher)
+    Récupère le favicon des sites web. Se déclenche lors de l'ajout d'un nouveau favori.  
+    [Code source](https://github.com/victrme/favicon-fetcher)
 
 -   **Citations**  
-     Obtient une liste aléatoire de citations. Une fois au démarrage, et après avoir changé de type de citation ou toutes les 20 citations.  
-     [Code source](https://github.com/victrme/i18n-quotes)
+    Obtient une liste aléatoire de citations. Une fois au démarrage, puis après avoir changé le type de citation ou toutes les 20 citations.  
+    [Code source](https://github.com/victrme/i18n-quotes)
 
--   **Search Suggestions**  
-     Obtient des suggestions de recherche depuis Google, Duckduckgo et d'autre. L'API est un web scraper et n'utilise pas directement les services de ces fournisseurs. Aucune donnée n'est enregistré.  
+-   **Suggestions de recherche**  
+    Obtient des suggestions de recherche de Google, Duckduckgo et d'autres. L'API est un scraper web et n'utilise pas directement les services de ces fournisseurs. Aucune donnée n'est sauvegardée de notre côté, mais Google le fait certainement.  
     [Code source](https://github.com/victrme/search-suggestions)
 
-## Permissions
+### cdn.jsdelivr.net
 
-Les extensions sont plus sécurisées que les pages web, ce qui signifie que Bonjourr doit demander des permissions pour fonctionner correctement. En savoir plus sur les permissions sur [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
+-   **Fontsource CDN**  
+    Sert le fichier de police. Lors du changement de police ou en cas de perte de cache.  
+    [Informations sur le CDN](https://fontsource.org/docs/getting-started/cdn)
 
--   **Favoris**  
-    Obtenir une liste des favoris du navigateur. Facultatif. N'est demandé que lors de l'utilisation de l'option d'importation de favoris.
+### image.unsplash.com
+
+-   **Image Unsplash**  
+    Sert l'image de fond. Au démarrage et toutes les heures par défaut. Quand on change de collection. Quand on perd le cache.
+
+## Autorisations
+
+Les extensions sont plus sécurisées que les pages web, ce qui signifie que Bonjourr doit demander l'autorisation pour fonctionner correctement. Plus d'informations sur les autorisations sur [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
+
+-   **Stockage**  
+    Accède au stockage local et synchronisé de l'extension. Plus d'informations ci-dessous. À chaque changement d'onglet et de paramètres.
+
+-   **Signets**  
+    Obtenir une liste des signets du navigateur. Facultatif. Demandé uniquement lors de l'utilisation de l'option d'importation de signets.
 
 ## Stockage des paramètres
 
-Nous, [l'équipe Bonjourr](https://github.com/victrme/Bonjourr#authors), n'avons accès à aucun de vos paramètres. Nous n'utilisons pas de télémétrie. Votre page n'envoie que des requêtes aux API pertinentes. Par défaut, Bonjourr synchronisera ses paramètres avec le compte de votre navigateur s'il est disponible.
+Nous, [l'équipe Bonjourr](https://github.com/victrme/Bonjourr?tab=readme-ov-file#-authors), n'avons pas accès à vos paramètres. Nous n'utilisons pas de télémétrie. Par défaut, Bonjourr synchronisera ses paramètres avec votre compte de navigateur s'il est disponible. Le storage sur Bonjourr n'est pas chiffré, n'enregistrez pas de mots de passe !
 
 -   **Extension Chrome**  
-    Synchronisée avec votre compte Google si vous êtes connecté à Chrome avec votre compte et que la synchronisation est activée avec l'option "Extensions" dans l'onglet "Gérer ce que vous synchronisez".
+    Synchronisé avec votre compte Google si vous êtes connecté à Chrome avec votre compte et que la synchronisation est activée avec l'option "Extensions" activée dans l'onglet "Gérer ce que vous synchronisez".
 
 -   **Extension Firefox**  
-    Synchronisée avec votre compte Firefox de la même manière que pour Chrome. L'option "Add-ons" doit être activée dans l'onglet "Choisir ce que vous synchronisez".
+    Synchronisé avec votre compte Firefox de la même manière que Chrome. Les "Modules complémentaires" doivent être activés dans l'onglet "Choisir ce que vous synchronisez".
 
--   **Online et Safari**  
+-   **En ligne et Safari**  
     Les paramètres sont stockés localement à l'aide de l'API de stockage Web.
+
+## Service en arrière-plan
+
+Le [service en arrière-plan](https://github.com/victrme/Bonjourr/blob/master/src/scripts/services/background.js) de Bonjourr ne fait qu'ouvrir un onglet lors de l'installation, de la désinstallation et lorsque vous cliquez sur son icône dans la barre d'outils.
