@@ -8,6 +8,10 @@ layout: '../../layouts/Docs.astro'
 featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 ---
 
+## Show all settings
+
+Bonjourr has lots of options. In an attempt to not be jarring for newcomers, we decided to hide most of them by default. If you're an advanced user, you can enable all those options by toggling __Show all settings__ at the very top of the settings menu.
+
 ## General
 
 -   Hover your mouse on the background credits to see exif infos
