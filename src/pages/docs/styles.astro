@@ -1,100 +1,100 @@
 ---
-// title: Style snippets
-// subtitle:
-// lang: en
-// slug: 
-// orderData: 3
-// layout: '../../layouts/Docs.astro'
-// featured: /backgrounds/kir-simakov-ZN3Hsru3SIM.webp
+import Docs from '../../layouts/Docs.astro'
+import Link from '../../components/Link.astro'
+import { Code } from 'astro:components'
 ---
 
-<p>
-	Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
-</p>
+<Docs title='Style snippets'>
+	<h1>Custom style snippets</h1>
 
-<p>
-	Want your own style snippet here ? [Contact us !](/#further)
-</p>
+	<p>
+		Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste
+		those style snippets in their dedicated section of the settings to unlock some new possibilities.
+	</p>
 
+	<p>
+		Want your own style snippet here ?
+		<Link href='/contact'>Contact us !</Link>
+	</p>
 
-<h2>Backgrounds</h2>
+	<h2>Backgrounds</h2>
 
-<h3>I like my backgrounds fast.</h3>
+	<h3>I like my backgrounds fast.</h3>
 
-Faster background transition on startup.
+	Faster background transition on startup.
 
-<code>
-#background_overlay {
+	<Code
+		lang='css'
+		code={`#background_overlay {
 	transition: transform 0.2s, opacity 0s;
-}
-</code>
+}`}
+	/>
 
-<h3>Unicolor is the new meta</h3>
+	<h3>Unicolor is the new meta</h3>
 
-Makes background a uniform color. Replace '#234' with your color of choice.
+	Makes background a uniform color. Replace '#234' with your color of choice.
 
-<code>
-#background_overlay {
+	<Code
+		lang='css'
+		code={`#background_overlay {
 	background-color: #234;
 }
-
-#background,
-#background-bis {
+#background, #background-bis {
 	display: none;
-}
-</code>
+}`}
+	/>
 
-<h2>Clock</h2>
+	<h2>Clock</h2>
 
-<h3>I like my clocks thick</h3>
+	<h3>I like my clocks thick</h3>
 
-Makes analog clock thicker.
+	Makes analog clock thicker.
 
-<code>
-#interface {
+	<Code
+		lang='css'
+		code={`#interface {
 	--anlg-w: 6px; /* Change size here */
 }
-
-#analogClock #center {
+#analog #center {
 	width: calc(var(--anlg-w) * 4);
 	height: calc(var(--anlg-w) * 4);
 }
-
-#analogClock {
+#analog {
 	border-width: calc(var(--anlg-w) * 2);
 }
-
-#analogClock span {
+#analog span {
 	width: calc(var(--anlg-w) * 2);
 	margin-left: calc(var(--anlg-w) * -1);
 }
 
-#analogClock #analogSeconds {
+#analog #analogSeconds {
 	width: var(--anlg-w);
-}
-</code>
+}`}
+	/>
 
-<h3>Rolex 😎</h3>
+	<h3>Rolex 😎</h3>
 
-Makes analog clock look like a Rolex.
+	Makes analog clock look like a Rolex.
 
-<code>
-#analogClock,
+	<Code
+		lang='css'
+		code={`#analogClock,
 #analogClock:hover {
 	border-width: 1px;
 	background-size: cover;
 	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
-}
-</code>
+}`}
+	/>
 
-<h2>Greetings</h2>
+	<h2>Greetings</h2>
 
-<h3>I want my own greeting</h3>
+	<h3>I want my own greeting</h3>
 
-Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc.
+	Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc.
 
-<code>
-#greetings:before {
+	<Code
+		lang='css'
+		code={`#greetings:before {
 	content: 'Your custom greeting';
 	visibility: visible;
 	position: absolute;
@@ -104,96 +104,94 @@ Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc.
 	text-align: center;
 	text-transform: none;
 }
-
-#greetings {
-	visibility: hidden;
+#greetings { visibility: hidden;
 	position: relative;
-}
-</code>
+}`}
+	/>
 
-<h2>Links</h2>
+	<h2>Links</h2>
 
-<h3>I want transparent links!</h3>
+	<h3>I want transparent links!</h3>
 
-Some site icons come as PNGs with a transparent background. This snippet will remove Bonjourr's default white background for links and make these icons shine.
+	Some site icons come as PNGs with a transparent background. This snippet will remove Bonjourr's default white background
+	for links and make these icons shine.
 
-<code>
-li.block div {
+	<Code
+		lang='css'
+		code={`li.block div {
 	border-color: transparent;
 	background: transparent;
 	box-shadow: unset;
 }
-
 li.block div:hover {
 	box-shadow: unset;
-}
-</code>
+}`}
+	/>
 
-<h2>Fonts</h2>
+	<h2>Fonts</h2>
 
-<h3>My fonts shall be black (or any other color 😯)</h3>
+	<h3>My fonts shall be black (or any other color 😯)</h3>
 
-<p>
-	Changes font color to black. Can help if you mainly use bright backgrounds. Change "black" to a color code if you'd like another specific color.
-</p>
+	<p>
+		Changes font color to black. Can help if you mainly use bright backgrounds. Change "black" to a color Code if you'd
+		like another specific color.
+	</p>
 
-<code>
-#linkblocks span,
+	<Code
+		lang='css'
+		code={`#linkblocks span,
 #interface,
 #credit,
 #credit a {
 	color: black;
-}
-</code>
+}`}
+	/>
 
-<h3>And my clock shall be black too</h3>
+	<h3>And my clock shall be black too</h3>
 
-<code>
-#analogClock {
+	<Code
+		lang='css'
+		code={`#analogClock {
 	border-color: black;
 }
-
 #analogClock #center,
 #analogClock span {
-	background-color: black;
-}
-</code>
+		background-color: black;
+}`}
+	/>
 
-<h2>Other</h2>
+	<h2>Other</h2>
 
-<h3>I don't care about artist exposure</h3>
+	<h3>I don't care about artist exposure</h3>
 
-<p>
-	Hides Unsplash photo author credits.
-</p>
+	<p>Hides Unsplash photo author credits.</p>
 
-<code>
-#creditContainer {
+	<Code
+		lang='css'
+		code={`#creditContainer {
 	display: none;
-}
-</code>
+}`}
+	/>
 
-<h3>23 what, carrots?</h3>
+	<h3>23 what, carrots?</h3>
 
-<p>
-	Adds a C after the temperature.
-</p>
+	<p>Adds a C after the temperature.</p>
 
-<code>
-#current::after,
+	<Code
+		lang='css'
+		code={`#current::after,
 #tempContainer p::after {
 	content: 'C';
-}
-</code>
+}`}
+	/>
 
-<h3>No GPU, only CPU 😠</h3>
+	<h3>No GPU, only CPU 😠</h3>
 
-<p>
-	This disables graphics intensive `backdrop-filter` style property on some elements.
-</p>
+	<p>This disables graphics intensive `backdrop-filter` style property on some elements.</p>
 
-<code>
-#bookmarks_container,
+	<Code
+		lang='css'
+		code={`#bookmarks_container,
 #bookmarks,
 #element-mover,
 .move-overlay {
@@ -213,24 +211,23 @@ body.autodark #editlink,
 body.autodark #bookmarks,
 body.autodark #element-mover {
 	background-color: #222;
-}
-</code>
+}`}
+	/>
 
-<h3>For laggy computers</h3>
+	<h3>For laggy computers</h3>
 
-<p>
-	Disables most settings transitions and animations. You can also add the styles above to improve performances.
-</p>
+	<p>Disables most settings transitions and animations. You can also add the styles above to improve performances.</p>
 
-<code>
-#settings .as,
+	<Code
+		lang='css'
+		code={`#settings .as,
 #settings,
 .move-overlay {
 	transition: none;
-}
-
+	}
 #interface {
 	transform: translateX(0) !important;
 	transition: none !important;
-}
-</code>
+}`}
+	/>
+</Docs>

@@ -1,6 +1,7 @@
 ---
 import Docs from '../../layouts/Docs.astro'
 import Link from '../../components/Link.astro'
+import { Code } from 'astro:components'
 
 const cyberpunk = `{
 		"showall": true,
@@ -146,12 +147,13 @@ const notmomentum = `{
 }`
 ---
 
-<Docs>
+<Docs title='Profiles'>
 	<h1>Profiles</h1>
 
 	<p>
 		Here are some pre-made themes you can import at the bottom of the settings of Bonjourr. Want your own custom profile
-		here? <Link href='/#further'>Contact us!</Link>
+		here?
+		<Link href='/contact'>Contact us !</Link>
 	</p>
 
 	<h2>Cyberpunk 2077</h2>
@@ -160,7 +162,7 @@ const notmomentum = `{
 		<img src='/documentation/profiles/cyberpunk.webp' alt='Cyberpunk 2077 Bonjourr theme' />
 	</picture>
 
-	<code>{cyberpunk}</code>
+	<Code code={cyberpunk} lang='json' />
 
 	<h2>The Space Enthusiast</h2>
 
@@ -168,7 +170,7 @@ const notmomentum = `{
 		<img src='/documentation/profiles/space.webp' alt='Space Bonjourr theme' />
 	</picture>
 
-	<code>{space}</code>
+	<Code code={space} lang='json' />
 
 	<h2>Floral</h2>
 
@@ -176,7 +178,7 @@ const notmomentum = `{
 		<img src='/documentation/profiles/floral.webp' alt='Floral Bonjourr theme' />
 	</picture>
 
-	<code>{floral}</code>
+	<Code code={floral} lang='json' />
 
 	<h2>Not Momentum</h2>
 
@@ -184,5 +186,5 @@ const notmomentum = `{
 		<img src='/documentation/profiles/not_momentum.webp' alt='Not Momentum Bonjourr theme' />
 	</picture>
 
-	<code>{notmomentum}</code>
+	<Code code={notmomentum} lang='json' />
 </Docs>
