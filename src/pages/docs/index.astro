@@ -1,8 +1,143 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import DocsStartup from '../../components/Docs/DocsStartup.astro'
+import Docs from '../../layouts/Docs.astro'
+import Link from '../../components/Link.astro'
+
+const webstore = 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
+const edgeAddons = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpage/'
+const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
 ---
 
-<Layout title={`Documentation · Bonjourr Startpage`} lang='en'>
-	<DocsStartup />
-</Layout>
+<Docs title={`Documentation · Bonjourr Startpage`} lang='en'>
+	<h1>Documentation</h1>
+
+	<h2>Features and tips</h2>
+
+	<p>To learn more about how Bonjourr works, you can check out the detailed overview of our features here:</p>
+
+	<ul>
+		<li><Link href='/docs/overview'>Complete feature overview</Link></li>
+	</ul>
+
+	If you know how to use CSS, you can style Bonjourr any way you want! Here are some ideas to get you started:
+
+	<ul>
+		<li><Link href='/docs/styles'>Custom CSS snippets</Link></li>
+		<li><Link href='/docs/profiles'>Premade Bonjourr profiles</Link></li>
+	</ul>
+
+	<h2>Install the extension</h2>
+	<h3>Browsers and platforms</h3>
+
+	<ul>
+		<li>
+			<p>
+				Chrome, Chromium, Brave, Kiwi<br />
+				<a href={webstore}>Chrome web store</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Microsoft Edge <br />
+				<a href={edgeAddons}>Edge Add-ons</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Firefox Desktop <br />
+				<a href={firefoxAddons}>Firefox Addons</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Safari MacOS <br />
+				<a href={appleAppStore}>Apple App Store</a>
+			</p>
+		</li>
+	</ul>
+
+	<h3>Currently not available</h3>
+
+	<ul>
+		<li>Safari iOS & iPadOS, we'll get to it at some point.</li>
+		<li>
+			Vivaldi is showing a blank page, see
+			<a href='https://github.com/victrme/Bonjourr/issues/213'>issue #213</a>
+		</li>
+		<li>
+			Firefox Mobile does not allow its homepage to be modified, mentioned in
+			<a href='https://github.com/victrme/Bonjourr/issues/267'>issue #267</a>
+		</li>
+	</ul>
+
+	<h3>Opera browser</h3>
+
+	<p>Is the bane of my existence</p>
+
+	<h2>Contribute</h2>
+	<h3>Donations</h3>
+
+	<p>
+		A few donations go a long way when it comes to open source software. It motivates us to pour more time into Bonjourr,
+		it helps us realise people care about our work and it can open new doors for the future. You can donate in
+		<a href='https://ko-fi.com/bonjourr'>regular money</a> or
+		<a href='https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b'>crypto money</a>.
+	</p>
+
+	<h3>Reviews</h3>
+
+	<p>
+		The simplest way to help us out is to leave a review on the extension stores, either on
+		<a href={firefoxAddons}>Firefox addons</a>,
+		<a href={webstore}>Chrome webstore</a>,
+		<a href={appleAppStore}>Apple App Store</a>
+		or even
+		<a href={edgeAddons}>Edge Addons</a>. You can also tell your friends about Bonjourr, because if you love it, they
+		probably will too.
+	</p>
+
+	<h3>Translations</h3>
+
+	<p>
+		Thanks to our contributors, Bonjourr is currently available in 21 languages! Here's how you can update or add a
+		language:
+	</p>
+
+	<p>
+		Translations are located in the
+		<a href='https://github.com/victrme/Bonjourr/tree/master/_locales'>/_locales/</a>
+		folder on Github. Each language folder contains these files:
+	</p>
+
+	<ul>
+		<li><code>translations.json</code> for the main translation.</li>
+		<li><code>messages.json</code> for the extension's title and subtitle.</li>
+		<li><code>overview.md</code> for the full description on store pages.</li>
+	</ul>
+
+	<p>
+		To add a new language, copy the `en` folder to your desired language. You also need to add the country code and name to
+		the list in
+		<a href='https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts'>/src/scripts/lang.ts</a>. If you are
+		familiar with GitHub, you can create a pull request. If not, you can directly send us the modified files
+		<a href='mailto:bonjourr.app@protonmail.com'>via email</a>
+		or to
+		<a href='https://t.me/BonjourrStartpage'>our Telegram group</a>.
+	</p>
+
+	<p>⚠️ Don't forget to join your name and link so we can credit you!</p>
+
+	<h3>New features</h3>
+
+	<p>
+		You have some coding skills and a feature in mind you could implement into Bonjourr? Check out the
+		<a href='https://github.com/victrme/Bonjourr/'>GitHub repository</a>.
+	</p>
+
+	<p>
+		If you're feeling creative, you can also suggest or create
+		<Link href='docs/styles'>CSS snippets</Link>
+		&
+		<Link href='docs/profiles'>custom profiles</Link>
+	</p>
+</Docs>

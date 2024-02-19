@@ -1,40 +1,16 @@
 ---
 import Layout from './Layout.astro'
-import DocsHero from '../components/Docs/DocsHero.astro'
-import DocsNav from '../components/Docs/DocsNav.astro'
-
-import danist from '../assets/docs/danist-bviex5lwf3s.webp'
-import joe from '../assets/docs/joe-eitzen-ByDY5eqhP.webp'
-import jonny from '../assets/docs/jonny-gios-gBr5Hmx1STc.webp'
-import kir from '../assets/docs/kir-simakov-ZN3Hsru3SIM.webp'
-import neha from '../assets/docs/neha-maheen-mahfin-IskqApmpcAw.webp'
-
-const { frontmatter } = Astro.props
-const isPrivacyPage = frontmatter?.slug === 'privacy'
-
-const images = {
-	platforms: danist,
-	overview: neha,
-	profiles: joe,
-	help: jonny,
-	css: kir,
-}
-
-const heroImage = images[frontmatter.slug as keyof typeof images] ?? joe
+const { title, lang } = Astro.props
 ---
 
-<Layout title={frontmatter.title + " · Bonjourr's documentation"} lang={frontmatter.lang}>
-	<div id='gradient-background'></div>
+<Layout title={title + " · Bonjourr's documentation"} lang={lang} id='docs'>
+	<!-- <div id='gradient-background'></div> -->
 
-	<DocsHero src={heroImage} title={frontmatter.title} />
-
-	<article class={frontmatter.slug}>
-		{!isPrivacyPage && <DocsNav frontmatter={frontmatter} />}
-
+	<main>
 		<div class='content'>
 			<slot />
 		</div>
-	</article>
+	</main>
 </Layout>
 
 <style is:global>
@@ -45,12 +21,22 @@ const heroImage = images[frontmatter.slug as keyof typeof images] ?? joe
 		width: 100vw;
 		height: 100vh;
 		z-index: -1;
-		background: linear-gradient(#323235, #222225);
+		/* background: linear-gradient(#323235, #222225); */
+	}
+	
+	body {
+		background-color: #111;
 	}
 
-	main,
-	article {
+	main {
 		min-height: calc(100vh - 470px);
+		line-height: 1.6em;
+	}
+
+	h1 {
+		font-size: 3em;
+		line-height: 2em;
+		text-align: center;
 	}
 
 	code {
@@ -78,21 +64,12 @@ const heroImage = images[frontmatter.slug as keyof typeof images] ?? joe
 		background-color: transparent;
 	}
 
-	article {
-		position: relative;
-		display: flex;
-		margin: auto;
-		justify-content: center;
-		padding: 4em 2em;
-		font-size: 16px;
-		gap: 4em;
-	}
-
 	.content {
 		padding-bottom: 5em;
 		max-width: 700px;
 		min-width: 360px;
 		width: 100%;
+		margin: auto;
 	}
 
 	.content a {
@@ -103,40 +80,38 @@ const heroImage = images[frontmatter.slug as keyof typeof images] ?? joe
 		text-decoration: underline;
 	}
 
-	.content h2,
-	.content h3,
-	.content h4,
-	.content h5,
-	.content h6 {
-		margin: 0 0 0.5em 0;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
 		font-weight: 500;
-
-		&:first-child {
-			padding-top: 0;
-		}
+		padding: 1em 0 .5em 0;
 	}
 
-	.content h2 {
-		padding-top: 2.2em;
-		font-size: 1.8em;
+	h2 {
+		padding-top: 2em;
+		font-size: 2.5em;
 	}
 
-	.content h3 {
-		padding-top: 1.5em;
+	h3 {
+		font-size: 1.6em;
 	}
 
-	.content p,
-	.content ul,
-	.content code {
+	p,
+	ul,
+	code {
 		margin-bottom: 1em;
 		color: #e7e6ea;
 	}
 
-	.content strong {
+	strong {
 		font-weight: 500;
 	}
 
-	.content img {
+	img {
 		width: 100%;
 	}
 
@@ -176,13 +151,13 @@ const heroImage = images[frontmatter.slug as keyof typeof images] ?? joe
 			flex-direction: column;
 		}
 
-		.content {
+		{
 			min-width: 100%;
 		}
 	}
 
 	@media only screen and (max-width: 500px) {
-		.content h2 {
+		h2 {
 			font-size: 1.5em;
 		}
 

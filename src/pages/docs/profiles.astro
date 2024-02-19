@@ -1,64 +1,44 @@
 ---
-title: Custom profiles
-subtitle:
-lang: en
-slug: profiles
-orderData: 4
-layout: '../../layouts/Docs.astro'
-featured: /backgrounds/joe-eitzen-ByDY5eqhP.webp
----
+import Docs from '../../layouts/Docs.astro'
+import Link from '../../components/Link.astro'
 
-Here are some pre-made themes you can import at the bottom of the settings of Bonjourr.
-Want your own custom profile here? [Contact us!](/#further)
+const cyberpunk = `{
+		"showall": true,
+		"dark": "enable",
+		"greeting": "V",
+		"time": true,
+		"main": true,
+		"background_blur": 0,
+		"background_bright": 0.71,
+		"background_type": "unsplash",
+		"quicklinks": true,
+		"textShadow": 0,
+		"css": "#date, #credit, #credit a { color: #00d8f3 }\n\n#clock {\n color: #fdf800;\n text-shadow: 5px 5px #00d8f3\n}\n\n#greetings, #weather_desc {\n text-shadow: none;\n background-color: #fdf800;\n padding: 10px 20px;\n color: black\n}",
+		"hide": {
+			"weatherdesc": false,
+			"weathericon": true
+		},
+		"clock": {
+			"analog": false,
+			"seconds": false,
+			"size": 1
+		},
+		"unsplash": {
+			"collection": "He87uFs-2zg",
+			"every": "tabs",
+			"lastCollec": "user",
+			"time": 0
+		},
+		"font": {
+			"size": "15",
+			"family": "Orbitron",
+			"system": false,
+			"weight": "600",
+			"weightlist": ["400", "500", "600", "700", "800", "900"]
+		}
+	}`
 
-## Cyberpunk 2077
-
-![Cyberpunk 2077 Bonjourr theme](/documentation/profiles/cyberpunk.webp)
-
-```json
-{
-	"showall": true,
-	"dark": "enable",
-	"greeting": "V",
-	"time": true,
-	"main": true,
-	"background_blur": 0,
-	"background_bright": 0.71,
-	"background_type": "unsplash",
-	"quicklinks": true,
-	"textShadow": 0,
-	"css": "#date, #credit, #credit a { color: #00d8f3 }\n\n#clock {\n color: #fdf800;\n text-shadow: 5px 5px #00d8f3\n}\n\n#greetings, #weather_desc {\n text-shadow: none;\n background-color: #fdf800;\n padding: 10px 20px;\n color: black\n}",
-	"hide": {
-		"weatherdesc": false,
-		"weathericon": true
-	},
-	"clock": {
-		"analog": false,
-		"seconds": false,
-		"size": 1
-	},
-	"unsplash": {
-		"collection": "He87uFs-2zg",
-		"every": "tabs",
-		"lastCollec": "user",
-		"time": 0
-	},
-	"font": {
-		"size": "15",
-		"family": "Orbitron",
-		"system": false,
-		"weight": "600",
-		"weightlist": ["400", "500", "600", "700", "800", "900"]
-	}
-}
-```
-
-## The Space Enthusiast
-
-![Space Bonjourr theme](/documentation/profiles/space.webp)
-
-```json
-{
+const space = `{
 	"showall": true,
 	"greeting": "Neil",
 	"pagegap": 1,
@@ -93,15 +73,9 @@ Want your own custom profile here? [Contact us!](/#further)
 		"weight": "700",
 		"weightlist": ["400", "700"]
 	}
-}
-```
+}`
 
-## Floral
-
-![Floral Bonjourr theme](/documentation/profiles/floral.webp)
-
-```json
-{
+const floral = `{
 	"time": true,
 	"main": true,
 	"background_blur": 0,
@@ -131,15 +105,9 @@ Want your own custom profile here? [Contact us!](/#further)
 		"weight": "400",
 		"weightlist": ["400"]
 	}
-}
-```
+}`
 
-## Not Momentum
-
-![Not Momentum Bonjourr theme](/documentation/profiles/not_momentum.webp)
-
-```json
-{
+const notmomentum = `{
 	"pagegap": 0,
 	"time": true,
 	"main": true,
@@ -175,5 +143,46 @@ Want your own custom profile here? [Contact us!](/#further)
 			"selection": "single"
 		}
 	}
-}
-```
+}`
+---
+
+<Docs>
+	<h1>Profiles</h1>
+
+	<p>
+		Here are some pre-made themes you can import at the bottom of the settings of Bonjourr. Want your own custom profile
+		here? <Link href='/#further'>Contact us!</Link>
+	</p>
+
+	<h2>Cyberpunk 2077</h2>
+
+	<picture>
+		<img src='/documentation/profiles/cyberpunk.webp' alt='Cyberpunk 2077 Bonjourr theme' />
+	</picture>
+
+	<code>{cyberpunk}</code>
+
+	<h2>The Space Enthusiast</h2>
+
+	<picture>
+		<img src='/documentation/profiles/space.webp' alt='Space Bonjourr theme' />
+	</picture>
+
+	<code>{space}</code>
+
+	<h2>Floral</h2>
+
+	<picture>
+		<img src='/documentation/profiles/floral.webp' alt='Floral Bonjourr theme' />
+	</picture>
+
+	<code>{floral}</code>
+
+	<h2>Not Momentum</h2>
+
+	<picture>
+		<img src='/documentation/profiles/not_momentum.webp' alt='Not Momentum Bonjourr theme' />
+	</picture>
+
+	<code>{notmomentum}</code>
+</Docs>
