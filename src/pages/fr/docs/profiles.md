@@ -17,30 +17,39 @@ Vous voulez votre propre profil personnalisé ici ? [Contactez nous!](/#further)
 
 ```json
 {
+	"showall": true,
+	"dark": "enable",
+	"greeting": "V",
+	"time": true,
+	"main": true,
 	"background_blur": 0,
 	"background_bright": 0.71,
-	"background_type": "dynamic",
+	"background_type": "unsplash",
+	"quicklinks": true,
+	"textShadow": 0,
+	"css": "#date, #credit, #credit a { color: #00d8f3 }\n\n#clock {\n color: #fdf800;\n text-shadow: 5px 5px #00d8f3\n}\n\n#greetings, #weather_desc {\n text-shadow: none;\n background-color: #fdf800;\n padding: 10px 20px;\n color: black\n}",
+	"hide": {
+		"weatherdesc": false,
+		"weathericon": true
+	},
 	"clock": {
-		"ampm": false,
 		"analog": false,
-		"face": "none",
 		"seconds": false,
-		"timezone": "auto"
+		"size": 1
 	},
-	"css": "* #w_icon { display: none }\n* #date, #credit a { color: #00d8f3 }\n\n* #clock {\n color: #fdf800;\n text-shadow: 5px 5px #00d8f3\n}\n\n* #greetings, * #weather_desc {\n text-shadow: none;\n background-color: #fdf800;\n padding: 10px 20px;\n color: black\n}",
-	"cssHeight": 211,
-	"dark": "enable",
-	"dynamic": { "collection": "He87uFs-2zg", "every": "tabs", "lastCollec": "user", "time": 0 },
+	"unsplash": {
+		"collection": "He87uFs-2zg",
+		"every": "tabs",
+		"lastCollec": "user",
+		"time": 0
+	},
 	"font": {
-		"availWeights": ["400", "500", "600", "700", "800", "900"],
-		"family": "Orbitron",
 		"size": "15",
-		"url": "https://fonts.googleapis.com/css?family=Orbitron:700",
-		"weight": "400"
-	},
-	"greeting": "V",
-	"searchbar": false,
-	"textShadow": 0
+		"family": "Orbitron",
+		"system": false,
+		"weight": "600",
+		"weightlist": ["400", "500", "600", "700", "800", "900"]
+	}
 }
 ```
 
@@ -50,26 +59,40 @@ Vous voulez votre propre profil personnalisé ici ? [Contactez nous!](/#further)
 
 ```json
 {
+	"showall": true,
+	"greeting": "Neil",
+	"pagegap": 1,
+	"pagewidth": 1600,
+	"time": true,
+	"main": true,
+	"dateformat": "eu",
 	"background_blur": 0,
 	"background_bright": 0.5,
-	"background_type": "dynamic",
-	"clock": { "ampm": false, "analog": false, "seconds": true, "timezone": "auto" },
-	"css": "/* Change weather text here */\n\n#interface #current::after {\n  content: ' on earth.'\n}\n\n/* the rest */\n\n#interface { color: #dfe1cc!important }\n#interface #time #date { margin-left: 50px }\n#interface #time {\n  flex-direction: row;\n  flex-wrap: wrap\n}\n\n#showSettings button img {\n  filter: sepia(1)\n}\n\n",
-	"cssHeight": 280,
-	"dark": "system",
-	"dynamic": { "every": "hour", "collection": "858219,136301,235,s9aRSbDoSg8", "time": 0 },
-	"font": {
-		"availWeights": ["400", "700"],
-		"family": "Space Mono",
-		"size": "13",
-		"url": "https://fonts.googleapis.com/css?family=Space Mono:700",
-		"weight": "700"
+	"background_type": "unsplash",
+	"quicklinks": true,
+	"css": "/* Change weather text here */\n\n#interface #current::after {\n content: 'C on earth.'\n}\n\n/* the rest */\n\n#interface { color: #dfe1cc!important }\n#interface #time #date { margin: 0 50px }\n#interface #time {\n display: flex;\n align-items: center;\n justify-content: center;\n flex-wrap: wrap;\n}\n\n#showSettings button img {\n filter: sepia(1)\n}\n\n",
+	"hide": {
+		"weatherdesc": false,
+		"weathericon": true
 	},
-	"greeting": "Neil",
-	"hide": [[0, 0], [0, 0, 1], [0], [0]],
-	"searchbar": false,
-	"showall": true,
-	"usdate": true
+	"clock": {
+		"ampm": false,
+		"analog": false,
+		"seconds": true,
+		"size": 1
+	},
+	"unsplash": {
+		"collection": "858219,136301,235,s9aRSbDoSg8",
+		"lastCollec": "user",
+		"time": 1706435865689
+	},
+	"font": {
+		"size": "13",
+		"family": "Space Mono",
+		"system": false,
+		"weight": "700",
+		"weightlist": ["400", "700"]
+	}
 }
 ```
 
@@ -79,23 +102,35 @@ Vous voulez votre propre profil personnalisé ici ? [Contactez nous!](/#further)
 
 ```json
 {
+	"time": true,
+	"main": true,
 	"background_blur": 0,
-	"background_bright": 0.9,
-	"background_type": "dynamic",
-	"clock": { "ampm": false, "analog": false, "seconds": true, "timezone": "auto" },
-	"css": "#interface, #credit a {color: #6d8161 !important }\n\n#interface #date::before,\n#interface #weather::before { box-shadow: none }",
-	"cssHeight": 220,
-	"dark": "disable",
-	"dynamic": { "collection": "2AC1c6JsJh8", "every": "hour", "lastCollec": "user", "time": 0 },
-	"font": {
-		"availWeights": ["400"],
-		"family": "DM Serif Display",
-		"size": "16.75",
-		"url": "https://fonts.googleapis.com/css?family=DM%20Serif%20Display:400",
-		"weight": "400"
+	"background_bright": 1,
+	"background_type": "unsplash",
+	"quicklinks": true,
+	"textShadow": 0,
+	"css": "#interface, #credit a {\n color: #6d8161;\n}",
+	"hide": {
+		"weatherdesc": false,
+		"weathericon": true
 	},
-	"hide": [[0, 0], [0, 0, 1], [0], [0]],
-	"textShadow": 0
+	"clock": {
+		"ampm": false,
+		"analog": false,
+		"seconds": true
+	},
+	"unsplash": {
+		"collection": "2AC1c6JsJh8",
+		"every": "day",
+		"lastCollec": "user",
+		"time": 0
+	},
+	"font": {
+		"family": "DM Serif Display",
+		"system": false,
+		"weight": "400",
+		"weightlist": ["400"]
+	}
 }
 ```
 
@@ -105,25 +140,40 @@ Vous voulez votre propre profil personnalisé ici ? [Contactez nous!](/#further)
 
 ```json
 {
-	"background_blur": 0,
-	"background_bright": 0.7,
-	"background_type": "dynamic",
-	"clock": {
-		"ampm": false,
-		"analog": false,
-		"face": "none",
-		"seconds": false,
-		"timezone": "auto"
+	"pagegap": 0,
+	"time": true,
+	"main": true,
+	"quicklinks": true,
+	"hide": {
+		"date": true,
+		"weatherdesc": true,
+		"weathericon": false,
+		"clock": false
 	},
-	"css": "* #analogClock { margin-bottom: 1em }\n* #date { display: none }\n* #time { font-size: 2em }\n\n* #clock {\nline-height: 1.1em\n}\n\n#interface { height: 80vh; padding-top: 10vh }\n#interface #time {justify-content: flex-end}\n#interface #main {justify-content: flex-start}\n\n",
-	"cssHeight": 312,
-	"dark": "enable",
-	"dynamic": { "collection": "", "every": "day", "lastCollec": "day", "time": 1629873600400 },
-	"font": { "availWeights": [], "family": "", "url": "", "weight": "600" },
-	"greeting": "Victor.",
-	"hide": [[0, 0], [0, 1, 0], [0], [1]],
-	"reviewPopup": "removed",
-	"searchbar": false,
-	"showall": true
+	"clock": {
+		"analog": false,
+		"size": 1.875
+	},
+	"font": {
+		"weight": "700"
+	},
+	"move": {
+		"layouts": {
+			"single": {
+				"grid": [["time"], ["main"], ["quicklinks"]],
+				"items": {
+					"time": {
+						"box": "end center",
+						"text": ""
+					},
+					"main": {
+						"box": "baseline center",
+						"text": ""
+					}
+				}
+			},
+			"selection": "single"
+		}
+	}
 }
 ```

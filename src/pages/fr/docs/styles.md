@@ -33,9 +33,6 @@ Donne une couleur uniforme à l'arrière-plan. Remplacez "#234" par la couleur d
 	background-color: #234;
 }
 
-/* Cache aussi les ombres */
-#main::before,
-#time::before,
 #background,
 #background-bis {
 	display: none;
@@ -50,24 +47,24 @@ Rend l'horloge analogique plus épaisse.
 
 ```css
 #interface {
-	--anlg-w: 4px; /* Changez la taille ici */
+	--anlg-w: 6px; /* Change size here */
 }
 
-#interface #time #time-container #analogClock #center {
+#analogClock #center {
 	width: calc(var(--anlg-w) * 4);
 	height: calc(var(--anlg-w) * 4);
 }
 
-#interface #time #time-container #analogClock {
+#analogClock {
 	border-width: calc(var(--anlg-w) * 2);
 }
 
-#interface #time #time-container #analogClock span {
+#analogClock span {
 	width: calc(var(--anlg-w) * 2);
 	margin-left: calc(var(--anlg-w) * -1);
 }
 
-#interface #time #time-container #analogClock span#analogSeconds {
+#analogClock #analogSeconds {
 	width: var(--anlg-w);
 }
 ```
@@ -77,11 +74,11 @@ Rend l'horloge analogique plus épaisse.
 Fait ressembler une horloge analogique à une Rolex.
 
 ```css
-* #interface #time #time-container #analogClock,
-* #interface #time #time-container #analogClock:hover {
+#analogClock,
+#analogClock:hover {
 	border-width: 1px;
 	background-size: cover;
-	background-image: url('https://bonjourr.fr/rolex.png') !important;
+	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
 }
 ```
 
@@ -116,12 +113,13 @@ Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-midi
 Certaines icônes de sites sont des PNG avec un fond transparent. Ce code supprimera le fond blanc par défaut de Bonjourr pour les liens et fera briller ces icônes.
 
 ```css
-#interface #linkblocks li.block a img {
+li.block div {
+	border-color: transparent;
 	background: transparent;
 	box-shadow: unset;
 }
 
-#interface #linkblocks li.block a img:hover {
+li.block div:hover {
 	box-shadow: unset;
 }
 ```
@@ -133,23 +131,24 @@ Certaines icônes de sites sont des PNG avec un fond transparent. Ce code suppri
 Change la couleur de la police en noir. Utile si vous utilisez principalement des arrière-plans clairs. Remplacez "black" par un code couleur si vous souhaitez une autre couleur spécifique.
 
 ```css
-body #interface,
-#linkblocks span {
-	color: black !important;
+#linkblocks span,
+#interface,
+#credit,
+#credit a {
+	color: black;
 }
 ```
 
 ### And my clock shall be black too
 
 ```css
-#interface #time #time-container #analogClock {
-	border-color: black !important;
+#analogClock {
+	border-color: black;
 }
 
-#minutes,
-#center,
-#hours {
-	background-color: black !important;
+#analogClock #center,
+#analogClock span {
+	background-color: black;
 }
 ```
 
@@ -160,7 +159,7 @@ body #interface,
 Cache les crédits d'auteur de la photo Unsplash.
 
 ```css
-#credit {
+#creditContainer {
 	display: none;
 }
 ```
@@ -170,6 +169,7 @@ Cache les crédits d'auteur de la photo Unsplash.
 Ajoute un C après la température.
 
 ```css
+#current::after,
 #tempContainer p::after {
 	content: 'C';
 }
