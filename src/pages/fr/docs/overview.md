@@ -8,6 +8,10 @@ layout: ../../../layouts/Docs.astro
 featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 ---
 
+## Afficher tous les réglages
+
+Bonjourr est rempli d'options. Afin de ne pas être trop intimidant, la plupart de ces options sont cachées par défaut. Si vous êtes un utilisateur avancé, vous pouvez les afficher en activant l'option __Afficher tous les réglages__ tout en haut du panneau de réglages.
+
 ## Choses diverses
 
 -   Passez votre souris sur les crédits du fond d'écran pour voir les infos exif.
