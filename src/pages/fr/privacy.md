@@ -12,7 +12,7 @@ Pour profiter de toutes les fonctionnalités, Bonjourr doit communiquer avec des
 
 Notre API est déployée sur Cloudflare Workers, ce qui signifie que nous avons accès aux [analyses réseau de Cloudflare](https://developers.cloudflare.com/analytics/types-of-analytics/), comme le nombre de requêtes et leur origine par serveur.
 
-### api.bonjourr.lol
+### api.bonjourr.fr
 
 -   **Openweathermap**  
     Récupère les données météo. Se déclenche toutes les 30 minutes lorsque l'onglet est actif. Quand on change de localisation ou de langue. Aucune requête lorsque la description et l'icône sont masquées.  
