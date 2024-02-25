@@ -46,26 +46,26 @@ Makes background a uniform color. Replace '#234' with your color of choice.
 Makes analog clock thicker.
 
 ```css
-#interface {
+#time {
 	--anlg-w: 6px; /* Change size here */
 }
 
-#analogClock #center {
+#analog {
+	border-width: calc(var(--anlg-w) * 2);
+}
+
+#analog-center {
 	width: calc(var(--anlg-w) * 4);
 	height: calc(var(--anlg-w) * 4);
 }
 
-#analogClock {
-	border-width: calc(var(--anlg-w) * 2);
+#analog-second {
+	width: var(--anlg-w);
 }
 
-#analogClock span {
+#analog span {
 	width: calc(var(--anlg-w) * 2);
 	margin-left: calc(var(--anlg-w) * -1);
-}
-
-#analogClock #analogSeconds {
-	width: var(--anlg-w);
 }
 ```
 
@@ -74,11 +74,10 @@ Makes analog clock thicker.
 Makes analog clock look like a Rolex.
 
 ```css
-#analogClock,
-#analogClock:hover {
+#analog {
 	border-width: 1px;
 	background-size: cover;
-	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
+	background-image: url('https://bonjourr.fr/misc/rolex.png');
 }
 ```
 
@@ -142,12 +141,12 @@ Changes font color to black. Can help if you mainly use bright backgrounds. Chan
 ### And my clock shall be black too
 
 ```css
-#analogClock {
+#analog {
 	border-color: black;
 }
 
-#analogClock #center,
-#analogClock span {
+#analog-center,
+#analog span {
 	background-color: black;
 }
 ```
@@ -208,14 +207,14 @@ body.autodark #element-mover {
 Disables most settings transitions and animations. You can also add the styles above to improve performances.
 
 ```css
-#settings .as,
 #settings,
+#settings .as,
 .move-overlay {
 	transition: none;
 }
 
 #interface {
-	transform: translateX(0) !important;
-	transition: none !important;
+	transform: translateX(0);
+	transition: none;
 }
 ```

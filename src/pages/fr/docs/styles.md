@@ -46,26 +46,26 @@ Donne une couleur uniforme à l'arrière-plan. Remplacez "#234" par la couleur d
 Rend l'horloge analogique plus épaisse.
 
 ```css
-#interface {
-	--anlg-w: 6px; /* Change size here */
+#time {
+	--anlg-w: 5px; /* Change size here */
 }
 
-#analogClock #center {
+#analog {
+	border-width: calc(var(--anlg-w) * 2);
+}
+
+#analog-center {
 	width: calc(var(--anlg-w) * 4);
 	height: calc(var(--anlg-w) * 4);
 }
 
-#analogClock {
-	border-width: calc(var(--anlg-w) * 2);
+#analog-second {
+	width: var(--anlg-w);
 }
 
-#analogClock span {
+#analog span {
 	width: calc(var(--anlg-w) * 2);
 	margin-left: calc(var(--anlg-w) * -1);
-}
-
-#analogClock #analogSeconds {
-	width: var(--anlg-w);
 }
 ```
 
@@ -74,11 +74,10 @@ Rend l'horloge analogique plus épaisse.
 Fait ressembler une horloge analogique à une Rolex.
 
 ```css
-#analogClock,
-#analogClock:hover {
+#analog {
 	border-width: 1px;
 	background-size: cover;
-	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
+	background-image: url('https://bonjourr.fr/misc/rolex.png');
 }
 ```
 
@@ -142,12 +141,12 @@ Change la couleur de la police en noir. Utile si vous utilisez principalement de
 ### And my clock shall be black too
 
 ```css
-#analogClock {
+#analog {
 	border-color: black;
 }
 
-#analogClock #center,
-#analogClock span {
+#analog-center,
+#analog span {
 	background-color: black;
 }
 ```
