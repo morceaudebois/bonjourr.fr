@@ -1,12 +1,11 @@
 ---
 title: Features overview
-subtitle:
 lang: en
 slug: overview
-orderData: 2
 layout: '../../layouts/Docs.astro'
-featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 ---
+
+# Features overview
 
 ## Interface
 

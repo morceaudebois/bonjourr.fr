@@ -3,8 +3,9 @@ title: Politique de confidentialité
 lang: fr
 slug: privacy
 layout: ../../layouts/Docs.astro
-featured: ../../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
+
+# Politique de confidentialité
 
 ## Services externes
 

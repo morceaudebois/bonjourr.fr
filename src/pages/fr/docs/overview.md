@@ -1,16 +1,15 @@
 ---
 title: Liste de fonctionnalitées
-subtitle:
 lang: fr
 slug: overview
-orderData: 2
 layout: ../../../layouts/Docs.astro
-featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 ---
+
+# Liste de fonctionnalitées
 
 ## Afficher tous les réglages
 
-Bonjourr est rempli d'options. Afin de ne pas être trop intimidant, la plupart de ces options sont cachées par défaut. Si vous êtes un utilisateur avancé, vous pouvez les afficher en activant l'option __Afficher tous les réglages__ tout en haut du panneau de réglages.
+Bonjourr est rempli d'options. Afin de ne pas être trop intimidant, la plupart de ces options sont cachées par défaut. Si vous êtes un utilisateur avancé, vous pouvez les afficher en activant l'option **Afficher tous les réglages** tout en haut du panneau de réglages.
 
 ## Choses diverses
 
@@ -66,7 +65,7 @@ Bonjourr est compatible avec les fonctions de synchronisation automatique des de
 
 ### Général
 
-| Touches                  | Action                       |
+| Touches               | Action                       |
 | --------------------- | ---------------------------- |
 | Échap                 | Ouvre / ferme les paramètres |
 | E (ciblé sur un lien) | Modifie le lien              |
@@ -75,10 +74,10 @@ Bonjourr est compatible avec les fonctions de synchronisation automatique des de
 
 Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre Note. Remplacez `Ctrl` par `cmd` sous macOS.
 
-| Touches           | Action         |
-| -------------- | -------------- |
-| Ctrl + Maj + 1 | Grand titre    |
-| Ctrl + Maj + 2 | Moyen titre    |
-| Ctrl + Maj + 3 | Petit titre    |
-| Ctrl + Maj + 4 | Liste à puce   |
+| Touches        | Action          |
+| -------------- | --------------- |
+| Ctrl + Maj + 1 | Grand titre     |
+| Ctrl + Maj + 2 | Moyen titre     |
+| Ctrl + Maj + 3 | Petit titre     |
+| Ctrl + Maj + 4 | Liste à puce    |
 | Ctrl + Maj + 5 | Liste de tâches |
