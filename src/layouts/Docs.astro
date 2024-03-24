@@ -1,10 +1,13 @@
 ---
 import Layout from './Layout.astro'
-const { title, lang } = Astro.props
+let { title, lang, frontmatter } = Astro.props
+
+if (!title && frontmatter) {
+	title = frontmatter.title
+}
 ---
 
-<Layout title={title + " · Bonjourr's documentation"} lang={lang} id='docs'>
-	<!-- <div id='gradient-background'></div> -->
+<Layout title={`${title} · Bonjourr's documentation`} lang={lang} id='docs'>
 
 	<main>
 		<div class='content'>
@@ -21,7 +24,6 @@ const { title, lang } = Astro.props
 		width: 100vw;
 		height: 100vh;
 		z-index: -1;
-		/* background: linear-gradient(#323235, #222225); */
 	}
 	
 	body {
