@@ -12,6 +12,10 @@ featured: /backgrounds/neha-maheen-mahfin-IskqApmpcAw.webp
 
 -   Hover your mouse on the background credits to see exif infos
 
+## Show all settings
+
+Bonjourr has lots of options. In an attempt to not be jarring for newcomers, we decided to hide most of them by default. If you're an advanced user, you can enable all those options by toggling **Show all settings** at the very top of the settings menu.
+
 ## Hide settings icon
 
 When selecting the "Hide settings icon", the icon is still clickable at the same position as before. You can also open the settings menu by pressing the `Escape` key.
