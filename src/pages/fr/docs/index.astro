@@ -1,5 +1,168 @@
 ---
-import Layout from '../../../layouts/Layout.astro'
+import Docs from '../../../layouts/Docs.astro'
+import Link from '../../../components/Link.astro'
+
+const webstore = 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
+const edgeAddons = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpage/'
+const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
 ---
 
-<Layout title={`Documentation · Bonjourr Startpage`} lang='fr' />
+<Docs title='Get started' lang='en'>
+	<h1>Documentation</h1>
+
+	<h2>Caractéristiques et astuces</h2>
+
+	<p>
+		Pour en savoir plus sur le fonctionnement de Bonjourr, vous pouvez consulter l'aperçu détaillé de nos fonctionnalités
+		ici:
+	</p>
+
+	<ul>
+		<li><Link href='/docs/overview'>Liste complète des fonctionnalités</Link></li>
+	</ul>
+
+	<p>
+		Si vous savez utiliser le CSS, vous pouvez styliser Bonjourr comme vous le souhaitez ! Voici quelques idées pour
+		commencer:
+	</p>
+
+	<ul>
+		<li><Link href='/docs/styles'>Morceaux de code CSS</Link></li>
+		<li><Link href='/docs/profiles'>Profiles Bonjourr prédéfinis</Link></li>
+	</ul>
+
+	<h2>Installer l'extension</h2>
+	<h3>Navigateurs et plateformes</h3>
+
+	<ul>
+		<li>
+			<p>
+				Chrome, Chrome, Brave, Kiwi<br />
+				<a href={webstore}>Chrome Web Store</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Microsoft Edge <br />
+				<a href={edgeAddons}>Edge Add-ons</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Firefox Desktop <br />
+				<a href={firefoxAddons}>Firefox Addons</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Safari MacOS <br />
+				<a href={appleAppStore}>Apple App Store</a>
+			</p>
+		</li>
+	</ul>
+
+	<h3>Actuellement non disponible</h3>
+
+	<ul>
+		<li>Safari iOS et iPadOS, on s'en occupera à un moment donné.</li>
+		<li>
+			Vivaldi affiche une page blanche, voir
+			<a href='https://github.com/victrme/Bonjourr/issues/213'>#213</a>
+		</li>
+		<li>
+			Firefox Mobile ne permet pas de modifier sa page d'accueil, mentionnée dans
+			<a href='https://github.com/victrme/Bonjourr/issues/267'>#267</a>
+		</li>
+	</ul>
+
+	<h3 id='opera'>Navigateur Opera</h3>
+
+	<p>
+		Opera n'autorise pas les extensions à modifier son nouvel onglet. Bien qu'il n'y ait pas de déclaration officielle,
+		nous pensons que c'est parce que les publicités sur leur Speed Dial sont une bonne source de revenus pour eux.
+	</p>
+
+	<h4>Remplacer le Speed Dial d'Opera</h4>
+
+	<ul>
+		<li>Videz d'abord votre Speed Dial actuel pour qu'il affiche une page vide et sombre.</li>
+		<li>
+			Vous devez ensuite installer une extension tierce qui puisse remplacer votre onglet actif actuel. Pour l'instant,
+			seul <a href='https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj'>
+				New Tab Start Page</a
+			> semble fonctionner correctement. Nous ne sommes pas affiliés à eux !
+		</li>
+		<li>Cliquez sur l'icône de Bonjourr, elle devrait révéler son URL complète dans la barre d'adresse.</li>
+		<li>Configurez l'extension tierce avec l'URL de Bonjourr, et le tour est joué !</li>
+	</ul>
+
+	<h2>Contribuer</h2>
+	<h3>Dons</h3>
+
+	<p>
+		Les dons sont très utiles lorsqu'il s'agit de logiciels libres. Ils nous motivent à consacrer plus de temps à Bonjourr,
+		ils nous aident à réaliser que des personnes s'intéressent à notre travail et ils peuvent ouvrir de nouvelles portes
+		pour l'avenir. Vous pouvez donner avec <a href='https://ko-fi.com/bonjourr'>de l'argent classique</a> ou
+		<a href='https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b'>crypto-monnaie</a>.
+	</p>
+
+	<h3>Avis</h3>
+
+	<p>
+		Le moyen le plus simple de nous aider est de laisser un avis sur les stores d'extensions, soit sur
+		<a href={firefoxAddons}>Firefox Addons</a>,
+		<a href={webstore}>Chrome Web Store</a>,
+		<a href={appleAppStore}>Apple App Store</a>
+		ou même
+		<a href={edgeAddons}>Edge Add-ons</a>. Vous pouvez également parler de Bonjourr à vos amis, car si vous l'aimez, ils le
+		feront probablement aussi.
+	</p>
+
+	<h3>Traductions</h3>
+
+	<p>
+		Grâce à nos contributeurs, Bonjourr est actuellement traduit en plus de 20 langues ! Voici comment mettre à jour ou
+		ajouter une langue:
+	</p>
+
+	<p>
+		Les traductions se trouvent dans le dossier <a href='https://github.com/victrme/Bonjourr/tree/master/_locales'
+			>/_locales/</a
+		> sur Github. Chaque dossier de langue contient ces fichiers:
+	</p>
+
+	<ul>
+		<li><code class='inline-code'>translations.json</code> pour la traduction principale.</li>
+		<li><code class='inline-code'>messages.json</code> pour le titre et le sous-titre de l'extension.</li>
+		<li><code class='inline-code'>overview.md</code> pour la description complète sur les pages des stores.</li>
+	</ul>
+
+	<p>
+		Pour ajouter une nouvelle langue, copiez le dossier « en » dans la langue souhaitée. Vous devez également ajouter le
+		code du pays et le nom à la liste dans
+		<a href='https://github.com/victrme/Bonjourr/blob/master/src/scripts/lang.ts'>/src/scripts/lang.ts</a>. Si vous êtes
+		familier avec GitHub, vous pouvez créer une pull request. Sinon, vous pouvez nous envoyer directement les fichiers
+		modifiés
+		<a href='mailto:bonjourr.app@protonmail.com'>par e-mail</a>
+		ou pour
+		<a href='https://t.me/BonjourrStartpage'>notre groupe Telegram</a>.
+	</p>
+
+	<p>⚠️ N'oubliez pas de joindre votre nom et votre lien afin que nous puissions vous créditer!</p>
+
+	<h3>Nouvelles fonctionnalités</h3>
+
+	<p>
+		Vous avez des compétences en codage et une fonctionnalité en tête que vous pourriez implémenter dans Bonjourr?
+		Consultez le
+		<a href='https://github.com/victrme/Bonjourr/'>dépôt GitHub</a>.
+	</p>
+
+	<p>
+		Si vous vous sentez créatif, vous pouvez également suggérer ou créer des
+		<Link href='docs/styles'>extraits de code CSS</Link>
+		ou des
+		<Link href='docs/profiles'>profils personnalisés</Link>.
+	</p>
+</Docs>

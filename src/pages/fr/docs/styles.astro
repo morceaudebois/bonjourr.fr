@@ -1,0 +1,237 @@
+---
+import Docs from '../../../layouts/Docs.astro'
+import Link from '../../../components/Link.astro'
+import { Code } from 'astro:components'
+---
+
+<Docs title='Style snippets'>
+	<h1>Custom style snippets</h1>
+
+	<p>
+		Bonjourr est personnalisable par le biais de son interface de paramètres, mais vous pouvez faire bien d'autres choses !
+		Copiez et collez ces extraits de style dans leur section dédiée des paramètres pour débloquer de nouvelles
+		possibilités.
+	</p>
+
+	<p>
+		Vous voulez votre propre extrait de style ici ?
+		<Link href='/contact'>Contactez nous !</Link>
+	</p>
+
+	<h2>Fond d'écran</h2>
+
+	<h3>J'aime que mes arrière-plans soient rapides.</h3>
+
+	Transition d'arrière-plan plus rapide au démarrage.
+
+	<Code
+		lang='css'
+		code={`#background_overlay {
+	transition: transform 0.2s, opacity 0s;
+}`}
+	/>
+
+	<h3>L'unicolore est la nouvelle méta</h3>
+
+	Donne une couleur uniforme à l'arrière-plan. Remplacez "#234" par la couleur de votre choix.
+
+	<Code
+		lang='css'
+		code={`#background_overlay {
+	background-color: #234;
+}
+#background, #background-bis {
+	display: none;
+}`}
+	/>
+
+	<h2>Horloge</h2>
+
+	<h3>J'aime mes horloges épaisses</h3>
+
+	Rend l'horloge analogique plus épaisse.
+
+	<Code
+		lang='css'
+		code={`#interface {
+	--anlg-w: 6px; /* Change size here */
+}
+#analog #center {
+	width: calc(var(--anlg-w) * 4);
+	height: calc(var(--anlg-w) * 4);
+}
+#analog {
+	border-width: calc(var(--anlg-w) * 2);
+}
+#analog span {
+	width: calc(var(--anlg-w) * 2);
+	margin-left: calc(var(--anlg-w) * -1);
+}
+
+#analog #analogSeconds {
+	width: var(--anlg-w);
+}`}
+	/>
+
+	<h3>Rolex 😎</h3>
+
+	Fait ressembler une horloge analogique à une Rolex.
+
+	<Code
+		lang='css'
+		code={`#analogClock,
+#analogClock:hover {
+	border-width: 1px;
+	background-size: cover;
+	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
+}`}
+	/>
+
+	<h2>Bienvenue</h2>
+
+	<h3>Je veux mon propre message d'accueil</h3>
+
+	Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-midi, etc.
+
+	<Code
+		lang='css'
+		code={`#greetings:before {
+	content: 'Your custom greeting';
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	text-transform: none;
+}
+#greetings { visibility: hidden;
+	position: relative;
+}`}
+	/>
+
+	<h2>Liens</h2>
+
+	<h3>Je veux des liens transparents !</h3>
+
+	Certaines icônes de sites sont des PNG avec un fond transparent. Ce code supprimera le fond blanc par défaut de Bonjourr
+	pour les liens et fera briller ces icônes.
+
+	<Code
+		lang='css'
+		code={`li.block div {
+	border-color: transparent;
+	background: transparent;
+	box-shadow: unset;
+}
+li.block div:hover {
+	box-shadow: unset;
+}`}
+	/>
+
+	<h2>Police de caractères</h2>
+
+	<h3>Mes polices de caractères seront noires (ou une autre couleur 😯)</h3>
+
+	<p>
+		Change la couleur de la police en noir. Utile si vous utilisez principalement des arrière-plans clairs. Remplacez
+		"black" par un code couleur si vous souhaitez une autre couleur spécifique.
+	</p>
+
+	<Code
+		lang='css'
+		code={`#linkblocks span,
+#interface,
+#credit,
+#credit a {
+	color: black;
+}`}
+	/>
+
+	<h3>Et mon horloge aussi sera noire</h3>
+
+	<Code
+		lang='css'
+		code={`#analogClock {
+	border-color: black;
+}
+#analogClock #center,
+#analogClock span {
+		background-color: black;
+}`}
+	/>
+
+	<h2>Autre</h2>
+
+	<h3>Je me fiche de l'exposition de l'artiste</h3>
+
+	<p>Cache les crédits d'auteur de la photo Unsplash.</p>
+
+	<Code
+		lang='css'
+		code={`#creditContainer {
+	display: none;
+}`}
+	/>
+
+	<h3>23 quoi, carottes ?</h3>
+
+	<p>Ajoute un C après la température.</p>
+
+	<Code
+		lang='css'
+		code={`#current::after,
+#tempContainer p::after {
+	content: 'C';
+}`}
+	/>
+
+	<h3>Pas de GPU, seulement le CPU 😠</h3>
+
+	<p>Désactive la propriété de style `backdrop-filter` très gourmande en ressources graphiques sur certains éléments.</p>
+
+	<Code
+		lang='css'
+		code={`#bookmarks_container,
+#bookmarks,
+#element-mover,
+.move-overlay {
+	backdrop-filter: none !important;
+}
+
+#editlink,
+#bookmarks,
+#element-mover {
+	background-color: #f2f2f7;
+}
+
+body.dark #editlink,
+body.dark #bookmarks,
+body.dark #element-mover,
+body.autodark #editlink,
+body.autodark #bookmarks,
+body.autodark #element-mover {
+	background-color: #222;
+}`}
+	/>
+
+	<h3>Pour les ordinateurs qui traînent</h3>
+
+	<p>
+		Désactive la plupart des transitions et des animations des paramètres. Vous pouvez également ajouter les styles
+		ci-dessus pour améliorer les performances.
+	</p>
+
+	<Code
+		lang='css'
+		code={`#settings .as,
+#settings,
+.move-overlay {
+	transition: none;
+	}
+#interface {
+	transform: translateX(0) !important;
+	transition: none !important;
+}`}
+	/>
+</Docs>
