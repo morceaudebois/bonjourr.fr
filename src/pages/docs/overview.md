@@ -60,6 +60,19 @@ You can organize your links even more with link pages. To add a page, right clic
 
 When enabling the custom search engine option, the searchbar becomes compatible with all search engines, which includes things like YouTube (`https://www.youtube.com/results?search_query=%s`).
 
+## Notes
+
+Notes uses Markdown to create titles, lists, and checkboxes. To transform a line, just add these characters at the start of a line:
+
+-   `# ` big heading
+-   `## ` medium heading
+-   `### ` small heading
+-   `- ` classic list
+-   `[ ] ` checkbox
+-   `[x] ` checkbox, checked
+
+Other Markdown features, like italics, are not available currently.
+
 ## Fonts
 
 Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts Bonjourr offers, please visit [this page](https://fontsource.com/).
