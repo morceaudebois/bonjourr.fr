@@ -4,6 +4,9 @@ import Link from './Link.astro'
 import useTranslation from '../locales/useTranslation'
 
 const { isFrench } = useTranslation(Astro)
+const path = Astro.url.pathname
+const isDocs = path.includes('/docs')
+const isHome = path === '/' || path === '/fr' || path === '/fr/'
 ---
 
 <nav>
@@ -13,25 +16,25 @@ const { isFrench } = useTranslation(Astro)
 				<Trans>Home</Trans>
 			</Link>
 
-			<a href='https://online.bonjourr.fr'>
-				<Trans>Online</Trans>
-			</a>
-
 			<Link href='/docs'>
 				<Trans>Docs</Trans>
 			</Link>
 
-			<Link href='/#donate'>
+			<Link href='/contact'>Contact</Link>
+
+			<a href='https://ko-fi.com/bonjourr'>
 				<Trans>Donate</Trans>
-			</Link>
+			</a>
 
-			<Link href='/#further'>Contact</Link>
+			<a href='https://github.com/victrme/Bonjourr'>Github</a>
 
-			<Link href='https://github.com/victrme/Bonjourr'>Github</Link>
+			<a href='https://online.bonjourr.fr'>
+				<Trans>Online</Trans>
+			</a>
 		</div>
 
-		<a href={isFrench ? Astro.url.pathname.substring(3) : '/fr' + Astro.url.pathname} class='language'>
-			<span role='img' aria-label='globe-emoji'>🌍</span>
+		<a href={isFrench ? path.substring(3) : '/fr' + path} class='language'>
+			<span role='img' aria-label=''>🌍</span>
 			{isFrench ? 'en' : 'fr'}
 		</a>
 	</div>

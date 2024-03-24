@@ -3,8 +3,9 @@ title: Privacy policy
 lang: en
 slug: privacy
 layout: '../layouts/Docs.astro'
-featured: ../backgrounds/kir-simakov-ZN3Hsru3SIM.webp
 ---
+
+# Privacy policy
 
 ## In short
 

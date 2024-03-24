@@ -1,0 +1,195 @@
+---
+import Docs from '../../layouts/Docs.astro'
+import Link from '../../components/Link.astro'
+import { Code } from 'astro:components'
+---
+
+<Docs title='Profiles'>
+	<h1>Profiles</h1>
+
+	<p>
+		Here are some pre-made themes you can import at the bottom of the settings of Bonjourr. Want your own custom profile
+		here?
+		<Link href='/contact'>Contact us !</Link>
+	</p>
+
+	<h2>Cyberpunk 2077</h2>
+
+	<picture>
+		<img src='/documentation/profiles/cyberpunk.webp' alt='Cyberpunk 2077 Bonjourr theme' />
+	</picture>
+
+	<Code
+		code={`{
+	"showall": true,
+	"dark": "enable",
+	"greeting": "V",
+	"time": true,
+	"main": true,
+	"background_blur": 0,
+	"background_bright": 0.71,
+	"background_type": "unsplash",
+	"quicklinks": true,
+	"textShadow": 0,
+	"css": "#date, #credit, #credit a { color: #00d8f3 }\n\n#clock {\n color: #fdf800;\n text-shadow: 5px 5px #00d8f3\n}\n\n#greetings, #weather_desc {\n text-shadow: none;\n background-color: #fdf800;\n padding: 10px 20px;\n color: black\n}",
+	"hide": {
+		"weatherdesc": false,
+		"weathericon": true
+	},
+	"clock": {
+		"analog": false,
+		"seconds": false,
+		"size": 1
+	},
+	"unsplash": {
+		"collection": "He87uFs-2zg",
+		"every": "tabs",
+		"lastCollec": "user",
+		"time": 0
+	},
+	"font": {
+		"size": "15",
+			"family": "Orbitron",
+			"system": false,
+			"weight": "600",
+			"weightlist": ["400", "500", "600", "700", "800", "900"]
+		}
+	}
+}`}
+		lang='json'
+	/>
+
+	<h2>The Space Enthusiast</h2>
+
+	<picture>
+		<img src='/documentation/profiles/space.webp' alt='Space Bonjourr theme' />
+	</picture>
+
+	<Code
+		code={`{
+	"showall": true,
+	"greeting": "Neil",
+	"pagegap": 1,
+	"pagewidth": 1600,
+	"time": true,
+	"main": true,
+	"dateformat": "eu",
+	"background_blur": 0,
+	"background_bright": 0.5,
+	"background_type": "unsplash",
+	"quicklinks": true,
+	"css": "/* Change weather text here */\n\n#interface #current::after {\n content: 'C on earth.'\n}\n\n/* the rest */\n\n#interface { color: #dfe1cc!important }\n#interface #time #date { margin: 0 50px }\n#interface #time {\n display: flex;\n align-items: center;\n justify-content: center;\n flex-wrap: wrap;\n}\n\n#showSettings button img {\n filter: sepia(1)\n}\n\n",
+	"hide": {
+		"weatherdesc": false,
+		"weathericon": true
+	},
+	"clock": {
+		"ampm": false,
+		"analog": false,
+		"seconds": true,
+		"size": 1
+	},
+	"unsplash": {
+		"collection": "858219,136301,235,s9aRSbDoSg8",
+		"lastCollec": "user",
+		"time": 1706435865689
+	},
+	"font": {
+		"size": "13",
+		"family": "Space Mono",
+		"system": false,
+		"weight": "700",
+		"weightlist": ["400", "700"]
+	}
+}`}
+		lang='json'
+	/>
+
+	<h2>Floral</h2>
+
+	<picture>
+		<img src='/documentation/profiles/floral.webp' alt='Floral Bonjourr theme' />
+	</picture>
+
+	<Code
+		code={`{
+		"time": true,
+		"main": true,
+		"background_blur": 0,
+		"background_bright": 1,
+		"background_type": "unsplash",
+		"quicklinks": true,
+		"textShadow": 0,
+		"css": "#interface, #credit a {\n color: #6d8161;\n}",
+		"hide": {
+			"weatherdesc": false,
+			"weathericon": true
+		},
+		"clock": {
+			"ampm": false,
+			"analog": false,
+			"seconds": true
+		},
+		"unsplash": {
+			"collection": "2AC1c6JsJh8",
+			"every": "day",
+			"lastCollec": "user",
+			"time": 0
+		},
+		"font": {
+			"family": "DM Serif Display",
+			"system": false,
+			"weight": "400",
+			"weightlist": ["400"]
+		}
+	}`}
+		lang='json'
+	/>
+
+	<h2>Not Momentum</h2>
+
+	<picture>
+		<img src='/documentation/profiles/not_momentum.webp' alt='Not Momentum Bonjourr theme' />
+	</picture>
+
+	<Code
+		code={`{
+		"pagegap": 0,
+		"time": true,
+		"main": true,
+		"quicklinks": true,
+		"hide": {
+			"date": true,
+			"weatherdesc": true,
+			"weathericon": false,
+			"clock": false
+		},
+		"clock": {
+			"analog": false,
+			"size": 1.875
+		},
+		"font": {
+			"weight": "700"
+		},
+		"move": {
+			"layouts": {
+				"single": {
+					"grid": [["time"], ["main"], ["quicklinks"]],
+					"items": {
+						"time": {
+							"box": "end center",
+							"text": ""
+						},
+						"main": {
+							"box": "baseline center",
+							"text": ""
+						}
+					}
+				},
+				"selection": "single"
+			}
+		}
+	}`}
+		lang='json'
+	/>
+</Docs>
