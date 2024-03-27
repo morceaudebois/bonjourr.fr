@@ -7,6 +7,16 @@ if (!title && frontmatter) {
 }
 ---
 
+<script is:inline>
+	window.addEventListener('DOMContentLoaded', function() {	
+		Object.values(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+			.filter(h => h.id)
+			.forEach(heading => {
+				heading.innerHTML += `<a href="#${heading.id}" class="perma" aria-label="permalink">🔗</a>`
+		})
+	})
+</script>
+
 <Layout title={`${title} · Bonjourr's documentation`} lang={lang} id='docs'>
 
 	<main>
@@ -87,9 +97,28 @@ if (!title && frontmatter) {
 	h4,
 	h5,
 	h6 {
+		position: relative;
 		margin: 0;
 		font-weight: 500;
-		padding: 1em 0 .5em 0;
+		padding: 1em 2rem .5em 0;
+		width: max-content;
+	}
+
+	h1:hover .perma,
+	h2:hover .perma,
+	h3:hover .perma,
+	h4:hover .perma,
+	h5:hover .perma,
+	h6:hover .perma {
+		display: initial;
+		text-decoration: none;
+	}
+
+	.perma {
+		display: none;
+		position: absolute;
+		right: 0;
+		font-size: 1rem;
 	}
 
 	h2 {
@@ -100,6 +129,7 @@ if (!title && frontmatter) {
 	h3 {
 		font-size: 1.6em;
 	}
+
 
 	p,
 	ul,
