@@ -14,6 +14,7 @@ const sitemapOptions = {
 
 export default defineConfig({
 	site: 'https://bonjourr.fr',
+	devToolbar: { enabled: false },
 	integrations: [sitemap(sitemapOptions)],
 	image: {
 		service: squooshImageService(),
