@@ -77,11 +77,11 @@ if (!title && frontmatter) {
 	}
 
 	.content {
-		padding-bottom: 5em;
-		max-width: 700px;
+		max-width: 740px;
 		min-width: 360px;
 		width: 100%;
 		margin: auto;
+		padding: 0 2em 5em;
 	}
 
 	.content a {
@@ -103,6 +103,7 @@ if (!title && frontmatter) {
 		font-weight: 500;
 		padding: 1em 2rem .5em 0;
 		width: max-content;
+		max-width: 100%;
 	}
 
 	h1:hover .perma,
@@ -189,8 +190,16 @@ if (!title && frontmatter) {
 	}
 
 	@media only screen and (max-width: 500px) {
+		h1 {
+			font-size: 2em;
+		}
+
 		h2 {
 			font-size: 1.5em;
+		}
+
+		h3 {
+			font-size: 1.2em;
 		}
 
 		article {

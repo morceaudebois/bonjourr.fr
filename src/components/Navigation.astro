@@ -5,8 +5,6 @@ import useTranslation from '../locales/useTranslation'
 
 const { isFrench } = useTranslation(Astro)
 const path = Astro.url.pathname
-const isDocs = path.includes('/docs')
-const isHome = path === '/' || path === '/fr' || path === '/fr/'
 ---
 
 <nav>
@@ -63,8 +61,8 @@ const isHome = path === '/' || path === '/fr' || path === '/fr/'
 
 	nav .links {
 		display: flex;
-		flex-wrap: wrap;
 		column-gap: 2.5em;
+		overflow-x: auto;
 	}
 
 	nav .links:hover a {
@@ -86,9 +84,18 @@ const isHome = path === '/' || path === '/fr' || path === '/fr/'
 		transition: border 0.1s;
 	}
 
+	nav .links::-webkit-scrollbar {
+		display: none;
+	}
+
 	@media only screen and (max-width: 500px) {
 		nav .container {
-			padding: 1.5em;
+			padding: 2em;
+		}
+
+		nav .links {
+			display: flex;
+			column-gap: 1.8em;
 		}
 	}
 </style>

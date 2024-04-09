@@ -1,7 +1,15 @@
 ---
-import Trans from "../Trans.astro"
+import useTranslation from '../../locales/useTranslation'
+
+const { t, locale } = useTranslation(Astro)
 const { pathname } = new URL(Astro.request.url)
-const crumbs = pathname.replace("/fr", "").split("/")
+const paths = pathname.replace('/fr', '').split('/')
+
+const crumbs = paths.map((path, i) => {
+	const href = `${locale}/${path}`
+	const text = i === 0 ? t('Home') : path
+	return [href, text]
+})
 ---
 
 <div>
@@ -11,15 +19,9 @@ const crumbs = pathname.replace("/fr", "").split("/")
 
 	<ul>
 		{
-			crumbs.map((crumb) => (
+			crumbs.map(([href, text]) => (
 				<li>
-					{crumb ? (
-						<a href={crumb}>{crumb}</a>
-					) : (
-						<a href="/">
-							<Trans>home</Trans>
-						</a>
-					)}
+					<a href={href}>{text}</a>
 				</li>
 			))
 		}
@@ -31,7 +33,7 @@ const crumbs = pathname.replace("/fr", "").split("/")
 		width: fit-content;
 		text-align: center;
 		margin: auto;
-		padding-bottom: 2rem;
+		padding: 1rem 0 2rem;
 		font-weight: 500;
 	}
 
@@ -41,7 +43,6 @@ const crumbs = pathname.replace("/fr", "").split("/")
 	}
 
 	ul {
-		display: inline-flex;
 		padding: 0;
 		margin: 0;
 		opacity: 0.8;
@@ -53,11 +54,13 @@ const crumbs = pathname.replace("/fr", "").split("/")
 	}
 
 	li {
-		white-space: pre;
+		display: inline;
+		cursor: default;
+		text-transform: capitalize;
 	}
 
 	li::after {
-		content: ">";
+		content: '>';
 		margin: 0 0.3em;
 	}
 
