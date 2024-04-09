@@ -1,22 +1,23 @@
 ---
-import Docs from '../../layouts/Docs.astro'
-import Link from '../../components/Link.astro'
-import { Code } from 'astro:components'
+import Docs from "../../layouts/Docs.astro"
+import Link from "../../components/Link.astro"
+import { Code } from "astro:components"
+import DocsTitle from "../../components/Docs/DocsTitle.astro"
 ---
 
-<Docs title='Profiles'>
-	<h1>Profiles</h1>
+<Docs title="Profiles">
+	<DocsTitle>Profiles</DocsTitle>
 
 	<p>
-		Here are some pre-made themes you can import at the bottom of the settings of Bonjourr. Want your own custom profile
-		here?
-		<Link href='/contact'>Contact us !</Link>
+		Here are some pre-made themes you can import at the bottom of the settings of Bonjourr. Want
+		your own custom profile here?
+		<Link href="/contact">Contact us !</Link>
 	</p>
 
-	<h2 id='cyberpunk'>Cyberpunk 2077</h2>
+	<h2 id="cyberpunk">Cyberpunk 2077</h2>
 
 	<picture>
-		<img src='/documentation/profiles/cyberpunk.webp' alt='Cyberpunk 2077 Bonjourr theme' />
+		<img src="/documentation/profiles/cyberpunk.webp" alt="Cyberpunk 2077 Bonjourr theme" />
 	</picture>
 
 	<Code
@@ -56,13 +57,13 @@ import { Code } from 'astro:components'
 		}
 	}
 }`}
-		lang='json'
+		lang="json"
 	/>
 
-	<h2 id='space'>The Space Enthusiast</h2>
+	<h2 id="space">The Space Enthusiast</h2>
 
 	<picture>
-		<img src='/documentation/profiles/space.webp' alt='Space Bonjourr theme' />
+		<img src="/documentation/profiles/space.webp" alt="Space Bonjourr theme" />
 	</picture>
 
 	<Code
@@ -102,13 +103,13 @@ import { Code } from 'astro:components'
 		"weightlist": ["400", "700"]
 	}
 }`}
-		lang='json'
+		lang="json"
 	/>
 
-	<h2 id='floral'>Floral</h2>
+	<h2 id="floral">Floral</h2>
 
 	<picture>
-		<img src='/documentation/profiles/floral.webp' alt='Floral Bonjourr theme' />
+		<img src="/documentation/profiles/floral.webp" alt="Floral Bonjourr theme" />
 	</picture>
 
 	<Code
@@ -143,13 +144,13 @@ import { Code } from 'astro:components'
 			"weightlist": ["400"]
 		}
 	}`}
-		lang='json'
+		lang="json"
 	/>
 
-	<h2 id='not-momentum'>Not Momentum</h2>
+	<h2 id="not-momentum">Not Momentum</h2>
 
 	<picture>
-		<img src='/documentation/profiles/not_momentum.webp' alt='Not Momentum Bonjourr theme' />
+		<img src="/documentation/profiles/not_momentum.webp" alt="Not Momentum Bonjourr theme" />
 	</picture>
 
 	<Code
@@ -190,6 +191,6 @@ import { Code } from 'astro:components'
 			}
 		}
 	}`}
-		lang='json'
+		lang="json"
 	/>
 </Docs>

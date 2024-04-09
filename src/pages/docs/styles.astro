@@ -1,41 +1,43 @@
 ---
-import Docs from '../../layouts/Docs.astro'
-import Link from '../../components/Link.astro'
-import { Code } from 'astro:components'
+import DocsTitle from "../../components/Docs/DocsTitle.astro"
+import Docs from "../../layouts/Docs.astro"
+import Link from "../../components/Link.astro"
+import { Code } from "astro:components"
 ---
 
-<Docs title='Style snippets'>
-	<h1>Custom style snippets</h1>
+<Docs title="Style snippets">
+	<DocsTitle>Custom style snippets</DocsTitle>
 
 	<p>
-		Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste
-		those style snippets in their dedicated section of the settings to unlock some new possibilities.
+		Bonjourr is customisable through its settings interface, but there are many more things you
+		can do! Copy and paste those style snippets in their dedicated section of the settings to
+		unlock some new possibilities.
 	</p>
 
 	<p>
 		Want your own style snippet here ?
-		<Link href='/contact'>Contact us !</Link>
+		<Link href="/contact">Contact us !</Link>
 	</p>
 
-	<h2 id='backgrounds'>Backgrounds</h2>
+	<h2 id="backgrounds">Backgrounds</h2>
 
-	<h3 id='no-transition'>I like my backgrounds fast.</h3>
+	<h3 id="no-transition">I like my backgrounds fast.</h3>
 
 	Faster background transition on startup.
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#background_overlay {
 	transition: transform 0.2s, opacity 0s;
 }`}
 	/>
 
-	<h3 id='plain-background'>Unicolor is the new meta</h3>
+	<h3 id="plain-background">Unicolor is the new meta</h3>
 
 	Makes background a uniform color. Replace '#234' with your color of choice.
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#background_overlay {
 	background-color: #234;
 }
@@ -44,14 +46,14 @@ import { Code } from 'astro:components'
 }`}
 	/>
 
-	<h2 id='clock'>Clock</h2>
+	<h2 id="clock">Clock</h2>
 
-	<h3 id='clock-width'>I like my clocks thick</h3>
+	<h3 id="clock-width">I like my clocks thick</h3>
 
 	Makes analog clock thicker.
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#interface {
 	--anlg-w: 6px; /* Change size here */
 }
@@ -72,12 +74,12 @@ import { Code } from 'astro:components'
 }`}
 	/>
 
-	<h3 id='rolex'>Rolex 😎</h3>
+	<h3 id="rolex">Rolex 😎</h3>
 
 	Makes analog clock look like a Rolex.
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#analogClock,
 #analogClock:hover {
 	border-width: 1px;
@@ -86,14 +88,14 @@ import { Code } from 'astro:components'
 }`}
 	/>
 
-	<h2 id='greetings'>Greetings</h2>
+	<h2 id="greetings">Greetings</h2>
 
-	<h3 id='custom-greetings'>I want my own greeting</h3>
+	<h3 id="custom-greetings">I want my own greeting</h3>
 
 	Sets a custom greeting phrase instead of Good Morning, Good Afternoon, etc.
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#greetings:before {
 	content: 'Your custom greeting';
 	visibility: visible;
@@ -109,15 +111,15 @@ import { Code } from 'astro:components'
 }`}
 	/>
 
-	<h2 id='links'>Links</h2>
+	<h2 id="links">Links</h2>
 
-	<h3 id='transparent-links'>I want transparent links!</h3>
+	<h3 id="transparent-links">I want transparent links!</h3>
 
-	Some site icons come as PNGs with a transparent background. This snippet will remove Bonjourr's default white background
-	for links and make these icons shine.
+	Some site icons come as PNGs with a transparent background. This snippet will remove Bonjourr's
+	default white background for links and make these icons shine.
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`li.block div {
 	border-color: transparent;
 	background: transparent;
@@ -128,17 +130,17 @@ li.block div:hover {
 }`}
 	/>
 
-	<h2 id='fonts'>Fonts</h2>
+	<h2 id="fonts">Fonts</h2>
 
-	<h3 id='fonts-color'>My fonts shall be black (or any other color 😯)</h3>
+	<h3 id="fonts-color">My fonts shall be black (or any other color 😯)</h3>
 
 	<p>
-		Changes font color to black. Can help if you mainly use bright backgrounds. Change "black" to a color Code if you'd
-		like another specific color.
+		Changes font color to black. Can help if you mainly use bright backgrounds. Change "black"
+		to a color Code if you'd like another specific color.
 	</p>
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#linkblocks span,
 #interface,
 #credit,
@@ -147,10 +149,10 @@ li.block div:hover {
 }`}
 	/>
 
-	<h3 id='clock-font-color'>And my clock shall be black too</h3>
+	<h3 id="clock-font-color">And my clock shall be black too</h3>
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#analogClock {
 	border-color: black;
 }
@@ -160,37 +162,37 @@ li.block div:hover {
 }`}
 	/>
 
-	<h2 id='other'>Other</h2>
+	<h2 id="other">Other</h2>
 
-	<h3 id='no-credits'>I don't care about artist exposure</h3>
+	<h3 id="no-credits">I don't care about artist exposure</h3>
 
 	<p>Hides Unsplash photo author credits.</p>
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#creditContainer {
 	display: none;
 }`}
 	/>
 
-	<h3 id='temperature-unit'>23 what, carrots?</h3>
+	<h3 id="temperature-unit">23 what, carrots?</h3>
 
 	<p>Adds a C after the temperature.</p>
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#current::after,
 #tempContainer p::after {
 	content: 'C';
 }`}
 	/>
 
-	<h3 id='no-gpu-computer'>No GPU, only CPU 😠</h3>
+	<h3 id="no-gpu-computer">No GPU, only CPU 😠</h3>
 
 	<p>This disables graphics intensive `backdrop-filter` style property on some elements.</p>
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#bookmarks_container,
 #bookmarks,
 #element-mover,
@@ -214,12 +216,15 @@ body.autodark #element-mover {
 }`}
 	/>
 
-	<h3 id='potato-computer'>For laggy computers</h3>
+	<h3 id="potato-computer">For laggy computers</h3>
 
-	<p>Disables most settings transitions and animations. You can also add the styles above to improve performances.</p>
+	<p>
+		Disables most settings transitions and animations. You can also add the styles above to
+		improve performances.
+	</p>
 
 	<Code
-		lang='css'
+		lang="css"
 		code={`#settings .as,
 #settings,
 .move-overlay {

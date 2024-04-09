@@ -1,5 +1,6 @@
 ---
 import Layout from './Layout.astro'
+
 let { title, lang, frontmatter } = Astro.props
 
 if (!title && frontmatter) {
@@ -9,7 +10,7 @@ if (!title && frontmatter) {
 
 <script is:inline>
 	window.addEventListener('DOMContentLoaded', function() {	
-		Object.values(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+		Object.values(document.querySelectorAll('h2, h3, h4, h5, h6'))
 			.filter(h => h.id)
 			.forEach(heading => {
 				heading.innerHTML += `<a href="#${heading.id}" class="perma" aria-label="permalink">🔗</a>`

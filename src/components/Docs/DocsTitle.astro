@@ -1,0 +1,67 @@
+---
+import Trans from "../Trans.astro"
+const { pathname } = new URL(Astro.request.url)
+const crumbs = pathname.replace("/fr", "").split("/")
+---
+
+<div>
+	<h1>
+		<slot />
+	</h1>
+
+	<ul>
+		{
+			crumbs.map((crumb) => (
+				<li>
+					{crumb ? (
+						<a href={crumb}>{crumb}</a>
+					) : (
+						<a href="/">
+							<Trans>home</Trans>
+						</a>
+					)}
+				</li>
+			))
+		}
+	</ul>
+</div>
+
+<style>
+	div {
+		width: fit-content;
+		text-align: center;
+		margin: auto;
+		padding-bottom: 2rem;
+		font-weight: 500;
+	}
+
+	h1 {
+		padding: 0;
+		line-height: 1.5em;
+	}
+
+	ul {
+		display: inline-flex;
+		padding: 0;
+		margin: 0;
+		opacity: 0.8;
+		list-style: none;
+	}
+
+	div ul li a {
+		color: inherit;
+	}
+
+	li {
+		white-space: pre;
+	}
+
+	li::after {
+		content: ">";
+		margin: 0 0.3em;
+	}
+
+	li:last-child::after {
+		display: none;
+	}
+</style>
