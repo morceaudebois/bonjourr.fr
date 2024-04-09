@@ -23,13 +23,15 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 
 		case 'chrome': {
 			icon = (await import('../../assets/icons/browsers/chrome.svg')).default.src
-			link = 'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd'
+			link =
+				'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd'
 			break
 		}
 
 		case 'edge-chromium': {
 			icon = (await import('../../assets/icons/browsers/edge.svg')).default.src
-			link = 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+			link =
+				'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
 			break
 		}
 
@@ -41,7 +43,7 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 
 		case 'ios': {
 			icon = (await import('../../assets/icons/browsers/safari.svg')).default.src
-			link = '/docs/platforms#ios-and-android'
+			link = 'docs#available'
 			break
 		}
 	}
@@ -81,7 +83,7 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 		</div>
 
 		<div class='link'>
-			<Link href='/docs/platforms'>
+			<Link href='docs#available'>
 				<i>
 					<Trans>Searching for other browsers?</Trans>
 				</i>
