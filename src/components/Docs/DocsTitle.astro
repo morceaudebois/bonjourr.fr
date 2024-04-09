@@ -2,10 +2,12 @@
 import useTranslation from '../../locales/useTranslation'
 
 const { t, locale } = useTranslation(Astro)
-const { pathname } = new URL(Astro.request.url)
-const paths = pathname.replace('/fr', '').split('/')
+let { pathname } = new URL(Astro.request.url)
 
-const crumbs = paths.map((path, i) => {
+pathname = pathname.replace('/fr', '')
+pathname = pathname.endsWith('/') ? pathname.slice(0, pathname.length - 1) : pathname
+
+const crumbs = pathname.split('/').map((path, i) => {
 	const href = `${locale}/${path}`
 	const text = i === 0 ? t('Home') : path
 	return [href, text]
