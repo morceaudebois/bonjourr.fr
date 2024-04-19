@@ -1,0 +1,194 @@
+---
+import Docs from '../../layouts/Docs.astro'
+---
+
+<Docs>
+	<h1>Politique de confidentialité</h1>
+
+	<h2>En bref</h2>
+
+	<p>
+		Nous, ou l'équipe Bonjourr se réfère à
+		<a href="https://github.com/morceaudebois/">Tahoe Beetschen</a> &
+		<a href="https://github.com/victrme/">Victor Azevedo</a>. Nous ne collectons, enregistrons,
+		ou partageons aucune données que l'utilisateur produit sur Bonjourr. Les données envoyées à
+		notre API sont le strict minimum pour que Bonjourr puisse fonctionner, sont anonymes et ne
+		peuvent pas identifier un utilisateur. L'API ne garde pas de logs.
+	</p>
+
+	<h2>Services externes</h2>
+	<p>
+		Pour profiter de toutes les fonctionnalités, Bonjourr doit communiquer avec des services
+		externes. Presque toutes les requêtes envoyées par la page passent par <a
+			href="https://github.com/victrme/bonjourr-apis">notre API open source</a
+		> avant d'accéder aux autres services. Cela nous permet de garder nos clés d'accès sécurisées
+		et offre également une couche d'anonymat pour les utilisateurs, un peu comme un VPN.
+	</p>
+	<p>
+		Notre API est déployée sur Cloudflare Workers, ce qui signifie que nous avons accès aux <a
+			href="https://developers.cloudflare.com/analytics/account-and-zone-analytics/account-analytics/#summary-of-metrics"
+			>analyses réseau de Cloudflare</a
+		> comme le nombre de requêtes et leur origine par serveur.
+	</p>
+
+	<h3>api.bonjourr.fr</h3>
+
+	<ul>
+		<li>
+			<p>
+				<strong>Openweathermap</strong><br />
+				Récupère les données météo. Se déclenche toutes les 30 minutes lorsque l'onglet est actif.
+				Quand on change de localisation ou de langue. Aucune requête lorsque la description et
+				l'icône sont masquées. <br />
+				<a href="https://openweather.co.uk/privacy-policy#data_me_collect"
+					>Politique de confidentialité</a
+				>
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Unsplash</strong><br />
+				Récupère des images. Au démarrage et quand on change de collection. <br />
+				<a href="https://unsplash.com/api-terms">Conditions de l'API</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Fontsource</strong><br />
+				Récupère la liste des polices les plus populaires. Lorsque le focus est sur "la famille
+				de polices". Quand on perd le cache. <br />
+				<a href="https://fontsource.org/docs/getting-started/introduction"
+					>Plus d'informations</a
+				>
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Favicon fetcher</strong><br />
+				Récupère le favicon des sites web. Se déclenche lors de l'ajout d'un nouveau favori.<br
+				/>
+				<a href="https://github.com/victrme/favicon-fetcher">Code source</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Quotes</strong><br />
+				Obtient une liste aléatoire de citations. Une fois au démarrage, puis après avoir changé
+				le type de citation ou toutes les 20 citations. <br />
+				<a href="https://github.com/victrme/i18n-quotes">Code source</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Search Suggestions</strong><br />
+				Obtient des suggestions de recherche de Google, Duckduckgo et d'autres. L'API est un
+				scraper web et n'utilise pas directement les services de ces fournisseurs. Aucune donnée
+				n'est sauvegardée de notre côté, mais Google le fait certainement. <br />
+				<a href="https://github.com/victrme/search-suggestions">Code source</a>
+			</p>
+		</li>
+	</ul>
+
+	<h3>cdn.jsdelivr.net</h3>
+
+	<ul>
+		<li>
+			<strong>Fontsource CDN</strong><br />
+			Sert le fichier de police. Lors du changement de police ou en cas de perte de cache.<br
+			/>
+			<a href="https://fontsource.org/docs/getting-started/cdn">Informations sur le CDN</a>
+		</li>
+	</ul>
+
+	<h3>image.unsplash.com</h3>
+
+	<ul>
+		<li>
+			<strong>Unsplash Image</strong><br />
+			Sert l'image de fond. Au démarrage et toutes les heures par défaut. Quand on change de collection.
+			Quand on perd le cache.
+		</li>
+	</ul>
+
+	<h2>Permissions</h2>
+
+	<p>
+		Les extensions sont plus sécurisées que les pages web, ce qui signifie que Bonjourr doit
+		demander l'autorisation pour fonctionner correctement. Plus d'informations sur les
+		autorisations sur
+		<a href="https://developer.chrome.com/docs/extensions/mv3/declare_permissions/"
+			>developer.chrome.com</a
+		>
+	</p>
+	<ul>
+		<li>
+			<p>
+				<strong>Storage</strong><br />
+				Accède au stockage local et synchronisé de l'extension. Plus d'informations ci-dessous.
+				À chaque changement d'onglet et de paramètres.
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Favoris</strong><br />
+				Obtenir une liste des favoris du navigateur. Facultatif. Demandé uniquement lors de l'utilisation
+				de l'option d'importation de favoris.
+			</p>
+		</li>
+	</ul>
+
+	<h2>Stockage des paramètres</h2>
+
+	<p>
+		Nous n'avons pas accès à vos paramètres. Les paramètres sont enregistrés dans le navigateur
+		en utilisant la<a
+			href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage"
+		>
+			extension storage API</a
+		>. Ce système de stockage n'est pas chiffré alors les utilisateurs doivent rester
+		responsable. Bonjourr ne demandera ni ne sauvegardera jamais d'informations personelles ou
+		identifiable.
+	</p>
+	<p>
+		Par défaut, Bonjourr synchronisera ses paramètres avec votre compte de navigateur s'il est
+		disponible. Vous pouvez désactiver cette options en suivant ces étapes:
+	</p>
+	<ul>
+		<li>
+			<p>
+				<strong>Extension Chrome</strong><br />
+				Synchronisé avec votre compte Google si vous êtes connecté à Chrome avec votre compte
+				et que la synchronisation est activée avec l'option "Extensions" activée dans l'onglet
+				"Gérer ce que vous synchronisez".
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Extension Firefox</strong><br />
+				Synchronisé avec votre compte Firefox de la même manière que Chrome. Les "Modules complémentaires"
+				doivent être activés dans l'onglet "Choisir ce que vous synchronisez".
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Online et Safari</strong><br />
+				Les paramètres sont stockés localement à l'aide de l'API de stockage Web.
+			</p>
+		</li>
+	</ul>
+
+	<h2>Service en arrière-plan</h2>
+
+	<p>
+		En utilisant l'extension, le
+		<a href="https://github.com/victrme/Bonjourr/blob/master/src/scripts/services/background.js"
+			>service en arrière-plan</a
+		> de Bonjourr se permet d'ouvrir un onglet à l'installation et la désinstallation, et quand on
+		clique sur l'icône de la barre d'adresse. Rien d'autre ne tourne en arrière plan. Depuis la mise
+		à jour en manifest v3, le service
+		<a
+			href="https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle#idle-shutdown"
+			>se stop après 30s d'inactivité</a
+		> tout seul.
+	</p>
+</Docs>
