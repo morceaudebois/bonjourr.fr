@@ -36,38 +36,41 @@ const locale = isFrench ? '/fr/' : '/'
 	})
 </script>
 
-<Background src={BackgroundImage} blur='2' brightness='.8' width='300' />
+<Background src={BackgroundImage} blur="2" brightness=".8" width="300" />
 
 <section>
-	<div id='form-container'>
+	<div id="form-container">
 		<h2>
 			<Trans>Thank you for using Bonjourr.</Trans>
 		</h2>
 		<p>
-			<Trans>We're sorry to see you go. If you have time, tell us what would make Bonjourr better, thanks!</Trans>
-			<span role='img' aria-label='happy-emoji'> 😊</span>
+			<Trans
+				>We're sorry to see you go. If you have time, tell us what would make Bonjourr
+				better, thanks!</Trans
+			>
+			<span role="img" aria-label="happy-emoji"> 😊</span>
 		</p>
 
-		<form id='form' name='contact'>
-			<input type='hidden' name='browser' id='browser' />
+		<form id="form" name="contact">
+			<input type="hidden" name="browser" id="browser" />
 
 			<label>
 				<Trans>Your message</Trans>
 			</label>
-			<textarea id='message' name='message' required></textarea>
+			<textarea id="message" name="message" required></textarea>
 
-			<button type='submit'>
+			<button type="submit">
 				<Trans>Send</Trans>
 			</button>
 		</form>
 	</div>
 
-	<div id='message-submitted'>
+	<div id="message-submitted">
 		<h2>
 			<Trans>Your message has been sent, thank you!</Trans>
 		</h2>
 
-		<Link href={locale} class='button'>
+		<Link href={locale} class="button">
 			<Trans>Back to home</Trans>
 		</Link>
 	</div>

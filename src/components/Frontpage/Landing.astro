@@ -4,49 +4,39 @@ import Trans from '../Trans.astro'
 import Link from '../Link.astro'
 
 import Illustration from '../../assets/illustrations/illustration.png'
-import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 ---
 
 <script>
-	import { detect } from 'detect-browser'
-
-	const { name } = detect() ?? { name: '' }
-	let icon = ''
-	let link = ''
-
-	switch (name) {
-		case 'firefox': {
-			icon = (await import('../../assets/icons/browsers/firefox.svg')).default.src
-			link = 'https://addons.mozilla.org/fr/firefox/addon/bonjourr-startpage/'
-			break
-		}
-
-		case 'chrome': {
-			icon = (await import('../../assets/icons/browsers/chrome.svg')).default.src
-			link =
-				'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd'
-			break
-		}
-
-		case 'edge-chromium': {
-			icon = (await import('../../assets/icons/browsers/edge.svg')).default.src
-			link =
-				'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
-			break
-		}
-
-		case 'safari': {
-			icon = (await import('../../assets/icons/browsers/safari.svg')).default.src
-			link = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
-			break
-		}
-
-		case 'ios': {
-			icon = (await import('../../assets/icons/browsers/safari.svg')).default.src
-			link = 'docs#available'
-			break
-		}
+	const userAgentRules = {
+		edge: /EdgA?\/([0-9\.]+)/,
+		'chromium-webview': /(?!Chrom.*OPR)wv\).*Chrom(?:e|ium)\/([0-9\.]+)(:?\s|$)/,
+		chrome: /(?!Chrom.*OPR)Chrom(?:e|ium)\/([0-9\.]+)(:?\s|$)/,
+		firefox: /Firefox\/([0-9\.]+)(?:\s|$)/,
+		opera: /Opera\/([0-9\.]+)(?:\s|$)/,
+		android: /Android\s([0-9\.]+)/,
+		ios: /Version\/([0-9\._]+).*Mobile.*Safari.*/,
+		safari: /Version\/([0-9\._]+).*Safari/,
 	}
+
+	const entries = Object.entries(userAgentRules)
+	const match = entries.find(([_, regex]) => !!navigator.userAgent.match(regex))
+	const name = match?.[0]
+
+	const icon = {
+		firefox: '/browsers/firefox.svg',
+		chrome: '/browsers/chrome.svg',
+		edge: '/browsers/edge.svg',
+		safari: '/browsers/safari.svg',
+		ios: '/browsers/safari.svg',
+	}[name ?? '']
+
+	const link = {
+		firefox: 'https://addons.mozilla.org/firefox/addon/bonjourr-startpage/',
+		chrome: 'https://chromewebstore.google.com/detail/bonjourr-%C2%B7-minimalist-sta/dlnejlppicbjfcfcedcflplfjajinajd',
+		edge: 'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid',
+		safari: 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236',
+		ios: 'docs#available',
+	}[name ?? '']
 
 	if (icon && link) {
 		document.getElementById('download-link')?.setAttribute('href', link)
@@ -57,33 +47,33 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 	}
 </script>
 
-<div class='wrapper'>
-	<div class='left'>
-		<div class='title'>
+<div class="wrapper">
+	<div class="left">
+		<div class="title">
 			<h1>Bonjourr</h1>
 			<p><Trans>Startpage for your browser</Trans></p>
 		</div>
 
-		<div class='container'>
-			<a id='download-link' href='' class='button'>
-				<div class='icon'>
-					<img id='download-icon' src='' alt='' width='30' />
+		<div class="container">
+			<a id="download-link" href="" class="button">
+				<div class="icon">
+					<img id="download-icon" src="" alt="" width="30" />
 				</div>
 				<span>
-					<Trans slot='Download'>Download</Trans>
+					<Trans slot="Download">Download</Trans>
 				</span>
 			</a>
 
-			<a href='https://online.bonjourr.fr' rel='noreferrer' class='button'>
-				<Image src={DesktopIcon} class='icon' alt='' width='30' />
+			<a href="https://online.bonjourr.fr" rel="noreferrer" class="button">
+				<Image src="/browsers/desktop.svg" class="icon" alt="" width="30" height="30" />
 				<span>
-					<Trans slot='Online'>Try online</Trans>
+					<Trans slot="Online">Try online</Trans>
 				</span>
 			</a>
 		</div>
 
-		<div class='link'>
-			<Link href='docs#available'>
+		<div class="link">
+			<Link href="docs#available">
 				<i>
 					<Trans>Searching for other browsers?</Trans>
 				</i>
@@ -92,13 +82,13 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 	</div>
 
 	<Picture
-		id='illustration'
+		id="illustration"
 		src={Illustration}
-		width='480'
+		width="480"
 		densities={[2]}
-		loading='eager'
+		loading="eager"
 		formats={['avif', 'webp']}
-		alt='Bonjourr screenshot'
+		alt="Bonjourr screenshot"
 	/>
 </div>
 
@@ -173,7 +163,6 @@ import DesktopIcon from '../../assets/icons/browsers/desktop.svg'
 		}
 
 		.left {
-			text-align: center;
 			margin-right: 0;
 		}
 
