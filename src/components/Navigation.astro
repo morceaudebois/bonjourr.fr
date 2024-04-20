@@ -8,31 +8,31 @@ const path = Astro.url.pathname
 ---
 
 <nav>
-	<div class='container'>
-		<div class='links'>
-			<Link href='/' id='homeLink'>
+	<div class="container">
+		<div class="links">
+			<Link href="/" id="homeLink">
 				<Trans>Home</Trans>
 			</Link>
 
-			<Link href='/docs'>
+			<Link href="/docs">
 				<Trans>Docs</Trans>
 			</Link>
 
-			<Link href='/contact'>Contact</Link>
+			<Link href="/#further">Contact</Link>
 
-			<a href='https://ko-fi.com/bonjourr'>
+			<a href="https://ko-fi.com/bonjourr">
 				<Trans>Donate</Trans>
 			</a>
 
-			<a href='https://github.com/victrme/Bonjourr'>Github</a>
+			<a href="https://github.com/victrme/Bonjourr">Github</a>
 
-			<a href='https://online.bonjourr.fr'>
+			<a href="https://online.bonjourr.fr">
 				<Trans>Online</Trans>
 			</a>
 		</div>
 
-		<a href={isFrench ? path.substring(3) : '/fr' + path} class='language'>
-			<span role='img' aria-label=''>🌍</span>
+		<a href={isFrench ? path.substring(3) : '/fr' + path} class="language">
+			<span role="img" aria-label="">🌍</span>
 			{isFrench ? 'en' : 'fr'}
 		</a>
 	</div>
@@ -65,23 +65,17 @@ const path = Astro.url.pathname
 		overflow-x: auto;
 	}
 
-	nav .links:hover a {
-		opacity: 0.8;
-	}
-
 	nav .links:hover a:hover {
 		opacity: 1;
 		border-color: white;
-		border-bottom: 2px solid white;
-		transition: border-color 0.15s;
+		border-bottom: 1px solid white;
 	}
 
 	.container a {
 		position: relative;
-		padding: 0.5em 0;
+		padding: 0.5em 0 0.25em 0;
 		font-weight: 500;
 		border-bottom: 2px solid transparent;
-		transition: border 0.1s;
 	}
 
 	nav .links::-webkit-scrollbar {

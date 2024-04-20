@@ -41,7 +41,7 @@ import Illustration from '../../assets/illustrations/illustration.png'
 	if (icon && link) {
 		document.getElementById('download-link')?.setAttribute('href', link)
 		document.getElementById('download-icon')?.setAttribute('src', icon)
-		document.getElementById('download-icon')?.setAttribute('style', 'opacity: 1')
+		document.getElementById('download-icon')?.setAttribute('style', 'visibility: visible')
 	} else {
 		document.getElementById('download-link')?.setAttribute('style', 'display: none')
 	}
@@ -64,7 +64,7 @@ import Illustration from '../../assets/illustrations/illustration.png'
 				</span>
 			</a>
 
-			<a href="https://online.bonjourr.fr" rel="noreferrer" class="button">
+			<a id="online-link" href="https://online.bonjourr.fr" rel="noreferrer" class="button">
 				<Image src="/browsers/desktop.svg" class="icon" alt="" width="30" height="30" />
 				<span>
 					<Trans slot="Online">Try online</Trans>
@@ -81,15 +81,15 @@ import Illustration from '../../assets/illustrations/illustration.png'
 		</div>
 	</div>
 
-	<Picture
-		id="illustration"
-		src={Illustration}
-		width="480"
-		densities={[2]}
-		loading="eager"
-		formats={['webp']}
-		alt="Bonjourr screenshot"
-	/>
+	<picture id="illustration">
+		<Image
+			src={Illustration}
+			densities={[2]}
+			loading="eager"
+			format="webp"
+			alt="Bonjourr screenshot"
+		/>
+	</picture>
 </div>
 
 <style>
@@ -99,7 +99,14 @@ import Illustration from '../../assets/illustrations/illustration.png'
 	}
 
 	#download-icon {
-		opacity: 0;
+		visibility: hidden;
+	}
+
+	#download-link,
+	#online-link {
+		transition: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
 	}
 
 	.wrapper {
@@ -115,7 +122,20 @@ import Illustration from '../../assets/illustrations/illustration.png'
 	}
 
 	#illustration {
-		object-fit: contain;
+		image-rendering: optimizeSpeed;
+		background-size: cover;
+		color: transparent;
+		border-radius: 8px;
+		overflow: hidden;
+		width: 480px;
+		height: 295px;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAIAAAAiZtkUAAAAV0lEQVQI1wFMALP/AaKeoAT///P4+BMfI/Pt6/77+AMQ8fQmBfDIDyPz2NQD5NqZmKoEPyMUzNPb8sDaLRwFHRUBVSkJA93tAPP1/QD07RD88vb48xIB9XJlKiKWKcJVAAAAAElFTkSuQmCC');
+	}
+
+	#illustration img {
+		width: 100%;
+		height: 100%;
+		image-rendering: optimizeQuality;
 	}
 
 	.title h1 {
@@ -129,7 +149,6 @@ import Illustration from '../../assets/illustrations/illustration.png'
 
 	.link a {
 		opacity: 0.8;
-		transition: all 0.1s;
 	}
 
 	.link a:hover {
@@ -153,6 +172,7 @@ import Illustration from '../../assets/illustrations/illustration.png'
 
 		#illustration {
 			width: 420px;
+			height: 258px;
 		}
 	}
 
