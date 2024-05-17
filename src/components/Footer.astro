@@ -1,12 +1,23 @@
 ---
 import Link from './Link.astro'
 
-const trans = {
+const isFrench = Astro.url.pathname.startsWith('/fr')
+
+const en = {
+	'Made in France with ❤️': 'Made in France with ❤️',
+	'Privacy policy': 'Privacy policy',
+	'Source code': 'Source code',
+	'Contact us': 'Contact us',
+	by: 'by',
+}
+const fr = {
 	'Made in France with ❤️': 'Fabriqué en France avec ❤️',
-	by: 'par',
 	'Privacy policy': 'Politique de confidentialité',
 	'Source code': 'Code source',
+	'Contact us': 'Contactez-nous',
+	by: 'par',
 }
+const trans = isFrench ? fr : en
 ---
 
 <script>
@@ -23,19 +34,19 @@ const trans = {
 			<p>© 2019 Bonjourr</p>
 
 			<p>
-				<Link href="/privacy"> Privacy policy </Link>
+				<Link href="/privacy">{trans['Privacy policy']}</Link>
 			</p>
 
 			<p>
-				<a href="https://github.com/morceaudebois/bonjourr.fr"> Source code </a>
+				<a href="https://github.com/morceaudebois/bonjourr.fr">{trans['Source code']}</a>
 			</p>
 		</div>
 
 		<div id="signature">
-			<p>Made in France with ❤️</p>
+			<p>{trans['Made in France with ❤️']}</p>
 
 			<p>
-				<span>by</span>
+				<span>{trans.by}</span>
 
 				<span id="signature_span">
 					<a href="https://victr.me" title="Victor's portfolio">Victor Azevedo</a>
@@ -46,7 +57,7 @@ const trans = {
 		</div>
 
 		<div id="contact">
-			<p>Contact us</p>
+			<p>{trans['Contact us']}</p>
 
 			<p>
 				<a href="https://t.me/BonjourrStartpage">Telegram</a> ·

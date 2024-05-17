@@ -4,22 +4,24 @@ import Link from './Link.astro'
 const isFrench = Astro.url.pathname.startsWith('/fr')
 const path = Astro.url.pathname
 
-const trans = {
-	Home: 'Accueil',
-	Donate: 'Dons',
-	Help: 'Aider',
-	Online: 'Online',
-}
+const en = { Home: 'Home', Donate: 'Donate' }
+const fr = { Home: 'Accueil', Donate: 'Dons' }
+const trans = isFrench ? fr : en
 ---
 
 <nav>
 	<div class="container">
 		<div class="links">
-			<Link href="/" id="homeLink">Home</Link>
+			<Link href="/" id="homeLink">{trans.Home}</Link>
+
 			<Link href="/docs">Docs</Link>
+
 			<Link href="/#further">Contact</Link>
-			<a href="https://ko-fi.com/bonjourr">Donate</a>
+
+			<a href="https://ko-fi.com/bonjourr">{trans.Donate}</a>
+
 			<a href="https://github.com/victrme/Bonjourr">Github</a>
+
 			<a href="https://online.bonjourr.fr">Online</a>
 		</div>
 
