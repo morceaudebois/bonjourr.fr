@@ -1,25 +1,21 @@
 ---
-import Trans from '../Trans.astro'
+import Background from '../Background.astro'
 
 import LandingImage from '../../assets/backgrounds/mitch-meyers-YQD1Xljt4xo.jpg'
 import OpenImage from '../../assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg'
 import DonateImage from '../../assets/backgrounds/timur-kozmenko-O_cPK84YZf4.jpg'
 import { btc, kofi } from '../../assets/icons/donate'
-
-import Background from '../Background.astro'
-import Landing from './Landing.astro'
-import Further from './Further.astro'
-import Showcase from './Showcase.astro'
 ---
 
 <section id="hero">
 	<Background src={LandingImage} blur=".7" brightness=".9" width="600" />
-	<Landing />
+
+	<slot name="landing" />
 </section>
 
 <section id="showcase">
 	<div class="section-wrapper">
-		<Showcase />
+		<slot name="showcase" />
 	</div>
 </section>
 
@@ -27,23 +23,14 @@ import Showcase from './Showcase.astro'
 	<Background src={OpenImage} blur=".7" brightness=".8" width="600" />
 
 	<div class="section-wrapper">
-		<h2>
-			<Trans>Free, open source and privacy focused</Trans>
-			<span role="img" aria-label="lock-emoji"> 🔒</span>
-		</h2>
-		<p>
-			<Trans>
-				Bonjourr is made by two independent developpers who love things well made and
-				actually think privacy is important. You can use Bonjourr straight away, without
-				having to create or log into any account because we do not collect any data.
-			</Trans>
-		</p>
+		<slot name="open-title" />
+		<slot name="open-text" />
 	</div>
 </section>
 
 <section id="further">
 	<div class="section-wrapper">
-		<Further />
+		<slot name="further" />
 	</div>
 </section>
 
@@ -51,26 +38,13 @@ import Showcase from './Showcase.astro'
 	<Background src={DonateImage} blur=".7" brightness=".8" width="600" />
 
 	<div class="section-wrapper">
-		<h2>
-			<Trans>Donate</Trans>
-			<span role="img" aria-label="happy-emoji"> 😊</span>
-		</h2>
-
-		<p>
-			<Trans>
-				Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t
-				earn any money out of this project, apart from donations. Supporting our work
-				financially is very important if you want us to keep updating it, and we appreciate
-				every single donation.
-			</Trans>
-		</p>
+		<slot name="donate-title" />
+		<slot name="donate-text" />
 
 		<div class="buttons">
 			<a href="https://ko-fi.com/bonjourr" class="button">
 				<img width="64" src={kofi} class="icon" alt="" />
-				<span>
-					<Trans>Donate</Trans>
-				</span>
+				<slot name="donate-fiat" />
 			</a>
 
 			<a
@@ -78,9 +52,7 @@ import Showcase from './Showcase.astro'
 				class="button"
 			>
 				<img width="64" src={btc} class="icon" alt="" />
-				<span>
-					<Trans>Donate in crypto</Trans>
-				</span>
+				<slot name="donate-crypto" />
 			</a>
 		</div>
 	</div>

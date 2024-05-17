@@ -1,15 +1,8 @@
 ---
 import Footer from '../components/Footer.astro'
 import Navigation from '../components/Navigation.astro'
-import useTranslation from '../locales/useTranslation'
 
-const { t } = useTranslation(Astro as any)
-const { title, lang, id } = Astro.props
-
-const metaTitle = t('Minimalist startpage for you browser')
-const metaDescription = t(
-	'Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.',
-)
+const { title, ogtitle, desc, lang, id } = Astro.props
 const metaKeywords = 'extension, startpage, homepage, browser startpage, minimalism, lightweight'
 ---
 
@@ -20,9 +13,9 @@ const metaKeywords = 'extension, startpage, homepage, browser startpage, minimal
 
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-		<meta name="description" content={metaDescription} />
-		<meta property="og:title" content={metaTitle} />
-		<meta property="og:description" content={metaDescription} />
+		<meta name="description" content={desc} />
+		<meta property="og:title" content={ogtitle} />
+		<meta property="og:description" content={desc} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://bonjourr.fr/" />
 		<meta property="og:image" content="https://bonjourr.fr/twitter.jpg" />
@@ -30,8 +23,8 @@ const metaKeywords = 'extension, startpage, homepage, browser startpage, minimal
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:image" content="https://bonjourr.fr/twitter.jpg" />
 		<meta name="twitter:creator" content="BonjourrTeam" />
-		<meta name="twitter:title" content={metaTitle} />
-		<meta name="twitter:description" content={metaDescription} />
+		<meta name="twitter:title" content={ogtitle} />
+		<meta name="twitter:description" content={desc} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

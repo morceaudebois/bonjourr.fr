@@ -1,8 +1,6 @@
 ---
-import { Image, Picture } from 'astro:assets'
-import Trans from '../Trans.astro'
+import { Image } from 'astro:assets'
 import Link from '../Link.astro'
-
 import Illustration from '../../assets/illustrations/illustration.png'
 ---
 
@@ -51,7 +49,9 @@ import Illustration from '../../assets/illustrations/illustration.png'
 	<div class="left">
 		<div class="title">
 			<h1>Bonjourr</h1>
-			<p><Trans>Startpage for your browser</Trans></p>
+			<p>
+				<slot name="subtitle" />
+			</p>
 		</div>
 
 		<div class="container">
@@ -59,15 +59,13 @@ import Illustration from '../../assets/illustrations/illustration.png'
 				<div class="icon">
 					<img id="download-icon" src="" alt="" width="30" />
 				</div>
-				<span>
-					<Trans slot="Download">Download</Trans>
-				</span>
+				<slot name="download" />
 			</a>
 
 			<a id="online-link" href="https://online.bonjourr.fr" rel="noreferrer" class="button">
 				<Image src="/browsers/desktop.svg" class="icon" alt="" width="30" height="30" />
 				<span>
-					<Trans slot="Online">Try online</Trans>
+					<slot name="online" />
 				</span>
 			</a>
 		</div>
@@ -75,7 +73,7 @@ import Illustration from '../../assets/illustrations/illustration.png'
 		<div class="link">
 			<Link href="/docs#available">
 				<i>
-					<Trans>Searching for other browsers?</Trans>
+					<slot name="other" />
 				</i>
 			</Link>
 		</div>

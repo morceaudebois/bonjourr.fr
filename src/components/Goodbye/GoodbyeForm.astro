@@ -1,12 +1,7 @@
 ---
 import Link from '../Link.astro'
-import Trans from '../../components/Trans.astro'
 import Background from '../Background.astro'
-import useTranslation from '../../locales/useTranslation'
 import BackgroundImage from '../../assets/backgrounds/sasha-set-GURzQwO8Li0.jpg'
-
-const { isFrench } = useTranslation(Astro)
-const locale = isFrench ? '/fr/' : '/'
 ---
 
 <script>
@@ -41,37 +36,33 @@ const locale = isFrench ? '/fr/' : '/'
 <section>
 	<div id="form-container">
 		<h2>
-			<Trans>Thank you for using Bonjourr.</Trans>
+			<slot name="title" />
 		</h2>
 		<p>
-			<Trans
-				>We're sorry to see you go. If you have time, tell us what would make Bonjourr
-				better, thanks!</Trans
-			>
-			<span role="img" aria-label="happy-emoji"> 😊</span>
+			<slot name="desc" />
 		</p>
 
 		<form id="form" name="contact">
 			<input type="hidden" name="browser" id="browser" />
 
 			<label>
-				<Trans>Your message</Trans>
+				<slot name="label-message" />
 			</label>
 			<textarea id="message" name="message" required></textarea>
 
 			<button type="submit">
-				<Trans>Send</Trans>
+				<slot name="submit" />
 			</button>
 		</form>
 	</div>
 
 	<div id="message-submitted">
 		<h2>
-			<Trans>Your message has been sent, thank you!</Trans>
+			<slot name="sent" />
 		</h2>
 
-		<Link href={locale} class="button">
-			<Trans>Back to home</Trans>
+		<Link href="/" class="button">
+			<slot name="back" />
 		</Link>
 	</div>
 </section>

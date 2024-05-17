@@ -3,6 +3,18 @@ import Layout from '../../layouts/Layout.astro'
 import GoodbyeForm from '../../components/Goodbye/GoodbyeForm.astro'
 ---
 
-<Layout title={`Bonjourr désinstallé · Page d'accueil de navigateur`} lang='fr'>
-	<GoodbyeForm />
+<Layout title={`Bonjourr désinstallé · Page d'accueil de navigateur`} lang="fr">
+	<GoodbyeForm>
+		<span slot="title">Merci d'avoir utilisé Bonjourr.</span>
+		<span slot="desc">
+			On est désolé de vous voir partir. Si vous avez du temps, dites-nous comment on pourrait
+			améliorer Bonjourr, merci ! 😊
+		</span>
+
+		<span slot="label-message">Votre message</span>
+		<span slot="submit">Envoyer</span>
+
+		<span slot="sent">Votre message a été envoyé, merci !</span>
+		<span slot="back">Retour à l'accueil</span>
+	</GoodbyeForm>
 </Layout>

@@ -1,6 +1,12 @@
 ---
-import Trans from './Trans.astro'
 import Link from './Link.astro'
+
+const trans = {
+	'Made in France with ❤️': 'Fabriqué en France avec ❤️',
+	by: 'par',
+	'Privacy policy': 'Politique de confidentialité',
+	'Source code': 'Code source',
+}
 ---
 
 <script>
@@ -12,47 +18,39 @@ import Link from './Link.astro'
 </script>
 
 <footer>
-	<div class='container'>
-		<div id='legal'>
+	<div class="container">
+		<div id="legal">
 			<p>© 2019 Bonjourr</p>
 
 			<p>
-				<Link href='/privacy'>
-					<Trans>Privacy policy</Trans>
-				</Link>
+				<Link href="/privacy"> Privacy policy </Link>
 			</p>
 
 			<p>
-				<a href='https://github.com/morceaudebois/bonjourr.fr'>
-					<Trans>Source code</Trans>
-				</a>
+				<a href="https://github.com/morceaudebois/bonjourr.fr"> Source code </a>
 			</p>
 		</div>
 
-		<div id='signature'>
-			<p>
-				<Trans>Made in France with ❤️</Trans>
-			</p>
+		<div id="signature">
+			<p>Made in France with ❤️</p>
 
 			<p>
-				<Trans>by</Trans>
+				<span>by</span>
 
-				<span id='signature_span'>
-					<a href='https://victr.me' title="Victor's portfolio">Victor Azevedo</a>
-					 &
-					<a href='https://tahoe.be' title="Tahoe's portfolio">Tahoe Beetschen</a>
+				<span id="signature_span">
+					<a href="https://victr.me" title="Victor's portfolio">Victor Azevedo</a>
+					&
+					<a href="https://tahoe.be" title="Tahoe's portfolio">Tahoe Beetschen</a>
 				</span>
 			</p>
 		</div>
 
-		<div id='contact'>
-			<p>
-				<Trans>Contact us</Trans>
-			</p>
+		<div id="contact">
+			<p>Contact us</p>
 
 			<p>
-				<a href='https://t.me/BonjourrStartpage'>Telegram</a> ·
-				<a href='mailto:bonjourr.app@protonmail.com'>email</a>
+				<a href="https://t.me/BonjourrStartpage">Telegram</a> ·
+				<a href="mailto:bonjourr.app@protonmail.com">email</a>
 			</p>
 		</div>
 	</div>

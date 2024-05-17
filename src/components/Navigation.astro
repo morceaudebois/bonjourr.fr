@@ -1,34 +1,26 @@
 ---
-import Trans from './Trans.astro'
 import Link from './Link.astro'
-import useTranslation from '../locales/useTranslation'
 
-const { isFrench } = useTranslation(Astro)
+const isFrench = Astro.url.pathname.startsWith('/fr')
 const path = Astro.url.pathname
+
+const trans = {
+	Home: 'Accueil',
+	Donate: 'Dons',
+	Help: 'Aider',
+	Online: 'Online',
+}
 ---
 
 <nav>
 	<div class="container">
 		<div class="links">
-			<Link href="/" id="homeLink">
-				<Trans>Home</Trans>
-			</Link>
-
-			<Link href="/docs">
-				<Trans>Docs</Trans>
-			</Link>
-
+			<Link href="/" id="homeLink">Home</Link>
+			<Link href="/docs">Docs</Link>
 			<Link href="/#further">Contact</Link>
-
-			<a href="https://ko-fi.com/bonjourr">
-				<Trans>Donate</Trans>
-			</a>
-
+			<a href="https://ko-fi.com/bonjourr">Donate</a>
 			<a href="https://github.com/victrme/Bonjourr">Github</a>
-
-			<a href="https://online.bonjourr.fr">
-				<Trans>Online</Trans>
-			</a>
+			<a href="https://online.bonjourr.fr">Online</a>
 		</div>
 
 		<a href={isFrench ? path.substring(3) : '/fr' + path} class="language">

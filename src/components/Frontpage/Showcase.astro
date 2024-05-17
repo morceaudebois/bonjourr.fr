@@ -1,22 +1,12 @@
 ---
 import { Picture } from 'astro:assets'
-import Trans from '../Trans.astro'
-
 import DynamicImage from '../../assets/illustrations/dynamic.png'
 import CustomiseImage from '../../assets/illustrations/customise.png'
 ---
 
 <div id="intro">
-	<h2>
-		<Trans>Minimalist & lightweight startpage</Trans>
-	</h2>
-	<p>
-		<Trans>
-			Bonjourr replaces your new tab page for something more refined and minimal. We took
-			inspiration from Apple’s design language to create a startpage that both looks amazing
-			and feels great to use in your daily life.
-		</Trans>
-	</p>
+	<h2><slot name="title" /></h2>
+	<slot name="desc" />
 </div>
 
 <div id="dynamic" class="image-row">
@@ -32,35 +22,17 @@ import CustomiseImage from '../../assets/illustrations/customise.png'
 	</div>
 
 	<div class="right">
-		<h3>
-			<Trans>Dynamic Backgrounds</Trans>
-		</h3>
-
+		<h3><slot name="dynamic-title" /></h3>
 		<hr />
-
-		<p>
-			<Trans>
-				Bonjourr uses a manually selected collection of the best photos Unsplash has to
-				offer. The mood of the photos changes according to the time of the day, from noon to
-				the end of the night.
-			</Trans>
-		</p>
+		<slot name="dynamic-desc" />
 	</div>
 </div>
 
 <div id="custom" class="image-row">
 	<div class="left">
-		<h3>
-			<Trans>Customisable</Trans>
-		</h3>
+		<h3><slot name="custom-title" /></h3>
 		<hr />
-		<p>
-			<Trans>
-				Because minimalism doesn’t rhyme with lack of features, Bonjourr is stuffed with
-				options. Add in your personal touch by changing the font, adding your own
-				backgrounds or changing the look of your clock.
-			</Trans>
-		</p>
+		<slot name="custom-desc" />
 	</div>
 
 	<div class="right">
@@ -75,47 +47,30 @@ import CustomiseImage from '../../assets/illustrations/customise.png'
 </div>
 
 <div id="more">
-	<h3>
-		<Trans>A few more features</Trans>
-	</h3>
+	<h3><slot name="more-title" /></h3>
+
 	<div class="listContainer">
 		<div class="left">
 			<ul>
-				<li>
-					<Trans>Quick Links</Trans>
-				</li>
-				<li>
-					<Trans>Search bar</Trans>
-				</li>
-				<li>
-					<Trans>Google Fonts</Trans>
-				</li>
-				<li>
-					<Trans>Multilanguage</Trans>
-				</li>
+				<slot name="more-links" />
+				<slot name="more-searchbar" />
+				<slot name="more-fonts" />
+				<slot name="more-langs" />
 			</ul>
 		</div>
 		<div class="right">
 			<ul>
-				<li>
-					<Trans>Dark mode</Trans>
-				</li>
-				<li>
-					<Trans>Notes & checkboxes</Trans>
-				</li>
-				<li>
-					<Trans>Quotes</Trans>
-				</li>
-				<li>
-					<Trans>Custom CSS</Trans>
-				</li>
+				<slot name="more-darkmode" />
+				<slot name="more-notes" />
+				<slot name="more-quotes" />
+				<slot name="more-css" />
 			</ul>
 		</div>
 	</div>
 </div>
 
 <style>
-	#intro p {
+	#intro {
 		max-width: 600px;
 		margin: auto;
 		text-align: center;

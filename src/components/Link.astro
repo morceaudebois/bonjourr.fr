@@ -1,10 +1,6 @@
 ---
-import useTranslation from '../locales/useTranslation'
-
-const { locale } = useTranslation(Astro)
-let { href } = Astro.props
-
-href = locale + href
+const isFrench = Astro.url.pathname.startsWith('/fr')
+const href = (isFrench ? '/fr' : '') + Astro.props.href
 ---
 
 <a href={href} {...Astro.props}>
