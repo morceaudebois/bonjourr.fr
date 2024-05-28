@@ -1,8 +1,8 @@
 ---
-import Docs from "../../../layouts/Docs.astro"
-import Link from "../../../components/Link.astro"
-import { Code } from "astro:components"
-import DocsTitle from "../../../components/Docs/DocsTitle.astro"
+import Docs from '../../../layouts/Docs.astro'
+import Link from '../../../components/Link.astro'
+import { Code } from 'astro:components'
+import DocsTitle from '../../../components/Docs/DocsTitle.astro'
 ---
 
 <Docs title="Style snippets">
@@ -80,8 +80,8 @@ import DocsTitle from "../../../components/Docs/DocsTitle.astro"
 
 	<Code
 		lang="css"
-		code={`#analogClock,
-#analogClock:hover {
+		code={`#analog,
+#analog:hover {
 	border-width: 1px;
 	background-size: cover;
 	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
@@ -154,11 +154,11 @@ li.block div:hover {
 
 	<Code
 		lang="css"
-		code={`#analogClock {
+		code={`#analog {
 	border-color: black;
 }
-#analogClock #center,
-#analogClock span {
+#analog #center,
+#analog span {
 		background-color: black;
 }`}
 	/>
@@ -171,7 +171,7 @@ li.block div:hover {
 
 	<Code
 		lang="css"
-		code={`#creditContainer {
+		code={`#credit-container {
 	display: none;
 }`}
 	/>
