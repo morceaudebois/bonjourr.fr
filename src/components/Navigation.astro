@@ -29,10 +29,146 @@ const trans = isFrench ? fr : en
 			<span role="img" aria-label="">🌍</span>
 			{isFrench ? 'en' : 'fr'}
 		</a>
+
+		<button open-button>
+			<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+				<path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path>
+			</svg>
+		</button>
+	</div>
+
+	<div class="mobileContainer">
+		<div class="overlay"></div>
+
+		<aside>
+			<button close-button>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+					<path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+				</svg>
+			</button>
+
+			<div class="links">
+				<Link href="/" id="homeLink">{trans.Home}</Link>
+
+				<Link href="/docs">Docs</Link>
+
+				<Link href="/#further">Contact</Link>
+
+				<a href="https://ko-fi.com/bonjourr">{trans.Donate}</a>
+
+				<a href="https://github.com/victrme/Bonjourr">Github</a>
+
+				<a href="https://online.bonjourr.fr">Online</a>
+			</div>
+
+			<a href={isFrench ? path.substring(3) : '/fr' + path} class="language">
+				<span role="img" aria-label="">🌍</span>
+				{isFrench ? 'en' : 'fr'}
+			</a>
+		</aside>
 	</div>
 </nav>
 
+<script>
+	function closeMobileNav() {
+		document.body?.classList.remove('showNav')
+	}
+
+	function openMobileNav() {
+		document.body?.classList.add('showNav')
+	}
+
+	document.querySelector('[open-button]')?.addEventListener('click', () => openMobileNav())
+
+	document.querySelector('.overlay')?.addEventListener('click', () => closeMobileNav())
+	document.querySelector('[close-button]')?.addEventListener('click', () => closeMobileNav())
+
+	document.addEventListener('keydown', (event) => {
+		const { key } = event
+		if (key === 'Escape') closeMobileNav()
+	})
+</script>
+
 <style>
+	aside {
+		position: fixed;
+		height: 100vh;
+		width: 300px;
+		right: -300px;
+		top: 0;
+		z-index: 101;
+		transition: transform 0.4s;
+		padding: 3em;
+		background-color: #191919aa;
+		backdrop-filter: blur(4em);
+		border-left: 1px solid #fff4;
+		display: none;
+	}
+
+	aside .links {
+		flex-direction: column;
+		gap: 1.5em;
+		margin-top: 2em;
+	}
+
+	aside .links a:hover {
+		border-bottom: unset;
+	}
+
+	aside .language {
+		margin-top: 1.5em;
+	}
+
+	.overlay {
+		position: fixed;
+		background-color: black;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		z-index: 100;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.4s;
+	}
+
+	body.showNav {
+		overflow: hidden;
+	}
+
+	body.showNav .overlay {
+		display: block;
+		pointer-events: all;
+	}
+
+	body.showNav aside {
+		transform: translate(-100%);
+		box-shadow: rgba(19, 24, 28, 0.5) 0px 39px 100px 150px;
+	}
+
+	button[open-button] {
+		display: none;
+	}
+
+	button[close-button] {
+		position: absolute;
+		right: 35px;
+		top: 35px;
+	}
+
+	button[open-button],
+	button[close-button] {
+		width: unset;
+		padding: unset;
+		background: unset;
+		border: unset;
+		backdrop-filter: unset;
+		cursor: pointer;
+	}
+
+	button svg {
+		width: 2.5em;
+	}
+
 	nav {
 		position: absolute;
 		width: 100%;
@@ -44,7 +180,7 @@ const trans = isFrench ? fr : en
 		justify-content: space-between;
 		column-gap: 2em;
 		max-width: 1200px;
-		padding: 2.5em 4em;
+		padding: 3em 4em;
 		margin: auto;
 	}
 
@@ -55,11 +191,10 @@ const trans = isFrench ? fr : en
 
 	nav .links {
 		display: flex;
-		column-gap: 2.5em;
-		overflow-x: auto;
+		column-gap: 2em;
 	}
 
-	nav .links:hover a:hover {
+	nav .container .links:hover a:hover {
 		opacity: 1;
 		border-color: white;
 		border-bottom: 1px solid white;
@@ -67,7 +202,6 @@ const trans = isFrench ? fr : en
 
 	.container a {
 		position: relative;
-		padding: 0.5em 0 0.25em 0;
 		font-weight: 500;
 		border-bottom: 2px solid transparent;
 	}
@@ -76,14 +210,24 @@ const trans = isFrench ? fr : en
 		display: none;
 	}
 
-	@media only screen and (max-width: 500px) {
-		nav .container {
-			padding: 2em;
+	@media only screen and (max-width: 650px) {
+		button[open-button] {
+			display: flex;
 		}
 
-		nav .links {
+		nav .container {
+			padding: 35px;
 			display: flex;
-			column-gap: 1.8em;
+			justify-content: flex-end;
+		}
+
+		nav .container .links,
+		nav .container .language {
+			display: none;
+		}
+
+		aside {
+			display: block;
 		}
 	}
 </style>
