@@ -1,7 +1,8 @@
 ---
 import Layout from './Layout.astro'
+import DocsTitle from '../components/Docs/DocsTitle.astro'
 
-let { title, lang, frontmatter } = Astro.props
+let { title, thumbnail, lang, frontmatter } = Astro.props
 
 if (!title && frontmatter) {
 	title = frontmatter.title
@@ -21,6 +22,9 @@ if (!title && frontmatter) {
 <Layout title={`${title} · Bonjourr's documentation`} lang={lang} id='docs'>
 
 	<main>
+		<DocsTitle title={title} thumbnail={thumbnail}>
+		</DocsTitle>
+		
 		<div class='content'>
 			<slot />
 		</div>
@@ -38,7 +42,7 @@ if (!title && frontmatter) {
 	}
 	
 	body {
-		background-color: #111;
+		background-color: #181818;
 	}
 
 	main {
