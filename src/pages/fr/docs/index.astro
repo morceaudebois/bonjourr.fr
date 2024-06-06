@@ -1,190 +1,119 @@
 ---
 import Docs from '../../../layouts/Docs.astro'
-import Link from '../../../components/Link.astro'
-
-const webstore =
-	'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
-const edgeAddons =
-	'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
-const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpage/'
-const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
 ---
 
 <Docs
-	title="Démarrer"
+	title="Documentation"
 	lang="en"
 	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
 >
-	<h2>Caractéristiques et astuces</h2>
+	<section id="summary">
+		<!-- this should probably be generated automatically but it will do for now -->
+		<a href="/fr/docs/getstarted">
+			<div class="left">🏁</div>
 
-	<p>
-		Pour en savoir plus sur le fonctionnement de Bonjourr, vous pouvez consulter l'aperçu
-		détaillé de nos fonctionnalités ici:
-	</p>
+			<div class="right">
+				<h3>Démarrer</h3>
+				<p>Installez Bonjourr et apprenez comment vous pouvez y participer</p>
+			</div>
+		</a>
 
-	<ul>
-		<li><Link href="/docs/overview">Liste complète des fonctionnalités</Link></li>
-	</ul>
+		<a href="/fr/docs/overview">
+			<div class="left">💻</div>
 
-	<p>
-		Si vous savez utiliser le CSS, vous pouvez styliser Bonjourr comme vous le souhaitez ! Voici
-		quelques idées pour commencer:
-	</p>
+			<div class="right">
+				<h3>Liste de fonctionnalités</h3>
+				<p>Apprenez à utiliser les fonctionnalités de Bonjourr via conseils et astuces</p>
+			</div>
+		</a>
 
-	<ul>
-		<li><Link href="/docs/styles">Morceaux de code CSS</Link></li>
-		<li><Link href="/docs/profiles">Profiles Bonjourr prédéfinis</Link></li>
-	</ul>
+		<a href="/fr/docs/profiles">
+			<div class="left">⚙️</div>
 
-	<h2 id="install-extension">Installer l'extension</h2>
-	<h3 id="available">Navigateurs et plateformes</h3>
+			<div class="right">
+				<h3>Profiles personnalisés</h3>
+				<p>Des thèmes pré-faits pour une personnalisation rapide</p>
+			</div>
+		</a>
 
-	<ul>
-		<li>
-			<p>
-				Chrome, Chrome, Brave, Kiwi<br />
-				<a href={webstore}>Chrome Web Store</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Microsoft Edge <br />
-				<a href={edgeAddons}>Edge Add-ons</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Firefox Desktop <br />
-				<a href={firefoxAddons}>Firefox Addons</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Safari macOS <br />
-				<a href={appleAppStore}>Apple App Store</a>
-			</p>
-		</li>
-	</ul>
+		<a href="/fr/docs/styles">
+			<div class="left">✨</div>
 
-	<h3 id="not-available">Actuellement non disponible</h3>
+			<div class="right">
+				<h3>CSS snippets</h3>
+				<p>Des extraits de code à copier coller pour personnaliser Bonjourr</p>
+			</div>
+		</a>
+	</section>
 
-	<ul>
-		<li>Safari iOS et iPadOS, on s'en occupera à un moment donné.</li>
-		<li>
-			Vivaldi affiche une page blanche, voir
-			<a href="https://github.com/victrme/Bonjourr/issues/213">#213</a>
-		</li>
-		<li>
-			Firefox Mobile ne permet pas de modifier sa page d'accueil, mentionnée dans
-			<a href="https://github.com/victrme/Bonjourr/issues/267">#267</a>
-		</li>
-	</ul>
+	<style>
+		#summary {
+			margin-top: 6em;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 1em;
+		}
 
-	<h3 id="opera">Navigateur Opera</h3>
+		#summary > a {
+			display: flex;
+			gap: 1.5em;
+			padding: 1em;
+			border-radius: 15px;
+			cursor: pointer;
+			border: 1px solid rgba(255, 255, 255, 0);
+			color: unset;
+		}
 
-	<p>
-		Opera n'autorise pas les extensions à modifier son nouvel onglet. Bien qu'il n'y ait pas de
-		déclaration officielle, nous pensons que c'est parce que les publicités sur leur Speed Dial
-		sont une bonne source de revenus pour eux.
-	</p>
+		#summary > a:hover {
+			text-decoration: none;
+		}
 
-	<h4 id="operea-workaround">Remplacer le Speed Dial d'Opera</h4>
+		#summary > a:hover {
+			background: #252525;
+			border: 1px solid rgba(255, 255, 255, 0.06);
+		}
 
-	<ul>
-		<li>Videz d'abord votre Speed Dial actuel pour qu'il affiche une page vide et sombre.</li>
-		<li>
-			Vous devez ensuite installer une extension tierce qui puisse remplacer votre onglet
-			actif actuel. Pour l'instant, seul <a
-				href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
-			>
-				New Tab Start Page</a
-			> semble fonctionner correctement. Nous ne sommes pas affiliés à eux !
-		</li>
-		<li>
-			Cliquez sur l'icône de Bonjourr, elle devrait révéler son URL complète dans la barre
-			d'adresse.
-		</li>
-		<li>Configurez l'extension tierce avec l'URL de Bonjourr, et le tour est joué !</li>
-	</ul>
+		@media (prefers-color-scheme: light) {
+			#summary > a:hover {
+				background: #e9e9e9;
+			}
+		}
 
-	<h2 id="contribute">Contribuer</h2>
-	<h3 id="donate">Dons</h3>
+		#summary > a .left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
 
-	<p>
-		Les dons sont très utiles lorsqu'il s'agit de logiciels libres. Ils nous motivent à
-		consacrer plus de temps à Bonjourr, ils nous aident à réaliser que des personnes
-		s'intéressent à notre travail et ils peuvent ouvrir de nouvelles portes pour l'avenir. Vous
-		pouvez donner avec <a href="https://ko-fi.com/bonjourr">de l'argent classique</a> ou
-		<a href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
-			>crypto-monnaie</a
-		>.
-	</p>
+		#summary > a .right {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
 
-	<h3 id="reviews">Avis</h3>
+		#summary > a .left {
+			font-size: 2.5em;
+		}
 
-	<p>
-		Le moyen le plus simple de nous aider est de laisser un avis sur les stores d'extensions,
-		soit sur
-		<a href={firefoxAddons}>Firefox Addons</a>,
-		<a href={webstore}>Chrome Web Store</a>,
-		<a href={appleAppStore}>Apple App Store</a>
-		ou même
-		<a href={edgeAddons}>Edge Add-ons</a>. Vous pouvez également parler de Bonjourr à vos amis,
-		car si vous l'aimez, ils le feront probablement aussi.
-	</p>
+		#summary h3,
+		#summary img {
+			padding: 0;
+			margin: 0;
+		}
 
-	<h3 id="translate">Traductions</h3>
+		#summary p {
+			margin-top: 8px;
+			margin-bottom: 0;
+			font-size: 0.9em;
+			opacity: 0.9;
+		}
 
-	<p>
-		Grâce à nos contributeurs, Bonjourr est actuellement traduit en plus de 20 langues ! Voici
-		comment mettre à jour ou ajouter une langue:
-	</p>
-
-	<p>
-		Les traductions se trouvent dans le dossier <a
-			href="https://github.com/victrme/Bonjourr/tree/master/_locales">/_locales/</a
-		> sur Github. Chaque dossier de langue contient ces fichiers:
-	</p>
-
-	<ul>
-		<li><code class="inline-code">translations.json</code> pour la traduction principale.</li>
-		<li>
-			<code class="inline-code">messages.json</code> pour le titre et le sous-titre de l'extension.
-		</li>
-		<li>
-			<code class="inline-code">overview.md</code> pour la description complète sur les pages des
-			stores.
-		</li>
-	</ul>
-
-	<p>
-		Pour ajouter une nouvelle langue, copiez le dossier « en » dans la langue souhaitée. Vous
-		devez également ajouter le code du pays et le nom à la liste dans
-		<a href="https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts"
-			>/src/scripts/langs.ts</a
-		>. Si vous êtes familier avec GitHub, vous pouvez créer une pull request. Sinon, vous pouvez
-		nous envoyer directement les fichiers modifiés
-		<a href="mailto:bonjourr.app@protonmail.com">par e-mail</a>
-		ou pour
-		<a href="https://t.me/BonjourrStartpage">notre groupe Telegram</a>.
-	</p>
-
-	<p>
-		⚠️ N'oubliez pas de joindre votre nom et votre lien afin que nous puissions vous créditer!
-	</p>
-
-	<h3 id="new-features">Nouvelles fonctionnalités</h3>
-
-	<p>
-		Vous avez des compétences en codage et une fonctionnalité en tête que vous pourriez
-		implémenter dans Bonjourr? Consultez le
-		<a href="https://github.com/victrme/Bonjourr/">dépôt GitHub</a>.
-	</p>
-
-	<p>
-		Si vous vous sentez créatif, vous pouvez également suggérer ou créer des
-		<Link href="docs/styles">extraits de code CSS</Link>
-		ou des
-		<Link href="docs/profiles">profils personnalisés</Link>.
-	</p>
+		@media only screen and (max-width: 700px) {
+			#summary {
+				grid-template-columns: 1fr;
+				margin-top: 4em;
+			}
+		}
+	</style>
 </Docs>

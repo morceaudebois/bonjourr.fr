@@ -1,182 +1,119 @@
 ---
 import Docs from '../../layouts/Docs.astro'
-import Link from '../../components/Link.astro'
-
-const webstore =
-	'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
-const edgeAddons =
-	'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
-const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpage/'
-const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
 ---
 
 <Docs
-	title="Get started"
+	title="Documentation"
 	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
 	lang="en"
 >
-	<h2>Features and tips</h2>
+	<section id="summary">
+		<!-- this should probably be generated automatically but it will do for now -->
+		<a href="/docs/getstarted">
+			<div class="left">🏁</div>
 
-	<p>
-		To learn more about how Bonjourr works, you can check out the detailed overview of our
-		features here:
-	</p>
+			<div class="right">
+				<h3>Get started</h3>
+				<p>See how to install Bonjourr and how you can contribute</p>
+			</div>
+		</a>
 
-	<ul>
-		<li><Link href="/docs/overview">Complete feature overview</Link></li>
-	</ul>
+		<a href="/docs/overview">
+			<div class="left">💻</div>
 
-	<p>
-		If you know how to use CSS, you can style Bonjourr any way you want! Here are some ideas to
-		get you started:
-	</p>
+			<div class="right">
+				<h3>Features overview</h3>
+				<p>Learn all about Bonjourr's feature set</p>
+			</div>
+		</a>
 
-	<ul>
-		<li><Link href="/docs/styles">Custom CSS snippets</Link></li>
-		<li><Link href="/docs/profiles">Premade Bonjourr profiles</Link></li>
-	</ul>
+		<a href="/docs/profiles">
+			<div class="left">⚙️</div>
 
-	<h2 id="install-extension">Install the extension</h2>
-	<h3 id="available">Browsers and platforms</h3>
+			<div class="right">
+				<h3>Custom profiles</h3>
+				<p>Pre-made settings data for instant customization</p>
+			</div>
+		</a>
 
-	<ul>
-		<li>
-			<p>
-				Chrome, Chromium, Brave, Kiwi<br />
-				<a href={webstore}>Chrome web store</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Microsoft Edge <br />
-				<a href={edgeAddons}>Edge Add-ons</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Firefox Desktop <br />
-				<a href={firefoxAddons}>Firefox Addons</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Safari macOS <br />
-				<a href={appleAppStore}>Apple App Store</a>
-			</p>
-		</li>
-	</ul>
+		<a href="/docs/styles">
+			<div class="left">✨</div>
 
-	<h3 id="not-available">Currently not available</h3>
+			<div class="right">
+				<h3>CSS snippets</h3>
+				<p>Copy and paste pieces of code to style Bonjourr in funky ways</p>
+			</div>
+		</a>
+	</section>
 
-	<ul>
-		<li>Safari iOS & iPadOS, we'll get to it at some point.</li>
-		<li>
-			Vivaldi is showing a blank page, see
-			<a href="https://github.com/victrme/Bonjourr/issues/213">issue #213</a>
-		</li>
-		<li>
-			Firefox Mobile does not allow its homepage to be modified, mentioned in
-			<a href="https://github.com/victrme/Bonjourr/issues/267">issue #267</a>
-		</li>
-	</ul>
+	<style>
+		#summary {
+			margin-top: 6em;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 1em;
+		}
 
-	<h3 id="opera">Opera browser</h3>
+		#summary > a {
+			display: flex;
+			gap: 1.5em;
+			padding: 1em;
+			border-radius: 15px;
+			cursor: pointer;
+			border: 1px solid rgba(255, 255, 255, 0);
+			color: unset;
+		}
 
-	<p>
-		Opera does not allow extensions to modify its new tab. While there is no official statement,
-		we believe this is because ads on their speed dial is a good revenue source for them.
-	</p>
+		#summary > a:hover {
+			text-decoration: none;
+		}
 
-	<h4 id="opera-workaround">Opera new tab workaround</h4>
+		#summary > a:hover {
+			background: #252525;
+			border: 1px solid rgba(255, 255, 255, 0.06);
+		}
 
-	<ul>
-		<li>First empty your current speed dial so that it shows a dark blank page.</li>
-		<li>
-			You then need to install a third-party extension that can replace your current active
-			tab. For now, we found that only <a
-				href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
-			>
-				New Tab Start Page</a
-			> works correctly. We are not affiliated with them !
-		</li>
-		<li>Click on the Bonjourr icon, it should reveal its full URL in the address bar.</li>
-		<li>Setup the third-party extension with Bonjourr's URL, and we're done !</li>
-	</ul>
+		@media (prefers-color-scheme: light) {
+			#summary > a:hover {
+				background: #e9e9e9;
+			}
+		}
 
-	<h2 id="contribute">Contribute</h2>
-	<h3 id="donate">Donations</h3>
+		#summary > a .left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
 
-	<p>
-		A few donations go a long way when it comes to open source software. It motivates us to pour
-		more time into Bonjourr, it helps us realise people care about our work and it can open new
-		doors for the future. You can donate in
-		<a href="https://ko-fi.com/bonjourr">regular money</a> or
-		<a href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
-			>crypto money</a
-		>.
-	</p>
+		#summary > a .right {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
 
-	<h3 id="reviews">Reviews</h3>
+		#summary > a .left {
+			font-size: 2.5em;
+		}
 
-	<p>
-		The simplest way to help us out is to leave a review on the extension stores, either on
-		<a href={firefoxAddons}>Firefox addons</a>,
-		<a href={webstore}>Chrome webstore</a>,
-		<a href={appleAppStore}>Apple App Store</a>
-		or even
-		<a href={edgeAddons}>Edge Addons</a>. You can also tell your friends about Bonjourr, because
-		if you love it, they probably will too.
-	</p>
+		#summary h3,
+		#summary img {
+			padding: 0;
+			margin: 0;
+		}
 
-	<h3 id="translate">Translations</h3>
+		#summary p {
+			margin-top: 8px;
+			margin-bottom: 0;
+			font-size: 0.9em;
+			opacity: 0.9;
+		}
 
-	<p>
-		Thanks to our contributors, Bonjourr is currently available in 21 languages! Here's how you
-		can update or add a language:
-	</p>
-
-	<p>
-		Translations are located in the
-		<a href="https://github.com/victrme/Bonjourr/tree/master/_locales">/_locales/</a>
-		folder on Github. Each language folder contains these files:
-	</p>
-
-	<ul>
-		<li><code class="inline-code">translations.json</code> for the main translation.</li>
-		<li>
-			<code class="inline-code">messages.json</code> for the extension's title and subtitle.
-		</li>
-		<li>
-			<code class="inline-code">overview.md</code> for the full description on store pages.
-		</li>
-	</ul>
-
-	<p>
-		To add a new language, copy the `en` folder to your desired language. You also need to add
-		the country code and name to the list in
-		<a href="https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts"
-			>/src/scripts/langs.ts</a
-		>. If you are familiar with GitHub, you can create a pull request. If not, you can directly
-		send us the modified files
-		<a href="mailto:bonjourr.app@protonmail.com">via email</a>
-		or to
-		<a href="https://t.me/BonjourrStartpage">our Telegram group</a>.
-	</p>
-
-	<p>⚠️ Don't forget to join your name and link so we can credit you!</p>
-
-	<h3 id="new-features">New features</h3>
-
-	<p>
-		You have some coding skills and a feature in mind you could implement into Bonjourr? Check
-		out the
-		<a href="https://github.com/victrme/Bonjourr/">GitHub repository</a>.
-	</p>
-
-	<p>
-		If you're feeling creative, you can also suggest or create
-		<Link href="docs/styles">CSS snippets</Link>
-		&
-		<Link href="docs/profiles">custom profiles</Link>
-	</p>
+		@media only screen and (max-width: 700px) {
+			#summary {
+				grid-template-columns: 1fr;
+				margin-top: 4em;
+			}
+		}
+	</style>
 </Docs>
