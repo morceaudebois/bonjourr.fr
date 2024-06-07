@@ -1,5 +1,12 @@
 ---
 import Docs from '../../layouts/Docs.astro'
+
+const webstore =
+	'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
+const edgeAddons =
+	'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
+const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpage/'
+const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
 ---
 
 <Docs
@@ -9,14 +16,6 @@ import Docs from '../../layouts/Docs.astro'
 >
 	<section id="summary">
 		<!-- this should probably be generated automatically but it will do for now -->
-		<a href="/docs/getstarted">
-			<div class="left">🏁</div>
-
-			<div class="right">
-				<h3>Get started</h3>
-				<p>See how to install Bonjourr and how you can contribute</p>
-			</div>
-		</a>
 
 		<a href="/docs/overview">
 			<div class="left">💻</div>
@@ -24,6 +23,15 @@ import Docs from '../../layouts/Docs.astro'
 			<div class="right">
 				<h3>Features overview</h3>
 				<p>Learn all about Bonjourr's feature set</p>
+			</div>
+		</a>
+
+		<a href="/docs/contribute">
+			<div class="left">🤝</div>
+
+			<div class="right">
+				<h3>Contribute</h3>
+				<p>See how you can help us make Bonjourr even better</p>
 			</div>
 		</a>
 
@@ -116,4 +124,67 @@ import Docs from '../../layouts/Docs.astro'
 			}
 		}
 	</style>
+
+	<h2 id="install-extension">Install the extension</h2>
+	<h3 id="available">Browsers and platforms</h3>
+
+	<ul>
+		<li>
+			<p>
+				Chrome, Chromium, Brave, Kiwi → <a href={webstore}>Chrome Web Store</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Microsoft Edge → <a href={edgeAddons}>Edge Add-ons</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Firefox (desktop) → <a href={firefoxAddons}>Firefox Add-ons</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				Safari (macOS) → <a href={appleAppStore}>Mac App Store</a>
+			</p>
+		</li>
+	</ul>
+
+	<h3 id="not-available">Currently not available</h3>
+
+	<ul>
+		<li>Safari iOS & iPadOS (will be available eventually)</li>
+		<li>
+			Vivaldi shows a blank page, currently no solution (see
+			<a href="https://github.com/victrme/Bonjourr/issues/213">issue #213</a>)
+		</li>
+		<li>
+			Firefox Mobile does not allow its homepage to be modified, mentioned in
+			<a href="https://github.com/victrme/Bonjourr/issues/267">issue #267</a>
+		</li>
+	</ul>
+
+	<h3 id="opera">Opera browser</h3>
+
+	<p>
+		Opera does not allow extensions to modify its new tab. While there is no official statement,
+		we believe this is because ads on their speed dial is a good revenue source for them.
+	</p>
+
+	<h4 id="opera-workaround">Opera new tab workaround</h4>
+
+	<ul>
+		<li>First empty your current speed dial so that it shows a dark blank page.</li>
+		<li>
+			You then need to install a third-party extension that can replace your current active
+			tab. For now, we found that only <a
+				href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
+			>
+				New Tab Start Page</a
+			> works correctly. We are not affiliated with them!
+		</li>
+		<li>Click on the Bonjourr icon, it should reveal its full URL in the address bar.</li>
+		<li>Setup the third-party extension with Bonjourr's URL, and we're done!</li>
+	</ul>
 </Docs>
