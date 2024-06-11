@@ -1,15 +1,16 @@
 ---
 import Docs from '../../layouts/Docs.astro'
-const { lang } = Astro.props
+const props = Astro.props
+const locale = props.lang === 'fr' ? '/fr' : ''
 ---
 
 <Docs
-	lang={lang}
+	lang={props.lang}
 	title="Documentation"
 	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
 >
 	<section id="summary">
-		<a href="/docs/overview">
+		<a href={locale + '/docs/overview'}>
 			<span>💻</span>
 
 			<div>
@@ -18,7 +19,7 @@ const { lang } = Astro.props
 			</div>
 		</a>
 
-		<a href="/docs/contribute">
+		<a href={locale + '/docs/contribute'}>
 			<span>🤝</span>
 
 			<div>
@@ -27,7 +28,7 @@ const { lang } = Astro.props
 			</div>
 		</a>
 
-		<a href="/docs/profiles">
+		<a href={locale + '/docs/profiles'}>
 			<span>⚙️</span>
 
 			<div>
@@ -36,7 +37,7 @@ const { lang } = Astro.props
 			</div>
 		</a>
 
-		<a href="/docs/styles">
+		<a href={locale + '/docs/styles'}>
 			<span>✨</span>
 
 			<div>
