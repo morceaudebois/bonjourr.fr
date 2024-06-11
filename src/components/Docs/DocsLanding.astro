@@ -1,0 +1,108 @@
+---
+import Docs from '../../layouts/Docs.astro'
+const { lang } = Astro.props
+---
+
+<Docs
+	lang={lang}
+	title="Documentation"
+	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
+>
+	<section id="summary">
+		<a href="/docs/overview">
+			<span>💻</span>
+
+			<div>
+				<h3><slot name="overview-title" /></h3>
+				<p><slot name="overview-desc" /></p>
+			</div>
+		</a>
+
+		<a href="/docs/contribute">
+			<span>🤝</span>
+
+			<div>
+				<h3><slot name="contribute-title" /></h3>
+				<p><slot name="contribute-desc" /></p>
+			</div>
+		</a>
+
+		<a href="/docs/profiles">
+			<span>⚙️</span>
+
+			<div>
+				<h3><slot name="profiles-title" /></h3>
+				<p><slot name="profiles-desc" /></p>
+			</div>
+		</a>
+
+		<a href="/docs/styles">
+			<span>✨</span>
+
+			<div>
+				<h3><slot name="styles-title" /></h3>
+				<p><slot name="styles-desc" /></p>
+			</div>
+		</a>
+	</section>
+
+	<slot name="docs" />
+</Docs>
+
+<style>
+	#summary {
+		margin: 4em 0 2em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+	}
+
+	#summary a {
+		display: flex;
+		align-items: center;
+		gap: 1.5em;
+		padding: 1em;
+		color: unset;
+		cursor: pointer;
+		border-radius: 15px;
+		border: 1px solid transparent;
+	}
+
+	#summary a:hover {
+		text-decoration: none;
+	}
+
+	#summary a:hover {
+		background: #252525;
+		border: 1px solid #fff1;
+	}
+
+	@media (prefers-color-scheme: light) {
+		#summary a:hover {
+			background: #e9e9e9;
+		}
+	}
+
+	#summary a span {
+		font-size: 2.5em;
+	}
+
+	#summary h3,
+	#summary img {
+		padding: 0;
+		margin: 0;
+	}
+
+	#summary p {
+		margin-top: 8px;
+		margin-bottom: 0;
+		font-size: 0.9em;
+		opacity: 0.9;
+	}
+
+	@media only screen and (max-width: 700px) {
+		#summary {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

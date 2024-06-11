@@ -1,5 +1,5 @@
 ---
-import Docs from '../../../layouts/Docs.astro'
+import DocsLanding from '../../../components/Docs/DocsLanding.astro'
 
 const webstore =
 	'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
@@ -9,171 +9,89 @@ const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpa
 const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
 ---
 
-<Docs
-	title="Documentation"
-	lang="en"
-	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
->
-	<section id="summary">
-		<a href="/fr/docs/overview">
-			<span>💻</span>
+<DocsLanding lang="fr">
+	<span slot="overview-title">Liste de fonctionnalités</span>
+	<span slot="overview-desc"
+		>Apprenez à utiliser les fonctionnalités de Bonjourr via conseils et astuces</span
+	>
 
-			<div>
-				<h3>Liste de fonctionnalités</h3>
-				<p>Apprenez à utiliser les fonctionnalités de Bonjourr via conseils et astuces</p>
-			</div>
-		</a>
+	<span slot="contribute-title">Participez</span>
+	<span slot="contribute-desc">Voyez comment nous aider à rendre Bonjourr encore meilleur</span>
 
-		<a href="/fr/docs/contribute">
-			<span>🤝</span>
+	<span slot="profiles-title">Profiles personnalisés</span>
+	<span slot="profiles-desc">Des thèmes pré-faits pour une personnalisation rapide</span>
 
-			<div>
-				<h3>Participez</h3>
-				<p>Voyez comment nous aider à rendre Bonjourr encore meilleur</p>
-			</div>
-		</a>
+	<span slot="styles-title">CSS snippets</span>
+	<span slot="styles-desc">Des extraits de code à copier coller pour personnaliser Bonjourr</span>
 
-		<a href="/fr/docs/profiles">
-			<span>⚙️</span>
+	<section slot="docs">
+		<h2 id="install-extension">Installer l'extension</h2>
+		<h3 id="available">Navigateurs et plateformes</h3>
 
-			<div>
-				<h3>Profiles personnalisés</h3>
-				<p>Des thèmes pré-faits pour une personnalisation rapide</p>
-			</div>
-		</a>
+		<ul>
+			<li>
+				<p>
+					Chrome, Chromium, Brave, Kiwi → <a href={webstore}>Chrome Web Store</a>
+				</p>
+			</li>
+			<li>
+				<p>
+					Microsoft Edge → <a href={edgeAddons}>Edge Add-ons</a>
+				</p>
+			</li>
+			<li>
+				<p>
+					Firefox (desktop) → <a href={firefoxAddons}>Firefox Add-ons</a>
+				</p>
+			</li>
+			<li>
+				<p>
+					Safari (macOS) → <a href={appleAppStore}>Mac App Store</a>
+				</p>
+			</li>
+		</ul>
 
-		<a href="/fr/docs/styles">
-			<span>✨</span>
+		<h3 id="not-available">Actuellement non disponible</h3>
 
-			<div>
-				<h3>CSS snippets</h3>
-				<p>Des extraits de code à copier coller pour personnaliser Bonjourr</p>
-			</div>
-		</a>
+		<ul>
+			<li>Safari iOS et iPadOS (bientôt disponibles)</li>
+			<li>
+				Vivaldi affiche une page blanche, voir
+				<a href="https://github.com/victrme/Bonjourr/issues/213">#213</a>
+			</li>
+			<li>
+				Firefox Mobile ne permet pas de modifier sa page d'accueil, mentionnée dans
+				<a href="https://github.com/victrme/Bonjourr/issues/267">#267</a>
+			</li>
+		</ul>
+
+		<h3 id="opera">Navigateur Opera</h3>
+
+		<p>
+			Opera n'autorise pas les extensions à modifier son nouvel onglet. Bien qu'il n'y ait pas
+			de déclaration officielle, nous pensons que c'est parce que les publicités sur leur
+			Speed Dial sont une bonne source de revenus pour eux.
+		</p>
+
+		<h4 id="operea-workaround">Remplacer le Speed Dial d'Opera</h4>
+
+		<ul>
+			<li>
+				Videz d'abord votre Speed Dial actuel pour qu'il affiche une page vide et sombre.
+			</li>
+			<li>
+				Vous devez ensuite installer une extension tierce qui puisse remplacer votre onglet
+				actif actuel. Pour l'instant, seul <a
+					href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
+				>
+					New Tab Start Page</a
+				> semble fonctionner correctement. Nous ne sommes pas affiliés à eux !
+			</li>
+			<li>
+				Cliquez sur l'icône de Bonjourr, elle devrait révéler son URL complète dans la barre
+				d'adresse.
+			</li>
+			<li>Configurez l'extension tierce avec l'URL de Bonjourr, et le tour est joué !</li>
+		</ul>
 	</section>
-
-	<style>
-		#summary {
-			margin: 4em 0 2em;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-gap: 1em;
-		}
-
-		#summary a {
-			display: flex;
-			align-items: center;
-			gap: 1.5em;
-			padding: 1em;
-			color: unset;
-			cursor: pointer;
-			border-radius: 15px;
-			border: 1px solid transparent;
-		}
-
-		#summary a:hover {
-			text-decoration: none;
-		}
-
-		#summary a:hover {
-			background: #252525;
-			border: 1px solid #fff1;
-		}
-
-		@media (prefers-color-scheme: light) {
-			#summary a:hover {
-				background: #e9e9e9;
-			}
-		}
-
-		#summary a span {
-			font-size: 2.5em;
-		}
-
-		#summary h3,
-		#summary img {
-			padding: 0;
-			margin: 0;
-		}
-
-		#summary p {
-			margin-top: 8px;
-			margin-bottom: 0;
-			font-size: 0.9em;
-			opacity: 0.9;
-		}
-
-		@media only screen and (max-width: 700px) {
-			#summary {
-				grid-template-columns: 1fr;
-			}
-		}
-	</style>
-
-	<h2 id="install-extension">Installer l'extension</h2>
-	<h3 id="available">Navigateurs et plateformes</h3>
-
-	<ul>
-		<li>
-			<p>
-				Chrome, Chromium, Brave, Kiwi → <a href={webstore}>Chrome Web Store</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Microsoft Edge → <a href={edgeAddons}>Edge Add-ons</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Firefox (desktop) → <a href={firefoxAddons}>Firefox Add-ons</a>
-			</p>
-		</li>
-		<li>
-			<p>
-				Safari (macOS) → <a href={appleAppStore}>Mac App Store</a>
-			</p>
-		</li>
-	</ul>
-
-	<h3 id="not-available">Actuellement non disponible</h3>
-
-	<ul>
-		<li>Safari iOS et iPadOS (bientôt disponibles)</li>
-		<li>
-			Vivaldi affiche une page blanche, voir
-			<a href="https://github.com/victrme/Bonjourr/issues/213">#213</a>
-		</li>
-		<li>
-			Firefox Mobile ne permet pas de modifier sa page d'accueil, mentionnée dans
-			<a href="https://github.com/victrme/Bonjourr/issues/267">#267</a>
-		</li>
-	</ul>
-
-	<h3 id="opera">Navigateur Opera</h3>
-
-	<p>
-		Opera n'autorise pas les extensions à modifier son nouvel onglet. Bien qu'il n'y ait pas de
-		déclaration officielle, nous pensons que c'est parce que les publicités sur leur Speed Dial
-		sont une bonne source de revenus pour eux.
-	</p>
-
-	<h4 id="operea-workaround">Remplacer le Speed Dial d'Opera</h4>
-
-	<ul>
-		<li>Videz d'abord votre Speed Dial actuel pour qu'il affiche une page vide et sombre.</li>
-		<li>
-			Vous devez ensuite installer une extension tierce qui puisse remplacer votre onglet
-			actif actuel. Pour l'instant, seul <a
-				href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
-			>
-				New Tab Start Page</a
-			> semble fonctionner correctement. Nous ne sommes pas affiliés à eux !
-		</li>
-		<li>
-			Cliquez sur l'icône de Bonjourr, elle devrait révéler son URL complète dans la barre
-			d'adresse.
-		</li>
-		<li>Configurez l'extension tierce avec l'URL de Bonjourr, et le tour est joué !</li>
-	</ul>
-</Docs>
+</DocsLanding>
