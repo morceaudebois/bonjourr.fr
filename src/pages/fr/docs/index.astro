@@ -15,38 +15,37 @@ const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id161543
 	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
 >
 	<section id="summary">
-		<!-- this should probably be generated automatically but it will do for now -->
 		<a href="/fr/docs/overview">
-			<div class="left">💻</div>
+			<span>💻</span>
 
-			<div class="right">
+			<div>
 				<h3>Liste de fonctionnalités</h3>
 				<p>Apprenez à utiliser les fonctionnalités de Bonjourr via conseils et astuces</p>
 			</div>
 		</a>
 
 		<a href="/fr/docs/contribute">
-			<div class="left">🤝</div>
+			<span>🤝</span>
 
-			<div class="right">
+			<div>
 				<h3>Participez</h3>
 				<p>Voyez comment nous aider à rendre Bonjourr encore meilleur</p>
 			</div>
 		</a>
 
 		<a href="/fr/docs/profiles">
-			<div class="left">⚙️</div>
+			<span>⚙️</span>
 
-			<div class="right">
+			<div>
 				<h3>Profiles personnalisés</h3>
 				<p>Des thèmes pré-faits pour une personnalisation rapide</p>
 			</div>
 		</a>
 
 		<a href="/fr/docs/styles">
-			<div class="left">✨</div>
+			<span>✨</span>
 
-			<div class="right">
+			<div>
 				<h3>CSS snippets</h3>
 				<p>Des extraits de code à copier coller pour personnaliser Bonjourr</p>
 			</div>
@@ -55,51 +54,39 @@ const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id161543
 
 	<style>
 		#summary {
-			margin-top: 6em;
+			margin: 4em 0 2em;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 1em;
 		}
 
-		#summary > a {
+		#summary a {
 			display: flex;
+			align-items: center;
 			gap: 1.5em;
 			padding: 1em;
-			border-radius: 15px;
-			cursor: pointer;
-			border: 1px solid rgba(255, 255, 255, 0);
 			color: unset;
+			cursor: pointer;
+			border-radius: 15px;
+			border: 1px solid transparent;
 		}
 
-		#summary > a:hover {
+		#summary a:hover {
 			text-decoration: none;
 		}
 
-		#summary > a:hover {
+		#summary a:hover {
 			background: #252525;
-			border: 1px solid rgba(255, 255, 255, 0.06);
+			border: 1px solid #fff1;
 		}
 
 		@media (prefers-color-scheme: light) {
-			#summary > a:hover {
+			#summary a:hover {
 				background: #e9e9e9;
 			}
 		}
 
-		#summary > a .left {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-		}
-
-		#summary > a .right {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-
-		#summary > a .left {
+		#summary a span {
 			font-size: 2.5em;
 		}
 
@@ -119,7 +106,6 @@ const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id161543
 		@media only screen and (max-width: 700px) {
 			#summary {
 				grid-template-columns: 1fr;
-				margin-top: 4em;
 			}
 		}
 	</style>
