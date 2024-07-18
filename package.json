@@ -6,12 +6,12 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/sitemap": "^3.1.4",
-		"@cloudflare/workers-types": "^4.20240405.0",
-		"astro": "^4.6.3",
+		"@astrojs/sitemap": "^3.1.6",
+		"@cloudflare/workers-types": "^4.20240712.0",
+		"astro": "^4.12.0",
 		"detect-browser": "^5.3.0",
-		"typescript": "^5.4.5",
-		"vite": "^5.2.9"
+		"typescript": "^5.5.3",
+		"vite": "^5.3.4"
 	},
 	"prettier": {
 		"semi": false,
