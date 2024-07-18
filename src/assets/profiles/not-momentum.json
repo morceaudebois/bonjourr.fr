@@ -1,0 +1,37 @@
+{
+	"pagegap": 0,
+	"time": true,
+	"main": true,
+	"quicklinks": true,
+	"hide": {
+		"date": true,
+		"weatherdesc": true,
+		"weathericon": false,
+		"clock": false
+	},
+	"clock": {
+		"analog": false,
+		"size": 1.875
+	},
+	"font": {
+		"weight": "700"
+	},
+	"move": {
+		"layouts": {
+			"single": {
+				"grid": [["time"], ["main"], ["quicklinks"]],
+				"items": {
+					"time": {
+						"box": "end center",
+						"text": ""
+					},
+					"main": {
+						"box": "baseline center",
+						"text": ""
+					}
+				}
+			},
+			"selection": "single"
+		}
+	}
+}

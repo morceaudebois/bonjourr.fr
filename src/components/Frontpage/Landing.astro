@@ -45,47 +45,47 @@ import Illustration from '../../assets/illustrations/illustration.png'
 	}
 </script>
 
-<div class="wrapper">
-	<div class="left">
-		<div class="title">
+<div class='wrapper'>
+	<div class='left'>
+		<div class='title'>
 			<h1>Bonjourr</h1>
 			<p>
-				<slot name="subtitle" />
+				<slot name='subtitle' />
 			</p>
 		</div>
 
-		<div class="container">
-			<a id="download-link" href="" class="button">
-				<div class="icon">
-					<img id="download-icon" src="" alt="" width="30" />
+		<div class='container'>
+			<a id='download-link' href='' class='button'>
+				<div class='icon'>
+					<img id='download-icon' src='' alt='' width='30' />
 				</div>
-				<slot name="download" />
+				<slot name='download' />
 			</a>
 
-			<a id="online-link" href="https://online.bonjourr.fr" rel="noreferrer" class="button">
-				<Image src="/browsers/desktop.svg" class="icon" alt="" width="30" height="30" />
+			<a id='online-link' href='https://online.bonjourr.fr' rel='noreferrer' class='button'>
+				<Image src='/browsers/desktop.svg' class='icon' alt='' width='30' height='30' />
 				<span>
-					<slot name="online" />
+					<slot name='online' />
 				</span>
 			</a>
 		</div>
 
-		<div class="link">
-			<Link href="/docs#available">
+		<div class='link'>
+			<Link href='/docs#available'>
 				<i>
-					<slot name="other" />
+					<slot name='other' />
 				</i>
 			</Link>
 		</div>
 	</div>
 
-	<picture id="illustration">
+	<picture id='illustration'>
 		<Image
 			src={Illustration}
 			densities={[2]}
-			loading="eager"
-			format="webp"
-			alt="Bonjourr screenshot"
+			loading='eager'
+			format='webp'
+			alt='Bonjourr screenshot'
 		/>
 	</picture>
 </div>
@@ -120,14 +120,12 @@ import Illustration from '../../assets/illustrations/illustration.png'
 	}
 
 	#illustration {
-		image-rendering: optimizeSpeed;
 		background-size: cover;
 		color: transparent;
 		border-radius: 8px;
 		overflow: hidden;
 		width: 480px;
 		height: 295px;
-		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAIAAAAiZtkUAAAAV0lEQVQI1wFMALP/AaKeoAT///P4+BMfI/Pt6/77+AMQ8fQmBfDIDyPz2NQD5NqZmKoEPyMUzNPb8sDaLRwFHRUBVSkJA93tAPP1/QD07RD88vb48xIB9XJlKiKWKcJVAAAAAElFTkSuQmCC');
 	}
 
 	#illustration img {

@@ -1,0 +1,31 @@
+{
+	"time": true,
+	"main": true,
+	"background_blur": 0,
+	"background_bright": 1,
+	"background_type": "unsplash",
+	"quicklinks": true,
+	"textShadow": 0,
+	"css": "#interface, #credit a {\n color: #6d8161;\n}",
+	"hide": {
+		"weatherdesc": false,
+		"weathericon": true
+	},
+	"clock": {
+		"ampm": false,
+		"analog": false,
+		"seconds": true
+	},
+	"unsplash": {
+		"collection": "2AC1c6JsJh8",
+		"every": "day",
+		"lastCollec": "user",
+		"time": 0
+	},
+	"font": {
+		"family": "DM Serif Display",
+		"system": false,
+		"weight": "400",
+		"weightlist": ["400"]
+	}
+}

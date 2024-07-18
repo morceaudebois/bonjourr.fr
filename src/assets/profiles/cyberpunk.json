@@ -1,0 +1,35 @@
+{
+	"showall": true,
+	"dark": "enable",
+	"greeting": "V",
+	"time": true,
+	"main": true,
+	"background_blur": 0,
+	"background_bright": 0.71,
+	"background_type": "unsplash",
+	"quicklinks": true,
+	"textShadow": 0,
+	"css": ".clock-date, #credit, #credit a { color: #00d8f3 }\n.digital {\n color: #fdf800;\n text-shadow: 5px 5px #00d8f3\n}\n#greetings, #weather_desc {\n text-shadow: none;\n background-color: #fdf800;\n padding: 10px 20px;\n color: black\n}",
+	"hide": {
+		"weatherdesc": false,
+		"weathericon": true
+	},
+	"clock": {
+		"analog": false,
+		"seconds": false,
+		"size": 1
+	},
+	"unsplash": {
+		"collection": "He87uFs-2zg",
+		"every": "tabs",
+		"lastCollec": "user",
+		"time": 0
+	},
+	"font": {
+		"size": "15",
+		"family": "Orbitron",
+		"system": false,
+		"weight": "600",
+		"weightlist": ["400", "500", "600", "700", "800", "900"]
+	}
+}

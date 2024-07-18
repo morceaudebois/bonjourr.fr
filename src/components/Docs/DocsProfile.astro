@@ -1,0 +1,32 @@
+---
+const { id, code, image_src, image_alt, file_href } = Astro.props
+let string = ''
+let href = ''
+
+try {
+	string = JSON.stringify(code)
+    href = encodeURIComponent(string)
+} catch (_) {
+	console.warn('prob de JSON dans profiles')
+}
+---
+
+<h2 id={id}>
+	<slot name='title' />
+</h2>
+
+<picture>
+	<img src={image_src} alt={image_alt} />
+</picture>
+
+<div>
+	<a href={`data:text/json;charset=utf-8,${href}`} download={`bonjourr-profile-${id}.json`}>
+		<slot name='download-label'>Download import file</slot>
+	</a>
+	<details>
+		<summary>
+			<slot name='code-label' />
+		</summary>
+		<code>{string}</code>
+	</details>
+</div>
