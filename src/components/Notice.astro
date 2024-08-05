@@ -1,0 +1,93 @@
+---
+// Notice.astro
+---
+
+<style>
+	.noticeBanner {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		color: white;
+		padding: 1.5rem;
+		text-align: center;
+		z-index: 1000;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+
+		background-color: #dd4242c6;
+		border-bottom: 1px solid #f5c6cb;
+		backdrop-filter: blur(3em);
+		-webkit-backdrop-filter: blur(3em);
+		box-shadow: 0 0 15px #0004;
+	}
+
+	.noticeBanner h3 {
+		font-size: 1.4em;
+		margin: 0;
+		padding: 0;
+	}
+
+	.noticeBanner p {
+		text-align: left;
+		margin: 0;
+		padding: 0;
+		max-width: 60em;
+	}
+
+	.noticeBanner button {
+		border: none;
+		cursor: pointer;
+		font-size: 1.2rem;
+		border: 1px solid #f5c6cb;
+		width: 100%;
+		max-width: 8em;
+	}
+</style>
+
+<script>
+	const noticeBanner = document.querySelector<HTMLElement>('.noticeBanner')
+	const noticeState = localStorage.getItem('noticeState')
+
+	//  language based condition because IP based would be annoying and privacy unfriendly
+	let userLang = navigator.language || navigator.language
+
+	// userLang = 'zh-CN' // for testing
+
+	if (userLang.startsWith('zh-CN') && noticeBanner) {
+		window.addEventListener('load', function () {
+			if (noticeState != 'closed') {
+				noticeBanner.style.display = 'flex'
+			}
+
+			let okBtn = noticeBanner.querySelector<HTMLElement>('button')
+
+			if (okBtn) {
+				okBtn.onclick = () => {
+					localStorage.setItem('noticeState', 'closed')
+					noticeBanner.style.display = 'none'
+				}
+			}
+		})
+	}
+</script>
+
+<div class="noticeBanner" style="display: none">
+	<!-- ⚠️ To our Chinese users ⚠️ -->
+	<h3>⚠️ 致中国用户 ⚠️</h3>
+
+	<!-- Due to recent censorship measures, the Chinese government has started blocking access to
+		imgix.com, a service that Unsplash uses to serve its pictures. This means the default
+		background collection of Bonjourr will not work anymore. To remedy this, we suggest setting
+		local backgrounds or using a VPN. -->
+	<p>
+		由于最近的审查措施，中国政府已经开始阻止访问 imgix.com，这是 Unsplash
+		用来提供图片的一项服务。这意味着 Bonjourr
+		的默认背景集将无法继续使用。要解决这个问题，我们建议设置本地背景或使用 VPN。
+	</p>
+
+	<button>OK!</button>
+</div>
