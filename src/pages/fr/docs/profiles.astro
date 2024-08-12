@@ -3,22 +3,21 @@ import DocsProfile from '../../../components/Docs/DocsProfile.astro'
 import Docs from '../../../layouts/Docs.astro'
 import Link from '../../../components/Link.astro'
 
-import notmomentum from '../../../assets/profiles/not-momentum.json'
-import cyberpunk from '../../../assets/profiles/cyberpunk.json'
-import floral from '../../../assets/profiles/floral.json'
-import space from '../../../assets/profiles/space.json'
+import notmomentum from '../../../../public/documentation/profiles/not-momentum.json'
+import cyberpunk from '../../../../public/documentation/profiles/cyberpunk.json'
+import floral from '../../../../public/documentation/profiles/floral.json'
+import space from '../../../../public/documentation/profiles/space.json'
 ---
 
 <Docs
-	title="Profiles"
-	thumbnail="/documentation/backgrounds/michael-worden-7kvt0N3Pud0-unsplash.jpg"
+	title='Profiles'
+	thumbnail='/documentation/backgrounds/michael-worden-7kvt0N3Pud0-unsplash.jpg'
 >
 	<p>
 		Voici quelques thèmes préétablis que vous pouvez importer en bas des paramètres de Bonjourr.
 		Vous voulez votre propre profil personnalisé ici ?
-		<Link href="/contact">Contactez nous!</Link>
+		<Link href='/contact'>Contactez nous!</Link>
 	</p>
-
 
 	<DocsProfile
 		id='cyberpunk'
@@ -56,7 +55,7 @@ import space from '../../../assets/profiles/space.json'
 	<DocsProfile
 		id='not-momentum'
 		code={notmomentum}
-		image_src='/documentation/profiles/not_momentum.webp'
+		image_src='/documentation/profiles/not-momentum.webp'
 		image_alt='Not Momentum Bonjourr theme'
 	>
 		<span slot='title'>Not Momentum</span>

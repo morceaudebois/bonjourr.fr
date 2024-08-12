@@ -5,6 +5,7 @@
 .move-overlay {
 	transition: none;
 }
+
 #interface {
 	transform: translateX(0) !important;
 	transition: none !important;
