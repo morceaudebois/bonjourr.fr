@@ -1,0 +1,5 @@
+/* Hides photo author credits. */
+
+#credit-container {
+	display: none;
+}

@@ -2,11 +2,23 @@
 import Docs from '../../../layouts/Docs.astro'
 import Link from '../../../components/Link.astro'
 import { Code } from 'astro:components'
+
+import noTransition from '../../../assets/snippets/no-transition.css'
+import plainBackground from '../../../assets/snippets/plain-background.css'
+import clockWidth from '../../../assets/snippets/clock-width.css'
+import rolex from '../../../assets/snippets/rolex.css'
+import customGreeting from '../../../assets/snippets/custom-greeting.css'
+import fontColor from '../../../assets/snippets/font-color.css'
+import clockFontColor from '../../../assets/snippets/clock-font-color.css'
+import noCredits from '../../../assets/snippets/no-credits.css'
+import temperatureUnit from '../../../assets/snippets/temperature-unit.css'
+import noGpu from '../../../assets/snippets/no-gpu.css'
+import potato from '../../../assets/snippets/potato.css'
 ---
 
 <Docs
-	title="Style snippets"
-	thumbnail="/documentation/backgrounds/pascal-debrunner-LKOuYT5_dyw-unsplash.jpg"
+	title='Style snippets'
+	thumbnail='/documentation/backgrounds/braden-collum-CBcS51cGoSw-unsplash.jpg'
 >
 	<p>
 		Bonjourr est personnalisable par le biais de son interface de paramètres, mais vous pouvez
@@ -16,227 +28,49 @@ import { Code } from 'astro:components'
 
 	<p>
 		Vous voulez votre propre extrait de style ici ?
-		<Link href="/contact">Contactez nous !</Link>
+		<Link href='/contact'>Contactez nous !</Link>
 	</p>
 
-	<h2 id="backgrounds">Fond d'écran</h2>
+	<h2 id='backgrounds'>Fond d'écran</h2>
 
-	<h3 id="no-transition">J'aime que mes arrière-plans soient rapides.</h3>
+	<h3 id='no-transition'>J'aime que mes arrière-plans soient rapides.</h3>
+	<Code lang='css' code={noTransition} />
 
-	Transition d'arrière-plan plus rapide au démarrage.
+	<h3 id='plain-background'>L'unicolore est la nouvelle méta</h3>
+	<Code lang='css' code={plainBackground} />
 
-	<Code
-		lang="css"
-		code={`#background_overlay {
-	transition: transform 0.2s, opacity 0s;
-}`}
-	/>
+	<h2 id='clock'>Horloge</h2>
 
-	<h3 id="plain-background">L'unicolore est la nouvelle méta</h3>
+	<h3 id='clock-width'>J'aime mes horloges épaisses</h3>
+	<Code lang='css' code={clockWidth} />
 
-	Donne une couleur uniforme à l'arrière-plan. Remplacez "#234" par la couleur de votre choix.
+	<h3 id='rolex'>Rolex 😎</h3>
+	<Code lang='css' code={rolex} />
 
-	<Code
-		lang="css"
-		code={`#background_overlay {
-	background-color: #234;
-}
-#background, #background-bis {
-	display: none;
-}`}
-	/>
+	<h2 id='greetings'>Bienvenue</h2>
 
-	<h2 id="clock">Horloge</h2>
+	<h3 id='custom-greetings'>Je veux mon propre message d'accueil</h3>
+	<Code lang='css' code={customGreeting} />
 
-	<h3 id="clock-width">J'aime mes horloges épaisses</h3>
+	<h2 id='fonts'>Police de caractères</h2>
 
-	Rend l'horloge analogique plus épaisse.
+	<h3 id='fonts-color'>Mes polices de caractères seront noires (ou une autre couleur 😯)</h3>
+	<Code lang='css' code={fontColor} />
 
-	<Code
-		lang="css"
-		code={`#interface {
-	--anlg-w: 6px; /* Change size here */
-}
-#analog #center {
-	width: calc(var(--anlg-w) * 4);
-	height: calc(var(--anlg-w) * 4);
-}
-#analog {
-	border-width: calc(var(--anlg-w) * 2);
-}
-#analog span {
-	width: calc(var(--anlg-w) * 2);
-	margin-left: calc(var(--anlg-w) * -1);
-}
+	<h3 id='clock-font-color'>Et mon horloge aussi sera noire</h3>
+	<Code lang='css' code={clockFontColor} />
 
-#analog #analogSeconds {
-	width: var(--anlg-w);
-}`}
-	/>
+	<h2 id='other'>Autre</h2>
 
-	<h3 id="rolex">Rolex 😎</h3>
+	<h3 id='no-credits'>Je me fiche de l'exposition de l'artiste</h3>
+	<Code lang='css' code={noCredits} />
 
-	Fait ressembler une horloge analogique à une Rolex.
+	<h3 id='temperature-unit'>23 quoi, carottes ?</h3>
+	<Code lang='css' code={temperatureUnit} />
 
-	<Code
-		lang="css"
-		code={`#analog,
-#analog:hover {
-	border-width: 1px;
-	background-size: cover;
-	background-image: url('https://bonjourr.fr/misc/rolex.png') !important;
-}`}
-	/>
+	<h3 id='no-gpu-computer'>Pas de GPU, seulement le CPU 😠</h3>
+	<Code lang='css' code={noGpu} />
 
-	<h2 id="greetings">Bienvenue</h2>
-
-	<h3 id="custom-greetings">Je veux mon propre message d'accueil</h3>
-
-	Définit une phrase d'accueil personnalisée au lieu de Bonjour, Bon après-midi, etc.
-
-	<Code
-		lang="css"
-		code={`#greetings:before {
-	content: 'Your custom greeting';
-	visibility: visible;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	text-transform: none;
-}
-#greetings { visibility: hidden;
-	position: relative;
-}`}
-	/>
-
-	<h2 id="links">Liens</h2>
-
-	<h3 id="transparent-links">Je veux des liens transparents !</h3>
-
-	Certaines icônes de sites sont des PNG avec un fond transparent. Ce code supprimera le fond
-	blanc par défaut de Bonjourr pour les liens et fera briller ces icônes.
-
-	<Code
-		lang="css"
-		code={`li.block div {
-	border-color: transparent;
-	background: transparent;
-	box-shadow: unset;
-}
-li.block div:hover {
-	box-shadow: unset;
-}`}
-	/>
-
-	<h2 id="fonts">Police de caractères</h2>
-
-	<h3 id="fonts-color">Mes polices de caractères seront noires (ou une autre couleur 😯)</h3>
-
-	<p>
-		Change la couleur de la police en noir. Utile si vous utilisez principalement des
-		arrière-plans clairs. Remplacez "black" par un code couleur si vous souhaitez une autre
-		couleur spécifique.
-	</p>
-
-	<Code
-		lang="css"
-		code={`#linkblocks span,
-#interface,
-#credit,
-#credit a {
-	color: black;
-}`}
-	/>
-
-	<h3 id="clock-font-color">Et mon horloge aussi sera noire</h3>
-
-	<Code
-		lang="css"
-		code={`#analog {
-	border-color: black;
-}
-#analog #center,
-#analog span {
-		background-color: black;
-}`}
-	/>
-
-	<h2 id="other">Autre</h2>
-
-	<h3 id="no-credits">Je me fiche de l'exposition de l'artiste</h3>
-
-	<p>Cache les crédits d'auteur de la photo Unsplash.</p>
-
-	<Code
-		lang="css"
-		code={`#credit-container {
-	display: none;
-}`}
-	/>
-
-	<h3 id="temperature-unit">23 quoi, carottes ?</h3>
-
-	<p>Ajoute un C après la température.</p>
-
-	<Code
-		lang="css"
-		code={`#current::after,
-#tempContainer p::after {
-	content: 'C';
-}`}
-	/>
-
-	<h3 id="no-gpu-computer">Pas de GPU, seulement le CPU 😠</h3>
-
-	<p>
-		Désactive la propriété de style `backdrop-filter` très gourmande en ressources graphiques
-		sur certains éléments.
-	</p>
-
-	<Code
-		lang="css"
-		code={`#bookmarks_container,
-#bookmarks,
-#element-mover,
-.move-overlay {
-	backdrop-filter: none !important;
-}
-
-#editlink,
-#bookmarks,
-#element-mover {
-	background-color: #f2f2f7;
-}
-
-body.dark #editlink,
-body.dark #bookmarks,
-body.dark #element-mover,
-body.autodark #editlink,
-body.autodark #bookmarks,
-body.autodark #element-mover {
-	background-color: #222;
-}`}
-	/>
-
-	<h3 id="potato-computer">Pour les ordinateurs qui traînent</h3>
-
-	<p>
-		Désactive la plupart des transitions et des animations des paramètres. Vous pouvez également
-		ajouter les styles ci-dessus pour améliorer les performances.
-	</p>
-
-	<Code
-		lang="css"
-		code={`#settings .as,
-#settings,
-.move-overlay {
-	transition: none;
-	}
-#interface {
-	transform: translateX(0) !important;
-	transition: none !important;
-}`}
-	/>
+	<h3 id='potato-computer'>Pour les ordinateurs qui traînent</h3>
+	<Code lang='css' code={potato} />
 </Docs>

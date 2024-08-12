@@ -1,0 +1,11 @@
+/* Disables most settings transitions and animations. */
+
+#settings .as,
+#settings,
+.move-overlay {
+	transition: none;
+}
+#interface {
+	transform: translateX(0) !important;
+	transition: none !important;
+}

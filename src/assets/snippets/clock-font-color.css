@@ -1,0 +1,8 @@
+#analog {
+	border-color: black;
+}
+
+#analog #center,
+#analog span {
+	background-color: black;
+}

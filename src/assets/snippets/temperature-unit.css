@@ -1,0 +1,6 @@
+/* Adds a C after the temperature. */
+
+#current::after,
+#tempContainer p::after {
+	content: 'C';
+}

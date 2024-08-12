@@ -1,0 +1,23 @@
+/* This disables graphics intensive "backdrop-filter" style property on some elements. */
+
+#bookmarks_container,
+#bookmarks,
+#element-mover,
+.move-overlay {
+	backdrop-filter: none !important;
+}
+
+#editlink,
+#bookmarks,
+#element-mover {
+	background-color: #f2f2f7;
+}
+
+body.dark #editlink,
+body.dark #bookmarks,
+body.dark #element-mover,
+body.autodark #editlink,
+body.autodark #bookmarks,
+body.autodark #element-mover {
+	background-color: #222;
+}
