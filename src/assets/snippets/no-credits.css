@@ -1,5 +1,12 @@
 /* Hides photo author credits. */
 
-#credit-container {
-	display: none;
+#credit {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.4s, visibility 0.4s;
+}
+
+#creditContainer:hover #credit {
+	visibility: visible;
+	opacity: 1;
 }
