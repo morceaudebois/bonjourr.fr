@@ -6,16 +6,16 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 
 <Docs
 	lang={props.lang}
-	title="Documentation"
-	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
+	title='Documentation'
+	thumbnail='/documentation/backgrounds/martin-marek-1hRH-z4nvxE.jpg'
 >
-	<section id="summary">
+	<section id='summary'>
 		<a href={locale + '/docs/overview'}>
 			<span>💻</span>
 
 			<div>
-				<h3><slot name="overview-title" /></h3>
-				<p><slot name="overview-desc" /></p>
+				<h3><slot name='overview-title' /></h3>
+				<p><slot name='overview-desc' /></p>
 			</div>
 		</a>
 
@@ -23,8 +23,8 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 			<span>🤝</span>
 
 			<div>
-				<h3><slot name="contribute-title" /></h3>
-				<p><slot name="contribute-desc" /></p>
+				<h3><slot name='contribute-title' /></h3>
+				<p><slot name='contribute-desc' /></p>
 			</div>
 		</a>
 
@@ -32,8 +32,8 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 			<span>⚙️</span>
 
 			<div>
-				<h3><slot name="profiles-title" /></h3>
-				<p><slot name="profiles-desc" /></p>
+				<h3><slot name='profiles-title' /></h3>
+				<p><slot name='profiles-desc' /></p>
 			</div>
 		</a>
 
@@ -41,13 +41,13 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 			<span>✨</span>
 
 			<div>
-				<h3><slot name="styles-title" /></h3>
-				<p><slot name="styles-desc" /></p>
+				<h3><slot name='styles-title' /></h3>
+				<p><slot name='styles-desc' /></p>
 			</div>
 		</a>
 	</section>
 
-	<slot name="docs" />
+	<slot name='docs' />
 </Docs>
 
 <style>

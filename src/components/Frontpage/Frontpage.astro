@@ -4,55 +4,54 @@ import Background from '../Background.astro'
 import LandingImage from '../../assets/backgrounds/mitch-meyers-YQD1Xljt4xo.jpg'
 import OpenImage from '../../assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg'
 import DonateImage from '../../assets/backgrounds/timur-kozmenko-O_cPK84YZf4.jpg'
-import { btc, kofi } from '../../assets/icons/donate'
 ---
 
-<section id="hero">
-	<Background src={LandingImage} blur=".7" brightness=".9" width="600" />
+<section id='hero'>
+	<Background src={LandingImage} blur='.7' brightness='.9' width='600' />
 
-	<slot name="landing" />
+	<slot name='landing' />
 </section>
 
-<section id="showcase">
-	<div class="section-wrapper">
-		<slot name="showcase" />
+<section id='showcase'>
+	<div class='section-wrapper'>
+		<slot name='showcase' />
 	</div>
 </section>
 
-<section id="open">
-	<Background src={OpenImage} blur=".7" brightness=".8" width="600" />
+<section id='open'>
+	<Background src={OpenImage} blur='.7' brightness='.8' width='600' />
 
-	<div class="section-wrapper">
-		<slot name="open-title" />
-		<slot name="open-text" />
+	<div class='section-wrapper'>
+		<slot name='open-title' />
+		<slot name='open-text' />
 	</div>
 </section>
 
-<section id="further">
-	<div class="section-wrapper">
-		<slot name="further" />
+<section id='further'>
+	<div class='section-wrapper'>
+		<slot name='further' />
 	</div>
 </section>
 
-<section id="donate">
-	<Background src={DonateImage} blur=".7" brightness=".8" width="600" />
+<section id='donate'>
+	<Background src={DonateImage} blur='.7' brightness='.8' width='600' />
 
-	<div class="section-wrapper">
-		<slot name="donate-title" />
-		<slot name="donate-text" />
+	<div class='section-wrapper'>
+		<slot name='donate-title' />
+		<slot name='donate-text' />
 
-		<div class="buttons">
-			<a href="https://ko-fi.com/bonjourr" class="button">
-				<img width="64" src={kofi} class="icon" alt="" />
-				<slot name="donate-fiat" />
+		<div class='buttons'>
+			<a href='https://ko-fi.com/bonjourr' class='button'>
+				<img width='64' src='/frontpage/ko-fi.svg' class='icon' alt='' />
+				<slot name='donate-fiat' />
 			</a>
 
 			<a
-				href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
-				class="button"
+				href='https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b'
+				class='button'
 			>
-				<img width="64" src={btc} class="icon" alt="" />
-				<slot name="donate-crypto" />
+				<img width='64' src='/frontpage/btc.svg' class='icon' alt='' />
+				<slot name='donate-crypto' />
 			</a>
 		</div>
 	</div>

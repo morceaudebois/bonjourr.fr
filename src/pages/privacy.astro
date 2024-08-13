@@ -2,15 +2,17 @@
 import Docs from '../layouts/Docs.astro'
 ---
 
-<Docs>
-	<h1>Privacy policy</h1>
-
+<Docs
+	lang='en'
+	title='Privacy policy'
+	thumbnail='/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg'
+>
 	<h2>In short</h2>
 
 	<p>
 		We, or the Bonjourr team refers to
-		<a href="https://github.com/morceaudebois/">Tahoe Beetschen</a> &
-		<a href="https://github.com/victrme/">Victor Azevedo</a>. We do not use collect, store, or
+		<a href='https://github.com/morceaudebois/'>Tahoe Beetschen</a> &
+		<a href='https://github.com/victrme/'>Victor Azevedo</a>. We do not use collect, store, or
 		share any data the user generates on Bonjourr. Data sent to our API is the minimum required
 		for Bonjourr to work, is completely anonymous and cannot identify a user. The API does not
 		save any logs or data.
@@ -19,17 +21,17 @@ import Docs from '../layouts/Docs.astro'
 	<h2>External services</h2>
 	<p>
 		To enjoy every feature, Bonjourr has to communicate with external services. All data your
-		page sends goes to <a href="https://github.com/victrme/bonjourr-apis">our open source API</a
+		page sends goes to <a href='https://github.com/victrme/bonjourr-apis'>our open source API</a
 		> before accessing the relevent services. This offers a layer of anonymity for the users, much
 		like a VPN.
 	</p>
 	<p>
 		This API is deployed on Cloudflare Workers, which means we have access to Cloudflare's
 		automatic <a
-			href="https://developers.cloudflare.com/analytics/account-and-zone-analytics/account-analytics/#summary-of-metrics"
+			href='https://developers.cloudflare.com/analytics/account-and-zone-analytics/account-analytics/#summary-of-metrics'
 			>account analytics</a
 		> and <a
-			href="https://developers.cloudflare.com/workers/observability/metrics-and-analytics/"
+			href='https://developers.cloudflare.com/workers/observability/metrics-and-analytics/'
 			>worker metrics</a
 		>. These analytics are general info about network traffic, error rates, and bandwidth usage.
 		We can use these metrics to debug potential issues.
@@ -47,7 +49,7 @@ import Docs from '../layouts/Docs.astro'
 				<strong>Openweathermap</strong><br />
 				Fetches weather data. Triggers every 30min when tab is active. On location or Language
 				change. No requests when description & icon are hidden.<br />
-				<a href="https://openweather.co.uk/privacy-policy#data_me_collect">Privacy policy</a
+				<a href='https://openweather.co.uk/privacy-policy#data_me_collect'>Privacy policy</a
 				>
 			</p>
 		</li>
@@ -55,7 +57,7 @@ import Docs from '../layouts/Docs.astro'
 			<p>
 				<strong>Unsplash</strong><br />
 				Fetches background images. On startup and on collection change.<br />
-				<a href="https://unsplash.com/api-terms">API terms</a>
+				<a href='https://unsplash.com/api-terms'>API terms</a>
 			</p>
 		</li>
 		<li>
@@ -63,14 +65,14 @@ import Docs from '../layouts/Docs.astro'
 				<strong>Fontsource</strong><br />
 				Fetches list of most popular fonts. On “font family” input focus. When losing cache.<br
 				/>
-				<a href="https://fontsource.org/docs/getting-started/introduction">More info</a>
+				<a href='https://fontsource.org/docs/getting-started/introduction'>More info</a>
 			</p>
 		</li>
 		<li>
 			<p>
 				<strong>Favicon fetcher</strong><br />
 				Retrieves the favicon of websites. Fires when adding a new favorites.<br />
-				<a href="https://github.com/victrme/favicon-fetcher">Source code</a>
+				<a href='https://github.com/victrme/favicon-fetcher'>Source code</a>
 			</p>
 		</li>
 		<li>
@@ -78,7 +80,7 @@ import Docs from '../layouts/Docs.astro'
 				<strong>Quotes</strong><br />
 				Gets a random list of quotes. Once at startup, and after changing quote type or every
 				20 quotes.<br />
-				<a href="https://github.com/victrme/i18n-quotes">Source code</a>
+				<a href='https://github.com/victrme/i18n-quotes'>Source code</a>
 			</p>
 		</li>
 		<li>
@@ -86,7 +88,7 @@ import Docs from '../layouts/Docs.astro'
 				<strong>Search Suggestions</strong><br />
 				Gets search suggestions from Google, Duckduckgo and others. The API is a web scraper
 				and does not directly use the services of these providers.<br />
-				<a href="https://github.com/victrme/search-suggestions">Source code</a>
+				<a href='https://github.com/victrme/search-suggestions'>Source code</a>
 			</p>
 		</li>
 	</ul>
@@ -97,7 +99,7 @@ import Docs from '../layouts/Docs.astro'
 		<li>
 			<strong>Fontsource CDN</strong><br />
 			Serves the font file. When changing font or losing cache.<br />
-			<a href="https://fontsource.org/docs/getting-started/cdn">CDN info</a>
+			<a href='https://fontsource.org/docs/getting-started/cdn'>CDN info</a>
 		</li>
 	</ul>
 
@@ -116,7 +118,7 @@ import Docs from '../layouts/Docs.astro'
 	<p>
 		Extensions are more secured than webpages, that means Bonjourr needs to ask for permission
 		to function properly. More about permissions on
-		<a href="https://developer.chrome.com/docs/extensions/mv3/declare_permissions/"
+		<a href='https://developer.chrome.com/docs/extensions/mv3/declare_permissions/'
 			>developer.chrome.com</a
 		>
 	</p>
@@ -141,7 +143,7 @@ import Docs from '../layouts/Docs.astro'
 
 	<p>
 		We do not have access to any of your settings. Settings are stored in the browser using the <a
-			href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage"
+			href='https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage'
 			>extension storage API</a
 		>. This storage system is not encrypted so users need to be responsible. Bonjourr will never
 		ask for or store any personal or identifiable data.
@@ -177,12 +179,12 @@ import Docs from '../layouts/Docs.astro'
 
 	<p>
 		When using the extension, Bonjourr
-		<a href="https://github.com/victrme/Bonjourr/blob/master/src/scripts/services/background.js"
+		<a href='https://github.com/victrme/Bonjourr/blob/master/src/scripts/services/background.js'
 			>background service</a
 		> can open a tab on install, uninstall and when clicking on its toolbar icon. Nothing else runs
 		in the background of your browser. Since the upgrade to manifest v3, the background worker even
 		<a
-			href="https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle#idle-shutdown"
+			href='https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle#idle-shutdown'
 			>shuts down after 30s of inactivity</a
 		> all by itself.
 	</p>
