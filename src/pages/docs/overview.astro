@@ -1,5 +1,6 @@
 ---
 import Docs from '../../layouts/Docs.astro'
+import { Code } from 'astro:components'
 ---
 
 <Docs
@@ -280,4 +281,61 @@ import Docs from '../../layouts/Docs.astro'
 			</tr>
 		</tbody>
 	</table>
+
+	<h2 id='reference'>Settings reference</h2>
+
+	<h3>General</h3>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	showall: false,				// Show all available settings in menu
+	lang: '',					// Sets interface and settings menu language
+	dark: 'system', 			// enabled | disabled | auto | system
+	favicon: '',				// An emoji
+	tabtitle: '',				// Max 80 characters
+	greeting: '',				// Max 24 characters
+	pagegap: 1,					// Gap between widgets, from 0 to 8
+	pagewidth: 1600,			// In pixel, from 600 to 2200
+	time: true,					// toggles clock & date widget
+	main: true,					// toggles weather & greetings widget
+	dateformat: 'eu',			// auto | us | eu | cn
+	quicklinks: true,			// toggles quicklinks widget
+	syncbookmarks: undefined,	// <!> deprecated
+	textShadow: 0.2,			// Interface text shadow, from 0 to 1
+	announcements: 'major',		// all | major | none
+	review: 0,					// Shows review popup at 30, -1 to disable
+	css: '',					// User generated CSS
+}`
+	/>
+
+	<h3>Backgrounds</h3>
+
+	<p>Select your background provider, blur amount, and brightness</p>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	background_blur: 15,		  // In pixels
+	background_bright: 0.8,		  // Brightness from 0 to 1
+	background_type: 'unsplash',  // unsplash | local
+}`
+	/>
+
+	<h4>Unsplash</h4>
+
+	<p>Paused frequency syncs the URL of the background in pausedImage</p>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	unsplash: {
+		every: 'hour',				// background change frequency: tabs | hour | daylight | day | pause
+		collection: '',				// User selected collection: comma-separated ids
+		lastCollec: 'day',			// night | noon | day | evening | user
+		pausedImage: undefined,		// Saved image when selecting "pause" frequency
+		time: undefined,			// timestamp, set to 0 to change background
+	}
+}`
+	/>
 </Docs>
