@@ -284,6 +284,10 @@ import { Code } from 'astro:components'
 
 	<h2 id='reference'>Settings reference</h2>
 
+	<p>
+		<em>Last updated for version 19.2.5</em>
+	</p>
+
 	<h3>General</h3>
 
 	<Code
@@ -301,7 +305,7 @@ import { Code } from 'astro:components'
 	main: true,					// toggles weather & greetings widget
 	dateformat: 'eu',			// auto | us | eu | cn
 	quicklinks: true,			// toggles quicklinks widget
-	syncbookmarks: undefined,	// <!> deprecated
+	syncbookmarks: undefined,	// <!> soon deprecated
 	textShadow: 0.2,			// Interface text shadow, from 0 to 1
 	announcements: 'major',		// all | major | none
 	review: 0,					// Shows review popup at 30, -1 to disable
@@ -335,6 +339,210 @@ import { Code } from 'astro:components'
 		lastCollec: 'day',			// night | noon | day | evening | user
 		pausedImage: undefined,		// Saved image when selecting "pause" frequency
 		time: undefined,			// timestamp, set to 0 to change background
+	}
+}`
+	/>
+
+	<h3>Clock</h3>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	clock: {
+		size: 1,			// Analog clock size
+		ampm: false,		// 12 or 24 hours
+		analog: false,		// Toggle analog or digital 
+		seconds: false,		// Toggle seconds
+		face: 'none',		// none | numbers | roman | marks
+		style: 'round',		// ??
+		timezone: 'auto',	// auto | -12 | -11 | ... | +12
+	}
+}`
+	/>
+
+	<h3>Links</h3>
+
+	<p>General settings for quick links.</p>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	linkstyle: 'large',		// large | medium | small | inline | text
+	linknewtab: false,		// open in new tab
+	linksrow: 6,			// From 1 to 16
+	linktabs: {
+		active: false,		// <!> soon deprecated
+		selected: 0,		// <!> soon deprecated
+		titles: [''],		// <!> soon deprecated
+	}
+}`
+	/>
+
+	<p>When adding a quick link</p>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	[link._id]: {
+		_id: ''			// "links" + 6 random characters
+		parent: ''		// A group or folder id
+		order: 0		// Link position on interface
+		title: ''		// Max 64 characters
+		url: ''			// Max 256 characters
+		icon?: ''		// Valid URL or dataURI
+	}
+}`
+	/>
+
+	<h3>Notes, Search bar, and Quotes</h3>
+
+	<p>These widgets behave pretty similarly: basic key-val.</p>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	notes: {
+		on: false,			// Toggle widget
+		width: 40,			// Container width in "em"
+		opacity: 0.1,		// From 0 to 1
+		align: 'left',		// left | center | right
+	},
+	searchbar: {
+		on: false,			// Toggle widget
+		opacity: 0.1,		// From 0 to 1
+		newtab: false,		// Open in new tab
+		suggestions: true,	// Toggle suggestions
+		engine: 'default',	// default | google | bing | ddg | yahoo | qwant | ... | custom
+		request: '',		// A valid search URL with its query parameter set to "%s"
+		placeholder: '',	// Max 64 characters
+	},
+	quotes: {
+		on: false,			// Toggle widget
+		author: false,		// Toggle author
+		type: 'classic',	// classic | inspirobot | kaamelott | custom | URL
+		frequency: 'day',	// tabs | hour | daylight | day | pause
+		last: 1650516688,	// Set to 0 to change quotes
+	},
+}`
+	/>
+
+	<h3>Fonts</h3>
+
+	<p>
+		Most fields in fonts are set automatically by Bonjourr and cannot easily be modified
+		manually.
+	</p>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	font: {
+		family: '',			// Fontsource font family
+		size: '14',			// Interface size in 'px'
+		system: true,		// Specify if font is from the device 
+		weightlist: [],		// Available font weights
+		weight: '400',		// Interface font weight 
+	}
+}`
+	/>
+
+	<h3>Weather</h3>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	weather: {
+		ccode: undefined,				// Valid country code
+		city: undefined,				// Any city name
+		unit: 'metric',					// metric | imperial
+		provider: '',					// Custom 'moreinfo' weather provider
+		moreinfo: 'none',				// none | msnw | yhw | windy | custom
+		forecast: 'auto',				// auto | always | never
+		temperature: 'actual',			// actual | feelslike | both
+		geolocation: 'approximate',		// approximate | precise | off
+	}
+}`
+	/>
+
+	<h3>Hide</h3>
+
+	<p>Specify which element on the page you want to hide.</p>
+
+	<Code
+		lang='jsonc'
+		code=`{
+	hide: {
+		clock: false			// true | false
+		date: false				// true | false
+		greetings: false		// true | false
+		weatherdesc: false		// true | false
+		weathericon: false		// true | false
+		settingsicon: false		// true | false
+	}
+}`
+	/>
+
+	<h3>Page layout</h3>
+
+	<p>Page layouts are pretty complex. Grids are tables, items are widget alignments.</p>
+
+	<Code
+		lang='jsonc'
+		code=`
+{
+	move: {
+		selection: 'single',	// single | double | triple
+		layouts: {
+			single: {
+				grid: grid,		// single column grid
+				items: items,	// items aligment
+			},
+			double: {
+				grid: grid,		// double column grid
+				items: items,	// items aligment
+			},
+			triple: {
+				grid: grid,		// triple column grid
+				items: items,	// items aligment
+			}
+		}
+	}
+}
+	`
+	/>
+
+	<Code
+		lang='jsonc'
+		code=`
+// single
+grid: [
+	['time'],
+	['main'],
+	['quicklinks']
+],
+
+// double
+grid: [
+	['time', '.'],
+	['main', '.'],
+	['quicklinks', '.'],
+],
+
+// triple
+grid: [
+	['.', 'time', '.'],
+	['.', 'main', '.'],
+	['.', 'quicklinks', '.'],
+]`
+	/>
+
+	<Code
+		lang='jsonc'
+		code=`
+items: {
+	[widget]: {
+		box: '',	// "baseline | center | end", "baseline | center | end"
+		text: '', 	// left | center | right
 	}
 }`
 	/>
