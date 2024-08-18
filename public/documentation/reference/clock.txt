@@ -1,0 +1,11 @@
+{
+	clock: {
+		size: 1,			// Analog clock size
+		ampm: false,		// 12 or 24 hours
+		analog: false,		// Toggle analog or digital 
+		seconds: false,		// Toggle seconds
+		face: 'none',		// none | numbers | roman | marks
+		style: 'round',		// ??
+		timezone: 'auto',	// auto | -12 | -11 | ... | +12
+	}
+}

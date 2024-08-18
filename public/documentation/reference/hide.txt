@@ -1,0 +1,10 @@
+{
+	hide: {
+		clock: false			// true | false
+		date: false				// true | false
+		greetings: false		// true | false
+		weatherdesc: false		// true | false
+		weathericon: false		// true | false
+		settingsicon: false		// true | false
+	}
+}

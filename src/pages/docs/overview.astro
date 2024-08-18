@@ -1,6 +1,20 @@
 ---
 import Docs from '../../layouts/Docs.astro'
 import { Code } from 'astro:components'
+
+import hide from '../../../public/documentation/reference/hide.txt?raw'
+import move from '../../../public/documentation/reference/move.txt?raw'
+import clock from '../../../public/documentation/reference/clock.txt?raw'
+import links from '../../../public/documentation/reference/links.txt?raw'
+import notes from '../../../public/documentation/reference/notes.txt?raw'
+import fonts from '../../../public/documentation/reference/fonts.txt?raw'
+import general from '../../../public/documentation/reference/general.txt?raw'
+import weather from '../../../public/documentation/reference/weather.txt?raw'
+import movegrid from '../../../public/documentation/reference/movegrid.txt?raw'
+import unsplash from '../../../public/documentation/reference/unsplash.txt?raw'
+import moveitems from '../../../public/documentation/reference/moveitems.txt?raw'
+import linkselem from '../../../public/documentation/reference/linkselem.txt?raw'
+import backgrounds from '../../../public/documentation/reference/backgrounds.txt?raw'
 ---
 
 <Docs
@@ -290,141 +304,39 @@ import { Code } from 'astro:components'
 
 	<h3>General</h3>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	showall: false,				// Show all available settings in menu
-	lang: '',					// Sets interface and settings menu language
-	dark: 'system', 			// enabled | disabled | auto | system
-	favicon: '',				// An emoji
-	tabtitle: '',				// Max 80 characters
-	greeting: '',				// Max 24 characters
-	pagegap: 1,					// Gap between widgets, from 0 to 8
-	pagewidth: 1600,			// In pixel, from 600 to 2200
-	time: true,					// toggles clock & date widget
-	main: true,					// toggles weather & greetings widget
-	dateformat: 'eu',			// auto | us | eu | cn
-	quicklinks: true,			// toggles quicklinks widget
-	syncbookmarks: undefined,	// <!> soon deprecated
-	textShadow: 0.2,			// Interface text shadow, from 0 to 1
-	announcements: 'major',		// all | major | none
-	review: 0,					// Shows review popup at 30, -1 to disable
-	css: '',					// User generated CSS
-}`
-	/>
+	<Code lang='jsonc' code={general} />
 
 	<h3>Backgrounds</h3>
 
 	<p>Select your background provider, blur amount, and brightness</p>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	background_blur: 15,		  // In pixels
-	background_bright: 0.8,		  // Brightness from 0 to 1
-	background_type: 'unsplash',  // unsplash | local
-}`
-	/>
+	<Code lang='jsonc' code={backgrounds} />
 
 	<h4>Unsplash</h4>
 
 	<p>Paused frequency syncs the URL of the background in pausedImage</p>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	unsplash: {
-		every: 'hour',				// background change frequency: tabs | hour | daylight | day | pause
-		collection: '',				// User selected collection: comma-separated ids
-		lastCollec: 'day',			// night | noon | day | evening | user
-		pausedImage: undefined,		// Saved image when selecting "pause" frequency
-		time: undefined,			// timestamp, set to 0 to change background
-	}
-}`
-	/>
+	<Code lang='jsonc' code={unsplash} />
 
 	<h3>Clock</h3>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	clock: {
-		size: 1,			// Analog clock size
-		ampm: false,		// 12 or 24 hours
-		analog: false,		// Toggle analog or digital 
-		seconds: false,		// Toggle seconds
-		face: 'none',		// none | numbers | roman | marks
-		style: 'round',		// ??
-		timezone: 'auto',	// auto | -12 | -11 | ... | +12
-	}
-}`
-	/>
+	<Code lang='jsonc' code={clock} />
 
 	<h3>Links</h3>
 
 	<p>General settings for quick links.</p>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	linkstyle: 'large',		// large | medium | small | inline | text
-	linknewtab: false,		// open in new tab
-	linksrow: 6,			// From 1 to 16
-	linktabs: {
-		active: false,		// <!> soon deprecated
-		selected: 0,		// <!> soon deprecated
-		titles: [''],		// <!> soon deprecated
-	}
-}`
-	/>
+	<Code lang='jsonc' code={links} />
 
 	<p>When adding a quick link</p>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	[link._id]: {
-		_id: ''			// "links" + 6 random characters
-		parent: ''		// A group or folder id
-		order: 0		// Link position on interface
-		title: ''		// Max 64 characters
-		url: ''			// Max 256 characters
-		icon?: ''		// Valid URL or dataURI
-	}
-}`
-	/>
+	<Code lang='jsonc' code={linkselem} />
 
 	<h3>Notes, Search bar, and Quotes</h3>
 
 	<p>These widgets behave pretty similarly: basic key-val.</p>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	notes: {
-		on: false,			// Toggle widget
-		width: 40,			// Container width in "em"
-		opacity: 0.1,		// From 0 to 1
-		align: 'left',		// left | center | right
-	},
-	searchbar: {
-		on: false,			// Toggle widget
-		opacity: 0.1,		// From 0 to 1
-		newtab: false,		// Open in new tab
-		suggestions: true,	// Toggle suggestions
-		engine: 'default',	// default | google | bing | ddg | yahoo | qwant | ... | custom
-		request: '',		// A valid search URL with its query parameter set to "%s"
-		placeholder: '',	// Max 64 characters
-	},
-	quotes: {
-		on: false,			// Toggle widget
-		author: false,		// Toggle author
-		type: 'classic',	// classic | inspirobot | kaamelott | custom | URL
-		frequency: 'day',	// tabs | hour | daylight | day | pause
-		last: 1650516688,	// Set to 0 to change quotes
-	},
-}`
-	/>
+	<Code lang='jsonc' code={notes} />
 
 	<h3>Fonts</h3>
 
@@ -433,117 +345,23 @@ import { Code } from 'astro:components'
 		manually.
 	</p>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	font: {
-		family: '',			// Fontsource font family
-		size: '14',			// Interface size in 'px'
-		system: true,		// Specify if font is from the device 
-		weightlist: [],		// Available font weights
-		weight: '400',		// Interface font weight 
-	}
-}`
-	/>
+	<Code lang='jsonc' code={fonts} />
 
 	<h3>Weather</h3>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	weather: {
-		ccode: undefined,				// Valid country code
-		city: undefined,				// Any city name
-		unit: 'metric',					// metric | imperial
-		provider: '',					// Custom 'moreinfo' weather provider
-		moreinfo: 'none',				// none | msnw | yhw | windy | custom
-		forecast: 'auto',				// auto | always | never
-		temperature: 'actual',			// actual | feelslike | both
-		geolocation: 'approximate',		// approximate | precise | off
-	}
-}`
-	/>
+	<Code lang='jsonc' code={weather} />
 
 	<h3>Hide</h3>
 
 	<p>Specify which element on the page you want to hide.</p>
 
-	<Code
-		lang='jsonc'
-		code=`{
-	hide: {
-		clock: false			// true | false
-		date: false				// true | false
-		greetings: false		// true | false
-		weatherdesc: false		// true | false
-		weathericon: false		// true | false
-		settingsicon: false		// true | false
-	}
-}`
-	/>
+	<Code lang='jsonc' code={hide} />
 
 	<h3>Page layout</h3>
 
 	<p>Page layouts are pretty complex. Grids are tables, items are widget alignments.</p>
 
-	<Code
-		lang='jsonc'
-		code=`
-{
-	move: {
-		selection: 'single',	// single | double | triple
-		layouts: {
-			single: {
-				grid: grid,		// single column grid
-				items: items,	// items aligment
-			},
-			double: {
-				grid: grid,		// double column grid
-				items: items,	// items aligment
-			},
-			triple: {
-				grid: grid,		// triple column grid
-				items: items,	// items aligment
-			}
-		}
-	}
-}
-	`
-	/>
-
-	<Code
-		lang='jsonc'
-		code=`
-// single
-grid: [
-	['time'],
-	['main'],
-	['quicklinks']
-],
-
-// double
-grid: [
-	['time', '.'],
-	['main', '.'],
-	['quicklinks', '.'],
-],
-
-// triple
-grid: [
-	['.', 'time', '.'],
-	['.', 'main', '.'],
-	['.', 'quicklinks', '.'],
-]`
-	/>
-
-	<Code
-		lang='jsonc'
-		code=`
-items: {
-	[widget]: {
-		box: '',	// "baseline | center | end", "baseline | center | end"
-		text: '', 	// left | center | right
-	}
-}`
-	/>
+	<Code lang='jsonc' code={move} />
+	<Code lang='jsonc' code={movegrid} />
+	<Code lang='jsonc' code={moveitems} />
 </Docs>
