@@ -1,5 +1,5 @@
 ---
-import Docs from '../../layouts/Docs.astro'
+import Docs from '@layouts/Docs.astro'
 const props = Astro.props
 const locale = props.lang === 'fr' ? '/fr' : ''
 ---
@@ -61,7 +61,7 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 
 <style is:global>
 	.content {
-		max-width: 1200px;
+		max-width: 1200px !important;
 	}
 
 	section {
