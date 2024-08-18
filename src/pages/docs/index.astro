@@ -1,5 +1,5 @@
 ---
-import DocsLanding from '../../components/Docs/DocsLanding.astro'
+import DocsLanding from '@components/Docs/DocsLanding.astro'
 
 const webstore =
 	'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
@@ -9,22 +9,25 @@ const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpa
 const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
 ---
 
-<DocsLanding lang="en">
-	<span slot="overview-title">Features overview</span>
-	<span slot="overview-desc">Learn all about Bonjourr's feature set</span>
+<DocsLanding lang='en'>
+	<span slot='overview-title'>Features overview</span>
+	<span slot='overview-desc'>Learn all about Bonjourr's feature set</span>
 
-	<span slot="contribute-title">Contribute</span>
-	<span slot="contribute-desc">See how you can help us make Bonjourr even better</span>
+	<span slot='reference-title'>Settings reference</span>
+	<span slot='reference-desc'>A complete description of saved settings</span>
 
-	<span slot="profiles-title">Custom profiles</span>
-	<span slot="profiles-desc">Pre-made settings data for instant customization</span>
+	<span slot='contribute-title'>Contribute</span>
+	<span slot='contribute-desc'>See how you can help us make Bonjourr even better</span>
 
-	<span slot="styles-title">CSS snippets</span>
-	<span slot="styles-desc">Copy and paste pieces of code to style Bonjourr in funky ways</span>
+	<span slot='profiles-title'>Custom profiles</span>
+	<span slot='profiles-desc'>Pre-made settings data for instant customization</span>
 
-	<section slot="docs">
-		<h2 id="install-extension">Install the extension</h2>
-		<h3 id="available">Browsers and platforms</h3>
+	<span slot='styles-title'>CSS snippets</span>
+	<span slot='styles-desc'>Copy and paste pieces of code to style Bonjourr in funky ways</span>
+
+	<section slot='docs'>
+		<h2 id='install-extension'>Install the extension</h2>
+		<h3 id='available'>Browsers and platforms</h3>
 
 		<ul>
 			<li>
@@ -49,21 +52,21 @@ const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id161543
 			</li>
 		</ul>
 
-		<h3 id="not-available">Currently not available</h3>
+		<h3 id='not-available'>Currently not available</h3>
 
 		<ul>
 			<li>Safari iOS & iPadOS (will be available eventually)</li>
 			<li>
 				Vivaldi shows a blank page, currently no solution (see
-				<a href="https://github.com/victrme/Bonjourr/issues/213">issue #213</a>)
+				<a href='https://github.com/victrme/Bonjourr/issues/213'>issue #213</a>)
 			</li>
 			<li>
 				Firefox Mobile does not allow its homepage to be modified, mentioned in
-				<a href="https://github.com/victrme/Bonjourr/issues/267">issue #267</a>
+				<a href='https://github.com/victrme/Bonjourr/issues/267'>issue #267</a>
 			</li>
 		</ul>
 
-		<h3 id="opera">Opera browser</h3>
+		<h3 id='opera'>Opera browser</h3>
 
 		<p>
 			Opera does not allow extensions to modify its new tab. While there is no official
@@ -71,14 +74,14 @@ const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id161543
 			for them.
 		</p>
 
-		<h4 id="opera-workaround">Opera new tab workaround</h4>
+		<h4 id='opera-workaround'>Opera new tab workaround</h4>
 
 		<ul>
 			<li>First empty your current speed dial so that it shows a dark blank page.</li>
 			<li>
 				You then need to install a third-party extension that can replace your current
 				active tab. For now, we found that only <a
-					href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
+					href='https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj'
 				>
 					New Tab Start Page</a
 				> works correctly. We are not affiliated with them!

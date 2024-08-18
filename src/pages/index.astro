@@ -1,101 +1,101 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '@layouts/Layout.astro'
 
-import Frontpage from '../components/Frontpage/Frontpage.astro'
-import Landing from '../components/Frontpage/Landing.astro'
-import Further from '../components/Frontpage/Further.astro'
-import Showcase from '../components/Frontpage/Showcase.astro'
+import Frontpage from '@components/Frontpage/Frontpage.astro'
+import Landing from '@components/Frontpage/Landing.astro'
+import Further from '@components/Frontpage/Further.astro'
+import Showcase from '@components/Frontpage/Showcase.astro'
 ---
 
 <Layout
-	lang="en"
-	id="frontpage"
-	title="Bonjourr · Startpage for your browser"
-	ogtitle="Startpage for your browser"
-	desc="Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS."
+	lang='en'
+	id='frontpage'
+	title='Bonjourr · Startpage for your browser'
+	ogtitle='Startpage for your browser'
+	desc='Improve your web browsing experience with Bonjourr, a beautiful, customisable and lightweight homepage inspired by iOS.'
 >
 	<Frontpage>
-		<Landing slot="landing">
-			<span slot="subtitle">Startpage for your browser</span>
-			<span slot="download">Download</span>
-			<span slot="online">Try online</span>
-			<span slot="other">Searching for other browsers?</span>
+		<Landing slot='landing'>
+			<span slot='subtitle'>Startpage for your browser</span>
+			<span slot='download'>Download</span>
+			<span slot='online'>Try online</span>
+			<span slot='other'>Searching for other browsers?</span>
 		</Landing>
 
-		<Showcase slot="showcase">
-			<span slot="title">Minimalist & lightweight startpage</span>
-			<p slot="desc">
+		<Showcase slot='showcase'>
+			<span slot='title'>Minimalist & lightweight startpage</span>
+			<p slot='desc'>
 				Bonjourr replaces your new tab page for something more refined and minimal. We took
 				inspiration from Apple’s design language to create a startpage that both looks
 				amazing and feels great to use in your daily life.
 			</p>
 
-			<span slot="dynamic-title">Dynamic Backgrounds</span>
-			<p slot="dynamic-desc">
+			<span slot='dynamic-title'>Dynamic Backgrounds</span>
+			<p slot='dynamic-desc'>
 				Bonjourr uses a manually selected collection of the best photos Unsplash has to
 				offer. The mood of the photos changes according to the time of the day, from noon to
 				the end of the night.
 			</p>
 
-			<span slot="custom-title">Customisable</span>
-			<p slot="custom-desc">
+			<span slot='custom-title'>Customisable</span>
+			<p slot='custom-desc'>
 				Because minimalism doesn’t rhyme with lack of features, Bonjourr is stuffed with
 				options. Add in your personal touch by changing the font, adding your own
 				backgrounds or changing the look of your clock.
 			</p>
 
-			<span slot="more-title">A few more features</span>
-			<li slot="more-links">Quick Links</li>
-			<li slot="more-searchbar">Search bar</li>
-			<li slot="more-fonts">Google Fonts</li>
-			<li slot="more-langs">Multilanguage</li>
-			<li slot="more-darkmode">Dark mode</li>
-			<li slot="more-notes">Notes & checkboxes</li>
-			<li slot="more-quotes">Quotes</li>
-			<li slot="more-css">Custom CSS</li>
+			<span slot='more-title'>A few more features</span>
+			<li slot='more-links'>Quick Links</li>
+			<li slot='more-searchbar'>Search bar</li>
+			<li slot='more-fonts'>Google Fonts</li>
+			<li slot='more-langs'>Multilanguage</li>
+			<li slot='more-darkmode'>Dark mode</li>
+			<li slot='more-notes'>Notes & checkboxes</li>
+			<li slot='more-quotes'>Quotes</li>
+			<li slot='more-css'>Custom CSS</li>
 		</Showcase>
 
-		<h2 slot="open-title">Free, open source and privacy focused 🔒</h2>
-		<p slot="open-text">
+		<h2 slot='open-title'>Free, open source and privacy focused 🔒</h2>
+		<p slot='open-text'>
 			Bonjourr is made by two independent developpers who love things well made and actually
 			think privacy is important. You can use Bonjourr straight away, without having to create
 			or log into any account because we do not collect any data.
 		</p>
 
-		<Further slot="further">
-			<span slot="title">Want to go further?</span>
+		<Further slot='further'>
+			<span slot='title'>Want to go further?</span>
 
-			<span slot="contact-title">Contact</span>
-			<span slot="contact-desc">
+			<span slot='contact-title'>Contact</span>
+			<span slot='contact-desc'>
 				Come and hang out on Bonjourr’s official Telegram group. You can tell us about your
 				ideas and read about the latest news about its development.
 			</span>
-			<span slot="contact-button">Bonjourr's Telegram</span>
+			<span slot='contact-button'>Bonjourr's Telegram</span>
 
-			<span slot="docs-title">Documentation</span>
-			<span slot="docs-desc">
+			<span slot='docs-title'>Documentation</span>
+			<span slot='docs-desc'>
 				Check out Bonjourr’s documentation where we bundled a bunch of pre-made CSS code
 				snippets so you can go even further into customisation.
 			</span>
-			<span slot="docs-button">Documentation</span>
+			<span slot='docs-button'>Documentation</span>
 
-			<span slot="repo-title">Fork Bonjourr</span>
-			<span slot="repo-desc">
+			<span slot='repo-title'>Fork Bonjourr</span>
+			<span slot='repo-desc'>
 				Fork Bonjourr and add your own features on our GitHub repositories. We’re open to
 				pull requests!
 			</span>
-			<span slot="repo-button">GitHub repository</span>
+			<span slot='repo-button'>GitHub repository</span>
 		</Further>
 
-		<h2 slot="donate-title">Donate 😊</h2>
-		<p slot="donate-text">
+		<h2 slot='donate-title'>Donate 😊</h2>
+		<p slot='donate-text'>
 			Since Bonjourr is entirely free and doesn’t collect nor sell your data, we don’t earn
 			any money out of this project, apart from donations. Supporting our work financially is
 			very important if you want us to keep updating it, and we appreciate every single
 			donation.
 		</p>
 
-		<span slot="donate-fiat">Donate</span>
-		<span slot="donate-crypto">Donate crypto</span>
+		<span slot='donate-fiat'>Donate</span>
+		<span slot='donate-crypto'>Donate crypto</span>
 	</Frontpage>
 </Layout>
