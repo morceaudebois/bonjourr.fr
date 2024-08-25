@@ -6,7 +6,7 @@
 	transition: opacity 0.4s, visibility 0.4s;
 }
 
-#creditContainer:hover #credit {
+#credit-container:hover #credit {
 	visibility: visible;
 	opacity: 1;
 }

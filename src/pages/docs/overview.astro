@@ -3,63 +3,63 @@ import Docs from '@layouts/Docs.astro'
 ---
 
 <Docs
-	title='Features overview'
-	lang='en'
-	thumbnail='/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg'
+	title="Features overview"
+	lang="en"
+	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
-	<h2 id='interface'>Interface</h2>
+	<h2 id="interface">Interface</h2>
 
 	<p>Hover your mouse on the background credits to see exif infos</p>
 
-	<h2 id='show-all-settings'>Show all settings</h2>
+	<h2 id="show-all-settings">Show all settings</h2>
 
 	<p>
 		Bonjourr has lots of options. In an attempt to not be jarring for newcomers, we decided to
 		hide most of them by default. If you're an advanced user, you can enable all those options
-		by toggling <i>Show all settings</i> at the very top of the settings menu.
+		by toggling <bjr>Show all settings</bjr> at the very top of the settings menu.
 	</p>
 
-	<h2 id='hide-settings-icon'>Hide settings icon</h2>
+	<h2 id="hide-settings-icon">Hide settings icon</h2>
 
 	<p>
-		When selecting the "Hide settings icon", the icon is still clickable at the same position as
-		before. You can also open the settings menu by pressing the <code>Escape</code> key.
+		When selecting the <bjr>Hide settings icon</bjr>, the icon is still clickable at the same
+		position as before. You can also open the settings menu by pressing the <code>Escape</code> key.
 	</p>
 
-	<video src='/documentation/overview/hide-icon.mp4' controls muted></video>
+	<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
 
-	<h2 id='backgrounds'>Backgrounds</h2>
+	<h2 id="backgrounds">Backgrounds</h2>
 
 	<p>
-		Bonjourr uses the <a href='https://unsplash.com/developers'>Unsplash API</a> to fetch its backgrounds.
+		Bonjourr uses the <a href="https://unsplash.com/developers">Unsplash API</a> to fetch its backgrounds.
 		We select them manually and store them in four different collections that change according to
 		the time of the day:
 	</p>
 
 	<ul>
 		<li>
-			<a href='https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)'
+			<a href="https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)"
 				>During the day</a
 			> or
-			<a href='https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)'
+			<a href="https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)"
 				>at night</a
 			>
 		</li>
 		<li>
 			2 hours around <a
-				href='https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)'
+				href="https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)"
 				>sunrise (Noon)</a
 			> or
-			<a href='https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)'
+			<a href="https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)"
 				>sunset (Evening)</a
 			>
 		</li>
 	</ul>
 
-	<h3 id='unslpash-collection'>Custom Unsplash collection</h3>
+	<h3 id="unslpash-collection">Custom Unsplash collection</h3>
 
 	<p>
-		You can make your own collection of images using <a href='https://unsplash.com/'>Unsplash</a
+		You can make your own collection of images using <a href="https://unsplash.com/">Unsplash</a
 		>. To do so, you'll need to create an Unsplash account and add all your images to a new
 		collection. Once you're pleased with your selection, you need the collection's ID present in
 		its URL. You will spot it easily since it's the string of random letters and numbers. For
@@ -69,18 +69,46 @@ import Docs from '@layouts/Docs.astro'
 	</p>
 
 	<p>
-		Head back to Bonjourr and paste the ID in the <i>Unsplash collection</i> field. You can add multiple
-		collections by separating them with a comma.
+		Head back to Bonjourr and paste the ID in the <bjr>Unsplash collection</bjr> field. You can add
+		multiple collections by separating them with a comma.
 	</p>
 
-	<h3 id='local-backgrounds'>Local files</h3>
+	<h3 id="local-backgrounds">Local files</h3>
 
 	<p>
-		Switch your background type from Dynamic to Custom, and you'll be able to drag and drop your
-		own images from your computer to Bonjourr.
+		Switch your <bjr>Background type</bjr> from "Unsplash" to "Local file", and you'll be able to
+		drag and drop your own images from your computer to Bonjourr.
 	</p>
 
-	<h2 id='links'>Quick Links</h2>
+	<h2 id="clock">Time and date</h2>
+
+	<p>The analog clock background is blurred when its opacity is above 0.</p>
+
+	<h3 id="world-clocks">World clocks</h3>
+
+	<p>
+		<bjr>World clocks</bjr> allows you to add multiple clocks with different timezones. Removing
+		the name of a world clock will remove the clock entirely.
+	</p>
+
+	<h2>Weather</h2>
+
+	<p>
+		Precise geolocation needs access to your device's GPS. Some browsers or systems might not
+		allow access based on its privacy setting. MacOS / Safari often causes problems.
+	</p>
+
+	<p>
+		If there are multiple cities with the same name in your country, it might cause an issue. A
+		good trick to fix the issue is to choose the name of the closest city with a unique name.
+	</p>
+
+	<p>
+		Until we add a "refresh weather" option, you can refresh the weather by toggling the weather
+		<bjr>Unit</bjr>. Celsius -> Farenheit -> Celsius.
+	</p>
+
+	<h2 id="links">Quick Links</h2>
 
 	<p>
 		You can add and import Quick Links from the settings, and edit them when you right click on
@@ -98,7 +126,7 @@ import Docs from '@layouts/Docs.astro'
 		However, <code>localhost:</code> links will work just fine.
 	</p>
 
-	<h3 id='folders'>Link folders</h3>
+	<h3 id="folders">Link folders</h3>
 
 	<p>
 		Links folders are pretty cool. You can drag and drop them. Dragging a folder on another will
@@ -106,25 +134,30 @@ import Docs from '@layouts/Docs.astro'
 		will also delete those links.
 	</p>
 
-	<h3 id='link-groups'>Link pages</h3>
+	<h3 id="link-groups">Link groups</h3>
 
 	<p>
-		You can organize your links even more with link pages. To add a page, right click next to
+		You can organize your links even more with link groups. To add a page, right click next to
 		the default page. You cannot remove the default page, you can rename it. Deleting a page
 		will remove the links inside.
 	</p>
 
-	<video src='/documentation/overview/link-pages.mp4' controls muted></video>
+	<p>
+		You can pin groups by selecting <bjr>Pin this group</bjr> after opening the context menu from
+		the group title.
+	</p>
 
-	<h2 id='searchbar'>Search bar</h2>
+	<video src="/documentation/overview/link-groups.mp4" controls muted></video>
+
+	<h2 id="searchbar">Search bar</h2>
 
 	<p>
 		When enabling the custom search engine option, the searchbar becomes compatible with all
-		search engines, which includes things like YouTube
-		(`https://www.youtube.com/results?search_query=%s`).
+		search engines, which includes things like YouTube:
+		https://www.youtube.com/results?search_query=%s.
 	</p>
 
-	<h2 id='notes'>Notes</h2>
+	<h2 id="notes">Notes</h2>
 
 	<p>
 		Notes uses Markdown to create titles, lists, and checkboxes. To transform a line, just add
@@ -174,14 +207,14 @@ import Docs from '@layouts/Docs.astro'
 		</tbody>
 	</table>
 
-	<h2 id='fonts'>Fonts</h2>
+	<h2 id="fonts">Fonts</h2>
 
 	<p>
 		Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts Bonjourr
-		offers, please visit <a href='https://fontsource.com/'>fontsource</a>.
+		offers, please visit <a href="https://fontsource.com/">fontsource.com</a>.
 	</p>
 
-	<h2 id='page-layouts'>Page layouts</h2>
+	<h2 id="page-layouts">Page layouts</h2>
 
 	<p>
 		There are 3 different page layouts to choose from: single, double and triple column. Each
@@ -196,9 +229,9 @@ import Docs from '@layouts/Docs.astro'
 		<li>Reset layout</li>
 	</ul>
 
-	<video src='/documentation/overview/move-elem.mp4' controls muted></video>
+	<video src="/documentation/overview/move-elem.mp4" controls muted></video>
 
-	<h2 id='settings-managment'>Settings management</h2>
+	<h2 id="settings-managment">Settings management</h2>
 
 	<p>
 		Bonjourr allows you to export all your settings into a file. You can use this feature if you
@@ -217,16 +250,16 @@ import Docs from '@layouts/Docs.astro'
 
 	<p>
 		Bonjourr is compatible with the automatic syncing features of both
-		<a href='https://www.mozilla.org/fr/firefox/sync/'>Firefox</a>
+		<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
 		and <a
-			href='https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop'
+			href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
 			>Chrome</a
 		>. If you log into your Mozilla/Google account on your browser and have syncing enabled in
 		your browser, Bonjourr should get synced to other instances of the same browser on other
 		computers. This is true for all Bonjourr settings as well as Quick Links.
 	</p>
 
-	<h2 id='keybindings'>Keybindings</h2>
+	<h2 id="keybindings">Keybindings</h2>
 
 	<table>
 		<thead>
