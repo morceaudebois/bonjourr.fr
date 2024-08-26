@@ -26,7 +26,7 @@ if (!title && frontmatter) {
 		<DocsTitle title={title} thumbnail={thumbnail}>
 		</DocsTitle>
 		
-		<div class='content'>
+		<div class="content">
 			<slot />
 		</div>
 	</main>
@@ -59,23 +59,6 @@ if (!title && frontmatter) {
 		font-size: 3em;
 		line-height: 2em;
 		text-align: center;
-	}
-
-	
-
-	pre {
-		tab-size: 1.5em;
-		padding: 1.5em;
-		border-radius: 0.5em;
-		border: 1px solid #fff1;
-	}
-
-	article.profiles pre {
-		white-space: normal;
-	}
-
-	pre > code {
-		background-color: transparent;
 	}
 
 	.content {
@@ -149,13 +132,17 @@ if (!title && frontmatter) {
 	}
 
 	code {
-		/* border: 1px solid #fff3; */
-		background-color: #fff3;
-		color: white;
 		border-radius: 2px;
 		padding: .1em .2em 0;
-		font-size: .9em;
 		word-break: break-word;
+	}
+
+	pre {
+		tab-size: 2em;
+		padding: 2em;
+		font-size: 13px;
+		line-height: 1.5em;
+		border-radius: 1em;
 	}
 
 	strong {

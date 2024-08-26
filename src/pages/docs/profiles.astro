@@ -3,60 +3,60 @@ import Docs from '@layouts/Docs.astro'
 import Link from '@components/Link.astro'
 import DocsProfile from '@components/Docs/DocsProfile.astro'
 
-import notmomentum from '@assets/documentation/profiles/not-momentum.json'
-import cyberpunk from '@assets/documentation/profiles/cyberpunk.json'
-import floral from '@assets/documentation/profiles/floral.json'
-import space from '@assets/documentation/profiles/space.json'
+import notmomentum from '@assets/documentation/profiles/not-momentum.json?raw'
+import cyberpunk from '@assets/documentation/profiles/cyberpunk.json?raw'
+import floral from '@assets/documentation/profiles/floral.json?raw'
+import space from '@assets/documentation/profiles/space.json?raw'
 ---
 
-<Docs title='Profiles' thumbnail='/documentation/backgrounds/michael-worden-7kvt0N3Pud0.jpg'>
+<Docs title="Profiles" thumbnail="/documentation/backgrounds/michael-worden-7kvt0N3Pud0.jpg">
 	<p>
 		Here are some pre-made themes you can import at the bottom of the settings of Bonjourr. Want
 		your own custom profile here?
-		<Link href='/contact'>Contact us!</Link>
+		<Link href="/contact">Contact us!</Link>
 	</p>
 
 	<DocsProfile
-		id='cyberpunk'
+		id="cyberpunk"
 		code={cyberpunk}
-		image_src='/documentation/profiles/cyberpunk.webp'
-		image_alt='Cyberpunk 2077 Bonjourr theme'
+		image_src="/documentation/profiles/cyberpunk.webp"
+		image_alt="Cyberpunk 2077 Bonjourr theme"
 	>
-		<span slot='title'>Cyberpunk 2077</span>
-		<span slot='code-label'>View raw settings</span>
-		<span slot='download-label'>Download import file</span>
+		<span slot="title">Cyberpunk 2077</span>
+		<span slot="code-label">View raw settings</span>
+		<span slot="download-label">Download import file</span>
 	</DocsProfile>
 
 	<DocsProfile
-		id='space'
+		id="space"
 		code={space}
-		image_src='/documentation/profiles/space.webp'
-		image_alt='Space Bonjourr theme'
+		image_src="/documentation/profiles/space.webp"
+		image_alt="Space Bonjourr theme"
 	>
-		<span slot='title'>The Space Enthusiast</span>
-		<span slot='code-label'>View raw settings</span>
-		<span slot='download-label'>Download import file</span>
+		<span slot="title">The Space Enthusiast</span>
+		<span slot="code-label">View raw settings</span>
+		<span slot="download-label">Download import file</span>
 	</DocsProfile>
 
 	<DocsProfile
-		id='floral'
+		id="floral"
 		code={floral}
-		image_src='/documentation/profiles/floral.webp'
-		image_alt='Floral Bonjourr theme'
+		image_src="/documentation/profiles/floral.webp"
+		image_alt="Floral Bonjourr theme"
 	>
-		<span slot='title'>Floral</span>
-		<span slot='code-label'>View raw settings</span>
-		<span slot='download-label'>Download import file</span>
+		<span slot="title">Floral</span>
+		<span slot="code-label">View raw settings</span>
+		<span slot="download-label">Download import file</span>
 	</DocsProfile>
 
 	<DocsProfile
-		id='not-momentum'
+		id="not-momentum"
 		code={notmomentum}
-		image_src='/documentation/profiles/not-momentum.webp'
-		image_alt='Not Momentum Bonjourr theme'
+		image_src="/documentation/profiles/not-momentum.webp"
+		image_alt="Not Momentum Bonjourr theme"
 	>
-		<span slot='title'>Not Momentum</span>
-		<span slot='code-label'>View raw settings</span>
-		<span slot='download-label'>Download import file</span>
+		<span slot="title">Not Momentum</span>
+		<span slot="code-label">View raw settings</span>
+		<span slot="download-label">Download import file</span>
 	</DocsProfile>
 </Docs>
