@@ -10,6 +10,8 @@
 		"@cloudflare/workers-types": "^4.20240806.0",
 		"astro": "^4.14.5",
 		"detect-browser": "^5.3.0",
+		"prettier": "^3.3.3",
+		"prettier-plugin-astro": "^0.14.1",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.0"
 	},
@@ -17,7 +19,18 @@
 		"semi": false,
 		"tabWidth": 4,
 		"useTabs": true,
-		"singleQuote": true,
-		"printWidth": 100
+		"singleQuote": false,
+		"printWidth": 100,
+		"plugins": [
+			"prettier-plugin-astro"
+		],
+		"overrides": [
+			{
+				"files": "*.astro",
+				"options": {
+					"parser": "astro"
+				}
+			}
+		]
 	}
 }
