@@ -1,26 +1,26 @@
 ---
-import Docs from '@layouts/Docs.astro'
-import { Code } from 'astro:components'
+import Docs from "@layouts/Docs.astro"
+import { Code } from "astro:components"
 
-import hide from '@assets/documentation/reference/hide.txt?raw'
-import move from '@assets/documentation/reference/move.txt?raw'
-import clock from '@assets/documentation/reference/clock.txt?raw'
-import links from '@assets/documentation/reference/links.txt?raw'
-import notes from '@assets/documentation/reference/notes.txt?raw'
-import fonts from '@assets/documentation/reference/fonts.txt?raw'
-import general from '@assets/documentation/reference/general.txt?raw'
-import weather from '@assets/documentation/reference/weather.txt?raw'
-import movegrid from '@assets/documentation/reference/movegrid.txt?raw'
-import unsplash from '@assets/documentation/reference/unsplash.txt?raw'
-import moveitems from '@assets/documentation/reference/moveitems.txt?raw'
-import linkselem from '@assets/documentation/reference/linkselem.txt?raw'
-import backgrounds from '@assets/documentation/reference/backgrounds.txt?raw'
+import hide from "@assets/documentation/reference/hide.txt?raw"
+import move from "@assets/documentation/reference/move.txt?raw"
+import clock from "@assets/documentation/reference/clock.txt?raw"
+import links from "@assets/documentation/reference/links.txt?raw"
+import notes from "@assets/documentation/reference/notes.txt?raw"
+import fonts from "@assets/documentation/reference/fonts.txt?raw"
+import general from "@assets/documentation/reference/general.txt?raw"
+import weather from "@assets/documentation/reference/weather.txt?raw"
+import movegrid from "@assets/documentation/reference/movegrid.txt?raw"
+import unsplash from "@assets/documentation/reference/unsplash.txt?raw"
+import moveitems from "@assets/documentation/reference/moveitems.txt?raw"
+import linkselem from "@assets/documentation/reference/linkselem.txt?raw"
+import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 ---
 
 <Docs
-	title='Référence des paramètres'
-	lang='fr'
-	thumbnail='/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg'
+	title="Référence des paramètres"
+	lang="fr"
+	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
 	<p>
 		<em>Mis à jour pour la version 19.2.5</em>
@@ -28,55 +28,55 @@ import backgrounds from '@assets/documentation/reference/backgrounds.txt?raw'
 
 	<h3>Général</h3>
 
-	<Code lang='jsonc' code={general} />
+	<Code lang="jsonc" code={general} />
 
 	<h3>Fonds d'écran</h3>
 
 	<p>Selectionnez votre type de fond d'écran, le flou et la luminosité.</p>
 
-	<Code lang='jsonc' code={backgrounds} />
+	<Code lang="jsonc" code={backgrounds} />
 
 	<h4>Unsplash</h4>
 
 	<p>L'URL du fond d'écran est synchronisée quand la fréquence est sur "pause".</p>
 
-	<Code lang='jsonc' code={unsplash} />
+	<Code lang="jsonc" code={unsplash} />
 
 	<h3>Horloge</h3>
 
-	<Code lang='jsonc' code={clock} />
+	<Code lang="jsonc" code={clock} />
 
 	<h3>Liens</h3>
 
 	<p>Paramètres généraux pour les liens.</p>
 
-	<Code lang='jsonc' code={links} />
+	<Code lang="jsonc" code={links} />
 
 	<p>Quand on ajoute un lien</p>
 
-	<Code lang='jsonc' code={linkselem} />
+	<Code lang="jsonc" code={linkselem} />
 
 	<h3>Notes, Barre de recherche et Citations</h3>
 
 	<p>Ces widgets se comportent d'une manière similaire.</p>
 
-	<Code lang='jsonc' code={notes} />
+	<Code lang="jsonc" code={notes} />
 
 	<h3>Police d'écriture</h3>
 
 	<p>La plupart des champs sont modifié automatiquement par Bonjourr.</p>
 
-	<Code lang='jsonc' code={fonts} />
+	<Code lang="jsonc" code={fonts} />
 
 	<h3>Météo</h3>
 
-	<Code lang='jsonc' code={weather} />
+	<Code lang="jsonc" code={weather} />
 
 	<h3>Cacher des éléments</h3>
 
 	<p>Spécifiez quels éléments vous voulez cacher sur la page.</p>
 
-	<Code lang='jsonc' code={hide} />
+	<Code lang="jsonc" code={hide} />
 
 	<h3>Mise en page</h3>
 
@@ -85,7 +85,7 @@ import backgrounds from '@assets/documentation/reference/backgrounds.txt?raw'
 		widgets.
 	</p>
 
-	<Code lang='jsonc' code={move} />
-	<Code lang='jsonc' code={movegrid} />
-	<Code lang='jsonc' code={moveitems} />
+	<Code lang="jsonc" code={move} />
+	<Code lang="jsonc" code={movegrid} />
+	<Code lang="jsonc" code={moveitems} />
 </Docs>

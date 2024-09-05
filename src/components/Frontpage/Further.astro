@@ -1,54 +1,54 @@
 ---
-import Link from '../Link.astro'
+import Link from "../Link.astro"
 ---
 
-<div class='container'>
+<div class="container">
 	<div>
 		<h2>
-			<slot name='title' />
+			<slot name="title" />
 		</h2>
 	</div>
 
 	<div>
 		<h3>
-			<slot name='contact-title' />
+			<slot name="contact-title" />
 		</h3>
 
 		<p>
-			<slot name='contact-desc' />
+			<slot name="contact-desc" />
 		</p>
 
-		<a href='https://t.me/BonjourrStartpage' class='button'>
-			<img width='64' src='/frontpage/telegram.svg' class='icon' alt='' />
-			<slot name='contact-button' />
+		<a href="https://t.me/BonjourrStartpage" class="button">
+			<img width="64" src="/frontpage/telegram.svg" class="icon" alt="" />
+			<slot name="contact-button" />
 		</a>
 	</div>
 
 	<div>
 		<h3>
-			<slot name='docs-title' />
+			<slot name="docs-title" />
 		</h3>
 
 		<p>
-			<slot name='docs-desc' />
+			<slot name="docs-desc" />
 		</p>
 
-		<Link href='/docs' class='button'>
-			<img width='64' src='/frontpage/docs.svg' class='icon' alt='' />
-			<slot name='docs-button' />
+		<Link href="/docs" class="button">
+			<img width="64" src="/frontpage/docs.svg" class="icon" alt="" />
+			<slot name="docs-button" />
 		</Link>
 	</div>
 
 	<div>
 		<h3>
-			<slot name='repo-title' />
+			<slot name="repo-title" />
 		</h3>
 		<p>
-			<slot name='repo-desc' />
+			<slot name="repo-desc" />
 		</p>
-		<a href='https://github.com/victrme/Bonjourr' class='button'>
-			<img width='64' src='/frontpage/github.svg' class='icon' alt='' />
-			<slot name='repo-button' />
+		<a href="https://github.com/victrme/Bonjourr" class="button">
+			<img width="64" src="/frontpage/github.svg" class="icon" alt="" />
+			<slot name="repo-button" />
 		</a>
 	</div>
 </div>

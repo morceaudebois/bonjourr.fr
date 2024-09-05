@@ -1,26 +1,26 @@
 ---
-import Docs from '@layouts/Docs.astro'
-import { Code } from 'astro:components'
+import Docs from "@layouts/Docs.astro"
+import { Code } from "astro:components"
 
-import hide from '@assets/documentation/reference/hide.txt?raw'
-import move from '@assets/documentation/reference/move.txt?raw'
-import clock from '@assets/documentation/reference/clock.txt?raw'
-import links from '@assets/documentation/reference/links.txt?raw'
-import notes from '@assets/documentation/reference/notes.txt?raw'
-import fonts from '@assets/documentation/reference/fonts.txt?raw'
-import general from '@assets/documentation/reference/general.txt?raw'
-import weather from '@assets/documentation/reference/weather.txt?raw'
-import movegrid from '@assets/documentation/reference/movegrid.txt?raw'
-import unsplash from '@assets/documentation/reference/unsplash.txt?raw'
-import moveitems from '@assets/documentation/reference/moveitems.txt?raw'
-import linkselem from '@assets/documentation/reference/linkselem.txt?raw'
-import backgrounds from '@assets/documentation/reference/backgrounds.txt?raw'
+import hide from "@assets/documentation/reference/hide.txt?raw"
+import move from "@assets/documentation/reference/move.txt?raw"
+import clock from "@assets/documentation/reference/clock.txt?raw"
+import links from "@assets/documentation/reference/links.txt?raw"
+import notes from "@assets/documentation/reference/notes.txt?raw"
+import fonts from "@assets/documentation/reference/fonts.txt?raw"
+import general from "@assets/documentation/reference/general.txt?raw"
+import weather from "@assets/documentation/reference/weather.txt?raw"
+import movegrid from "@assets/documentation/reference/movegrid.txt?raw"
+import unsplash from "@assets/documentation/reference/unsplash.txt?raw"
+import moveitems from "@assets/documentation/reference/moveitems.txt?raw"
+import linkselem from "@assets/documentation/reference/linkselem.txt?raw"
+import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 ---
 
 <Docs
-	title='Settings reference'
-	lang='en'
-	thumbnail='/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg'
+	title="Settings reference"
+	lang="en"
+	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
 	<p>
 		<em>Last updated for version 19.2.5</em>
@@ -28,39 +28,39 @@ import backgrounds from '@assets/documentation/reference/backgrounds.txt?raw'
 
 	<h3>General</h3>
 
-	<Code lang='jsonc' code={general} />
+	<Code lang="jsonc" code={general} />
 
 	<h3>Backgrounds</h3>
 
 	<p>Select your background provider, blur amount, and brightness</p>
 
-	<Code lang='jsonc' code={backgrounds} />
+	<Code lang="jsonc" code={backgrounds} />
 
 	<h4>Unsplash</h4>
 
 	<p>Paused frequency syncs the URL of the background in pausedImage</p>
 
-	<Code lang='jsonc' code={unsplash} />
+	<Code lang="jsonc" code={unsplash} />
 
 	<h3>Clock</h3>
 
-	<Code lang='jsonc' code={clock} />
+	<Code lang="jsonc" code={clock} />
 
 	<h3>Links</h3>
 
 	<p>General settings for quick links.</p>
 
-	<Code lang='jsonc' code={links} />
+	<Code lang="jsonc" code={links} />
 
 	<p>When adding a quick link</p>
 
-	<Code lang='jsonc' code={linkselem} />
+	<Code lang="jsonc" code={linkselem} />
 
 	<h3>Notes, Search bar, and Quotes</h3>
 
 	<p>These widgets behave pretty similarly: basic key-val.</p>
 
-	<Code lang='jsonc' code={notes} />
+	<Code lang="jsonc" code={notes} />
 
 	<h3>Fonts</h3>
 
@@ -69,23 +69,23 @@ import backgrounds from '@assets/documentation/reference/backgrounds.txt?raw'
 		manually.
 	</p>
 
-	<Code lang='jsonc' code={fonts} />
+	<Code lang="jsonc" code={fonts} />
 
 	<h3>Weather</h3>
 
-	<Code lang='jsonc' code={weather} />
+	<Code lang="jsonc" code={weather} />
 
 	<h3>Hide</h3>
 
 	<p>Specify which element on the page you want to hide.</p>
 
-	<Code lang='jsonc' code={hide} />
+	<Code lang="jsonc" code={hide} />
 
 	<h3>Page layout</h3>
 
 	<p>Page layouts are pretty complex. Grids are tables, items are widget alignments.</p>
 
-	<Code lang='jsonc' code={move} />
-	<Code lang='jsonc' code={movegrid} />
-	<Code lang='jsonc' code={moveitems} />
+	<Code lang="jsonc" code={move} />
+	<Code lang="jsonc" code={movegrid} />
+	<Code lang="jsonc" code={moveitems} />
 </Docs>

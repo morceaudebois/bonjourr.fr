@@ -1,9 +1,8 @@
 ---
-import { Code } from 'astro:components'
+import { Code } from "astro:components"
 
-const { id, code, image_src, image_alt, file_href } = Astro.props
-let string = ''
-let href = ''
+const { id, code, image_src, image_alt } = Astro.props
+let href = ""
 ---
 
 <h2 id={id}>
@@ -22,7 +21,7 @@ let href = ''
 		<summary>
 			<slot name="code-label" />
 		</summary>
-		
-		<Code lang="json" code={code} />
+
+		<Code lang="json" code={code} themes={{ light: "github-light", dark: "github-dark" }} />
 	</details>
 </div>

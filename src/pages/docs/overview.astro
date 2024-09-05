@@ -1,80 +1,15 @@
 ---
-import Docs from '@layouts/Docs.astro'
+import OverviewFilter from "@components/Docs/OverviewFilter.astro"
+import Docs from "@layouts/Docs.astro"
 ---
-
-<style is:global>
-	aside {
-		margin-top: 2em;
-	}
-
-	aside button {
-		display: inline-flex;
-		width: fit-content;
-		color: inherit;
-		border: 1px solid #2224;
-		opacity: 0.3;
-		margin: 3px;
-		padding: 2px 6px;
-		border-radius: 8px;
-		font-size: smaller;
-		cursor: pointer;
-	}
-
-	aside button:hover {
-		opacity: 0.6;
-	}
-
-	aside button.on {
-		opacity: 1;
-	}
-
-	.content div.hide[id] {
-		display: none;
-	}
-</style>
-
-<script>
-	const aside = document.createElement('aside')
-	const blocks = document.querySelectorAll('.content div[id]')
-
-	blocks.forEach((block) => {
-		const button = document.createElement('button')
-
-		button.textContent = block.querySelector('h2').textContent
-		button.dataset.for = block.id
-
-		button.addEventListener('click', function () {
-			const btns = Object.values(document.querySelectorAll<HTMLElement>('aside button'))
-			const id = this.dataset.for ?? ''
-
-			btns.forEach((btn) => {
-				if (btn.dataset.for === id) {
-					btn.classList.toggle('on')
-				} else {
-					btn.classList.remove('on')
-				}
-			})
-
-			blocks.forEach((block) => {
-				if (document.querySelectorAll('aside button.on').length === 0) {
-					blocks.forEach((block) => block.classList.remove('hide'))
-				} else {
-					block.classList.toggle('hide', block.id !== id)
-				}
-			})
-		})
-
-		aside.appendChild(button)
-	})
-
-	document.querySelector('.content')?.prepend(aside)
-</script>
 
 <Docs
 	title="Features overview"
 	lang="en"
 	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
+	<OverviewFilter />
+
 	<div id="interface">
 		<h2>Interface</h2>
 
@@ -134,7 +69,7 @@ import Docs from '@layouts/Docs.astro'
 			</li>
 		</ul>
 
-		<h3 id="unslpash-collection">Custom Unsplash collection</h3>
+		<h3 id="unsplash-collection">Custom Unsplash collection</h3>
 
 		<p>
 			You can make your own collection of images using <a href="https://unsplash.com/"

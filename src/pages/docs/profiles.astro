@@ -1,12 +1,12 @@
 ---
-import Docs from '@layouts/Docs.astro'
-import Link from '@components/Link.astro'
-import DocsProfile from '@components/Docs/DocsProfile.astro'
+import Docs from "@layouts/Docs.astro"
+import Link from "@components/Link.astro"
+import Profile from "@components/Docs/Profile.astro"
 
-import notmomentum from '@assets/documentation/profiles/not-momentum.json?raw'
-import cyberpunk from '@assets/documentation/profiles/cyberpunk.json?raw'
-import floral from '@assets/documentation/profiles/floral.json?raw'
-import space from '@assets/documentation/profiles/space.json?raw'
+import notmomentum from "@assets/documentation/profiles/not-momentum.json?raw"
+import cyberpunk from "@assets/documentation/profiles/cyberpunk.json?raw"
+import floral from "@assets/documentation/profiles/floral.json?raw"
+import space from "@assets/documentation/profiles/space.json?raw"
 ---
 
 <Docs title="Profiles" thumbnail="/documentation/backgrounds/michael-worden-7kvt0N3Pud0.jpg">
@@ -16,7 +16,7 @@ import space from '@assets/documentation/profiles/space.json?raw'
 		<Link href="/contact">Contact us!</Link>
 	</p>
 
-	<DocsProfile
+	<Profile
 		id="cyberpunk"
 		code={cyberpunk}
 		image_src="/documentation/profiles/cyberpunk.webp"
@@ -25,9 +25,9 @@ import space from '@assets/documentation/profiles/space.json?raw'
 		<span slot="title">Cyberpunk 2077</span>
 		<span slot="code-label">View raw settings</span>
 		<span slot="download-label">Download import file</span>
-	</DocsProfile>
+	</Profile>
 
-	<DocsProfile
+	<Profile
 		id="space"
 		code={space}
 		image_src="/documentation/profiles/space.webp"
@@ -36,9 +36,9 @@ import space from '@assets/documentation/profiles/space.json?raw'
 		<span slot="title">The Space Enthusiast</span>
 		<span slot="code-label">View raw settings</span>
 		<span slot="download-label">Download import file</span>
-	</DocsProfile>
+	</Profile>
 
-	<DocsProfile
+	<Profile
 		id="floral"
 		code={floral}
 		image_src="/documentation/profiles/floral.webp"
@@ -47,9 +47,9 @@ import space from '@assets/documentation/profiles/space.json?raw'
 		<span slot="title">Floral</span>
 		<span slot="code-label">View raw settings</span>
 		<span slot="download-label">Download import file</span>
-	</DocsProfile>
+	</Profile>
 
-	<DocsProfile
+	<Profile
 		id="not-momentum"
 		code={notmomentum}
 		image_src="/documentation/profiles/not-momentum.webp"
@@ -58,5 +58,5 @@ import space from '@assets/documentation/profiles/space.json?raw'
 		<span slot="title">Not Momentum</span>
 		<span slot="code-label">View raw settings</span>
 		<span slot="download-label">Download import file</span>
-	</DocsProfile>
+	</Profile>
 </Docs>
