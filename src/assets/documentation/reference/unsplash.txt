@@ -3,7 +3,7 @@
 		every: 'hour',				// background change frequency: tabs | hour | daylight | day | pause
 		collection: '',				// User selected collection: comma-separated ids
 		lastCollec: 'day',			// night | noon | day | evening | user
-		pausedImage: undefined,	// Saved image when selecting "pause" frequency
-		time: undefined,				// timestamp, set to 0 to change background
+		pausedImage: undefined,		// Saved image when selecting "pause" frequency
+		time: undefined,			// timestamp, set to 0 to change background
 	}
 }

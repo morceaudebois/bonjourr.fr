@@ -2,9 +2,9 @@
 	[link._id]: {
 		_id: ''		// "links" + 6 random characters
 		parent: ''	// A group or folder id
-		order: 0		// Link position on interface
-		title: ''		// Max 64 characters
+		order: 0	// Link position on interface
+		title: ''	// Max 64 characters
 		url: ''		// Max 256 characters
-		icon?: ''		// Valid URL or dataURI
+		icon?: ''	// Valid URL or dataURI
 	}
 }

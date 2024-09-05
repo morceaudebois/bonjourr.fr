@@ -1,5 +1,5 @@
 ---
-import { Code } from "astro:components"
+import { Code } from "astro-expressive-code/components"
 
 const { id, code, image_src, image_alt } = Astro.props
 let href = ""
@@ -22,6 +22,6 @@ let href = ""
 			<slot name="code-label" />
 		</summary>
 
-		<Code lang="json" code={code} themes={{ light: "github-light", dark: "github-dark" }} />
+		<Code lang="json" code={code} />
 	</details>
 </div>

@@ -11,13 +11,13 @@
 		newtab: false,		// Open in new tab
 		suggestions: true,	// Toggle suggestions
 		engine: 'default',	// default | google | bing | ddg | yahoo | qwant | ... | custom
-		request: '',			// A valid search URL with its query parameter set to "%s"
-		placeholder: '',		// Max 64 characters
+		request: '',		// A valid search URL with its query parameter set to "%s"
+		placeholder: '',	// Max 64 characters
 	},
 	quotes: {
 		on: false,			// Toggle widget
 		author: false,		// Toggle author
-		type: 'classic',		// classic | inspirobot | kaamelott | custom | URL
+		type: 'classic',	// classic | inspirobot | kaamelott | custom | URL
 		frequency: 'day',	// tabs | hour | daylight | day | pause
 		last: 1650516688,	// Set to 0 to change quotes
 	},
