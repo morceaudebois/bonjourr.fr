@@ -1,5 +1,5 @@
 {
-	background_blur: 15,		  // In pixels
-	background_bright: 0.8,		  // Brightness from 0 to 1
-	background_type: 'unsplash',  // unsplash | local
+	background_blur: 15,			// In pixels
+	background_bright: 0.8,		// Brightness from 0 to 1
+	background_type: 'unsplash',	// unsplash | local
 }

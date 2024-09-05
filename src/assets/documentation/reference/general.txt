@@ -1,19 +1,19 @@
 {
 	showall: false,				// Show all available settings in menu
-	lang: '',					// Sets interface and settings menu language
-	dark: 'system', 			// enabled | disabled | auto | system
-	favicon: '',				// An emoji
+	lang: '',						// Sets interface and settings menu language
+	dark: 'system', 				// enabled | disabled | auto | system
+	favicon: '',					// An emoji
 	tabtitle: '',				// Max 80 characters
 	greeting: '',				// Max 24 characters
 	pagegap: 1,					// Gap between widgets, from 0 to 8
-	pagewidth: 1600,			// In pixel, from 600 to 2200
+	pagewidth: 1600,				// In pixel, from 600 to 2200
 	time: true,					// toggles clock & date widget
 	main: true,					// toggles weather & greetings widget
 	dateformat: 'eu',			// auto | us | eu | cn
 	quicklinks: true,			// toggles quicklinks widget
 	syncbookmarks: undefined,	// <!> soon deprecated
-	textShadow: 0.2,			// Interface text shadow, from 0 to 1
-	announcements: 'major',		// all | major | none
+	textShadow: 0.2,				// Interface text shadow, from 0 to 1
+	announcements: 'major',	// all | major | none
 	review: 0,					// Shows review popup at 30, -1 to disable
-	css: '',					// User generated CSS
+	css: '',						// User generated CSS
 }
