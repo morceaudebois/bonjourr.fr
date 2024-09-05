@@ -1,4 +1,4 @@
-import { defineConfig, squooshImageService } from "astro/config"
+import { defineConfig, sharpImageService } from "astro/config"
 import sitemap from "@astrojs/sitemap"
 
 // https://docs.astro.build/en/guides/integrations-guide/sitemap/#i18n
@@ -17,6 +17,6 @@ export default defineConfig({
 	devToolbar: { enabled: false },
 	integrations: [sitemap(sitemapOptions)],
 	image: {
-		service: squooshImageService(),
+		service: sharpImageService(),
 	},
 })
