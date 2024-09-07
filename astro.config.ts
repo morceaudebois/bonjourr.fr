@@ -21,7 +21,7 @@ export default defineConfig({
 			},
 		}),
 		expressiveCode({
-			themes: ["catppuccin-latte", "ayu-dark"],
+			themes: ["catppuccin-latte", "github-dark"],
 		}),
 	],
 })
