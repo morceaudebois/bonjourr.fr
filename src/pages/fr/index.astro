@@ -1,102 +1,102 @@
 ---
-import Layout from '@layouts/Layout.astro'
+import Layout from "@layouts/Layout.astro"
 
-import Frontpage from '@components/Frontpage/Frontpage.astro'
-import Landing from '@components/Frontpage/Landing.astro'
-import Further from '@components/Frontpage/Further.astro'
-import Showcase from '@components/Frontpage/Showcase.astro'
+import Frontpage from "@components/Frontpage/Frontpage.astro"
+import Landing from "@components/Frontpage/Landing.astro"
+import Further from "@components/Frontpage/Further.astro"
+import Showcase from "@components/Frontpage/Showcase.astro"
 ---
 
 <Layout
-	lang='fr'
-	id='frontpage'
+	lang="fr"
+	id="frontpage"
 	title="Bonjourr · Page d'accueil de navigateur"
 	ogtitle="Page d'accueil de navigateur"
 	desc="Améliorez votre expérience de navigation avec Bonjourr, une superbe page d'accueil personnalisable inspirée par iOS."
 >
 	<Frontpage>
-		<Landing slot='landing'>
-			<span slot='subtitle'>Page d'accueil de navigateur</span>
-			<span slot='download'>Télécharger</span>
-			<span slot='online'>Démo en ligne</span>
-			<span slot='other'>Sur d'autres navigateurs...</span>
+		<Landing slot="landing">
+			<span slot="subtitle">Page d'accueil de navigateur</span>
+			<span slot="download">Télécharger</span>
+			<span slot="online">Démo en ligne</span>
+			<span slot="other">Sur d'autres navigateurs...</span>
 		</Landing>
 
-		<Showcase slot='showcase'>
-			<span slot='title'>Page d'accueil minimaliste</span>
-			<p slot='desc'>
+		<Showcase slot="showcase">
+			<span slot="title">Page d'accueil minimaliste</span>
+			<p slot="desc">
 				Bonjourr remplace la page d'accueil de votre navigateur par quelque chose de plus
 				beau et minimaliste. Nous nous sommes inspiré des interfaces d'Apple afin de créer
 				une page à la fois belle et agréable à utiliser.
 			</p>
 
-			<span slot='dynamic-title'>Arrière-plans dynamiques</span>
-			<p slot='dynamic-desc'>
+			<span slot="dynamic-title">Arrière-plans dynamiques</span>
+			<p slot="dynamic-desc">
 				Nous sélectionnons manuellement les meilleures photos d'Unsplash pour vous offrir
 				des arrière-plans d'une grande qualité dont l'ambiance et les couleurs s'adaptent à
 				l'heure de la journée.
 			</p>
 
-			<span slot='custom-title'>Personnalisable</span>
-			<p slot='custom-desc'>
+			<span slot="custom-title">Personnalisable</span>
+			<p slot="custom-desc">
 				Puisque minimalisme ne rime pas avec manque de fonctions, Bonjourr est truffé
 				d'options. Ajoutez-y votre touche personnelle en changeant la police, en ajoutant
 				vos propres arrière-plans ou en changeant l'aspect de votre horloge.
 			</p>
 
-			<span slot='more-title'>D'autres fonctions</span>
-			<li slot='more-links'>Liens favoris</li>
-			<li slot='more-searchbar'>Barre de recherche</li>
-			<li slot='more-fonts'>Google Fonts</li>
-			<li slot='more-langs'>Multilingue</li>
-			<li slot='more-darkmode'>Mode sombre</li>
-			<li slot='more-notes'>Notes & to-do</li>
-			<li slot='more-quotes'>Citations</li>
-			<li slot='more-css'>CSS personnalisé</li>
+			<span slot="more-title">D'autres fonctions</span>
+			<li slot="more-links">Liens favoris</li>
+			<li slot="more-searchbar">Barre de recherche</li>
+			<li slot="more-fonts">Google Fonts</li>
+			<li slot="more-langs">Multilingue</li>
+			<li slot="more-darkmode">Mode sombre</li>
+			<li slot="more-notes">Notes & to-do</li>
+			<li slot="more-quotes">Citations</li>
+			<li slot="more-css">CSS personnalisé</li>
 		</Showcase>
 
-		<h2 slot='open-title'>Gratuit, open source et confidentiel 🔒</h2>
-		<p slot='open-text'>
+		<h2 slot="open-title">Gratuit, open source et confidentiel 🔒</h2>
+		<p slot="open-text">
 			Bonjourr est fabriqué en France par deux développeurs indépendants qui aiment les choses
 			bien faites et pensent (réellement) que la confidentialité est importante. C'est
 			pourquoi vous pouvez utiliser Bonjourr dès l'installation, sans avoir à créer un compte,
 			car nous ne collectons ni ne vendons aucune donnée.
 		</p>
 
-		<Further slot='further'>
-			<span slot='title'>Aller plus loin</span>
+		<Further slot="further">
+			<span slot="title">Aller plus loin</span>
 
-			<span slot='contact-title'>Contact</span>
-			<span slot='contact-desc'>
+			<span slot="contact-title">Contact</span>
+			<span slot="contact-desc">
 				Venez nous dire bonjour sur notre groupe Telegram. On pourra y parler de vos idées
 				ainsi que des dernières nouvelles de Bonjourr et de son développement.
 			</span>
-			<span slot='contact-button'>Le Telegram de Bonjourr</span>
+			<span slot="contact-button">Le Telegram de Bonjourr</span>
 
-			<span slot='docs-title'>Documentation</span>
-			<span slot='docs-desc'>
+			<span slot="docs-title">Documentation</span>
+			<span slot="docs-desc">
 				Jettez un oeil à la documentation de Bonjourr où nous avons rassemblé des snippets
 				CSS pré-faits pour aller encore plus loin dans la personnalisation.
 			</span>
-			<span slot='docs-button'>Documentation</span>
+			<span slot="docs-button">Documentation</span>
 
-			<span slot='repo-title'>Fork Bonjourr</span>
-			<span slot='repo-desc'>
+			<span slot="repo-title">Fork Bonjourr</span>
+			<span slot="repo-desc">
 				Forkez Bonjourr et ajoutez-y vos propres fonctions sur notre repo GitHub. Nous
 				sommes ouverts aux pull requests :)
 			</span>
-			<span slot='repo-button'>Repo GitHub</span>
+			<span slot="repo-button">Repo GitHub</span>
 		</Further>
 
-		<h2 slot='donate-title'>Dons 😊</h2>
-		<p slot='donate-text'>
+		<h2 slot="donate-title">Dons 😊</h2>
+		<p slot="donate-text">
 			Puisque Bonjourr est entièrement gratuit et ne collecte ou ne vend aucune donnée, nous
 			ne gagnons aucun revenu de ce projet, excepté via les dons. Soutenir notre travail
 			financièrement est très important si vous souhaitez nous voir continuer de le mettre à
 			jour et ajouter des nouvelles fonctions.
 		</p>
 
-		<span slot='donate-fiat'>Dons</span>
-		<span slot='donate-crypto'>Dons en crypto</span>
+		<span slot="donate-fiat">Dons</span>
+		<span slot="donate-crypto">Dons en crypto</span>
 	</Frontpage>
 </Layout>

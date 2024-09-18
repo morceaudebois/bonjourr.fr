@@ -1,294 +1,333 @@
 ---
-import Docs from '@layouts/Docs.astro'
+import OverviewFilter from "@components/Docs/OverviewFilter.astro"
+import Docs from "@layouts/Docs.astro"
 ---
 
 <Docs
-	title='Liste de fonctionnalités'
-	lang='fr'
-	thumbnail='/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg'
+	title="Liste de fonctionnalités"
+	lang="fr"
+	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
-	<h2 id='interface'>Interface</h2>
+	<OverviewFilter />
 
-	<p>Survolez votre souris sur les crédits du fond d'écran pour voir les infos exif.</p>
+	<div id="interface">
+		<h2>Interface</h2>
 
-	<h2 id='show-all-settings'>Afficher tous les réglages</h2>
+		<p>Survolez votre souris sur les crédits du fond d'écran pour voir les infos exif.</p>
+	</div>
 
-	<p>
-		Bonjourr est rempli d'options. Afin de ne pas être trop intimidant, la plupart de ces
-		options sont cachées par défaut. Si vous êtes un utilisateur avancé, vous pouvez les
-		afficher en activant l'option "Afficher tous les réglages" tout en haut du panneau de
-		réglages.
-	</p>
+	<div id="show-all-settings">
+		<h2>Afficher tous les réglages</h2>
 
-	<h2 id='hide-settings-icon'>Cacher l'icône des réglages</h2>
+		<p>
+			Bonjourr est rempli d'options. Afin de ne pas être trop intimidant, la plupart de ces
+			options sont cachées par défaut. Si vous êtes un utilisateur avancé, vous pouvez les
+			afficher en activant l'option <bjr>Afficher tous les réglages</bjr> tout en haut du panneau
+			de réglages.
+		</p>
+	</div>
 
-	<p>
-		Lorsque vous sélectionnez l'option "Cacher l'icône des réglages", l'icône reste cliquable au
-		même endroit qu'auparavant. Vous pouvez également ouvrir le menu des réglages en appuyant
-		sur la touche <code>Echap</code>.
-	</p>
+	<div id="hide-settings-icon">
+		<h2>Cacher l'icône des réglages</h2>
 
-	<video src='/documentation/overview/hide-icon.mp4' controls muted></video>
+		<p>
+			Lorsque vous sélectionnez l'option <bjr>Cacher l'icône des réglages</bjr>, l'icône reste
+			cliquable au même endroit qu'auparavant. Vous pouvez également ouvrir le menu des
+			réglages en appuyant sur la touche <code>Echap</code>.
+		</p>
 
-	<h2 id='backgrounds'>Fond d'écran</h2>
+		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
+	</div>
 
-	<p>
-		Bonjourr utilise <a href='https://unsplash.com/developers'>l'API Unsplash</a> pour récupérer
-		ses arrière-plans. Nous les sélectionnons manuellement et les stockons dans quatre collections
-		différentes qui changent selon l'heure de la journée :
-	</p>
+	<div id="backgrounds">
+		<h2>Fond d'écran</h2>
 
-	<ul>
-		<li>
-			<a href='https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)'
-				>Pendant la journée</a
-			> ou
-			<a href='https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)'
-				>la nuit</a
-			>
-		</li>
-		<li>
-			2 heures entre <a
-				href='https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)'
-				>le lever du soleil (Noon)</a
-			> or
-			<a href='https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)'
-				>le coucher de soleil (Evening)</a
-			>
-		</li>
-	</ul>
+		<p>
+			Bonjourr utilise <a href="https://unsplash.com/developers">l'API Unsplash</a> pour récupérer
+			ses arrière-plans. Nous les sélectionnons manuellement et les stockons dans quatre collections
+			différentes qui changent selon l'heure de la journée :
+		</p>
 
-	<h3 id='unsplash-collection'>Collection Unsplash personnalisé</h3>
+		<ul>
+			<li>
+				<a href="https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)"
+					>Pendant la journée</a
+				> ou
+				<a href="https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)"
+					>la nuit</a
+				>
+			</li>
+			<li>
+				2 heures entre <a
+					href="https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)"
+					>le lever du soleil (Noon)</a
+				> or
+				<a
+					href="https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)"
+					>le coucher de soleil (Evening)</a
+				>
+			</li>
+		</ul>
 
-	<p>
-		Vous pouvez créer votre propre collection d'images en utilisant <a
-			href='https://unsplash.com/'>Unsplash</a
-		>. Pour ce faire, vous devez créer un compte Unsplash et ajouter toutes vos images à une
-		nouvelle collection. Une fois que vous êtes satisfait de votre sélection, vous avez besoin
-		de l'ID de la collection présent dans son URL. Vous le repérerez facilement puisqu'il s'agit
-		d'une chaîne de lettres et de chiffres aléatoires. Par exemple, si l'URL de votre collection
-		est <code>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code>, l'ID est <code
-			>2170139</code
-		>.
-	</p>
+		<h3 id="unsplash-collection">Collection Unsplash personnalisé</h3>
 
-	<p>
-		Retournez sur Bonjourr et collez l'ID dans le champ <i>Unsplash collection</i>. Vous pouvez
-		ajouter plusieurs collections en les séparant par une virgule.
-	</p>
+		<p>
+			Vous pouvez créer votre propre collection d'images en utilisant <a
+				href="https://unsplash.com/">Unsplash</a
+			>. Pour ce faire, vous devez créer un compte Unsplash et ajouter toutes vos images à une
+			nouvelle collection. Une fois que vous êtes satisfait de votre sélection, vous avez
+			besoin de l'ID de la collection présent dans son URL. Vous le repérerez facilement
+			puisqu'il s'agit d'une chaîne de lettres et de chiffres aléatoires. Par exemple, si
+			l'URL de votre collection est <code
+				>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
+			>, l'ID est <code>2170139</code>.
+		</p>
 
-	<h3 id='local-backgrounds'>Images locale</h3>
+		<p>
+			Retournez sur Bonjourr et collez l'ID dans le champ <bjr>Unsplash collection</bjr>. Vous
+			pouvez ajouter plusieurs collections en les séparant par une virgule.
+		</p>
 
-	<p>
-		Passez du type d'arrière-plan Dynamique à Personnalisé, et vous pourrez faire glisser et
-		déposer vos propres images de votre ordinateur vers Bonjourr.
-	</p>
+		<h3 id="local-backgrounds">Images locale</h3>
 
-	<h2 id='links'>Quick links</h2>
+		<p>
+			Passez du <bjr>Type d'arrière-plan</bjr> "Unsplash" à "Fichier local", et vous pourrez faire
+			glisser et déposer vos propres images de votre ordinateur vers Bonjourr.
+		</p>
+	</div>
 
-	<p>
-		Vous pouvez ajouter et importer des liens à partir des paramètres, et les modifier en
-		faisant un clic droit dessus.
-	</p>
+	<div id="links">
+		<h2>Quick links</h2>
 
-	<p>
-		Une façon simple d'ajouter une icône personnalisée à votre lien rapide est de la télécharger
-		sur un site comme Imgur, et d'utiliser ce lien comme icône. Vous pouvez également convertir
-		votre icône en une URI de données (max 8kB).
-	</p>
+		<p>
+			Vous pouvez ajouter et importer des liens à partir des paramètres, et les modifier en
+			faisant un clic droit dessus.
+		</p>
 
-	<p>
-		⚠️ <i>Attention</i>: par mesure de sécurité, les chemins locaux comme <code>file://</code>,
-		des liens sur les paramètres du navigateur comme <code>about:config</code> ou <code
-			>chrome://extensions</code
-		> ne peut pas être ajouté. Cependant, les liens <code>localhost:</code> fonctionneront très bien.
-	</p>
+		<p>
+			Une façon simple d'ajouter une icône personnalisée à votre lien rapide est de la
+			télécharger sur un site comme Imgur, et d'utiliser ce lien comme icône. Vous pouvez
+			également convertir votre icône en une URI de données (max 8kB).
+		</p>
 
-	<h3 id='folders'>Link folders</h3>
+		<p>
+			⚠️ <i>Attention</i>: par mesure de sécurité, les chemins locaux comme <code
+				>file://</code
+			>, des liens sur les paramètres du navigateur comme <code>about:config</code> ou <code
+				>chrome://extensions</code
+			> ne peut pas être ajouté. Cependant, les liens <code>localhost:</code> fonctionneront très
+			bien.
+		</p>
 
-	<p>
-		Les dossiers de liens sont très intéressants. Vous pouvez les faire glisser et les déposer.
-		En faisant glisser un dossier sur un autre, le contenu du dossier glissé est ajouté à la
-		cible. La suppression d'un dossier contenant des liens supprime aussi ces liens.
-	</p>
+		<h3 id="folders">Dossiers de liens</h3>
 
-	<h3 id='link-groups'>Link pages</h3>
+		<p>
+			Les dossiers de liens sont très intéressants. Vous pouvez les faire glisser et les
+			déposer. En faisant glisser un dossier sur un autre, le contenu du dossier glissé est
+			ajouté à la cible. La suppression d'un dossier contenant des liens supprime aussi ces
+			liens.
+		</p>
 
-	<p>
-		You can organize your links even more with link pages. To add a page, right click next to
-		the default page. You cannot remove the default page, you can rename it. Deleting a page
-		will remove the links inside.
-	</p>
+		<h3 id="link-groups">Groupes de liens</h3>
 
-	<video src='/documentation/overview/link-pages.mp4' controls muted></video>
+		<p>
+			Vous pouvez organiser vos liens encore plus avec des groupes de liens. Pour ajouter un
+			groupe, faites un clic droit à côté du groupe par défaut. Vous ne pouvez pas supprimer
+			le groupe par défaut, mais vous pouvez le renommer. La suppression d'une groupe effacera
+			les liens qu'il contient.
+		</p>
 
-	<h2 id='searchbar'>Search bar</h2>
+		<p>
+			Vous pouvez épingler les groupes avec l'option <bjr>Epingler ce groupe</bjr> en ouvrant le
+			menu contextuel depuis le titre du groupe.
+		</p>
 
-	<p>
-		En activant l'option de moteur de recherche personnalisé, la barre de recherche devient
-		compatible avec tous les moteurs de recherche, ce qui inclut des choses comme YouTube
-		(`https://www.youtube.com/results?search_query=%s`).
-	</p>
+		<video src="/documentation/overview/link-groups.mp4" controls muted></video>
+	</div>
 
-	<h2 id='notes'>Notes</h2>
+	<div id="searchbar">
+		<h2>Search bar</h2>
 
-	<p>
-		Notes utilise le système Markdown pour pouvoir faire des titres, des listes, et des cases à
-		cocher. Pour transformer une ligne, il suffit de rajouter ces caractères en début de ligne:
-	</p>
+		<p>
+			En activant l'option de moteur de recherche personnalisé, la barre de recherche devient
+			compatible avec tous les moteurs de recherche, ce qui inclut des choses comme YouTube:
+			https://www.youtube.com/results?search_query=%s.
+		</p>
+	</div>
 
-	<ul>
-		<li><code>#</code> titre gros</li>
-		<li><code>##</code> titre moyen</li>
-		<li><code>###</code> titre petit</li>
+	<div id="notes">
+		<h2>Notes</h2>
 
-		<li><code>-</code> liste classique</li>
-		<li><code>[ ]</code> case à cocher</li>
-		<li><code>[x]</code> case à cocher, coché</li>
-	</ul>
+		<p>
+			Notes utilise le système Markdown pour pouvoir faire des titres, des listes, et des
+			cases à cocher. Pour transformer une ligne, il suffit de rajouter ces caractères en
+			début de ligne:
+		</p>
 
-	<p>Les autres implémentations de Markdown, comme l'italique, ne sont pas encore disponible.</p>
+		<ul>
+			<li><code>#</code> titre gros</li>
+			<li><code>##</code> titre moyen</li>
+			<li><code>###</code> titre petit</li>
 
-	<h3>Keybindings</h3>
+			<li><code>-</code> liste classique</li>
+			<li><code>[ ]</code> case à cocher</li>
+			<li><code>[x]</code> case à cocher, coché</li>
+		</ul>
 
-	<table>
-		<thead>
-			<th>Keys</th>
-			<th>Action</th>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Ctrl + Shift + 1</td>
-				<td>To big heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 2</td>
-				<td>To medium heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 3</td>
-				<td>To small heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 4</td>
-				<td>To bullet list</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 5</td>
-				<td>To todo list</td>
-			</tr>
-		</tbody>
-	</table>
+		<p>
+			Les autres implémentations de Markdown, comme l'italique, ne sont pas encore disponible.
+		</p>
 
-	<h2 id='fonts'>Police d'écriture</h2>
+		<h3>Keybindings</h3>
 
-	<p>
-		Bonjourr récupère les polices de caractères depuis Fontsource. Si vous voulez voir les
-		aperçus des polices proposées par Bonjourr, allez sur le <a href='https://fontsource.com/'
-			>fontsource</a
-		>.
-	</p>
+		<table>
+			<thead>
+				<th>Keys</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ctrl + Shift + 1</td>
+					<td>To big heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 2</td>
+					<td>To medium heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 3</td>
+					<td>To small heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 4</td>
+					<td>To bullet list</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 5</td>
+					<td>To todo list</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
-	<h2 id='page-layout'>Mise en page</h2>
+	<div id="fonts">
+		<h2>Police d'écriture</h2>
 
-	<p>
-		Vous avez le choix entre trois mises en page différentes : simple, double et triple colonne.
-		Chaque mise en page enregistre la position et l'alignement de vos widgets de manière
-		indépendante.
-	</p>
+		<p>
+			Bonjourr récupère les polices de caractères depuis Fontsource. Si vous voulez voir les
+			aperçus des polices proposées par Bonjourr, allez sur le <a
+				href="https://fontsource.com/">fontsource</a
+			>.
+		</p>
+	</div>
 
-	<p>Ces options n'affectent que la mise en page actuelle :</p>
+	<div id="page-layout">
+		<h2>Mise en page</h2>
 
-	<ul>
-		<li>Toggle des widgets (Boutons Activer)</li>
-		<li>Toutes les options de mise en page dans la boîte à outils</li>
-		<li>Réinitialiser la mise en page</li>
-	</ul>
+		<p>
+			Vous avez le choix entre trois mises en page différentes : simple, double et triple
+			colonne. Chaque mise en page enregistre la position et l'alignement de vos widgets de
+			manière indépendante.
+		</p>
 
-	<video src='/documentation/overview/move-elem.mp4' controls muted></video>
+		<p>Ces options n'affectent que la mise en page actuelle :</p>
 
-	<h2 id='settings-managment'>Gestion des paramètres</h2>
+		<ul>
+			<li>Toggle des widgets (Boutons Activer)</li>
+			<li>Toutes les options de mise en page dans la boîte à outils</li>
+			<li>Réinitialiser la mise en page</li>
+		</ul>
 
-	<p>
-		Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Vous pouvez utiliser
-		cette fonction si vous souhaitez les sauvegarder ou les partager avec quelqu'un. Vous
-		pourrez à votre tour importer ces paramètres dans n'importe quelle instance de Bonjourr.
-	</p>
+		<video src="/documentation/overview/move-elem.mp4" controls muted></video>
+	</div>
 
-	<p>
-		Pour ce faire, il suffit d'aller en bas de votre panneau de paramètres, puis de cliquer sur
-		Exporter comme fichier dans la gestion des paramètres. Votre fichier sera téléchargé. Sur
-		votre autre instance de Bonjourr, vous pouvez alors aller dans l'onglet Importation de la
-		gestion des paramètres et déposer votre fichier. Bonjourr rechargera la page et tous vos
-		paramètres seront appliqués.
-	</p>
+	<div id="settings-management">
+		<h2>Gestion des paramètres</h2>
 
-	<h3>Synchronisation du navigateur</h3>
+		<p>
+			Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Vous pouvez
+			utiliser cette fonction si vous souhaitez les sauvegarder ou les partager avec
+			quelqu'un. Vous pourrez à votre tour importer ces paramètres dans n'importe quelle
+			instance de Bonjourr.
+		</p>
 
-	<p>
-		Bonjourr est compatible avec les fonctions de synchronisation automatique de
-		<a href='https://www.mozilla.org/fr/firefox/sync/'>Firefox</a>
-		et <a
-			href='https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop'
-			>Chrome</a
-		>. Si vous vous connectez à votre compte Mozilla/Google sur votre navigateur et que la
-		synchronisation est activée dans votre navigateur, Bonjourr devrait être synchronisé avec
-		d'autres instances du même navigateur sur d'autres ordinateurs. Cela fonctionne pour tous
-		les paramètres de Bonjourr ainsi que pour les liens rapides.
-	</p>
+		<p>
+			Pour ce faire, il suffit d'aller en bas de votre panneau de paramètres, puis de cliquer
+			sur Exporter comme fichier dans la gestion des paramètres. Votre fichier sera
+			téléchargé. Sur votre autre instance de Bonjourr, vous pouvez alors aller dans l'onglet
+			Importation de la gestion des paramètres et déposer votre fichier. Bonjourr rechargera
+			la page et tous vos paramètres seront appliqués.
+		</p>
 
-	<h2 id='keybindings'>Raccourcis clavier</h2>
+		<h3>Synchronisation du navigateur</h3>
 
-	<table>
-		<thead>
-			<th>Touches</th>
-			<th>Action</th>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Échap</td>
-				<td>Ouvre / ferme les paramètres</td>
-			</tr>
-			<tr>
-				<td>E (ciblé sur un lien)</td>
-				<td>Modifie le lien</td>
-			</tr>
-		</tbody>
-	</table>
+		<p>
+			Bonjourr est compatible avec les fonctions de synchronisation automatique de
+			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
+			et <a
+				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
+				>Chrome</a
+			>. Si vous vous connectez à votre compte Mozilla/Google sur votre navigateur et que la
+			synchronisation est activée dans votre navigateur, Bonjourr devrait être synchronisé
+			avec d'autres instances du même navigateur sur d'autres ordinateurs. Cela fonctionne
+			pour tous les paramètres de Bonjourr ainsi que pour les liens rapides.
+		</p>
+	</div>
 
-	<h3>Notes</h3>
+	<div id="keybindings">
+		<h2>Raccourcis clavier</h2>
 
-	<p>
-		Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre Note. Remplacez
-		`Ctrl` par `cmd` sous macOS.
-	</p>
+		<table>
+			<thead>
+				<th>Touches</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Échap</td>
+					<td>Ouvre / ferme les paramètres</td>
+				</tr>
+				<tr>
+					<td>E (ciblé sur un lien)</td>
+					<td>Modifie le lien</td>
+				</tr>
+			</tbody>
+		</table>
 
-	<table>
-		<thead>
-			<th>Keys</th>
-			<th>Action</th>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Ctrl + Maj + 1</td>
-				<td>Grand titre</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Maj + 2</td>
-				<td>Moyen titre</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Maj + 3</td>
-				<td>Petit titre</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Maj + 4</td>
-				<td>Liste à puce</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Maj + 5</td>
-				<td>Liste de tâches</td>
-			</tr>
-		</tbody>
-	</table>
+		<h3>Notes</h3>
+
+		<p>
+			Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre Note. Remplacez
+			`Ctrl` par `cmd` sous macOS.
+		</p>
+
+		<table>
+			<thead>
+				<th>Keys</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ctrl + Maj + 1</td>
+					<td>Grand titre</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Maj + 2</td>
+					<td>Moyen titre</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Maj + 3</td>
+					<td>Petit titre</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Maj + 4</td>
+					<td>Liste à puce</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Maj + 5</td>
+					<td>Liste de tâches</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </Docs>

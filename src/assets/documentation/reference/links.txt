@@ -2,9 +2,11 @@
 	linkstyle: 'large',		// large | medium | small | inline | text
 	linknewtab: false,		// open in new tab
 	linksrow: 6,			// From 1 to 16
-	linktabs: {
-		active: false,		// <!> soon deprecated
-		selected: 0,		// <!> soon deprecated
-		titles: [''],		// <!> soon deprecated
-	}
+	linkgroups: {
+		on: false,			// true | false
+		selected: '',		// Selected group
+		groups: [''],		// List of groups. Groups are unique titles.
+		pinned: [],			// Groups pinned to interface
+		synced: [],			// Synchronised groups, handled by the browser
+	},
 }

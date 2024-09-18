@@ -1,0 +1,27 @@
+---
+import { Code } from "astro-expressive-code/components"
+
+const { id, code, image_src, image_alt } = Astro.props
+let href = ""
+---
+
+<h2 id={id}>
+	<slot name="title" />
+</h2>
+
+<picture>
+	<img src={image_src} alt={image_alt} />
+</picture>
+
+<div>
+	<a href={`data:text/json;charset=utf-8,${href}`} download={`bonjourr-profile-${id}.json`}>
+		<slot name="download-label">Download import file</slot>
+	</a>
+	<details>
+		<summary>
+			<slot name="code-label" />
+		</summary>
+
+		<Code lang="json" code={code} />
+	</details>
+</div>
