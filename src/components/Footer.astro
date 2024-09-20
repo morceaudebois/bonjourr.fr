@@ -1,30 +1,30 @@
 ---
-import Link from './Link.astro'
+import Link from "./Link.astro"
 
-const isFrench = Astro.url.pathname.startsWith('/fr')
+const isFrench = Astro.url.pathname.startsWith("/fr")
 
 const en = {
-	'Made in France with ❤️': 'Made in France with ❤️',
-	'Privacy policy': 'Privacy policy',
-	'Source code': 'Source code',
-	'Contact us': 'Contact us',
-	by: 'by',
+	"Made in France with ❤️": "Made in France with ❤️",
+	"Privacy policy": "Privacy policy",
+	"Source code": "Source code",
+	"Contact us": "Contact us",
+	by: "by",
 }
 const fr = {
-	'Made in France with ❤️': 'Fabriqué en France avec ❤️',
-	'Privacy policy': 'Politique de confidentialité',
-	'Source code': 'Code source',
-	'Contact us': 'Contactez-nous',
-	by: 'par',
+	"Made in France with ❤️": "Fabriqué en France avec ❤️",
+	"Privacy policy": "Politique de confidentialité",
+	"Source code": "Code source",
+	"Contact us": "Contactez-nous",
+	by: "par",
 }
 const trans = isFrench ? fr : en
 ---
 
 <script>
 	window.onpageshow = () => {
-		const signatures = document.getElementById('signature_span') as HTMLSpanElement
-		const rowdir = Math.random() > 0.5 ? 'row-reverse' : 'row'
-		signatures.style.setProperty('--dir', rowdir)
+		const signatures = document.getElementById("signature_span") as HTMLSpanElement
+		const rowdir = Math.random() > 0.5 ? "row-reverse" : "row"
+		signatures.style.setProperty("--dir", rowdir)
 	}
 </script>
 
@@ -34,16 +34,16 @@ const trans = isFrench ? fr : en
 			<p>© 2019 Bonjourr</p>
 
 			<p>
-				<Link href="/privacy">{trans['Privacy policy']}</Link>
+				<Link href="/privacy">{trans["Privacy policy"]}</Link>
 			</p>
 
 			<p>
-				<a href="https://github.com/morceaudebois/bonjourr.fr">{trans['Source code']}</a>
+				<a href="https://github.com/morceaudebois/bonjourr.fr">{trans["Source code"]}</a>
 			</p>
 		</div>
 
 		<div id="signature">
-			<p>{trans['Made in France with ❤️']}</p>
+			<p>{trans["Made in France with ❤️"]}</p>
 
 			<p>
 				<span>{trans.by}</span>
@@ -57,7 +57,7 @@ const trans = isFrench ? fr : en
 		</div>
 
 		<div id="contact">
-			<p>{trans['Contact us']}</p>
+			<p>{trans["Contact us"]}</p>
 
 			<p>
 				<a href="https://t.me/BonjourrStartpage">Telegram</a> ·
@@ -72,9 +72,6 @@ const trans = isFrench ? fr : en
 		width: 100%;
 		min-height: 140px;
 		font-size: 15px;
-		color: #ccc;
-		background-color: #1a1a1a;
-		z-index: 2;
 	}
 
 	.container {
@@ -109,7 +106,6 @@ const trans = isFrench ? fr : en
 	}
 
 	footer a:hover {
-		color: white;
 		text-decoration: underline;
 	}
 

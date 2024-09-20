@@ -1,10 +1,9 @@
 ---
-import Background from '../Background.astro'
+import Background from "../Background.astro"
 
-import LandingImage from '../../assets/backgrounds/mitch-meyers-YQD1Xljt4xo.jpg'
-import OpenImage from '../../assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg'
-import DonateImage from '../../assets/backgrounds/timur-kozmenko-O_cPK84YZf4.jpg'
-import { btc, kofi } from '../../assets/icons/donate'
+import LandingImage from "@assets/backgrounds/mitch-meyers-YQD1Xljt4xo.jpg"
+import DonateImage from "@assets/backgrounds/timur-kozmenko-O_cPK84YZf4.jpg"
+import OpenImage from "@assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg"
 ---
 
 <section id="hero">
@@ -43,7 +42,7 @@ import { btc, kofi } from '../../assets/icons/donate'
 
 		<div class="buttons">
 			<a href="https://ko-fi.com/bonjourr" class="button">
-				<img width="64" src={kofi} class="icon" alt="" />
+				<img width="64" src="/frontpage/ko-fi.svg" class="icon" alt="" />
 				<slot name="donate-fiat" />
 			</a>
 
@@ -51,7 +50,7 @@ import { btc, kofi } from '../../assets/icons/donate'
 				href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
 				class="button"
 			>
-				<img width="64" src={btc} class="icon" alt="" />
+				<img width="64" src="/frontpage/btc.svg" class="icon" alt="" />
 				<slot name="donate-crypto" />
 			</a>
 		</div>
@@ -87,6 +86,7 @@ import { btc, kofi } from '../../assets/icons/donate'
 		margin: auto;
 		padding: 3em 2em;
 		max-width: 1200px;
+		z-index: 1;
 	}
 
 	#showcase {

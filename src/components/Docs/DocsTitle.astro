@@ -1,14 +1,14 @@
 ---
 let pathname = Astro.url.pathname
-pathname = pathname.replace('/fr', '')
-pathname = pathname.endsWith('/') ? pathname.slice(0, pathname.length - 1) : pathname
+pathname = pathname.replace("/fr", "")
+pathname = pathname.endsWith("/") ? pathname.slice(0, pathname.length - 1) : pathname
 
-const isFrench = Astro.url.pathname.startsWith('/fr')
-const home = isFrench ? 'Accueil' : 'Home'
-const locale = isFrench ? '/fr' : ''
+const isFrench = Astro.url.pathname.startsWith("/fr")
+const home = isFrench ? "Accueil" : "Home"
+const locale = isFrench ? "/fr" : ""
 
 // Todo: wrong href with deep paths
-const crumbs = pathname.split('/').map((path, i) => {
+const crumbs = pathname.split("/").map((path, i) => {
 	const href = `${locale}/${path}`
 	const text = i === 0 ? home : path
 	return [href, text]
@@ -45,7 +45,7 @@ const { title, thumbnail } = Astro.props
 	}
 
 	div::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -85,7 +85,7 @@ const { title, thumbnail } = Astro.props
 	}
 
 	li::after {
-		content: '>';
+		content: ">";
 		margin: 0 0.3em;
 	}
 

@@ -1,21 +1,21 @@
 ---
-import Background from '../components/Background.astro'
-import Layout from '../layouts/Layout.astro'
-import Link from '../components/Link.astro'
-import Image from '../assets/backgrounds/sasha-set-GURzQwO8Li0.jpg'
+import Background from "@components/Background.astro"
+import Layout from "@layouts/Layout.astro"
+import Link from "@components/Link.astro"
+import Image from "../assets/backgrounds/sasha-set-GURzQwO8Li0.jpg"
 ---
 
 <script is:inline>
-	const oldURLs = ['/use-bonjourr', '/misc', '/profiles', '/styles']
+	const oldURLs = ["/use-bonjourr", "/misc", "/profiles", "/styles"]
 	let path = location.pathname
 
 	if (oldURLs.includes(path)) {
-		path = path.replace('misc', 'overview')
-		path = path.replace('use-bonjourr', 'platforms')
-		path = path.replace('/', '/docs/')
+		path = path.replace("misc", "overview")
+		path = path.replace("use-bonjourr", "platforms")
+		path = path.replace("/", "/docs/")
 
-		if (navigator.language === 'fr') {
-			path = path.replace('/docs/', '/fr/docs/')
+		if (navigator.language === "fr") {
+			path = path.replace("/docs/", "/fr/docs/")
 		}
 
 		location.assign(path)
@@ -23,9 +23,9 @@ import Image from '../assets/backgrounds/sasha-set-GURzQwO8Li0.jpg'
 </script>
 
 <Layout title="404! · Bonjourr Startpage" id="404" lang="en">
-	<Background src={Image} blur="2" brightness=".8" width="300" />
-
 	<div class="wrapper">
+		<Background src={Image} blur="2" brightness=".8" width="300" />
+
 		<h1>
 			<span>4</span>
 			<span>0</span>
@@ -37,6 +37,7 @@ import Image from '../assets/backgrounds/sasha-set-GURzQwO8Li0.jpg'
 
 <style>
 	.wrapper {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -51,6 +52,7 @@ import Image from '../assets/backgrounds/sasha-set-GURzQwO8Li0.jpg'
 		text-shadow: 0.07em 0.07em #fff3;
 		letter-spacing: 0;
 		cursor: default;
+		z-index: 1;
 	}
 
 	h1 span {

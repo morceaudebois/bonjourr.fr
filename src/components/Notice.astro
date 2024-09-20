@@ -48,26 +48,26 @@
 </style>
 
 <script>
-	const noticeBanner = document.querySelector<HTMLElement>('.noticeBanner')
-	const noticeState = localStorage.getItem('noticeState')
+	const noticeBanner = document.querySelector<HTMLElement>(".noticeBanner")
+	const noticeState = localStorage.getItem("noticeState")
 
 	//  language based condition because IP based would be annoying and privacy unfriendly
 	let userLang = navigator.language || navigator.language
 
 	// userLang = 'zh-CN' // for testing
 
-	if (userLang.startsWith('zh-CN') && noticeBanner) {
-		window.addEventListener('load', function () {
-			if (noticeState != 'closed') {
-				noticeBanner.style.display = 'flex'
+	if (userLang.startsWith("zh-CN") && noticeBanner) {
+		window.addEventListener("load", function () {
+			if (noticeState != "closed") {
+				noticeBanner.style.display = "flex"
 			}
 
-			let okBtn = noticeBanner.querySelector<HTMLElement>('button')
+			let okBtn = noticeBanner.querySelector<HTMLElement>("button")
 
 			if (okBtn) {
 				okBtn.onclick = () => {
-					localStorage.setItem('noticeState', 'closed')
-					noticeBanner.style.display = 'none'
+					localStorage.setItem("noticeState", "closed")
+					noticeBanner.style.display = "none"
 				}
 			}
 		})

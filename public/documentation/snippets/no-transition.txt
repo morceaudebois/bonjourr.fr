@@ -1,5 +1,0 @@
-/* Faster background transition on startup */
-
-#background_overlay {
-	transition: transform 0.2s, opacity 0s;
-}

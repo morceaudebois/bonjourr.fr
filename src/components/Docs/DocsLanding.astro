@@ -1,16 +1,16 @@
 ---
-import Docs from '../../layouts/Docs.astro'
+import Docs from "@layouts/Docs.astro"
 const props = Astro.props
-const locale = props.lang === 'fr' ? '/fr' : ''
+const locale = props.lang === "fr" ? "/fr" : ""
 ---
 
 <Docs
 	lang={props.lang}
 	title="Documentation"
-	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE-unsplash.jpg"
+	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE.jpg"
 >
 	<section id="summary">
-		<a href={locale + '/docs/overview'}>
+		<a href={locale + "/docs/overview"}>
 			<span>💻</span>
 
 			<div>
@@ -19,7 +19,16 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 			</div>
 		</a>
 
-		<a href={locale + '/docs/contribute'}>
+		<a href={locale + "/docs/reference"}>
+			<span>🗂️</span>
+
+			<div>
+				<h3><slot name="reference-title" /></h3>
+				<p><slot name="reference-desc" /></p>
+			</div>
+		</a>
+
+		<a href={locale + "/docs/contribute"}>
 			<span>🤝</span>
 
 			<div>
@@ -28,7 +37,7 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 			</div>
 		</a>
 
-		<a href={locale + '/docs/profiles'}>
+		<a href={locale + "/docs/profiles"}>
 			<span>⚙️</span>
 
 			<div>
@@ -37,7 +46,7 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 			</div>
 		</a>
 
-		<a href={locale + '/docs/styles'}>
+		<a href={locale + "/docs/styles"}>
 			<span>✨</span>
 
 			<div>
@@ -50,12 +59,24 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 	<slot name="docs" />
 </Docs>
 
+<style is:global>
+	.content {
+		max-width: 1200px !important;
+	}
+
+	section {
+		max-width: 760px;
+		margin: auto;
+	}
+</style>
+
 <style>
 	#summary {
 		margin: 4em 0 2em;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 1em;
+		max-width: 100%;
 	}
 
 	#summary a {
@@ -99,6 +120,12 @@ const locale = props.lang === 'fr' ? '/fr' : ''
 		margin-bottom: 0;
 		font-size: 0.9em;
 		opacity: 0.9;
+	}
+
+	@media only screen and (max-width: 1000px) {
+		#summary {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	@media only screen and (max-width: 700px) {

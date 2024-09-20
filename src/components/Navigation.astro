@@ -1,11 +1,11 @@
 ---
-import Link from './Link.astro'
+import Link from "./Link.astro"
 
-const isFrench = Astro.url.pathname.startsWith('/fr')
+const isFrench = Astro.url.pathname.startsWith("/fr")
 const path = Astro.url.pathname
 
-const en = { Home: 'Home', Donate: 'Donate' }
-const fr = { Home: 'Accueil', Donate: 'Dons' }
+const en = { Home: "Home", Donate: "Donate" }
+const fr = { Home: "Accueil", Donate: "Dons" }
 const trans = isFrench ? fr : en
 ---
 
@@ -25,9 +25,9 @@ const trans = isFrench ? fr : en
 			<a href="https://online.bonjourr.fr">Online</a>
 		</div>
 
-		<a href={isFrench ? path.substring(3) : '/fr' + path} class="language">
+		<a href={isFrench ? path.substring(3) : "/fr" + path} class="language">
 			<span role="img" aria-label="">🌍</span>
-			{isFrench ? 'en' : 'fr'}
+			{isFrench ? "en" : "fr"}
 		</a>
 
 		<button open-button>
@@ -77,9 +77,9 @@ const trans = isFrench ? fr : en
 				<a href="https://online.bonjourr.fr">Online</a>
 			</div>
 
-			<a href={isFrench ? path.substring(3) : '/fr' + path} class="language">
+			<a href={isFrench ? path.substring(3) : "/fr" + path} class="language">
 				<span role="img" aria-label="">🌍</span>
-				{isFrench ? 'English' : 'French'}
+				{isFrench ? "English" : "French"}
 			</a>
 
 			<hr />
@@ -123,21 +123,21 @@ const trans = isFrench ? fr : en
 
 <script>
 	function closeMobileNav() {
-		document.body?.classList.remove('showNav')
+		document.body?.classList.remove("showNav")
 	}
 
 	function openMobileNav() {
-		document.body?.classList.add('showNav')
+		document.body?.classList.add("showNav")
 	}
 
-	document.querySelector('[open-button]')?.addEventListener('click', () => openMobileNav())
+	document.querySelector("[open-button]")?.addEventListener("click", () => openMobileNav())
 
-	document.querySelector('.overlay')?.addEventListener('click', () => closeMobileNav())
-	document.querySelector('[close-button]')?.addEventListener('click', () => closeMobileNav())
+	document.querySelector(".overlay")?.addEventListener("click", () => closeMobileNav())
+	document.querySelector("[close-button]")?.addEventListener("click", () => closeMobileNav())
 
-	document.addEventListener('keydown', (event) => {
+	document.addEventListener("keydown", (event) => {
 		const { key } = event
-		if (key === 'Escape') closeMobileNav()
+		if (key === "Escape") closeMobileNav()
 	})
 </script>
 

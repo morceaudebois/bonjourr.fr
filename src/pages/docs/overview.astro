@@ -1,283 +1,430 @@
 ---
-import Docs from '../../layouts/Docs.astro'
+import OverviewFilter from "@components/Docs/OverviewFilter.astro"
+import Docs from "@layouts/Docs.astro"
 ---
 
 <Docs
 	title="Features overview"
 	lang="en"
-	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8-unsplash.jpg"
+	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
-	<h2 id="interface">Interface</h2>
+	<OverviewFilter />
 
-	<p>Hover your mouse on the background credits to see exif infos</p>
+	<div id="interface">
+		<h2>Interface</h2>
 
-	<h2 id="show-all-settings">Show all settings</h2>
+		<p>Hover your mouse on the background credits to see exif infos</p>
+	</div>
 
-	<p>
-		Bonjourr has lots of options. In an attempt to not be jarring for newcomers, we decided to
-		hide most of them by default. If you're an advanced user, you can enable all those options
-		by toggling <i>Show all settings</i> at the very top of the settings menu.
-	</p>
+	<div id="show-all-settings">
+		<h2>Show all settings</h2>
 
-	<h2 id="hide-settings-icon">Hide settings icon</h2>
+		<p>
+			Bonjourr has lots of options. In an attempt to not be jarring for newcomers, we decided
+			to hide most of them by default. If you're an advanced user, you can enable all those
+			options by toggling <bjr>Show all settings</bjr> at the very top of the settings menu.
+		</p>
+	</div>
 
-	<p>
-		When selecting the "Hide settings icon", the icon is still clickable at the same position as
-		before. You can also open the settings menu by pressing the <code>Escape</code> key.
-	</p>
+	<div id="newtab-title">
+		<h2>New tab title</h2>
 
-	<video src="/documentation/videos/hide-icon.mp4" controls muted></video>
+		<p>
+			You can customize the text and icon (called favicon) displayed by your browser when for
+			each new tabs created. Text is limited to 80 characters, and icons can only be emojis
+			for now.
+		</p>
 
-	<h2 id="backgrounds">Backgrounds</h2>
+		<p>
+			<span>Here is how to write emojis depending on your system:</span>
+			<ul>
+				<li>Windows: <code>WIN + .</code> (windows key + dot)</li>
+				<li>MacOS: <code>CTRL + CMD + Space</code></li>
+				<li>
+					<span>Everyone else: </span>
+					<a href="https://unicode.org/emoji/charts/full-emoji-list.html"
+						>unicode.org/emoji/charts/full-emoji-list</a
+					>
+				</li>
+			</ul>
+		</p>
+	</div>
 
-	<p>
-		Bonjourr uses the <a href="https://unsplash.com/developers">Unsplash API</a> to fetch its backgrounds.
-		We select them manually and store them in four different collections that change according to
-		the time of the day:
-	</p>
+	<div id="hide-settings-icon">
+		<h2>Hide settings icon</h2>
 
-	<ul>
-		<li>
-			<a href="https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)"
-				>During the day</a
-			> or
-			<a href="https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)"
-				>at night</a
-			>
-		</li>
-		<li>
-			2 hours around <a
-				href="https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)"
-				>sunrise (Noon)</a
-			> or
-			<a href="https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)"
-				>sunset (Evening)</a
-			>
-		</li>
-	</ul>
+		<p>
+			When selecting the <bjr>Hide settings icon</bjr>, the icon is still clickable at the
+			same position as before. You can also open the settings menu by pressing the <code
+				>Escape</code
+			> key.
+		</p>
 
-	<h3 id="unslpash-collection">Custom Unsplash collection</h3>
+		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
+	</div>
 
-	<p>
-		You can make your own collection of images using <a href="https://unsplash.com/">Unsplash</a
-		>. To do so, you'll need to create an Unsplash account and add all your images to a new
-		collection. Once you're pleased with your selection, you need the collection's ID present in
-		its URL. You will spot it easily since it's the string of random letters and numbers. For
-		example, if your collection's URL is <code
-			>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
-		>, the ID is <code>2170139</code>.
-	</p>
+	<div id="backgrounds">
+		<h2>Backgrounds</h2>
 
-	<p>
-		Head back to Bonjourr and paste the ID in the <i>Unsplash collection</i> field. You can add multiple
-		collections by separating them with a comma.
-	</p>
+		<p>
+			Bonjourr uses the <a href="https://unsplash.com/developers">Unsplash API</a> to fetch its
+			backgrounds. We select them manually and store them in four different collections that change
+			according to the time of the day:
+		</p>
 
-	<h3 id="local-backgrounds">Local files</h3>
+		<ul>
+			<li>
+				<a href="https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)"
+					>During the day</a
+				> or
+				<a href="https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)"
+					>at night</a
+				>
+			</li>
+			<li>
+				2 hours around <a
+					href="https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)"
+					>sunrise (Noon)</a
+				> or
+				<a
+					href="https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)"
+					>sunset (Evening)</a
+				>
+			</li>
+		</ul>
 
-	<p>
-		Switch your background type from Dynamic to Custom, and you'll be able to drag and drop your
-		own images from your computer to Bonjourr.
-	</p>
+		<h3 id="unsplash-collection">Custom Unsplash collection</h3>
 
-	<h2 id="links">Quick Links</h2>
+		<p>
+			You can make your own collection of images using <a href="https://unsplash.com/"
+				>Unsplash</a
+			>. To do so, you'll need to create an Unsplash account and add all your images to a new
+			collection. Once you're pleased with your selection, you need the collection's ID
+			present in its URL. You will spot it easily since it's the string of random letters and
+			numbers. For example, if your collection's URL is <code
+				>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
+			>, the ID is <code>2170139</code>.
+		</p>
 
-	<p>
-		You can add and import Quick Links from the settings, and edit them when you right click on
-		them.
-	</p>
+		<p>
+			Head back to Bonjourr and paste the ID in the <bjr>Unsplash collection</bjr> field. You can
+			add multiple collections by separating them with a comma.
+		</p>
 
-	<p>
-		An easy way to add a custom icon to your Quick Link is to upload it on somewhere like Imgur,
-		and use that link as an icon. You can also convert your icon to a Data URI (max 8kB).
-	</p>
+		<h3 id="local-backgrounds">Local files</h3>
 
-	<p>
-		⚠️ <i>Notice</i>: as a security measure, local paths like <code>file://</code>, browser
-		settings links like <code>about:config</code> or <code>chrome://extensions</code> can't be added.
-		However, <code>localhost:</code> links will work just fine.
-	</p>
+		<p>
+			Switch your <bjr>Background type</bjr> from "Unsplash" to "Local file", and you'll be able
+			to drag and drop your own images from your computer to Bonjourr.
+		</p>
+	</div>
 
-	<h3 id="folders">Link folders</h3>
+	<div id="clock">
+		<h2>Time and date</h2>
 
-	<p>
-		Links folders are pretty cool. You can drag and drop them. Dragging a folder on another will
-		add the content of the dragged folder in the target. Deleting a folder with links inside
-		will also delete those links.
-	</p>
+		<p>The analog clock background is blurred when its opacity is above 0.</p>
 
-	<h3 id="link-groups">Link pages</h3>
+		<h3 id="world-clocks">World clocks</h3>
 
-	<p>
-		You can organize your links even more with link pages. To add a page, right click next to
-		the default page. You cannot remove the default page, you can rename it. Deleting a page
-		will remove the links inside.
-	</p>
+		<p>
+			<bjr>World clocks</bjr> allows you to add multiple clocks with different timezones. Removing
+			the name of a world clock will remove the clock entirely.
+		</p>
+	</div>
 
-	<video src="/documentation/videos/link-pages.mp4" controls muted></video>
+	<div id="weather">
+		<h2>Weather</h2>
 
-	<h2 id="searchbar">Search bar</h2>
+		<p>
+			Precise geolocation needs access to your device's GPS. Some browsers or systems might
+			not allow access based on its privacy setting. MacOS / Safari often causes problems.
+		</p>
 
-	<p>
-		When enabling the custom search engine option, the searchbar becomes compatible with all
-		search engines, which includes things like YouTube
-		(`https://www.youtube.com/results?search_query=%s`).
-	</p>
+		<p>
+			If there are multiple cities with the same name in your country, it might cause an
+			issue. A good trick to fix the issue is to choose the name of the closest city with a
+			unique name.
+		</p>
 
-	<h2 id="notes">Notes</h2>
+		<p>
+			Until we add a "refresh weather" option, you can refresh the weather by toggling the
+			weather
+			<bjr>Unit</bjr>. Celsius -> Farenheit -> Celsius.
+		</p>
 
-	<p>
-		Notes uses Markdown to create titles, lists, and checkboxes. To transform a line, just add
-		these characters at the start of a line:
-	</p>
+		<h3 id="detailed-weather">Detailed weather</h3>
 
-	<ul>
-		<li><code>#</code> big heading</li>
-		<li><code>##</code> medium heading</li>
-		<li><code>###</code> small heading</li>
+		<p>
+			<bjr>Detailed weather</bjr> allows you to easily go to a weather provider's website to get
+			a detailed weather report. Click on the weather widget to go to your choice of provider.
+		</p>
 
-		<li><code>-</code> classic list</li>
-		<li><code>[ ]</code> checkbox</li>
-		<li><code>[x]</code> checkbox, checked</li>
-	</ul>
+		<p>
+			⚠️ We are in no way affiliated with MSN, Accuweather, Yahoo!, or Windy.com. These
+			websites offers reports with different data provider, hence the choice.
+		</p>
+	</div>
 
-	<p>Other Markdown features, like italics, are not available currently.</p>
+	<div id="links">
+		<h2>Quick Links</h2>
 
-	<h3>Keybindings</h3>
+		<p>
+			You can add and import Quick Links from the settings, and edit them when you right click
+			on them.
+		</p>
 
-	<table>
-		<thead>
-			<th>Keys</th>
-			<th>Action</th>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Ctrl + Shift + 1</td>
-				<td>To big heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 2</td>
-				<td>To medium heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 3</td>
-				<td>To small heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 4</td>
-				<td>To bullet list</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 5</td>
-				<td>To todo list</td>
-			</tr>
-		</tbody>
-	</table>
+		<p>
+			An easy way to add a custom icon to your Quick Link is to upload it on somewhere like
+			Imgur, and use that link as an icon. You can also convert your icon to a Data URI (max
+			8kB).
+		</p>
 
-	<h2 id="fonts">Fonts</h2>
+		<p>
+			⚠️ <i>Notice</i>: as a security measure, local paths like <code>file://</code>, browser
+			settings links like <code>about:config</code> or <code>chrome://extensions</code> can't be
+			added. However, <code>localhost:</code> links will work just fine.
+		</p>
 
-	<p>
-		Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts Bonjourr
-		offers, please visit <a href="https://fontsource.com/">fontsource</a>.
-	</p>
+		<h3 id="link-icons">Icons</h3>
 
-	<h2 id="page-layouts">Page layouts</h2>
+		<p>
+			Link icons are retrieved by our homemade service <a
+				href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a
+			>. If you find that a website is missing its icon, you can create an issue on our
+			service and it will be fixed.
+		</p>
 
-	<p>
-		There are 3 different page layouts to choose from: single, double and triple column. Each
-		layout saves the position and alignment of your widgets independently.
-	</p>
+		<p>
+			You can change a link icon by right clicking on a link to open its menu, and adding a
+			valid URL in the <code>Icon</code> input. It can be a:
 
-	<p>These options only affect the current layout:</p>
+			<ul>
+				<li>✅ Distant URL: <code>https://en.wikipedia.org/favicon.ico</code></li>
+				<li>✅ Locally hosted URL: <code>http://127.0.0.1:4321/favicon.ico</code></li>
+				<li>
+					✅ DataURI smaller than 8kb: <code>data:image/gif;base64,R0lGOD...AA7</code>
+				</li>
+			</ul>
 
-	<ul>
-		<li>Widget toggle (Enable switches)</li>
-		<li>All options in grid toolbox</li>
-		<li>Reset layout</li>
-	</ul>
+			But not a:
 
-	<video src="/documentation/videos/move-elem.mp4" controls muted></video>
+			<ul>
+				<li>❌ File path: <code>file:///Users/Me/Pictures/flowers.png</code></li>
+			</ul>
+		</p>
 
-	<h2 id="settings-managment">Settings management</h2>
+		<h4 id="link-icons-cache">Cache policy</h4>
 
-	<p>
-		Bonjourr allows you to export all your settings into a file. You can use this feature if you
-		want to save them or share them to someone. You will in turn be able to import said settings
-		into any instance of Bonjourr.
-	</p>
+		<p>
+			Icons from favicon-fetcher are stored in the browser cache for a year. As long as the
+			browser cache is not cleared, icons are not fetched (or updated) by the page. However,
+			if the browser cache is often cleared or storage space is limited on your device, icons
+			will have to be fetched from our service.
+		</p>
 
-	<p>
-		To do so, simply go to the bottom of your settings pannel, then click Export as file in the
-		settings management. Your file will be downloaded. On your other instance of Bonjourr, you
-		can then go to the Import tab of the settings management and drop your file. Bonjourr will
-		reload and all your settings will be applied.
-	</p>
+		<p>
+			Icons you add manually from a distant URL will have a different cache policy, which
+			might cause the icon to be fetched often or even every time.
+		</p>
 
-	<h3>Browser syncing</h3>
+		<h3 id="folders">Link folders</h3>
 
-	<p>
-		Bonjourr is compatible with the automatic syncing features of both
-		<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
-		and <a
-			href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
-			>Chrome</a
-		>. If you log into your Mozilla/Google account on your browser and have syncing enabled in
-		your browser, Bonjourr should get synced to other instances of the same browser on other
-		computers. This is true for all Bonjourr settings as well as Quick Links.
-	</p>
+		<p>
+			Links folders are pretty cool. You can drag and drop them. Dragging a folder on another
+			will add the content of the dragged folder in the target. Deleting a folder with links
+			inside will also delete those links.
+		</p>
 
-	<h2 id="keybindings">Keybindings</h2>
+		<h3 id="link-groups">Link groups</h3>
 
-	<table>
-		<thead>
-			<th>Keys</th>
-			<th>Action</th>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Escape</td>
-				<td>Opens / closes settings</td>
-			</tr>
-			<tr>
-				<td>E (focused on link)</td>
-				<td>Edits links</td>
-			</tr>
-		</tbody>
-	</table>
+		<p>
+			You can organize your links even more with link groups. To add a page, right click next
+			to the default page. You cannot remove the default page but you can rename it. Deleting a
+			page will remove the links inside.
+		</p>
 
-	<h3>Notes</h3>
+		<p>
+			You can pin groups by selecting <bjr>Pin this group</bjr> after opening the context menu
+			from the group title.
+		</p>
 
-	<p>
-		You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `Cmd` on
-		macOS.
-	</p>
+		<video src="/documentation/overview/link-groups.mp4" controls muted></video>
+	</div>
 
-	<table>
-		<thead>
-			<th>Keys</th>
-			<th>Action</th>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Ctrl + Shift + 1</td>
-				<td>To big heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 2</td>
-				<td>To medium heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 3</td>
-				<td>To small heading</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 4</td>
-				<td>To bullet list</td>
-			</tr>
-			<tr>
-				<td>Ctrl + Shift + 5</td>
-				<td>To todo list</td>
-			</tr>
-		</tbody>
-	</table>
+	<div id="searchbar">
+		<h2>Search bar</h2>
+
+		<p>
+			When enabling the custom search engine option, the searchbar becomes compatible with all
+			search engines, which includes things like YouTube:
+			https://www.youtube.com/results?search_query=%s.
+		</p>
+	</div>
+
+	<div id="notes">
+		<h2>Notes</h2>
+
+		<p>
+			Notes uses Markdown to create titles, lists, and checkboxes. To transform a line, just
+			add these characters at the start of a line:
+		</p>
+
+		<ul>
+			<li><code>#</code> big heading</li>
+			<li><code>##</code> medium heading</li>
+			<li><code>###</code> small heading</li>
+
+			<li><code>-</code> classic list</li>
+			<li><code>[ ]</code> checkbox</li>
+			<li><code>[x]</code> checkbox, checked</li>
+		</ul>
+
+		<p>Other Markdown features, like italics, are not available currently.</p>
+
+		<h3>Keybindings</h3>
+
+		<table>
+			<thead>
+				<th>Keys</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ctrl + Shift + 1</td>
+					<td>To big heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 2</td>
+					<td>To medium heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 3</td>
+					<td>To small heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 4</td>
+					<td>To bullet list</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 5</td>
+					<td>To todo list</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="fonts">
+		<h2>Fonts</h2>
+
+		<p>
+			Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts
+			Bonjourr offers, please visit <a href="https://fontsource.com/">fontsource.com</a>.
+		</p>
+	</div>
+
+	<div id="page-layouts">
+		<h2>Page layouts</h2>
+
+		<p>
+			There are 3 different page layouts to choose from: single, double and triple column.
+			Each layout saves the position and alignment of your widgets independently.
+		</p>
+
+		<p>These options only affect the current layout:</p>
+
+		<ul>
+			<li>Widget toggle (Enable switches)</li>
+			<li>All options in grid toolbox</li>
+			<li>Reset layout</li>
+		</ul>
+
+		<video src="/documentation/overview/move-elem.mp4" controls muted></video>
+	</div>
+
+	<div id="settings-management">
+		<h2>Settings management</h2>
+
+		<p>
+			Bonjourr allows you to export all your settings into a file. You can use this feature if
+			you want to save them or share them to someone. You will in turn be able to import said
+			settings into any instance of Bonjourr.
+		</p>
+
+		<p>
+			To do so, simply go to the bottom of your settings pannel, then click Export as file in
+			the settings management. Your file will be downloaded. On your other instance of
+			Bonjourr, you can then go to the Import tab of the settings management and drop your
+			file. Bonjourr will reload and all your settings will be applied.
+		</p>
+
+		<h3>Browser syncing</h3>
+
+		<p>
+			Bonjourr is compatible with the automatic syncing features of both
+			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
+			and <a
+				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
+				>Chrome</a
+			>. If you log into your Mozilla/Google account on your browser and have syncing enabled
+			in your browser, Bonjourr should get synced to other instances of the same browser on
+			other computers. This is true for all Bonjourr settings as well as Quick Links.
+		</p>
+	</div>
+
+	<div id="keybindings">
+		<h2>Keybindings</h2>
+
+		<table>
+			<thead>
+				<th>Keys</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Escape</td>
+					<td>Opens / closes settings</td>
+				</tr>
+				<tr>
+					<td>E (focused on link)</td>
+					<td>Edits links</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>Notes</h3>
+
+		<p>
+			You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `Cmd` on
+			macOS.
+		</p>
+
+		<table>
+			<thead>
+				<th>Keys</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ctrl + Shift + 1</td>
+					<td>To big heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 2</td>
+					<td>To medium heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 3</td>
+					<td>To small heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 4</td>
+					<td>To bullet list</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 5</td>
+					<td>To todo list</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </Docs>

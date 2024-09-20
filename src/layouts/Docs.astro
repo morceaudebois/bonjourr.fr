@@ -1,6 +1,6 @@
 ---
-import Layout from './Layout.astro'
-import DocsTitle from '../components/Docs/DocsTitle.astro'
+import Layout from "./Layout.astro"
+import DocsTitle from "@components/Docs/DocsTitle.astro"
 
 let { title, thumbnail, lang, frontmatter } = Astro.props
 
@@ -10,22 +10,29 @@ if (!title && frontmatter) {
 ---
 
 <script is:inline>
-	window.addEventListener('DOMContentLoaded', function() {	
-		Object.values(document.querySelectorAll('h2, h3, h4, h5, h6'))
-			.filter(h => h.id)
-			.forEach(heading => {
-				heading.innerHTML += `<a href="#${heading.id}" class="perma" aria-label="permalink">🔗</a>`
-		})
+	window.addEventListener("DOMContentLoaded", function () {
+		const permalink = (id) => `<a href="#${id}" class="perma" aria-label="permalink">🔗</a>`
+
+		// Classic permalink
+		const hx = document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
+		hx.forEach((h) => (h.innerHTML += permalink(h.id)))
+
+		// Use group id to add perma to heading
+		const groups = document.querySelectorAll(".content > div")
+		const ids = Object.values(groups).map((node) => node.id)
+
+		if (ids.length > 0) {
+			const h2 = document.querySelectorAll("h2")
+			h2.forEach((h2, i) => (h2.innerHTML += permalink(ids[i])))
+		}
 	})
 </script>
 
-<Layout title={`${title} · Bonjourr's documentation`} lang={lang} id='docs'>
-
+<Layout title={`${title} · Bonjourr's documentation`} lang={lang} id="docs">
 	<main>
-		<DocsTitle title={title} thumbnail={thumbnail}>
-		</DocsTitle>
-		
-		<div class='content'>
+		<DocsTitle title={title} thumbnail={thumbnail} />
+
+		<div class="content">
 			<slot />
 		</div>
 	</main>
@@ -40,7 +47,7 @@ if (!title && frontmatter) {
 		height: 100vh;
 		z-index: -1;
 	}
-	
+
 	body {
 		background-color: #181818;
 	}
@@ -50,35 +57,24 @@ if (!title && frontmatter) {
 		line-height: 1.6em;
 	}
 
+	main a:hover {
+		text-decoration: underline;
+	}
+
 	h1 {
 		font-size: 3em;
 		line-height: 2em;
 		text-align: center;
 	}
 
-
-
-	pre {
-		tab-size: 1.5em;
-		padding: 1.5em;
-		border-radius: 0.5em;
-		border: 1px solid #fff1;
-	}
-
-	article.profiles pre {
-		white-space: normal;
-	}
-
-	pre > code {
-		background-color: transparent;
-	}
-
 	.content {
 		max-width: 740px;
 		min-width: 360px;
+		min-height: 80vh;
 		width: 100%;
 		margin: auto;
 		padding: 0 2em 6em;
+		color: #e7e6ea;
 	}
 
 	.content a {
@@ -98,7 +94,7 @@ if (!title && frontmatter) {
 		position: relative;
 		margin: 0;
 		font-weight: 500;
-		padding: 1em 2rem .5em 0;
+		padding: 1em 2rem 0.5em 0;
 		width: max-content;
 		max-width: 100%;
 	}
@@ -129,20 +125,29 @@ if (!title && frontmatter) {
 		font-size: 1.6em;
 	}
 
-	p,
-	ul,
-	code {
-		color: #e7e6ea;
+	bjr {
+		filter: invert(1);
+		border-radius: 4px;
+		padding: 1px 6px;
+		color: #bbb;
+		background-color: #222;
 	}
 
 	code {
-		/* border: 1px solid #fff3; */
-		background-color: #fff3;
-		color: white;
 		border-radius: 2px;
-		padding: .1em .2em 0;
-		font-size: .9em;
+		padding: 0.1em 0.2em 0;
 		word-break: break-word;
+	}
+
+	pre {
+		padding: 2em;
+		font-size: 13px;
+		line-height: 1.5em;
+		border-radius: 1em;
+	}
+
+	pre code span {
+		tab-size: 4ch !important;
 	}
 
 	strong {
@@ -159,9 +164,10 @@ if (!title && frontmatter) {
 		margin: auto;
 	}
 
-	img, video {
+	img,
+	video {
 		border-radius: 0.5em;
-		margin-top: .8em;
+		margin-top: 0.8em;
 	}
 
 	table {
@@ -177,7 +183,7 @@ if (!title && frontmatter) {
 	}
 
 	td {
-		padding: .6em;
+		padding: 0.6em;
 		border: 1px solid #ccc;
 		max-width: 500px;
 	}
@@ -200,7 +206,7 @@ if (!title && frontmatter) {
 	}
 
 	details {
-		padding: 1em
+		padding: 1em;
 	}
 
 	details code {
@@ -214,8 +220,8 @@ if (!title && frontmatter) {
 			background-color: #f7f7f7;
 		}
 
-		.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content ul, .content code, .content table, .content {
-			color: #1c1c1c;
+		.content {
+			color: #2c2c2c;
 		}
 
 		.content a {
@@ -242,10 +248,6 @@ if (!title && frontmatter) {
 
 		article {
 			flex-direction: column;
-		}
-
-		{
-			min-width: 100%;
 		}
 	}
 

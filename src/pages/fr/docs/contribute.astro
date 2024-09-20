@@ -1,19 +1,19 @@
 ---
-import Docs from '../../../layouts/Docs.astro'
-import Link from '../../../components/Link.astro'
+import Docs from "@layouts/Docs.astro"
+import Link from "@components/Link.astro"
 
 const webstore =
-	'https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd'
+	"https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
 const edgeAddons =
-	'https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid'
-const firefoxAddons = 'https://addons.mozilla.org/firefox/addon/bonjourr-startpage/'
-const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236'
+	"https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid"
+const firefoxAddons = "https://addons.mozilla.org/firefox/addon/bonjourr-startpage/"
+const appleAppStore = "https://apps.apple.com/fr/app/bonjourr-startpage/id1615431236"
 ---
 
 <Docs
 	title="Participer"
 	lang="en"
-	thumbnail="/documentation/backgrounds/pascal-debrunner-LKOuYT5_dyw-unsplash.jpg"
+	thumbnail="/documentation/backgrounds/pascal-debrunner-LKOuYT5_dyw.jpg"
 >
 	<h2 id="donate">Dons</h2>
 
@@ -79,6 +79,21 @@ const appleAppStore = 'https://apps.apple.com/fr/app/bonjourr-startpage/id161543
 	<p>
 		⚠️ N'oubliez pas de joindre votre nom et votre lien afin que nous puissions vous créditer!
 	</p>
+
+	<h3>Testez votre traduction</h3>
+
+	<ul>
+		<li>
+			Allez sur <a href="https://online.bonjourr.fr">online.bonjourr.fr</a> et selectionnez votre
+			langue.
+		</li>
+		<li>Ouvrez la console développeur (F12, CTRL+Shift+J ou CTRL+Shift+I).</li>
+		<li>
+			Collez ce code: <code>localStorage.translations = JSON.stringify()</code> avec le contenu
+			de <code>translations.json</code> à l'intérieur des parenthèses.
+		</li>
+		<li>Rafraîchissez la page, ça devrait fonctionner !</li>
+	</ul>
 
 	<h2 id="new-features">Nouvelles fonctionnalités</h2>
 

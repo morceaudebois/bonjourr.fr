@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro:assets'
+import { Picture } from "astro:assets"
 const { blur, brightness, src, width } = Astro.props
 ---
 
@@ -9,7 +9,7 @@ const { blur, brightness, src, width } = Astro.props
 		src={src}
 		width={width}
 		densities={[2]}
-		formats={['webp']}
+		formats={["webp"]}
 		style={`filter: blur(${blur ?? 0}em) brightness(${brightness ?? 1})`}
 		{...Astro.props}
 	/>
@@ -22,7 +22,6 @@ const { blur, brightness, src, width } = Astro.props
 		user-select: none;
 		pointer-events: none;
 		touch-action: none;
-		z-index: -1;
 	}
 
 	img {

@@ -1,6 +1,5 @@
 ---
-import Link from '../Link.astro'
-import { telegram, github, docs } from '../../assets/icons/further'
+import Link from "../Link.astro"
 ---
 
 <div class="container">
@@ -20,7 +19,7 @@ import { telegram, github, docs } from '../../assets/icons/further'
 		</p>
 
 		<a href="https://t.me/BonjourrStartpage" class="button">
-			<img width="64" src={telegram} class="icon" alt="" />
+			<img width="64" src="/frontpage/telegram.svg" class="icon" alt="" />
 			<slot name="contact-button" />
 		</a>
 	</div>
@@ -35,7 +34,7 @@ import { telegram, github, docs } from '../../assets/icons/further'
 		</p>
 
 		<Link href="/docs" class="button">
-			<img width="64" src={docs} class="icon" alt="" />
+			<img width="64" src="/frontpage/docs.svg" class="icon" alt="" />
 			<slot name="docs-button" />
 		</Link>
 	</div>
@@ -48,7 +47,7 @@ import { telegram, github, docs } from '../../assets/icons/further'
 			<slot name="repo-desc" />
 		</p>
 		<a href="https://github.com/victrme/Bonjourr" class="button">
-			<img width="64" src={github} class="icon" alt="" />
+			<img width="64" src="/frontpage/github.svg" class="icon" alt="" />
 			<slot name="repo-button" />
 		</a>
 	</div>
