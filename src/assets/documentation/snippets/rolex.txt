@@ -1,7 +1,7 @@
 /* Rolex 😎 */
 
-#analog-face,
-#analog-face:hover {
+.analog-face,
+.analog-face:hover {
 	border-radius: 100%;
 	border-width: 1px;
 	background-size: cover;

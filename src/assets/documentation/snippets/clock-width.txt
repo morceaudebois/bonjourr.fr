@@ -5,20 +5,20 @@
 	--anlg-w: 6px;
 }
 
-#analog #center {
+.analog .analog-center {
 	width: calc(var(--anlg-w) * 4);
 	height: calc(var(--anlg-w) * 4);
 }
 
-#analog {
+.analog {
 	border-width: calc(var(--anlg-w) * 2);
 }
 
-#analog span {
+.analog span {
 	width: calc(var(--anlg-w) * 2);
 	margin-left: calc(var(--anlg-w) * -1);
 }
 
-#analog #analogSeconds {
+.analog .analog-seconds {
 	width: var(--anlg-w);
 }

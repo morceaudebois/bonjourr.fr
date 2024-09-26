@@ -1,8 +1,8 @@
-#analog {
+.analog {
 	border-color: black;
 }
 
-#analog #center,
-#analog span {
+.analog .analog-center,
+.analog span {
 	background-color: black;
 }
