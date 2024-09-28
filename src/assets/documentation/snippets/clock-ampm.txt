@@ -1,0 +1,10 @@
+[data-ampm="pm"] .digital-am,
+[data-ampm="am"] .digital-pm {
+	display: inline;
+	opacity: .2
+}
+
+[data-ampm] .digital-ampm {
+	display: inline-flex;
+	flex-direction: column;
+}
