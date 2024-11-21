@@ -7,6 +7,12 @@ import Docs from "@layouts/Docs.astro"
 	title="Privacy policy"
 	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
+	<p>
+		<small>
+			<i>Last update: 21 nov. 2024, version 20.3.0</i>
+		</small>
+	</p>
+
 	<h2>In short</h2>
 
 	<p>
@@ -42,18 +48,11 @@ import Docs from "@layouts/Docs.astro"
 		your data. You can refer to the privacy policy of each providers below:
 	</p>
 
-	<h3>api.bonjourr.fr</h3>
+	<h3>Active on first start</h3>
+
+	<h4>api.bonjourr.fr</h4>
 
 	<ul>
-		<li>
-			<p>
-				<strong>Openweathermap</strong><br />
-				Fetches weather data. Triggers every 30min when tab is active. On location or Language
-				change. No requests when description & icon are hidden.<br />
-				<a href="https://openweather.co.uk/privacy-policy#data_me_collect">Privacy policy</a
-				>
-			</p>
-		</li>
 		<li>
 			<p>
 				<strong>Unsplash</strong><br />
@@ -61,6 +60,39 @@ import Docs from "@layouts/Docs.astro"
 				<a href="https://unsplash.com/api-terms">API terms</a>
 			</p>
 		</li>
+		<li>
+			<p>
+				<strong>Racle météo</strong><br />
+				Fetches weather data by accessing Accuweather's and/or Foreca's webpages. Triggers every
+				~40min when tab is active. On location or Language change.<br />
+				<a href="https://github.com/victrme/racle-meteo">Source code</a>
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Quotes</strong><br />
+				Gets a random list of quotes. Once at startup, and after changing quote type or every
+				20 quotes.<br />
+				<a href="https://github.com/victrme/i18n-quotes">Source code</a>
+			</p>
+		</li>
+	</ul>
+
+	<h4>image.unsplash.com</h4>
+
+	<ul>
+		<li>
+			<strong>Unsplash Image</strong><br />
+			Serves the background image. On startup & every hour by default. On collection change. When
+			losing cache.
+		</li>
+	</ul>
+
+	<h3>Optional</h3>
+
+	<h4>api.bonjourr.fr</h4>
+
+	<ul>
 		<li>
 			<p>
 				<strong>Fontsource</strong><br />
@@ -78,14 +110,6 @@ import Docs from "@layouts/Docs.astro"
 		</li>
 		<li>
 			<p>
-				<strong>Quotes</strong><br />
-				Gets a random list of quotes. Once at startup, and after changing quote type or every
-				20 quotes.<br />
-				<a href="https://github.com/victrme/i18n-quotes">Source code</a>
-			</p>
-		</li>
-		<li>
-			<p>
 				<strong>Search Suggestions</strong><br />
 				Gets search suggestions from Google, Duckduckgo and others. The API is a web scraper
 				and does not directly use the services of these providers.<br />
@@ -94,7 +118,7 @@ import Docs from "@layouts/Docs.astro"
 		</li>
 	</ul>
 
-	<h3>cdn.jsdelivr.net</h3>
+	<h4>cdn.jsdelivr.net</h4>
 
 	<ul>
 		<li>
@@ -104,13 +128,17 @@ import Docs from "@layouts/Docs.astro"
 		</li>
 	</ul>
 
-	<h3>image.unsplash.com</h3>
+	<h4>api.github.com</h4>
 
 	<ul>
 		<li>
-			<strong>Unsplash Image</strong><br />
-			Serves the background image. On startup & every hour by default. On collection change. When
-			losing cache.
+			<strong>Github Gist API</strong><br />
+			Read and write a Gist. After using the "Github Gist" synchronization type, when opening the
+			settings menu, receiving or sending a saved config.<br />
+			<a
+				href="https://docs.github.com/en/rest/gists/gists#list-gists-for-the-authenticated-user"
+				>API documentation</a
+			>
 		</li>
 	</ul>
 
@@ -123,6 +151,8 @@ import Docs from "@layouts/Docs.astro"
 			>developer.chrome.com</a
 		>
 	</p>
+
+	<h3>Required</h3>
 	<ul>
 		<li>
 			<p>
@@ -131,11 +161,21 @@ import Docs from "@layouts/Docs.astro"
 				settings change.
 			</p>
 		</li>
+	</ul>
+
+	<h3>Optional</h3>
+	<ul>
 		<li>
 			<p>
 				<strong>Bookmarks</strong><br />
-				Get a list of browser bookmarks. Optional. Only requested when using bookmark import
-				option.
+				Get a list of browser bookmarks. Only requested when using bookmark import option.
+			</p>
+		</li>
+		<li>
+			<p>
+				<strong>Top sites</strong><br />
+				Get a list of most visited. Requested when using bookmark import option, used on every
+				new tab when adding most visited sites to links.
 			</p>
 		</li>
 	</ul>
@@ -151,7 +191,8 @@ import Docs from "@layouts/Docs.astro"
 	</p>
 	<p>
 		By default, Bonjourr will synchronize its settings with your browser account if available.
-		You can opt out by following these steps:
+		You can opt out by selecting "Disabled" on the "Synchronization" option, or by following
+		these steps:
 	</p>
 	<ul>
 		<li>

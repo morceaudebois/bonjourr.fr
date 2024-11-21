@@ -6,16 +6,16 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/sitemap": "^3.1.6",
-		"@cloudflare/workers-types": "^4.20240806.0",
-		"astro": "^4.14.5",
-		"astro-expressive-code": "^0.36.1",
+		"@astrojs/sitemap": "^3.2.1",
+		"@cloudflare/workers-types": "^4.20241112.0",
+		"astro": "^4.16.13",
+		"astro-expressive-code": "^0.38.3",
 		"detect-browser": "^5.3.0",
 		"prettier": "^3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"sharp": "^0.33.5",
-		"typescript": "^5.5.4",
-		"vite": "^5.4.0"
+		"typescript": "^5.6.3",
+		"vite": "^5.4.11"
 	},
 	"prettier": {
 		"semi": false,
