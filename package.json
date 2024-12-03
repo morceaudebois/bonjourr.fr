@@ -7,15 +7,15 @@
 	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.2.1",
-		"@cloudflare/workers-types": "^4.20241112.0",
-		"astro": "^4.16.13",
+		"@cloudflare/workers-types": "^4.20241202.0",
+		"astro": "^4.16.16",
 		"astro-expressive-code": "^0.38.3",
 		"detect-browser": "^5.3.0",
-		"prettier": "^3.3.3",
+		"prettier": "^3.4.1",
 		"prettier-plugin-astro": "^0.14.1",
 		"sharp": "^0.33.5",
-		"typescript": "^5.6.3",
-		"vite": "^5.4.11"
+		"typescript": "^5.7.2",
+		"vite": "^6.0.2"
 	},
 	"prettier": {
 		"semi": false,
