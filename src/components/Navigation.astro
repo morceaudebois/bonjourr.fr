@@ -4,8 +4,20 @@ import Link from "./Link.astro"
 const isFrench = Astro.url.pathname.startsWith("/fr")
 const path = Astro.url.pathname
 
-const en = { Home: "Home", Donate: "Donate", Try: "Try online", Download: "Download for", Socials: "Socials" }
-const fr = { Home: "Accueil", Donate: "Dons", Try: "Démo en ligne", Download: "Télécharger pour", Socials: "Réseaux sociaux" }
+const en = {
+	Home: "Home",
+	Donate: "Donate",
+	Try: "Try online",
+	Download: "Download for",
+	Socials: "Socials",
+}
+const fr = {
+	Home: "Accueil",
+	Donate: "Dons",
+	Try: "Démo en ligne",
+	Download: "Télécharger pour",
+	Socials: "Réseaux sociaux",
+}
 const trans = isFrench ? fr : en
 ---
 
@@ -51,7 +63,7 @@ const trans = isFrench ? fr : en
 					>
 				</a>
 
-				<a href="" title="Join us on Bluesky">
+				<a href="http://bonjourrteam.bsky.social" title="Join us on Bluesky">
 					<svg
 						role="img"
 						clip-rule="evenodd"
@@ -68,7 +80,7 @@ const trans = isFrench ? fr : en
 					>
 				</a>
 
-				<a href="https://twitter.com/BonjourrTeam" title="Joins us on Twitter">
+				<a href="https://twitter.com/BonjourrTeam" title="Join us on Twitter">
 					<svg
 						viewBox="0 0 300.00006 244.18703"
 						xmlns="http://www.w3.org/2000/svg"
@@ -217,7 +229,7 @@ const trans = isFrench ? fr : en
 
 			<h2>{trans.Socials}</h2>
 
-			<a class="iconLink" href="#" title="Our Telegram group">
+			<a class="iconLink" href="https://t.me/BonjourrStartpage" title="Our Telegram group">
 				<svg
 					role="img"
 					fill="none"
@@ -251,7 +263,7 @@ const trans = isFrench ? fr : en
 				<span>GitHub</span>
 			</a>
 
-			<a class="iconLink" href="" title="Join us on Bluesky">
+			<a class="iconLink" href="http://bonjourrteam.bsky.social" title="Join us on Bluesky">
 				<svg
 					role="img"
 					clip-rule="evenodd"
