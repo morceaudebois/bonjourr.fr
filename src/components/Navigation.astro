@@ -4,8 +4,8 @@ import Link from "./Link.astro"
 const isFrench = Astro.url.pathname.startsWith("/fr")
 const path = Astro.url.pathname
 
-const en = { Home: "Home", Donate: "Donate" }
-const fr = { Home: "Accueil", Donate: "Dons" }
+const en = { Home: "Home", Donate: "Donate", Try: "Try online", Download: "Download for", Socials: "Socials" }
+const fr = { Home: "Accueil", Donate: "Dons", Try: "Démo en ligne", Download: "Télécharger pour", Socials: "Réseaux sociaux" }
 const trans = isFrench ? fr : en
 ---
 
@@ -129,7 +129,7 @@ const trans = isFrench ? fr : en
 			<div class="links">
 				<Link href="/" id="homeLink">{trans.Home}</Link>
 
-				<a href="https://online.bonjourr.fr">Try online</a>
+				<a href="https://online.bonjourr.fr">{trans.Try}</a>
 
 				<Link href="/docs">Documentation</Link>
 
@@ -175,7 +175,7 @@ const trans = isFrench ? fr : en
 
 			<hr />
 
-			<h2>Download for</h2>
+			<h2>{trans.Download}</h2>
 
 			<a
 				class="iconLink"
@@ -215,7 +215,7 @@ const trans = isFrench ? fr : en
 
 			<hr />
 
-			<h2>Socials</h2>
+			<h2>{trans.Socials}</h2>
 
 			<a class="iconLink" href="#" title="Our Telegram group">
 				<svg
@@ -305,7 +305,7 @@ const trans = isFrench ? fr : en
 <style>
 	aside {
 		position: fixed;
-		height: 100vh;
+		height: 100dvh;
 		width: 300px;
 		right: -300px;
 		top: 0;
@@ -329,6 +329,10 @@ const trans = isFrench ? fr : en
 		flex-direction: column;
 		gap: 1.5em;
 		margin-top: 2em;
+	}
+
+	aside .links a:last-child {
+		margin-bottom: 0;
 	}
 
 	aside .links a:hover {
