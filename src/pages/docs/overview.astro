@@ -199,17 +199,17 @@ import Docs from "@layouts/Docs.astro"
 			valid URL in the <code>Icon</code> input. It can be a:
 
 			<ul>
-				<li>✅ Distant URL: <code>https://en.wikipedia.org/favicon.ico</code></li>
-				<li>✅ Locally hosted URL: <code>http://127.0.0.1:4321/favicon.ico</code></li>
+				<li>Distant URL: <code>https://en.wikipedia.org/favicon.ico</code></li>
+				<li>Locally hosted URL: <code>http://127.0.0.1:4321/favicon.ico</code></li>
 				<li>
-					✅ DataURI smaller than 8kb: <code>data:image/gif;base64,R0lGOD...AA7</code>
+					DataURI smaller than 8kb: <code>data:image/gif;base64,R0lGOD...AA7</code>
 				</li>
 			</ul>
 
 			But not a:
 
 			<ul>
-				<li>❌ File path: <code>file:///Users/Me/Pictures/flowers.png</code></li>
+				<li>File path: <code>file:///Users/Me/Pictures/flowers.png</code></li>
 			</ul>
 		</p>
 
@@ -239,8 +239,8 @@ import Docs from "@layouts/Docs.astro"
 
 		<p>
 			You can organize your links even more with link groups. To add a page, right click next
-			to the default page. You cannot remove the default page but you can rename it. Deleting a
-			page will remove the links inside.
+			to the default page. You cannot remove the default page but you can rename it. Deleting
+			a page will remove the links inside.
 		</p>
 
 		<p>
@@ -339,6 +339,61 @@ import Docs from "@layouts/Docs.astro"
 		</ul>
 
 		<video src="/documentation/overview/move-elem.mp4" controls muted></video>
+	</div>
+
+	<div id="sync">
+		<h2>Github Gist</h2>
+
+		<p>
+			You can save your Bonjourr config in the cloud using <a href="https://gist.github.com/"
+				>Github Gist</a
+			> by selecting "Github Gist" in the <bjr>Synchronization type</bjr> option. Two more options
+			appear:
+		</p>
+
+		<br />
+
+		<table>
+			<tr>
+				<td><bjr>Authentification token</bjr></td>
+				<td>
+					Where you can add your Personal Access Token. It should look like this:
+					<code>github_pat_oxoxo...</code>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<bjr>Github Gist</bjr>
+				</td>
+				<td>
+					To manually sync your config to your Gist account with <bjrbtn>Get</bjrbtn>
+					and <bjrbtn>Send</bjrbtn>. These buttons only work after detecting a valid
+					token.
+				</td>
+			</tr>
+		</table>
+
+		<br />
+
+		<p>
+			You can create a Personal Access Token by following <a
+				href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
+				>this guide on docs.github.com</a
+			>, or following the steps shown below:
+		</p>
+
+		<br />
+
+		<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
+
+		<br />
+
+		<p>
+			Bonjourr is not affiliated with Github, and no connections to <code>api.github.com</code
+			> are made until you select this sync type AND add a valid token. More details on our <a
+				href="/privacy">privacy page</a
+			>.
+		</p>
 	</div>
 
 	<div id="settings-management">

@@ -241,6 +241,55 @@ import Docs from "@layouts/Docs.astro"
 		<video src="/documentation/overview/move-elem.mp4" controls muted></video>
 	</div>
 
+	<div id="sync">
+		<h2>Github Gist</h2>
+		<p>
+			Vous pouvez sauvegarder votre configuration Bonjourr dans le cloud en utilisant <a
+				href="https://gist.github.com/">Github Gist</a
+			> en sélectionnant "Github Gist" dans l'option <bjr>Type de synchronisation</bjr>. Deux
+			options supplémentaires apparaissent :
+		</p>
+		<br />
+		<table>
+			<tr>
+				<td><bjr>Token d'authentification</bjr></td>
+				<td>
+					Où vous pouvez ajouter votre Token d'Accès Personnel. Il devrait ressembler à
+					ceci :
+					<code>github_pat_oxoxo...</code>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<bjr>Github Gist</bjr>
+				</td>
+				<td>
+					Pour synchroniser manuellement votre configuration avec votre compte Gist avec <bjrbtn
+						>Obtenir</bjrbtn
+					>
+					et <bjrbtn>Envoyer</bjrbtn>. Ces boutons ne fonctionnent qu'après avoir détecté
+					un token valide.
+				</td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			Vous pouvez créer un Token d'Accès Personnel en suivant
+			<a
+				href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
+				>ce guide sur docs.github.com</a
+			>
+		</p>, ou en suivant les étapes indiquées ci-dessous:
+	</div>
+	<br />
+	<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
+	<br />
+	<p>
+		Bonjourr n'est pas affilié à Github, et aucune connexion à <code>api.github.com</code> n'est
+		effectuée jusqu'à ce que vous sélectionniez ce type de synchronisation ET que vous ajoutiez un
+		token valide. Plus de détails sur notre <a href="/privacy">page de confidentialité</a>
+	</p>.
+
 	<div id="settings-management">
 		<h2>Gestion des paramètres</h2>
 
