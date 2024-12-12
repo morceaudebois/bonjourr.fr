@@ -14,7 +14,7 @@ grid: [
 
 // triple
 grid: [
-	['.', 'time', '.'],
-	['.', 'main', '.'],
-	['.', 'quicklinks', '.'],
+	['time', '.', '.'],
+	['main', '.', '.'],
+	['quicklinks', '.', '.'],
 ]

@@ -316,24 +316,22 @@ const trans = isFrench ? fr : en
 
 <style>
 	aside {
+		display: none;
 		position: fixed;
 		height: 100dvh;
 		width: 300px;
 		right: -300px;
 		top: 0;
+		padding: 3em;
+		background-color: #111d;
+		border-left: 1px solid #fff4;
+		backdrop-filter: blur(2em);
+		transform: translate(0%);
+		overflow-y: scroll;
 		z-index: 101;
 		transition:
-			transform 0.3s,
-			box-shadow 0.3s;
-		padding: 3em;
-		background-color: #191919aa;
-		backdrop-filter: blur(4em);
-		-webkit-backdrop-filter: blur(4em);
-		border-left: 1px solid #fff4;
-		display: none;
-		overflow-y: scroll;
-		transform: translate(0%);
-		box-shadow: rgba(19, 24, 28, 0) 0px 39px 100px 150px;
+			transform 0.2s,
+			box-shadow 0.2s;
 		will-change: transform;
 	}
 
@@ -408,7 +406,7 @@ const trans = isFrench ? fr : en
 
 	body.showNav aside {
 		transform: translate(-100%);
-		box-shadow: rgba(19, 24, 28, 0.5) 0px 39px 100px 150px;
+		box-shadow: #0008 0em 0em 10em 5em;
 	}
 
 	button[open-button] {
@@ -434,7 +432,7 @@ const trans = isFrench ? fr : en
 
 	button svg {
 		width: 2.5em;
-		filter: drop-shadow(1px 2px 3px rgb(0 0 0 / 0.4));
+		filter: drop-shadow(0 1px 0 rgb(0 0 0 / 0.2));
 	}
 
 	nav {
@@ -493,8 +491,15 @@ const trans = isFrench ? fr : en
 	}
 
 	@media (prefers-color-scheme: light) {
-		body.showNav aside {
-			box-shadow: rgba(19, 24, 28, 0.2) 0px 39px 100px 100px;
+		body nav aside {
+			background-color: #eeec;
+			box-shadow: #0002 0em 0em 5em 5em;
+		}
+
+		nav aside,
+		nav aside a,
+		nav aside button {
+			color: #333;
 		}
 	}
 

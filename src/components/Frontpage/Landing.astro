@@ -189,19 +189,22 @@ import Illustration from "@assets/frontpage/illustration.png"
 	}
 
 	@media only screen and (max-width: 580px) {
+		.left {
+			text-align: center;
+		}
+
 		.title {
 			font-size: 1.4em;
+			margin-bottom: 3em;
+		}
+
+		.container {
+			align-items: center;
+			flex-direction: column;
 		}
 
 		#illustration {
 			display: none;
-		}
-	}
-
-	@media only screen and (max-width: 450px) {
-		.container {
-			align-items: center;
-			flex-direction: column;
 		}
 	}
 </style>

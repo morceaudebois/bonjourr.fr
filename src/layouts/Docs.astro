@@ -67,6 +67,10 @@ if (!title && frontmatter) {
 		text-align: center;
 	}
 
+	#summary a {
+		text-decoration: none;
+	}
+
 	.content {
 		max-width: 740px;
 		min-width: 360px;
@@ -79,10 +83,11 @@ if (!title && frontmatter) {
 
 	.content a {
 		color: #5ca5ff;
+		text-decoration: underline;
 	}
 
 	.content a:hover {
-		text-decoration: underline;
+		opacity: 0.8;
 	}
 
 	h1,
@@ -125,18 +130,32 @@ if (!title && frontmatter) {
 		font-size: 1.6em;
 	}
 
-	bjr {
-		filter: invert(1);
-		border-radius: 4px;
-		padding: 1px 6px;
-		color: #bbb;
-		background-color: #222;
+	ul li {
+		padding: 0.2em 0;
+	}
+
+	bjr,
+	bjrbtn {
+		padding: 2px 8px;
+		border-radius: 8px;
+		white-space: nowrap;
+	}
+
+	bjrbtn {
+		border: none;
+		color: rgb(41, 144, 255);
+		background-color: rgba(41, 144, 255, 0.15);
 	}
 
 	code {
-		border-radius: 2px;
-		padding: 0.1em 0.2em 0;
+		font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+			Geneva, Verdana, sans-serif;
+		font-size: 14px;
+		border-radius: 4px;
+		padding: 0 8px;
 		word-break: break-word;
+		color: #bbb;
+		background-color: #333;
 	}
 
 	pre {
@@ -227,11 +246,26 @@ if (!title && frontmatter) {
 		.content a {
 			color: #3187f2;
 		}
+
+		code {
+			color: #555;
+			background-color: #eee;
+		}
+
+		bjr {
+			color: #333;
+			background-color: #ddd;
+		}
 	}
 
 	@media (prefers-color-scheme: dark) {
 		td {
 			border-color: #666;
+		}
+
+		bjr {
+			color: #222;
+			background-color: #fff;
 		}
 	}
 
