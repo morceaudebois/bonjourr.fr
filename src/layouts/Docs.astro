@@ -22,7 +22,7 @@ if (!title && frontmatter) {
 		const ids = Object.values(groups).map((node) => node.id)
 
 		if (ids.length > 0) {
-			const h2 = document.querySelectorAll("h2")
+			const h2 = document.querySelectorAll(".content h2")
 			h2.forEach((h2, i) => (h2.innerHTML += permalink(ids[i])))
 		}
 	})
