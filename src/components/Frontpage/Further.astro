@@ -18,10 +18,17 @@ import Link from "../Link.astro"
 			<slot name="contact-desc" />
 		</p>
 
-		<a href="https://t.me/BonjourrStartpage" class="button">
-			<img width="64" src="/frontpage/telegram.svg" class="icon" alt="" />
-			<slot name="contact-button" />
-		</a>
+		<div id="btn-group">
+			<a href="https://bsky.app/profile/bonjourr.fr" class="button">
+				<img width="64" src="/frontpage/bluesky.svg" class="icon" alt="" />
+				<slot name="contact-button-bluesky" />
+			</a>
+
+			<a href="https://t.me/BonjourrStartpage" class="button">
+				<img width="64" src="/frontpage/telegram.svg" class="icon" alt="" />
+				<slot name="contact-button-telegram" />
+			</a>
+		</div>
 	</div>
 
 	<div>
@@ -106,6 +113,18 @@ import Link from "../Link.astro"
 	p {
 		margin: 1.5em 0;
 		align-self: flex-start;
+	}
+
+	#btn-group {
+		display: none;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		gap: 1em;
+	}
+
+	#btn-group .button {
+		max-width: 1fr;
 	}
 
 	@media only screen and (max-width: 800px) {

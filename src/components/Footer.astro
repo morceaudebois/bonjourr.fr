@@ -18,6 +18,8 @@ const fr = {
 	by: "par",
 }
 const trans = isFrench ? fr : en
+
+const currentYear = new Date().getFullYear()
 ---
 
 <script>
@@ -31,7 +33,7 @@ const trans = isFrench ? fr : en
 <footer>
 	<div class="container">
 		<div id="legal">
-			<p>© 2019 Bonjourr</p>
+			<p>© 2019-{currentYear} Bonjourr</p>
 
 			<p>
 				<Link href="/privacy">{trans["Privacy policy"]}</Link>
@@ -114,7 +116,6 @@ const trans = isFrench ? fr : en
 			display: grid;
 			row-gap: 1em;
 			grid-template-columns: 1fr 2fr;
-			max-width: 700px;
 		}
 
 		#contact {
