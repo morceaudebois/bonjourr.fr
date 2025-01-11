@@ -1,7 +1,7 @@
 ---
 import { Picture } from "astro:assets"
 import DynamicImage from "../../assets/frontpage/dynamic.png"
-import CustomiseImage from "../../assets/frontpage/customise.png"
+import CustomiseImage from "../../assets/frontpage/customise.webp"
 ---
 
 <div id="intro">
@@ -41,6 +41,7 @@ import CustomiseImage from "../../assets/frontpage/customise.png"
 			formats={["webp", "avif"]}
 			width="560"
 			height="345"
+			densities={[2]}
 			alt="Bonjourr dynamic backgrounds screenshot"
 		/>
 	</div>
