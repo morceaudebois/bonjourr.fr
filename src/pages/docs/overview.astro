@@ -168,9 +168,109 @@ import Docs from "@layouts/Docs.astro"
 	<div id="links">
 		<h2>Quick Links</h2>
 
+		Quick links are a way to easily manage the websites you visit regularly.
+
+		<h3 id="link-usage">Basic usage</h3>
+
 		<p>
-			You can add and import Quick Links from the settings, and edit them when you right click
-			on them.
+			You can add Quick Links by going to the settings of Bonjourr, in the Quick Links
+			section. They are editable if you right click on them (or long press on mobile), which
+			allows you to change their titles, URLs, icons and delete them.
+		</p>
+
+		<video autoplay loop muted playsinline loading="lazy">
+			<source src="/documentation/overview/links-usage.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+
+		<p>
+			You can easily reorder your links by drag and dropping them, just like you would do on a
+			phone. Additionally, dropping a link on another link will create a folder that contains
+			them both. You can also edit that folder via right click.
+		</p>
+
+		<h3 id="link-import">Importing your links</h3>
+
+		<p>
+			Bonjourr integrates a way to import the existing links of your browser. To access it,
+			click the <code>Import bookmarks</code> button. Depending on your browser, you will be shown
+			multiple groups of links you will be able to import, such as your most visited websites and
+			your bookmarks toolbars.
+		</p>
+
+		<img
+			src="/documentation/overview/bookmarks-modal.png"
+			alt="Bonjourr's bookmarks modal"
+			loading="lazy"
+		/>
+
+		<p>
+			If you use Chrome, Bonjourr will offer you to import Google Apps as a way to replicate
+			Chrome's default startpage's behaviour.
+		</p>
+
+		<p>You can select one or multiple groups, and then import them.</p>
+
+		<h3 id="link-groups">Link groups</h3>
+
+		<p>
+			You can organize your links with link groups, an optional feature you can enable in
+			settings. To add a group, hover to the right of the group titles until you see the <code
+				>+</code
+			> icon. You can rename and delete groups by right clicking on them. Deleting a group will
+			delete all the links it contains.
+		</p>
+
+		<p>
+			Just like with folders, you can:
+			<ul>
+				<li>drag and drop links from group to group</li>
+				<li>drag and drop groups to reorder them</li>
+				<li>rename a group by right clicking it</li>
+			</ul>
+		</p>
+
+		<p>
+			You can pin groups by selecting <bjr>Pin this group</bjr> after opening the context menu
+			from the group title. This will make it so the group is always visible.
+		</p>
+
+		<img
+			style="max-width: 400px; margin-inline: auto; display: block"
+			src="/documentation/overview/link-groups.gif"
+			alt="Bonjourr's link groups"
+			loading="lazy"
+		/>
+
+		<h3 id="link-icons">Icons</h3>
+
+		<p>
+			Link icons are retrieved by our homemade service <a
+				href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a
+			>. If you find that a website is missing its icon, you can create an issue <a
+				href="https://github.com/victrme/Bonjourr/issues">on GitHub</a
+			> or send us an email, and we will do our best to fix it.
+		</p>
+
+		<h4 id="link-icons-custom">Custom icons</h4>
+
+		<p>
+			The <code>Icon</code> input you see when editing a link allows you to set a distant URL to
+			any image file you want on the Internet. This URL can be:
+
+			<ul>
+				<li>a distant URL: <code>https://en.wikipedia.org/favicon.ico</code></li>
+				<li>a locally hosted URL: <code>http://127.0.0.1:4321/favicon.ico</code></li>
+				<li>
+					a dataURI smaller than 8kb: <code>data:image/gif;base64,R0lGOD...AA7</code>
+				</li>
+			</ul>
+
+			But not a:
+
+			<ul>
+				<li>file path: <code>file:///Users/Me/Pictures/flowers.png</code></li>
+			</ul>
 		</p>
 
 		<p>
@@ -178,78 +278,28 @@ import Docs from "@layouts/Docs.astro"
 			Imgur, and use that link as an icon. You can also convert your icon to a Data URI (max
 			8kB).
 		</p>
-
-		<p>
-			⚠️ <i>Notice</i>: as a security measure, local paths like <code>file://</code>, browser
-			settings links like <code>about:config</code> or <code>chrome://extensions</code> can't be
-			added. However, <code>localhost:</code> links will work just fine.
-		</p>
-
-		<h3 id="link-icons">Icons</h3>
-
-		<p>
-			Link icons are retrieved by our homemade service <a
-				href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a
-			>. If you find that a website is missing its icon, you can create an issue on our
-			service and it will be fixed.
-		</p>
-
-		<p>
-			You can change a link icon by right clicking on a link to open its menu, and adding a
-			valid URL in the <code>Icon</code> input. It can be a:
-
-			<ul>
-				<li>Distant URL: <code>https://en.wikipedia.org/favicon.ico</code></li>
-				<li>Locally hosted URL: <code>http://127.0.0.1:4321/favicon.ico</code></li>
-				<li>
-					DataURI smaller than 8kb: <code>data:image/gif;base64,R0lGOD...AA7</code>
-				</li>
-			</ul>
-
-			But not a:
-
-			<ul>
-				<li>File path: <code>file:///Users/Me/Pictures/flowers.png</code></li>
-			</ul>
-		</p>
-
-		<h4 id="link-icons-cache">Cache policy</h4>
-
-		<p>
-			Icons from favicon-fetcher are stored in the browser cache for a year. As long as the
-			browser cache is not cleared, icons are not fetched (or updated) by the page. However,
-			if the browser cache is often cleared or storage space is limited on your device, icons
-			will have to be fetched from our service.
-		</p>
-
-		<p>
-			Icons you add manually from a distant URL will have a different cache policy, which
-			might cause the icon to be fetched often or even every time.
-		</p>
-
-		<h3 id="folders">Link folders</h3>
-
-		<p>
-			Links folders are pretty cool. You can drag and drop them. Dragging a folder on another
-			will add the content of the dragged folder in the target. Deleting a folder with links
-			inside will also delete those links.
-		</p>
-
-		<h3 id="link-groups">Link groups</h3>
-
-		<p>
-			You can organize your links even more with link groups. To add a page, right click next
-			to the default page. You cannot remove the default page but you can rename it. Deleting
-			a page will remove the links inside.
-		</p>
-
-		<p>
-			You can pin groups by selecting <bjr>Pin this group</bjr> after opening the context menu
-			from the group title.
-		</p>
-
-		<video src="/documentation/overview/link-groups.mp4" controls muted></video>
 	</div>
+
+	<h4 id="link-icons-cache">Cache policy</h4>
+
+	<p>
+		Icons from favicon-fetcher are stored in the browser cache for a year. As long as the
+		browser cache is not cleared, icons are not fetched (or updated) by the page. However, if
+		the browser cache is often cleared or storage space is limited on your device, icons will
+		have to be fetched from our service again.
+	</p>
+
+	<p>
+		Icons you add manually from a distant URL will have a different cache policy that we are not
+		in control of, which might cause the icon to be fetched often or even every time.
+	</p>
+
+	<p>
+		⚠️ <i>Notice</i>: as a security measure, local paths like <code>file://</code>, browser
+		settings links like <code>about:config</code> or <code>chrome://extensions</code> can't be added.
+		However,
+		<code>localhost:</code> links will work just fine.
+	</p>
 
 	<div id="searchbar">
 		<h2>Search bar</h2>
