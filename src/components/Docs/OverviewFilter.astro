@@ -1,5 +1,4 @@
 <style is:global>
-
 	aside button {
 		display: inline-flex;
 		width: fit-content;
@@ -21,14 +20,15 @@
 		opacity: 1;
 	}
 
-	.content div.hide[id] {
+	.content section.hide[id] {
 		display: none;
 	}
 </style>
 
 <script>
 	const aside = document.getElementById("overview-filter")!
-	const blocks = document.querySelectorAll(".content div[id]")
+	const blocks = document.querySelectorAll(".content > section[id]")
+	let content = document.querySelector(".content")
 
 	blocks.forEach((block) => {
 		const button = document.createElement("button")
@@ -48,19 +48,23 @@
 				}
 			})
 
+			let enabled = false
 			blocks.forEach((block) => {
 				if (document.querySelectorAll("aside button.on").length === 0) {
 					blocks.forEach((block) => block.classList.remove("hide"))
 				} else {
 					block.classList.toggle("hide", block.id !== id)
+					enabled = true
 				}
 			})
+
+			content?.classList.toggle("single_overview", enabled)
 		})
 
 		aside.appendChild(button)
 	})
 
-	document.querySelector(".content")?.prepend(aside as any)
+	content?.prepend(aside as any)
 </script>
 
 <style>
@@ -88,7 +92,7 @@
 		opacity: 1;
 	}
 
-	.content div.hide[id] {
+	.content section.hide[id] {
 		display: none;
 	}
 </style>

@@ -10,13 +10,15 @@ import Docs from "@layouts/Docs.astro"
 >
 	<OverviewFilter />
 
-	<div id="interface">
+	<section id="interface">
 		<h2>Interface</h2>
 
 		<p>Hover your mouse on the background credits to see exif infos</p>
-	</div>
+	</section>
 
-	<div id="show-all-settings">
+	<hr />
+
+	<section id="show-all-settings">
 		<h2>Show all settings</h2>
 
 		<p>
@@ -24,9 +26,11 @@ import Docs from "@layouts/Docs.astro"
 			to hide most of them by default. If you're an advanced user, you can enable all those
 			options by toggling <bjr>Show all settings</bjr> at the very top of the settings menu.
 		</p>
-	</div>
+	</section>
 
-	<div id="newtab-title">
+	<hr />
+
+	<section id="newtab-title">
 		<h2>New tab title</h2>
 
 		<p>
@@ -48,9 +52,11 @@ import Docs from "@layouts/Docs.astro"
 				</li>
 			</ul>
 		</p>
-	</div>
+	</section>
 
-	<div id="hide-settings-icon">
+	<hr />
+
+	<section id="hide-settings-icon">
 		<h2>Hide settings icon</h2>
 
 		<p>
@@ -61,9 +67,11 @@ import Docs from "@layouts/Docs.astro"
 		</p>
 
 		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
-	</div>
+	</section>
 
-	<div id="backgrounds">
+	<hr />
+
+	<section id="backgrounds">
 		<h2>Backgrounds</h2>
 
 		<p>
@@ -117,9 +125,11 @@ import Docs from "@layouts/Docs.astro"
 			Switch your <bjr>Background type</bjr> from "Unsplash" to "Local file", and you'll be able
 			to drag and drop your own images from your computer to Bonjourr.
 		</p>
-	</div>
+	</section>
 
-	<div id="clock">
+	<hr />
+
+	<section id="clock">
 		<h2>Time and date</h2>
 
 		<p>The analog clock background is blurred when its opacity is above 0.</p>
@@ -130,9 +140,11 @@ import Docs from "@layouts/Docs.astro"
 			<bjr>World clocks</bjr> allows you to add multiple clocks with different timezones. Removing
 			the name of a world clock will remove the clock entirely.
 		</p>
-	</div>
+	</section>
 
-	<div id="weather">
+	<hr />
+
+	<section id="weather">
 		<h2>Weather</h2>
 
 		<p>
@@ -163,12 +175,14 @@ import Docs from "@layouts/Docs.astro"
 			⚠️ We are in no way affiliated with MSN, Accuweather, Yahoo!, or Windy.com. These
 			websites offers reports with different data provider, hence the choice.
 		</p>
-	</div>
+	</section>
 
-	<div id="quick-links">
+	<hr />
+
+	<section id="quick-links">
 		<h2>Quick Links</h2>
 
-		Quick links are a way to easily manage the websites you visit regularly.
+		<p>Quick links are a way to easily manage the websites you visit regularly.</p>
 
 		<h3 id="link-usage">Basic usage</h3>
 
@@ -178,7 +192,7 @@ import Docs from "@layouts/Docs.astro"
 			allows you to change their titles, URLs, icons and delete them.
 		</p>
 
-		<video autoplay loop muted playsinline loading="lazy">
+		<video autoplay loop muted playsinline>
 			<source src="/documentation/overview/links-usage.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
@@ -278,30 +292,32 @@ import Docs from "@layouts/Docs.astro"
 			Imgur, and use that link as an icon. You can also convert your icon to a Data URI (max
 			8kB).
 		</p>
-	</div>
 
-	<h4 id="link-icons-cache">Cache policy</h4>
+		<h4 id="link-icons-cache">Cache policy</h4>
 
-	<p>
-		Icons from favicon-fetcher are stored in the browser cache for a year. As long as the
-		browser cache is not cleared, icons are not fetched (or updated) by the page. However, if
-		the browser cache is often cleared or storage space is limited on your device, icons will
-		have to be fetched from our service again.
-	</p>
+		<p>
+			Icons from favicon-fetcher are stored in the browser cache for a year. As long as the
+			browser cache is not cleared, icons are not fetched (or updated) by the page. However,
+			if the browser cache is often cleared or storage space is limited on your device, icons
+			will have to be fetched from our service again.
+		</p>
 
-	<p>
-		Icons you add manually from a distant URL will have a different cache policy that we are not
-		in control of, which might cause the icon to be fetched often or even every time.
-	</p>
+		<p>
+			Icons you add manually from a distant URL will have a different cache policy that we are
+			not in control of, which might cause the icon to be fetched often or even every time.
+		</p>
 
-	<p>
-		⚠️ <i>Notice</i>: as a security measure, local paths like <code>file://</code>, browser
-		settings links like <code>about:config</code> or <code>chrome://extensions</code> can't be added.
-		However,
-		<code>localhost:</code> links will work just fine.
-	</p>
+		<p>
+			⚠️ <i>Notice</i>: as a security measure, local paths like <code>file://</code>, browser
+			settings links like <code>about:config</code> or <code>chrome://extensions</code> can't be
+			added. However,
+			<code>localhost:</code> links will work just fine.
+		</p>
+	</section>
 
-	<div id="searchbar">
+	<hr />
+
+	<section id="searchbar">
 		<h2>Search bar</h2>
 
 		<p>
@@ -309,9 +325,11 @@ import Docs from "@layouts/Docs.astro"
 			search engines, which includes things like YouTube:
 			https://www.youtube.com/results?search_query=%s.
 		</p>
-	</div>
+	</section>
 
-	<div id="notes">
+	<hr />
+
+	<section id="notes">
 		<h2>Notes</h2>
 
 		<p>
@@ -361,18 +379,22 @@ import Docs from "@layouts/Docs.astro"
 				</tr>
 			</tbody>
 		</table>
-	</div>
+	</section>
 
-	<div id="fonts">
+	<hr />
+
+	<section id="fonts">
 		<h2>Fonts</h2>
 
 		<p>
 			Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts
 			Bonjourr offers, please visit <a href="https://fontsource.com/">fontsource.com</a>.
 		</p>
-	</div>
+	</section>
 
-	<div id="page-layouts">
+	<hr />
+
+	<section id="page-layouts">
 		<h2>Page layouts</h2>
 
 		<p>
@@ -389,9 +411,11 @@ import Docs from "@layouts/Docs.astro"
 		</ul>
 
 		<video src="/documentation/overview/move-elem.mp4" controls muted></video>
-	</div>
+	</section>
 
-	<div id="sync">
+	<hr />
+
+	<section id="sync">
 		<h2>Github Gist</h2>
 
 		<p>
@@ -444,9 +468,11 @@ import Docs from "@layouts/Docs.astro"
 				href="/privacy">privacy page</a
 			>.
 		</p>
-	</div>
+	</section>
 
-	<div id="settings-management">
+	<hr />
+
+	<section id="settings-management">
 		<h2>Settings management</h2>
 
 		<p>
@@ -474,9 +500,11 @@ import Docs from "@layouts/Docs.astro"
 			in your browser, Bonjourr should get synced to other instances of the same browser on
 			other computers. This is true for all Bonjourr settings as well as Quick Links.
 		</p>
-	</div>
+	</section>
 
-	<div id="keybindings">
+	<hr />
+
+	<section id="keybindings">
 		<h2 id="keybindings">Keybindings</h2>
 
 		<table>
@@ -531,9 +559,11 @@ import Docs from "@layouts/Docs.astro"
 				</tr>
 			</tbody>
 		</table>
-	</div>
+	</section>
 
-	<div id="supporters-notification">
+	<hr />
+
+	<section id="supporters-notification">
 		<h2>Supporters notification</h2>
 
 		<p>
@@ -560,5 +590,5 @@ import Docs from "@layouts/Docs.astro"
 				>Show all settings</bjr
 			> first, then <bjr>Supporters notification</bjr> in the "Notifications" category.
 		</p>
-	</div>
+	</section>
 </Docs>
