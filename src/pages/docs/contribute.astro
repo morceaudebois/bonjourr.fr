@@ -15,93 +15,107 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 	thumbnail="/documentation/backgrounds/pascal-debrunner-LKOuYT5_dyw.jpg"
 	lang="en"
 >
-	<h2 id="donate">Donations</h2>
+	<section style="margin-top: 4em" id="donate">
+		<h2>Donations</h2>
 
-	<p>
-		A few donations go a long way when it comes to open source software. It motivates us to pour
-		more time into Bonjourr, it helps us realise people care about our work and it can open new
-		doors for the future. You can donate in
-		<a href="https://ko-fi.com/bonjourr">regular money</a> or
-		<a href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
-			>crypto money</a
-		>.
-	</p>
+		<p>
+			A few donations go a long way when it comes to open source software. It motivates us to
+			pour more time into Bonjourr, it helps us realise people care about our work and it can
+			open new doors for the future. You can donate in
+			<a href="https://ko-fi.com/bonjourr">regular money</a> or
+			<a href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
+				>crypto money</a
+			>.
+		</p>
+	</section>
 
-	<h2 id="reviews">Reviews</h2>
+	<hr />
 
-	<p>
-		The simplest way to help us out is to leave a review on the extension stores, either on
-		<a href={firefoxAddons}>Firefox addons</a>,
-		<a href={webstore}>Chrome webstore</a>,
-		<a href={appleAppStore}>Apple App Store</a>
-		or even
-		<a href={edgeAddons}>Edge Addons</a>. You can also tell your friends about Bonjourr, because
-		if you love it, they probably will too.
-	</p>
+	<section id="reviews">
+		<h2>Reviews</h2>
 
-	<h2 id="translate">Translations</h2>
+		<p>
+			The simplest way to help us out is to leave a review on the extension stores, either on
+			<a href={firefoxAddons}>Firefox addons</a>,
+			<a href={webstore}>Chrome webstore</a>,
+			<a href={appleAppStore}>Apple App Store</a>
+			or even
+			<a href={edgeAddons}>Edge Addons</a>. You can also tell your friends about Bonjourr,
+			because if you love it, they probably will too.
+		</p>
+	</section>
 
-	<p>
-		Thanks to our contributors, Bonjourr is currently available in 21 languages! Here's how you
-		can update or add a language:
-	</p>
+	<hr />
 
-	<p>
-		Translations are located in the
-		<a href="https://github.com/victrme/Bonjourr/tree/master/_locales">/_locales/</a>
-		folder on Github. Each language folder contains these files:
-	</p>
+	<section id="translate">
+		<h2>Translations</h2>
 
-	<ul>
-		<li><code class="inline-code">translations.json</code> for the main translation.</li>
-		<li>
-			<code class="inline-code">messages.json</code> for the extension's title and subtitle.
-		</li>
-		<li>
-			<code class="inline-code">overview.md</code> for the full description on store pages.
-		</li>
-	</ul>
+		<p>
+			Thanks to our contributors, Bonjourr is currently available in 21 languages! Here's how
+			you can update or add a language:
+		</p>
 
-	<p>
-		To add a new language, copy the `en` folder to your desired language. You also need to add
-		the country code and name to the list in
-		<a href="https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts"
-			>/src/scripts/langs.ts</a
-		>. If you are familiar with GitHub, you can create a pull request. If not, you can directly
-		send us the modified files
-		<a href="mailto:bonjourr.app@protonmail.com">via email</a>
-		or to
-		<a href="https://t.me/BonjourrStartpage">our Telegram group</a>.
-	</p>
+		<p>
+			Translations are located in the
+			<a href="https://github.com/victrme/Bonjourr/tree/master/_locales">/_locales/</a>
+			folder on Github. Each language folder contains these files:
+		</p>
 
-	<p>⚠️ Don't forget to join your name and link so we can credit you!</p>
+		<ul>
+			<li><code class="inline-code">translations.json</code> for the main translation.</li>
+			<li>
+				<code class="inline-code">messages.json</code> for the extension's title and subtitle.
+			</li>
+			<li>
+				<code class="inline-code">overview.md</code> for the full description on store pages.
+			</li>
+		</ul>
 
-	<h3>Test your translation</h3>
+		<p>
+			To add a new language, copy the `en` folder to your desired language. You also need to
+			add the country code and name to the list in
+			<a href="https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts"
+				>/src/scripts/langs.ts</a
+			>. If you are familiar with GitHub, you can create a pull request. If not, you can
+			directly send us the modified files
+			<a href="mailto:bonjourr.app@protonmail.com">via email</a>
+			or to
+			<a href="https://t.me/BonjourrStartpage">our Telegram group</a>.
+		</p>
 
-	<ul>
-		<li>
-			Go to <a href="https://online.bonjourr.fr">online.bonjourr.fr</a> and select your language.
-		</li>
-		<li>Open the developer console (F12, CTRL+Shift+J, or CTRL+Shift+I).</li>
-		<li>
-			Paste this code: <code>localStorage.translations = JSON.stringify()</code> with the content
-			of <code>translations.json</code> inside the parentheses.
-		</li>
-		<li>Reload the page, it should work !</li>
-	</ul>
+		<p>⚠️ Don't forget to join your name and link so we can credit you!</p>
 
-	<h2 id="new-features">New features</h2>
+		<h3>Test your translation</h3>
 
-	<p>
-		You have some coding skills and a feature in mind you could implement into Bonjourr? Check
-		out the
-		<a href="https://github.com/victrme/Bonjourr/">GitHub repository</a>.
-	</p>
+		<ul>
+			<li>
+				Go to <a href="https://online.bonjourr.fr">online.bonjourr.fr</a> and select your language.
+			</li>
+			<li>Open the developer console (F12, CTRL+Shift+J, or CTRL+Shift+I).</li>
+			<li>
+				Paste this code: <code>localStorage.translations = JSON.stringify()</code> with the content
+				of <code>translations.json</code> inside the parentheses.
+			</li>
+			<li>Reload the page, it should work !</li>
+		</ul>
+	</section>
 
-	<p>
-		If you're feeling creative, you can also suggest or create
-		<Link href="/docs/styles">CSS snippets</Link>
-		&
-		<Link href="/docs/profiles">custom profiles</Link>
-	</p>
+	<hr />
+
+	<section id="new-features">
+		<h2>New features</h2>
+
+		<p>
+			You have some coding skills and a feature in mind you could implement into Bonjourr?
+			Check out the
+			<a href="https://github.com/victrme/Bonjourr/">GitHub repository</a>.
+		</p>
+
+		<p>
+			If you're feeling creative, you can also suggest or create
+			<Link href="/docs/styles">CSS snippets</Link>
+			&
+			<Link href="/docs/profiles">custom profiles</Link>
+		</p>
+	</section>
 </Docs>

@@ -23,69 +23,93 @@ import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
 	<p>
-		<em>Last updated for version 20.2.2</em>
+		<em
+			>Bonjourr's settings are stored in JSON formatting, which you can see in the settings
+			management section. Use this page to know which JSON property refers to what. Last
+			updated for version 20.2.2</em
+		>
 	</p>
 
-	<h3>General</h3>
+	<section id="general">
+		<h2>General</h2>
 
-	<Code lang="jsonc" code={general} />
+		<Code lang="jsonc" code={general} />
+	</section>
 
-	<h3>Backgrounds</h3>
+	<section id="backgrounds">
+		<h2>Backgrounds</h2>
 
-	<p>Select your background provider, blur amount, and brightness</p>
+		<p>Select your background provider, blur amount, and brightness</p>
 
-	<Code lang="jsonc" code={backgrounds} />
+		<Code lang="jsonc" code={backgrounds} />
+	</section>
 
-	<h4>Unsplash</h4>
+	<section>
+		<h4>Unsplash</h4>
 
-	<p>Paused frequency syncs the URL of the background in pausedImage</p>
+		<p>Paused frequency syncs the URL of the background in pausedImage</p>
 
-	<Code lang="jsonc" code={unsplash} />
+		<Code lang="jsonc" code={unsplash} />
+	</section>
 
-	<h3>Clock</h3>
+	<section>
+		<h2>Clock</h2>
 
-	<Code lang="jsonc" code={clock} />
+		<Code lang="jsonc" code={clock} />
+	</section>
 
-	<h3>Links</h3>
+	<section id="links">
+		<h2>Links</h2>
 
-	<p>General settings for quick links.</p>
+		<p>General settings for quick links.</p>
 
-	<Code lang="jsonc" code={links} />
+		<Code lang="jsonc" code={links} />
 
-	<p>When adding a quick link</p>
+		<p>When adding a quick link</p>
 
-	<Code lang="jsonc" code={linkselem} />
+		<Code lang="jsonc" code={linkselem} />
+	</section>
 
-	<h3>Notes, Search bar, and Quotes</h3>
+	<section id="notes">
+		<h2>Notes, Search bar, and Quotes</h2>
 
-	<p>These widgets behave pretty similarly: basic key-val.</p>
+		<p>These widgets behave pretty similarly: basic key-val.</p>
 
-	<Code lang="jsonc" code={notes} />
+		<Code lang="jsonc" code={notes} />
+	</section>
 
-	<h3>Fonts</h3>
+	<section id="fonts">
+		<h2>Fonts</h2>
 
-	<p>
-		Most fields in fonts are set automatically by Bonjourr and cannot easily be modified
-		manually.
-	</p>
+		<p>
+			Most fields in fonts are set automatically by Bonjourr and cannot easily be modified
+			manually.
+		</p>
 
-	<Code lang="jsonc" code={fonts} />
+		<Code lang="jsonc" code={fonts} />
+	</section>
 
-	<h3>Weather</h3>
+	<section id="weather">
+		<h2>Weather</h2>
 
-	<Code lang="jsonc" code={weather} />
+		<Code lang="jsonc" code={weather} />
+	</section>
 
-	<h3>Hide</h3>
+	<section id="hide">
+		<h2>Hide</h2>
 
-	<p>Specify which element on the page you want to hide.</p>
+		<p>Specify which element on the page you want to hide.</p>
 
-	<Code lang="jsonc" code={hide} />
+		<Code lang="jsonc" code={hide} />
+	</section>
 
-	<h3>Page layout</h3>
+	<section id="layout">
+		<h2>Page layout</h2>
 
-	<p>Page layouts are pretty complex. Grids are tables, items are widget alignments.</p>
+		<p>Page layouts are pretty complex. Grids are tables, items are widget alignments.</p>
 
-	<Code lang="jsonc" code={move} />
-	<Code lang="jsonc" code={movegrid} />
-	<Code lang="jsonc" code={moveitems} />
+		<Code lang="jsonc" code={move} />
+		<Code lang="jsonc" code={movegrid} />
+		<Code lang="jsonc" code={moveitems} />
+	</section>
 </Docs>
