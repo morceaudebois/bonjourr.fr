@@ -11,41 +11,67 @@ import Docs from "@layouts/Docs.astro"
 	<OverviewFilter />
 
 	<section id="interface">
-		<h2>Interface</h2>
-
-		<p>Hover your mouse on the background credits to see exif infos</p>
-	</section>
-
-	<hr />
-
-	<section id="show-all-settings">
-		<h2>Show all settings</h2>
+		<h2>Main interface</h2>
 
 		<p>
-			Bonjourr has lots of options. In an attempt to not be jarring for newcomers, we decided
-			to hide most of them by default. If you're an advanced user, you can enable all those
-			options by toggling <bjr>Show all settings</bjr> at the very top of the settings menu.
+			When using the default backgrounds, hover your mouse on the background credits at the
+			bottom left corner of Bonjourr to get the EXIF info of the photo (when available).
+		</p>
+
+		<img
+			src="/documentation/overview/exif.png"
+			alt="Bonjourr's bookmarks modal"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
+
+		<p>
+			Clicking the <bjr>download</bjr> icon will download the photo to your computer at its highest
+			possible resolution.
+		</p>
+
+		<p>
+			Hitting the <code>Escape</code> key will open the settings panel.
 		</p>
 	</section>
 
 	<hr />
 
 	<section id="newtab-title">
-		<h2>New tab title</h2>
+		<h2>Tab appearance</h2>
 
 		<p>
-			You can customize the text and icon (called favicon) displayed by your browser when for
-			each new tabs created. Text is limited to 80 characters, and icons can only be emojis
-			for now.
+			You can customize the text and icon (called favicon) your browser uses for Bonjourr.
+			Text is limited to 80 characters, and icons can only be emojis.
+		</p>
+
+		<img
+			src="/documentation/overview/tab-appearance.png"
+			alt="Bonjourr's bookmarks modal"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
+
+		<p>
+			The emoji option might be limited by your browser:
+			<ul>
+				<li>
+					Firefox has unperfect scaling/alignements (<a
+						href="https://github.com/victrme/Bonjourr/issues/431">GitHub issue</a
+					>)
+				</li>
+				<li>Microsoft Edge will only show the silouhette of the emoji</li>
+				<li>Safari doesn't support it at all</li>
+			</ul>
 		</p>
 
 		<p>
-			<span>Here is how to write emojis depending on your system:</span>
+			<span>Here is how you can write emojis:</span>
 			<ul>
 				<li>Windows: <code>WIN + .</code> (windows key + dot)</li>
 				<li>macOS: <code>CTRL + CMD + Space</code></li>
 				<li>
-					<span>Everyone else: </span>
+					<span>You can also copy and paste them from the Internet: </span>
 					<a href="https://unicode.org/emoji/charts/full-emoji-list.html"
 						>unicode.org/emoji/charts/full-emoji-list</a
 					>
@@ -61,9 +87,7 @@ import Docs from "@layouts/Docs.astro"
 
 		<p>
 			When selecting the <bjr>Hide settings icon</bjr>, the icon is still clickable at the
-			same position as before. You can also open the settings menu by pressing the <code
-				>Escape</code
-			> key.
+			same position as before.
 		</p>
 
 		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
@@ -123,7 +147,7 @@ import Docs from "@layouts/Docs.astro"
 
 		<p>
 			Switch your <bjr>Background type</bjr> from "Unsplash" to "Local file", and you'll be able
-			to drag and drop your own images from your computer to Bonjourr.
+			to select your own images from your computer and set them in Bonjourr.
 		</p>
 	</section>
 
@@ -132,9 +156,32 @@ import Docs from "@layouts/Docs.astro"
 	<section id="clock">
 		<h2>Time and date</h2>
 
-		<p>The analog clock background is blurred when its opacity is above 0.</p>
+		<p>
+			The analog clcok feature has many options you can play around with and get to really
+			cool styles.
+		</p>
+
+		<img
+			src="/documentation/overview/clock-styles.png"
+			alt="Bonjourr's bookmarks modal"
+			loading="lazy"
+		/>
+
+		<p>
+			Some things to know:
+			<ul>
+				<li>Clicking the 🌙/☀️ icons on the sliders will switch from black to white.</li>
+				<li>The analog clock background is blurred when its opacity is above 0.</li>
+			</ul>
+		</p>
 
 		<h3 id="world-clocks">World clocks</h3>
+
+		<img
+			src="/documentation/overview/world-clocks.png"
+			alt="Bonjourr's bookmarks modal"
+			loading="lazy"
+		/>
 
 		<p>
 			<bjr>World clocks</bjr> allows you to add multiple clocks with different timezones. Removing

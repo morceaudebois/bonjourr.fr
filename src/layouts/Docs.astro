@@ -148,6 +148,16 @@ if (!title && frontmatter) {
 		margin-top: 0;
 	}
 
+	/* all <p> before a <ul> */
+	.content section p:has(+ ul) {
+		margin-bottom: 0;
+	}
+
+	/* all <ul> before a <p> */
+	.content section p + ul {
+		margin-top: 4px;
+	}
+
 	.perma {
 		opacity: 0;
 		font-size: 1.5rem;
