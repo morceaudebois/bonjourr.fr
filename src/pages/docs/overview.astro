@@ -393,10 +393,45 @@ import Docs from "@layouts/Docs.astro"
 	<section id="searchbar">
 		<h2>Search bar</h2>
 
+		<h3>Suggestions</h3>
+
 		<p>
-			When enabling the custom search engine option, the searchbar becomes compatible with all
-			search engines, which includes things like YouTube:
-			https://www.youtube.com/results?search_query=%s.
+			Suggestions are provided by our own API. You can learn all about it and its source code <a
+				href="https://github.com/victrme/search-suggestions">here</a
+			>.
+		</p>
+
+		<h3>Custom search engine</h3>
+
+		<p>
+			There are many search engines available by default in Bonjourr, and you can even add
+			others if needed. To do so, select <bjr>Custom</bjr> in the Search engine option of the search
+			bar. When the <bjr>URL request</bjr> input appears, simply paste in the URL of the search
+			engine and replace the searched text by <code>%s</code>.
+
+			<p>
+				For example, if you search "coffee" on YouTube, you'll see that the URL will be <code
+					>https://www.youtube.com/results?search_query=coffee</code
+				>.
+			</p>
+
+			<p>
+				In this case, you just need to replace <code>coffee</code> with <code>%s</code>,
+				giving you this result: <code>https://www.youtube.com/results?search_query=%s</code
+				>.
+			</p>
+
+			<p>
+				Paste it in the input and you'll now be able to use the corresponding search engine
+				from Bonjourr.
+			</p>
+
+			<video src="/documentation/overview/custom-search.mp4" controls></video>
+
+			<p>
+				This method will work with the vast majority of search engines, making Bonjourr
+				compatible with almost all of them.
+			</p>
 		</p>
 	</section>
 
