@@ -11,7 +11,7 @@ import Docs from "@layouts/Docs.astro"
 	<OverviewFilter />
 
 	<section id="interface">
-		<h2>Main interface</h2>
+		<h2>Main interface tips</h2>
 
 		<p>
 			When using the default backgrounds, hover your mouse on the background credits at the
@@ -29,10 +29,38 @@ import Docs from "@layouts/Docs.astro"
 			Clicking the <bjr>download</bjr> icon will download the photo to your computer at its highest
 			possible resolution.
 		</p>
+	</section>
+
+	<hr />
+
+	<section id="general-settings">
+		<h2>General settings tips</h2>
+
+		<h3>Accessing the settings panel</h3>
 
 		<p>
-			Hitting the <code>Escape</code> key will open the settings panel.
+			There are two ways you can access the settings of Bonjourr:
+			<ul>
+				<li>Click on the ⚙️ icon in the bottom right corner</li>
+				<li>Hit the <code>esc</code> key of your keyboard (while focused on the page)</li>
+			</ul>
 		</p>
+
+		<h3>Show all settings</h3>
+
+		<p>
+			Bonjourr has lots of settings. To make it easier for newcomers, we hide most of the more
+			advanced ones by default. You can enable them by toggling <bjr>Show all settings</bjr> at
+			the very top of the settings panel.
+		</p>
+
+		<h3>Hide settings icon</h3>
+		<p>
+			When toggling the <bjr>Hide settings icon</bjr> option, the icon is still clickable at the
+			same position as before.
+		</p>
+
+		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
 	</section>
 
 	<hr />
@@ -82,19 +110,6 @@ import Docs from "@layouts/Docs.astro"
 
 	<hr />
 
-	<section id="hide-settings-icon">
-		<h2>Hide settings icon</h2>
-
-		<p>
-			When selecting the <bjr>Hide settings icon</bjr>, the icon is still clickable at the
-			same position as before.
-		</p>
-
-		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
-	</section>
-
-	<hr />
-
 	<section id="backgrounds">
 		<h2>Backgrounds</h2>
 
@@ -127,20 +142,31 @@ import Docs from "@layouts/Docs.astro"
 
 		<h3 id="unsplash-collection">Custom Unsplash collection</h3>
 
-		<p>
-			You can make your own collection of images using <a href="https://unsplash.com/"
-				>Unsplash</a
-			>. To do so, you'll need to create an Unsplash account and add all your images to a new
-			collection. Once you're pleased with your selection, you need the collection's ID
-			present in its URL. You will spot it easily since it's the string of random letters and
-			numbers. For example, if your collection's URL is <code
-				>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
-			>, the ID is <code>2170139</code>.
-		</p>
+		<p>You can use any collection on Unsplash as a background source in Bonjourr. To do so:</p>
+
+		<ol>
+			<li>
+				Find one you like by going to <a href="https://unsplash.com">unsplash.com</a>,
+				search for a subject and go to the Collections tab.
+			</li>
+			<li>
+				Once you've clicked on the collection you want, check out its URL. What you want is
+				the ID, which is the string of random letters and numbers. For example, if your
+				collection's URL is <code
+					>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
+				>, the ID is <code>2170139</code>.
+			</li>
+			<li>
+				Head back to Bonjourr and paste the ID in the <bjr>Unsplash collection</bjr> field. You
+				can add multiple collections by separating them with a comma.
+			</li>
+		</ol>
+
+		<video src="/documentation/overview/custom-unsplash-collection.mp4" controls muted></video>
 
 		<p>
-			Head back to Bonjourr and paste the ID in the <bjr>Unsplash collection</bjr> field. You can
-			add multiple collections by separating them with a comma.
+			You can also create your own collection and select your own images, but then you'll need
+			to create an Unsplash account.
 		</p>
 
 		<h3 id="local-backgrounds">Local files</h3>
@@ -201,14 +227,14 @@ import Docs from "@layouts/Docs.astro"
 
 		<p>
 			If there are multiple cities with the same name in your country, it might cause an
-			issue. A good trick to fix the issue is to choose the name of the closest city with a
-			unique name.
+			issue. A good trick to fix this is to choose the name of the closest city with a unique
+			name.
 		</p>
 
 		<p>
 			Until we add a "refresh weather" option, you can refresh the weather by toggling the
 			weather
-			<bjr>Unit</bjr>. Celsius -> Farenheit -> Celsius.
+			<bjr>Unit</bjr>. Celsius → Farenheit → Celsius.
 		</p>
 
 		<h3 id="detailed-weather">Detailed weather</h3>
