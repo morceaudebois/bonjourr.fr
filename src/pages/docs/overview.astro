@@ -1,6 +1,10 @@
 ---
 import OverviewFilter from "@components/Docs/OverviewFilter.astro"
+import { Code } from "astro-expressive-code/components"
 import Docs from "@layouts/Docs.astro"
+
+const customQuotesExample = `Author, Your quote.
+Author, Your second quote.`
 ---
 
 <Docs
@@ -11,7 +15,7 @@ import Docs from "@layouts/Docs.astro"
 	<OverviewFilter />
 
 	<section id="interface">
-		<h2>Main interface tips</h2>
+		<h2>🖥️ Main interface tips</h2>
 
 		<p>
 			When using the default backgrounds, hover your mouse on the background credits at the
@@ -34,7 +38,7 @@ import Docs from "@layouts/Docs.astro"
 	<hr />
 
 	<section id="general-settings">
-		<h2>General settings tips</h2>
+		<h2>⚙️ General settings tips</h2>
 
 		<h3>Accessing the settings panel</h3>
 
@@ -66,7 +70,7 @@ import Docs from "@layouts/Docs.astro"
 	<hr />
 
 	<section id="newtab-title">
-		<h2>Tab appearance</h2>
+		<h2>📌 Tab appearance</h2>
 
 		<p>
 			You can customize the text and icon (called favicon) your browser uses for Bonjourr.
@@ -111,7 +115,7 @@ import Docs from "@layouts/Docs.astro"
 	<hr />
 
 	<section id="backgrounds">
-		<h2>Backgrounds</h2>
+		<h2>🖼️ Backgrounds</h2>
 
 		<p>
 			Bonjourr uses the <a href="https://unsplash.com/developers">Unsplash API</a> to fetch its
@@ -179,81 +183,8 @@ import Docs from "@layouts/Docs.astro"
 
 	<hr />
 
-	<section id="clock">
-		<h2>Time and date</h2>
-
-		<p>
-			The analog clcok feature has many options you can play around with and get to really
-			cool styles.
-		</p>
-
-		<img
-			src="/documentation/overview/clock-styles.png"
-			alt="Bonjourr's bookmarks modal"
-			loading="lazy"
-		/>
-
-		<p>
-			Some things to know:
-			<ul>
-				<li>Clicking the 🌙/☀️ icons on the sliders will switch from black to white.</li>
-				<li>The analog clock background is blurred when its opacity is above 0.</li>
-			</ul>
-		</p>
-
-		<h3 id="world-clocks">World clocks</h3>
-
-		<img
-			src="/documentation/overview/world-clocks.png"
-			alt="Bonjourr's bookmarks modal"
-			loading="lazy"
-		/>
-
-		<p>
-			<bjr>World clocks</bjr> allows you to add multiple clocks with different timezones. Removing
-			the name of a world clock will remove the clock entirely.
-		</p>
-	</section>
-
-	<hr />
-
-	<section id="weather">
-		<h2>Weather</h2>
-
-		<p>
-			Precise geolocation needs access to your device's GPS. Some browsers or systems might
-			not allow access based on its privacy setting. macOS / Safari often causes problems.
-		</p>
-
-		<p>
-			If there are multiple cities with the same name in your country, it might cause an
-			issue. A good trick to fix this is to choose the name of the closest city with a unique
-			name.
-		</p>
-
-		<p>
-			Until we add a "refresh weather" option, you can refresh the weather by toggling the
-			weather
-			<bjr>Unit</bjr>. Celsius → Farenheit → Celsius.
-		</p>
-
-		<h3 id="detailed-weather">Detailed weather</h3>
-
-		<p>
-			<bjr>Detailed weather</bjr> allows you to easily go to a weather provider's website to get
-			a detailed weather report. Click on the weather widget to go to your choice of provider.
-		</p>
-
-		<p>
-			⚠️ We are in no way affiliated with MSN, Accuweather, Yahoo!, or Windy.com. These
-			websites offers reports with different data provider, hence the choice.
-		</p>
-	</section>
-
-	<hr />
-
 	<section id="quick-links">
-		<h2>Quick Links</h2>
+		<h2>🔗 Quick Links</h2>
 
 		<p>Quick links are a way to easily manage the websites you visit regularly.</p>
 
@@ -390,8 +321,142 @@ import Docs from "@layouts/Docs.astro"
 
 	<hr />
 
+	<section id="clock">
+		<h2>🕰️ Time and date</h2>
+
+		<p>
+			The analog clcok feature has many options you can play around with and get to really
+			cool styles.
+		</p>
+
+		<img
+			src="/documentation/overview/clock-styles.png"
+			alt="Bonjourr's bookmarks modal"
+			loading="lazy"
+		/>
+
+		<p>
+			Some things to know:
+			<ul>
+				<li>Clicking the 🌙/☀️ icons on the sliders will switch from black to white.</li>
+				<li>The analog clock background is blurred when its opacity is above 0.</li>
+			</ul>
+		</p>
+
+		<h3 id="world-clocks">World clocks</h3>
+
+		<img
+			src="/documentation/overview/world-clocks.png"
+			alt="Bonjourr's bookmarks modal"
+			loading="lazy"
+		/>
+
+		<p>
+			<bjr>World clocks</bjr> allows you to add multiple clocks with different timezones. Removing
+			the name of a world clock will remove the clock entirely.
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="weather">
+		<h2>🌤️ Weather</h2>
+
+		<p>
+			Precise geolocation needs access to your device's GPS. Some browsers or systems might
+			not allow access based on its privacy setting. macOS / Safari often causes problems.
+		</p>
+
+		<p>
+			If there are multiple cities with the same name in your country, it might cause an
+			issue. A good trick to fix this is to choose the name of the closest city with a unique
+			name.
+		</p>
+
+		<p>
+			Until we add a "refresh weather" option, you can refresh the weather by toggling the
+			weather
+			<bjr>Unit</bjr>. Celsius → Farenheit → Celsius.
+		</p>
+
+		<h3 id="detailed-weather">Detailed weather</h3>
+
+		<p>
+			<bjr>Detailed weather</bjr> allows you to easily go to a weather provider's website to get
+			a detailed weather report. Click on the weather widget to go to your choice of provider.
+		</p>
+
+		<p>
+			⚠️ We are in no way affiliated with MSN, Accuweather, Yahoo!, or Windy.com. These
+			websites offers reports with different data provider, hence the choice.
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="notes">
+		<h2>✍️ Notes</h2>
+
+		<p>
+			Notes uses <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a> to create titles,
+			lists, and checkboxes. To transform a line, just add these characters at the start of a line:
+		</p>
+
+		<ul>
+			<li><code>#</code> large heading</li>
+			<li><code>##</code> medium heading</li>
+			<li><code>###</code> small heading</li>
+
+			<li><code>-</code> classic list</li>
+			<li><code>[ ]</code> checkbox (notice the space between the brackets)</li>
+			<li><code>[x]</code> checkbox, checked</li>
+		</ul>
+
+		<video src="/documentation/overview/notes.mp4" controls></video>
+
+		<p>Other Markdown features, like italics, are not available currently.</p>
+
+		<h3>Keybindings</h3>
+
+		<p>
+			You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `cmd` on
+			macOS.
+		</p>
+
+		<table>
+			<thead>
+				<th>Keys</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ctrl + Shift + 1</td>
+					<td>Create large heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 2</td>
+					<td>Create medium heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 3</td>
+					<td>Create small heading</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 4</td>
+					<td>Create bullet list</td>
+				</tr>
+				<tr>
+					<td>Ctrl + Shift + 5</td>
+					<td>Create todo list</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<hr />
+
 	<section id="searchbar">
-		<h2>Search bar</h2>
+		<h2>🔎 Search bar</h2>
 
 		<h3>Suggestions</h3>
 
@@ -437,62 +502,69 @@ import Docs from "@layouts/Docs.astro"
 
 	<hr />
 
-	<section id="notes">
-		<h2>Notes</h2>
+	<section id="quotes">
+		<h2>🗣 Quotes</h2>
 
 		<p>
-			Notes uses Markdown to create titles, lists, and checkboxes. To transform a line, just
-			add these characters at the start of a line:
+			The quotes widget can fetch quotes from multiple sources:
+			<ul>
+				<li>
+					By default, our <b
+						><a href="https://github.com/victrme/i18n-quotes">open source quotes API</a
+						></b
+					> available in multiple languages. These are general motivational or inspirational
+					quotes. The community can add or remove quotes by making pull requests.
+				</li>
+				<li>
+					The <b><a href="https://inspirobot.me/">InspiroBot</a> API</b>, an AI that
+					generates seemingly inspirational quotes, but with a humorous twist. It parodies
+					traditional motivational quotes from the point of view of an AI. Although we are
+					not affiliated with InspiroBot, we've always found this service fun and thought
+					it be nice to have it in Bonjourr. It is important to note that it's at least 10
+					years old and <u><b>has nothing to do with the recent generative AI trend</b></u
+					>.
+				</li>
+				<li>
+					The <b><a href="https://github.com/sin0light/api-kaamelott">Kaamelott API</a></b
+					>, quotes from a french comedy TV show. Only available in French.
+				</li>
+				<li>
+					<b>Stoic</b> quotes about the <a href="https://en.wikipedia.org/wiki/Stoicism"
+						>Stoicism philosophy</a
+					>.
+				</li>
+				<li><b>Hitokomo</b>, japanese inspirational quotes.</li>
+				<li><b>Custom</b>, add your own quotes directly from Bonjourr's UI.</li>
+				<li><b>URL</b>, add quotes from a distant CSV file.</li>
+			</ul>
 		</p>
 
-		<ul>
-			<li><code>#</code> big heading</li>
-			<li><code>##</code> medium heading</li>
-			<li><code>###</code> small heading</li>
+		<h3>Using the custom quotes</h3>
 
-			<li><code>-</code> classic list</li>
-			<li><code>[ ]</code> checkbox</li>
-			<li><code>[x]</code> checkbox, checked</li>
-		</ul>
+		<p>
+			Once the custom quotes option is selected, you can simply add quotes to it by respecting
+			this formatting:
+		</p>
 
-		<p>Other Markdown features, like italics, are not available currently.</p>
+		<Code lang="json" code={customQuotesExample} />
 
-		<h3>Keybindings</h3>
+		<p>
+			This option is limited to 8kB of text, which is about 50 regularly sized quotes. This is
+			because Bonjourr uses <a
+				href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync"
+				>storage.sync</a
+			> to store data, and each object is limited to 8kB.
+		</p>
 
-		<table>
-			<thead>
-				<th>Keys</th>
-				<th>Action</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Ctrl + Shift + 1</td>
-					<td>To big heading</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 2</td>
-					<td>To medium heading</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 3</td>
-					<td>To small heading</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 4</td>
-					<td>To bullet list</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 5</td>
-					<td>To todo list</td>
-				</tr>
-			</tbody>
-		</table>
+		<p>To remedy this, we advise using the URL option instead if you need more quotes.</p>
+
+		<!-- <h3>Using the URL option</h3> -->
 	</section>
 
 	<hr />
 
 	<section id="fonts">
-		<h2>Fonts</h2>
+		<h2>📚 Fonts</h2>
 
 		<p>
 			Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts
@@ -503,7 +575,7 @@ import Docs from "@layouts/Docs.astro"
 	<hr />
 
 	<section id="page-layouts">
-		<h2>Page layouts</h2>
+		<h2>📄 Page layouts</h2>
 
 		<p>
 			There are 3 different page layouts to choose from: single, double and triple column.
@@ -523,8 +595,36 @@ import Docs from "@layouts/Docs.astro"
 
 	<hr />
 
-	<section id="sync">
-		<h2>Github Gist</h2>
+	<section id="settings-management">
+		<h2>💾 Settings management</h2>
+
+		<p>
+			Bonjourr allows you to export all your settings into a file. You can use this feature if
+			you want to save them or share them to someone. You will in turn be able to import said
+			settings into any instance of Bonjourr.
+		</p>
+
+		<p>
+			To do so, simply go to the bottom of your settings pannel, then click Export as file in
+			the settings management. Your file will be downloaded. On your other instance of
+			Bonjourr, you can then go to the Import tab of the settings management and drop your
+			file. Bonjourr will reload and all your settings will be applied.
+		</p>
+
+		<h3 id="browser-syncing">Browser syncing</h3>
+
+		<p>
+			Bonjourr is compatible with the automatic syncing features of both
+			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
+			and <a
+				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
+				>Chrome</a
+			>. If you log into your Mozilla/Google account on your browser and have syncing enabled
+			in your browser, Bonjourr should get synced to other instances of the same browser on
+			other computers. This is true for all Bonjourr settings as well as Quick Links.
+		</p>
+
+		<h3 id="sync">Github Gist</h3>
 
 		<p>
 			You can save your Bonjourr config in the cloud using <a href="https://gist.github.com/"
@@ -580,40 +680,8 @@ import Docs from "@layouts/Docs.astro"
 
 	<hr />
 
-	<section id="settings-management">
-		<h2>Settings management</h2>
-
-		<p>
-			Bonjourr allows you to export all your settings into a file. You can use this feature if
-			you want to save them or share them to someone. You will in turn be able to import said
-			settings into any instance of Bonjourr.
-		</p>
-
-		<p>
-			To do so, simply go to the bottom of your settings pannel, then click Export as file in
-			the settings management. Your file will be downloaded. On your other instance of
-			Bonjourr, you can then go to the Import tab of the settings management and drop your
-			file. Bonjourr will reload and all your settings will be applied.
-		</p>
-
-		<h3 id="browser-syncing">Browser syncing</h3>
-
-		<p>
-			Bonjourr is compatible with the automatic syncing features of both
-			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
-			and <a
-				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
-				>Chrome</a
-			>. If you log into your Mozilla/Google account on your browser and have syncing enabled
-			in your browser, Bonjourr should get synced to other instances of the same browser on
-			other computers. This is true for all Bonjourr settings as well as Quick Links.
-		</p>
-	</section>
-
-	<hr />
-
 	<section id="keybindings">
-		<h2 id="keybindings">Keybindings</h2>
+		<h2>⌨️ Keybindings</h2>
 
 		<table>
 			<thead>
@@ -632,47 +700,15 @@ import Docs from "@layouts/Docs.astro"
 			</tbody>
 		</table>
 
-		<h3 id="notes">Notes</h3>
+		<h3>Notes</h3>
 
-		<p>
-			You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` by `Cmd` on
-			macOS.
-		</p>
-
-		<table>
-			<thead>
-				<th>Keys</th>
-				<th>Action</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Ctrl + Shift + 1</td>
-					<td>To big heading</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 2</td>
-					<td>To medium heading</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 3</td>
-					<td>To small heading</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 4</td>
-					<td>To bullet list</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Shift + 5</td>
-					<td>To todo list</td>
-				</tr>
-			</tbody>
-		</table>
+		<p>Refer to the <a href="#notes">notes section</a>.</p>
 	</section>
 
 	<hr />
 
 	<section id="supporters-notification">
-		<h2>Supporters notification</h2>
+		<h2>❤️ Supporters notification</h2>
 
 		<p>
 			The supporters notification was introduced with Bonjourr 20.4 and is our way to thank
