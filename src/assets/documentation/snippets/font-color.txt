@@ -1,4 +1,5 @@
-/* Changes font color. "black" can be any css-safe color code. */
+/* Changes font color. */
+/* "black" can be any CSS-safe color or hexadecimal code. */
 
 #linkblocks span,
 #interface,
