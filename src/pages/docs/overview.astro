@@ -30,7 +30,7 @@ Author, Your second quote.`
 		/>
 
 		<p>
-			Clicking the <bjr>download</bjr> icon will download the photo to your computer at its highest
+			Clicking the <bjr>Download</bjr> icon will download the photo to your computer at its highest
 			possible resolution.
 		</p>
 	</section>
@@ -325,7 +325,7 @@ Author, Your second quote.`
 		<h2>🕰️ Time and date</h2>
 
 		<p>
-			The analog clcok feature has many options you can play around with and get to really
+			The analog clock feature has many options you can play around with and get to really
 			cool styles.
 		</p>
 
@@ -539,26 +539,71 @@ Author, Your second quote.`
 			</ul>
 		</p>
 
-		<h3>Using the custom quotes</h3>
+		<h3>Importing your own quotes</h3>
 
 		<p>
-			Once the custom quotes option is selected, you can simply add quotes to it by respecting
-			this formatting:
+			There are two ways you can import your own quotes: directly from Bonjourr, or from a
+			distant URL. In both cases, here is the formatting your quotes need to adopt:
 		</p>
 
 		<Code lang="json" code={customQuotesExample} />
+
+		<h4>With the custom quotes option</h4>
+
+		<p>
+			Once the custom quotes option is selected, you can simply add quotes to it by respecting
+			the formatting shown above.
+		</p>
 
 		<p>
 			This option is limited to 8kB of text, which is about 50 regularly sized quotes. This is
 			because Bonjourr uses <a
 				href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync"
 				>storage.sync</a
-			> to store data, and each object is limited to 8kB.
+			> to store data, and each object is limited to 8kB. <b
+				>If you need more quotes, we advise using the URL option instead.</b
+			>
 		</p>
 
-		<p>To remedy this, we advise using the URL option instead if you need more quotes.</p>
+		<h4>With the URL option (CSV file)</h4>
 
-		<!-- <h3>Using the URL option</h3> -->
+		<p>
+			Select the URL option to link Bonjourr to the direct URL of a CSV file that contains all
+			your quotes.
+		</p>
+
+		<p>
+			The easiest way to do this is to use GitHub Gist, a service that allows you to very
+			easily create and host a file:
+			<ol>
+				<li>
+					Create an account <a href="https://github.com">on GitHub</a> if you don't already
+					have one, and log in.
+				</li>
+				<li>
+					Head to the <a href="https://gist.github.com/">GitHub Gist page</a>
+				</li>
+				<li>Give your file a description, like "My Bonjourr quotes"</li>
+				<li>
+					Give it a filename, like <code>bonjourr_quotes.csv</code>. It can be anything as
+					long as it ends with <code>.csv</code>.
+				</li>
+				<li>
+					Start typing your quotes with the formatting shown above (you'll be able to edit
+					them later if you want).
+				</li>
+				<li>
+					Once done, you can hit the <bjr>Create secret gist</bjr> button. It will save the
+					file and show you what it looks like as a table.
+				</li>
+				<li>
+					Click the <bjr>Raw</bjr> button, copy the URL of the page that opens and paste it
+					in the URL input of Bonjourr. Voilà!
+				</li>
+			</ol>
+		</p>
+
+		<video src="/documentation/overview/quotes-gist.mp4" controls></video>
 	</section>
 
 	<hr />
