@@ -1,260 +1,739 @@
 ---
 import OverviewFilter from "@components/Docs/OverviewFilter.astro"
+import { Code } from "astro-expressive-code/components"
 import Docs from "@layouts/Docs.astro"
+
+const customQuotesExample = `Auteur, Votre citation.
+Auteur, Votre deuxième citation.`
 ---
 
 <Docs
-	title="Liste de fonctionnalités"
-	lang="fr"
+	title="Liste des fonctionnalités"
+	lang="en"
 	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
 	<OverviewFilter />
 
-	<div id="interface">
-		<h2>Interface</h2>
-
-		<p>Survolez votre souris sur les crédits du fond d'écran pour voir les infos exif.</p>
-	</div>
-
-	<div id="show-all-settings">
-		<h2>Afficher tous les réglages</h2>
+	<section id="interface">
+		<h2>🖥️ Astuces pour l'interface principale</h2>
 
 		<p>
-			Bonjourr est rempli d'options. Afin de ne pas être trop intimidant, la plupart de ces
-			options sont cachées par défaut. Si vous êtes un utilisateur avancé, vous pouvez les
-			afficher en activant l'option <bjr>Afficher tous les réglages</bjr> tout en haut du panneau
-			de réglages.
+			Lorsque vous utilisez les arrière-plans par défaut, survolez les crédits de l'image en
+			bas à gauche de Bonjourr avec votre souris pour afficher les informations EXIF de la
+			photo (si disponibles).
 		</p>
-	</div>
 
-	<div id="hide-settings-icon">
-		<h2>Cacher l'icône des réglages</h2>
+		<img
+			src="/documentation/overview/exif.png"
+			alt="Infos de Bonjourr sur la photo actuelle"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
 
 		<p>
-			Lorsque vous sélectionnez l'option <bjr>Cacher l'icône des réglages</bjr>, l'icône reste
-			cliquable au même endroit qu'auparavant. Vous pouvez également ouvrir le menu des
-			réglages en appuyant sur la touche <code>Echap</code>.
+			En cliquant sur l'icône <bjr>Télécharger</bjr>, vous téléchargerez la photo sur votre
+			ordinateur dans sa résolution maximale.
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="general-settings">
+		<h2>⚙️ Astuces pour les paramètres</h2>
+
+		<h3>Accéder au panneau des paramètres</h3>
+
+		<p>Il existe deux façons d'accéder aux paramètres de Bonjourr :</p>
+
+		<ul>
+			<li>Cliquez sur l'icône ⚙️ en bas à droite.</li>
+			<li>
+				Appuyez sur la touche <code>esc</code> de votre clavier (tout en étant sur la page).
+			</li>
+		</ul>
+
+		<h3>Afficher tous les réglages</h3>
+
+		<p>
+			Bonjourr propose de nombreux réglages. Pour faciliter l'expérience des nouveaux
+			utilisateurs, la plupart des paramètres avancés sont masqués par défaut. Vous pouvez les
+			activer en basculant l'option <bjr>Afficher tous les réglages</bjr> tout en haut du panneau
+			des paramètres.
+		</p>
+
+		<h3>Masquer l'icône des paramètres</h3>
+
+		<p>
+			Lorsque vous activez l'option <bjr>Masquer l'icône des paramètres</bjr>, l'icône reste
+			cliquable au même endroit qu'auparavant.
 		</p>
 
 		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
-	</div>
+	</section>
 
-	<div id="backgrounds">
-		<h2>Fond d'écran</h2>
+	<hr />
+
+	<section id="newtab-title">
+		<h2>📌 Apparence de l'onglet</h2>
 
 		<p>
-			Bonjourr utilise <a href="https://unsplash.com/developers">l'API Unsplash</a> pour récupérer
+			Vous pouvez personnaliser le texte et l'icône (appelée favicon) que votre navigateur
+			utilise pour Bonjourr. Le texte est limité à 80 caractères et les icônes peuvent
+			uniquement être des émojis.
+		</p>
+
+		<img
+			src="/documentation/overview/tab-appearance.png"
+			alt="Onglet personnalisé de Bonjourr"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
+
+		<p>Il est possible que l'option émoji soit limitée par votre navigateur :</p>
+
+		<ul>
+			<li>
+				Firefox a des problèmes d'échelle et d'alignement imparfaits (<a
+					href="https://github.com/victrme/Bonjourr/issues/431">Issue sur GitHub</a
+				>).
+			</li>
+			<li>Microsoft Edge n'affichera que la silhouette de l'émoji.</li>
+			<li>Safari ne prend pas du tout en charge cette fonction.</li>
+		</ul>
+
+		<p>Voici comment vous pouvez écrire des émojis :</p>
+
+		<ul>
+			<li>Windows : <code>WIN + .</code> (touche Windows + point)</li>
+			<li>macOS : <code>CTRL + CMD + Space</code></li>
+			<li>
+				<span>Vous pouvez également les copier et les coller depuis Internet : </span>
+				<a href="https://unicode.org/emoji/charts/full-emoji-list.html"
+					>unicode.org/emoji/charts/full-emoji-list</a
+				>.
+			</li>
+		</ul>
+	</section>
+
+	<hr />
+
+	<section id="backgrounds">
+		<h2>🖼️ Arrière-plans</h2>
+
+		<p>
+			Bonjourr utilise l'<a href="https://unsplash.com/developers">API Unsplash</a> pour afficher
 			ses arrière-plans. Nous les sélectionnons manuellement et les stockons dans quatre collections
-			différentes qui changent selon l'heure de la journée :
+			différentes qui changent en fonction de l'heure de la journée :
 		</p>
 
 		<ul>
 			<li>
-				<a href="https://unsplash.com/collections/4933370/bonjourr-backgrounds-(day)"
-					>Pendant la journée</a
-				> ou
-				<a href="https://unsplash.com/collections/VI5sx2SDQUg/bonjourr-backgrounds-(night)"
-					>la nuit</a
-				>
+				Une pour <a
+					href="https://unsplash.com/collections/GD4aOSg4yQE/bonjourr-backgrounds-(noon)"
+					>le matin</a
+				> (2h autour du lever du soleil).
 			</li>
 			<li>
-				2 heures entre <a
-					href="https://unsplash.com/collections/yDjgRh1iqkQ/bonjourr-backgrounds-(noon)"
-					>le lever du soleil (Noon)</a
-				> or
-				<a
-					href="https://unsplash.com/collections/2nVzlQADDIE/bonjourr-backgrounds-(evening)"
-					>le coucher de soleil (Evening)</a
-				>
+				Une pour <a
+					href="https://unsplash.com/collections/o8uX55RbBPs/bonjourr-backgrounds-(day)"
+					>la journée</a
+				>.
+			</li>
+			<li>
+				Une pour <a
+					href="https://unsplash.com/collections/3M2rKTckZaQ/bonjourr-backgrounds-(evening)"
+					>le soir</a
+				> (2h autour du coucher du soleil).
+			</li>
+			<li>
+				Et une pour <a
+					href="https://unspla.sh.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)"
+					>la nuit</a
+				>.
 			</li>
 		</ul>
 
-		<h3 id="unsplash-collection">Collection Unsplash personnalisé</h3>
+		<h3 id="unsplash-collection">Collection Unsplash personnalisée</h3>
 
 		<p>
-			Vous pouvez créer votre propre collection d'images en utilisant <a
-				href="https://unsplash.com/">Unsplash</a
-			>. Pour ce faire, vous devez créer un compte Unsplash et ajouter toutes vos images à une
-			nouvelle collection. Une fois que vous êtes satisfait de votre sélection, vous avez
-			besoin de l'ID de la collection présent dans son URL. Vous le repérerez facilement
-			puisqu'il s'agit d'une chaîne de lettres et de chiffres aléatoires. Par exemple, si
-			l'URL de votre collection est <code
-				>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
-			>, l'ID est <code>2170139</code>.
+			Vous pouvez utiliser n'importe quelle collection sur Unsplash comme source
+			d'arrière-plan dans Bonjourr. Pour ce faire :
 		</p>
+
+		<ol>
+			<li>
+				Trouvez une collection que vous aimez en allant sur <a href="https://unsplash.com"
+					>unsplash.com</a
+				>, cherchez un sujet et allez dans l'onglet Collections.
+			</li>
+			<li>
+				Une fois que vous avez cliqué sur la collection que vous souhaitez, consultez son
+				URL. Ce que vous voulez est l'ID, qui est la chaîne de lettres et de chiffres
+				aléatoires. Par exemple, si l'URL de votre collection est <code
+					>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
+				>, l'ID est <code>2170139</code>.
+			</li>
+			<li>
+				Retournez dans Bonjourr et collez l'ID dans le champ <bjr>Collection Unsplash</bjr>.
+				Vous pouvez ajouter plusieurs collections en les séparant par une virgule.
+			</li>
+		</ol>
+
+		<video src="/documentation/overview/custom-unsplash-collection.mp4" controls muted></video>
 
 		<p>
-			Retournez sur Bonjourr et collez l'ID dans le champ <bjr>Unsplash collection</bjr>. Vous
-			pouvez ajouter plusieurs collections en les séparant par une virgule.
+			Vous pouvez également créer votre propre collection et sélectionner vos propres images,
+			mais dans ce cas, vous devrez créer un compte Unsplash.
 		</p>
 
-		<h3 id="local-backgrounds">Images locale</h3>
+		<h3 id="local-backgrounds">Fichiers locaux</h3>
 
 		<p>
-			Passez du <bjr>Type d'arrière-plan</bjr> "Unsplash" à "Fichier local", et vous pourrez faire
-			glisser et déposer vos propres images de votre ordinateur vers Bonjourr.
+			Changez votre <bjr>Type d'arrière-plan</bjr> de "Unsplash" à "Fichier local", et vous pourrez
+			sélectionner vos propres images depuis votre ordinateur et les définir dans Bonjourr.
 		</p>
-	</div>
+	</section>
 
-	<div id="links">
-		<h2>Quick links</h2>
+	<hr />
+
+	<section id="quick-links">
+		<h2>🔗 Liens favoris</h2>
 
 		<p>
-			Vous pouvez ajouter et importer des liens à partir des paramètres, et les modifier en
-			faisant un clic droit dessus.
+			Les liens favoris sont un moyen facile de gérer les sites web que vous visitez
+			régulièrement.
 		</p>
+
+		<h3 id="link-usage">Utilisation de base</h3>
 
 		<p>
-			Une façon simple d'ajouter une icône personnalisée à votre lien rapide est de la
-			télécharger sur un site comme Imgur, et d'utiliser ce lien comme icône. Vous pouvez
-			également convertir votre icône en une URI de données (max 8kB).
+			Vous pouvez ajouter des liens favoris en allant dans les paramètres de Bonjourr, dans la
+			section Liens favoris. Ils sont modifiables si vous faites un clic droit dessus (ou
+			appuyez longuement sur mobile), ce qui vous permet de changer leurs titres, URLs, icônes
+			et de les supprimer.
 		</p>
+
+		<video autoplay loop muted playsinline>
+			<source src="/documentation/overview/links-usage.mp4" type="video/mp4" />
+			Votre navigateur ne prend pas en charge la balise vidéo.
+		</video>
 
 		<p>
-			⚠️ <i>Attention</i>: par mesure de sécurité, les chemins locaux comme <code
-				>file://</code
-			>, des liens sur les paramètres du navigateur comme <code>about:config</code> ou <code
-				>chrome://extensions</code
-			> ne peut pas être ajouté. Cependant, les liens <code>localhost:</code> fonctionneront très
-			bien.
+			Vous pouvez facilement réorganiser vos liens en les faisant glisser, tout comme vous le
+			feriez sur un téléphone. De plus, en faisant glisser un lien sur un autre, vous créerez
+			un dossier contenant les deux. Vous pouvez également modifier ce dossier via un clic
+			droit.
 		</p>
 
-		<h3 id="folders">Dossiers de liens</h3>
+		<h3 id="link-import">Importer vos liens</h3>
 
 		<p>
-			Les dossiers de liens sont très intéressants. Vous pouvez les faire glisser et les
-			déposer. En faisant glisser un dossier sur un autre, le contenu du dossier glissé est
-			ajouté à la cible. La suppression d'un dossier contenant des liens supprime aussi ces
-			liens.
+			Bonjourr propose un moyen d'importer les liens existants de votre navigateur. Pour y
+			accéder, cliquez sur le bouton <code>Importer les favoris</code>. En fonction de votre
+			navigateur, plusieurs groupes de liens seront affichés et vous pourrez les importer,
+			tels que vos sites les plus visités et votre barre d'outils des favoris.
 		</p>
+
+		<img
+			src="/documentation/overview/bookmarks-modal.png"
+			alt="Fenêtre modale des favoris de Bonjourr"
+			loading="lazy"
+		/>
+
+		<p>
+			Si vous utilisez Chrome, Bonjourr vous proposera d'importer les applications Google pour
+			reproduire le comportement de la page de démarrage par défaut de Chrome.
+		</p>
+
+		<p>Vous pouvez sélectionner un ou plusieurs groupes, puis les importer.</p>
 
 		<h3 id="link-groups">Groupes de liens</h3>
 
 		<p>
-			Vous pouvez organiser vos liens encore plus avec des groupes de liens. Pour ajouter un
-			groupe, faites un clic droit à côté du groupe par défaut. Vous ne pouvez pas supprimer
-			le groupe par défaut, mais vous pouvez le renommer. La suppression d'une groupe effacera
-			les liens qu'il contient.
+			Vous pouvez organiser vos liens avec des groupes de liens, une fonctionnalité
+			optionnelle que vous pouvez activer dans les paramètres. Pour ajouter un groupe,
+			survolez la droite des titres de groupe jusqu'à ce que vous voyiez l'icône <code>+</code
+			>. Vous pouvez renommer et supprimer des groupes en faisant un clic droit dessus.
+			Supprimer un groupe supprimera tous les liens qu'il contient.
 		</p>
 
-		<p>
-			Vous pouvez épingler les groupes avec l'option <bjr>Epingler ce groupe</bjr> en ouvrant le
-			menu contextuel depuis le titre du groupe.
-		</p>
-
-		<video src="/documentation/overview/link-groups.mp4" controls muted></video>
-	</div>
-
-	<div id="searchbar">
-		<h2>Search bar</h2>
-
-		<p>
-			En activant l'option de moteur de recherche personnalisé, la barre de recherche devient
-			compatible avec tous les moteurs de recherche, ce qui inclut des choses comme YouTube:
-			https://www.youtube.com/results?search_query=%s.
-		</p>
-	</div>
-
-	<div id="notes">
-		<h2>Notes</h2>
-
-		<p>
-			Notes utilise le système Markdown pour pouvoir faire des titres, des listes, et des
-			cases à cocher. Pour transformer une ligne, il suffit de rajouter ces caractères en
-			début de ligne:
-		</p>
+		<p>Tout comme avec les dossiers, vous pouvez :</p>
 
 		<ul>
-			<li><code>#</code> titre gros</li>
-			<li><code>##</code> titre moyen</li>
-			<li><code>###</code> titre petit</li>
-
-			<li><code>-</code> liste classique</li>
-			<li><code>[ ]</code> case à cocher</li>
-			<li><code>[x]</code> case à cocher, coché</li>
+			<li>Faire glisser les liens d'un groupe à un autre.</li>
+			<li>Faire glisser les groupes pour les réorganiser.</li>
+			<li>Renommer un groupe en cliquant avec le bouton droit dessus.</li>
 		</ul>
 
 		<p>
-			Les autres implémentations de Markdown, comme l'italique, ne sont pas encore disponible.
+			Vous pouvez épingler des groupes en sélectionnant <bjr>Épingler le groupe</bjr> après avoir
+			ouvert le menu contextuel du titre du groupe. Cela permettra au groupe d'être toujours visible.
 		</p>
 
-		<h3>Keybindings</h3>
+		<img
+			style="max-width: 400px; margin-inline: auto; display: block"
+			src="/documentation/overview/link-groups.gif"
+			alt="Groupes de liens de Bonjourr"
+			loading="lazy"
+		/>
+
+		<h3 id="link-icons">Icônes</h3>
+
+		<p>
+			Les icônes des liens sont récupérées par notre service maison <a
+				href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a
+			>. Si vous constatez quel l'icône d'un site est manquante, vous pouvez créer un Issue <a
+				href="https://github.com/victrme/Bonjourr/issues">sur GitHub</a
+			>
+			ou nous envoyer un e-mail, et nous ferons de notre mieux pour le corriger.
+		</p>
+
+		<h4 id="link-icons-custom">Icônes personnalisées</h4>
+
+		<p>
+			Le champ <code>Icône</code> que vous voyez lors de la modification d'un lien vous permet
+			de définir une URL distante vers n'importe quel fichier image que vous souhaitez présent
+			sur Internet. Cette URL peut être :
+		</p>
+
+		<ul>
+			<li>Une URL distante : <code>https://en.wikipedia.org/favicon.ico</code>.</li>
+			<li>Une URL hébergée localement : <code>http://127.0.0.1:4321/favicon.ico</code>.</li>
+			<li>Un Data URI inférieur à 8 Ko : <code>data:image/gif;base64,R0lGOD...AA7</code>.</li>
+		</ul>
+
+		<p>Mais pas :</p>
+
+		<ul>
+			<li>Un chemin de fichier (<code>file:///Users/Me/Pictures/flowers.png</code>).</li>
+		</ul>
+
+		<p>
+			Une manière facile d'ajouter une icône personnalisée à votre lien rapide est de la
+			téléverser sur un site comme <a href="https://imgur.com/">Imgur</a>, puis d'utiliser ce
+			lien comme icône. Vous pouvez également convertir votre icône en <a
+				href="https://dopiaza.org/tools/datauri/index.php">Data URI</a
+			> (max 8 Ko).
+		</p>
+
+		<h4 id="link-icons-cache">Politique de cache</h4>
+
+		<p>
+			Les icônes provenant de favicon-fetcher sont stockées dans le cache du navigateur
+			pendant un an. Tant que le cache du navigateur n'est pas vidé, les icônes ne sont pas
+			téléchargées à nouveau (ni mises à jour) par la page. Cependant, si le cache du
+			navigateur est souvent vidé ou si l'espace de stockage est limité sur votre appareil,
+			les icônes devront être téléchargées à nouveau depuis notre service.
+		</p>
+
+		<p>
+			Les icônes que vous ajoutez manuellement depuis une URL distante auront une politique de
+			cache différente sur laquelle nous n'avons aucun contrôle, ce qui peut entraîner une
+			récupération fréquente de l'icône, voire à chaque fois.
+		</p>
+
+		<p>
+			⚠️ <i>Notice</i> : pour des raisons de sécurité, les chemins locaux comme <code
+				>file://</code
+			>, les liens de paramètres du navigateur comme <code>about:config</code> ou <code
+				>chrome://extensions</code
+			> ne peuvent pas être ajoutés. Cependant, les liens <code>localhost:</code> fonctionneront
+			parfaitement.
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="clock">
+		<h2>🕰️ Date et heure</h2>
+
+		<p>
+			La fonctionnalité "horloge analogue" offre de nombreuses options que vous pouvez
+			explorer pour obtenir des styles vraiment sympas.
+		</p>
+
+		<img
+			src="/documentation/overview/clock-styles.png"
+			alt="Styles de l'horloge de Bonjourr"
+			loading="lazy"
+		/>
+
+		<p>Quelques points à savoir :</p>
+
+		<ul>
+			<li>Cliquez sur les icônes 🌙/☀️ sur les curseurs pour passer du noir au blanc.</li>
+			<li>
+				Le fond de l'horloge analogue est flouté lorsque son opacité est supérieure à 0.
+			</li>
+		</ul>
+
+		<h3 id="world-clocks">Horloges mondailes</h3>
+
+		<img
+			src="/documentation/overview/world-clocks.png"
+			alt="Fonction des horloges mondiales de Bonjourr"
+			loading="lazy"
+		/>
+
+		<p>
+			<bjr>Les horloges mondiales</bjr> vous permettent d'ajouter plusieurs horloges avec des fuseaux
+			horaires différents. En supprimant le nom d'une horloge mondiales, vous supprimez complètement
+			l'horloge.
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="weather">
+		<h2>🌤️ Météo</h2>
+
+		<p>
+			La géolocalisation précise nécessite l'accès au GPS de votre appareil. Certains
+			navigateurs ou systèmes peuvent ne pas autoriser cet accès en fonction de leurs
+			paramètres de confidentialité. macOS / Safari pose souvent des problèmes.
+		</p>
+
+		<p>
+			Si plusieurs villes portent le même nom dans votre pays, cela peut poser un problème.
+			Une astuce pour résoudre cela est de choisir le nom de la ville la plus proche avec un
+			nom unique.
+		</p>
+
+		<p>
+			Bonjourr n'a pas encore d'option "Actualiser la météo", mais vous pouvez tout de même le
+			faire en basculant manuellement entre les unités (Celsius → Fahrenheit → Celsius).
+		</p>
+
+		<h3 id="detailed-weather">Météo détaillée</h3>
+
+		<p>
+			<bjr>Météo détaillée</bjr> vous permet de vous rendre facilement sur le site web d'un fournisseur
+			de météo pour obtenir un rapport météo détaillé. Cliquez sur le widget météo pour accéder
+			au fournisseur de votre choix.
+		</p>
+
+		<p>
+			⚠️ Nous ne sommes en aucun cas affiliés à MSN, Accuweather, Yahoo! ou Windy.com. Ces
+			sites web proposent des rapports provenant de différents fournisseurs de données, d'où
+			ces choix.
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="notes">
+		<h2>✍️ Notes</h2>
+
+		<p>
+			Les Notes utilisent <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a> pour
+			créer des titres, des listes et des cases à cocher. Pour transformer une ligne, ajoutez simplement
+			ces caractères au début d'une ligne :
+		</p>
+
+		<ul>
+			<li><code>#</code> grand titre</li>
+			<li><code>##</code> titre moyen</li>
+			<li><code>###</code> petit titre</li>
+			<li><code>-</code> liste classique</li>
+			<li><code>[ ]</code> case à cocher (remarquez l'espace entre les crochets)</li>
+			<li><code>[x]</code> case à cocher, cochée</li>
+		</ul>
+
+		<video src="/documentation/overview/notes.mp4" controls></video>
+
+		<p>
+			Actuellement, les autres fonctionnalités de Markdown, comme l'italique, ne sont pas
+			prises en charge.
+		</p>
+
+		<h3>Raccourcis clavier</h3>
+
+		<p>
+			Vous pouvez utiliser ces raccourcis clavier lors de l'édition de votre note. Remplacez
+			`Ctrl` par `cmd` sur macOS.
+		</p>
 
 		<table>
 			<thead>
-				<th>Keys</th>
+				<th>Touches</th>
 				<th>Action</th>
 			</thead>
 			<tbody>
 				<tr>
 					<td>Ctrl + Shift + 1</td>
-					<td>To big heading</td>
+					<td>Créer un grand titre</td>
 				</tr>
 				<tr>
 					<td>Ctrl + Shift + 2</td>
-					<td>To medium heading</td>
+					<td>Créer un titre moyen</td>
 				</tr>
 				<tr>
 					<td>Ctrl + Shift + 3</td>
-					<td>To small heading</td>
+					<td>Créer un petit titre</td>
 				</tr>
 				<tr>
 					<td>Ctrl + Shift + 4</td>
-					<td>To bullet list</td>
+					<td>Créer une liste à puces</td>
 				</tr>
 				<tr>
 					<td>Ctrl + Shift + 5</td>
-					<td>To todo list</td>
+					<td>Créer une liste de tâches</td>
 				</tr>
 			</tbody>
 		</table>
-	</div>
+	</section>
 
-	<div id="fonts">
-		<h2>Police d'écriture</h2>
+	<hr />
+
+	<section id="searchbar">
+		<h2>🔎 Barre de recherche</h2>
+
+		<h3>Suggestions</h3>
 
 		<p>
-			Bonjourr récupère les polices de caractères depuis Fontsource. Si vous voulez voir les
-			aperçus des polices proposées par Bonjourr, allez sur le <a
-				href="https://fontsource.com/">fontsource</a
+			Les suggestions sont fournies par notre propre API. Vous pouvez tout apprendre à son
+			sujet et son code source <a href="https://github.com/victrme/search-suggestions">ici</a
 			>.
 		</p>
-	</div>
 
-	<div id="page-layout">
-		<h2>Mise en page</h2>
+		<h3>Moteur de recherche personnalisé</h3>
 
 		<p>
-			Vous avez le choix entre trois mises en page différentes : simple, double et triple
-			colonne. Chaque mise en page enregistre la position et l'alignement de vos widgets de
-			manière indépendante.
-		</p>
+			Il existe de nombreux moteurs de recherche disponibles par défaut dans Bonjourr, et vous
+			pouvez même en ajouter d'autres si nécessaire. Pour ce faire, sélectionnez <bjr
+				>Personnalisé</bjr
+			> dans l'option Moteur de recherche de la barre de recherche. Quand le champs <bjr
+				>URL de requête</bjr
+			> apparaît, il vous suffit de coller l'URL du moteur de recherche et de remplacer le texte
+			recherché par <code>%s</code>.
 
-		<p>Ces options n'affectent que la mise en page actuelle :</p>
+			<p>
+				Par exemple, si vous recherchez "café" sur YouTube, vous verrez que l'URL sera <code
+					>https://www.youtube.com/results?search_query=cafe</code
+				>.
+			</p>
+
+			<p>
+				Dans ce cas, il vous suffit de remplacer <code>cafe</code> par <code>%s</code>, ce
+				qui vous donne ce résultat : <code
+					>https://www.youtube.com/results?search_query=%s</code
+				>.
+			</p>
+
+			<p>
+				Collez-le dans le champs et vous pourrez maintenant utiliser le moteur de recherche
+				correspondant de Bonjourr.
+			</p>
+
+			<video src="/documentation/overview/custom-search.mp4" controls></video>
+
+			<p>
+				Cette méthode fonctionnera avec la grande majorité des moteurs de recherche, ce qui
+				rend Bonjourr compatible avec presque tous.
+			</p>
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="quotes">
+		<h2>🗣 Citations</h2>
+
+		<p>Le widget de citations peut récupérer des citations de plusieurs sources :</p>
 
 		<ul>
-			<li>Toggle des widgets (Boutons Activer)</li>
-			<li>Toutes les options de mise en page dans la boîte à outils</li>
-			<li>Réinitialiser la mise en page</li>
+			<li>
+				Par défaut, notre <b
+					><a href="https://github.com/victrme/i18n-quotes"
+						>API de citations open source</a
+					></b
+				> disponible en plusieurs langues. Ce sont des citations motivantes ou inspirantes généralistes
+				que la communauté peut gérer par le biais de pull request.
+			</li>
+			<li>
+				L'API <b><a href="https://inspirobot.me/">InspiroBot</a></b>, une IA qui génère des
+				citations voulues inspirantes, mais avec une touche humoristique. Elle parodie les
+				citations traditionnelles motivantes du point de vue d'une IA. Bien que nous ne
+				soyons pas affiliés avec InspiroBot, nous avons toujours trouvé ce service amusant
+				et avons pensé qu'il serait agréable de l'avoir dans Bonjourr. Il est important de
+				noter que cela fait au moins 10 ans et <u
+					><b>n'a rien à voir avec la tendance récente de l'IA générative</b></u
+				>.
+			</li>
+			<li>
+				L'API <b><a href="https://github.com/sin0light/api-kaamelott">Kaamelott</a></b>,
+				citations d'une série télévisée comique française. Disponible uniquement en
+				français.
+			</li>
+			<li>
+				Citations <b>Stoïciennes</b> qui reflètent la <a
+					href="https://en.wikipedia.org/wiki/Stoicism">philosophie Stoïcienne</a
+				>.
+			</li>
+			<li><b>Hitokoto</b>, citations inspirantes japonaises.</li>
+			<li>
+				<b>Personnalisé</b>, ajoutez vos propres citations directement depuis l'interface de
+				Bonjourr.
+			</li>
+			<li><b>URL</b>, ajoutez des citations depuis un fichier CSV distant.</li>
+		</ul>
+
+		<h3>Importer vos propres citations</h3>
+
+		<p>
+			Il y a deux façons d'importer vos propres citations : directement depuis Bonjourr, ou
+			depuis une URL distante. Dans les deux cas, voici le format que vos citations doivent
+			adopter :
+		</p>
+
+		<Code lang="json" code={customQuotesExample} />
+
+		<h4>Avec l'option de citations personnalisées</h4>
+
+		<p>
+			Une fois que l'option de citations personnalisées est sélectionnée, vous pouvez
+			simplement ajouter des citations en respectant le format montré ci-dessus.
+		</p>
+
+		<p>
+			Cette option est limitée à 8 Ko de texte, ce qui correspond à environ 50 citations de
+			taille normale. Cela est dû au fait que Bonjourr utilise <a
+				href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync"
+				>storage.sync</a
+			> pour stocker les données, et chaque objet est limité à 8 Ko. <b
+				>Si vous avez besoin de plus de citations, nous vous conseillons d'utiliser l'option
+				URL à la place.</b
+			>
+		</p>
+
+		<h4>Avec l'option URL (fichier CSV)</h4>
+
+		<p>
+			Sélectionnez l'option URL pour lier Bonjourr à l'URL directe d'un fichier CSV contenant
+			toutes vos citations.
+		</p>
+
+		<p>
+			Le moyen le plus simple de le faire est d'utiliser GitHub Gist, un service qui vous
+			permet de créer et d'héberger facilement un fichier :
+		</p>
+
+		<ol>
+			<li>
+				Créez un compte <a href="https://github.com">sur GitHub</a> si vous n'en avez pas déjà
+				un, et connectez-vous.
+			</li>
+			<li>
+				Allez sur la <a href="https://gist.github.com/">page GitHub Gist.</a>
+			</li>
+			<li>Donnez une description à votre fichier, comme "Mes citations Bonjourr".</li>
+			<li>
+				Donnez-lui un nom de fichier, comme <code>bonjourr_citations.csv</code>. Il peut
+				être n'importe quoi tant qu'il se termine par <code>.csv</code>.
+			</li>
+			<li>
+				Commencez à taper vos citations avec le format montré ci-dessus (vous pourrez les
+				modifier plus tard si vous le souhaitez).
+			</li>
+			<li>
+				Une fois terminé, vous pouvez appuyer sur le bouton <bjr>Créer un Gist secret</bjr>.
+				Cela enregistrera le fichier et vous montrera à quoi il ressemble sous forme de
+				tableau.
+			</li>
+			<li>
+				Cliquez sur le bouton <bjr>Raw</bjr>, copiez l'URL de la page qui s'ouvre et
+				collez-la dans le champs URL de Bonjourr. Voilà !
+			</li>
+		</ol>
+
+		<video src="/documentation/overview/quotes-gist.mp4" controls></video>
+	</section>
+
+	<hr />
+
+	<section id="fonts">
+		<h2>📚 Polices</h2>
+
+		<p>
+			Bonjourr utilise les polices de Fontsource. Si vous souhaitez voir des aperçus des
+			polices que Bonjourr propose, vous pouvez visiter <a href="https://fontsource.com/"
+				>fontsource.com</a
+			>.
+		</p>
+	</section>
+
+	<hr />
+
+	<section id="page-layouts">
+		<h2>📄 Outils de mise en page</h2>
+
+		<p>
+			Il existe 3 dispositions de page différentes parmi lesquelles choisir : colonne simple,
+			double et triple. Chaque disposition enregistre la position et l'alignement de vos
+			widgets de manière indépendante.
+		</p>
+
+		<p>Ces options n'affectent que la disposition actuelle :</p>
+
+		<ul>
+			<li>Basculer les widgets (activer les interrupteurs)</li>
+			<li>Toutes les options dans la boîte à outils de la grille</li>
+			<li>Réinitialiser la disposition</li>
 		</ul>
 
 		<video src="/documentation/overview/move-elem.mp4" controls muted></video>
-	</div>
+	</section>
 
-	<div id="sync">
-		<h2>Github Gist</h2>
+	<hr />
+
+	<section id="settings-management">
+		<h2>💾 Gestion des paramètres</h2>
+
 		<p>
-			Vous pouvez sauvegarder votre configuration Bonjourr dans le cloud en utilisant <a
+			Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Vous pouvez
+			utiliser cette fonctionnalité si vous souhaitez les sauvegarder ou les partager avec
+			quelqu'un. Vous pourrez ensuite importer ces paramètres dans n'importe quelle instance
+			de Bonjourr.
+		</p>
+
+		<p>
+			Pour ce faire, il vous suffit de descendre jusqu'en bas de votre panneau de paramètres,
+			puis de cliquer sur <bjr>Exporter</bjr>. Votre fichier sera téléchargé. Sur votre autre
+			instance de Bonjourr, vous pouvez ensuite aller dans l'onglet <bjr>Importer</bjr> de la gestion
+			des paramètres et déposer votre fichier. Bonjourr se rechargera et tous vos paramètres seront
+			appliqués.
+		</p>
+
+		<h3 id="browser-syncing">Synchronisation du navigateur</h3>
+
+		<p>
+			Bonjourr est compatible avec les fonctionnalités de synchronisation automatique de
+			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
+			et <a
+				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
+				>Chrome</a
+			>. Si vous vous connectez à votre compte Mozilla/Google dans votre navigateur et que la
+			synchronisation est activée dans votre navigateur, Bonjourr devrait se synchroniser avec
+			d'autres instances du même navigateur sur d'autres ordinateurs. Cela est valable pour
+			tous les paramètres de Bonjourr ainsi que pour les Liens rapides.
+		</p>
+
+		<h3 id="sync">Github Gist</h3>
+
+		<p>
+			Vous pouvez enregistrer votre configuration Bonjourr dans le cloud en utilisant <a
 				href="https://gist.github.com/">Github Gist</a
 			> en sélectionnant "Github Gist" dans l'option <bjr>Type de synchronisation</bjr>. Deux
-			options supplémentaires apparaissent :
+			autres options apparaissent :
 		</p>
+
 		<br />
+
 		<table>
 			<tr>
-				<td><bjr>Token d'authentification</bjr></td>
+				<td><bjr>Jeton d'authentification</bjr></td>
 				<td>
-					Où vous pouvez ajouter votre Token d'Accès Personnel. Il devrait ressembler à
+					Où vous pouvez ajouter votre Jeton d'accès personnel. Il devrait ressembler à
 					ceci :
 					<code>github_pat_oxoxo...</code>
 				</td>
@@ -264,67 +743,40 @@ import Docs from "@layouts/Docs.astro"
 					<bjr>Github Gist</bjr>
 				</td>
 				<td>
-					Pour synchroniser manuellement votre configuration avec votre compte Gist avec <bjrbtn
-						>Obtenir</bjrbtn
-					>
-					et <bjrbtn>Envoyer</bjrbtn>. Ces boutons ne fonctionnent qu'après avoir détecté
-					un token valide.
+					Pour synchroniser manuellement votre configuration avec votre compte Gist en
+					utilisant <bjr>Obtenir</bjr>
+					et <bjr>Envoyer</bjr>. Ces boutons ne fonctionnent qu'après avoir détecté un
+					jeton valide.
 				</td>
 			</tr>
 		</table>
+
 		<br />
+
 		<p>
-			Vous pouvez créer un Token d'Accès Personnel en suivant
-			<a
+			Vous pouvez créer un Jeton d'accès personnel en suivant <a
 				href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
 				>ce guide sur docs.github.com</a
-			>
-		</p>, ou en suivant les étapes indiquées ci-dessous:
-	</div>
-	<br />
-	<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
-	<br />
-	<p>
-		Bonjourr n'est pas affilié à Github, et aucune connexion à <code>api.github.com</code> n'est
-		effectuée jusqu'à ce que vous sélectionniez ce type de synchronisation ET que vous ajoutiez un
-		token valide. Plus de détails sur notre <a href="/privacy">page de confidentialité</a>
-	</p>.
-
-	<div id="settings-management">
-		<h2>Gestion des paramètres</h2>
-
-		<p>
-			Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Vous pouvez
-			utiliser cette fonction si vous souhaitez les sauvegarder ou les partager avec
-			quelqu'un. Vous pourrez à votre tour importer ces paramètres dans n'importe quelle
-			instance de Bonjourr.
+			>, ou en suivant les étapes indiquées ci-dessous :
 		</p>
 
-		<p>
-			Pour ce faire, il suffit d'aller en bas de votre panneau de paramètres, puis de cliquer
-			sur Exporter comme fichier dans la gestion des paramètres. Votre fichier sera
-			téléchargé. Sur votre autre instance de Bonjourr, vous pouvez alors aller dans l'onglet
-			Importation de la gestion des paramètres et déposer votre fichier. Bonjourr rechargera
-			la page et tous vos paramètres seront appliqués.
-		</p>
+		<br />
 
-		<h3>Synchronisation du navigateur</h3>
+		<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
+
+		<br />
 
 		<p>
-			Bonjourr est compatible avec les fonctions de synchronisation automatique de
-			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
-			et <a
-				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
-				>Chrome</a
-			>. Si vous vous connectez à votre compte Mozilla/Google sur votre navigateur et que la
-			synchronisation est activée dans votre navigateur, Bonjourr devrait être synchronisé
-			avec d'autres instances du même navigateur sur d'autres ordinateurs. Cela fonctionne
-			pour tous les paramètres de Bonjourr ainsi que pour les liens rapides.
+			Bonjourr n'est pas affilié à Github, et aucune connexion à <code>api.github.com</code> n'est
+			effectuée tant que vous n'avez pas sélectionné ce type de synchronisation ET ajouté un jeton
+			valide. Plus de détails sur notre <a href="/privacy">page de confidentialité</a>.
 		</p>
-	</div>
+	</section>
 
-	<div id="keybindings">
-		<h2>Raccourcis clavier</h2>
+	<hr />
+
+	<section id="keybindings">
+		<h2>⌨️ Raccourcis clavier</h2>
 
 		<table>
 			<thead>
@@ -337,46 +789,46 @@ import Docs from "@layouts/Docs.astro"
 					<td>Ouvre / ferme les paramètres</td>
 				</tr>
 				<tr>
-					<td>E (ciblé sur un lien)</td>
-					<td>Modifie le lien</td>
+					<td>E (lien sélectionné)</td>
+					<td>Édite les liens</td>
 				</tr>
 			</tbody>
 		</table>
 
 		<h3>Notes</h3>
 
+		<p>Consultez la <a href="#notes">section des notes</a>.</p>
+	</section>
+
+	<hr />
+
+	<section id="supporters-notification">
+		<h2>❤️ Notification des Donateurs</h2>
+
 		<p>
-			Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre Note. Remplacez
-			`Ctrl` par `cmd` sous macOS.
+			La notification des donateurs a été introduite avec Bonjourr 20.4 et est notre manière
+			de remercier les personnes qui nous soutiennent financièrement <a
+				href="https://ko-fi.com/bonjourr">sur Ko-Fi</a
+			>. Elle apparaît au début de chaque mois et reflète les dons du mois précédent.
 		</p>
 
-		<table>
-			<thead>
-				<th>Keys</th>
-				<th>Action</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Ctrl + Maj + 1</td>
-					<td>Grand titre</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Maj + 2</td>
-					<td>Moyen titre</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Maj + 3</td>
-					<td>Petit titre</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Maj + 4</td>
-					<td>Liste à puce</td>
-				</tr>
-				<tr>
-					<td>Ctrl + Maj + 5</td>
-					<td>Liste de tâches</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+		<img
+			src="/documentation/overview/supporters.png"
+			alt="La notification des donateurs"
+			loading="lazy"
+		/>
+
+		<p>
+			Si vous souhaitez que votre nom apparaisse dans la notification des donateurs, vous
+			pouvez <a href="https://ko-fi.com/bonjourr">faire un don sur Ko-Fi</a>. Si vous préférez
+			faire un don sans que votre nom n'apparaisse, assurez-vous de nous envoyer un message
+			lors de votre don.
+		</p>
+
+		<p>
+			La notification des donateurs peut être complètement désactivée dans le panneau des
+			paramètres, <bjr>Afficher tous les réglages</bjr> en premier, puis <bjr>Donateurs</bjr> dans
+			la catégorie "Notifications".
+		</p>
+	</section>
 </Docs>
