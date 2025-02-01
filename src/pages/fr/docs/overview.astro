@@ -693,86 +693,101 @@ Auteur, Votre deuxième citation.`
 		<h2>💾 Gestion des paramètres</h2>
 
 		<p>
-			Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Vous pouvez
-			utiliser cette fonctionnalité si vous souhaitez les sauvegarder ou les partager avec
+			Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Cette
+			fonctionnalité est utile si vous souhaitez les sauvegarder ou les partager avec
 			quelqu'un. Vous pourrez ensuite importer ces paramètres dans n'importe quelle instance
 			de Bonjourr.
 		</p>
 
 		<p>
-			Pour ce faire, il vous suffit de descendre jusqu'en bas de votre panneau de paramètres,
-			puis de cliquer sur <bjr>Exporter</bjr>. Votre fichier sera téléchargé. Sur votre autre
-			instance de Bonjourr, vous pouvez ensuite aller dans l'onglet <bjr>Importer</bjr> de la gestion
-			des paramètres et déposer votre fichier. Bonjourr se rechargera et tous vos paramètres seront
-			appliqués.
+			Pour ce faire, rendez-vous en bas du panneau des paramètres, puis cliquez sur le bouton
+			<bjrbtn>Exporter</bjrbtn> dans la section de gestion des paramètres. Votre fichier sera téléchargé.
+			Sur une autre instance de Bonjourr, cliquez sur le bouton <bjrbtn>Importer</bjrbtn>
+			et sélectionnez votre fichier exporté. Bonjourr se rechargera et appliquera tous vos paramètres.
 		</p>
 
-		<h3 id="browser-syncing">Synchronisation du navigateur</h3>
+		<h3 id="sync-types">Types de synchronisation</h3>
 
 		<p>
-			Bonjourr est compatible avec les fonctionnalités de synchronisation automatique de
+			Bonjourr propose plusieurs moyens de partager ses paramètres entre différentes
+			instances. Dans tous les cas, tous les paramètres sont synchronisés sauf les
+			arrière-plans locaux. Pour l’instant, seule la synchronisation native des navigateurs
+			est automatique.
+		</p>
+
+		<h4 id="browser-syncing">Navigateur</h4>
+
+		<p>
+			Par défaut, Bonjourr utilise les fonctionnalités de synchronisation automatique de
 			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
-			et <a
+			et de <a
 				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
 				>Chrome</a
-			>. Si vous vous connectez à votre compte Mozilla/Google dans votre navigateur et que la
-			synchronisation est activée dans votre navigateur, Bonjourr devrait se synchroniser avec
-			d'autres instances du même navigateur sur d'autres ordinateurs. Cela est valable pour
-			tous les paramètres de Bonjourr ainsi que pour les Liens rapides.
+			>. Si vous êtes connecté à votre compte Mozilla/Google et que la synchronisation est
+			activée dans votre navigateur, Bonjourr sera automatiquement synchronisé sur les autres
+			instances du même navigateur sur vos autres appareils.
 		</p>
 
-		<h3 id="sync">Github Gist</h3>
+		<h4 id="github-gist-sync">GitHub Gist (multi-navigateurs)</h4>
 
 		<p>
-			Vous pouvez enregistrer votre configuration Bonjourr dans le cloud en utilisant <a
-				href="https://gist.github.com/">Github Gist</a
-			> en sélectionnant "Github Gist" dans l'option <bjr>Type de synchronisation</bjr>. Deux
-			autres options apparaissent :
+			Bonjourr permet également de synchroniser ses paramètres entre plusieurs navigateurs
+			grâce à GitHub Gist (par exemple, si vous utilisez Chrome et Firefox en même temps).
 		</p>
 
-		<br />
+		<img
+			src="/documentation/overview/github-sync.png"
+			alt="Exemple de configuration de la synchronisation GitHub Gist"
+			loading="lazy"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+		/>
 
-		<table>
-			<tr>
-				<td><bjr>Jeton d'authentification</bjr></td>
-				<td>
-					Où vous pouvez ajouter votre Jeton d'accès personnel. Il devrait ressembler à
-					ceci :
-					<code>github_pat_oxoxo...</code>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<bjr>Github Gist</bjr>
-				</td>
-				<td>
-					Pour synchroniser manuellement votre configuration avec votre compte Gist en
-					utilisant <bjr>Obtenir</bjr>
-					et <bjr>Envoyer</bjr>. Ces boutons ne fonctionnent qu'après avoir détecté un
-					jeton valide.
-				</td>
-			</tr>
-		</table>
+		<p>Voici un guide étape par étape pour la configurer :</p>
 
-		<br />
+		<ol>
+			<li>Sélectionnez "GitHub Gist" dans <bjr>Type de synchronisation</bjr>.</li>
+			<li>
+				Connectez-vous à <a href="https://github.com/">GitHub</a> et créez un jeton d'authentification
+				en suivant <a
+					href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
+					>ce guide sur docs.github.com</a
+				>, ou suivez les étapes ci-dessous :
+				<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
+			</li>
+			<li>
+				Retournez sur Bonjourr et collez votre jeton dans le champ <bjr
+					>Jeton d'authentification</bjr
+				>. Copiez ce jeton sur toutes les instances de Bonjourr que vous souhaitez
+				synchroniser.
+			</li>
+			<li>
+				Vous pouvez ensuite utiliser le bouton <bjrbtn>Obtenir</bjrbtn> pour télécharger vos
+				paramètres ou le bouton <bjrbtn>Envoyer</bjrbtn> pour les envoyer. La section <bjr
+					>Statut du serveur</bjr
+				> vous indique la dernière mise à jour effectuée.
+			</li>
+		</ol>
 
 		<p>
-			Vous pouvez créer un Jeton d'accès personnel en suivant <a
-				href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
-				>ce guide sur docs.github.com</a
-			>, ou en suivant les étapes indiquées ci-dessous :
+			Bonjourr n'est pas affilié à GitHub, et aucune connexion à <code>api.github.com</code>
+			n'est effectuée tant que vous n'avez pas sélectionné cette option ET entré un jeton valide.
+			Plus de détails sur notre <a href="/privacy">page de confidentialité</a>.
 		</p>
 
-		<br />
-
-		<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
-
-		<br />
+		<h4 id="distant-url-sync">URL distante</h4>
 
 		<p>
-			Bonjourr n'est pas affilié à Github, et aucune connexion à <code>api.github.com</code> n'est
-			effectuée tant que vous n'avez pas sélectionné ce type de synchronisation ET ajouté un jeton
-			valide. Plus de détails sur notre <a href="/privacy">page de confidentialité</a>.
+			Cette option fonctionne comme l'importation d'un fichier de paramètres depuis votre
+			ordinateur, sauf qu'elle se fait via une URL distante. Elle est particulièrement utile
+			pour les utilisateurs avancés qui doivent configurer plusieurs instances de Bonjourr en
+			même temps.
+		</p>
+
+		<p>
+			Hébergez simplement votre fichier de paramètres quelque part (<a
+				href="https://pastebin.com/">pastebin.com</a
+			> peut être une bonne option), entrez son URL directe dans Bonjourr et cliquez sur le bouton
+			<bjrbtn>Obtenir</bjrbtn>.
 		</p>
 	</section>
 

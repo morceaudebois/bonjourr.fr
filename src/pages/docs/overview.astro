@@ -424,7 +424,7 @@ Author, Your second quote.`
 
 		<p>Currently, other Markdown features, such as italics, are not supported.</p>
 
-		<h3>Keybindings</h3>
+		<h3 id="notes-keybindings">Keybindings</h3>
 
 		<p>
 			You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` with `cmd`
@@ -466,7 +466,7 @@ Author, Your second quote.`
 	<section id="searchbar">
 		<h2>🔎 Search bar</h2>
 
-		<h3>Suggestions</h3>
+		<h3 id="sb-suggestions">Suggestions</h3>
 
 		<p>
 			Suggestions are provided by our own API. You can learn all about it and its source code <a
@@ -474,7 +474,7 @@ Author, Your second quote.`
 			>.
 		</p>
 
-		<h3>Custom search engine</h3>
+		<h3 id="sb-custom-search">Custom search engine</h3>
 
 		<p>
 			There are many search engines available by default in Bonjourr, and you can even add
@@ -545,7 +545,7 @@ Author, Your second quote.`
 			<li><b>URL</b>, add quotes from a distant CSV file.</li>
 		</ul>
 
-		<h3>Importing your own quotes</h3>
+		<h3 id="import-quotes">Importing your own quotes</h3>
 
 		<p>
 			There are two ways you can import your own quotes: directly from Bonjourr, or from a
@@ -554,7 +554,7 @@ Author, Your second quote.`
 
 		<Code lang="json" code={customQuotesExample} />
 
-		<h4>With the custom quotes option</h4>
+		<h4 id="import-quotes-custom">With the custom quotes option</h4>
 
 		<p>
 			Once the custom quotes option is selected, you can simply add quotes to it by respecting
@@ -571,7 +571,7 @@ Author, Your second quote.`
 			>
 		</p>
 
-		<h4>With the URL option (CSV file)</h4>
+		<h4 id="import-quotes-url">With the URL option (CSV file)</h4>
 
 		<p>
 			Select the URL option to link Bonjourr to the direct URL of a CSV file that contains all
@@ -657,77 +657,94 @@ Author, Your second quote.`
 		</p>
 
 		<p>
-			To do so, simply go to the bottom of your settings pannel, then click the <bjr
-				>Export</bjr
+			To do so, simply go to the bottom of your settings pannel, then click the <bjrbtn
+				>Export</bjrbtn
 			> button in the settings management. Your file will be downloaded. On your other instance
-			of Bonjourr, click the <bjr>Import</bjr> button and select your previously exported file.
-			Bonjourr will reload and all your settings will be applied.
+			of Bonjourr, click the <bjrbtn>Import</bjrbtn> button and select your previously exported
+			file. Bonjourr will reload and all your settings will be applied.
 		</p>
 
-		<h3 id="browser-syncing">Browser syncing</h3>
+		<h3 id="sync-types">Synchronization type</h3>
 
 		<p>
-			Bonjourr is compatible with the automatic syncing features of both
+			Bonjourr has multiple ways to share its settings between instances. In all cases, all
+			settings will be synchronised except local backgrounds. For now, only the native browser
+			syncing is automatic.
+		</p>
+
+		<h4 id="browser-syncing">Browser</h4>
+
+		<p>
+			Bonjourr is by default configured to use the automatic syncing features of both
 			<a href="https://www.mozilla.org/fr/firefox/sync/">Firefox</a>
 			and <a
 				href="https://support.google.com/chrome/answer/185277?hl=fr&co=GENIE.Platform%3DDesktop"
 				>Chrome</a
 			>. If you log into your Mozilla/Google account on your browser and have syncing enabled
-			in your browser, Bonjourr should get synced to other instances of the same browser on
-			other computers. This is true for all Bonjourr settings as well as Quick Links.
+			in your browser, Bonjourr should get synchronised to other instances of the same browser
+			on other devices.
 		</p>
 
-		<h3 id="sync">Github Gist</h3>
+		<h4 id="github-gist-sync">Github Gist (cross browser)</h4>
 
 		<p>
-			You can save your Bonjourr config in the cloud using <a href="https://gist.github.com/"
-				>Github Gist</a
-			> by selecting "Github Gist" in the <bjr>Synchronization type</bjr> option. Two more options
-			appear:
+			Bonjourr also has a way to synchronise its data accross multiple browsers thanks to
+			GitHub Gist (for example, if you use Chrome and Firefox at the same time).
 		</p>
 
-		<br />
+		<img
+			src="/documentation/overview/github-sync.png"
+			alt="A configured example of GitHub Gist synchronization"
+			loading="lazy"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+		/>
 
-		<table>
-			<tr>
-				<td><bjr>Authentification token</bjr></td>
-				<td>
-					Where you can add your Personal Access Token. It should look like this:
-					<code>github_pat_oxoxo...</code>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<bjr>Github Gist</bjr>
-				</td>
-				<td>
-					To manually sync your config to your Gist account with <bjrbtn>Get</bjrbtn>
-					and <bjrbtn>Send</bjrbtn>. These buttons only work after detecting a valid
-					token.
-				</td>
-			</tr>
-		</table>
+		<p>Here's a step by step guide on how to configure it:</p>
 
-		<br />
-
-		<p>
-			You can create a Personal Access Token by following <a
-				href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
-				>this guide on docs.github.com</a
-			>, or following the steps shown below:
-		</p>
-
-		<br />
-
-		<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
-
-		<br />
+		<ol>
+			<li>Select "GitHub Gist" in <bjr>Synchronization type</bjr>.</li>
+			<li>
+				Log in to <a href="https://github.com/">GitHub</a> and create an authentification token
+				by following <a
+					href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
+					>this guide on docs.github.com</a
+				>, or following the steps shown below:
+				<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
+			</li>
+			<li>
+				Go back to Bonjourr and paste your token in the <bjr>Authentification token</bjr> input.
+				Paste that token in as many Bonjourr instances as you need to synchronize.
+			</li>
+			<li>
+				From there, you can either use the <bjrbtn>Get</bjrbtn> button to download your settings
+				from the server, or the <bjrbtn>Send</bjrbtn> button to upload them. The <bjr
+					>Server status</bjr
+				> area helps you by showing when the last upload was made.
+			</li>
+		</ol>
 
 		<p>
-			Bonjourr is not affiliated with Github, and no connections to <code>api.github.com</code
-			> are made until you select this sync type AND add a valid token. More details on our <a
+			Bonjourr is not affiliated with GitHub, and no connections to <code>api.github.com</code
+			> are made until you select this option AND enter a valid token. More details on our <a
 				href="/privacy">privacy page</a
 			>.
+		</p>
+
+		<h4 id="distant-url-sync">Distant URL</h4>
+
+		<p>
+			This option is essentially the same as importing a settings file from your computer,
+			except you will do it from a distant URL. As it removes the step of having to transfer
+			the settings file to every single device, this could be handy for power users who might
+			need to set up many instances of Bonjourr at once.
+		</p>
+
+		<p>
+			Simply host your settings file somewhere (<a href="https://pastebin.com/"
+				>pastebin.com</a
+			> can be a good choice), enter its direct URL in Bonjourr and click the <bjrbtn
+				>Get</bjrbtn
+			> button.
 		</p>
 	</section>
 
