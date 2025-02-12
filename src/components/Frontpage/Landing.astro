@@ -48,10 +48,13 @@ import Illustration from "@assets/frontpage/illustration.png"
 <div class="wrapper">
 	<div class="left">
 		<div class="title">
-			<h1>Bonjourr</h1>
-			<p>
-				<slot name="subtitle" />
-			</p>
+			<h1>
+				Bonjourr
+				<br />
+				<span>
+					<slot name="subtitle" />
+				</span>
+			</h1>
 		</div>
 
 		<div class="container">
@@ -94,6 +97,14 @@ import Illustration from "@assets/frontpage/illustration.png"
 	h1,
 	p {
 		margin: 0;
+	}
+
+	.title span {
+		font-size: 0.4em;
+	}
+
+	.title h1 {
+		line-height: 0.7em;
 	}
 
 	#download-icon {
