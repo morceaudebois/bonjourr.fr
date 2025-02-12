@@ -7,7 +7,13 @@ import OpenImage from "@assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg"
 ---
 
 <section id="hero">
-	<Background src={LandingImage} blur=".7" brightness=".9" width="600" />
+	<Background
+		src={LandingImage}
+		blur=".7"
+		brightness=".9"
+		width="600"
+		alt="Hero background of a swimming turtle"
+	/>
 
 	<slot name="landing" />
 </section>
@@ -19,7 +25,13 @@ import OpenImage from "@assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg"
 </section>
 
 <section id="open">
-	<Background src={OpenImage} blur=".7" brightness=".8" width="600" />
+	<Background
+		src={OpenImage}
+		blur=".7"
+		brightness=".8"
+		width="600"
+		alt="Landscape photography of moutains at dusk"
+	/>
 
 	<div class="section-wrapper">
 		<slot name="open-title" />
@@ -34,7 +46,13 @@ import OpenImage from "@assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg"
 </section>
 
 <section id="donate">
-	<Background src={DonateImage} blur=".7" brightness=".8" width="600" />
+	<Background
+		src={DonateImage}
+		blur=".7"
+		brightness=".8"
+		width="600"
+		alt="landscape photography of a forest on a mountain"
+	/>
 
 	<div class="section-wrapper">
 		<slot name="donate-title" />
@@ -42,7 +60,7 @@ import OpenImage from "@assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg"
 
 		<div class="buttons">
 			<a href="https://ko-fi.com/bonjourr" class="button">
-				<img width="64" src="/frontpage/ko-fi.svg" class="icon" alt="" />
+				<img width="64" src="/frontpage/ko-fi.svg" class="icon" alt="ko-fi icon" />
 				<slot name="donate-fiat" />
 			</a>
 
@@ -50,7 +68,7 @@ import OpenImage from "@assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg"
 				href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
 				class="button"
 			>
-				<img width="64" src="/frontpage/btc.svg" class="icon" alt="" />
+				<img width="64" src="/frontpage/btc.svg" class="icon" alt="bitcoin icon" />
 				<slot name="donate-crypto" />
 			</a>
 		</div>
