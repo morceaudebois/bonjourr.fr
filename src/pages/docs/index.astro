@@ -27,45 +27,63 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 
 	<section slot="docs">
 		<h2 id="install-extension">Install the extension</h2>
-		<h3 id="available">Browsers and platforms</h3>
 
-		<ul>
-			<li>
-				<p>
-					Chrome, Chromium, Brave, Kiwi → <a href={webstore}>Chrome Web Store</a>
-				</p>
-			</li>
-			<li>
-				<p>
-					Microsoft Edge → <a href={edgeAddons}>Edge Add-ons</a>
-				</p>
-			</li>
-			<li>
-				<p>
-					Firefox (desktop) → <a href={firefoxAddons}>Firefox Add-ons</a>
-				</p>
-			</li>
-			<li>
-				<p>
-					Safari (Mac, iPad, iPhone) → <a href={appleAppStore}>App Store</a>
-				</p>
-			</li>
-		</ul>
+		<p>Bonjourr is fully supported and can be installed on the following platforms:</p>
 
-		<h3 id="not-available">Currently not available</h3>
+		<div id="downloadLabels">
+			<a href={webstore} target="_blank">
+				<img
+					src="https://labels.tahoe.be/chrome_download_dark.svg"
+					height="53"
+					alt="Download Bonjourr for Chrome"
+				/>
+			</a>
 
-		<ul>
-			<li>
-				Vivaldi shows a blank page, currently no solution (see
-				<a href="https://github.com/victrme/Bonjourr/issues/213">issue #213</a>)
-			</li>
-			<li>
-				Firefox Mobile does not allow its homepage to be modified, mentioned in
-				<a href="https://github.com/victrme/Bonjourr/issues/267">issue #267</a>
-			</li>
-		</ul>
+			<a href={firefoxAddons} target="_blank">
+				<img
+					src="https://labels.tahoe.be/firefox_download_dark.svg"
+					height="53"
+					alt="Download Bonjourr for Firefox"
+				/>
+			</a>
 
-		<h3 id="opera">Opera browser</h3>
+			<a href={edgeAddons} target="_blank">
+				<img
+					src="https://labels.tahoe.be/edge_download_dark.svg"
+					height="53"
+					alt="Download Bonjourr for Edge"
+				/>
+			</a>
+
+			<a href={appleAppStore} target="_blank">
+				<img
+					src="https://labels.tahoe.be/safari_download_dark.svg"
+					height="53"
+					alt="Download Bonjourr for Safari"
+				/>
+			</a>
+		</div>
+
+		<hr style="margin-block: 3.5em" />
+
+		<h2 id="not-available">Other platforms</h2>
+
+		<p>
+			You might still be able to install Bonjourr if you use these following browsers, on a
+			case-by-case basis.
+		</p>
+
+		<h3 id="brave">Brave (desktop)</h3>
+
+		<p>
+			Being a Chromium based browser, Brave has the ability to install any Chrome extension.
+			You can download Bonjourr <a
+				href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+				>from the Chrome Web Store</a
+			> and start using it right away.
+		</p>
+
+		<h3 id="opera">Opera (desktop)</h3>
 
 		<p>
 			Opera does not allow extensions to modify its new tab. While there is no official
@@ -73,20 +91,96 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 			for them.
 		</p>
 
-		<h4 id="opera-workaround">Opera new tab workaround</h4>
+		<p>
+			A workaround constists of installing an extension and use the online version of
+			Bonjourr:
+		</p>
 
-		<ul>
-			<li>First empty your current speed dial so that it shows a dark blank page.</li>
+		<ol>
+			<li>Empty your current speed dial so that it shows a dark blank page.</li>
 			<li>
 				You then need to install a third-party extension that can replace your current
 				active tab. For now, we found that only <a
 					href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
 				>
 					New Tab Start Page</a
-				> works correctly. We are not affiliated with them!
+				> works correctly. We are not affiliated with them.
 			</li>
 			<li>Click on the Bonjourr icon, it should reveal its full URL in the address bar.</li>
-			<li>Setup the third-party extension with Bonjourr's URL, and we're done!</li>
-		</ul>
+			<li>
+				Setup the third-party extension to <bjr>https://online.bonjourr.fr</bjr>, and we're
+				done!
+			</li>
+		</ol>
+
+		<h3 id="vivaldi">Vivaldi (desktop)</h3>
+
+		<p>
+			While you can technically install the <a
+				href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+				>Chrome version of Bonjourr</a
+			> on Vivaldi, you'll see that even if the new tabs work, you'll get a blank page when you
+			open a new window. There is currently no solution, but you can check out the <a
+				href="https://github.com/victrme/Bonjourr/issues/213">GitHub issue</a
+			> on it.
+		</p>
+
+		<h3>Chrome, Firefox and other non-Safari browsers on iOS</h3>
+
+		<p>There is no way for non-Safari browsers on iOS to install extensions.</p>
+
+		<p>
+			Some of them however (like <a
+				href="https://apps.apple.com/app/navigateur-firefox-rapide-s%C3%BBr/id989804926"
+				>Firefox</a
+			>) will allow you to set a custom URL for when you open new tabs in which you can set <bjr
+				>https://online.bonjourr.fr</bjr
+			>. Even if this is the online version of Bonjourr, it data will be stored in cache which
+			means it'll still be plenty fast.
+		</p>
+
+		<p>
+			If you're just using Safari, you can install <a href={appleAppStore}
+				>Bonjourr from the App Store</a
+			> and it will be fully supported.
+		</p>
+
+		<h3 id="chrome-android">Chrome for Android</h3>
+
+		<p>
+			The Android version of Chrome is lacking an extension system, which makes it impossible
+			to install Bonjourr on.
+		</p>
+
+		<p>
+			The only way you were able to install Bonjourr on Android was by using Kiwi Browser,
+			which allowed its users to install regular Chrome extensions on it. This is not possible
+			anymore as Kiwi has recently been discontinued.
+		</p>
+
+		<h3 id="firefox-android">Firefox for Android</h3>
+
+		<p>
+			Mozilla prevents extensions from editing the startpage on its Android version, which
+			makes Bonjourr impossible to install. As long as they don't change that, we as
+			developers are unable to do anything.
+		</p>
+
+		<p>
+			Another way they could do it is by implementing a custom URL option. That would allow
+			you to use the online version of Bonjourr. You can <a
+				href="https://connect.mozilla.org/t5/ideas/add-option-to-set-custom-homepage-in-firefox-for-android/idi-p/83481"
+				>vote for this</a
+			> on their forum.
+		</p>
 	</section>
 </DocsLanding>
+
+<style>
+	#downloadLabels {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(8em, 100%), 1fr));
+		grid-gap: 1em;
+		margin-top: 1.75em;
+	}
+</style>
