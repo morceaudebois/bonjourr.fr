@@ -1,6 +1,8 @@
 <canvas id="glitter"></canvas>
 
 <script>
+	let glitterStarted = false
+
 	const snowfall: {
 		canvas: HTMLCanvasElement
 		context: CanvasRenderingContext2D
@@ -109,9 +111,11 @@
 			entries.forEach((entry) => {
 				// If the section is in view
 				if (entry.isIntersecting) {
-					// Call snowfall functions
-					snowfall.setup()
-					snowfall.animate()
+					if (!glitterStarted) {
+						// Call snowfall functions
+						snowfall.setup()
+						snowfall.animate()
+					}
 
 					// Stop observing once the section has entered the viewport
 					observer.disconnect()
@@ -132,7 +136,7 @@
 		clearTimeout(resizeTimeout)
 		resizeTimeout = setTimeout(() => {
 			// Call your setup function here, similar to snowfall.setup
-			console.log("Resized, setup triggered!")
+			console.log("Resizing glitter!")
 			snowfall.setup()
 		}, 200) // 200ms delay after resize stops
 	})
@@ -145,6 +149,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		opacity: 0.8;
 		pointer-events: none;
 	}
 </style>
