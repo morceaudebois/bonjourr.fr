@@ -1,0 +1,14 @@
+/* adds logo to the searchbar */ 
+
+#searchbar {
+  /* use any direct link to an image you want */ 
+  background: url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg') no-repeat 10px center;
+  /* you might need to play around with the two following values to get to a fitting result */
+  background-size: 20px;
+  padding-left: 40px;
+}
+
+#searchbar::placeholder {
+  color: white;
+  opacity: 0.7;
+}
