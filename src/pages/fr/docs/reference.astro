@@ -23,69 +23,99 @@ import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
 	<p>
-		<em>Mis à jour pour la version 20.2.2</em>
+		<em>
+			Les paramètres de Bonjourr sont enregistrés au format JSON, visible dans la section de
+			gestion des paramètres. Cette page vous aide à comprendre à quoi correspond chaque
+			propriété JSON. Dernière mise à jour pour la version 20.2.2.
+		</em>
 	</p>
 
-	<h3>Général</h3>
+	<section id="general">
+		<h2>Général</h2>
 
-	<Code lang="jsonc" code={general} />
+		<Code lang="jsonc" code={general} />
+	</section>
 
-	<h3>Fonds d'écran</h3>
+	<section id="backgrounds">
+		<h2>Arrière-plans</h2>
 
-	<p>Selectionnez votre type de fond d'écran, le flou et la luminosité.</p>
+		<p>Sélectionnez votre fournisseur d’arrière-plan, le niveau de flou et la luminosité</p>
 
-	<Code lang="jsonc" code={backgrounds} />
+		<Code lang="jsonc" code={backgrounds} />
+	</section>
 
-	<h4>Unsplash</h4>
+	<section>
+		<h4>Unsplash</h4>
 
-	<p>L'URL du fond d'écran est synchronisée quand la fréquence est sur "pause".</p>
+		<p>
+			La synchronisation des fréquences en pause enregistre l’URL de l’image dans <code
+				>pausedImage</code>
+		</p>
 
-	<Code lang="jsonc" code={unsplash} />
+		<Code lang="jsonc" code={unsplash} />
+	</section>
 
-	<h3>Horloge</h3>
+	<section>
+		<h2>Horloge</h2>
 
-	<Code lang="jsonc" code={clock} />
+		<Code lang="jsonc" code={clock} />
+	</section>
 
-	<h3>Liens</h3>
+	<section id="links">
+		<h2>Liens</h2>
 
-	<p>Paramètres généraux pour les liens.</p>
+		<p>Paramètres généraux pour les liens rapides.</p>
 
-	<Code lang="jsonc" code={links} />
+		<Code lang="jsonc" code={links} />
 
-	<p>Quand on ajoute un lien</p>
+		<p>Lors de l’ajout d’un lien rapide</p>
 
-	<Code lang="jsonc" code={linkselem} />
+		<Code lang="jsonc" code={linkselem} />
+	</section>
 
-	<h3>Notes, Barre de recherche et Citations</h3>
+	<section id="notes">
+		<h2>Notes, barre de recherche et citations</h2>
 
-	<p>Ces widgets se comportent d'une manière similaire.</p>
+		<p>Ces widgets fonctionnent de manière assez similaire : une simple paire clé-valeur.</p>
 
-	<Code lang="jsonc" code={notes} />
+		<Code lang="jsonc" code={notes} />
+	</section>
 
-	<h3>Police d'écriture</h3>
+	<section id="fonts">
+		<h2>Polices</h2>
 
-	<p>La plupart des champs sont modifié automatiquement par Bonjourr.</p>
+		<p>
+			La plupart des champs dans <code>fonts</code> sont définis automatiquement par Bonjourr et
+			ne peuvent pas être facilement modifiés manuellement.
+		</p>
 
-	<Code lang="jsonc" code={fonts} />
+		<Code lang="jsonc" code={fonts} />
+	</section>
 
-	<h3>Météo</h3>
+	<section id="weather">
+		<h2>Météo</h2>
 
-	<Code lang="jsonc" code={weather} />
+		<Code lang="jsonc" code={weather} />
+	</section>
 
-	<h3>Cacher des éléments</h3>
+	<section id="hide">
+		<h2>Masquer</h2>
 
-	<p>Spécifiez quels éléments vous voulez cacher sur la page.</p>
+		<p>Indiquez quel élément de la page vous souhaitez masquer.</p>
 
-	<Code lang="jsonc" code={hide} />
+		<Code lang="jsonc" code={hide} />
+	</section>
 
-	<h3>Mise en page</h3>
+	<section id="layout">
+		<h2>Mise en page</h2>
 
-	<p>
-		La mise en page est plutôt complexe. Les grids sont des tables, les items l'alignement des
-		widgets.
-	</p>
+		<p>
+			Les mises en page sont plutôt complexes. Les grilles sont des tableaux, les éléments
+			sont des alignements de widgets.
+		</p>
 
-	<Code lang="jsonc" code={move} />
-	<Code lang="jsonc" code={movegrid} />
-	<Code lang="jsonc" code={moveitems} />
+		<Code lang="jsonc" code={move} />
+		<Code lang="jsonc" code={movegrid} />
+		<Code lang="jsonc" code={moveitems} />
+	</section>
 </Docs>
