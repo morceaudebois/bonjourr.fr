@@ -54,6 +54,15 @@ const locale = props.lang === "fr" ? "/fr" : ""
 				<p><slot name="styles-desc" /></p>
 			</div>
 		</a>
+
+		<a href={locale + "/docs/faq"}>
+			<span>🧐</span>
+
+			<div>
+				<h3><slot name="faq-title" /></h3>
+				<p><slot name="faq-desc" /></p>
+			</div>
+		</a>
 	</section>
 
 	<slot name="docs" />

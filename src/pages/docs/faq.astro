@@ -1,0 +1,96 @@
+---
+import Docs from "@layouts/Docs.astro"
+import Link from "@components/Link.astro"
+import { Code } from "astro-expressive-code/components"
+---
+
+<Docs
+	title="Frequently asked questions"
+	thumbnail="/documentation/backgrounds/ryan-klaus-Xa0BLOXVxrQ-unsplash.jpeg"
+>
+	<section id="firefox-info" style="margin-top: 3em;">
+		<h2>🦊 How do I get rid of <strong>"Extension (B...t Startpage)"</strong> on Firefox?</h2>
+
+		<p>
+			When using <strong>Bonjourr on Firefox</strong>, you might notice that it adds a button
+			that says
+			<strong>"Extension (B...t Startpage)"</strong> at the start of your search bar of your new
+			tabs.
+		</p>
+
+		<img
+			src="/documentation/faq/firefox-extension-info.png"
+			alt="Bonjourr's infos on the current photo"
+			style="max-width: 600px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
+
+		<p>
+			This is a <strong>security measure</strong> taken by Mozilla to help you identify where the
+			page is coming from. If you had installed an extension that had some malicious intentions,
+			it could be very handy to know which extension generates the malicious page.
+		</p>
+
+		<p>
+			Although this label isn't necessary for Bonjourr, there's <strong
+				>unfortunately no easy way to disable it</strong
+			>, and we have <strong>no control over it</strong> as developers.
+		</p>
+
+		<h3><strong>...but there's a way?</strong></h3>
+
+		<p>
+			If there's a will, there is a <strong>hacky way</strong> to remove the button using the <strong
+				><code>userChrome.css</code></strong
+			>
+			file. It's essentially a CSS stylesheet you can create that has access to the <strong
+				>entire UI of Firefox</strong
+			>.
+		</p>
+
+		<p>
+			You can learn more about how <strong><code>userChrome.css</code></strong> works <a
+				href="https://www.userchrome.org/">here</a
+			>, and how to set it up to remove the button on <a
+				href="https://github.com/victrme/Bonjourr/discussions/165">this GitHub discussion</a
+			>.
+		</p>
+	</section>
+
+	<section id="searchbar-focus">
+		<h2>🔎 Is there a way to automatically focus on Bonjourr's searchbar?</h2>
+
+		<p>
+			The default behaviour of most browsers is to <strong
+				>focus on their native searchbar</strong
+			> whenever you open a new tab. Even if you have Bonjourr's searchbar enabled, you'll quickly
+			notice that this behaviour doesn't change, which means you have to <strong
+				>manually click</strong
+			> on Bonjourr's searchbar every time if you want to use it.
+		</p>
+
+		<p>
+			We understand this isn't ideal — however, there currently is <strong
+				>no way to change this behaviour</strong
+			>.
+		</p>
+
+		<p>
+			The idea is that since this is <strong>native to the browser</strong> and happens <em
+				>"outside"</em
+			> of Bonjourr, it occurs <strong>before Bonjourr has even loaded</strong>, which implies
+			we don't have control over it and can't override it in any way. Some other extensions,
+			like <a href="https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/"
+				><strong>New Tab Override</strong></a
+			>, get around this problem by asking for <strong>additional permissions</strong>, which
+			we might do as an <strong>optional feature</strong> in the future.
+		</p>
+
+		<p>
+			You can follow the development of this feature on <a
+				href="https://github.com/victrme/Bonjourr/issues/503"
+				><strong>this GitHub issue</strong></a
+			>.
+		</p>
+	</section>
+</Docs>
