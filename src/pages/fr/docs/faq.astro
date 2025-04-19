@@ -1,0 +1,102 @@
+---
+import Docs from "@layouts/Docs.astro"
+import { Code } from "astro-expressive-code/components"
+---
+
+<Docs
+	title="Questions fréquentes"
+	thumbnail="/documentation/backgrounds/ryan-klaus-Xa0BLOXVxrQ-unsplash.jpeg"
+	lang="fr"
+>
+	<section id="firefox-info" style="margin-top: 3em;">
+		<h2>
+			🦊 Comment enlever <strong>"Extension (B...t Startpage)"</strong> sur Firefox ?
+		</h2>
+
+		<p>
+			Quand vous utilisez <strong>Bonjourr sur Firefox</strong>, vous pouvez remarquer qu’un
+			bouton
+			<strong>"Extension (B...t Startpage)"</strong> s’affiche au début de la barre de recherche
+			dans vos nouveaux onglets.
+		</p>
+
+		<img
+			src="/documentation/faq/firefox-extension-info.png"
+			alt="Informations de Bonjourr sur la photo actuelle"
+			style="max-width: 600px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
+
+		<p>
+			C’est une <strong>mesure de sécurité</strong> mise en place par Mozilla pour vous aider à
+			identifier l’origine de la page. Si vous aviez installé une extension malveillante, cela
+			pourrait être très utile de savoir quelle extension a généré la page en question.
+		</p>
+
+		<p>
+			Même si cette étiquette n’est pas nécessaire pour Bonjourr, <strong
+				>il n’y a malheureusement aucun moyen simple de la désactiver</strong
+			> et nous <strong>n’avons aucun contrôle là-dessus</strong> en tant que développeurs.
+		</p>
+
+		<h3><strong>...mais il y a un moyen ?</strong></h3>
+
+		<p>
+			Qui veut, peut : il existe un <strong>moyen détourné</strong> de retirer ce bouton via le
+			fichier
+			<strong><code>userChrome.css</code></strong>. Il s’agit d’une feuille de style CSS que
+			vous pouvez créer et qui a accès à <strong>toute l’interface de Firefox</strong>.
+		</p>
+
+		<p>
+			Vous pouvez en apprendre plus sur le fonctionnement de <strong
+				><code>userChrome.css</code></strong
+			>
+			<a href="https://www.userchrome.org/">ici</a>, et comment l’utiliser pour retirer ce
+			bouton dans <a href="https://github.com/victrme/Bonjourr/discussions/165"
+				>cette discussion GitHub</a
+			>.
+		</p>
+	</section>
+
+	<section id="searchbar-focus">
+		<h2>🔎 Est-ce possible de focaliser automatiquement la barre de recherche de Bonjourr ?</h2>
+
+		<p>
+			Par défaut, la plupart des navigateurs <strong
+				>focalisent leur propre barre de recherche</strong
+			> à l’ouverture d’un nouvel onglet. Même si vous avez activé la barre de recherche de Bonjourr,
+			vous constaterez que ce comportement ne change pas : il faut donc <strong
+				>cliquer manuellement</strong
+			>
+			sur celle de Bonjourr à chaque fois pour l’utiliser.
+		</p>
+
+		<p>
+			On comprend que ce ne soit pas idéal — cependant, <strong
+				>il n’existe actuellement aucun moyen de modifier ce comportement</strong
+			>.
+		</p>
+
+		<p>
+			En fait, cela vient du fait que c’est un comportement <strong
+				>natif du navigateur</strong
+			>, qui se produit <em>"en dehors"</em> de Bonjourr, donc <strong
+				>avant même que Bonjourr ne se charge</strong
+			>. Cela signifie qu’on n’a <strong>aucun contrôle là-dessus</strong> et qu’on ne peut pas
+			l’outrepasser. Certaines autres extensions, comme <a
+				href="https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/"
+				><strong>New Tab Override</strong></a
+			>, contournent ce problème en demandant des
+			<strong>autorisations supplémentaires</strong>, ce qu’on pourrait envisager en tant que
+			<strong>fonctionnalité optionnelle</strong> à l’avenir.
+		</p>
+
+		<p>
+			Vous pouvez suivre l’évolution de cette fonctionnalité sur <a
+				href="https://github.com/victrme/Bonjourr/issues/503"
+				><strong>ce ticket GitHub</strong></a
+			>.
+		</p>
+	</section>
+</Docs>

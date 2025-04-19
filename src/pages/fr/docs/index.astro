@@ -24,76 +24,166 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 	<span slot="profiles-title">Profiles personnalisés</span>
 	<span slot="profiles-desc">Des thèmes pré-faits pour une personnalisation rapide</span>
 
-	<span slot="styles-title">CSS snippets</span>
+	<span slot="styles-title">Extraits de CSS</span>
 	<span slot="styles-desc">Des extraits de code à copier coller pour personnaliser Bonjourr</span>
 
+	<span slot="faq-title">Questions fréquentes</span>
+	<span slot="faq-desc">Une question sur Bonjourr ? La réponse est sûrement ici !</span>
+
 	<section slot="docs">
-		<h2 id="install-extension">Installer l'extension</h2>
-		<h3 id="available">Navigateurs et plateformes</h3>
-
-		<ul>
-			<li>
-				<p>
-					Chrome, Chromium, Brave, Kiwi → <a href={webstore}>Chrome Web Store</a>
-				</p>
-			</li>
-			<li>
-				<p>
-					Microsoft Edge → <a href={edgeAddons}>Edge Add-ons</a>
-				</p>
-			</li>
-			<li>
-				<p>
-					Firefox (desktop) → <a href={firefoxAddons}>Firefox Add-ons</a>
-				</p>
-			</li>
-			<li>
-				<p>
-					Safari (Mac, iPad, iPhone) → <a href={appleAppStore}>App Store</a>
-				</p>
-			</li>
-		</ul>
-
-		<h3 id="not-available">Actuellement non disponible</h3>
-
-		<ul>
-			<li>
-				Vivaldi affiche une page blanche, voir
-				<a href="https://github.com/victrme/Bonjourr/issues/213">#213</a>
-			</li>
-			<li>
-				Firefox Mobile ne permet pas de modifier sa page d'accueil, mentionnée dans
-				<a href="https://github.com/victrme/Bonjourr/issues/267">#267</a>
-			</li>
-		</ul>
-
-		<h3 id="opera">Navigateur Opera</h3>
+		<h2 id="install-extension">Installer l’extension</h2>
 
 		<p>
-			Opera n'autorise pas les extensions à modifier son nouvel onglet. Bien qu'il n'y ait pas
-			de déclaration officielle, nous pensons que c'est parce que les publicités sur leur
-			Speed Dial sont une bonne source de revenus pour eux.
+			Bonjourr est entièrement compatible et peut être installé sur les plateformes suivantes
+			:
 		</p>
 
-		<h4 id="operea-workaround">Remplacer le Speed Dial d'Opera</h4>
+		<div id="downloadLabels">
+			<a href={webstore} target="_blank">
+				<img
+					src="https://labels.tahoe.be/chrome_download_dark.svg"
+					height="53"
+					alt="Télécharger Bonjourr pour Chrome"
+				/>
+			</a>
 
-		<ul>
+			<a href={firefoxAddons} target="_blank">
+				<img
+					src="https://labels.tahoe.be/firefox_download_dark.svg"
+					height="53"
+					alt="Télécharger Bonjourr pour Firefox"
+				/>
+			</a>
+
+			<a href={edgeAddons} target="_blank">
+				<img
+					src="https://labels.tahoe.be/edge_download_dark.svg"
+					height="53"
+					alt="Télécharger Bonjourr pour Edge"
+				/>
+			</a>
+
+			<a href={appleAppStore} target="_blank">
+				<img
+					src="https://labels.tahoe.be/safari_download_dark.svg"
+					height="53"
+					alt="Télécharger Bonjourr pour Safari"
+				/>
+			</a>
+		</div>
+
+		<hr style="margin-block: 3.5em" />
+
+		<h2 id="not-available">Autres plateformes</h2>
+
+		<p>
+			Il est parfois possible d’installer Bonjourr sur d’autres navigateurs, au cas par cas.
+		</p>
+
+		<h3 id="brave">Brave (ordinateur)</h3>
+
+		<p>
+			Brave étant basé sur Chromium, il peut installer n’importe quelle extension Chrome. Vous
+			pouvez télécharger Bonjourr <a
+				href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+				>depuis le Chrome Web Store</a
+			> et l’utiliser immédiatement.
+		</p>
+
+		<h3 id="opera">Opera (ordinateur)</h3>
+
+		<p>
+			Opera n’autorise pas les extensions à modifier son onglet de démarrage. Bien qu’aucune
+			déclaration officielle n’ait été faite, nous pensons que cela est dû au fait que les
+			publicités sur leur page d’accueil représentent une source de revenus importante.
+		</p>
+
+		<p>Il existe cependant une solution de contournement pour utiliser Bonjourr en ligne :</p>
+
+		<ol>
+			<li>Videz votre page d’accueil actuelle pour afficher une page noire vide.</li>
 			<li>
-				Videz d'abord votre Speed Dial actuel pour qu'il affiche une page vide et sombre.
-			</li>
-			<li>
-				Vous devez ensuite installer une extension tierce qui puisse remplacer votre onglet
-				actif actuel. Pour l'instant, seul <a
+				Installez une extension tierce capable de remplacer l’onglet actif. Pour l’instant,
+				seule <a
 					href="https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj"
-				>
-					New Tab Start Page</a
-				> semble fonctionner correctement. Nous ne sommes pas affiliés à eux !
+					>New Tab Start Page</a
+				> semble fonctionner. Nous ne sommes pas affiliés avec elle.
 			</li>
 			<li>
-				Cliquez sur l'icône de Bonjourr, elle devrait révéler son URL complète dans la barre
-				d'adresse.
+				Cliquez sur l’icône de Bonjourr, son URL complète s’affichera dans la barre
+				d’adresse.
 			</li>
-			<li>Configurez l'extension tierce avec l'URL de Bonjourr, et le tour est joué !</li>
-		</ul>
+			<li>
+				Configurez l’extension tierce sur <bjr>https://online.bonjourr.fr</bjr> et le tour est
+				joué !
+			</li>
+		</ol>
+
+		<h3 id="vivaldi">Vivaldi (ordinateur)</h3>
+
+		<p>
+			Bien qu’il soit possible d’installer <a
+				href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+				>la version Chrome de Bonjourr</a
+			> sur Vivaldi, un nouvel onglet fonctionnera, mais une nouvelle fenêtre affichera une page
+			blanche. Il n’y a actuellement aucune solution, mais vous pouvez suivre <a
+				href="https://github.com/victrme/Bonjourr/issues/213">le sujet sur GitHub</a
+			>.
+		</p>
+
+		<h3>Chrome, Firefox et autres navigateurs non-Safari sur iOS</h3>
+
+		<p>Ces navigateurs ne permettent pas l’installation d’extensions sur iOS.</p>
+
+		<p>
+			Cependant, certains (comme <a
+				href="https://apps.apple.com/app/navigateur-firefox-rapide-s%C3%BBr/id989804926"
+				>Firefox</a
+			>) vous permettent de définir une URL personnalisée pour les nouveaux onglets. Vous
+			pouvez donc utiliser <bjr>https://online.bonjourr.fr</bjr>. Même si c’est la version en
+			ligne de Bonjourr, les données sont mises en cache, donc ça reste très rapide.
+		</p>
+
+		<p>
+			Si vous utilisez Safari, vous pouvez installer <a href={appleAppStore}
+				>Bonjourr depuis l’App Store</a
+			> et tout fonctionnera parfaitement.
+		</p>
+
+		<h3 id="chrome-android">Chrome pour Android</h3>
+
+		<p>
+			Chrome sur Android ne prend pas en charge les extensions, il est donc impossible d’y
+			installer Bonjourr.
+		</p>
+
+		<p>
+			La seule méthode possible était d’utiliser Kiwi Browser, qui permettait d’installer des
+			extensions Chrome. Ce n’est plus conseillé car le navigateur a été récemment abandonné.
+		</p>
+
+		<h3 id="firefox-android">Firefox pour Android</h3>
+
+		<p>
+			Mozilla empêche les extensions de modifier la page de démarrage sur Android, ce qui rend
+			Bonjourr inutilisable. Tant que cela ne change pas, nous ne pouvons rien faire.
+		</p>
+
+		<p>
+			Une alternative serait qu’ils ajoutent la possibilité de définir une URL personnalisée,
+			ce qui permettrait d’utiliser la version en ligne de Bonjourr. Vous pouvez <a
+				href="https://connect.mozilla.org/t5/ideas/add-option-to-set-custom-homepage-in-firefox-for-android/idi-p/83481"
+				>voter pour cette idée</a
+			> sur leur forum.
+		</p>
 	</section>
 </DocsLanding>
+
+<style>
+	#downloadLabels {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(8em, 100%), 1fr));
+		grid-gap: 1em;
+		margin-top: 1.75em;
+	}
+</style>
