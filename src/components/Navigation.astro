@@ -23,81 +23,88 @@ const trans = isFrench ? fr : en
 
 <nav>
 	<div class="container">
-		<div class="links">
-			<Link href="/" id="homeLink" title="Homepage">{trans.Home}</Link>
+		<ul class="links desktop-nav">
+			<li>
+				<Link href="/" id="homeLink" title="Homepage">{trans.Home}</Link>
+			</li>
+			<li>
+				<a href="https://online.bonjourr.fr">Online</a>
+			</li>
+			<li>
+				<Link href="/docs" title="Documentation">Docs</Link>
+			</li>
+			<li>
+				<Link href="/#further" title="Get in touch">Contact</Link>
+			</li>
+			<li>
+				<a href="https://ko-fi.com/bonjourr" title="Support us on Ko-Fi">{trans.Donate}</a>
+			</li>
+		</ul>
 
-			<a href="https://online.bonjourr.fr">Online</a>
-
-			<Link href="/docs" title="Documentation">Docs</Link>
-
-			<Link href="/#further" title="Get in touch">Contact</Link>
-
-			<a href="https://ko-fi.com/bonjourr" title="Support us on Ko-Fi">{trans.Donate}</a>
-		</div>
-
-		<div class="rightNav">
-			<div class="socials">
-				<a href="https://t.me/BonjourrStartpage" title="Bonjourr's Telegram group">
-					<svg
-						role="img"
-						fill="none"
-						height="800"
-						viewBox="0 0 48 48"
-						width="800"
-						xmlns="http://www.w3.org/2000/svg"
-						><path
-							d="m41.4193 7.30899s3.8853-1.515 3.5615 2.16429c-.1079 1.51502-1.0792 6.81752-1.8347 12.55292l-2.5902 16.9897s-.2158 2.4889-2.1585 2.9218c-1.9427.4328-4.8566-1.515-5.3963-1.9479-.4317-.3246-8.0943-5.1943-10.7925-7.575-.7555-.6493-1.6189-1.9479.1079-3.4629l11.3322-10.8214c1.2951-1.2986 2.5902-4.3286-2.8061-.6493l-15.1095 10.2804s-1.7268 1.0821-4.9645.1082l-7.01518-2.1643s-2.59021-1.6232 1.83473-3.2465c10.79255-5.0861 24.06735-10.2804 35.83115-15.15001z"
-							fill="#fff"></path></svg
-					>
-				</a>
-
-				<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
-					<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-						><path
+		<div class="nav-right">
+			<ul class="socials desktop-nav">
+				<li>
+					<a href="https://t.me/BonjourrStartpage" title="Bonjourr's Telegram group">
+						<svg
+							role="img"
+							fill="none"
+							viewBox="0 0 48 48"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								d="m41.4193 7.30899s3.8853-1.515 3.5615 2.16429c-.1079 1.51502-1.0792 6.81752-1.8347 12.55292l-2.5902 16.9897s-.2158 2.4889-2.1585 2.9218c-1.9427.4328-4.8566-1.515-5.3963-1.9479-.4317-.3246-8.0943-5.1943-10.7925-7.575-.7555-.6493-1.6189-1.9479.1079-3.4629l11.3322-10.8214c1.2951-1.2986 2.5902-4.3286-2.8061-.6493l-15.1095 10.2804s-1.7268 1.0821-4.9645.1082l-7.01518-2.1643s-2.59021-1.6232 1.83473-3.2465c10.79255-5.0861 24.06735-10.2804 35.83115-15.15001z"
+								fill="#fff"></path></svg
+						>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
+						<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+							><path
+								role="img"
+								clip-rule="evenodd"
+								d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z"
+								fill="#fff"
+								fill-rule="evenodd"
+								transform="scale(64)"></path></svg
+						>
+					</a>
+				</li>
+				<li>
+					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
+						<svg
 							role="img"
 							clip-rule="evenodd"
-							d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z"
-							fill="#fff"
 							fill-rule="evenodd"
-							transform="scale(64)"></path></svg
-					>
-				</a>
-
-				<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
-					<svg
-						role="img"
-						clip-rule="evenodd"
-						fill-rule="evenodd"
-						stroke-linejoin="round"
-						stroke-miterlimit="2"
-						viewBox="0 0 581 511"
-						xmlns="http://www.w3.org/2000/svg"
-						><path
-							d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.449-163.25-81.433-5.957-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"
-							fill="#fff"
-							fill-rule="nonzero"
-							transform="translate(-9.9966 -9.65494)"></path></svg
-					>
-				</a>
-
-				<a href="https://twitter.com/BonjourrTeam" title="Join us on Twitter">
-					<svg
-						viewBox="0 0 300.00006 244.18703"
-						xmlns="http://www.w3.org/2000/svg"
-						role="img"
-						><path
-							d="m633.89823 812.04479c112.46038 0 173.95627-93.16765 173.95627-173.95625 0-2.64628-.0539-5.28062-.1726-7.90305 11.93799-8.63016 22.31446-19.39999 30.49762-31.65984-10.95459 4.86937-22.74358 8.14741-35.11071 9.62551 12.62341-7.56929 22.31446-19.54304 26.88583-33.81739-11.81284 7.00307-24.89517 12.09297-38.82383 14.84055-11.15723-11.88436-27.04079-19.31655-44.62892-19.31655-33.76374 0-61.14426 27.38052-61.14426 61.13233 0 4.79784.5364 9.46458 1.58538 13.94057-50.81546-2.55686-95.87353-26.88582-126.02546-63.87991-5.25082 9.03545-8.27852 19.53111-8.27852 30.73006 0 21.21186 10.79366 39.93837 27.20766 50.89296-10.03077-.30992-19.45363-3.06348-27.69044-7.64676-.009.25652-.009.50661-.009.78077 0 29.60957 21.07478 54.3319 49.0513 59.93435-5.13757 1.40062-10.54335 2.15158-16.12196 2.15158-3.93364 0-7.76596-.38716-11.49099-1.1026 7.78383 24.2932 30.35457 41.97073 57.11525 42.46543-20.92578 16.40207-47.28712 26.17062-75.93712 26.17062-4.92898 0-9.79834-.28036-14.58427-.84634 27.05868 17.34379 59.18936 27.46396 93.72193 27.46396"
-							fill="#fff"
-							transform="translate(-539.17946 -568.85777)"></path></svg
-					>
-				</a>
-			</div>
-
-			<span class="sep">|</span>
+							stroke-linejoin="round"
+							stroke-miterlimit="2"
+							viewBox="0 0 581 511"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.449-163.25-81.433-5.957-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"
+								fill="#fff"
+								fill-rule="nonzero"
+								transform="translate(-9.9966 -9.65494)"></path></svg
+						>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/BonjourrTeam" title="Join us on Twitter">
+						<svg
+							viewBox="0 0 300.00006 244.18703"
+							xmlns="http://www.w3.org/2000/svg"
+							role="img"
+							><path
+								d="m633.89823 812.04479c112.46038 0 173.95627-93.16765 173.95627-173.95625 0-2.64628-.0539-5.28062-.1726-7.90305 11.93799-8.63016 22.31446-19.39999 30.49762-31.65984-10.95459 4.86937-22.74358 8.14741-35.11071 9.62551 12.62341-7.56929 22.31446-19.54304 26.88583-33.81739-11.81284 7.00307-24.89517 12.09297-38.82383 14.84055-11.15723-11.88436-27.04079-19.31655-44.62892-19.31655-33.76374 0-61.14426 27.38052-61.14426 61.13233 0 4.79784.5364 9.46458 1.58538 13.94057-50.81546-2.55686-95.87353-26.88582-126.02546-63.87991-5.25082 9.03545-8.27852 19.53111-8.27852 30.73006 0 21.21186 10.79366 39.93837 27.20766 50.89296-10.03077-.30992-19.45363-3.06348-27.69044-7.64676-.009.25652-.009.50661-.009.78077 0 29.60957 21.07478 54.3319 49.0513 59.93435-5.13757 1.40062-10.54335 2.15158-16.12196 2.15158-3.93364 0-7.76596-.38716-11.49099-1.1026 7.78383 24.2932 30.35457 41.97073 57.11525 42.46543-20.92578 16.40207-47.28712 26.17062-75.93712 26.17062-4.92898 0-9.79834-.28036-14.58427-.84634 27.05868 17.34379 59.18936 27.46396 93.72193 27.46396"
+								fill="#fff"
+								transform="translate(-539.17946 -568.85777)"></path></svg
+						>
+					</a>
+				</li>
+			</ul>
 
 			<a
+				class="language desktop-nav"
 				href={isFrench ? path.substring(3) : "/fr" + path}
-				class="language"
 				title={`Switch language to ${isFrench ? "English" : "French"}`}
 			>
 				<span role="img" aria-label="">
@@ -117,200 +124,161 @@ const trans = isFrench ? fr : en
 				</span>
 				{isFrench ? "en" : "fr"}
 			</a>
-		</div>
 
-		<button open-button>
-			<svg
-				class="h-6 w-6"
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 20 20"
-				fill="currentColor"
-			>
-				<path
-					fill-rule="evenodd"
-					d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-					clip-rule="evenodd"></path>
-			</svg>
-		</button>
-	</div>
-
-	<div class="mobileContainer">
-		<div class="overlay"></div>
-
-		<aside>
-			<button close-button>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="currentColor"
-					class="h-6 w-6"
-				>
+			<button class="hamburger" aria-label="Open navigation menu" open-button>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
 					<path
 						fill-rule="evenodd"
-						d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+						d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
 						clip-rule="evenodd"></path>
 				</svg>
 			</button>
+		</div>
+	</div>
+</nav>
 
-			<div class="links">
-				<Link href="/" id="homeLink">{trans.Home}</Link>
+<div class="container-mobile">
+	<div class="overlay"></div>
 
-				<a href="https://online.bonjourr.fr">{trans.Try}</a>
+	<aside>
+		<button aria-label="Close navigation menu" close-button>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+					clip-rule="evenodd"></path>
+			</svg>
+		</button>
 
-				<Link href="/docs">Documentation</Link>
-
-				<Link href="/#further">Contact</Link>
-
-				<a class="iconLink" href="https://ko-fi.com/bonjourr">
-					<svg
-						fill="none"
-						height="194"
-						viewBox="0 0 241 194"
-						width="241"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						><mask
-							id="a"
-							height="194"
-							maskUnits="userSpaceOnUse"
-							width="242"
-							x="-1"
-							y="0"
-							><path
-								d="m240.469.958984h-240.47485938v192.959016h240.47485938z"
-								fill="#fff"></path></mask
-						><g mask="url(#a)"
-							><path
-								d="m96.1344 193.911c-35.0032 0-63.4747-15.655-80.1623-44.082-14.77422-24.917-15.97795938-51.9061-15.97795938-82.0628 0-17.8786 5.37878938-33.4447 15.54715938-45.0196 9.3448-10.6309 22.5858-17.51753 37.2904-19.39282 17.4541-2.21107 39.1531-2.394796 61.7133-2.394796 36.714 0 47.085.449816 61.53 1.894296 19.215 1.90698 35.383 9.07872 46.749 20.74222 11.544 11.8473 17.645 27.6669 17.645 45.7672v3.6367c0 30.8856-20.648 56.7336-49.423 63.7596-2.148 5.068-4.809 10.112-7.957 15.078l-.083.127c-10.137 15.668-33.964 41.954-79.605 41.954h-7.2729z"
-								fill="#fff"></path><path
-								d="m174.568 17.9772c-13.641-1.3621-23.188-1.8183-60.016-1.8183-23.644 0-43.6512.2281-59.7876 2.2745-21.3695 2.7306-39.5586 19.0951-39.5586 49.334 0 30.2392 1.5902 53.6546 13.8683 74.3396 13.8684 23.644 37.0561 36.6 67.0671 36.6h7.2728c36.828 0 56.836-19.551 66.839-35.009 4.321-6.824 7.501-13.64 9.548-20.464 26.146-2.274 45.469-23.8716 45.469-50.2399v-3.6364c0-28.4145-18.639-48.1937-50.696-51.3805z"
-								fill="#fff"></path><path
-								d="m15.1975 67.7674c0-30.2389 18.1891-46.6034 39.5584-49.334 16.1428-2.0464 36.1501-2.2745 59.7881-2.2745 36.828 0 46.375.4562 60.015 1.8183 32.058 3.1804 50.696 22.9598 50.696 51.3805v3.6364c0 26.3746-19.323 47.9719-45.469 50.2399-2.046 6.824-5.227 13.64-9.548 20.464-10.003 15.458-30.01 35.009-66.838 35.009h-7.2736c-30.0109 0-53.1987-12.956-67.0669-36.6-12.2781-20.685-13.8683-43.6507-13.8683-74.3396"
-								fill="#202020"></path><path
-								d="m32.2469 67.9899c0 29.3269 1.8185 48.1941 11.3658 65.6991 10.9098 20.235 30.6891 27.964 53.199 27.964h7.0453c29.554 0 43.879-14.324 51.836-26.824 3.865-6.367 7.273-13.412 9.091-22.282l1.363-5.683h8.185c18.189 0 33.876-14.774 33.876-33.6474v-3.4084c0-21.1413-13.184-32.2854-36.15-35.0095-12.956-1.1341-20.686-1.5903-57.52-1.5903-24.7778 0-42.5108.228-55.9228 2.2744-18.8669 2.7306-26.3745 13.4123-26.3745 32.5071"
-								fill="#fff"></path><path
-								d="m166.158 83.6801c0 2.7306 2.046 4.7771 5.683 4.7771 11.594 0 17.961-6.5953 17.961-17.5049s-6.367-17.7328-17.961-17.7328c-3.637 0-5.683 2.0462-5.683 4.7768v25.6903z"
-								fill="#202020"></path><path
-								d="m54.5321 82.3198c0 13.4122 7.5011 25.0062 17.0486 34.1042 6.3671 6.138 16.3708 12.506 23.1878 16.598 2.0462 1.135 4.0926 1.819 6.3675 1.819 2.73 0 4.998-.684 6.823-1.819 6.823-4.092 16.82-10.46 22.96-16.598 9.775-9.092 17.276-20.6857 17.276-34.1042 0-14.5525-10.909-27.5083-26.596-27.5083-9.319 0-15.687 4.7767-20.463 11.3657-4.3213-6.5952-10.9101-11.3657-20.2359-11.3657-15.9146 0-26.3745 12.9558-26.3745 27.5083"
-								fill="#ff5a16"></path></g
-						></svg
+		<nav>
+			<ul class="links">
+				<li>
+					<Link href="/" id="homeLink" title="Homepage">{trans.Home}</Link>
+				</li>
+				<li>
+					<a href="https://online.bonjourr.fr">{trans.Try}</a>
+				</li>
+				<li>
+					<Link href="/docs" title="Documentation">Docs</Link>
+				</li>
+				<li>
+					<Link href="/#further" title="Get in touch">Contact</Link>
+				</li>
+				<li>
+					<a href="https://ko-fi.com/bonjourr" title="Support us on Ko-Fi"
+						>{trans.Donate}</a
 					>
-					<span>{trans.Donate}</span>
-				</a>
-			</div>
-
-			<hr />
+				</li>
+			</ul>
 
 			<h2>{trans.Download}</h2>
 
-			<a
-				class="iconLink"
-				href="https://addons.mozilla.org/firefox/addon/bonjourr-startpage/"
-				title="Download Bonjourr for Firefox"
-			>
-				<img src="/browsers/firefox.svg" alt="Firefox icon" />
-				<span>Firefox</span>
-			</a>
-
-			<a
-				class="iconLink"
-				href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
-				title="Download Bonjourr for Chrome"
-			>
-				<img src="/browsers/chrome.svg" alt="Chrome icon" />
-				<span>Chrome</span>
-			</a>
-
-			<a
-				class="iconLink"
-				href="https://apps.apple.com/app/bonjourr-startpage/id1615431236"
-				title="Download Bonjourr for Safari"
-			>
-				<img src="/browsers/safari.svg" alt="Safari icon" />
-				<span>Safari (Mac, iPad, iPhone)</span>
-			</a>
-
-			<a
-				class="iconLink"
-				href="https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid"
-				title="Download Bonjourr for Edge"
-			>
-				<img src="/browsers/edge.svg" alt="Edge icon" />
-				<span>Edge</span>
-			</a>
-
-			<hr />
+			<ul>
+				<li>
+					<a
+						href="https://addons.mozilla.org/firefox/addon/bonjourr-startpage/"
+						title="Download for Firefox"
+					>
+						<img src="/browsers/firefox.svg" alt="" />
+						<span>Firefox</span>
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+						title="Download Bonjourr for Chrome"
+					>
+						<img src="/browsers/chrome.svg" alt="" />
+						<span>Chrome</span>
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://apps.apple.com/app/bonjourr-startpage/id1615431236"
+						title="Download Bonjourr for Safari"
+					>
+						<img src="/browsers/safari.svg" alt="" />
+						<span>Safari</span>
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid"
+						title="Download Bonjourr for Edge"
+					>
+						<img src="/browsers/edge.svg" alt="" />
+						<span>Edge</span>
+					</a>
+				</li>
+			</ul>
 
 			<h2>{trans.Socials}</h2>
 
-			<a class="iconLink" href="https://t.me/BonjourrStartpage" title="Our Telegram group">
-				<svg
-					role="img"
-					fill="none"
-					height="800"
-					viewBox="0 0 48 48"
-					width="800"
-					xmlns="http://www.w3.org/2000/svg"
-					><path
-						d="m41.4193 7.30899s3.8853-1.515 3.5615 2.16429c-.1079 1.51502-1.0792 6.81752-1.8347 12.55292l-2.5902 16.9897s-.2158 2.4889-2.1585 2.9218c-1.9427.4328-4.8566-1.515-5.3963-1.9479-.4317-.3246-8.0943-5.1943-10.7925-7.575-.7555-.6493-1.6189-1.9479.1079-3.4629l11.3322-10.8214c1.2951-1.2986 2.5902-4.3286-2.8061-.6493l-15.1095 10.2804s-1.7268 1.0821-4.9645.1082l-7.01518-2.1643s-2.59021-1.6232 1.83473-3.2465c10.79255-5.0861 24.06735-10.2804 35.83115-15.15001z"
-						fill="currentColor"></path></svg
-				>
-				<span>Telegram</span>
-			</a>
-
-			<a
-				href="https://github.com/victrme/Bonjourr"
-				title="Our GitHub repository"
-				class="iconLink"
-			>
-				<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-					<path
-						role="img"
-						clip-rule="evenodd"
-						d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z"
-						fill="currentColor"
-						fill-rule="evenodd"
-						transform="scale(64)"
-					>
-					</path>
-				</svg>
-				<span>GitHub</span>
-			</a>
-
-			<a
-				class="iconLink"
-				href="https://bsky.app/profile/bonjourr.fr"
-				title="Join us on Bluesky"
-			>
-				<svg
-					role="img"
-					clip-rule="evenodd"
-					fill-rule="evenodd"
-					stroke-linejoin="round"
-					stroke-miterlimit="2"
-					viewBox="0 0 581 511"
-					xmlns="http://www.w3.org/2000/svg"
-					><path
-						d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.449-163.25-81.433-5.957-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"
-						fill="currentColor"
-						fill-rule="nonzero"
-						transform="translate(-9.9966 -9.65494)"></path></svg
-				>
-				<span>Bluesky</span>
-			</a>
-
-			<a href="https://twitter.com/BonjourrTeam" title="Joins us on Twitter" class="iconLink">
-				<svg viewBox="0 0 300.00006 244.18703" xmlns="http://www.w3.org/2000/svg" role="img"
-					><path
-						d="m633.89823 812.04479c112.46038 0 173.95627-93.16765 173.95627-173.95625 0-2.64628-.0539-5.28062-.1726-7.90305 11.93799-8.63016 22.31446-19.39999 30.49762-31.65984-10.95459 4.86937-22.74358 8.14741-35.11071 9.62551 12.62341-7.56929 22.31446-19.54304 26.88583-33.81739-11.81284 7.00307-24.89517 12.09297-38.82383 14.84055-11.15723-11.88436-27.04079-19.31655-44.62892-19.31655-33.76374 0-61.14426 27.38052-61.14426 61.13233 0 4.79784.5364 9.46458 1.58538 13.94057-50.81546-2.55686-95.87353-26.88582-126.02546-63.87991-5.25082 9.03545-8.27852 19.53111-8.27852 30.73006 0 21.21186 10.79366 39.93837 27.20766 50.89296-10.03077-.30992-19.45363-3.06348-27.69044-7.64676-.009.25652-.009.50661-.009.78077 0 29.60957 21.07478 54.3319 49.0513 59.93435-5.13757 1.40062-10.54335 2.15158-16.12196 2.15158-3.93364 0-7.76596-.38716-11.49099-1.1026 7.78383 24.2932 30.35457 41.97073 57.11525 42.46543-20.92578 16.40207-47.28712 26.17062-75.93712 26.17062-4.92898 0-9.79834-.28036-14.58427-.84634 27.05868 17.34379 59.18936 27.46396 93.72193 27.46396"
-						fill="currentColor"
-						transform="translate(-539.17946 -568.85777)"></path></svg
-				>
-				<span>Twitter</span>
-			</a>
-		</aside>
-	</div>
-</nav>
+			<ul>
+				<li>
+					<a href="https://t.me/BonjourrStartpage" title="Our Telegram group">
+						<svg
+							role="img"
+							fill="none"
+							viewBox="0 0 48 48"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								d="m41.4193 7.30899s3.8853-1.515 3.5615 2.16429c-.1079 1.51502-1.0792 6.81752-1.8347 12.55292l-2.5902 16.9897s-.2158 2.4889-2.1585 2.9218c-1.9427.4328-4.8566-1.515-5.3963-1.9479-.4317-.3246-8.0943-5.1943-10.7925-7.575-.7555-.6493-1.6189-1.9479.1079-3.4629l11.3322-10.8214c1.2951-1.2986 2.5902-4.3286-2.8061-.6493l-15.1095 10.2804s-1.7268 1.0821-4.9645.1082l-7.01518-2.1643s-2.59021-1.6232 1.83473-3.2465c10.79255-5.0861 24.06735-10.2804 35.83115-15.15001z"
+								fill="currentColor"></path></svg
+						>
+						<span>Telegram</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
+						<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+							<path
+								role="img"
+								clip-rule="evenodd"
+								d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z"
+								fill="currentColor"
+								fill-rule="evenodd"
+								transform="scale(64)"
+							>
+							</path>
+						</svg>
+						<span>GitHub</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
+						<svg
+							role="img"
+							clip-rule="evenodd"
+							fill-rule="evenodd"
+							stroke-linejoin="round"
+							stroke-miterlimit="2"
+							viewBox="0 0 581 511"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.449-163.25-81.433-5.957-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"
+								fill="currentColor"
+								fill-rule="nonzero"
+								transform="translate(-9.9966 -9.65494)"></path></svg
+						>
+						<span>Bluesky</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/BonjourrTeam" title="Joins us on Twitter">
+						<svg viewBox="0 0 300.00006 244.18703" xmlns="http://www.w3.org/2000/svg"
+							><path
+								d="m633.89823 812.04479c112.46038 0 173.95627-93.16765 173.95627-173.95625 0-2.64628-.0539-5.28062-.1726-7.90305 11.93799-8.63016 22.31446-19.39999 30.49762-31.65984-10.95459 4.86937-22.74358 8.14741-35.11071 9.62551 12.62341-7.56929 22.31446-19.54304 26.88583-33.81739-11.81284 7.00307-24.89517 12.09297-38.82383 14.84055-11.15723-11.88436-27.04079-19.31655-44.62892-19.31655-33.76374 0-61.14426 27.38052-61.14426 61.13233 0 4.79784.5364 9.46458 1.58538 13.94057-50.81546-2.55686-95.87353-26.88582-126.02546-63.87991-5.25082 9.03545-8.27852 19.53111-8.27852 30.73006 0 21.21186 10.79366 39.93837 27.20766 50.89296-10.03077-.30992-19.45363-3.06348-27.69044-7.64676-.009.25652-.009.50661-.009.78077 0 29.60957 21.07478 54.3319 49.0513 59.93435-5.13757 1.40062-10.54335 2.15158-16.12196 2.15158-3.93364 0-7.76596-.38716-11.49099-1.1026 7.78383 24.2932 30.35457 41.97073 57.11525 42.46543-20.92578 16.40207-47.28712 26.17062-75.93712 26.17062-4.92898 0-9.79834-.28036-14.58427-.84634 27.05868 17.34379 59.18936 27.46396 93.72193 27.46396"
+								fill="currentColor"
+								transform="translate(-539.17946 -568.85777)"></path></svg
+						>
+						<span>Twitter</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+</div>
 
 <script>
 	function closeMobileNav() {
@@ -321,14 +289,14 @@ const trans = isFrench ? fr : en
 		document.body?.classList.add("showNav")
 	}
 
-	document.querySelector("[open-button]")?.addEventListener("click", () => openMobileNav())
-
 	document.querySelector(".overlay")?.addEventListener("click", () => closeMobileNav())
+	document.querySelector("[open-button]")?.addEventListener("click", () => openMobileNav())
 	document.querySelector("[close-button]")?.addEventListener("click", () => closeMobileNav())
 
 	document.addEventListener("keydown", (event) => {
-		const { key } = event
-		if (key === "Escape") closeMobileNav()
+		if (event.key === "Escape") {
+			closeMobileNav()
+		}
 	})
 </script>
 
@@ -340,7 +308,7 @@ const trans = isFrench ? fr : en
 		width: 300px;
 		right: -300px;
 		top: 0;
-		padding: 3em;
+		padding: 5em 3em;
 		background-color: #111d;
 		border-left: 1px solid #fff4;
 		backdrop-filter: blur(2em);
@@ -353,20 +321,6 @@ const trans = isFrench ? fr : en
 		will-change: transform;
 	}
 
-	aside .links {
-		flex-direction: column;
-		gap: 1.5em;
-		margin-top: 2em;
-	}
-
-	aside .links a:last-child {
-		margin-bottom: 0;
-	}
-
-	aside .links a:hover {
-		border-bottom: unset;
-	}
-
 	aside .language {
 		margin-top: 1.5em;
 	}
@@ -375,8 +329,7 @@ const trans = isFrench ? fr : en
 		font-size: 1em;
 		text-transform: uppercase;
 		opacity: 0.7;
-		padding-top: 0;
-		padding-bottom: 1em;
+		margin: 2em 0 1em 0;
 	}
 
 	aside hr {
@@ -385,20 +338,6 @@ const trans = isFrench ? fr : en
 		color: rgba(255, 255, 255, 0.5);
 		height: 1px;
 		border: none;
-	}
-
-	.iconLink {
-		display: flex;
-		align-items: center;
-		gap: 1em;
-		margin-bottom: 1em;
-	}
-
-	.iconLink img,
-	.iconLink svg {
-		width: 25px;
-		max-height: 25px;
-		margin: 0;
 	}
 
 	.overlay {
@@ -421,6 +360,10 @@ const trans = isFrench ? fr : en
 	body.showNav aside {
 		transform: translate(-100%);
 		box-shadow: #0008 0em 0em 10em 5em;
+	}
+
+	.hamburger svg {
+		height: 2.5em;
 	}
 
 	button[open-button] {
@@ -457,11 +400,66 @@ const trans = isFrench ? fr : en
 
 	nav .container {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		column-gap: 2em;
 		max-width: 1200px;
-		padding: 3em 4em;
 		margin: auto;
+		padding: 3em 4em;
+	}
+
+	nav ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	nav li {
+		display: inline-block;
+	}
+
+	nav a:hover {
+		background-color: #fff2;
+		backdrop-filter: blur(1em);
+	}
+
+	nav a:active {
+		background-color: #fff3;
+		backdrop-filter: blur(1em);
+	}
+
+	nav svg {
+		height: 1em;
+		vertical-align: middle;
+	}
+
+	nav .nav-right {
+		display: flex;
+		align-items: center;
+	}
+
+	nav a {
+		font-weight: 500;
+		padding: 6px 10px;
+		border-radius: 4px;
+	}
+
+	a img,
+	a svg {
+		height: 1.6em;
+		margin-inline-end: 0.4em;
+		vertical-align: middle;
+	}
+
+	.socials {
+		margin-inline: 1em;
+	}
+
+	.socials.desktop-nav {
+		margin: 0 1em;
+	}
+
+	.socials.desktop-nav svg {
+		height: 1.2em;
 	}
 
 	.language {
@@ -469,41 +467,23 @@ const trans = isFrench ? fr : en
 		gap: 0.2em;
 	}
 
-	nav .links {
+	.container-mobile nav {
+		position: initial;
+	}
+
+	.container-mobile ul {
 		display: flex;
-		align-items: center;
-		column-gap: 0.5em;
+		flex-direction: column;
 	}
 
-	nav .rightNav,
-	nav .rightNav .socials {
-		display: flex;
+	.container-mobile li {
+		margin: 0.1em 0;
 	}
 
-	nav .rightNav svg {
-		height: 21px;
-		max-width: 21px;
-	}
-
-	nav .container .links:hover a:hover {
-		background-color: #fff2;
-		backdrop-filter: blur(1em);
-	}
-
-	nav .container .links:hover a:active {
-		background-color: #fff3;
-		backdrop-filter: blur(1em);
-	}
-
-	.container a {
-		position: relative;
-		font-weight: 500;
-		padding: 6px 10px;
-		border-radius: 4px;
-	}
-
-	nav .links::-webkit-scrollbar {
-		display: none;
+	.container-mobile a {
+		display: inline-block;
+		padding: 0.3em 0.5em;
+		min-width: 200px;
 	}
 
 	@media (prefers-color-scheme: light) {
@@ -537,20 +517,13 @@ const trans = isFrench ? fr : en
 			display: flex;
 		}
 
-		nav .language {
-			display: flex;
-			align-items: center;
-		}
-
 		nav .container {
 			padding: 35px;
 			display: flex;
 			justify-content: flex-end;
 		}
 
-		nav .container .links,
-		nav .rightNav .socials,
-		nav .sep {
+		nav .desktop-nav {
 			display: none;
 		}
 
