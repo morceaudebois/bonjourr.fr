@@ -157,9 +157,10 @@ const trans = isFrench ? fr : en
 					<Link href="/#further" title="Get in touch">Contact</Link>
 				</li>
 				<li>
-					<a href="https://ko-fi.com/bonjourr" title="Support us on Ko-Fi"
-						>{trans.Donate}</a
-					>
+					<a href="https://ko-fi.com/bonjourr" title="Support us on Ko-Fi">
+						<img src="/frontpage/ko-fi.svg" alt="" />
+						<span>{trans.Donate}</span>
+					</a>
 				</li>
 			</ul>
 
@@ -208,51 +209,20 @@ const trans = isFrench ? fr : en
 
 			<ul>
 				<li>
-					<a href="https://t.me/BonjourrStartpage" title="Our Telegram group">
-						<svg
-							role="img"
-							fill="none"
-							viewBox="0 0 48 48"
-							xmlns="http://www.w3.org/2000/svg"
-							><path
-								d="m41.4193 7.30899s3.8853-1.515 3.5615 2.16429c-.1079 1.51502-1.0792 6.81752-1.8347 12.55292l-2.5902 16.9897s-.2158 2.4889-2.1585 2.9218c-1.9427.4328-4.8566-1.515-5.3963-1.9479-.4317-.3246-8.0943-5.1943-10.7925-7.575-.7555-.6493-1.6189-1.9479.1079-3.4629l11.3322-10.8214c1.2951-1.2986 2.5902-4.3286-2.8061-.6493l-15.1095 10.2804s-1.7268 1.0821-4.9645.1082l-7.01518-2.1643s-2.59021-1.6232 1.83473-3.2465c10.79255-5.0861 24.06735-10.2804 35.83115-15.15001z"
-								fill="currentColor"></path></svg
-						>
-						<span>Telegram</span>
-					</a>
-				</li>
-				<li>
 					<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
-						<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-							<path
-								role="img"
-								clip-rule="evenodd"
-								d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z"
-								fill="currentColor"
-								fill-rule="evenodd"
-								transform="scale(64)"
-							>
-							</path>
-						</svg>
+						<img src="/frontpage/github-dark.svg" alt="" />
 						<span>GitHub</span>
 					</a>
 				</li>
 				<li>
+					<a href="https://t.me/BonjourrStartpage" title="Our Telegram group">
+						<img src="/frontpage/telegram.svg" alt="" />
+						<span>Telegram</span>
+					</a>
+				</li>
+				<li>
 					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
-						<svg
-							role="img"
-							clip-rule="evenodd"
-							fill-rule="evenodd"
-							stroke-linejoin="round"
-							stroke-miterlimit="2"
-							viewBox="0 0 581 511"
-							xmlns="http://www.w3.org/2000/svg"
-							><path
-								d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.449-163.25-81.433-5.957-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"
-								fill="currentColor"
-								fill-rule="nonzero"
-								transform="translate(-9.9966 -9.65494)"></path></svg
-						>
+						<img src="/frontpage/bluesky-blue.svg" alt="" />
 						<span>Bluesky</span>
 					</a>
 				</li>
@@ -363,6 +333,10 @@ const trans = isFrench ? fr : en
 		transform: translate(-100%);
 	}
 
+	.hamburger {
+		color: white;
+	}
+
 	.hamburger svg {
 		height: 2.5em;
 	}
@@ -419,6 +393,7 @@ const trans = isFrench ? fr : en
 	}
 
 	nav a:hover {
+		text-decoration: none;
 		background-color: #fff2;
 		backdrop-filter: blur(1em);
 	}
@@ -440,7 +415,7 @@ const trans = isFrench ? fr : en
 
 	nav a {
 		font-weight: 500;
-		padding: 6px 10px;
+		padding: 8px 12px;
 		border-radius: 4px;
 	}
 

@@ -2,101 +2,66 @@
 import Link from "../Link.astro"
 ---
 
-<div class="container">
-	<div>
-		<h2>
-			<slot name="title" />
-		</h2>
+<h2>
+	<slot name="title" />
+</h2>
+
+<div class="bloc">
+	<h3>
+		<slot name="contact-title" />
+	</h3>
+
+	<p>
+		<slot name="contact-desc" />
+	</p>
+
+	<div class="btn-wrapper">
+		<a href="https://bsky.app/profile/bonjourr.fr" class="button btn-themed">
+			<img width="64" src="/frontpage/bluesky-blue.svg" class="icon" alt="" />
+			<slot name="contact-button-bluesky" />
+		</a>
+
+		<a href="https://t.me/BonjourrStartpage" class="button btn-themed">
+			<img width="64" src="/frontpage/telegram.svg" class="icon" alt="" />
+			<slot name="contact-button-telegram" />
+		</a>
 	</div>
+</div>
 
-	<div>
-		<h3>
-			<slot name="contact-title" />
-		</h3>
+<div class="bloc">
+	<h3>
+		<slot name="docs-title" />
+	</h3>
 
-		<p>
-			<slot name="contact-desc" />
-		</p>
+	<p>
+		<slot name="docs-desc" />
+	</p>
 
-		<div id="btn-group">
-			<a href="https://bsky.app/profile/bonjourr.fr" class="button">
-				<img width="64" src="/frontpage/bluesky.svg" class="icon" alt="bluesky icon" />
-				<slot name="contact-button-bluesky" />
-			</a>
-
-			<a href="https://t.me/BonjourrStartpage" class="button">
-				<img width="64" src="/frontpage/telegram.svg" class="icon" alt="telegram icon" />
-				<slot name="contact-button-telegram" />
-			</a>
-		</div>
-	</div>
-
-	<div>
-		<h3>
-			<slot name="docs-title" />
-		</h3>
-
-		<p>
-			<slot name="docs-desc" />
-		</p>
-
-		<Link href="/docs" class="button">
-			<img width="64" src="/frontpage/docs.svg" class="icon" alt="documentation icon" />
+	<div class="btn-wrapper">
+		<Link href="/docs" class="button btn-themed">
+			<img width="64" src="/frontpage/docs.svg" class="icon" alt="" />
 			<slot name="docs-button" />
 		</Link>
 	</div>
+</div>
 
-	<div>
-		<h3>
-			<slot name="repo-title" />
-		</h3>
-		<p>
-			<slot name="repo-desc" />
-		</p>
-		<a href="https://github.com/victrme/Bonjourr" class="button">
-			<img width="64" src="/frontpage/github.svg" class="icon" alt="github icon" />
+<div class="bloc">
+	<h3>
+		<slot name="repo-title" />
+	</h3>
+	<p>
+		<slot name="repo-desc" />
+	</p>
+
+	<div class="btn-wrapper">
+		<a href="https://github.com/victrme/Bonjourr" class="button btn-themed">
+			<img width="64" src="/frontpage/github-dark.svg" class="icon" alt="" />
 			<slot name="repo-button" />
 		</a>
 	</div>
 </div>
 
 <style>
-	.container {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(calc(50% - 3em), 35em));
-		gap: 3em;
-		margin: auto;
-		width: fit-content;
-	}
-
-	.container > div {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		border-radius: 20px;
-		padding: 30px;
-		color: white;
-	}
-
-	.container > div:nth-child(1) {
-		display: flex;
-		place-items: center;
-		place-content: center;
-		color: #222;
-	}
-
-	.container > div:nth-child(2) {
-		background-color: #2b7ad4;
-	}
-
-	.container > div:nth-child(3) {
-		background-color: #127c8d;
-	}
-
-	.container > div:nth-child(4) {
-		background-color: #333333;
-	}
-
 	h2 {
 		text-align: center;
 		font-size: 2em;
@@ -115,31 +80,14 @@ import Link from "../Link.astro"
 		align-self: flex-start;
 	}
 
-	#btn-group {
-		display: none;
-		display: flex;
-		justify-content: center;
+	.bloc {
+		margin: 4em 0;
+	}
+
+	.btn-wrapper {
+		display: inline-flex;
+		flex-wrap: wrap;
 		width: 100%;
-		gap: 1em;
-	}
-
-	#btn-group .button {
-		max-width: 1fr;
-	}
-
-	@media only screen and (max-width: 800px) {
-		.container {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	@media only screen and (max-width: 500px) {
-		.container > div:nth-child(1) {
-			padding: 0px;
-		}
-
-		.container > div:nth-child(1) h2 {
-			margin-bottom: 0px !important;
-		}
+		gap: 0.5em;
 	}
 </style>

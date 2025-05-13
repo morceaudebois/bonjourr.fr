@@ -74,6 +74,8 @@ const currentYear = new Date().getFullYear()
 	footer {
 		width: 100%;
 		font-size: 15px;
+		color: var(--color-text-secondary);
+		background-color: var(--color-background-secondary);
 	}
 
 	.container {
@@ -107,10 +109,6 @@ const currentYear = new Date().getFullYear()
 		color: inherit;
 	}
 
-	footer a:hover {
-		text-decoration: underline;
-	}
-
 	@media only screen and (max-width: 900px) {
 		.container {
 			display: grid;
@@ -131,11 +129,6 @@ const currentYear = new Date().getFullYear()
 	}
 
 	@media only screen and (max-width: 600px) {
-		footer {
-			position: inherit;
-			background-color: #222;
-		}
-
 		.container {
 			display: grid;
 			row-gap: 2em;

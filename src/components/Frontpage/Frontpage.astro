@@ -7,75 +7,78 @@ import OpenImage from "@assets/backgrounds/matt-drenth-IZ0a3V1aSbc.jpg"
 import Glitter from "./Glitter.astro"
 ---
 
-<section id="hero">
-	<Background
-		src={LandingImage}
-		blur=".7"
-		brightness=".9"
-		width="600"
-		alt="Hero background of a swimming turtle"
-	/>
+<main>
+	<section id="hero">
+		<Background
+			src={LandingImage}
+			blur=".7"
+			brightness=".9"
+			width="600"
+			alt="Hero background of a swimming turtle"
+		/>
 
-	<slot name="landing" />
-</section>
+		<slot name="landing" />
+	</section>
 
-<section id="showcase">
-	<div class="section-wrapper">
-		<slot name="showcase" />
-	</div>
-</section>
-
-<section id="open">
-	<Background
-		src={OpenImage}
-		blur=".7"
-		brightness=".8"
-		width="600"
-		alt="Landscape photography of moutains at dusk"
-	/>
-
-	<div class="section-wrapper">
-		<slot name="open-title" />
-		<slot name="open-text" />
-	</div>
-</section>
-
-<section id="donate">
-	<Background
-		src={DonateImage}
-		blur=".7"
-		brightness=".8"
-		width="600"
-		alt="landscape photography of a forest on a mountain"
-	/>
-
-	<div class="section-wrapper">
-		<Glitter />
-		<slot name="donate-title" />
-		<slot name="donate-text" />
-
-		<div class="buttons">
-			<a href="https://ko-fi.com/bonjourr" class="button">
-				<img width="64" src="/frontpage/ko-fi.svg" class="icon" alt="ko-fi icon" />
-				<slot name="donate-fiat" />
-			</a>
-
-			<a
-				href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
-				class="button"
-			>
-				<img width="64" src="/frontpage/btc.svg" class="icon" alt="bitcoin icon" />
-				<slot name="donate-crypto" />
-			</a>
+	<section id="showcase">
+		<div class="section-wrapper">
+			<slot name="showcase" />
 		</div>
-	</div>
-</section>
+	</section>
 
-<section id="further">
-	<div class="section-wrapper">
-		<slot name="further" />
-	</div>
-</section>
+	<section id="open">
+		<Background
+			src={OpenImage}
+			blur=".7"
+			brightness=".8"
+			width="600"
+			alt="Landscape photography of moutains at dusk"
+		/>
+
+		<div class="section-wrapper">
+			<slot name="open-title" />
+			<slot name="open-text" />
+		</div>
+	</section>
+
+	<section id="donate">
+		<Background
+			src={DonateImage}
+			blur=".7"
+			brightness=".8"
+			width="600"
+			alt="landscape photography of a forest on a mountain"
+		/>
+
+		<div class="section-wrapper">
+			<Glitter />
+
+			<slot name="donate-title" />
+			<slot name="donate-text" />
+
+			<div class="buttons">
+				<a href="https://ko-fi.com/bonjourr" class="button">
+					<img width="64" src="/frontpage/ko-fi.svg" class="icon" alt="ko-fi icon" />
+					<slot name="donate-fiat" />
+				</a>
+
+				<a
+					href="https://commerce.coinbase.com/checkout/095cc203-130d-4e56-9716-3aa10a202d9b"
+					class="button"
+				>
+					<img width="64" src="/frontpage/btc.svg" class="icon" alt="bitcoin icon" />
+					<slot name="donate-crypto" />
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="further">
+		<div class="section-wrapper">
+			<slot name="further" />
+		</div>
+	</section>
+</main>
 
 <style>
 	h3 {
@@ -84,20 +87,24 @@ import Glitter from "./Glitter.astro"
 		text-align: center;
 	}
 
+	#hero,
+	#showcase,
+	#open,
+	#donate {
+		color: white;
+	}
+
 	#hero {
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		padding: 8em 4em;
-		padding-top: 8em;
+		padding: 12em 0;
 		justify-content: center;
 		align-items: center;
 		box-sizing: border-box;
 		min-height: 80vh;
-	}
 
-	@media only screen and (max-height: 1000px) and (min-width: 700px) {
-		#hero {
+		@media screen and (max-height: 1000px) and (min-width: 700px) {
 			min-height: 100vh;
 		}
 	}
@@ -110,14 +117,12 @@ import Glitter from "./Glitter.astro"
 	}
 
 	#showcase {
-		color: white;
 		background: linear-gradient(0.25turn, #140a17, #231730, #140a17);
 	}
 
 	#open,
 	#donate {
 		position: relative;
-		color: white;
 		background-position: 50% 50%;
 		background-size: cover;
 	}
@@ -138,7 +143,8 @@ import Glitter from "./Glitter.astro"
 
 	#further {
 		min-height: 900px;
-		background-color: #fafafd;
+		max-width: 600px;
+		margin-inline: auto;
 	}
 
 	#donate .buttons {
