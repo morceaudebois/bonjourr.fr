@@ -12,19 +12,8 @@ if (!title && frontmatter) {
 <script is:inline>
 	window.addEventListener("DOMContentLoaded", function () {
 		const permalink = (id) => `<a href="#${id}" class="perma" aria-label="permalink">🔗</a>`
-
-		// Classic permalink
 		const hx = document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
 		hx.forEach((h) => (h.innerHTML += permalink(h.id)))
-
-		// Use group id to add perma to heading
-		const groups = document.querySelectorAll(".content > section")
-		const ids = Object.values(groups).map((node) => node.id)
-
-		if (ids.length > 0) {
-			const h2 = document.querySelectorAll(".content h2")
-			h2.forEach((h2, i) => (h2.innerHTML += permalink(ids[i])))
-		}
 	})
 </script>
 
@@ -66,14 +55,6 @@ if (!title && frontmatter) {
 		font-size: 3em;
 		line-height: 2em;
 		text-align: center;
-	}
-
-	#summary a {
-		text-decoration: none;
-	}
-
-	#summary a:hover {
-		opacity: unset;
 	}
 
 	.content {
