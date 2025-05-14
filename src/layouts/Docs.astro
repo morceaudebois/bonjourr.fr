@@ -12,26 +12,15 @@ if (!title && frontmatter) {
 <script is:inline>
 	window.addEventListener("DOMContentLoaded", function () {
 		const permalink = (id) => `<a href="#${id}" class="perma" aria-label="permalink">🔗</a>`
-
-		// Classic permalink
 		const hx = document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]")
 		hx.forEach((h) => (h.innerHTML += permalink(h.id)))
-
-		// Use group id to add perma to heading
-		const groups = document.querySelectorAll(".content > section")
-		const ids = Object.values(groups).map((node) => node.id)
-
-		if (ids.length > 0) {
-			const h2 = document.querySelectorAll(".content h2")
-			h2.forEach((h2, i) => (h2.innerHTML += permalink(ids[i])))
-		}
 	})
 </script>
 
 <Layout title={`${title} · Bonjourr's documentation`} lang={lang} id="docs">
-	<main>
-		<DocsTitle title={title} thumbnail={thumbnail} />
+	<DocsTitle title={title} thumbnail={thumbnail} />
 
+	<main>
 		<div class="content">
 			<slot />
 		</div>
@@ -49,7 +38,8 @@ if (!title && frontmatter) {
 	}
 
 	body {
-		background-color: #181818;
+		color: var(--color-text);
+		background-color: var(--color-background);
 	}
 
 	main {
@@ -67,19 +57,13 @@ if (!title && frontmatter) {
 		text-align: center;
 	}
 
-	#summary a {
-		text-decoration: none;
-	}
-
-	.content,
-	#docs .content > #section {
+	.content {
 		max-width: 740px;
 		min-width: 360px;
 		min-height: 80vh;
 		width: 100%;
 		margin: auto;
 		padding: 0 2em 6em;
-		color: #e7e6ea;
 		display: flex;
 		flex-direction: column;
 		gap: 3.5em;
@@ -293,14 +277,6 @@ if (!title && frontmatter) {
 	/* End Profiles */
 
 	@media (prefers-color-scheme: light) {
-		body {
-			background-color: #f7f7f7;
-		}
-
-		.content {
-			color: #2c2c2c;
-		}
-
 		.content a {
 			color: #3187f2;
 		}

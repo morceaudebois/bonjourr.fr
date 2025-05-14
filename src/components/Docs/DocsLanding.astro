@@ -9,13 +9,15 @@ const locale = props.lang === "fr" ? "/fr" : ""
 	title="Documentation"
 	thumbnail="/documentation/backgrounds/martin-marek-1hRH-z4nvxE.jpg"
 >
-	<section id="summary">
+	<section class="docs-summary">
 		<a href={locale + "/docs/overview"}>
 			<span>💻</span>
 
 			<div>
-				<h3><slot name="overview-title" /></h3>
-				<p><slot name="overview-desc" /></p>
+				<div>
+					<slot name="overview-title" />
+				</div>
+				<slot name="overview-desc" />
 			</div>
 		</a>
 
@@ -23,8 +25,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>🗂️</span>
 
 			<div>
-				<h3><slot name="reference-title" /></h3>
-				<p><slot name="reference-desc" /></p>
+				<div>
+					<slot name="reference-title" />
+				</div>
+				<slot name="reference-desc" />
 			</div>
 		</a>
 
@@ -32,8 +36,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>🤝</span>
 
 			<div>
-				<h3><slot name="contribute-title" /></h3>
-				<p><slot name="contribute-desc" /></p>
+				<div>
+					<slot name="contribute-title" />
+				</div>
+				<slot name="contribute-desc" />
 			</div>
 		</a>
 
@@ -41,8 +47,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>⚙️</span>
 
 			<div>
-				<h3><slot name="profiles-title" /></h3>
-				<p><slot name="profiles-desc" /></p>
+				<div>
+					<slot name="profiles-title" />
+				</div>
+				<slot name="profiles-desc" />
 			</div>
 		</a>
 
@@ -50,8 +58,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>✨</span>
 
 			<div>
-				<h3><slot name="styles-title" /></h3>
-				<p><slot name="styles-desc" /></p>
+				<div>
+					<slot name="styles-title" />
+				</div>
+				<slot name="styles-desc" />
 			</div>
 		</a>
 
@@ -59,8 +69,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>🧐</span>
 
 			<div>
-				<h3><slot name="faq-title" /></h3>
-				<p><slot name="faq-desc" /></p>
+				<div>
+					<slot name="faq-title" />
+				</div>
+				<slot name="faq-desc" />
 			</div>
 		</a>
 	</section>
@@ -80,15 +92,23 @@ const locale = props.lang === "fr" ? "/fr" : ""
 </style>
 
 <style>
-	#summary {
-		margin: 5em 0 2em;
+	.docs-summary {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 1em;
 		max-width: 100%;
+		margin: 5em 0 2em;
+		grid-gap: 1em;
+		grid-template-columns: repeat(3, 1fr);
+
+		@media only screen and (max-width: 1000px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media only screen and (max-width: 700px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
-	#summary a {
+	.docs-summary a {
 		display: flex;
 		align-items: center;
 		gap: 1.5em;
@@ -96,50 +116,43 @@ const locale = props.lang === "fr" ? "/fr" : ""
 		color: unset;
 		cursor: pointer;
 		border-radius: 15px;
+		text-decoration: none;
 		border: 1px solid transparent;
 	}
 
-	#summary a:hover {
-		text-decoration: none;
-	}
-
-	#summary a:hover {
+	.docs-summary a:hover {
 		background: #252525;
 		border: 1px solid #fff1;
-	}
 
-	@media (prefers-color-scheme: light) {
-		#summary a:hover {
+		@media (prefers-color-scheme: light) {
 			background: #e9e9e9;
 		}
 	}
 
-	#summary a span {
+	.docs-summary a span {
 		font-size: 2.5em;
 	}
 
-	#summary h3,
-	#summary img {
+	.docs-summary a span {
+		font-size: 2.5em;
+	}
+
+	.docs-summary a div div {
+		font-size: 1.6em;
+		font-weight: 500;
+		margin-bottom: 0.3em;
+	}
+
+	.docs-summary h3,
+	.docs-summary img {
 		padding: 0;
 		margin: 0;
 	}
 
-	#summary p {
+	.docs-summary p {
 		margin-top: 8px;
 		margin-bottom: 0;
 		font-size: 0.9em;
 		opacity: 0.9;
-	}
-
-	@media only screen and (max-width: 1000px) {
-		#summary {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-
-	@media only screen and (max-width: 700px) {
-		#summary {
-			grid-template-columns: 1fr;
-		}
 	}
 </style>

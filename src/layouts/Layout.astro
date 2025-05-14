@@ -54,29 +54,41 @@ const metaKeywords = "extension, startpage, homepage, browser startpage, minimal
 		box-sizing: border-box;
 	}
 
+	:root {
+		color-scheme: light dark;
+		--color-text: #eee;
+		--color-background: #111111;
+		--color-background-secondary: #1f1f1f;
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--color-text: #3a3a3a;
+			--color-text-secondary: #5c5c5c;
+			--color-background: #f7f7f7;
+			--color-background-secondary: #f1f1f1;
+		}
+	}
+
 	html,
 	body {
 		position: relative;
 		margin: unset;
 		font-family: system-ui, sans-serif;
 		font-size: 16px;
-		color: white;
 		min-height: 100vh;
 		min-width: 350px;
-		background-color: #1f1f1f;
-	}
-
-	#docs nav {
-		position: absolute;
-	}
-
-	#docs nav .container a {
-		text-shadow: 2px 2px 5px rgba(17, 17, 17, 0.3);
+		color: var(--color-text);
+		background-color: var(--color-background-secondary);
 	}
 
 	a {
 		color: white;
 		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
 	}
 
 	li,
@@ -110,16 +122,17 @@ const metaKeywords = "extension, startpage, homepage, browser startpage, minimal
 		border-radius: 12px;
 		border: 1px solid #fff2;
 		background-color: #ffffff18;
-		color: white;
+		color: inherit;
 		white-space: nowrap;
 		box-sizing: border-box;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
-		transition: background-color 0.1s ease-out;
 	}
+
 	button:hover,
 	.button:hover {
 		background-color: #fff3;
+		text-decoration: none;
 	}
 
 	button img,
@@ -127,6 +140,20 @@ const metaKeywords = "extension, startpage, homepage, browser startpage, minimal
 		width: 30px;
 		height: 30px;
 		object-fit: contain;
+	}
+
+	@media (prefers-color-scheme: light) {
+		button.btn-themed,
+		.button.btn-themed {
+			border-color: #2221;
+			background-color: #2221;
+		}
+
+		button.btn-themed:hover,
+		.button.btn-themed:hover {
+			border-color: #2222;
+			background-color: #2222;
+		}
 	}
 
 	#further a.button {
@@ -150,17 +177,6 @@ const metaKeywords = "extension, startpage, homepage, browser startpage, minimal
 
 		h3 {
 			font-size: 1.6em;
-		}
-	}
-
-	@media (prefers-color-scheme: light) {
-		#docs {
-			background-color: #f7f7f7;
-		}
-
-		#docs footer {
-			color: #5c5c5c;
-			background-color: #f1f1f1;
 		}
 	}
 </style>
