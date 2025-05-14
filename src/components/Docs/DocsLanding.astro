@@ -14,8 +14,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>💻</span>
 
 			<div>
-				<h3><slot name="overview-title" /></h3>
-				<p><slot name="overview-desc" /></p>
+				<div>
+					<slot name="overview-title" />
+				</div>
+				<slot name="overview-desc" />
 			</div>
 		</a>
 
@@ -23,8 +25,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>🗂️</span>
 
 			<div>
-				<h3><slot name="reference-title" /></h3>
-				<p><slot name="reference-desc" /></p>
+				<div>
+					<slot name="reference-title" />
+				</div>
+				<slot name="reference-desc" />
 			</div>
 		</a>
 
@@ -32,8 +36,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>🤝</span>
 
 			<div>
-				<h3><slot name="contribute-title" /></h3>
-				<p><slot name="contribute-desc" /></p>
+				<div>
+					<slot name="contribute-title" />
+				</div>
+				<slot name="contribute-desc" />
 			</div>
 		</a>
 
@@ -41,8 +47,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>⚙️</span>
 
 			<div>
-				<h3><slot name="profiles-title" /></h3>
-				<p><slot name="profiles-desc" /></p>
+				<div>
+					<slot name="profiles-title" />
+				</div>
+				<slot name="profiles-desc" />
 			</div>
 		</a>
 
@@ -50,8 +58,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>✨</span>
 
 			<div>
-				<h3><slot name="styles-title" /></h3>
-				<p><slot name="styles-desc" /></p>
+				<div>
+					<slot name="styles-title" />
+				</div>
+				<slot name="styles-desc" />
 			</div>
 		</a>
 
@@ -59,8 +69,10 @@ const locale = props.lang === "fr" ? "/fr" : ""
 			<span>🧐</span>
 
 			<div>
-				<h3><slot name="faq-title" /></h3>
-				<p><slot name="faq-desc" /></p>
+				<div>
+					<slot name="faq-title" />
+				</div>
+				<slot name="faq-desc" />
 			</div>
 		</a>
 	</section>
@@ -116,6 +128,16 @@ const locale = props.lang === "fr" ? "/fr" : ""
 
 	#summary a span {
 		font-size: 2.5em;
+	}
+
+	#summary a span {
+		font-size: 2.5em;
+	}
+
+	#summary a div div {
+		font-size: 1.6em;
+		font-weight: 500;
+		margin-bottom: 0.3em;
 	}
 
 	#summary h3,
