@@ -6,9 +6,9 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/sitemap": "^3.3.1",
-		"@cloudflare/workers-types": "^4.20250510.0",
-		"astro": "^5.7.12",
+		"@astrojs/sitemap": "^3.4.0",
+		"@cloudflare/workers-types": "^4.20250514.0",
+		"astro": "^5.7.13",
 		"astro-expressive-code": "^0.41.2",
 		"detect-browser": "^5.3.0",
 		"prettier": "^3.5.3",
