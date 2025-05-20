@@ -1,12 +1,12 @@
 {
-	weather: {
-		ccode: undefined,				// Valid country code
-		city: undefined,				// Any city name
-		unit: 'metric',					// metric | imperial
-		provider: '',					// Custom 'moreinfo' weather provider
-		moreinfo: 'none',				// none | msnw | yhw | windy | custom
-		forecast: 'auto',				// auto | always | never
-		temperature: 'actual',			// actual | feelslike | both
-		geolocation: 'approximate',		// approximate | precise | off
-	}
+  weather: {
+    ccode: undefined,           // Valid country code
+    city: undefined,            // Any city name
+    unit: 'metric',             // metric | imperial
+    provider: '',               // Custom 'moreinfo' weather provider
+    moreinfo: 'none',           // none | msnw | yhw | windy | custom
+    forecast: 'auto',           // auto | always | never
+    temperature: 'actual',      // actual | feelslike | both
+    geolocation: 'approximate', // approximate | precise | off
+  }
 }

@@ -1,20 +1,20 @@
 // single
 grid: [
-	['time'],
-	['main'],
-	['quicklinks']
+  ['time'],
+  ['main'],
+  ['quicklinks']
 ],
 
 // double
 grid: [
-	['time', '.'],
-	['main', '.'],
-	['quicklinks', '.'],
+  ['time', '.'],
+  ['main', '.'],
+  ['quicklinks', '.'],
 ],
 
 // triple
 grid: [
-	['time', '.', '.'],
-	['main', '.', '.'],
-	['quicklinks', '.', '.'],
+  ['time', '.', '.'],
+  ['main', '.', '.'],
+  ['quicklinks', '.', '.'],
 ]

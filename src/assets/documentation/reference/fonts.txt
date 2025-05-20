@@ -1,9 +1,9 @@
 {
-	font: {
-		family: '',			// Fontsource font family
-		size: '14',			// Interface size in 'px'
-		system: true,		// Specify if font is from the device 
-		weightlist: [],		// Available font weights
-		weight: '400',		// Interface font weight 
-	}
+  font: {
+    family: '',      // Fontsource font family
+    size: '14',      // Interface size in 'px'
+    system: true,    // Specify if font is from the device
+    weightlist: [],  // Available font weights
+    weight: '400',   // Interface font weight
+  }
 }
