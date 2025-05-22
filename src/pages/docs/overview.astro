@@ -8,14 +8,14 @@ Author, Your second quote.`
 ---
 
 <Docs
-	title="Features overview"
 	lang="en"
+	title="Features overview"
 	thumbnail="/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg"
 >
 	<OverviewFilter />
 
-	<section id="interface">
-		<h2>🖥️ Main interface tips</h2>
+	<section id="section-interface">
+		<h2 id="interface">🖥️ Main interface tips</h2>
 
 		<p>
 			When using the default backgrounds, hover your mouse on the background credits at the
@@ -30,15 +30,15 @@ Author, Your second quote.`
 		/>
 
 		<p>
-			Clicking the <bjrbtn>Download</bjrbtn> icon will download the photo to your computer at its
-			highest possible resolution.
+			Clicking the <bjr>Download</bjr> icon will download the photo to your computer at its highest
+			possible resolution.
 		</p>
 	</section>
 
 	<hr />
 
-	<section id="general-settings">
-		<h2>⚙️ General settings tips</h2>
+	<section id="section-general-settings">
+		<h2 id="general-settings">⚙️ General settings tips</h2>
 
 		<h3 id="access-settings">Accessing the settings panel</h3>
 
@@ -68,8 +68,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="newtab-title">
-		<h2>📌 Tab appearance</h2>
+	<section id="section-newtab-title">
+		<h2 id="newtab-title">📌 Tab appearance</h2>
 
 		<p>
 			You can customize the text and icon (called favicon) your browser uses for Bonjourr.
@@ -111,12 +111,26 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="backgrounds">
-		<h2>🖼️ Backgrounds</h2>
+	<section id="section-backgrounds">
+		<h2 id="backgrounds">🖼️ Backgrounds</h2>
+
+		<p>There is 4 types of backgrounds on Bonjourr:</p>
+
+		<ul>
+			<li>Images</li>
+			<li>Videos</li>
+			<li>Local files</li>
+			<li>Color</li>
+		</ul>
+
+		<h3 id="providers">Providers</h3>
+
+		<h4 id="provider-bonjourr">Bonjourr Daylight</h4>
 
 		<p>
-			Bonjourr uses the <a href="https://unsplash.com/developers">Unsplash API</a> to fetch its
-			backgrounds. We select them manually and store them in four different collections that change
+			By default, images and videos use a curated collection from the <a
+				href="https://unsplash.com/developers">Unsplash API</a
+			>. We select them manually and store them in four different collections that change
 			according to the time of the day:
 		</p>
 
@@ -141,15 +155,15 @@ Author, Your second quote.`
 			</li>
 			<li>
 				And one for <a
-					href="https://unspla.sh.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)"
+					href="https://unsplash.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)"
 					>the night</a
 				>.
 			</li>
 		</ul>
 
-		<h3 id="unsplash-collection">Custom Unsplash collection</h3>
+		<h4 id="provider-collection">Unsplash (on any) Collections</h4>
 
-		<p>You can use any collection on Unsplash as a background source in Bonjourr. To do so:</p>
+		<p>You can also use any collection on Unsplash as a background source. To do so:</p>
 
 		<ol>
 			<li>
@@ -172,23 +186,48 @@ Author, Your second quote.`
 
 		<video src="/documentation/overview/custom-unsplash-collection.mp4" controls muted></video>
 
-		<p>
-			You can also create your own collection and select your own images, but then you'll need
-			to create an Unsplash account.
-		</p>
-
 		<h3 id="local-backgrounds">Local files</h3>
 
 		<p>
-			Switch your <bjr>Background type</bjr> from "Unsplash" to "Local file", and you'll be able
-			to select your own images from your computer and set them in Bonjourr.
+			You can add multiple files from your device by pressing <bjrbtn>Add</bjrbtn>. You can
+			add multiple files at once. Bonjourr automatically handles duplicate files, which means
+			you can select every images on your folder, and only the new ones will be uploaded.
+		</p>
+
+		<p>
+			Local files are not synced between devices. Our extension cannot access your device
+			storage without a user action. You'll have to manually add new backgrounds every time.
+		</p>
+
+		<h4 id="move-backgrounds">Move backgrounds</h4>
+
+		<p>
+			Local backgrounds can be moved vertically, horizontally, or zoomed. Toggle the option by
+			pressing <bjrbtn>Move</bjrbtn> after selecting an image.
+		</p>
+
+		<p>Reducing the zoom to its minimum sets the size automatically.</p>
+
+		<h3 id="backgrounds-texture">Textures</h3>
+
+		<p>
+			Textures are overlays on top of any background. There are different types, you can
+			change its size and opacity.
+		</p>
+
+		<h3 id="backgrounds-fadein">Fade in time</h3>
+
+		<p>
+			You can specify the speed at which the backgrounds fade in when you open a new tab.
+			Color backgrounds are always at 0ms. Reducing the fade in time to 0 will make the new
+			tab page flicker, because the background image needs to load.
 		</p>
 	</section>
 
 	<hr />
 
-	<section id="quick-links">
-		<h2>🔗 Quick Links</h2>
+	<section id="section-quick-links">
+		<h2 id="quick-links">🔗 Quick Links</h2>
 
 		<p>Quick links are a way to easily manage the websites you visit regularly.</p>
 
@@ -345,8 +384,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="clock">
-		<h2>🕰️ Time and date</h2>
+	<section id="section-clock">
+		<h2 id="clock">🕰️ Time and date</h2>
 
 		<p>
 			The analog clock feature has many options you can play around with and get to really
@@ -382,8 +421,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="weather">
-		<h2>🌤️ Weather</h2>
+	<section id="section-weather">
+		<h2 id="weather">🌤️ Weather</h2>
 
 		<p>
 			Precise geolocation needs access to your device's GPS. Some browsers or systems might
@@ -419,8 +458,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="notes">
-		<h2>✍️ Notes</h2>
+	<section id="section-notes">
+		<h2 id="notes">✍️ Notes</h2>
 
 		<p>
 			Notes uses <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a> to create titles,
@@ -480,8 +519,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="searchbar">
-		<h2>🔎 Search bar</h2>
+	<section id="section-searchbar">
+		<h2 id="searchbar">🔎 Search bar</h2>
 
 		<h3 id="sb-suggestions">Suggestions</h3>
 
@@ -527,8 +566,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="quotes">
-		<h2>🗣 Quotes</h2>
+	<section id="section-quotes">
+		<h2 id="quotes">🗣 Quotes</h2>
 
 		<p>The quotes widget can fetch quotes from multiple sources:</p>
 
@@ -632,7 +671,7 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="fonts">
+	<section id="section-fonts">
 		<h2>📚 Fonts</h2>
 
 		<p>
@@ -643,8 +682,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="page-layouts">
-		<h2>📄 Page layouts</h2>
+	<section id="section-page-layouts">
+		<h2 id="page-layouts">📄 Page layouts</h2>
 
 		<p>
 			There are 3 different page layouts to choose from: single, double and triple column.
@@ -664,8 +703,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="settings-management">
-		<h2>💾 Settings management</h2>
+	<section id="section-settings-management">
+		<h2 id="settings-management">💾 Settings management</h2>
 
 		<p>
 			Bonjourr allows you to export all your settings into a file. You can use this feature if
@@ -767,8 +806,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="keybindings">
-		<h2>⌨️ Keybindings</h2>
+	<section id="section-keybindings">
+		<h2 id="keybindings">⌨️ Keybindings</h2>
 
 		<table>
 			<thead>
@@ -794,8 +833,8 @@ Author, Your second quote.`
 
 	<hr />
 
-	<section id="supporters-notification">
-		<h2>❤️ Supporters notification</h2>
+	<section id="section-supporters-notification">
+		<h2 id="supporters-notification">❤️ Supporters notification</h2>
 
 		<p>
 			The supporters notification was introduced with Bonjourr 20.4 and is our way to thank
