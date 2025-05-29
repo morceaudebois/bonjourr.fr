@@ -120,24 +120,27 @@ Auteur, Votre deuxième citation.`
 	<section id="section-backgrounds">
 		<h2 id="backgrounds">🖼️ Arrière-plans</h2>
 
-		<p>Il existe 4 types d'arrière-plans sur Bonjourr :</p>
+		<p>
+			Bonjourr vous permet de personnaliser entièrement votre nouvel onglet avec de
+			magnifiques arrière-plans dynamiques. Que vous préfériez des photos sélectionnées, des
+			vidéos immersives ou vos propres fichiers locaux, il existe de nombreuses options pour
+			rendre l’expérience personnelle.
+		</p>
 
-		<ul>
-			<li>Images</li>
-			<li>Vidéos</li>
-			<li>Fichiers locaux</li>
-			<li>Couleur</li>
-		</ul>
-
-		<h3 id="providers">Fournisseurs</h3>
-
-		<h4 id="provider-bonjourr">Bonjourr Daylight</h4>
+		<h3 id="images">Images</h3>
 
 		<p>
-			Par défaut, les images et les vidéos utilisent une collection sélectionnée via l'<a
-				href="https://unsplash.com/developers">API Unsplash</a
-			>. Nous les sélectionnons manuellement et les stockons dans quatre collections
-			différentes qui changent en fonction de l'heure de la journée :
+			Bonjourr propose plusieurs façons de personnaliser votre arrière-plan avec de belles
+			images. Voici comment cela fonctionne !
+		</p>
+
+		<h4 id="images-bonjourr-daylight">Bonjourr Daylight</h4>
+
+		<p>
+			Par défaut, Bonjourr utilise l’<a href="https://unsplash.com/developers">API Unsplash</a
+			> pour récupérer ses arrière-plans via une fonctionnalité que nous appelons Bonjourr Daylight.
+			Nous les sélectionnons manuellement et les répartissons dans quatre collections différentes,
+			qui changent selon le moment de la journée :
 		</p>
 
 		<ul>
@@ -161,81 +164,138 @@ Auteur, Votre deuxième citation.`
 			</li>
 			<li>
 				Et une pour <a
-					href="https://unsplash.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)"
+					href="https://unspla.sh.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)"
 					>la nuit</a
 				>.
 			</li>
 		</ul>
 
-		<h4 id="provider-collection">Collections Unsplash (ou autre)</h4>
+		<h4 id="collection">Collections Unsplash</h4>
 
 		<p>
-			Vous pouvez également utiliser n'importe quelle collection Unsplash comme source
-			d'arrière-plan. Pour ce faire :
+			Vous pouvez utiliser n’importe quelle collection Unsplash comme source d'arrière-plans
+			dans Bonjourr. Cela vous permet de sélectionner soigneusement vos propres images. Pour
+			ce faire :
 		</p>
 
 		<ol>
 			<li>
-				Trouvez-en une qui vous plaît en allant sur <a href="https://unsplash.com"
-					>unsplash.com</a
-				>, recherchez un sujet et allez dans l'onglet Collections.
+				Trouvez une collection sur <a href="https://unsplash.com">unsplash.com</a>,
+				recherchez un sujet et allez dans l’onglet Collections.
 			</li>
 			<li>
-				Une fois que vous avez cliqué sur la collection souhaitée, vérifiez son URL. Ce que
-				vous voulez est l'ID, qui est la chaîne de lettres et de chiffres aléatoires. Par
-				exemple, si l'URL de votre collection est <code
+				Une fois la collection choisie, regardez son URL. Ce qui vous intéresse est
+				l’identifiant, une chaîne de lettres et chiffres. Par exemple, si l’URL est <code
 					>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
-				>, l'ID est <code>2170139</code>.
+				>, l’ID est <code>2170139</code>.
 			</li>
 			<li>
-				Retournez sur Bonjourr et après avoir coché <bjr>Afficher tous les paramètres</bjr> en
-				haut du panneau des paramètres, collez l'ID dans le champ <bjr
-					>Collection Unsplash</bjr
-				>. Vous pouvez ajouter plusieurs collections en les séparant par une virgule.
+				Retournez dans Bonjourr et, après avoir coché <bjr>Afficher tous les paramètres</bjr
+				> en haut du panneau, collez l’ID dans le champ <bjr>Collection Unsplash</bjr>. Vous
+				pouvez ajouter plusieurs collections en les séparant par des virgules.
 			</li>
 		</ol>
 
 		<video src="/documentation/overview/custom-unsplash-collection.mp4" controls muted></video>
 
+		<h4 id="unsplash-search">Recherche Unsplash</h4>
+
+		<p>
+			Si vous avez un thème en tête, vous pouvez utiliser la fonction de recherche Unsplash.
+			Il suffit de taper un mot-clé et les arrière-plans correspondants seront récupérés
+			automatiquement. Vous pouvez en indiquer plusieurs en les séparant par des virgules.
+		</p>
+
+		<h3 id="videos">Vidéos</h3>
+
+		<p>
+			Grâce à la bibliothèque gratuite de vidéos de <a href="https://pixabay.com/">Pixabay</a
+			>, Bonjourr vous permet de définir des vidéos comme arrière-plans. C’est amusant,
+			dynamique, et cela donne vie à votre page d’accueil.
+		</p>
+
+		<p>
+			Cependant, les vidéos peuvent être plus exigeantes pour votre appareil. Elles demandent
+			plus de puissance de traitement, ce qui peut ralentir l’interface et consommer davantage
+			de batterie. De plus, comme les fichiers vidéos sont plus lourds que les images, une
+			connexion internet rapide est recommandée.
+		</p>
+
+		<h4 id="videos-bonjourr-daylight">Bonjourr Daylight</h4>
+
+		<p>
+			Tout comme <a href="#images-bonjourr-daylight">avec les images</a>, Bonjourr propose
+			aussi des vidéos sélectionnées qui changent selon le moment de la journée.
+		</p>
+
+		<h4 id="pixabay-search">Recherche Pixabay</h4>
+
+		<p>
+			Comme pour la <a href="#unsplash-search">recherche Unsplash</a>, vous pouvez entrer des
+			mots-clés dans Bonjourr pour récupérer des vidéos liées à ces mots via la bibliothèque
+			de Pixabay.
+		</p>
+
 		<h3 id="local-backgrounds">Fichiers locaux</h3>
 
 		<p>
-			Vous pouvez ajouter plusieurs fichiers depuis votre appareil en appuyant sur <bjrbtn
-				>Ajouter</bjrbtn
-			>. Vous pouvez ajouter plusieurs fichiers à la fois. Bonjourr gère automatiquement les
-			fichiers en double, ce qui signifie que vous pouvez sélectionner toutes les images de
-			votre dossier, et seules les nouvelles seront téléchargées.
+			L’option fichiers locaux vous permet d’utiliser facilement des images présentes sur
+			votre appareil dans Bonjourr.
 		</p>
 
 		<p>
-			Les fichiers locaux ne sont pas synchronisés entre les appareils. Notre extension ne
-			peut pas accéder au stockage de votre appareil sans une action de l'utilisateur. Vous
-			devrez ajouter manuellement de nouveaux arrière-plans à chaque fois.
+			Vous pouvez ajouter plusieurs fichiers en appuyant sur <bjrbtn>Ajouter</bjrbtn>.
+			Plusieurs fichiers peuvent être ajoutés en une fois. Bonjourr gère automatiquement les
+			doublons : vous pouvez sélectionner tout un dossier, seuls les nouveaux fichiers seront
+			importés.
 		</p>
 
-		<h4 id="move-backgrounds">Déplacer les arrière-plans</h4>
+		<img
+			src="/documentation/overview/local-files.png"
+			alt="Section des fichiers locaux de Bonjourr"
+			loading="lazy"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+		/>
 
 		<p>
-			Les arrière-plans locaux peuvent être déplacés verticalement, horizontalement ou zoomés.
-			Activez l'option en appuyant sur <bjrbtn>Déplacer</bjrbtn> après avoir sélectionné une image.
+			Un inconvénient des fichiers locaux est qu’ils ne peuvent pas être synchronisés entre
+			vos appareils. C’est une limitation technique mise en place par les navigateurs liée à
+			la sécurité des extensions.
 		</p>
 
-		<p>Réduire le zoom à son minimum ajuste automatiquement la taille.</p>
-
-		<h3 id="backgrounds-texture">Textures</h3>
-
 		<p>
-			Les textures sont des superpositions sur n'importe quel arrière-plan. Il existe
-			différents types, vous pouvez modifier leur taille et leur opacité.
+			Les fonds locaux peuvent être déplacés verticalement, horizontalement ou zoomés. Activez
+			l’option en appuyant sur <bjrbtn>Déplacer</bjrbtn> après avoir sélectionné une image.
 		</p>
 
-		<h3 id="backgrounds-fadein">Temps d'apparition progressive</h3>
+		<p>Réduire le zoom au minimum permet de définir la taille automatiquement.</p>
+
+		<h3 id="solid-color">Couleur unie</h3>
 
 		<p>
-			Vous pouvez spécifier la vitesse à laquelle les arrière-plans apparaissent
-			progressivement lorsque vous ouvrez un nouvel onglet. Les arrière-plans de couleur sont
-			toujours à 0 ms. Réduire le temps d'apparition progressive à 0 fera clignoter la page du
-			nouvel onglet, car l'image d'arrière-plan doit se charger.
+			L’option couleur unie vous permet de choisir une couleur spécifique comme arrière-plan,
+			idéale si vous préférez une interface minimaliste.
+		</p>
+
+		<h3 id="backgrounds-texture">Superposition de texture</h3>
+
+		<p>
+			Les textures sont des effets superposés à n’importe quel fond. Il en existe de nombreux
+			types à essayer, qui rendent particulièrement bien sur un fond flou ou une couleur unie.
+		</p>
+
+		<p>
+			La plupart des textures peuvent être personnalisées via leur couleur, leur opacité et
+			leur densité pour un rendu idéal.
+		</p>
+
+		<h3 id="backgrounds-fadein">Temps de fondu</h3>
+
+		<p>
+			Vous pouvez définir la vitesse à laquelle le arrière-plan apparaît lors de l’ouverture
+			d’un nouvel onglet. Les fonds en couleur apparaissent toujours immédiatement (0 ms).
+			Réduire ce délai à 0 pour une image peut entraîner un clignotement, le temps que l’image
+			se charge.
 		</p>
 	</section>
 

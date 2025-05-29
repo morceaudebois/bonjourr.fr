@@ -114,24 +114,25 @@ Author, Your second quote.`
 	<section id="section-backgrounds">
 		<h2 id="backgrounds">🖼️ Backgrounds</h2>
 
-		<p>There is 4 types of backgrounds on Bonjourr:</p>
+		<p>
+			Bonjourr lets you fully customize your new tab experience with beautiful and dynamic
+			backgrounds. Whether you prefer curated photos, immersive videos, or your own local
+			files, there are plenty of options to make it feel personal.
+		</p>
 
-		<ul>
-			<li>Images</li>
-			<li>Videos</li>
-			<li>Local files</li>
-			<li>Color</li>
-		</ul>
-
-		<h3 id="providers">Providers</h3>
-
-		<h4 id="provider-bonjourr">Bonjourr Daylight</h4>
+		<h3 id="images">Images</h3>
 
 		<p>
-			By default, images and videos use a curated collection from the <a
-				href="https://unsplash.com/developers">Unsplash API</a
-			>. We select them manually and store them in four different collections that change
-			according to the time of the day:
+			Bonjourr offers several ways to customize your background with beautiful images. Here's
+			how it works!
+		</p>
+
+		<h4 id="images-bonjourr-daylight">Bonjourr Daylight</h4>
+
+		<p>
+			By default, Bonjourr uses the <a href="https://unsplash.com/developers">Unsplash API</a>
+			to fetch its backgrounds from a feature we call Bonjourr Daylight. We select them manually
+			and store them in four different collections that change according to the time of the day:
 		</p>
 
 		<ul>
@@ -155,15 +156,18 @@ Author, Your second quote.`
 			</li>
 			<li>
 				And one for <a
-					href="https://unsplash.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)"
+					href="https://unspla.sh.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)"
 					>the night</a
 				>.
 			</li>
 		</ul>
 
-		<h4 id="provider-collection">Unsplash (on any) Collections</h4>
+		<h4 id="collection">Unsplash Collections</h4>
 
-		<p>You can also use any collection on Unsplash as a background source. To do so:</p>
+		<p>
+			You can use any collection on Unsplash as a background source in Bonjourr. This allows
+			you to carefully curate your own images from Unsplash. To do so:
+		</p>
 
 		<ol>
 			<li>
@@ -186,7 +190,45 @@ Author, Your second quote.`
 
 		<video src="/documentation/overview/custom-unsplash-collection.mp4" controls muted></video>
 
+		<h4 id="unsplash-search">Unsplash Search</h4>
+
+		<p>
+			If you have a theme in mind, you can use the Unsplash Search feature and let Unsplash do
+			the work for you: just type in a keyword and it will start fetching backgrounds related
+			to that keyword. You can even set several of them by separating them with a comma.
+		</p>
+
+		<h3 id="videos">Videos</h3>
+
+		<p>
+			Thanks to <a href="https://pixabay.com/">Pixabay</a>'s free video library, Bonjourr lets
+			you set videos as your backgrounds. They're fun, dynamic, and bring your homepage to
+			life in a way static images can't.
+		</p>
+
+		<p>
+			However, videos can be more demanding on your device. They require more processing
+			power, which can slow things down and drain battery faster. Also, since video files are
+			larger than images, a fast internet connection is recommended for a smooth experience.
+		</p>
+
+		<h4 id="videos-bonjourr-daylight">Bonjourr Daylight</h4>
+
+		<p>
+			Just like <a href="#images-bonjourr-daylight">with images</a>, Bonjourr also offers
+			curated video backgrounds that change with the time of day.
+		</p>
+
+		<h4 id="pixabay-search">Pixabay Search</h4>
+
+		<p>
+			Similar to <a href="#unsplash-search">Unsplash Search</a>, you can enter keywords in
+			Bonjourr to fetch related videos from Pixabay’s library.
+		</p>
+
 		<h3 id="local-backgrounds">Local files</h3>
+
+		<p>The local files option allows you to easily set images from your device to Bonjourr.</p>
 
 		<p>
 			You can add multiple files from your device by pressing <bjrbtn>Add</bjrbtn>. You can
@@ -194,12 +236,17 @@ Author, Your second quote.`
 			you can select every images on your folder, and only the new ones will be uploaded.
 		</p>
 
-		<p>
-			Local files are not synced between devices. Our extension cannot access your device
-			storage without a user action. You'll have to manually add new backgrounds every time.
-		</p>
+		<img
+			src="/documentation/overview/local-files.png"
+			alt="Bonjourr's local files section"
+			loading="lazy"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+		/>
 
-		<h4 id="move-backgrounds">Move backgrounds</h4>
+		<p>
+			A drawback of local files is that they can't be synced between devices. This is a
+			technical limit and security browsers have set up when it comes to extensions.
+		</p>
 
 		<p>
 			Local backgrounds can be moved vertically, horizontally, or zoomed. Toggle the option by
@@ -208,11 +255,23 @@ Author, Your second quote.`
 
 		<p>Reducing the zoom to its minimum sets the size automatically.</p>
 
-		<h3 id="backgrounds-texture">Textures</h3>
+		<h3 id="solid-color">Solid color</h3>
 
 		<p>
-			Textures are overlays on top of any background. There are different types, you can
-			change its size and opacity.
+			The solid color option allows you to choose a specific color for your background if you
+			like to keep things especially minimalist.
+		</p>
+
+		<h3 id="backgrounds-texture">Texture overlay</h3>
+
+		<p>
+			Textures are overlays on top of any background. There are many types you can try, and
+			they will typically look better over a blurred background or a solid color.
+		</p>
+
+		<p>
+			Most textures can be edited through their color, opacity and density to get to the
+			perfect result.
 		</p>
 
 		<h3 id="backgrounds-fadein">Fade in time</h3>
