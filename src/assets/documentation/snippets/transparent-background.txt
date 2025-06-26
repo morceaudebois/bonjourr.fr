@@ -1,0 +1,23 @@
+/* Hides regular backgrounds to make Bonjourr transparent. */
+#background-media, #background-color {
+	display: none!important;
+}
+
+.tabbing {
+	background-color: transparent !important;
+} 
+
+body {
+	background-color: transparent !important;
+}
+
+#credit {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.4s, visibility 0.4s;
+}
+
+#credit-container:hover #credit {
+	visibility: visible;
+	opacity: 1;
+}
