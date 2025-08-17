@@ -10,7 +10,6 @@
 		border-radius: 8px;
 		font-size: smaller;
 		cursor: pointer;
-		filter: grayscale(1);
 	}
 
 	aside button:hover {
@@ -20,6 +19,14 @@
 	aside button.on {
 		opacity: 1;
 		filter: grayscale(0);
+		background-color: rgb(41, 144, 255);
+		border-color: rgb(41, 144, 255);
+	}
+
+	@media (prefers-color-scheme: light) {
+		aside button.on {
+			color: white;
+		}
 	}
 
 	.content section.hide[id] {
