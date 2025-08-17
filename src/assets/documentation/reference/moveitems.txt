@@ -1,6 +1,6 @@
 items: {
-	[widget]: {
-		box: '',	// "baseline | center | end", "baseline | center | end"
-		text: '', 	// left | center | right
-	}
+  [widget]: {
+      box: '',    // "baseline | center | end", "baseline | center | end"
+      text: '',   // left | center | right
+  }
 }

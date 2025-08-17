@@ -14,8 +14,8 @@ Auteur, Votre deuxième citation.`
 >
 	<OverviewFilter />
 
-	<section id="interface">
-		<h2>🖥️ Astuces pour l'interface principale</h2>
+	<section id="section-interface">
+		<h2 id="interface">🖥️ Astuces pour l'interface principale</h2>
 
 		<p>
 			Lorsque vous utilisez les arrière-plans par défaut, survolez les crédits de l'image en
@@ -38,8 +38,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="general-settings">
-		<h2>⚙️ Astuces pour les paramètres</h2>
+	<section id="section-general-settings">
+		<h2 id="general-settings">⚙️ Astuces pour les paramètres</h2>
 
 		<h3>Accéder au panneau des paramètres</h3>
 
@@ -73,8 +73,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="newtab-title">
-		<h2>📌 Apparence de l'onglet</h2>
+	<section id="section-newtab-title">
+		<h2 id="newtab-title">📌 Apparence de l'onglet</h2>
 
 		<p>
 			Vous pouvez personnaliser le texte et l'icône (appelée favicon) que votre navigateur
@@ -117,13 +117,30 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="backgrounds">
-		<h2>🖼️ Arrière-plans</h2>
+	<section id="section-backgrounds">
+		<h2 id="backgrounds">🖼️ Arrière-plans</h2>
 
 		<p>
-			Bonjourr utilise l'<a href="https://unsplash.com/developers">API Unsplash</a> pour afficher
-			ses arrière-plans. Nous les sélectionnons manuellement et les stockons dans quatre collections
-			différentes qui changent en fonction de l'heure de la journée :
+			Bonjourr vous permet de personnaliser entièrement votre nouvel onglet avec de
+			magnifiques arrière-plans dynamiques. Que vous préfériez des photos sélectionnées, des
+			vidéos immersives ou vos propres fichiers locaux, il existe de nombreuses options pour
+			rendre l’expérience personnelle.
+		</p>
+
+		<h3 id="images">Images</h3>
+
+		<p>
+			Bonjourr propose plusieurs façons de personnaliser votre arrière-plan avec de belles
+			images. Voici comment cela fonctionne !
+		</p>
+
+		<h4 id="images-bonjourr-daylight">Bonjourr Daylight</h4>
+
+		<p>
+			Par défaut, Bonjourr utilise l’<a href="https://unsplash.com/developers">API Unsplash</a
+			> pour récupérer ses arrière-plans via une fonctionnalité que nous appelons Bonjourr Daylight.
+			Nous les sélectionnons manuellement et les répartissons dans quatre collections différentes,
+			qui changent selon le moment de la journée :
 		</p>
 
 		<ul>
@@ -153,51 +170,147 @@ Auteur, Votre deuxième citation.`
 			</li>
 		</ul>
 
-		<h3 id="unsplash-collection">Collection Unsplash personnalisée</h3>
+		<h4 id="collection">Collections Unsplash</h4>
 
 		<p>
-			Vous pouvez utiliser n'importe quelle collection sur Unsplash comme source
-			d'arrière-plan dans Bonjourr. Pour ce faire :
+			Vous pouvez utiliser n’importe quelle collection Unsplash comme source d'arrière-plans
+			dans Bonjourr. Cela vous permet de sélectionner soigneusement vos propres images. Pour
+			ce faire :
 		</p>
 
 		<ol>
 			<li>
-				Trouvez une collection que vous aimez en allant sur <a href="https://unsplash.com"
-					>unsplash.com</a
-				>, cherchez un sujet et allez dans l'onglet Collections.
+				Trouvez une collection sur <a href="https://unsplash.com">unsplash.com</a>,
+				recherchez un sujet et allez dans l’onglet Collections.
 			</li>
 			<li>
-				Une fois que vous avez cliqué sur la collection que vous souhaitez, consultez son
-				URL. Ce que vous voulez est l'ID, qui est la chaîne de lettres et de chiffres
-				aléatoires. Par exemple, si l'URL de votre collection est <code
+				Une fois la collection choisie, regardez son URL. Ce qui vous intéresse est
+				l’identifiant, une chaîne de lettres et chiffres. Par exemple, si l’URL est <code
 					>https://unsplash.com/collections/2170139/wolfdogs-of-unsplash</code
-				>, l'ID est <code>2170139</code>.
+				>, l’ID est <code>2170139</code>.
 			</li>
 			<li>
-				Retournez dans Bonjourr et collez l'ID dans le champ <bjr>Collection Unsplash</bjr>.
-				Vous pouvez ajouter plusieurs collections en les séparant par une virgule.
+				Retournez dans Bonjourr et, après avoir coché <bjr>Afficher tous les paramètres</bjr
+				> en haut du panneau, collez l’ID dans le champ <bjr>Collection Unsplash</bjr>. Vous
+				pouvez ajouter plusieurs collections en les séparant par des virgules.
 			</li>
 		</ol>
 
 		<video src="/documentation/overview/custom-unsplash-collection.mp4" controls muted></video>
 
+		<h4 id="unsplash-search">Recherche Unsplash</h4>
+
 		<p>
-			Vous pouvez également créer votre propre collection et sélectionner vos propres images,
-			mais dans ce cas, vous devrez créer un compte Unsplash.
+			Si vous avez un thème en tête, vous pouvez utiliser la fonction de recherche Unsplash.
+			Il suffit de taper un mot-clé et les arrière-plans correspondants seront récupérés
+			automatiquement. Vous pouvez en indiquer plusieurs en les séparant par des virgules.
+		</p>
+
+		<h3 id="videos">Vidéos</h3>
+
+		<p>
+			Grâce à la bibliothèque gratuite de vidéos de <a href="https://pixabay.com/">Pixabay</a
+			>, Bonjourr vous permet de définir des vidéos comme arrière-plans. C’est amusant,
+			dynamique, et cela donne vie à votre page d’accueil.
+		</p>
+
+		<p>
+			Cependant, les vidéos peuvent être plus exigeantes pour votre appareil. Elles demandent
+			plus de puissance de traitement, ce qui peut ralentir l’interface et consommer davantage
+			de batterie. De plus, comme les fichiers vidéos sont plus lourds que les images, une
+			connexion internet rapide est recommandée.
+		</p>
+
+		<p>
+			De plus, nous faisons de notre mieux pour ne jamais intégrer de contenu généré par IA
+			dans nos collections d'arrière-plans. Si jamais un contenu généré par IA nous échappait,
+			n'hésitez pas à nous le signaler <a href="mailto:bonjourr.app@protonmail.com"
+				>par e-mail</a
+			> et nous nous ferons un plaisir de le retirer.
+		</p>
+
+		<h4 id="videos-bonjourr-daylight">Bonjourr Daylight</h4>
+
+		<p>
+			Tout comme <a href="#images-bonjourr-daylight">avec les images</a>, Bonjourr propose
+			aussi des vidéos sélectionnées qui changent selon le moment de la journée.
+		</p>
+
+		<h4 id="pixabay-search">Recherche Pixabay</h4>
+
+		<p>
+			Comme pour la <a href="#unsplash-search">recherche Unsplash</a>, vous pouvez entrer des
+			mots-clés dans Bonjourr pour récupérer des vidéos liées à ces mots via la bibliothèque
+			de Pixabay.
 		</p>
 
 		<h3 id="local-backgrounds">Fichiers locaux</h3>
 
 		<p>
-			Changez votre <bjr>Type d'arrière-plan</bjr> de "Unsplash" à "Fichier local", et vous pourrez
-			sélectionner vos propres images depuis votre ordinateur et les définir dans Bonjourr.
+			L’option fichiers locaux vous permet d’utiliser facilement des images présentes sur
+			votre appareil dans Bonjourr.
+		</p>
+
+		<p>
+			Vous pouvez ajouter plusieurs fichiers en appuyant sur <bjrbtn>Ajouter</bjrbtn>.
+			Plusieurs fichiers peuvent être ajoutés en une fois. Bonjourr gère automatiquement les
+			doublons : vous pouvez sélectionner tout un dossier, seuls les nouveaux fichiers seront
+			importés.
+		</p>
+
+		<img
+			src="/documentation/overview/local-files.png"
+			alt="Section des fichiers locaux de Bonjourr"
+			loading="lazy"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+		/>
+
+		<p>
+			Un inconvénient des fichiers locaux est qu’ils ne peuvent pas être synchronisés entre
+			vos appareils. C’est une limitation technique mise en place par les navigateurs liée à
+			la sécurité des extensions.
+		</p>
+
+		<p>
+			Les fonds locaux peuvent être déplacés verticalement, horizontalement ou zoomés. Activez
+			l’option en appuyant sur <bjrbtn>Déplacer</bjrbtn> après avoir sélectionné une image.
+		</p>
+
+		<p>Réduire le zoom au minimum permet de définir la taille automatiquement.</p>
+
+		<h3 id="solid-color">Couleur unie</h3>
+
+		<p>
+			L’option couleur unie vous permet de choisir une couleur spécifique comme arrière-plan,
+			idéale si vous préférez une interface minimaliste.
+		</p>
+
+		<h3 id="backgrounds-texture">Superposition de texture</h3>
+
+		<p>
+			Les textures sont des effets superposés à n’importe quel fond. Il en existe de nombreux
+			types à essayer, qui rendent particulièrement bien sur un fond flou ou une couleur unie.
+		</p>
+
+		<p>
+			La plupart des textures peuvent être personnalisées via leur couleur, leur opacité et
+			leur densité pour un rendu idéal.
+		</p>
+
+		<h3 id="backgrounds-fadein">Temps de fondu</h3>
+
+		<p>
+			Vous pouvez définir la vitesse à laquelle le arrière-plan apparaît lors de l’ouverture
+			d’un nouvel onglet. Les fonds en couleur apparaissent toujours immédiatement (0 ms).
+			Réduire ce délai à 0 pour une image peut entraîner un clignotement, le temps que l’image
+			se charge.
 		</p>
 	</section>
 
 	<hr />
 
-	<section id="quick-links">
-		<h2>🔗 Liens favoris</h2>
+	<section id="section-quick-links">
+		<h2 id="quick-links">🔗 Liens favoris</h2>
 
 		<p>
 			Les liens favoris sont un moyen facile de gérer les sites web que vous visitez
@@ -362,8 +475,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="clock">
-		<h2>🕰️ Date et heure</h2>
+	<section id="section-clock">
+		<h2 id="clock">🕰️ Date et heure</h2>
 
 		<p>
 			La fonctionnalité "horloge analogue" offre de nombreuses options que vous pouvez
@@ -402,8 +515,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="weather">
-		<h2>🌤️ Météo</h2>
+	<section id="section-weather">
+		<h2 id="weather">🌤️ Météo</h2>
 
 		<p>
 			La géolocalisation précise nécessite l'accès au GPS de votre appareil. Certains
@@ -441,8 +554,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="notes">
-		<h2>✍️ Notes</h2>
+	<section id="section-notes">
+		<h2 id="notes">✍️ Notes</h2>
 
 		<p>
 			Les Notes utilisent <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a> pour
@@ -505,8 +618,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="searchbar">
-		<h2>🔎 Barre de recherche</h2>
+	<section id="section-searchbar">
+		<h2 id="searchbar">🔎 Barre de recherche</h2>
 
 		<h3>Suggestions</h3>
 
@@ -556,8 +669,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="quotes">
-		<h2>🗣 Citations</h2>
+	<section id="section-quotes">
+		<h2 id="quotes">🗣 Citations</h2>
 
 		<p>Le widget de citations peut récupérer des citations de plusieurs sources :</p>
 
@@ -671,8 +784,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="fonts">
-		<h2>📚 Polices</h2>
+	<section id="section-fonts">
+		<h2 id="fonts">📚 Polices</h2>
 
 		<p>
 			Bonjourr utilise les polices de Fontsource. Si vous souhaitez voir des aperçus des
@@ -684,8 +797,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="page-layouts">
-		<h2>📄 Outils de mise en page</h2>
+	<section id="section-page-layouts">
+		<h2 id="page-layouts">📄 Outils de mise en page</h2>
 
 		<p>
 			Il existe 3 dispositions de page différentes parmi lesquelles choisir : colonne simple,
@@ -706,8 +819,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="settings-management">
-		<h2>💾 Gestion des paramètres</h2>
+	<section id="section-settings-management">
+		<h2 id="settings-management">💾 Gestion des paramètres</h2>
 
 		<p>
 			Bonjourr vous permet d'exporter tous vos paramètres dans un fichier. Cette
@@ -810,8 +923,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="keybindings">
-		<h2>⌨️ Raccourcis clavier</h2>
+	<section id="section-keybindings">
+		<h2 id="keybindings">⌨️ Raccourcis clavier</h2>
 
 		<table>
 			<thead>
@@ -837,8 +950,8 @@ Auteur, Votre deuxième citation.`
 
 	<hr />
 
-	<section id="supporters-notification">
-		<h2>❤️ Notification des Donateurs</h2>
+	<section id="section-supporters-notification">
+		<h2 id="supporters-notification">❤️ Notification des Donateurs</h2>
 
 		<p>
 			La notification des donateurs a été introduite avec Bonjourr 20.4 et est notre manière

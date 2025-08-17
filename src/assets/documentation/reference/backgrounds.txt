@@ -1,5 +1,18 @@
 {
-	background_blur: 15,			// In pixels
-	background_bright: 0.8,			// Brightness from 0 to 1
-	background_type: 'unsplash',	// unsplash | local
+  backgrounds: {
+    type: "images",     // Type of backgrounds: images | videos | local | color
+    fadein: 0,          // Background fade when opening a new tab page
+    blur: 0,            // Blur amount
+    bright: 1,          // Brightness amount
+    frequency: "hour",  // Fackground change frequency: tabs | hour | daylight | day | pause
+    color: "#185A63",   // Background color when selecting "color" type
+    queries: {},        // User queries when searching tags or collections
+    texture: {
+      type: "grain",    // Texture overlays on top of your backgrounds
+      opacity: 0.26,    // Texture opacity
+      size: 200         // Texture size
+    },
+    videos: "bonjourr-videos-daylight",   // Read only: chooses video collection to display
+    images: "bonjourr-images-daylight",   // Read only: chooses image collection to display
+  }
 }

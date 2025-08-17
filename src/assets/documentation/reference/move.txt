@@ -1,19 +1,19 @@
 {
-	move: {
-		selection: 'single',	// single | double | triple
-		layouts: {
-			single: {
-				grid: grid,		// single column grid
-				items: items,	// items aligment
-			},
-			double: {
-				grid: grid,		// double column grid
-				items: items,	// items aligment
-			},
-			triple: {
-				grid: grid,		// triple column grid
-				items: items,	// items aligment
-			}
-		}
-	}
+  move: {
+    selection: 'single',  // single | double | triple
+    layouts: {
+      single: {
+        grid: grid,       // single column grid
+        items: items,     // items aligment
+      },
+      double: {
+        grid: grid,       // double column grid
+        items: items,     // items aligment
+      },
+      triple: {
+        grid: grid,       // triple column grid
+        items: items,     // items aligment
+      }
+    }
+  }
 }
