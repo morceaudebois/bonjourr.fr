@@ -1,0 +1,16 @@
+---
+const { src } = Astro.props
+---
+
+<video class="lazy" preload="none" controls>
+	<source data-src={src} type="video/mp4" />
+</video>
+
+<!-- Attach lazyload init once -->
+<script type="module">
+	import LazyLoad from "https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.0.3/+esm"
+
+	if (!window.lazyLoadInstance) {
+		window.lazyLoadInstance = new LazyLoad()
+	}
+</script>
