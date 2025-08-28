@@ -210,19 +210,30 @@ const trans = isFrench ? fr : en
 			<ul>
 				<li>
 					<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
-						<img src="/frontpage/github-dark.svg" alt="" />
+						<picture>
+							<source
+								srcset="/frontpage/github-dark.svg"
+								media="(prefers-color-scheme: light)"
+							/>
+							<source
+								srcset="/frontpage/github.svg"
+								media="(prefers-color-scheme: dark)"
+							/>
+							<img src="/frontpage/github-dark.svg" alt="GitHub logo" />
+						</picture>
+
 						<span>GitHub</span>
 					</a>
 				</li>
 				<li>
 					<a href="https://t.me/BonjourrStartpage" title="Our Telegram group">
-						<img src="/frontpage/telegram.svg" alt="" />
+						<img src="/frontpage/telegram.svg" alt="Telegram icon" />
 						<span>Telegram</span>
 					</a>
 				</li>
 				<li>
 					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
-						<img src="/frontpage/bluesky-blue.svg" alt="" />
+						<img src="/frontpage/bluesky-blue.svg" alt="Bluesky icon" />
 						<span>Bluesky</span>
 					</a>
 				</li>
@@ -439,7 +450,7 @@ const trans = isFrench ? fr : en
 	}
 
 	.socials.desktop-nav svg {
-		height: 1.2em;
+		width: 1.4em;
 	}
 
 	.container-mobile nav {
