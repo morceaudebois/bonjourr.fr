@@ -86,6 +86,41 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 			> and start using it right away.
 		</p>
 
+		<h3 id="brave">Zen (desktop)</h3>
+
+		<p>
+			Zen is based on Firefox, which means you can install any Firefox extension on it,
+			including <a href={firefoxAddons}>Bonjourr</a>. Zen works a little differently than
+			other browsers though, so you need to set a few things to make sure you take full
+			advantage of Bonjourr:
+		</p>
+
+		<ol>
+			<li>
+				After installation, open Zen's settings and make sure Bonjourr is set for both <bjr
+					>Homepage and new windows</bjr
+				> and <bjr>New tabs</bjr>.
+			</li>
+
+			<li>
+				Then, head to <code>about:config</code> in your URL bar, click "Accept the risk" and
+				search for
+				<code>zen.urlbar.replace-newtab</code>. Switch the value to <code>false</code> using
+				the button on the right, and close the page. This ensures that Bonjourr actually shows
+				up when you open new Zen tabs.
+			</li>
+
+			<li>Lastly, click on a Bonjourr tab in Zen and select <bjr>Add to essentials</bjr>.</li>
+		</ol>
+
+		<video src="/documentation/overview/zen-config.mp4" controls></video>
+
+		<p>
+			Additionally, Bonjourr supports transparency in Zen using a <a
+				href="/docs/styles#plain-background">CSS snippet</a
+			> to paste in the Custom styles settings.
+		</p>
+
 		<h3 id="opera">Opera (desktop)</h3>
 
 		<p>
