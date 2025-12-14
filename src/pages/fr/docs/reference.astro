@@ -10,8 +10,9 @@ import notes from "@assets/documentation/reference/notes.txt?raw"
 import fonts from "@assets/documentation/reference/fonts.txt?raw"
 import general from "@assets/documentation/reference/general.txt?raw"
 import weather from "@assets/documentation/reference/weather.txt?raw"
+import pomodoro from "@assets/documentation/reference/pomodoro.txt?raw"
 import movegrid from "@assets/documentation/reference/movegrid.txt?raw"
-import unsplash from "@assets/documentation/reference/unsplash.txt?raw"
+import greetings from "@assets/documentation/reference/greetings.txt?raw"
 import moveitems from "@assets/documentation/reference/moveitems.txt?raw"
 import linkselem from "@assets/documentation/reference/linkselem.txt?raw"
 import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
@@ -26,7 +27,7 @@ import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 		<em>
 			Les paramètres de Bonjourr sont enregistrés au format JSON, visible dans la section de
 			gestion des paramètres. Cette page vous aide à comprendre à quoi correspond chaque
-			propriété JSON. Dernière mise à jour pour la version 21.0.0.
+			propriété JSON. Dernière mise à jour pour la version 22.0.0.
 		</em>
 	</p>
 
@@ -73,6 +74,12 @@ import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 		<Code lang="jsonc" code={notes} />
 	</section>
 
+	<section id="pomodoro">
+		<h2>Pomodoro</h2>
+
+		<Code lang="jsonc" code={pomodoro} />
+	</section>
+
 	<section id="fonts">
 		<h2>Polices</h2>
 
@@ -88,6 +95,12 @@ import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 		<h2>Météo</h2>
 
 		<Code lang="jsonc" code={weather} />
+	</section>
+
+	<section id="greetings">
+		<h2>Bienvenue</h2>
+
+		<Code lang="jsonc" code={greetings}></Code>
 	</section>
 
 	<section id="hide">

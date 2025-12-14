@@ -2,17 +2,18 @@
   clock: {
     size: 1,          // Analog clock size
     ampm: false,      // 12 or 24 hours
+    ampmposition:     // top-left | top-right | bottom-left | bottom-right
     analog: false,    // Toggle analog or digital
     seconds: false,   // Toggle seconds
-    face: 'none',     // none | numbers | roman | marks
-    style: 'round',   // ..
-    timezone: 'auto', // auto | -12 | -11 | ... | +12
+    face: none,       // none | numbers | roman | marks
+    style: round,     // ..
+    timezone: auto,   // auto | -12 | -11 | ... | +12
   },
     analogstyle: {
-    face: 'none',         // 'none' | 'number' | 'roman' | 'marks' | 'swiss' | 'braun'
-    hands: 'modern',      // 'modern' | 'swiss' | 'classic' | 'braun' | 'apple'
-    shape: 'round',       // 'round' | 'square' | 'rectangle'
-    border: '#ffff',      // Any valid CSS color
-    background: '#fff2',  // Any valid CSS color
+    face: none,         // none | number | roman | marks | swiss | braun
+    hands: modern,      // modern | swiss | classic | braun | apple
+    shape: round,       // round | square | rectangle
+    border: #ffff,      // Any valid CSS color
+    background: #fff2,  // Any valid CSS color
   }
 }

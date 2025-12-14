@@ -1,16 +1,19 @@
 {
   backgrounds: {
-    type: "images",     // Type of backgrounds: images | videos | local | color
-    fadein: 0,          // Background fade when opening a new tab page
-    blur: 0,            // Blur amount
-    bright: 1,          // Brightness amount
-    frequency: "hour",  // Fackground change frequency: tabs | hour | daylight | day | pause
-    color: "#185A63",   // Background color when selecting "color" type
-    queries: {},        // User queries when searching tags or collections
+    type: "images",          // Type of backgrounds: images | videos | files | urls | color
+    fadein: 0,               // Background fade when opening a new tab page
+    blur: 0,                 // Blur amount
+    bright: 1,               // Brightness amount
+    frequency: "hour",       // Fackground change frequency: tabs | hour | daylight | day | pause
+    color: "#185A63",        // Background color when selecting "color" type
+    queries: {},             // User queries when searching tags or collections
+    pausedUrl: ""            // A string if background is locked (paused)
+    pausedImage: {}          // An image object if locked
+    pausedVideo: {}          // A video object if locked
     texture: {
-      type: "grain",    // Texture overlays on top of your backgrounds
-      opacity: 0.26,    // Texture opacity
-      size: 200         // Texture size
+      type: "grain",         // Texture overlays on top of your backgrounds
+      opacity: 0.26,         // Texture opacity
+      size: 200              // Texture size
     },
     videos: "bonjourr-videos-daylight",   // Read only: chooses video collection to display
     images: "bonjourr-images-daylight",   // Read only: chooses image collection to display
