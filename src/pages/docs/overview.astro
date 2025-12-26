@@ -30,10 +30,21 @@ Author, Your second quote.`
 			loading="lazy"
 		/>
 
+		<h4 id="interface-context-menu">Context menu</h4>
+
 		<p>
-			Clicking the <bjr>Download</bjr> icon will download the photo to your computer at its highest
-			possible resolution.
+			Bonjourr integrates a custom right click context menu on most of its interface. Use it
+			to add new quick links, access widget settings easily and control the background. Note
+			that you can still access the default context menu if you press <code>alt</code> + right
+			click.
 		</p>
+
+		<img
+			src="/documentation/overview/context-menu.png"
+			alt="Bonjourr's context menu"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
 	</section>
 
 	<hr />
@@ -48,6 +59,7 @@ Author, Your second quote.`
 		<ul>
 			<li>Click on the ⚙️ icon in the bottom right corner.</li>
 			<li>Hit the <code>esc</code> key of your keyboard (while focused on the page).</li>
+			<li>Right click on the page to access the context menu</li>
 		</ul>
 
 		<h3 id="show-all-settings">Show all settings</h3>
@@ -64,7 +76,7 @@ Author, Your second quote.`
 			same position as before.
 		</p>
 
-		<LazyVideo src="/documentation/overview/hide-icon.mp4" />
+		<LazyVideo src="/documentation/overview/hide-icon.webm" />
 	</section>
 
 	<hr />
@@ -92,10 +104,9 @@ Author, Your second quote.`
 					href="https://github.com/victrme/Bonjourr/issues/431">GitHub issue</a
 				>).
 			</li>
-			<li>Microsoft Edge will only show the silhouette of the emoji.</li>
-			<li>Safari doesn't support it at all.</li>
+			<li>Microsoft Edge & Safari don't support it at all.</li>
 		</ul>
-
+		s
 		<p>Here is how you can write emojis:</p>
 
 		<ul>
@@ -189,7 +200,7 @@ Author, Your second quote.`
 			</li>
 		</ol>
 
-		<LazyVideo src="/documentation/overview/custom-unsplash-collection.mp4" />
+		<LazyVideo src="/documentation/overview/custom-unsplash-collection.webm" />
 
 		<h4 id="unsplash-search">Unsplash Search</h4>
 
@@ -235,12 +246,14 @@ Author, Your second quote.`
 
 		<h3 id="local-backgrounds">Local files</h3>
 
-		<p>The local files option allows you to easily set images from your device to Bonjourr.</p>
+		<p>
+			The local files option allows you to easily set images or videos from your device to
+			Bonjourr.
+		</p>
 
 		<p>
-			You can add multiple files from your device by pressing <bjrbtn>Add</bjrbtn>. You can
-			add multiple files at once. Bonjourr automatically handles duplicate files, which means
-			you can select every images on your folder, and only the new ones will be uploaded.
+			Click <bjrbtn>+ Add new</bjrbtn> to import files from your computer. Most video and image
+			file formats are supported, and Bonjourr will handle duplicates if need be.
 		</p>
 
 		<img
@@ -251,16 +264,40 @@ Author, Your second quote.`
 		/>
 
 		<p>
-			A drawback of local files is that they can't be synced between devices. This is a
-			technical limit and security browsers have set up when it comes to extensions.
+			By selecting an image/video and clicking <bjrbtn>Options</bjrbtn>, you can individually
+			adjust the positioning, size and playback speed of each file. Reducing the zoom to its
+			minimum sets the size automatically.
 		</p>
 
 		<p>
-			Local backgrounds can be moved vertically, horizontally, or zoomed. Toggle the option by
-			pressing <bjrbtn>Move</bjrbtn> after selecting an image.
+			A drawback of local files is that they can't be synced between devices; this is a
+			technical limit and security browsers have set up when it comes to extensions.
 		</p>
 
-		<p>Reducing the zoom to its minimum sets the size automatically.</p>
+		<h3 id="background-urls">URLs</h3>
+
+		<p>
+			The URLs option is another way to import your own images into Bonjourr, but instead of
+			having them on your computer, you source them from a distant server.
+		</p>
+
+		<img
+			src="/documentation/overview/background-urls.png"
+			alt="Bonjourr's background URLs option"
+			loading="lazy"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+		/>
+
+		<p>
+			This is great if you want more flexibility. If you're a power user, you could do
+			something like setting up a dynamic URL where the backgrounds change according to your
+			exact preferences, such as certain times of the day or month.
+		</p>
+
+		<p>
+			Additionaly, the background URLs options has another great perk over Local files: it can
+			be synced across browsers.
+		</p>
 
 		<h3 id="solid-color">Solid color</h3>
 
@@ -300,13 +337,13 @@ Author, Your second quote.`
 		<h3 id="link-usage">Basic usage</h3>
 
 		<p>
-			You can add Quick Links by going to the settings of Bonjourr, in the Quick Links
-			section. They are editable if you right click on them (or long press on mobile), which
+			To add Quick Links, right-click on the page or open the Quick Links section in the
+			settings. They are editable if you right click on them (or long press on mobile), which
 			allows you to change their titles, URLs, icons and delete them.
 		</p>
 
 		<video autoplay loop muted playsinline>
-			<source src="/documentation/overview/links-usage.mp4" type="video/mp4" />
+			<source src="/documentation/overview/links-usage.webm" type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
 
@@ -388,21 +425,32 @@ Author, Your second quote.`
 			loading="lazy"
 		/>
 
-		<h3 id="link-icons">Icons</h3>
+		<h3 id="link-icons">Link icons</h3>
+
+		<p>You can configure your links' icons from three different modes.</p>
+
+		<h4 id="link-icons-default">Website favicon (default)</h4>
 
 		<p>
-			Link icons are retrieved by our homemade service <a
+			In the default mode, icons are automatically retrieved from our homemade service <a
 				href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a
 			>. If you find that a website is missing its icon, you can create an issue <a
 				href="https://github.com/victrme/Bonjourr/issues">on GitHub</a
 			> or send us an email, and we will do our best to fix it.
 		</p>
 
-		<h4 id="link-icons-custom">Custom icons</h4>
+		<h4 id="link-icons-local">Local files</h4>
 
 		<p>
-			The <code>Icon</code> input you see when editing a link allows you to set a distant URL to
-			any image file you want on the Internet. This URL can be:
+			Easily customize you link icons by importing them directly from your computer. Most
+			image file formats are allowed, such as JPG, PNG, WebP, (non animated) GIF, and SVG.
+		</p>
+
+		<h4 id="link-icons-url">Distant URL</h4>
+
+		<p>
+			This mode allows you to set a distant URL to any image file you want on the Internet.
+			This URL can be:
 		</p>
 
 		<ul>
@@ -420,23 +468,13 @@ Author, Your second quote.`
 			<li>File path: <code>file:///Users/Me/Pictures/flowers.png</code>.</li>
 		</ul>
 
-		<p>
-			Some services like <a href="https://postimages.org/">postimages.org</a>, <a
-				href="https://imgbb.com/">imgbb.com</a
-			> or <a href="https://imgur.com/">Imgur</a> allow you to upload images to their server and
-			give you a direct link to it. Although we are not affiliated with them, this can be a good
-			and easy solution if you want to upload your own custom icons.
-		</p>
-
-		<LazyVideo src="/documentation/overview/custom-icon.mp4" />
-
 		<h4 id="link-icons-cache">Cache policy</h4>
 
 		<p>
-			Icons from favicon-fetcher are stored in the browser cache for a year. As long as the
-			browser cache is not cleared, icons are not fetched (or updated) by the page. However,
-			if the browser cache is often cleared or storage space is limited on your device, icons
-			will have to be fetched from our service again.
+			Icons from <a href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a> are stored
+			in the browser cache for a year. As long as the browser cache is not cleared, icons are not
+			fetched (or updated) by the page. However, if the browser cache is often cleared or storage
+			space is limited on your device, icons will have to be fetched from our service again.
 		</p>
 
 		<p>
@@ -518,7 +556,7 @@ Author, Your second quote.`
 			chosen website.
 		</p>
 
-		<LazyVideo src="/documentation/overview/weather-report.mp4" />
+		<LazyVideo src="/documentation/overview/weather-report.webm" />
 
 		<p>
 			⚠️ We are in no way affiliated with MSN, Accuweather, Yahoo!, or Windy.com. These
@@ -546,7 +584,7 @@ Author, Your second quote.`
 			<li><code>[x]</code> checkbox, checked</li>
 		</ul>
 
-		<LazyVideo src="/documentation/overview/notes.mp4" />
+		<LazyVideo src="/documentation/overview/notes.webm" />
 
 		<p>Currently, other Markdown features, such as italics, are not supported.</p>
 
@@ -625,7 +663,7 @@ Author, Your second quote.`
 				from Bonjourr.
 			</p>
 
-			<LazyVideo src="/documentation/overview/custom-search.mp4" />
+			<LazyVideo src="/documentation/overview/custom-search.webm" />
 
 			<p>
 				This method will work with the vast majority of search engines, making Bonjourr
@@ -736,7 +774,45 @@ Author, Your second quote.`
 			</li>
 		</ol>
 
-		<LazyVideo src="/documentation/overview/quotes-gist.mp4" />
+		<LazyVideo src="/documentation/overview/quotes-gist.webm" />
+	</section>
+
+	<hr />
+
+	<section id="section-pomodoro">
+		<h2 id="quotes">⏱️ Pomodoro timer</h2>
+
+		<p>
+			The Pomodoro widget allows you to use the <a
+				href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a
+			> in Bonjourr, a time management method designed to help you work more efficiently.
+		</p>
+
+		<img src="/documentation/overview/pomodoro.png" alt="The Pomodoro widget" loading="lazy" />
+
+		<p>
+			The widget shall be used as per the original technique:
+			<ol>
+				<li>Decide on the task to be done.</li>
+				<li>Set the Pomodoro timer (typically for 25 minutes).</li>
+				<li>Work on the task.</li>
+				<li>
+					End work when the timer rings and take a short break (typically 5–10 minutes).
+				</li>
+				<li>Go back to Step 2 and repeat until you complete four pomodori.</li>
+				<li>
+					After four pomodori are done, take a long break (typically 20 to 30 minutes)
+					instead of a short break. Once the long break is finished, return to step 2.
+				</li>
+			</ol>
+		</p>
+
+		<p>
+			The Pomodoro widget keeps track of time even if you close Bonjourr (although won't ring
+			if no Bonjourr tab is open). Use the <bjr>Focus mode</bjr> to avoid being tempted by your
+			Quick Links or other widgets. You can edit the time of each mode in the widget's settings,
+			when <bjr>Show all settings</bjr> is enabled.
+		</p>
 	</section>
 
 	<hr />
@@ -768,7 +844,7 @@ Author, Your second quote.`
 			<li>Reset layout</li>
 		</ul>
 
-		<LazyVideo src="/documentation/overview/move-elem.mp4" />
+		<LazyVideo src="/documentation/overview/move-elem.webm" />
 	</section>
 
 	<hr />
@@ -835,7 +911,7 @@ Author, Your second quote.`
 					href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
 					>this guide on docs.github.com</a
 				>, or by following the steps shown below:
-				<LazyVideo src="/documentation/overview/gist-sync.mp4" />
+				<LazyVideo src="/documentation/overview/gist-sync.webm" />
 			</li>
 			<li>
 				Go back to Bonjourr and paste your token in the <bjr>Authentification token</bjr> input.

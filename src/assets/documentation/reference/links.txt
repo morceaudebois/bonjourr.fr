@@ -2,6 +2,7 @@
   linkstyle: 'large',    // large | medium | small | inline | text
   linknewtab: false,     // open in new tab
   linksrow: 6,           // From 1 to 16
+  linkiconradius: 1.1    // In em
   linkgroups: {
     on: false,           // true | false
     selected: '',        // Selected group
