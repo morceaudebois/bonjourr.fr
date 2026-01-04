@@ -13,6 +13,6 @@
   quicklinks: true,       // toggles quicklinks widget
   textShadow: 0.2,        // Interface text shadow, from 0 to 1
   announcements: 'major', // all | major | none
-  review: 0,              // Shows review popup at 30, -1 to disable
+  review: 0,              // -1 to disable
   css: '',                // User generated CSS
 }

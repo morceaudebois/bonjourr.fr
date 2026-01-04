@@ -25,15 +25,27 @@ Auteur, Votre deuxième citation.`
 
 		<img
 			src="/documentation/overview/exif.png"
-			alt="Infos de Bonjourr sur la photo actuelle"
+			alt="Informations de Bonjourr sur la photo actuelle"
 			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
 			loading="lazy"
 		/>
 
+		<h4 id="interface-context-menu">Menu contextuel</h4>
+
 		<p>
-			En cliquant sur l'icône <bjr>Télécharger</bjr>, vous téléchargerez la photo sur votre
-			ordinateur dans sa résolution maximale.
+			Bonjourr intègre un menu contextuel personnalisé sur la plupart de son interface.
+			Utilisez-le pour ajouter de nouveaux raccourcis, accéder facilement aux paramètres des
+			widgets et contrôler l’arrière-plan. Notez que vous pouvez toujours accéder au menu
+			contextuel par défaut en maintenant la touche <code>alt</code> enfoncée tout en faisant un
+			clic droit.
 		</p>
+
+		<img
+			src="/documentation/overview/context-menu.png"
+			alt="Menu contextuel de Bonjourr"
+			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
 	</section>
 
 	<hr />
@@ -50,6 +62,7 @@ Auteur, Votre deuxième citation.`
 			<li>
 				Appuyez sur la touche <code>esc</code> de votre clavier (tout en étant sur la page).
 			</li>
+			<li>Click droit pour accéder au menu contextuel</li>
 		</ul>
 
 		<h3>Afficher tous les réglages</h3>
@@ -68,7 +81,7 @@ Auteur, Votre deuxième citation.`
 			cliquable au même endroit qu'auparavant.
 		</p>
 
-		<video src="/documentation/overview/hide-icon.mp4" controls muted></video>
+		<video src="/documentation/overview/hide-icon.webm" controls muted></video>
 	</section>
 
 	<hr />
@@ -97,8 +110,7 @@ Auteur, Votre deuxième citation.`
 					href="https://github.com/victrme/Bonjourr/issues/431">Issue sur GitHub</a
 				>).
 			</li>
-			<li>Microsoft Edge n'affichera que la silhouette de l'émoji.</li>
-			<li>Safari ne prend pas du tout en charge cette fonction.</li>
+			<li>Safari et Microsoft Edge ne prennent pas du tout en charge cette fonction.</li>
 		</ul>
 
 		<p>Voici comment vous pouvez écrire des émojis :</p>
@@ -196,7 +208,7 @@ Auteur, Votre deuxième citation.`
 			</li>
 		</ol>
 
-		<video src="/documentation/overview/custom-unsplash-collection.mp4" controls muted></video>
+		<video src="/documentation/overview/custom-unsplash-collection.webm" controls muted></video>
 
 		<h4 id="unsplash-search">Recherche Unsplash</h4>
 
@@ -320,14 +332,15 @@ Auteur, Votre deuxième citation.`
 		<h3 id="link-usage">Utilisation de base</h3>
 
 		<p>
-			Vous pouvez ajouter des liens favoris en allant dans les paramètres de Bonjourr, dans la
-			section Liens favoris. Ils sont modifiables si vous faites un clic droit dessus (ou
-			appuyez longuement sur mobile), ce qui vous permet de changer leurs titres, URLs, icônes
-			et de les supprimer.
+			Pour ajouter des liens favoris, faites un clic droit sur la page ou ouvrez la section <em
+				>Liens favoris</em
+			> dans les paramètres. Ils sont modifiables en faisant un clic droit dessus (ou un appui
+			long sur mobile), ce qui vous permet de changer leur titre, leur URL, leur icône ou de les
+			supprimer.
 		</p>
 
 		<video autoplay loop muted playsinline>
-			<source src="/documentation/overview/links-usage.mp4" type="video/mp4" />
+			<source src="/documentation/overview/links-usage.webm" type="video/mp4" />
 			Votre navigateur ne prend pas en charge la balise vidéo.
 		</video>
 
@@ -407,45 +420,52 @@ Auteur, Votre deuxième citation.`
 			loading="lazy"
 		/>
 
-		<h3 id="link-icons">Icônes</h3>
+		<h3 id="link-icons">Icônes des liens</h3>
+
+		<p>Vous pouvez configurer les icônes de vos liens selon trois modes différents.</p>
+
+		<h4 id="link-icons-default">Favicon du site (par défaut)</h4>
 
 		<p>
-			Les icônes des liens sont récupérées par notre service maison <a
-				href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a
-			>. Si vous constatez quel l'icône d'un site est manquante, vous pouvez créer un Issue <a
-				href="https://github.com/victrme/Bonjourr/issues">sur GitHub</a
-			>
-			ou nous envoyer un e-mail, et nous ferons de notre mieux pour le corriger.
+			En mode par défaut, les icônes sont automatiquement récupérées via notre service maison
+			<a href="https://github.com/victrme/favicon-fetcher">favicon-fetcher</a>. Si vous
+			constatez qu’un site n’a pas son icône, vous pouvez créer un ticket
+			<a href="https://github.com/victrme/Bonjourr/issues">sur GitHub</a>
+			ou nous envoyer un e-mail — nous ferons de notre mieux pour corriger cela.
 		</p>
 
-		<h4 id="link-icons-custom">Icônes personnalisées</h4>
+		<h4 id="link-icons-local">Fichiers locaux</h4>
 
 		<p>
-			Le champ <code>Icône</code> que vous voyez lors de la modification d'un lien vous permet
-			de définir une URL distante vers n'importe quel fichier image que vous souhaitez présent
-			sur Internet. Cette URL peut être :
+			Personnalisez facilement les icônes de vos liens en les important directement depuis
+			votre ordinateur. La plupart des formats d’image sont acceptés, tels que JPG, PNG, WebP,
+			GIF (non animé) et SVG.
+		</p>
+
+		<h4 id="link-icons-url">URL distante</h4>
+
+		<p>
+			Ce mode vous permet de définir une URL distante pointant vers n’importe quelle image
+			disponible sur Internet. Cette URL peut être :
 		</p>
 
 		<ul>
 			<li>Une URL distante : <code>https://en.wikipedia.org/favicon.ico</code>.</li>
-			<li>Une URL hébergée localement : <code>http://127.0.0.1:4321/favicon.ico</code>.</li>
-			<li>Un Data URI inférieur à 8 Ko : <code>data:image/gif;base64,R0lGOD...AA7</code>.</li>
+			<li>Une URL hébergée en local : <code>http://127.0.0.1:4321/favicon.ico</code>.</li>
+			<li>
+				Une <a href="https://dopiaza.org/tools/datauri/index.php">Data URI</a> de moins de 8&nbsp;ko
+				:
+				<code>data:image/gif;base64,R0lGOD...AA7</code>.
+			</li>
 		</ul>
 
-		<p>Mais pas :</p>
+		<p>Mais pas&nbsp;:</p>
 
 		<ul>
-			<li>Un chemin de fichier (<code>file:///Users/Me/Pictures/flowers.png</code>).</li>
+			<li>
+				Un chemin de fichier local : <code>file:///Users/Me/Pictures/flowers.png</code>.
+			</li>
 		</ul>
-
-		<p>
-			Des services comme <a href="https://postimages.org/">postimages.org</a>, <a
-				href="https://imgbb.com/">imgbb.com</a
-			> ou <a href="https://imgur.com/">Imgur</a> vous permettent de téléverser des images sur
-			leur serveur et de récupérer un lien direct. Bien que nous ne soyons pas affiliés à ces services,
-			cela peut être une solution simple et efficace si vous souhaitez importer vos propres icônes
-			personnalisées.
-		</p>
 
 		<h4 id="link-icons-cache">Politique de cache</h4>
 
@@ -543,7 +563,7 @@ Auteur, Votre deuxième citation.`
 			au fournisseur de votre choix.
 		</p>
 
-		<video src="/documentation/overview/weather-report.mp4" controls></video>
+		<video src="/documentation/overview/weather-report.webm" controls></video>
 
 		<p>
 			⚠️ Nous ne sommes en aucun cas affiliés à MSN, Accuweather, Yahoo! ou Windy.com. Ces
@@ -572,7 +592,7 @@ Auteur, Votre deuxième citation.`
 			<li><code>[x]</code> case à cocher, cochée</li>
 		</ul>
 
-		<video src="/documentation/overview/notes.mp4" controls></video>
+		<video src="/documentation/overview/notes.webm" controls></video>
 
 		<p>
 			Actuellement, les autres fonctionnalités de Markdown, comme l'italique, ne sont pas
@@ -658,7 +678,7 @@ Auteur, Votre deuxième citation.`
 				correspondant de Bonjourr.
 			</p>
 
-			<video src="/documentation/overview/custom-search.mp4" controls></video>
+			<video src="/documentation/overview/custom-search.webm" controls></video>
 
 			<p>
 				Cette méthode fonctionnera avec la grande majorité des moteurs de recherche, ce qui
@@ -779,7 +799,51 @@ Auteur, Votre deuxième citation.`
 			</li>
 		</ol>
 
-		<video src="/documentation/overview/quotes-gist.mp4" controls></video>
+		<video src="/documentation/overview/quotes-gist.webm" controls></video>
+	</section>
+
+	<hr />
+
+	<section id="section-pomodoro">
+		<h2 id="quotes">⏱️ Minuteur Pomodoro</h2>
+
+		<p>
+			Le widget Pomodoro vous permet d’utiliser la <a
+				href="https://fr.wikipedia.org/wiki/Technique_Pomodoro">méthode Pomodoro</a
+			>, une technique de gestion du temps conçue pour vous aider à travailler plus
+			efficacement.
+		</p>
+
+		<img src="/documentation/overview/pomodoro.png" alt="Le widget Pomodoro" loading="lazy" />
+
+		<p>
+			Le widget s’utilise selon la méthode originale :
+			<ol>
+				<li>Choisissez la tâche à effectuer.</li>
+				<li>Réglez le minuteur Pomodoro (généralement sur 25 minutes).</li>
+				<li>Travaillez sur la tâche.</li>
+				<li>
+					Arrêtez-vous lorsque le minuteur sonne et prenez une courte pause (en général 5
+					à 10 minutes).
+				</li>
+				<li>Revenez à l’étape 2 et répétez jusqu’à avoir complété quatre pomodori.</li>
+				<li>
+					Après quatre pomodori, prenez une longue pause (en général 20 à 30 minutes) au
+					lieu d’une courte pause. Une fois la longue pause terminée, retournez à l’étape
+					2.
+				</li>
+			</ol>
+		</p>
+
+		<p>
+			Le widget Pomodoro continue de suivre le temps même si vous fermez Bonjourr (il ne
+			sonnera toutefois pas si aucun onglet Bonjourr n’est ouvert). Utilisez le <bjr
+				>mode Focus</bjr
+			> pour éviter d’être distrait par vos Liens rapides ou autres widgets. Vous pouvez modifier
+			la durée de chaque mode dans les paramètres du widget, lorsque l’option <bjr
+				>Afficher tous les paramètres</bjr
+			> est activée.
+		</p>
 	</section>
 
 	<hr />
@@ -814,7 +878,7 @@ Auteur, Votre deuxième citation.`
 			<li>Réinitialiser la disposition</li>
 		</ul>
 
-		<video src="/documentation/overview/move-elem.mp4" controls muted></video>
+		<video src="/documentation/overview/move-elem.webm" controls muted></video>
 	</section>
 
 	<hr />
@@ -882,7 +946,7 @@ Auteur, Votre deuxième citation.`
 					href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token"
 					>ce guide sur docs.github.com</a
 				>, ou suivez les étapes ci-dessous :
-				<video src="/documentation/overview/gist-sync.mp4" controls muted></video>
+				<video src="/documentation/overview/gist-sync.webm" controls muted></video>
 			</li>
 			<li>
 				Retournez sur Bonjourr et collez votre jeton dans le champ <bjr
