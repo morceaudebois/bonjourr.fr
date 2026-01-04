@@ -2,7 +2,7 @@
 import { Code } from "astro-expressive-code/components"
 
 const { id, code, image_src, image_alt } = Astro.props
-let href = ""
+const href = `data:application/json;charset=utf-8,${encodeURIComponent(code)}`
 ---
 
 <h2 id={id}>
@@ -14,7 +14,7 @@ let href = ""
 </picture>
 
 <div>
-	<a href={`data:text/json;charset=utf-8,${href}`} download={`bonjourr-profile-${id}.json`}>
+	<a href={href} download={`bonjourr-profile-${id}.json`}>
 		<slot name="download-label">Download import file</slot>
 	</a>
 	<details>

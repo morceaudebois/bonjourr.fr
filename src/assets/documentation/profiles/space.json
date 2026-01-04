@@ -10,7 +10,7 @@
 	"background_bright": 0.5,
 	"background_type": "unsplash",
 	"quicklinks": true,
-	"css": "/* Change weather text here */\n\n#interface #current::after {\n content: 'C on earth.'\n}\n\n/* the rest */\n\n#interface { color: #dfe1cc!important }\n#interface #time #date { margin: 0 50px }\n#interface #time {\n display: flex;\n align-items: center;\n justify-content: center;\n flex-wrap: wrap;\n}\n\n#show-settings button img {\n filter: sepia(1)\n}\n\n",
+	"css": "/* Change weather text here */\n\n#interface #current::after {\n content: 'C on Earth.'\n}\n\n/* the rest */\n\n#interface { color: #dfe1cc!important }\n#interface #time #date { margin: 0 50px }\n#interface #clock-wrapper {\n display: flex;\n align-items: center;\n flex-wrap: wrap;\n\tgap: 1em;\n}\n\n#interface .clock-date {\n\tdisplay: flex;\n}\n\n#show-settings button img {\n filter: sepia(1)\n}\n\n",
 	"hide": {
 		"weatherdesc": false,
 		"weathericon": true
