@@ -3,7 +3,8 @@ const { src } = Astro.props
 ---
 
 <video class="lazy" preload="none" controls>
-	<source data-src={src} type="video/mp4" />
+    <source data-src={src + ".webm"} type="video/webm; codecs=vp9" />
+	<source data-src={src + ".mp4"} type="video/mp4" />
 </video>
 
 <!-- Attach lazyload init once -->
