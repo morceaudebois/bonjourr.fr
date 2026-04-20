@@ -1,0 +1,11 @@
+/* shows the full background image with no cropping (black bars), useful if you have a portrait orientation background */ 
+#background-media .background-image {
+	background-size: contain!important;
+	background-repeat: no-repeat;
+	transform: scale(1); /* try 0.9 if you want margins at the top and bottom as well */
+}
+
+body {
+	/* accepts any hexadecimal color value, like #417781 */
+	background-color: black;
+}
