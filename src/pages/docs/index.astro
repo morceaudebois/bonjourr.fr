@@ -57,14 +57,6 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 					alt="Download Bonjourr for Edge"
 				/>
 			</a>
-
-			<a href={appleAppStore} target="_blank">
-				<img
-					src="https://labels.tahoe.be/safari_download_dark.svg"
-					height="53"
-					alt="Download Bonjourr for Safari"
-				/>
-			</a>
 		</div>
 
 		<hr style="margin-block: 3.5em" />
@@ -76,14 +68,25 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 			case-by-case basis.
 		</p>
 
-		<h3 id="brave">Brave (desktop)</h3>
+		<h3 id="safari">Safari</h3>
 
 		<p>
-			Being a Chromium based browser, Brave has the ability to install any Chrome extension.
-			You can download Bonjourr <a
-				href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
-				>from the Chrome Web Store</a
-			> and start using it right away.
+			Bonjourr can installed on Safari for macOS in just a few seconds:
+			<ol>
+				<li>Open the General tab in Safari's preferences (<code>⌘-Comma</code>)</li>
+				<li>
+					Set <bjr>New windows open with</bjr> and <bjr>New tabs open with</bjr> to "Homepage".
+				</li>
+				<li>Set the Homepage text area to <code>https://online.bonjourr.fr</code></li>
+			</ol>
+		</p>
+
+		<p style="font-style: italic">
+			NB: Safari was available on the App Store for a few years (including for iOS & iPadOS)
+			but has been <a
+				href="https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5"
+				>discontinued since May 2026</a
+			>. The mobile versions sadly don't have a replacement.
 		</p>
 
 		<h3 id="zen">Zen (desktop)</h3>
@@ -103,11 +106,11 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 			</li>
 
 			<li>
-				Then, head to <code>about:config</code> in your URL bar, click "Accept the risk" and search
-				for
-				<code>zen.urlbar.replace-newtab</code>. Switch the value to <code>false</code> using the
-				button on the right, and close the page. This ensures that Bonjourr actually shows up
-				when you open new Zen tabs.
+				Then, head to <code>about:config</code> in your URL bar, click "Accept the risk" and
+				search for
+				<code>zen.urlbar.replace-newtab</code>. Switch the value to <code>false</code> using
+				the button on the right, and close the page. This ensures that Bonjourr actually shows
+				up when you open new Zen tabs.
 			</li>
 
 			<li>
@@ -122,6 +125,16 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 			Additionally, Bonjourr supports transparency in Zen using a <a
 				href="/docs/styles#plain-background">CSS snippet</a
 			> to paste in the Custom styles settings.
+		</p>
+
+		<h3 id="brave">Brave (desktop)</h3>
+
+		<p>
+			Being a Chromium based browser, Brave has the ability to install any Chrome extension.
+			You can download Bonjourr <a
+				href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+				>from the Chrome Web Store</a
+			> and start using it right away.
 		</p>
 
 		<h3 id="opera">Opera (desktop)</h3>
@@ -215,13 +228,13 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 			> on their forum.
 		</p>
 	</section>
-</DocsLanding>
 
-<style>
-	#downloadLabels {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(8em, 100%), 1fr));
-		grid-gap: 1em;
-		margin-top: 1.75em;
-	}
-</style>
+	<style>
+		#downloadLabels {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(8em, 100%), 1fr));
+			grid-gap: 1em;
+			margin-top: 1.75em;
+		}
+	</style>
+</DocsLanding>

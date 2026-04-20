@@ -18,7 +18,7 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 	<span slot="reference-title">Référence des paramètres</span>
 	<span slot="reference-desc">Description complète des paramètres enregistrés</span>
 
-	<span slot="contribute-title">Participez</span>
+	<span slot="contribute-title">Contribuer</span>
 	<span slot="contribute-desc">Voyez comment nous aider à rendre Bonjourr encore meilleur</span>
 
 	<span slot="profiles-title">Profiles personnalisés</span>
@@ -62,14 +62,6 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 					alt="Télécharger Bonjourr pour Edge"
 				/>
 			</a>
-
-			<a href={appleAppStore} target="_blank">
-				<img
-					src="https://labels.tahoe.be/safari_download_dark.svg"
-					height="53"
-					alt="Télécharger Bonjourr pour Safari"
-				/>
-			</a>
 		</div>
 
 		<hr style="margin-block: 3.5em" />
@@ -78,6 +70,33 @@ const appleAppStore = "https://apps.apple.com/app/bonjourr-startpage/id161543123
 
 		<p>
 			Il est parfois possible d’installer Bonjourr sur d’autres navigateurs, au cas par cas.
+		</p>
+
+		<h3 id="safari">Safari</h3>
+
+		<p>
+			Bonjourr peut être installé sur Safari pour macOS en quelques secondes :
+			<ol>
+				<li>
+					Ouvrez l’onglet Général dans les préférences de Safari (<code>⌘-Virgule</code>)
+				</li>
+				<li>
+					Définissez <bjr>Les nouvelles fenêtres ouvrent</bjr> et <bjr
+						>Les nouveaux onglets ouvrent</bjr
+					> sur « Page d’accueil ».
+				</li>
+				<li>
+					Définissez le champ Page d’accueil sur <code>https://online.bonjourr.fr</code>
+				</li>
+			</ol>
+		</p>
+
+		<p style="font-style: italic">
+			NB : Safari a été disponible sur l’App Store pendant quelques années (y compris pour iOS
+			et iPadOS), mais a été <a
+				href="https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5"
+				>abandonné depuis mai 2026</a
+			>. Les versions mobiles n’ont malheureusement pas de remplacement.
 		</p>
 
 		<h3 id="brave">Brave (ordinateur)</h3>
