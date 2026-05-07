@@ -1,0 +1,132 @@
+---
+import Layout from "@layouts/Layout.astro"
+import { getCollection, getEntry, render } from "astro:content"
+
+export async function getStaticPaths() {
+	const allPosts = await getCollection("blog")
+	return allPosts.map((post) => ({ params: { slug: post.slug } }))
+}
+
+const post = await getEntry("blog", Astro.params.slug)
+if (!post) {
+	throw new Error(`Blog post not found: ${Astro.params.slug}`)
+}
+const pageUrl = `https://bonjourr.fr/blog/${Astro.params.slug}`
+const pageImage = post.data.image ?? "https://bonjourr.fr/twitter.jpg"
+const { Content } = await render(post)
+---
+
+<Layout
+	lang="en"
+	id="blog-post"
+	title={`${post.data.title} · Bonjourr`}
+	ogtitle={`${post.data.title} · Bonjourr`}
+	desc={post.data.description}
+	canonical={pageUrl}
+	ogImage={pageImage}
+	type="article"
+	publishedTime={post.data.pubDate}
+	author={post.data.author}
+	tags={post.data.tags}
+>
+	<main>
+		<section class="page-section">
+			<div class="section-wrapper">
+				<article class="blog-post">
+					<p class="post-meta">
+						{
+							new Date(post.data.pubDate).toLocaleDateString("en-US", {
+								year: "numeric",
+								month: "long",
+								day: "numeric",
+							})
+						}
+					</p>
+					<h1>{post.data.title}</h1>
+					<p class="post-description">{post.data.description}</p>
+					{post.data.image ? (
+						<img
+							class="post-image"
+							src={post.data.image}
+							alt={post.data.imageAlt ?? post.data.title}
+						/>
+					) : null}
+					<div class="content"><Content /></div>
+					<p class="back-link"><a href="/blog">← Back to updates</a></p>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		.page-section {
+			padding: 5rem 2rem;
+		}
+
+		.section-wrapper {
+			max-width: 860px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			font-size: clamp(2.5rem, 5vw, 3.5rem);
+			margin: 1rem 0 0.5rem;
+		}
+
+		.post-meta {
+			font-size: 0.95rem;
+			opacity: 0.7;
+			margin-bottom: 1rem;
+		}
+
+		.post-description {
+			font-size: 1.1rem;
+			margin-bottom: 2rem;
+			line-height: 1.9;
+		}
+
+		.blog-post p,
+		.blog-post ul,
+		.blog-post ol {
+			line-height: 1.9;
+		}
+
+		.blog-post h2,
+		.blog-post h3 {
+			margin-top: 2em;
+		}
+
+		.blog-post code {
+			background: rgba(255, 255, 255, 0.06);
+			padding: 0.2em 0.4em;
+			border-radius: 0.4em;
+		}
+
+		.post-image {
+			display: block;
+			width: 100%;
+			max-height: 520px;
+			object-fit: cover;
+			border-radius: 24px;
+			margin: 2rem 0;
+		}
+
+		.content {
+			margin-top: 2rem;
+		}
+
+		.back-link {
+			margin-top: 3rem;
+		}
+
+		.back-link a {
+			font-weight: 600;
+		}
+
+		@media (max-width: 700px) {
+			.page-section {
+				padding: 3rem 1.5rem;
+			}
+		}
+	</style>
+</Layout>

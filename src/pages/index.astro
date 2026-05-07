@@ -5,6 +5,7 @@ import Frontpage from "@components/Frontpage/Frontpage.astro"
 import Landing from "@components/Frontpage/Landing.astro"
 import Further from "@components/Frontpage/Further.astro"
 import Showcase from "@components/Frontpage/Showcase.astro"
+import Blog from "@components/Frontpage/Blog.astro"
 ---
 
 <Layout
@@ -94,6 +95,8 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 			</span>
 			<span slot="repo-button">GitHub repository</span>
 		</Further>
+
+		<Blog slot="blog" />
 
 		<h2 slot="donate-title">✨ Donate ✨</h2>
 		<p slot="donate-text">

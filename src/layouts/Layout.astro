@@ -3,7 +3,11 @@ import Footer from "@components/Footer.astro"
 import Navigation from "@components/Navigation.astro"
 import Notice from "@components/Notice.astro"
 
-const { title, ogtitle, desc, lang, id } = Astro.props
+const { title, ogtitle, desc, lang, id, canonical, ogImage, type, publishedTime, author } =
+	Astro.props
+const siteUrl = Astro.site ?? "https://bonjourr.fr"
+const pageUrl = canonical ?? siteUrl
+const pageImage = ogImage ?? "https://bonjourr.fr/twitter.jpg"
 const metaKeywords = "extension, startpage, homepage, browser startpage, minimalism, lightweight"
 ---
 
@@ -17,18 +21,19 @@ const metaKeywords = "extension, startpage, homepage, browser startpage, minimal
 		<meta name="description" content={desc} />
 		<meta property="og:title" content={ogtitle} />
 		<meta property="og:description" content={desc} />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://bonjourr.fr/" />
-		<meta property="og:image" content="https://bonjourr.fr/twitter.jpg" />
+		<meta property="og:type" content={type ?? "website"} />
+		<meta property="og:url" content={pageUrl} />
+		<meta property="og:image" content={pageImage} />
+		<link rel="canonical" href={pageUrl} />
 		<meta name="keywords" content={metaKeywords} />
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:image" content="https://bonjourr.fr/twitter.jpg" />
+		<meta name="twitter:image" content={pageImage} />
+		{publishedTime ? <meta property="article:published_time" content={publishedTime} /> : null}
+		{author ? <meta property="article:author" content={author} /> : null}
 		<meta name="twitter:creator" content="BonjourrTeam" />
 		<meta name="twitter:title" content={ogtitle} />
 		<meta name="twitter:description" content={desc} />
 		<meta name="theme-color" content="#2f98b4" />
-
-		<link rel="canonical" href="https://bonjourr.fr" />
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=42df474" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=42df474" />

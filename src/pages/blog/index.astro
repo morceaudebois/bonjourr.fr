@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro"
+import { getCollection } from "astro:content"
+
+const posts = await getCollection("blog")
+const sortedPosts = posts.sort(
+	(a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+)
+const pageUrl = "https://bonjourr.fr/blog"
+---
+
+<Layout
+	lang="en"
+	id="blog"
+	title="Bonjourr Blog · Updates and news"
+	ogtitle="Bonjourr Blog · Updates and news"
+	desc="Read the latest Bonjourr updates, release notes, and development news."
+	canonical={pageUrl}
+	ogImage="https://bonjourr.fr/twitter.jpg"
+>
+	<main>
+		<section class="page-section">
+			<div class="section-wrapper">
+				<h1>Bonjourr Blog</h1>
+				<p>Read the latest updates, release notes, and product news from the Bonjourr team.</p>
+
+				<div class="post-grid">
+					{sortedPosts.map((post) => (
+						<article class="post-card">
+							<a href={`/blog/${post.slug}`} class="post-title">{post.data.title}</a>
+							<p class="post-meta">{new Date(post.data.pubDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+							{post.data.image ? (
+								<img src={post.data.image} alt={post.data.imageAlt ?? post.data.title} class="post-thumb" />
+							) : null}
+							<p>{post.data.description}</p>
+						</article>
+					))}
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		.page-section {
+			padding: 5rem 2rem;
+			min-height: 100vh;
+		}
+
+		.section-wrapper {
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			font-size: 3rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.post-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 1.5rem;
+			margin-top: 2.5rem;
+		}
+
+		.post-card {
+			padding: 2rem;
+			border-radius: 24px;
+			background: rgba(255, 255, 255, 0.06);
+			border: 1px solid rgba(255, 255, 255, 0.08);
+				color: inherit;
+			}
+
+			.post-thumb {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 18px;
+				margin: 1rem 0;
+				object-fit: cover;
+			}
+		}
+
+		@media (max-width: 700px) {
+			.page-section {
+				padding: 3rem 1.5rem;
+			}
+		}
+	</style>
+</Layout>
