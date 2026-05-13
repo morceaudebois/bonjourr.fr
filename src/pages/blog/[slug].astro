@@ -44,13 +44,15 @@ const { Content } = await render(post)
 					</p>
 					<h1>{post.data.title}</h1>
 					<p class="post-description">{post.data.description}</p>
-					{post.data.image ? (
-						<img
-							class="post-image"
-							src={post.data.image}
-							alt={post.data.imageAlt ?? post.data.title}
-						/>
-					) : null}
+					{
+						post.data.image ? (
+							<img
+								class="post-image"
+								src={post.data.image}
+								alt={post.data.imageAlt ?? post.data.title}
+							/>
+						) : null
+					}
 					<div class="content"><Content /></div>
 					<p class="back-link"><a href="/blog">← Back to updates</a></p>
 				</article>
@@ -125,7 +127,7 @@ const { Content } = await render(post)
 
 		@media (max-width: 700px) {
 			.page-section {
-				padding: 3rem 1.5rem;
+				padding: 64px 1.5rem;
 			}
 		}
 	</style>
