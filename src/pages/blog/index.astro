@@ -1,12 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro"
 import DocsTitle from "@components/Docs/DocsTitle.astro"
-
-import { getCollection } from "astro:content"
-const posts = await getCollection("blog")
-const sortedPosts = posts.sort(
-	(a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
-)
+import BlogGrid from "@components/BlogGrid.astro"
 const pageUrl = "https://bonjourr.fr/blog"
 ---
 
@@ -27,32 +22,7 @@ const pageUrl = "https://bonjourr.fr/blog"
 
 		<section class="page-section">
 			<div class="section-wrapper">
-				<div class="post-grid">
-					{
-						sortedPosts.map((post) => (
-							<article class="post-card">
-								<a href={`/blog/${post.slug}`} class="post-title">
-									{post.data.title}
-								</a>
-								<p class="post-meta">
-									{new Date(post.data.pubDate).toLocaleDateString("en-US", {
-										year: "numeric",
-										month: "long",
-										day: "numeric",
-									})}
-								</p>
-								{post.data.image ? (
-									<img
-										src={post.data.image}
-										alt={post.data.imageAlt ?? post.data.title}
-										class="post-thumb"
-									/>
-								) : null}
-								<p>{post.data.description}</p>
-							</article>
-						))
-					}
-				</div>
+				<BlogGrid slot="BlogGrid" postsIndex="33" />
 			</div>
 		</section>
 	</main>
@@ -68,6 +38,4 @@ const pageUrl = "https://bonjourr.fr/blog"
 			max-width: 1200px;
 		}
 	</style>
-
-	<style></style>
 </Layout>

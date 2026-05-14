@@ -1,0 +1,119 @@
+---
+const { postsIndex } = Astro.props
+
+import { getCollection } from "astro:content"
+const posts = await getCollection("blog")
+const latestPosts = posts
+	.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+	.slice(0, postsIndex)
+---
+
+<div class="blog-grid">
+	{
+		latestPosts.map((post) => (
+			<a class="blog-card" href={`/blog/${post.slug}`}>
+				{post.data.image ? (
+					<img
+						class="post-image"
+						src={post.data.image}
+						alt={post.data.imageAlt ?? post.data.title}
+					/>
+				) : null}
+
+				<div class="post-text">
+					<div>
+						<p class="blog-date">
+							{new Date(post.data.pubDate).toLocaleDateString("en-US", {
+								year: "numeric",
+								month: "short",
+								day: "numeric",
+							})}
+						</p>
+						<h3>{post.data.title}</h3>
+						<p>{post.data.description}</p>
+					</div>
+
+					<div class="read-more">Read more →</div>
+				</div>
+			</a>
+		))
+	}
+</div>
+
+<style>
+	.blog-grid {
+		display: grid;
+		gap: 1.5rem;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
+
+	.blog-card {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border-radius: 28px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		text-decoration: none;
+		color: inherit;
+		transition:
+			transform 0.18s ease,
+			border-color 0.18s ease,
+			background 0.18s ease;
+	}
+
+	.blog-card:hover {
+		transform: translateY(-4px);
+		border-color: rgba(255, 255, 255, 0.22);
+		background: rgba(255, 255, 255, 0.08);
+	}
+
+	.blog-card img {
+		aspect-ratio: 3/2;
+		object-fit: cover;
+	}
+
+	.post-text {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	.blog-date {
+		font-size: 0.95rem;
+		opacity: 0.7;
+		margin-bottom: 0.75rem;
+	}
+
+	.blog-card h3 {
+		margin: 0 0 0.75rem;
+		font-size: 1.35rem;
+		line-height: 1.2;
+	}
+
+	.blog-card p {
+		margin: 0;
+		line-height: 1.8;
+	}
+
+	.read-more {
+		margin-top: 1.5rem;
+		font-weight: 600;
+		opacity: 0.85;
+	}
+
+	@media (prefers-color-scheme: light) {
+		.blog-card {
+			background: var(--color-background-secondary);
+			border: 1px solid rgba(0, 0, 0, 0.12);
+		}
+
+		.blog-card:hover {
+			border-color: rgba(0, 0, 0, 0.22);
+			background: rgba(0, 0, 0, 0.08);
+		}
+	}
+</style>
