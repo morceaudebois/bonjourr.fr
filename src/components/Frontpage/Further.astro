@@ -45,28 +45,46 @@ import Link from "../Link.astro"
 	</div>
 </div>
 
-<div class="bloc">
+<!-- <div class="bloc">
 	<h3>
 		<slot name="repo-title" />
 	</h3>
 	<p>
 		<slot name="repo-desc" />
 	</p>
+</div> -->
 
-	<div class="btn-wrapper">
-		<a href="https://github.com/victrme/Bonjourr" class="button btn-themed">
-			<img width="64" src="/frontpage/github-dark.svg" class="icon" alt="" />
-			<slot name="repo-button" />
-		</a>
-	</div>
-</div>
+<style is:global>
+	#further {
+		min-height: 900px;
+		margin-inline: auto;
+		padding: 5em 2em;
+	}
+
+	#further .section-wrapper {
+		max-width: 700px;
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	@media only screen and (max-width: 500px) {
+		#further {
+			padding: 1.5em 0.5em;
+		}
+
+		#further .section-wrapper {
+			padding: 2em 1em;
+		}
+	}
+</style>
 
 <style>
 	h2 {
 		text-align: center;
 		font-size: 2em;
 		font-weight: 500;
-		margin-bottom: 1.25em;
+		margin-top: unset;
 	}
 
 	h3 {
@@ -76,12 +94,15 @@ import Link from "../Link.astro"
 	}
 
 	p {
-		margin: 1.5em 0;
+		margin-top: 1em;
 		align-self: flex-start;
+		color: #6e6e73;
 	}
 
 	.bloc {
-		margin: 4em 0;
+		padding: 2em;
+		background-color: var(--color-background);
+		border-radius: 30px;
 	}
 
 	.btn-wrapper {

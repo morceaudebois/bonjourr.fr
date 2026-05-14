@@ -34,15 +34,22 @@ const latestPosts = posts
 		</div>
 
 		<div class="blog-action">
-			<a class="button" href="/blog">See all updates</a>
+			<a class="button btn-themed" href="/blog">See all updates</a>
 		</div>
 	</div>
 </div>
 
 <style>
 	#blog {
-		background: linear-gradient(180deg, rgba(17, 17, 17, 0.95) 0%, rgba(14, 14, 14, 0.95) 100%);
-		color: white;
+		background: var(--color-background);
+
+		/* background: linear-gradient(180deg, rgba(17, 17, 17, 0.95) 0%, rgba(14, 14, 14, 0.95) 100%);
+		color: white; */
+	}
+
+	.section-wrapper {
+		max-width: 1200px;
+		margin-inline: auto;
 	}
 
 	.blog-grid {
@@ -105,6 +112,18 @@ const latestPosts = posts
 	@media (max-width: 900px) {
 		#blog .section-wrapper {
 			padding: 64px 1.5rem;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		.blog-card {
+			background: var(--color-background-secondary);
+			border: 1px solid rgba(0, 0, 0, 0.12);
+		}
+
+		.blog-card:hover {
+			border-color: rgba(0, 0, 0, 0.22);
+			background: rgba(0, 0, 0, 0.08);
 		}
 	}
 </style>
