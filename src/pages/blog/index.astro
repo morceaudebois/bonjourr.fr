@@ -22,20 +22,24 @@ const pageUrl = "https://bonjourr.fr/blog"
 
 		<section class="page-section">
 			<div class="section-wrapper">
+				<p>
+					Read the latest Bonjourr news, development updates, and release announcements.
+				</p>
 				<BlogGrid slot="BlogGrid" postsIndex="33" />
 			</div>
 		</section>
 	</main>
 
-	<style is:global>
-		h1 {
-			font-size: 3em;
-			line-height: 2em;
-			text-align: center;
+	<style>
+		.section-wrapper {
+			margin: auto;
+			padding: 3em 2em;
+			max-width: 1200px;
+			z-index: 1;
 		}
 
-		.content {
-			max-width: 1200px;
+		p {
+			margin-bottom: 3em;
 		}
 	</style>
 </Layout>

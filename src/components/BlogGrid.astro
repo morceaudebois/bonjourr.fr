@@ -1,8 +1,10 @@
 ---
+// how many posts to show
 const { postsIndex } = Astro.props
 
 import { getCollection } from "astro:content"
 const posts = await getCollection("blog")
+
 const latestPosts = posts
 	.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
 	.slice(0, postsIndex)
@@ -11,7 +13,7 @@ const latestPosts = posts
 <div class="blog-grid">
 	{
 		latestPosts.map((post) => (
-			<a class="blog-card" href={`/blog/${post.slug}`}>
+			<a class="blog-card" href={`/blog/${post.id}`}>
 				{post.data.image ? (
 					<img
 						class="post-image"
