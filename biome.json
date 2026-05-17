@@ -1,0 +1,38 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"includes": ["src/**"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100
+	},
+	"linter": {
+		"enabled": true
+	},
+	"html": {
+		"experimentalFullSupportEnabled": true
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"semicolons": "asNeeded"
+		},
+		"experimentalEmbeddedSnippetsEnabled": true
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"recommended": true,
+				"organizeImports": "off"
+			}
+		}
+	}
+}
