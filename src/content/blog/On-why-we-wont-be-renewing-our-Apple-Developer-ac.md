@@ -22,7 +22,9 @@ As you can see, **Bonjourr for Safari has only accumulated around 4,000 users si
 
 In fact, the App Store version of Bonjourr is by far our most time consuming version to develop and maintain. The main culprit is that Apple doesn't treat Safari extensions as... browser extensions, but as apps. This implies **a totally different workflow**: you need to compile files with Xcode, adding a lot of extra work and potential problems. Add in the fact that Safari itself often has **peculiar bugs that are difficult to reproduce and fix**, and you get an unfortunate situation **where the least used version of Bonjourr requires the most work**.
 
-[Our soon to be defunct App Store listing 🥲](https://storage.ko-fi.com/cdn/useruploads/display/ad11f33b-a2bb-47b1-a14a-62ca1d51f078_screenshot2026-03-28at16.15.15.png "Our soon to be defunct App Store listing 🥲")
+<!-- ![Alt text](https://storage.ko-fi.com/cdn/useruploads/display/ad11f33b-a2bb-47b1-a14a-62ca1d51f078_screenshot2026-03-28at16.15.15.png "Our soon to be defunct App Store listing 🥲") -->
+
+![Alt text](https://storage.ko-fi.com/cdn/useruploads/display/ad11f33b-a2bb-47b1-a14a-62ca1d51f078_screenshot2026-03-28at16.15.15.png "The caption")
 
 There is the infamous **99€ yearly fee** that Apple requires developers to pay, too. This fee is understandable in the case of companies who make a living out of it, but it's **a hard pill to swallow every year** for small open source developers like us, especially since **Apple prohibits us to advertise our Ko-fi page** in Bonjourr. You can ask for donations, but <u>they have to pass through their system</u>, which once again adds more work and overhead for us (and of course imposes a 10% cut for Apple).
 
