@@ -89,7 +89,14 @@ import Blog from "@components/Frontpage/Blog.astro"
 			<span slot="docs-button">Documentation</span>
 		</Further>
 
-		<Blog slot="blog" />
+		<Blog slot="blog" readMoreLabel="Read more →">
+			<span slot="blog-title">Latest updates</span>
+			<span slot="blog-desc"
+				>Read the latest Bonjourr news, development updates, and release announcements.</span
+			>
+
+			<span slot="blog-read-all">See all updates</span>
+		</Blog>
 
 		<h2 slot="donate-title">✨ Donate ✨</h2>
 		<p slot="donate-text">

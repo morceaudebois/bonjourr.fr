@@ -1,16 +1,27 @@
 ---
 import BlogGrid from "@components/BlogGrid.astro"
+const { readMoreLabel = "Read more →" } = Astro.props
 ---
 
 <div id="blog">
 	<div class="section-wrapper">
-		<h2>Latest updates</h2>
-		<p>Read the latest Bonjourr news, development updates, and release announcements.</p>
+		<h2>
+			<slot name="blog-title" />
+		</h2>
+		<p>
+			<slot name="blog-desc" />
+		</p>
 
-		<BlogGrid slot="BlogGrid" postsIndex="3" />
+		<BlogGrid slot="BlogGrid" postsIndex="3" readMoreLabel={readMoreLabel} />
 
 		<div class="blog-action">
-			<a class="button btn-themed" href="/blog">See all updates</a>
+			<a
+				class="button btn-themed"
+				href="https://ko-fi.com/bonjourr/posts"
+				rel="noopener noreferrer"
+			>
+				<slot name="blog-read-all" /></a
+			>
 		</div>
 	</div>
 </div>

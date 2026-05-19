@@ -8,14 +8,14 @@ const en = {
 	Home: "Home",
 	Donate: "Donate",
 	Try: "Try online",
-	Download: "Download for",
+	Install: "Install on",
 	Socials: "Socials",
 }
 const fr = {
 	Home: "Accueil",
 	Donate: "Dons",
 	Try: "Démo en ligne",
-	Download: "Télécharger pour",
+	Install: "Installer sur",
 	Socials: "Réseaux sociaux",
 }
 const trans = isFrench ? fr : en
@@ -27,7 +27,7 @@ const trans = isFrench ? fr : en
 			<li>
 				<Link href="/docs" title="Documentation">Docs</Link>
 			</li><li>
-				<Link href="/blog" title="Blog">Blog</Link>
+				<Link href="/#blog" title="Blog">Blog</Link>
 			</li><li>
 				<Link href="/#further" title="Get in touch">Contact</Link>
 			</li><li>
@@ -171,7 +171,7 @@ const trans = isFrench ? fr : en
 				</li>
 			</ul>
 
-			<h2>{trans.Download}</h2>
+			<h2>{trans.Install}</h2>
 
 			<ul>
 				<li>
@@ -193,10 +193,7 @@ const trans = isFrench ? fr : en
 					</a>
 				</li>
 				<li>
-					<a
-						href="https://apps.apple.com/app/bonjourr-startpage/id1615431236"
-						title="Download Bonjourr for Safari"
-					>
+					<a href="/docs#safari" title="Install Bonjourr on Safari">
 						<img src="/browsers/safari.svg" alt="" />
 						<span>Safari</span>
 					</a>
@@ -215,6 +212,12 @@ const trans = isFrench ? fr : en
 			<h2>{trans.Socials}</h2>
 
 			<ul>
+				<li>
+					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
+						<img src="/frontpage/bluesky-blue.svg" alt="Bluesky icon" />
+						<span>Bluesky</span>
+					</a>
+				</li>
 				<li>
 					<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
 						<picture>
@@ -238,12 +241,7 @@ const trans = isFrench ? fr : en
 						<span>Telegram</span>
 					</a>
 				</li>
-				<li>
-					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
-						<img src="/frontpage/bluesky-blue.svg" alt="Bluesky icon" />
-						<span>Bluesky</span>
-					</a>
-				</li>
+
 				<!-- <li>
 					<a href="https://twitter.com/BonjourrTeam" title="Joins us on Twitter">
 						<svg viewBox="0 0 300.00006 244.18703" xmlns="http://www.w3.org/2000/svg"

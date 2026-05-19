@@ -5,6 +5,7 @@ import Frontpage from "@components/Frontpage/Frontpage.astro"
 import Landing from "@components/Frontpage/Landing.astro"
 import Further from "@components/Frontpage/Further.astro"
 import Showcase from "@components/Frontpage/Showcase.astro"
+import Blog from "@components/Frontpage/Blog.astro"
 ---
 
 <Layout
@@ -65,6 +66,16 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 			pourquoi vous pouvez utiliser Bonjourr dès l'installation, sans avoir à créer un compte,
 			car nous ne collectons ni ne vendons aucune donnée.
 		</p>
+
+		<Blog slot="blog" readMoreLabel="Lire la suite →">
+			<span slot="blog-title">Derniers articles</span>
+			<span slot="blog-desc"
+				>Découvrez les dernières actus de Bonjourr, les mises à jour et les nouvelles
+				versions.</span
+			>
+
+			<span slot="blog-read-all">Voir tous les articles</span>
+		</Blog>
 
 		<Further slot="further">
 			<span slot="title">Aller plus loin</span>

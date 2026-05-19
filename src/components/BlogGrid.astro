@@ -1,5 +1,5 @@
 ---
-const { postsIndex } = Astro.props
+const { postsIndex, readMoreLabel = "Read more →" } = Astro.props
 
 import posts from "../content/kofi-posts.json"
 const latestPosts = posts
@@ -26,7 +26,7 @@ const latestPosts = posts
 						<p>{post.description}</p>
 					</div>
 
-					<div class="read-more">Read more →</div>
+					<div class="read-more">{readMoreLabel}</div>
 				</div>
 			</a>
 		))
