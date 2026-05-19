@@ -1,38 +1,29 @@
 ---
-// how many posts to show
 const { postsIndex } = Astro.props
 
-import { getCollection } from "astro:content"
-const posts = await getCollection("blog")
-
+import posts from "../content/kofi-posts.json"
 const latestPosts = posts
-	.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+	.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime())
 	.slice(0, postsIndex)
 ---
 
 <div class="blog-grid">
 	{
 		latestPosts.map((post) => (
-			<a class="blog-card" href={`/blog/${post.id}`}>
-				{post.data.image ? (
-					<img
-						class="post-image"
-						src={post.data.image}
-						alt={post.data.imageAlt ?? post.data.title}
-					/>
-				) : null}
+			<a class="blog-card" rel="noopener noreferrer" href={`${post.url}`}>
+				{post.image ? <img class="post-image" src={post.image} alt={post.title} /> : null}
 
 				<div class="post-text">
 					<div>
 						<p class="blog-date">
-							{new Date(post.data.pubDate).toLocaleDateString("en-US", {
+							{new Date(post.pubDate).toLocaleDateString("en-US", {
 								year: "numeric",
 								month: "short",
 								day: "numeric",
 							})}
 						</p>
-						<h3>{post.data.title}</h3>
-						<p>{post.data.description}</p>
+						<h3>{post.title}</h3>
+						<p>{post.description}</p>
 					</div>
 
 					<div class="read-more">Read more →</div>
