@@ -1,7 +1,6 @@
 import { defineConfig, sharpImageService } from "astro/config"
 import expressiveCode from "astro-expressive-code"
 import sitemap from "@astrojs/sitemap"
-import rehypeFigureTitle from "rehype-figure-title"
 
 export default defineConfig({
 	site: "https://bonjourr.fr",
@@ -10,9 +9,6 @@ export default defineConfig({
 	},
 	image: {
 		service: sharpImageService(),
-	},
-	markdown: {
-		rehypePlugins: [[rehypeFigureTitle, { className: "figure" }]],
 	},
 	integrations: [
 		sitemap({
