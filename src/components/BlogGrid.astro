@@ -11,7 +11,9 @@ const latestPosts = posts
 	{
 		latestPosts.map((post) => (
 			<a class="blog-card" rel="noopener noreferrer" href={`${post.url}`}>
-				{post.image ? <img class="post-image" src={post.image} alt={post.title} /> : null}
+				{post.image ? (
+					<img loading="lazy" class="post-image" src={post.image} alt={post.title} />
+				) : null}
 
 				<div class="post-text">
 					<div>
