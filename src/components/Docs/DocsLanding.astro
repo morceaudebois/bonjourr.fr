@@ -96,7 +96,7 @@ const locale = props.lang === "fr" ? "/fr" : ""
 		display: grid;
 		max-width: 100%;
 		margin: 5em 0 2em;
-		grid-gap: 1em;
+		grid-gap: 1.5em;
 		grid-template-columns: repeat(3, 1fr);
 
 		@media only screen and (max-width: 1000px) {
@@ -112,20 +112,36 @@ const locale = props.lang === "fr" ? "/fr" : ""
 		display: flex;
 		align-items: center;
 		gap: 1.5em;
-		padding: 1em;
+		padding: 1.5em;
 		color: unset;
-		cursor: pointer;
-		border-radius: 15px;
 		text-decoration: none;
-		border: 1px solid transparent;
+
+		cursor: pointer;
+		border-radius: 28px;
+
+		transition:
+			transform 0.18s ease,
+			border-color 0.18s ease,
+			background 0.18s ease;
+
+		background: black;
+		border: 1px solid rgba(255, 255, 255, 0.22);
+
+		@media (prefers-color-scheme: light) {
+			background: white;
+			border: 1px solid rgb(222, 222, 222);
+		}
 	}
 
 	.docs-summary a:hover {
-		background: #252525;
-		border: 1px solid #fff1;
+		background: #151515;
+		border: 1px solid rgba(255, 255, 255, 0.32);
+		transform: translateY(-4px);
+		opacity: 1;
 
 		@media (prefers-color-scheme: light) {
-			background: #e9e9e9;
+			background: #f8f8f8;
+			border: 1px solid rgb(214, 214, 214);
 		}
 	}
 
