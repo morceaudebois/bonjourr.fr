@@ -1,10 +1,12 @@
 ---
 import Link from "./Link.astro"
+import { Icon } from "astro-icon/components"
 
 const isFrench = Astro.url.pathname.startsWith("/fr")
 
 const en = {
-	"Made in France with ❤️": "Made in France with ❤️",
+	trusted: "Trusted by 300k+ users worldwide",
+	crafted: "Crafted in France with ❤️",
 	"Privacy policy": "Privacy policy",
 	"Source code": "Source code",
 	"Contact us": "Contact us",
@@ -15,18 +17,20 @@ const en = {
 	Documentation: "Documentation",
 	"Beautiful customizable backgrounds": "Beautiful customizable backgrounds",
 	"Quick access to your favorite sites": "Quick access to your favorite sites",
-	"Built-in notes with markdown": "Built-in notes with markdown",
-	"Minimal search experience": "Minimal search experience",
-	"Pomodoro timer for productivity": "Pomodoro timer for productivity",
-	"Weather & daily quotes": "Weather & daily quotes",
+	"Notes with markdown": "Notes with markdown",
+	"Search bar": "Search bar",
+	"Pomodoro timer": "Pomodoro timer",
+	"Weather & quotes": "Weather & quotes",
 	Features: "Features",
-	"Get help": "Get help",
-	Social: "Social",
-	desc: "Bonjourr is a minimalist and open source browser startpage inspired by iOS. Private, lightweight, customizable, and designed for a calmer browsing experience.",
+	Resources: "Resources",
+	Community: "Community",
+	desc: "Bonjourr is a minimalist and open source browser startpage inspired by iOS. Private, lightweight and customizable, it is designed for a calmer browsing experience.",
+	"Install on:": "Install on:",
 }
 
 const fr = {
-	"Made in France with ❤️": "Fabriqué en France avec ❤️",
+	trusted: "Adopté par plus de 300 000 utilisateurs dans le monde",
+	crafted: "Fabriqué en France avec ❤️",
 	"Privacy policy": "Politique de confidentialité",
 	"Source code": "Code source",
 	"Contact us": "Nous contacter",
@@ -38,14 +42,15 @@ const fr = {
 
 	"Beautiful customizable backgrounds": "Arrière-plans personnalisables",
 	"Quick access to your favorite sites": "Accès rapide à vos sites favoris",
-	"Built-in notes with markdown": "Notes avec Markdown",
-	"Minimal search experience": "Barre de recherche minimaliste",
-	"Pomodoro timer for productivity": "Minuteur Pomodoro",
-	"Weather & daily quotes": "Météo et citations quotidiennes",
+	"Notes with markdown": "Notes avec Markdown",
+	"Search bar": "Barre de recherche minimaliste",
+	"Pomodoro timer": "Minuteur Pomodoro",
+	"Weather & quotes": "Météo et citations quotidiennes",
 	Features: "Fonctionnalités",
-	"Get help": "Obtenir de l'aide",
-	Social: "Réseaux",
+	Resources: "Obtenir de l'aide",
+	Community: "Réseaux",
 	desc: "Bonjourr est une page d’accueil de navigateur minimaliste et open source inspirée d’iOS. Privée, légère et personnalisable, elle offre une expérience de navigation plus calme et plus agréable.",
+	"Install on:": "Installer sur:",
 }
 
 const trans = isFrench ? fr : en
@@ -73,9 +78,47 @@ const currentYear = new Date().getFullYear()
 				{trans["desc"]}
 			</p>
 
+			<div id="browser_links">
+				<p>{trans["Install on:"]}</p>
+
+				<ul>
+					<li>
+						<a
+							href="https://addons.mozilla.org/firefox/addon/bonjourr-startpage/"
+							title="Download for Firefox"
+						>
+							<img src="/browsers/firefox.svg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+							title="Download Bonjourr for Chrome"
+						>
+							<img src="/browsers/chrome.svg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="/docs#safari" title="Install Bonjourr on Safari">
+							<img src="/browsers/safari.svg" alt="" />
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid"
+							title="Download Bonjourr for Edge"
+						>
+							<img src="/browsers/edge.svg" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+
 			<p>
 				© 2019 - {currentYear} ·
-				<a href="https://github.com/victrme/Bonjourr">{trans["Source code"]}</a>
+				<a href="https://github.com/victrme/Bonjourr">
+					<span>{trans["Source code"]}</span></a
+				>
 			</p>
 		</div>
 
@@ -83,66 +126,106 @@ const currentYear = new Date().getFullYear()
 			<h3>{trans["Features"]}</h3>
 			<ul>
 				<li>
-					<Link href="/docs/overview#backgrounds"
-						>{trans["Beautiful customizable backgrounds"]}</Link
-					>
+					<Link href="/docs/overview#backgrounds">
+						<Icon name="heroicons:photo" />
+						<span>{trans["Beautiful customizable backgrounds"]}</span>
+					</Link>
 				</li>
 				<li>
-					<Link href="/docs/overview#quick-links"
-						>{trans["Quick access to your favorite sites"]}</Link
-					>
+					<Link href="/docs/overview#quick-links">
+						<Icon name="heroicons:link" />
+						<span>{trans["Quick access to your favorite sites"]}</span>
+					</Link>
 				</li>
 				<li>
-					<Link href="/docs/overview#notes">{trans["Built-in notes with markdown"]}</Link>
+					<Link href="/docs/overview#notes">
+						<Icon name="heroicons:pencil" />
+						<span>{trans["Notes with markdown"]}</span>
+					</Link>
 				</li>
 				<li>
-					<Link href="/docs/overview#searchbar">{trans["Minimal search experience"]}</Link
-					>
+					<Link href="/docs/overview#searchbar">
+						<Icon name="heroicons:magnifying-glass" />
+						<span>{trans["Search bar"]}</span>
+					</Link>
 				</li>
 				<li>
-					<Link href="/docs/overview#pomodoro"
-						>{trans["Pomodoro timer for productivity"]}</Link
-					>
+					<Link href="/docs/overview#pomodoro">
+						<Icon name="heroicons:clock" />
+						<span>{trans["Pomodoro timer"]}</span>
+					</Link>
 				</li>
 				<li>
-					<Link href="/docs/overview#weather">{trans["Weather & daily quotes"]}</Link>
-				</li>
-			</ul>
-		</div>
-
-		<div>
-			<h3>{trans["Get help"]}</h3>
-			<ul>
-				<li>
-					<a href="mailto:bonjourr.app@protonmail.com">{trans["Email support"]}</a>
-				</li>
-				<li>
-					<a href="https://github.com/victrme/Bonjourr/issues">{trans["GitHub issues"]}</a
-					>
-				</li>
-				<li>
-					<Link href="/docs">{trans["Documentation"]}</Link>
-				</li>
-				<li>
-					<Link href="/docs/faq">{trans["FAQ"]}</Link>
-				</li>
-				<li>
-					<Link href="/privacy">{trans["Privacy policy"]}</Link>
+					<Link href="/docs/overview#weather">
+						<Icon name="heroicons:sun" />
+						<span>{trans["Weather & quotes"]}</span>
+					</Link>
 				</li>
 			</ul>
 		</div>
 
 		<div>
-			<h3>{trans["Social"]}</h3>
+			<h3>{trans["Resources"]}</h3>
 			<ul>
 				<li>
-					<a href="https://bsky.app/profile/bonjourr.fr" rel="me">Bluesky</a>
+					<Link href="/docs">
+						<Icon name="heroicons:book-open" />
+						<span>{trans["Documentation"]}</span>
+					</Link>
 				</li>
 				<li>
-					<a href="https://t.me/BonjourrStartpage" rel="me">Telegram</a>
+					<a href="mailto:bonjourr.app@protonmail.com">
+						<Icon name="heroicons:envelope" />
+						<span>{trans["Email support"]}</span>
+					</a>
 				</li>
 				<li>
-					<a href="https://github.com/victrme/Bonjourr" rel="me">GitHub</a>
+					<a href="https://github.com/victrme/Bonjourr/issues">
+						<Icon name="heroicons:bug-ant" />
+						<span>{trans["GitHub issues"]}</span>
+					</a>
+				</li>
+				<li>
+					<Link href="/docs/faq">
+						<Icon name="heroicons:question-mark-circle" />
+						<span>{trans["FAQ"]}</span>
+					</Link>
+				</li>
+				<li>
+					<Link href="/privacy">
+						<Icon name="heroicons:shield-check" />
+						<span>{trans["Privacy policy"]}</span>
+					</Link>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h3>{trans["Community"]}</h3>
+			<ul>
+				<li>
+					<a href="https://ko-fi.com/bonjourr" rel="me">
+						<Icon name="fa7-brands:ko-fi" />
+						<span>Ko-fi</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://bsky.app/profile/bonjourr.fr" rel="me">
+						<Icon name="fa7-brands:bluesky" />
+						<span>Bluesky</span></a
+					>
+				</li>
+				<li>
+					<a href="https://t.me/BonjourrStartpage" rel="me"
+						><Icon name="fa7-brands:telegram" />
+						<span>Telegram</span></a
+					>
+				</li>
+				<li>
+					<a href="https://github.com/victrme/Bonjourr" rel="me"
+						><Icon name="fa7-brands:github" />
+						<span>GitHub</span></a
+					>
 				</li>
 			</ul>
 		</div>
@@ -151,15 +234,20 @@ const currentYear = new Date().getFullYear()
 	<div class="bottom">
 		<hr />
 		<div id="signature">
-			<p>{trans["Made in France with ❤️"]}</p>
+			<p id="trusted">~ {trans["trusted"]} ~</p>
 
+			<p>{trans["crafted"]}</p>
 			<p>
 				<span>{trans.by}</span>
 
 				<span id="signature_span">
-					<a href="https://victr.me" title="Victor's portfolio">Victor Azevedo</a>
+					<a href="https://victr.me" title="Victor's portfolio"
+						><span>Victor Azevedo</span></a
+					>
 					&
-					<a href="https://tahoe.be" title="Tahoe's portfolio">Tahoe Beetschen</a>
+					<a href="https://tahoe.be" title="Tahoe's portfolio"
+						><span>Tahoe Beetschen</span></a
+					>
 				</span>
 			</p>
 		</div>
@@ -181,7 +269,7 @@ const currentYear = new Date().getFullYear()
 		grid-template-columns: minmax(280px, 2.25fr) repeat(3, minmax(100px, 1fr));
 		max-width: 1200px;
 		margin-inline: auto;
-		padding: 3em 2em;
+		padding: 3em 2em 0 2em;
 	}
 
 	.branding {
@@ -226,11 +314,21 @@ const currentYear = new Date().getFullYear()
 		margin: 0;
 		padding: 0;
 		display: grid;
-		gap: 0.65rem;
+		gap: 0.75rem;
 	}
 
-	footer li {
+	footer li a {
 		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	footer li :global(svg) {
+		min-width: 2em;
+		height: 1.5em;
+		display: inline;
+		vertical-align: bottom;
 	}
 
 	footer a {
@@ -238,10 +336,65 @@ const currentYear = new Date().getFullYear()
 		text-decoration: none;
 	}
 
-	footer a:hover,
-	footer a:focus-visible {
+	footer a:hover span,
+	footer a:focus-visible span {
 		text-decoration: underline;
 		color: var(--color-text);
+	}
+
+	#browser_links {
+		margin-top: 1.5rem;
+		display: flex;
+	}
+
+	#browser_links p {
+		margin-top: 10px;
+		font-size: 0.95rem;
+		font-weight: 600;
+	}
+
+	#browser_links ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		align-items: flex-start;
+	}
+
+	#browser_links li {
+		display: flex;
+		align-items: center;
+		gap: 0 !important;
+	}
+
+	#browser_links li a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 1.5rem;
+		border-radius: 0.5rem;
+		transition: all 200ms ease;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	#browser_links li a:hover,
+	#browser_links li a:focus-visible {
+		background-color: rgba(255, 255, 255, 0.12);
+		transform: scale(1.1);
+	}
+
+	@media (prefers-color-scheme: light) {
+		#browser_links li a:hover,
+		#browser_links li a:focus-visible {
+			background-color: rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	#browser_links img {
+		width: 2rem;
+		height: 2rem;
+		display: block;
 	}
 
 	.bottom {
@@ -250,6 +403,7 @@ const currentYear = new Date().getFullYear()
 	}
 
 	.bottom hr {
+		width: 100%;
 		border: none;
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		margin: 0 0 1.5rem;
@@ -266,6 +420,10 @@ const currentYear = new Date().getFullYear()
 		align-items: center;
 	}
 
+	#signature #trusted {
+		margin-bottom: 1em;
+	}
+
 	#signature p {
 		margin: 0;
 		font-size: 0.8rem;
@@ -274,7 +432,7 @@ const currentYear = new Date().getFullYear()
 	#signature_span {
 		display: inline-flex;
 		flex-direction: var(--dir);
-		column-gap: 0.5rem;
+		column-gap: 0.25em;
 		row-gap: 0.25rem;
 		flex-wrap: wrap;
 	}

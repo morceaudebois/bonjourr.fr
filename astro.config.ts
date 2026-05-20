@@ -1,6 +1,7 @@
 import { defineConfig, sharpImageService } from "astro/config"
 import expressiveCode from "astro-expressive-code"
 import sitemap from "@astrojs/sitemap"
+import icon from "astro-icon"
 
 export default defineConfig({
 	site: "https://bonjourr.fr",
@@ -11,6 +12,7 @@ export default defineConfig({
 		service: sharpImageService(),
 	},
 	integrations: [
+		[icon()],
 		sitemap({
 			i18n: {
 				defaultLocale: "en",
