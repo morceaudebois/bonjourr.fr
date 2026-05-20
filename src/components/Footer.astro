@@ -6,7 +6,7 @@ const isFrench = Astro.url.pathname.startsWith("/fr")
 const en = {
 	"Made in France with ❤️": "Made in France with ❤️",
 	"Privacy policy": "Privacy policy",
-	"source code": "source code",
+	"Source code": "Source code",
 	"Contact us": "Contact us",
 	FAQ: "FAQ",
 	by: "by",
@@ -19,12 +19,16 @@ const en = {
 	"Minimal search experience": "Minimal search experience",
 	"Pomodoro timer for productivity": "Pomodoro timer for productivity",
 	"Weather & daily quotes": "Weather & daily quotes",
+	Features: "Features",
+	"Get help": "Get help",
+	Social: "Social",
+	desc: "Bonjourr is a minimalist and open source browser startpage inspired by iOS. Private, lightweight, customizable, and designed for a calmer browsing experience.",
 }
 
 const fr = {
 	"Made in France with ❤️": "Fabriqué en France avec ❤️",
 	"Privacy policy": "Politique de confidentialité",
-	"source code": "code source",
+	"Source code": "Code source",
 	"Contact us": "Nous contacter",
 	FAQ: "FAQ",
 	by: "par",
@@ -38,6 +42,10 @@ const fr = {
 	"Minimal search experience": "Barre de recherche minimaliste",
 	"Pomodoro timer for productivity": "Minuteur Pomodoro",
 	"Weather & daily quotes": "Météo et citations quotidiennes",
+	Features: "Fonctionnalités",
+	"Get help": "Obtenir de l'aide",
+	Social: "Réseaux",
+	desc: "Bonjourr est une page d’accueil de navigateur minimaliste et open source inspirée d’iOS. Privée, légère et personnalisable, elle offre une expérience de navigation plus calme et plus agréable.",
 }
 
 const trans = isFrench ? fr : en
@@ -62,18 +70,17 @@ const currentYear = new Date().getFullYear()
 			>
 
 			<p>
-				Bonjourr is a minimalist and open source browser startpage inspired by iOS. Private,
-				lightweight, customizable, and designed for a calmer browsing experience.
+				{trans["desc"]}
 			</p>
 
 			<p>
 				© 2019 - {currentYear} ·
-				<a href="https://github.com/victrme/Bonjourr">Source code</a>
+				<a href="https://github.com/victrme/Bonjourr">{trans["Source code"]}</a>
 			</p>
 		</div>
 
 		<div>
-			<h3>Features</h3>
+			<h3>{trans["Features"]}</h3>
 			<ul>
 				<li>
 					<Link href="/docs/overview#backgrounds"
@@ -104,7 +111,7 @@ const currentYear = new Date().getFullYear()
 		</div>
 
 		<div>
-			<h3>Help</h3>
+			<h3>{trans["Get help"]}</h3>
 			<ul>
 				<li>
 					<a href="mailto:bonjourr.app@protonmail.com">{trans["Email support"]}</a>
@@ -126,7 +133,7 @@ const currentYear = new Date().getFullYear()
 		</div>
 
 		<div>
-			<h3>Social</h3>
+			<h3>{trans["Social"]}</h3>
 			<ul>
 				<li>
 					<a href="https://bsky.app/profile/bonjourr.fr" rel="me">Bluesky</a>
