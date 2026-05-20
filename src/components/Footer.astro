@@ -25,18 +25,19 @@ const fr = {
 	"Made in France with ❤️": "Fabriqué en France avec ❤️",
 	"Privacy policy": "Politique de confidentialité",
 	"source code": "code source",
-	"Contact us": "Contactez-nous",
+	"Contact us": "Nous contacter",
 	FAQ: "FAQ",
 	by: "par",
-	"Email support": "Email support",
-	"GitHub issues": "GitHub issues",
+	"Email support": "Support par email",
+	"GitHub issues": "Tickets GitHub",
 	Documentation: "Documentation",
-	"Beautiful customizable backgrounds": "Beautiful customizable backgrounds",
-	"Quick access to your favorite sites": "Quick access to your favorite sites",
-	"Built-in notes with markdown": "Built-in notes with markdown",
-	"Minimal search experience": "Minimal search experience",
-	"Pomodoro timer for productivity": "Pomodoro timer for productivity",
-	"Weather & daily quotes": "Weather & daily quotes",
+
+	"Beautiful customizable backgrounds": "Arrière-plans personnalisables",
+	"Quick access to your favorite sites": "Accès rapide à vos sites favoris",
+	"Built-in notes with markdown": "Notes avec Markdown",
+	"Minimal search experience": "Barre de recherche minimaliste",
+	"Pomodoro timer for productivity": "Minuteur Pomodoro",
+	"Weather & daily quotes": "Météo et citations quotidiennes",
 }
 
 const trans = isFrench ? fr : en
@@ -55,7 +56,7 @@ const currentYear = new Date().getFullYear()
 <footer>
 	<div class="container">
 		<div class="branding">
-			<Link href="/" title="Homepage" class="logo">
+			<Link href="/" title="Homepage" class="logo" aria-label="Homepage">
 				<img src="/apple-touch-icon.png" alt="bonjourr logo" />
 				<h2>Bonjourr</h2></Link
 			>
@@ -128,13 +129,13 @@ const currentYear = new Date().getFullYear()
 			<h3>Social</h3>
 			<ul>
 				<li>
-					<a href="https://bsky.app/profile/bonjourr.fr">Bluesky</a>
+					<a href="https://bsky.app/profile/bonjourr.fr" rel="me">Bluesky</a>
 				</li>
 				<li>
-					<a href="https://t.me/BonjourrStartpage">Telegram</a>
+					<a href="https://t.me/BonjourrStartpage" rel="me">Telegram</a>
 				</li>
 				<li>
-					<a href="https://github.com/victrme/Bonjourr">GitHub</a>
+					<a href="https://github.com/victrme/Bonjourr" rel="me">GitHub</a>
 				</li>
 			</ul>
 		</div>

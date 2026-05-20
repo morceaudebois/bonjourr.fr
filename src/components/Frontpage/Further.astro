@@ -16,12 +16,12 @@ import Link from "../Link.astro"
 	</p>
 
 	<div class="btn-wrapper">
-		<a href="https://bsky.app/profile/bonjourr.fr" class="button btn-themed">
+		<a href="https://bsky.app/profile/bonjourr.fr" class="button btn-themed" rel="me">
 			<img width="64" src="/frontpage/bluesky-blue.svg" class="icon" alt="" />
 			<slot name="contact-button-bluesky" />
 		</a>
 
-		<a href="https://t.me/BonjourrStartpage" class="button btn-themed">
+		<a href="https://t.me/BonjourrStartpage" class="button btn-themed" rel="me">
 			<img width="64" src="/frontpage/telegram.svg" class="icon" alt="" />
 			<slot name="contact-button-telegram" />
 		</a>
@@ -44,15 +44,6 @@ import Link from "../Link.astro"
 		</Link>
 	</div>
 </div>
-
-<!-- <div class="bloc">
-	<h3>
-		<slot name="repo-title" />
-	</h3>
-	<p>
-		<slot name="repo-desc" />
-	</p>
-</div> -->
 
 <style is:global>
 	#further {
