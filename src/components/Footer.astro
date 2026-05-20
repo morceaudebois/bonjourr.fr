@@ -8,15 +8,37 @@ const en = {
 	"Privacy policy": "Privacy policy",
 	"source code": "source code",
 	"Contact us": "Contact us",
+	FAQ: "FAQ",
 	by: "by",
+	"Email support": "Email support",
+	"GitHub issues": "GitHub issues",
+	Documentation: "Documentation",
+	"Beautiful customizable backgrounds": "Beautiful customizable backgrounds",
+	"Quick access to your favorite sites": "Quick access to your favorite sites",
+	"Built-in notes with markdown": "Built-in notes with markdown",
+	"Minimal search experience": "Minimal search experience",
+	"Pomodoro timer for productivity": "Pomodoro timer for productivity",
+	"Weather & daily quotes": "Weather & daily quotes",
 }
+
 const fr = {
 	"Made in France with ❤️": "Fabriqué en France avec ❤️",
 	"Privacy policy": "Politique de confidentialité",
 	"source code": "code source",
 	"Contact us": "Contactez-nous",
+	FAQ: "FAQ",
 	by: "par",
+	"Email support": "Email support",
+	"GitHub issues": "GitHub issues",
+	Documentation: "Documentation",
+	"Beautiful customizable backgrounds": "Beautiful customizable backgrounds",
+	"Quick access to your favorite sites": "Quick access to your favorite sites",
+	"Built-in notes with markdown": "Built-in notes with markdown",
+	"Minimal search experience": "Minimal search experience",
+	"Pomodoro timer for productivity": "Pomodoro timer for productivity",
+	"Weather & daily quotes": "Weather & daily quotes",
 }
+
 const trans = isFrench ? fr : en
 
 const currentYear = new Date().getFullYear()
@@ -33,10 +55,11 @@ const currentYear = new Date().getFullYear()
 <footer>
 	<div class="container">
 		<div class="branding">
-			<div class="logo">
+			<Link href="/" title="Homepage" class="logo">
 				<img src="/apple-touch-icon.png" alt="bonjourr logo" />
-				<h2>Bonjourr</h2>
-			</div>
+				<h2>Bonjourr</h2></Link
+			>
+
 			<p>
 				Bonjourr is a minimalist and open source browser startpage inspired by iOS. Private,
 				lightweight, customizable, and designed for a calmer browsing experience.
@@ -44,77 +67,77 @@ const currentYear = new Date().getFullYear()
 
 			<p>
 				© 2019 - {currentYear} ·
-				<Link href="https://github.com/victrme/Bonjourr">Source code</Link>
+				<a href="https://github.com/victrme/Bonjourr">Source code</a>
 			</p>
 		</div>
 
 		<div>
 			<h3>Features</h3>
 			<ul>
-				<li><a href="">Beautiful customizable backgrounds</a></li>
-				<li><a href="">Quick access to your favorite sites</a></li>
-				<li><a href="">Built-in notes with markdown</a></li>
-				<li><a href="">Minimal search experience</a></li>
-				<li><a href="">Pomodoro timer for productivity</a></li>
-				<li><a href="">Weather & daily quotes</a></li>
+				<li>
+					<Link href="/docs/overview#backgrounds"
+						>{trans["Beautiful customizable backgrounds"]}</Link
+					>
+				</li>
+				<li>
+					<Link href="/docs/overview#quick-links"
+						>{trans["Quick access to your favorite sites"]}</Link
+					>
+				</li>
+				<li>
+					<Link href="/docs/overview#notes">{trans["Built-in notes with markdown"]}</Link>
+				</li>
+				<li>
+					<Link href="/docs/overview#searchbar">{trans["Minimal search experience"]}</Link
+					>
+				</li>
+				<li>
+					<Link href="/docs/overview#pomodoro"
+						>{trans["Pomodoro timer for productivity"]}</Link
+					>
+				</li>
+				<li>
+					<Link href="/docs/overview#weather">{trans["Weather & daily quotes"]}</Link>
+				</li>
 			</ul>
 		</div>
 
 		<div>
 			<h3>Help</h3>
 			<ul>
-				<li><a href="">Email support</a></li>
-				<li><a href="">GitHub issues</a></li>
-				<li><a href="">Documentation</a></li>
-				<li><a href="">FAQ</a></li>
-				<li><Link href="/privacy">{trans["Privacy policy"]}</Link></li>
+				<li>
+					<a href="mailto:bonjourr.app@protonmail.com">{trans["Email support"]}</a>
+				</li>
+				<li>
+					<a href="https://github.com/victrme/Bonjourr/issues">{trans["GitHub issues"]}</a
+					>
+				</li>
+				<li>
+					<Link href="/docs">{trans["Documentation"]}</Link>
+				</li>
+				<li>
+					<Link href="/docs/faq">{trans["FAQ"]}</Link>
+				</li>
+				<li>
+					<Link href="/privacy">{trans["Privacy policy"]}</Link>
+				</li>
 			</ul>
 		</div>
 
 		<div>
 			<h3>Social</h3>
 			<ul>
-				<li><a href="">Bluesky</a></li>
-				<li><a href="">Telegram</a></li>
-				<li><a href="">GitHub</a></li>
+				<li>
+					<a href="https://bsky.app/profile/bonjourr.fr">Bluesky</a>
+				</li>
+				<li>
+					<a href="https://t.me/BonjourrStartpage">Telegram</a>
+				</li>
+				<li>
+					<a href="https://github.com/victrme/Bonjourr">GitHub</a>
+				</li>
 			</ul>
 		</div>
-
-		<!-- <div id="legal">
-			<p>
-				© 2019 - {currentYear}
-				<Link href="/" id="homeLink" title="Homepage">Bonjourr</Link>
-			</p>
-
-			<p>
-				<Link href="/privacy">{trans["Privacy policy"]}</Link>, <a
-					href="https://github.com/morceaudebois/bonjourr.fr">{trans["source code"]}</a
-				>
-			</p>
-		</div>
-
-		<div id="signature">
-			<p>{trans["Made in France with ❤️"]}</p>
-
-			<p>
-				<span>{trans.by}</span>
-
-				<span id="signature_span">
-					<a href="https://victr.me" title="Victor's portfolio">Victor Azevedo</a>
-					&
-					<a href="https://tahoe.be" title="Tahoe's portfolio">Tahoe Beetschen</a>
-				</span>
-			</p>
-		</div>
-
-		<div id="contact">
-			<b>{trans["Contact us"]}</b>
-
-			<p>
-				<a href="https://t.me/BonjourrStartpage">Telegram</a> ·
-				<a href="mailto:bonjourr.app@protonmail.com">email</a>
-			</p>
-		</div> -->
 	</div>
 
 	<div class="bottom">
@@ -141,17 +164,16 @@ const currentYear = new Date().getFullYear()
 		font-size: 15px;
 		color: var(--color-text-secondary);
 		background-color: var(--color-background);
-		padding: 3em 2em;
 		border-top: 1px solid rgba(255, 255, 255, 0.08);
 	}
 
 	.container {
 		display: grid;
 		gap: 2rem;
-		grid-template-columns: minmax(280px, 2.5fr) repeat(3, minmax(100px, 1fr));
+		grid-template-columns: minmax(280px, 2.25fr) repeat(3, minmax(100px, 1fr));
 		max-width: 1200px;
 		margin-inline: auto;
-		padding: 0 0.5rem;
+		padding: 3em 2em;
 	}
 
 	.branding {
@@ -215,14 +237,18 @@ const currentYear = new Date().getFullYear()
 	}
 
 	.bottom {
-		margin-top: 2.5rem;
 		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
 	}
 
 	.bottom hr {
 		border: none;
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		margin: 0 0 1.5rem;
+
+		@media (prefers-color-scheme: light) {
+			border-top: 1px solid rgba(87, 87, 87, 0.2);
+		}
 	}
 
 	#signature {
@@ -234,7 +260,7 @@ const currentYear = new Date().getFullYear()
 
 	#signature p {
 		margin: 0;
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 	}
 
 	#signature_span {
@@ -248,17 +274,13 @@ const currentYear = new Date().getFullYear()
 	@media only screen and (max-width: 900px) {
 		.container {
 			grid-template-columns: repeat(2, minmax(220px, 1fr));
-			padding: 0 1rem;
 		}
 	}
 
 	@media only screen and (max-width: 680px) {
 		.container {
 			grid-template-columns: 1fr;
-		}
-
-		footer {
-			padding: 2rem 1rem 1rem;
+			padding-inline: 1.5rem;
 		}
 
 		#signature {
