@@ -32,7 +32,55 @@ const currentYear = new Date().getFullYear()
 
 <footer>
 	<div class="container">
-		<div id="legal">
+		<div class="branding">
+			<div class="logo">
+				<img src="/apple-touch-icon.png" alt="bonjourr logo" />
+				<h2>Bonjourr</h2>
+			</div>
+			<p>
+				Bonjourr is a minimalist and open source browser startpage inspired by iOS. Private,
+				lightweight, customizable, and designed for a calmer browsing experience.
+			</p>
+
+			<p>
+				© 2019 - {currentYear} ·
+				<Link href="https://github.com/victrme/Bonjourr">Source code</Link>
+			</p>
+		</div>
+
+		<div>
+			<h3>Features</h3>
+			<ul>
+				<li><a href="">Beautiful customizable backgrounds</a></li>
+				<li><a href="">Quick access to your favorite sites</a></li>
+				<li><a href="">Built-in notes with markdown</a></li>
+				<li><a href="">Minimal search experience</a></li>
+				<li><a href="">Pomodoro timer for productivity</a></li>
+				<li><a href="">Weather & daily quotes</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<h3>Help</h3>
+			<ul>
+				<li><a href="">Email support</a></li>
+				<li><a href="">GitHub issues</a></li>
+				<li><a href="">Documentation</a></li>
+				<li><a href="">FAQ</a></li>
+				<li><Link href="/privacy">{trans["Privacy policy"]}</Link></li>
+			</ul>
+		</div>
+
+		<div>
+			<h3>Social</h3>
+			<ul>
+				<li><a href="">Bluesky</a></li>
+				<li><a href="">Telegram</a></li>
+				<li><a href="">GitHub</a></li>
+			</ul>
+		</div>
+
+		<!-- <div id="legal">
 			<p>
 				© 2019 - {currentYear}
 				<Link href="/" id="homeLink" title="Homepage">Bonjourr</Link>
@@ -66,6 +114,23 @@ const currentYear = new Date().getFullYear()
 				<a href="https://t.me/BonjourrStartpage">Telegram</a> ·
 				<a href="mailto:bonjourr.app@protonmail.com">email</a>
 			</p>
+		</div> -->
+	</div>
+
+	<div class="bottom">
+		<hr />
+		<div id="signature">
+			<p>{trans["Made in France with ❤️"]}</p>
+
+			<p>
+				<span>{trans.by}</span>
+
+				<span id="signature_span">
+					<a href="https://victr.me" title="Victor's portfolio">Victor Azevedo</a>
+					&
+					<a href="https://tahoe.be" title="Tahoe's portfolio">Tahoe Beetschen</a>
+				</span>
+			</p>
 		</div>
 	</div>
 </footer>
@@ -76,70 +141,128 @@ const currentYear = new Date().getFullYear()
 		font-size: 15px;
 		color: var(--color-text-secondary);
 		background-color: var(--color-background);
-		/* border-top: 1px solid #2222; */
+		padding: 3em 2em;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
 	}
 
 	.container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin: auto;
-		padding: 3em 5em;
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: minmax(280px, 2.5fr) repeat(3, minmax(100px, 1fr));
 		max-width: 1200px;
+		margin-inline: auto;
+		padding: 0 0.5rem;
 	}
 
-	#signature {
-		text-align: center;
+	.branding {
+		max-width: none;
 	}
 
-	#signature_span {
+	.logo {
 		display: inline-flex;
-		flex-direction: var(--dir);
-		column-gap: 0.25em;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 1rem;
 	}
 
-	#contact {
-		text-align: right;
+	.logo img {
+		height: 2.5rem;
+		width: auto;
+		border-radius: 0.5rem;
 	}
 
-	footer p {
+	.branding h2 {
+		margin: 0;
+		font-size: 1.65rem;
+		color: var(--color-text);
+	}
+
+	.branding p {
+		margin: 0.85rem 0 0;
+		line-height: 1.75;
+		max-width: 42rem;
+	}
+
+	footer h3 {
+		margin: 0 0 1rem;
+		font-size: 1rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		color: var(--color-text);
+	}
+
+	footer ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.65rem;
+	}
+
+	footer li {
 		margin: 0;
 	}
 
 	footer a {
 		color: inherit;
+		text-decoration: none;
+	}
+
+	footer a:hover,
+	footer a:focus-visible {
+		text-decoration: underline;
+		color: var(--color-text);
+	}
+
+	.bottom {
+		margin-top: 2.5rem;
+		padding-top: 1.5rem;
+	}
+
+	.bottom hr {
+		border: none;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		margin: 0 0 1.5rem;
+	}
+
+	#signature {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#signature p {
+		margin: 0;
+		font-size: 0.85rem;
+	}
+
+	#signature_span {
+		display: inline-flex;
+		flex-direction: var(--dir);
+		column-gap: 0.5rem;
+		row-gap: 0.25rem;
+		flex-wrap: wrap;
 	}
 
 	@media only screen and (max-width: 900px) {
 		.container {
-			display: grid;
-			row-gap: 1em;
-			grid-template-columns: 1fr 1fr;
-			padding: 2em 2em;
-		}
-
-		#contact {
-			text-align: left;
-		}
-
-		#signature {
-			text-align: right;
-			grid-column: 2;
-			grid-row: 1 / 3;
+			grid-template-columns: repeat(2, minmax(220px, 1fr));
+			padding: 0 1rem;
 		}
 	}
 
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 680px) {
 		.container {
-			display: grid;
-			row-gap: 2em;
 			grid-template-columns: 1fr;
 		}
 
+		footer {
+			padding: 2rem 1rem 1rem;
+		}
+
 		#signature {
-			text-align: left;
-			grid-column: 1;
-			grid-row: 1;
+			justify-content: flex-start;
 		}
 	}
 </style>
