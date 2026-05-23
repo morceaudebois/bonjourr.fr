@@ -1,25 +1,57 @@
 {
+	"greeting": "Victor.",
+	"greetingsmode": "auto",
 	"pagegap": 0,
 	"time": true,
 	"main": true,
-	"quicklinks": true,
+	"quicklinks": false,
+	"css": ".digital {\n\tfont-size: 9.5rem;\n}\n\n#greetings {\n\tfont-size: 3.375rem!important;\n}\n\n#interface {\n\ttext-shadow: 0px 1px 5px rgba(0, 0, 0, .1);\n}",
 	"hide": {
+		"clock": false,
 		"date": true,
 		"weatherdesc": true,
-		"weathericon": false,
-		"clock": false
+		"weathericon": false
 	},
 	"clock": {
 		"analog": false,
-		"size": 1.875
+		"seconds": false,
+		"worldclocks": false
+	},
+	"backgrounds": {
+		"type": "images",
+		"blur": 0,
+		"frequency": "hour",
+		"images": "unsplash-images-collections",
+		"mute": true,
+		"queries": {
+			"unsplash-images-collections": "8498187"
+		},
+		"texture": {
+			"type": "none"
+		}
+	},
+	"worldclocks": [],
+	"notes": {
+		"on": false
+	},
+	"searchbar": {
+		"on": false
+	},
+	"quotes": {
+		"on": false
+	},
+	"pomodoro": {
+		"on": false
 	},
 	"font": {
-		"weight": "700"
+		"system": true,
+		"weightlist": [],
+		"weight": "500"
 	},
 	"move": {
+		"selection": "single",
 		"layouts": {
 			"single": {
-				"grid": [["time"], ["main"], ["quicklinks"]],
 				"items": {
 					"time": {
 						"box": "end center",
@@ -29,9 +61,9 @@
 						"box": "baseline center",
 						"text": ""
 					}
-				}
-			},
-			"selection": "single"
+				},
+				"grid": [["time"], ["main"]]
+			}
 		}
 	}
 }
