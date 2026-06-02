@@ -1,6 +1,7 @@
 ---
 import Docs from "@layouts/Docs.astro"
 import { Code } from "astro-expressive-code/components"
+import userchrome from "@assets/documentation/snippets/userchrome.txt?raw"
 ---
 
 <Docs
@@ -19,7 +20,7 @@ import { Code } from "astro-expressive-code/components"
 
 		<img
 			src="/documentation/faq/firefox-extension-info.png"
-			alt="Bonjourr's infos on the current photo"
+			alt="Firefox informs you about which extension is creating the page"
 			style="max-width: 600px; margin-inline: auto; margin-block: 2em; display: block;"
 			loading="lazy"
 		/>
@@ -36,23 +37,27 @@ import { Code } from "astro-expressive-code/components"
 			>, and we have <strong>no control over it</strong> as developers.
 		</p>
 
-		<h3><strong>...but there's a way?</strong></h3>
+		<h3 id="remove-firefox-extension-box"><strong>...but there's a way?</strong></h3>
 
 		<p>
-			If there's a will, there is a <strong>hacky way</strong> to remove the button using the <strong
-				><code>userChrome.css</code></strong
-			>
-			file. It's essentially a CSS stylesheet you can create that has access to the <strong
-				>entire UI of Firefox</strong
-			>.
+			If there's a will, there' a way! Although a slightly hacky one in this case. It involves
+			the <strong><code>userChrome.css</code></strong> file, which is essentially a CSS stylesheet
+			you can create that can style the <strong>entire UI of Firefox</strong>.
 		</p>
 
+		<img
+			src="/documentation/faq/firefox-no-more-extension-box.png"
+			alt="Extension box is gone"
+			style="max-width: 600px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
+
 		<p>
-			You can learn more about how <strong><code>userChrome.css</code></strong> works <a
-				href="https://www.userchrome.org/">here</a
-			>, and how to set it up to remove the button on <a
-				href="https://github.com/victrme/Bonjourr/discussions/165">this GitHub discussion</a
-			>.
+			You can set it up in a few minutes following <a href="https://www.userchrome.org/"
+				>this tutorial</a
+			>. Then, simply add this to the file and the extension box will disappear after a
+			browser restart:
+			<Code lang="css" code={userchrome} />
 		</p>
 	</section>
 

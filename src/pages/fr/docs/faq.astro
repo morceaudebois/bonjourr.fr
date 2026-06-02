@@ -1,6 +1,7 @@
 ---
 import Docs from "@layouts/Docs.astro"
 import { Code } from "astro-expressive-code/components"
+import userchrome from "@assets/documentation/snippets/userchrome.txt?raw"
 ---
 
 <Docs
@@ -29,8 +30,8 @@ import { Code } from "astro-expressive-code/components"
 
 		<p>
 			C’est une <strong>mesure de sécurité</strong> mise en place par Mozilla pour vous aider à
-			identifier l’origine de la page. Si vous aviez installé une extension malveillante, cela
-			pourrait être très utile de savoir quelle extension a généré la page en question.
+			identifier l’origine de la page. Si vous aviez installé une extension malveillante, cela pourrait
+			être très utile de savoir quelle extension a généré la page en question.
 		</p>
 
 		<p>
@@ -39,7 +40,7 @@ import { Code } from "astro-expressive-code/components"
 			> et nous <strong>n’avons aucun contrôle là-dessus</strong> en tant que développeurs.
 		</p>
 
-		<h3><strong>...mais il y a un moyen ?</strong></h3>
+		<h3 id="remove-firefox-extension-box"><strong>...mais il y a un moyen ?</strong></h3>
 
 		<p>
 			Qui veut, peut : il existe un <strong>moyen détourné</strong> de retirer ce bouton via le
@@ -48,14 +49,18 @@ import { Code } from "astro-expressive-code/components"
 			vous pouvez créer et qui a accès à <strong>toute l’interface de Firefox</strong>.
 		</p>
 
+		<img
+			src="/documentation/faq/firefox-no-more-extension-box.png"
+			alt="Extension box is gone"
+			style="max-width: 600px; margin-inline: auto; margin-block: 2em; display: block;"
+			loading="lazy"
+		/>
+
 		<p>
-			Vous pouvez en apprendre plus sur le fonctionnement de <strong
-				><code>userChrome.css</code></strong
-			>
-			<a href="https://www.userchrome.org/">ici</a>, et comment l’utiliser pour retirer ce
-			bouton dans <a href="https://github.com/victrme/Bonjourr/discussions/165"
-				>cette discussion GitHub</a
-			>.
+			Vous pouvez le configurer en quelques minutes en suivant
+			<a href="https://www.userchrome.org/">ce tutoriel</a>. Ensuite, ajoutez simplement ceci
+			dans le fichier et la boîte d’extension disparaîtra après un redémarrage du navigateur :
+			<Code lang="css" code={userchrome} />
 		</p>
 	</section>
 
