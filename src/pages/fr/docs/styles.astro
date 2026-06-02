@@ -14,9 +14,15 @@ import portraitBackground from "@assets/documentation/snippets/portrait-backgrou
 import centerSearchbar from "@assets/documentation/snippets/center-searchbar.txt?raw"
 import searchbarLogo from "@assets/documentation/snippets/searchbar-logo.txt?raw"
 import MostVisitedLimit from "@assets/documentation/snippets/most-visited-limit.txt?raw"
+import weatherIcons from "@assets/documentation/snippets/weather-icons.txt?raw"
+import settingsIcon from "@assets/documentation/snippets/settings-icon.txt?raw"
 ---
 
-<Docs title="Extraits de style" thumbnail="/documentation/backgrounds/braden-collum-CBcS51cGoSw.jpg" lang="fr">
+<Docs
+	title="Extraits de style"
+	thumbnail="/documentation/backgrounds/braden-collum-CBcS51cGoSw.jpg"
+	lang="fr"
+>
 	<p>
 		Bonjourr est personnalisable via son interface de paramètres, mais il y a encore plein de
 		choses que vous pouvez faire ! Copiez-collez ces extraits de style dans la section dédiée
@@ -37,6 +43,149 @@ import MostVisitedLimit from "@assets/documentation/snippets/most-visited-limit.
 
 		<h3 id="transparent-background">Arrière-plans transparents (Zen Browser)</h3>
 		<Code lang="css" code={transparentBackground} />
+	</section>
+
+	<section>
+		<h2 id="colors-and-icons">Couleurs et icônes</h2>
+
+		<h3 id="custom-colors">Ajouter ou changer quelques couleurs</h3>
+		<Code lang="css" code={colors} />
+
+		<h3 id="custom-weather-icons">Icônes météo personnalisées</h3>
+		<Code lang="css" code={weatherIcons} />
+
+		<table>
+			<thead>
+				<tr>
+					<th>Icône</th>
+					<th>Condition</th>
+					<th>ID Jour</th>
+					<th>ID Nuit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-brokenclouds"
+							></use>
+						</svg>
+					</td>
+					<td>Nuages fragmentés</td>
+					<td>weather-day-brokenclouds</td>
+					<td>weather-night-brokenclouds</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-clearsky"
+							></use>
+						</svg>
+					</td>
+					<td>Ciel dégagé</td>
+					<td>weather-day-clearsky</td>
+					<td>weather-night-clearsky</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-fewclouds"
+							></use>
+						</svg>
+					</td>
+					<td>Peu de nuages</td>
+					<td>weather-day-fewclouds</td>
+					<td>weather-night-fewclouds</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-lightrain"
+							></use>
+						</svg>
+					</td>
+					<td>Pluie légère</td>
+					<td>weather-day-lightrain</td>
+					<td>weather-night-lightrain</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-mist"></use>
+						</svg>
+					</td>
+					<td>Brume</td>
+					<td>weather-day-mist</td>
+					<td>weather-night-mist</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use
+								href="/documentation/weather-sprites.svg#weather-day-overcastclouds"
+							></use>
+						</svg>
+					</td>
+					<td>Nuages couverts</td>
+					<td>weather-day-overcastclouds</td>
+					<td>weather-night-overcastclouds</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-rain"></use>
+						</svg>
+					</td>
+					<td>Pluie</td>
+					<td>weather-day-rain</td>
+					<td>weather-night-rain</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-snow"></use>
+						</svg>
+					</td>
+					<td>Neige</td>
+					<td>weather-day-snow</td>
+					<td>weather-night-snow</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-sunnyrain"
+							></use>
+						</svg>
+					</td>
+					<td>Pluie ensoleillée</td>
+					<td>weather-day-sunnyrain</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-thunderstorm"
+							></use>
+						</svg>
+					</td>
+					<td>Orage</td>
+					<td>weather-day-thunderstorm</td>
+					<td>weather-night-thunderstorm</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3 id="custom-settings-icon">Icône de paramètres personnalisée</h3>
+		<Code lang="css" code={settingsIcon} />
 	</section>
 
 	<section>

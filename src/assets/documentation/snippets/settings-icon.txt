@@ -1,0 +1,13 @@
+/* custom settings icon */
+
+#show-settings svg {
+  /* replace the link with any other direct URL to an image */ 
+  background-image: url("https://i.imgur.com/n6C8rGA.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#show-settings svg * {
+  display: none;
+}
