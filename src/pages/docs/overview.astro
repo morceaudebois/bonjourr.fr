@@ -5,7 +5,7 @@ import Docs from "@layouts/Docs.astro"
 import LazyVideo from "@components/Docs/LazyVideo.astro"
 
 const customQuotesExample = `Author, Your quote.
-Author, Your second quote.`
+Author, Your second quote\\nThis time with a line break!`
 ---
 
 <Docs
@@ -34,8 +34,7 @@ Author, Your second quote.`
 
 		<p>
 			Bonjourr integrates a custom right click context menu on most of its interface. Use it
-			to add new quick links, access widget settings easily and control the background. Note
-			that you can still access the default context menu if you press <code>alt</code> + right click.
+			to add new quick links, access widget settings easily and control the background.
 		</p>
 
 		<img
@@ -44,6 +43,14 @@ Author, Your second quote.`
 			style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
 			loading="lazy"
 		/>
+
+		<p>
+			You can override Bonjourr's context menu to get to the regular one in two ways:
+			<ul>
+				<li>press <code>alt</code> + right click,</li>
+				<li>have some text selected on the page.</li>
+			</ul>
+		</p>
 	</section>
 
 	<hr />
@@ -978,6 +985,14 @@ Author, Your second quote.`
 				<tr>
 					<td>/ (forward slash)</td>
 					<td>Focus on the search bar</td>
+				</tr>
+				<tr>
+					<td>alt + N</td>
+					<td>Create new quick link</td>
+				</tr>
+				<tr>
+					<td>alt + number [1-9]</td>
+					<td>Open corresponding quick link</td>
 				</tr>
 			</tbody>
 		</table>
