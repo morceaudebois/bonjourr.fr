@@ -1,7 +1,7 @@
 import { defineConfig, sharpImageService } from "astro/config"
-import expressiveCode from "astro-expressive-code"
 import sitemap from "@astrojs/sitemap"
 import icon from "astro-icon"
+import starlight from "@astrojs/starlight"
 
 export default defineConfig({
 	site: "https://bonjourr.fr",
@@ -12,7 +12,7 @@ export default defineConfig({
 		service: sharpImageService(),
 	},
 	integrations: [
-		[icon()],
+		icon(),
 		sitemap({
 			i18n: {
 				defaultLocale: "en",
@@ -22,8 +22,11 @@ export default defineConfig({
 				},
 			},
 		}),
-		expressiveCode({
-			themes: ["catppuccin-latte", "github-dark"],
+		starlight({
+			title: "My delightful docs site",
+			expressiveCode: {
+				themes: ["catppuccin-latte", "github-dark"],
+			},
 		}),
 	],
 })
