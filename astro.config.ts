@@ -24,6 +24,7 @@ export default defineConfig({
 		}),
 		starlight({
 			title: "My delightful docs site",
+			disable404Route: true,
 			expressiveCode: {
 				themes: ["catppuccin-latte", "github-dark"],
 			},
