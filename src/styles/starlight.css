@@ -1,0 +1,73 @@
+:root {
+	--sl-color-accent: #3187f2;
+	/* --sl-color-accent-high: #3187f2; */
+
+	--sl-nav-height: unset;
+}
+
+starlight-menu-button,
+header.header {
+	display: none;
+}
+
+@media only screen and (min-width: 800px) {
+	.header {
+		display: none;
+	}
+
+	.sidebar {
+		position: sticky;
+		top: 0;
+	}
+
+	.sidebar-pane {
+		height: 100vh;
+		position: unset;
+	}
+
+	/* cancels .sidebar's position:sticky height */
+	/* (unlike position: absolute, position sticky still exists in the flow) */
+	.main-pane {
+		margin-top: -100vh;
+	}
+}
+
+@media only screen and (min-width: 1151px) {
+	.right-sidebar {
+		position: sticky;
+		margin-top: -100vh;
+		top: 0px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1151px) {
+	.right-sidebar-container {
+		position: sticky;
+		top: 0px;
+		margin-top: -100vh;
+	}
+
+	.main-pane {
+		margin-top: unset;
+	}
+
+	nav {
+		position: unset;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.right-sidebar-container {
+		position: sticky;
+		top: 0;
+	}
+
+	mobile-starlight-toc nav {
+		position: relative;
+		top: 0;
+	}
+
+	.main-frame {
+		padding-top: unset;
+	}
+}

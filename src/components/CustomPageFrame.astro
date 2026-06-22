@@ -1,0 +1,11 @@
+---
+import Default from "@astrojs/starlight/components/PageFrame.astro"
+import DocsNav from "./DocsNav.astro"
+---
+
+<DocsNav />
+
+<Default {...Astro.props}>
+	<slot name="sidebar" slot="sidebar" />
+	<slot />
+</Default>

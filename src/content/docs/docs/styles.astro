@@ -1,0 +1,234 @@
+---
+import Docs from "@layouts/Docs.astro"
+import Link from "@components/Link.astro"
+import { Code } from "astro-expressive-code/components"
+
+import rolex from "@assets/documentation/snippets/rolex.txt?raw"
+import noGpu from "@assets/documentation/snippets/no-gpu.txt?raw"
+import potato from "@assets/documentation/snippets/potato.txt?raw"
+import noCredits from "@assets/documentation/snippets/no-credits.txt?raw"
+import clockWidth from "@assets/documentation/snippets/clock-width.txt?raw"
+import colors from "@assets/documentation/snippets/colors.txt?raw"
+import transparentBackground from "@assets/documentation/snippets/transparent-background.txt?raw"
+import portraitBackground from "@assets/documentation/snippets/portrait-background.txt?raw"
+import centerSearchbar from "@assets/documentation/snippets/center-searchbar.txt?raw"
+import searchbarLogo from "@assets/documentation/snippets/searchbar-logo.txt?raw"
+import MostVisitedLimit from "@assets/documentation/snippets/most-visited-limit.txt?raw"
+import weatherIcons from "@assets/documentation/snippets/weather-icons.txt?raw"
+import settingsIcon from "@assets/documentation/snippets/settings-icon.txt?raw"
+---
+
+<Docs title="Style snippets" thumbnail="/documentation/backgrounds/braden-collum-CBcS51cGoSw.jpg">
+	<p>
+		Bonjourr is customizable through its settings interface, but there are many more things you
+		can do! Copy and paste those style snippets in their dedicated section of the settings to
+		unlock some new possibilities.
+
+		<br />
+		<br />
+
+		Want your own style snippet here?
+		<Link href="/#contact">Contact us!</Link>
+	</p>
+
+	<section>
+		<h2 id="backgrounds">Backgrounds</h2>
+
+		<h3 id="portrait-background">Portrait background</h3>
+		<Code lang="css" code={portraitBackground} />
+
+		<h3 id="transparent-background">Transparent backgrounds (Zen browser)</h3>
+		<Code lang="css" code={transparentBackground} />
+	</section>
+
+	<section>
+		<h2 id="colors-and-icons">Colors and icons</h2>
+
+		<h3 id="custom-colors">Add or change some colors</h3>
+		<Code lang="css" code={colors} />
+
+		<h3 id="custom-weather-icons">Custom weather icons</h3>
+		<Code lang="css" code={weatherIcons} />
+
+		<table>
+			<thead>
+				<tr>
+					<th>Icon</th>
+					<th>Condition</th>
+					<th>Day ID</th>
+					<th>Night ID</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-brokenclouds"
+							></use>
+						</svg>
+					</td>
+					<td>Broken clouds</td>
+					<td>weather-day-brokenclouds</td>
+					<td>weather-night-brokenclouds</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-clearsky"
+							></use>
+						</svg>
+					</td>
+					<td>Clear sky</td>
+					<td>weather-day-clearsky</td>
+					<td>weather-night-clearsky</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-fewclouds"
+							></use>
+						</svg>
+					</td>
+					<td>Few clouds</td>
+					<td>weather-day-fewclouds</td>
+					<td>weather-night-fewclouds</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-lightrain"
+							></use>
+						</svg>
+					</td>
+					<td>Light rain</td>
+					<td>weather-day-lightrain</td>
+					<td>weather-night-lightrain</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-mist"></use>
+						</svg>
+					</td>
+					<td>Mist</td>
+					<td>weather-day-mist</td>
+					<td>weather-night-mist</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use
+								href="/documentation/weather-sprites.svg#weather-day-overcastclouds"
+							></use>
+						</svg>
+					</td>
+					<td>Overcast clouds</td>
+					<td>weather-day-overcastclouds</td>
+					<td>weather-night-overcastclouds</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-rain"></use>
+						</svg>
+					</td>
+					<td>Rain</td>
+					<td>weather-day-rain</td>
+					<td>weather-night-rain</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-snow"></use>
+						</svg>
+					</td>
+					<td>Snow</td>
+					<td>weather-day-snow</td>
+					<td>weather-night-snow</td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-sunnyrain"
+							></use>
+						</svg>
+					</td>
+					<td>Sunny rain</td>
+					<td>weather-day-sunnyrain</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use href="/documentation/weather-sprites.svg#weather-day-thunderstorm"
+							></use>
+						</svg>
+					</td>
+					<td>Thunderstorm</td>
+					<td>weather-day-thunderstorm</td>
+					<td>weather-night-thunderstorm</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3 id="custom-settings-icon">Custom settings icon</h3>
+		<Code lang="css" code={settingsIcon} />
+	</section>
+
+	<section>
+		<h2 id="colors">Colors</h2>
+
+		<h3 id="colors">Add or change some colors</h3>
+		<Code lang="css" code={colors} />
+	</section>
+
+	<section>
+		<h2 id="quick-links">Quick links</h2>
+
+		<h3 id="clock-width">Limit my most visited</h3>
+		<Code lang="css" code={MostVisitedLimit} />
+	</section>
+
+	<section>
+		<h2 id="clock">Clock</h2>
+
+		<h3 id="clock-width">I like my clocks thick</h3>
+		<Code lang="css" code={clockWidth} />
+
+		<h3 id="rolex">Rolex 😎</h3>
+		<Code lang="css" code={rolex} />
+	</section>
+
+	<section>
+		<h2 id="fonts">Search bar</h2>
+
+		<h3 id="center-searchbar">Centering the searchbar placeholder</h3>
+		<Code lang="css" code={centerSearchbar} />
+
+		<h3 id="searchbar-logo">Adding a logo to the left of the searchbar</h3>
+		<Code lang="css" code={searchbarLogo} />
+		<i>Submitted by <a href="https://bsky.app/profile/visn.es">Kim Visnes</a></i>
+	</section>
+
+	<section>
+		<h2 id="other">Other</h2>
+
+		<h3 id="no-credits">I don't care about artist exposure</h3>
+		<Code lang="css" code={noCredits} />
+
+		<h3 id="no-gpu-computer">No GPU, only CPU 😠</h3>
+		<Code lang="css" code={noGpu} />
+
+		<h3 id="potato-computer">For laggy computers</h3>
+		<Code lang="css" code={potato} />
+	</section>
+</Docs>

@@ -1,0 +1,101 @@
+---
+import Navigation from "./Navigation.astro"
+---
+
+<Navigation />
+
+<div style={`background-image: url('/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg`}>
+	<h1>Documentation</h1>
+</div>
+
+<style is:global>
+	#bonjourrNav a,
+	.container-mobile a {
+		color: white;
+		text-decoration: none;
+	}
+</style>
+
+<style>
+	div {
+		margin: auto;
+		background-size: cover;
+		background-position: center;
+		padding: 8em 0 4em;
+		font-weight: 500;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		color: white;
+	}
+
+	div::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.4) 10%,
+			rgba(0, 0, 0, 0.3) 20%,
+			rgba(0, 0, 0, 0.2) 30%,
+			rgba(0, 0, 0, 0) 55%
+		);
+	}
+
+	h1 {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		font-weight: 500;
+		line-height: 1.5em;
+		text-shadow: 2px 2px 5px rgba(17, 17, 17, 0.3);
+		font-size: 3em;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		opacity: 0.8;
+		list-style: none;
+	}
+
+	div ul li a {
+		color: inherit;
+	}
+
+	li {
+		display: inline;
+		cursor: default;
+		text-transform: capitalize;
+		text-shadow: 2px 2px 5px rgba(17, 17, 17, 0.3);
+	}
+
+	li::after {
+		content: ">";
+		margin: 0 0.3em;
+	}
+
+	li:last-child::after {
+		display: none;
+	}
+
+	@media only screen and (max-width: 700px) {
+		div {
+			padding: 5em 0 2em;
+		}
+
+		div::before {
+			background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.4) 10%,
+				rgba(0, 0, 0, 0.3) 20%,
+				rgba(0, 0, 0, 0.2) 30%,
+				rgba(0, 0, 0, 0) 75%
+			);
+		}
+	}
+</style>
