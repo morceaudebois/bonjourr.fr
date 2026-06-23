@@ -3,3 +3,91 @@ title: 🔗 Quick Links
 # description:
 # thumbnail:
 ---
+
+Quick links are a way to easily manage the websites you visit regularly.
+
+### Basic usage
+
+To add Quick Links, right-click on the page or open the Quick Links section in the settings. They are editable if you right click on them (or long press on mobile), which allows you to change their titles, URLs, icons and delete them.
+
+<video autoplay loop muted playsinline>
+  <source src="/documentation/overview/links-usage.webm" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+You can easily reorder your links by drag and dropping them, just like you would do on a phone. Additionally, dropping a link on another link will create a folder that contains them both. You can also edit that folder via right click.
+
+💡 **Tip:** A mouse middleclick on a folder will open all its contained links at once.
+
+### Importing your links
+
+Bonjourr integrates a way to import the existing links from your browser. To access it, click the <bjrbtn>Import bookmarks</bjrbtn> button. Depending on your browser, you will be shown multiple groups of links you will be able to import, such as your most visited websites and your bookmarks toolbars.
+
+<img
+  src="/documentation/overview/bookmarks-modal.png"
+  alt="Bonjourr's bookmarks modal"
+  loading="lazy"
+/>
+
+You can select one or multiple groups, and then import them.
+
+#### Syncing
+
+Some importable groups, such as bookmarks, can be synced with your browser if you decide to click on <bjrbtn>Sync with browser</bjrbtn> before importing. This means they won't be editable in Bonjourr, but Bonjourr will update its links whenever you edit your bookmarks directly in the browser.
+
+Some groups (like the "Most visited" on Chrome) are only importable while synced and will get updated in Bonjourr whenever your browser decides to do so.
+
+#### Google Apps
+
+If you use Chrome, Bonjourr will offer you to import Google Apps as a way to replicate Chrome's default startpage's behaviour.
+
+### Link groups
+
+You can organize your links with link groups, an optional feature you can enable in settings. To add a group, hover to the right of the group titles until you see the `+` icon. You can rename and delete groups by right clicking on them. Deleting a group will delete all the links it contains.
+
+Just like with folders, you can:
+
+- Drag and drop links from group to group.
+- Drag and drop groups to reorder them.
+- Rename a group by right clicking it.
+
+You can pin groups by selecting <bjrbtn>Pin this group</bjrbtn> after opening the context menu from the group title. This will make it so the group is always visible.
+
+<img
+  style="max-width: 400px; margin-inline: auto; display: block"
+  src="/documentation/overview/link-groups.gif"
+  alt="Bonjourr's link groups"
+  loading="lazy"
+/>
+
+### Link icons
+
+You can configure your links' icons from three different modes.
+
+#### Website favicon (default)
+
+In the default mode, icons are automatically retrieved from our homemade service [favicon-fetcher](https://github.com/victrme/favicon-fetcher). If you find that a website is missing its icon, you can create an issue [on GitHub](https://github.com/victrme/Bonjourr/issues) or send us an email, and we will do our best to fix it.
+
+#### Local files
+
+Easily customize you link icons by importing them directly from your computer. Most image file formats are allowed, such as JPG, PNG, WebP, (non animated) GIF, and SVG.
+
+#### Distant URL
+
+This mode allows you to set a distant URL to any image file you want on the Internet. This URL can be:
+
+- A distant URL: `https://en.wikipedia.org/favicon.ico`.
+- A locally hosted URL: `http://127.0.0.1:4321/favicon.ico`.
+- A [Data URI](https://dopiaza.org/tools/datauri/index.php) smaller than 8kb: `data:image/gif;base64,R0lGOD...AA7`.
+
+But not a:
+
+- File path: `file:///Users/Me/Pictures/flowers.png`.
+
+#### Cache policy
+
+Icons from [favicon-fetcher](https://github.com/victrme/favicon-fetcher) are stored in the browser cache for a year. As long as the browser cache is not cleared, icons are not fetched (or updated) by the page. However, if the browser cache is often cleared or storage space is limited on your device, icons will have to be fetched from our service again.
+
+Icons you add manually from a distant URL will have a different cache policy that we are not in control of, which might cause the icon to be fetched often or even every time.
+
+⚠️ _Notice_: as a security measure, local paths like `file://`, browser settings links like `about:config` or `chrome://extensions` can't be added. However, `localhost:` links will work just fine.

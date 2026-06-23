@@ -1,5 +1,0 @@
----
-title: Syncing
-# description:
-# thumbnail:
----

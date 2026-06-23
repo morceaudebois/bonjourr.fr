@@ -29,13 +29,13 @@ html [data-slot="layout"] {
 
 html .entry-link {
 	padding-left: 1em;
-	min-height: 1.875rem;
-	height: unset;
+	/* min-height: 1.875rem; */
+	/* height: unset; */
 }
 
-html .entry-link .entry-link-inner {
+/* html .entry-link .entry-link-inner {
 	padding-block: calc(var(--spacing) * 2);
-}
+} */
 
 html .entry-link[aria-current="page"] .entry-link-inner {
 	color: white;
