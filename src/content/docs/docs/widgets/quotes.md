@@ -1,0 +1,5 @@
+---
+title: 🗣 Quotes
+# description:
+# thumbnail:
+---

@@ -40,6 +40,61 @@ export default defineConfig({
 				// ThemeProvider: "@astrojs/starlight/components/ThemeProvider.astro",
 				// ThemeSelect: "@astrojs/starlight/components/ThemeSelect.astro",
 			},
+			sidebar: [
+				{
+					label: "Getting started",
+					items: [
+						"docs/getting-started/install-bonjourr",
+						"docs/getting-started/interface-overview",
+						"docs/getting-started/settings-panel",
+					],
+				},
+
+				{
+					label: "Widgets",
+					items: [
+						"docs/widgets/quick-links",
+						"docs/widgets/time-and-date",
+						"docs/widgets/weather",
+						"docs/widgets/notes",
+						"docs/widgets/search-bar",
+						"docs/widgets/quotes",
+						"docs/widgets/pomodoro-timer",
+					],
+				},
+
+				{
+					label: "Customisation",
+					items: [
+						"docs/customisation/backgrounds",
+						"docs/customisation/layout-and-fonts",
+						"docs/customisation/tab-appearance",
+						"docs/customisation/profiles",
+						"docs/customisation/css-snippets",
+						"docs/customisation/hidden-settings",
+					],
+				},
+
+				{
+					label: "Managing Bonjourr",
+					items: [
+						"docs/managing-bonjourr/syncing",
+						"docs/managing-bonjourr/import-and-export",
+						"docs/managing-bonjourr/notifications",
+					],
+				},
+
+				{
+					label: "Reference",
+					items: [
+						"docs/reference/faq",
+						"docs/reference/settings-reference",
+						"docs/reference/changelog",
+						"docs/reference/contributing",
+						"docs/reference/privacy-policy",
+					],
+				},
+			],
 		}),
 	],
 })

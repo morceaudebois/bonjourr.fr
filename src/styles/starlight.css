@@ -9,6 +9,10 @@ header {
 	display: none;
 }
 
+.container-main .main {
+	padding-top: 3em;
+}
+
 .container-main .main a {
 	color: var(--accent);
 	text-decoration-color: var(--accent);
@@ -43,4 +47,9 @@ html .container-group-link {
 
 .toc {
 	padding-right: 1em;
+}
+
+.container-main .main img,
+.container-main .main video {
+	border-radius: var(--radius);
 }
