@@ -1,18 +1,30 @@
 ---
 import Navigation from "./Navigation.astro"
+import Search from "@astrojs/starlight/components/Search.astro"
 ---
 
 <Navigation />
 
 <div style={`background-image: url('/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg`}>
 	<h1>Documentation</h1>
+	<Search />
 </div>
 
 <style is:global>
 	#bonjourrNav a,
 	.container-mobile a {
-		color: white;
 		text-decoration: none;
+	}
+
+	#bonjourrNav a {
+		color: white;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.container-mobile,
+		.container-mobile a {
+			color: white;
+		}
 	}
 </style>
 
@@ -28,10 +40,12 @@ import Navigation from "./Navigation.astro"
 		align-items: center;
 		position: relative;
 		color: white;
+		gap: 1em;
 	}
 
 	div::before {
 		content: "";
+		pointer-events: none;
 		position: absolute;
 		top: 0;
 		bottom: 0;

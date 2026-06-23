@@ -8,9 +8,9 @@ dependencies:
   '@astrojs/starlight':
     specifier: ^0.40.0
     version: 0.40.0(astro@6.4.8)(typescript@6.0.3)
-  starlight-theme-terminal:
-    specifier: ^1.2.0
-    version: 1.2.0(@astrojs/starlight@0.40.0)
+  lucode-starlight:
+    specifier: ^0.1.6
+    version: 0.1.6(@astrojs/starlight@0.40.0)
 
 devDependencies:
   '@astrojs/sitemap':
@@ -482,6 +482,7 @@ packages:
       postcss-nested: 6.2.0(postcss@8.5.14)
       unist-util-visit: 5.1.0
       unist-util-visit-parents: 6.0.2
+    dev: true
 
   /@expressive-code/core@0.43.1:
     resolution: {integrity: sha512-H4rUJXKyS6y2q9Ig9bIp3dFhWhkZQIeH/jRGl3DROlslrGvfD4OC9qzmvKEFExm+/DtdvvHMQ8/Olmrcfxp+wQ==}
@@ -509,12 +510,6 @@ packages:
       '@expressive-code/core': 0.43.1
     dev: false
 
-  /@expressive-code/plugin-line-numbers@0.41.7:
-    resolution: {integrity: sha512-wI9D5NBcgE9ksiJJV8YfOC0RPI3283+9AYWIb8pBUM5TSM8msIs1YRPDt8c8Ub0XGQvbjJKtB+f9fAl2RiHJ2A==}
-    dependencies:
-      '@expressive-code/core': 0.41.7
-    dev: false
-
   /@expressive-code/plugin-shiki@0.41.7:
     resolution: {integrity: sha512-DL605bLrUOgqTdZ0Ot5MlTaWzppRkzzqzeGEu7ODnHF39IkEBbFdsC7pbl3LbUQ1DFtnfx6rD54k/cdofbW6KQ==}
     dependencies:
@@ -539,14 +534,6 @@ packages:
     resolution: {integrity: sha512-JWf8wdbZSNoGY4TFv3lmt3/NNDaCP7iYL6rRYD05g8YYjKL62hKUHLl5+B47+v0+bqbuMhXDN7qz2wywFUvMkg==}
     dependencies:
       '@expressive-code/core': 0.43.1
-    dev: false
-
-  /@fontsource-variable/geist-mono@5.2.8:
-    resolution: {integrity: sha512-KI5bj+hkkRiHttYHmccotUZ80ZuZyai+RwI1d7UId0clkx/jXxlo8qYK8j54WzmpBjtMoEMPyllV7faDcj+6RA==}
-    dev: false
-
-  /@fontsource-variable/geist@5.2.9:
-    resolution: {integrity: sha512-TP+QSBG3wxKGPE33CbMy/L0Nu3qvJ6Fy81Yc4LnQ95xH+i+cfEp8fyU8/kfV14YwszxIFPhnoMTbjL71waVpyQ==}
     dev: false
 
   /@iconify-json/fa7-brands@1.2.2:
@@ -2286,6 +2273,16 @@ packages:
     resolution: {integrity: sha512-Gf/KoL3C/MlI7Bt0PGI9I+TeTC/I6r/csU58N4BSNc4lppLBeKsOdFYkK+dX0ABDUMJNfCHTyPpzwwO21Awd3A==}
     engines: {node: 20 || >=22}
 
+  /lucode-starlight@0.1.6(@astrojs/starlight@0.40.0):
+    resolution: {integrity: sha512-rLHcTNQmN1dmk170QyxyZoCs5TWHDZyEQsTU2uT0+RNaFhj8PaWm9huKVNPCRcEXvrOYWD27Z6EsxsHaeNhKqg==}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.38.3'
+    dependencies:
+      '@astrojs/starlight': 0.40.0(astro@6.4.8)(typescript@6.0.3)
+      '@pagefind/default-ui': 1.5.2
+      marked: 18.0.5
+    dev: false
+
   /magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
     dependencies:
@@ -2305,6 +2302,12 @@ packages:
 
   /markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
+
+  /marked@18.0.5:
+    resolution: {integrity: sha512-S6GcvALHg6K4ohtu4E7x0a1AqhAjp6cV8KhLSyN9qVapnzJkusVBxZRcIU9AeYsbe6P1hKDusSbEOzGyyuce6w==}
+    engines: {node: '>= 20'}
+    hasBin: true
+    dev: false
 
   /mdast-util-definitions@6.0.0:
     resolution: {integrity: sha512-scTllyX6pnYNZH/AIp/0ePz6s4cZtARxImwoPJ7kS42n+MnVsI4XbnG6d4ibehRIldYMWM2LD7ImQblVhUejVQ==}
@@ -3455,19 +3458,6 @@ packages:
 
   /space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
-
-  /starlight-theme-terminal@1.2.0(@astrojs/starlight@0.40.0):
-    resolution: {integrity: sha512-sqCq2OdR0/LoeyPeIqZyWIbIeJ2FR1i73Sex+koRIEVUNSyfM6Bic2ggMT7Rw8mR7A1bGT7mWmIvKfYAWJOr9Q==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@astrojs/starlight': '>=0.32.0'
-    dependencies:
-      '@astrojs/starlight': 0.40.0(astro@6.4.8)(typescript@6.0.3)
-      '@expressive-code/core': 0.41.7
-      '@expressive-code/plugin-line-numbers': 0.41.7
-      '@fontsource-variable/geist': 5.2.9
-      '@fontsource-variable/geist-mono': 5.2.8
-    dev: false
 
   /stream-replace-string@2.0.0:
     resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}

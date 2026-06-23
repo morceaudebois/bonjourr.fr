@@ -269,6 +269,12 @@ const currentYear = new Date().getFullYear()
 		border-top: 1px solid rgba(255, 255, 255, 0.08);
 	}
 
+	@media (prefers-color-scheme: light) {
+		footer {
+			border-top: 1px solid rgba(87, 87, 87, 0.2);
+		}
+	}
+
 	.container {
 		display: grid;
 		gap: 2rem;
@@ -443,7 +449,7 @@ const currentYear = new Date().getFullYear()
 		flex-wrap: wrap;
 	}
 
-	@media only screen and (max-width: 900px) {
+	@media only screen and (max-width: 1024px) {
 		.container {
 			grid-template-columns: repeat(2, minmax(220px, 1fr));
 		}

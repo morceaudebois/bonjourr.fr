@@ -1,11 +1,14 @@
 ---
-import Default from "@astrojs/starlight/components/PageFrame.astro"
+import PageFrame from "lucode-starlight/components/overrides/PageFrame.astro"
 import DocsNav from "./DocsNav.astro"
+import Footer from "./Footer.astro"
 ---
 
 <DocsNav />
 
-<Default {...Astro.props}>
+<PageFrame {...Astro.props}>
 	<slot name="sidebar" slot="sidebar" />
 	<slot />
-</Default>
+</PageFrame>
+
+<Footer />

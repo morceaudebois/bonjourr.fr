@@ -1,6 +1,6 @@
 ---
 import Link from "./Link.astro"
-
+import Sidebar from "@astrojs/starlight/components/Sidebar.astro"
 const isFrench = Astro.url.pathname.startsWith("/fr")
 const path = Astro.url.pathname
 
@@ -19,6 +19,14 @@ const fr = {
 	Socials: "Réseaux sociaux",
 }
 const trans = isFrench ? fr : en
+
+let isStarlightPage = false
+try {
+	Astro.locals.starlightRoute
+	isStarlightPage = true
+} catch {
+	isStarlightPage = false
+}
 ---
 
 <nav id="bonjourrNav">
@@ -166,9 +174,19 @@ const trans = isFrench ? fr : en
 				<li>
 					<a href="https://online.bonjourr.fr">{trans.Try}</a>
 				</li>
-				<li>
-					<Link href="/docs" title="Documentation">Documentation</Link>
-				</li>
+
+				{
+					isStarlightPage ? (
+						<Sidebar />
+					) : (
+						<li>
+							<Link href="/docs" title="Documentation">
+								Documentation
+							</Link>
+						</li>
+					)
+				}
+
 				<li>
 					<Link href="/blog" title="Blog">Blog</Link>
 				</li>

@@ -1,73 +1,46 @@
 :root {
-	--sl-color-accent: #3187f2;
-	/* --sl-color-accent-high: #3187f2; */
+	/* --sl-color-accent: #3187f2; */
 
 	--sl-nav-height: unset;
+	--accent: #3187f2;
 }
 
-starlight-menu-button,
-header.header {
+header {
 	display: none;
 }
 
-@media only screen and (min-width: 800px) {
-	.header {
-		display: none;
-	}
-
-	.sidebar {
-		position: sticky;
-		top: 0;
-	}
-
-	.sidebar-pane {
-		height: 100vh;
-		position: unset;
-	}
-
-	/* cancels .sidebar's position:sticky height */
-	/* (unlike position: absolute, position sticky still exists in the flow) */
-	.main-pane {
-		margin-top: -100vh;
-	}
+.container-main .main a {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
 }
 
-@media only screen and (min-width: 1151px) {
-	.right-sidebar {
-		position: sticky;
-		margin-top: -100vh;
-		top: 0px;
-	}
+html sl-anchor-link body div[data-slot="layout"] {
+	padding-top: 3em;
+	min-height: 20svh;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1151px) {
-	.right-sidebar-container {
-		position: sticky;
-		top: 0px;
-		margin-top: -100vh;
-	}
-
-	.main-pane {
-		margin-top: unset;
-	}
-
-	nav {
-		position: unset;
-	}
+html [data-slot="layout"] {
+	z-index: unset;
 }
 
-@media only screen and (max-width: 800px) {
-	.right-sidebar-container {
-		position: sticky;
-		top: 0;
-	}
+html .entry-link {
+	padding-left: 1em;
+	min-height: 1.875rem;
+	height: unset;
+}
 
-	mobile-starlight-toc nav {
-		position: relative;
-		top: 0;
-	}
+html .entry-link .entry-link-inner {
+	padding-block: calc(var(--spacing) * 2);
+}
 
-	.main-frame {
-		padding-top: unset;
-	}
+html .entry-link[aria-current="page"] .entry-link-inner {
+	color: white;
+}
+
+html .container-group-link {
+	gap: 6px;
+}
+
+.toc {
+	padding-right: 1em;
 }
