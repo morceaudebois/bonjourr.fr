@@ -1,0 +1,84 @@
+---
+title: Settings reference
+description: Bonjourr's settings are stored in JSON formatting, which you can see in the settings management section. Use this page to know which JSON property refers to what. Last updated for version 22.0.0
+---
+
+import { Code } from "astro-expressive-code/components"
+import hide from "@assets/documentation/reference/hide.txt?raw"
+import move from "@assets/documentation/reference/move.txt?raw"
+import clock from "@assets/documentation/reference/clock.txt?raw"
+import links from "@assets/documentation/reference/links.txt?raw"
+import notes from "@assets/documentation/reference/notes.txt?raw"
+import fonts from "@assets/documentation/reference/fonts.txt?raw"
+import general from "@assets/documentation/reference/general.txt?raw"
+import weather from "@assets/documentation/reference/weather.txt?raw"
+import pomodoro from "@assets/documentation/reference/pomodoro.txt?raw"
+import movegrid from "@assets/documentation/reference/movegrid.txt?raw"
+import greetings from "@assets/documentation/reference/greetings.txt?raw"
+import moveitems from "@assets/documentation/reference/moveitems.txt?raw"
+import linkselem from "@assets/documentation/reference/linkselem.txt?raw"
+import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
+
+## General
+
+<Code lang="jsonc" code={general} />
+
+## Backgrounds
+
+Collections names in "images" & "videos" are tied to our server and cannot be changed or guessed.
+
+<Code lang="jsonc" code={backgrounds} />
+
+## Clock
+
+<Code lang="jsonc" code={clock} />
+
+## Links
+
+General settings for quick links.
+
+<Code lang="jsonc" code={links} />
+
+When adding a quick link
+
+<Code lang="jsonc" code={linkselem} />
+
+## Notes, Search bar, and Quotes
+
+These widgets behave pretty similarly: basic key-val.
+
+<Code lang="jsonc" code={notes} />
+
+## Pomodoro
+
+<Code lang="jsonc" code={pomodoro} />
+
+## Fonts
+
+Most fields in fonts are set automatically by Bonjourr and cannot easily be modified manually.
+
+<Code lang="jsonc" code={fonts} />
+
+## Weather
+
+<Code lang="jsonc" code={weather} />
+
+## Greetings
+
+<Code lang="jsonc" code={greetings} />
+
+## Hide
+
+Specify which element on the page you want to hide.
+
+<Code lang="jsonc" code={hide} />
+
+## Page layout
+
+Page layouts are pretty complex. Grids are tables, items are widget alignments.
+
+<Code lang="jsonc" code={move} />
+
+<Code lang="jsonc" code={movegrid} />
+
+<Code lang="jsonc" code={moveitems} />

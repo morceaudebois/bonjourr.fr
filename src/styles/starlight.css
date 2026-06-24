@@ -13,9 +13,14 @@ header {
 	padding-top: 3em;
 }
 
-.container-main .main a {
+.container-main .main a:not(.sl-link-button) {
 	color: var(--accent);
 	text-decoration-color: var(--accent);
+}
+
+.sl-link-button:hover {
+	color: white;
+	border-color: var(--accent);
 }
 
 html sl-anchor-link body div[data-slot="layout"] {
@@ -29,8 +34,8 @@ html [data-slot="layout"] {
 
 html .entry-link {
 	padding-left: 1em;
-	/* min-height: 1.875rem; */
-	/* height: unset; */
+	min-height: 1.875rem;
+	height: unset;
 }
 
 /* html .entry-link .entry-link-inner {
@@ -51,6 +56,7 @@ html .container-group-link {
 
 .container-main .main img,
 .container-main .main video {
+	/* doesn't work on videos in Firefox over 1024px screen width for some reason???? */
 	border-radius: var(--radius);
 }
 
@@ -68,4 +74,8 @@ h1#_top {
 
 .container-main .level-h4 {
 	margin-top: calc(var(--spacing) * 4);
+}
+
+.sl-steps li :last-child {
+	margin-bottom: unset;
 }
