@@ -78,9 +78,9 @@ export default defineConfig({
 				{
 					label: "Managing Bonjourr",
 					items: [
-						"docs/managing-bonjourr/syncing",
-						"docs/managing-bonjourr/import-and-export",
-						"docs/managing-bonjourr/notifications",
+						"docs/settings-management/import-and-export",
+						"docs/settings-management/syncing",
+						"docs/settings-management/notifications",
 					],
 				},
 
