@@ -74,8 +74,6 @@ The emoji option might be limited by your browser:
 - Firefox has imperfect scaling/alignments ([GitHub issue](https://github.com/victrme/Bonjourr/issues/431)).
 - Microsoft Edge & Safari don't support it at all.
 
-s
-
 Here is how you can write emojis:
 
 - Windows: `WIN + .` (Windows Key + dot)

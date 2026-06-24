@@ -79,3 +79,7 @@ h1#_top {
 .sl-steps li :last-child {
 	margin-bottom: unset;
 }
+
+.container-main kbd {
+	margin-top: unset;
+}
