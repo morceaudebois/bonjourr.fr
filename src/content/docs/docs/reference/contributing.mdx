@@ -1,0 +1,85 @@
+---
+title: Contribute
+description: Learn how to support us and how to make Bonjourr better.
+---
+
+import { Aside, Steps, LinkButton } from "@astrojs/starlight/components"
+
+## ❤️ Donations
+
+A few donations go a long way when it comes to open source software. It motivates us to pour more time into Bonjourr and helps us realise people care about our work and it can open new doors for the future.
+
+<LinkButton
+  href="https://ko-fi.com/bonjourr"
+  variant="secondary"
+  icon="heart"
+  iconPlacement="start"
+>
+  Support us on Ko-fi
+</LinkButton>
+
+## ⭐️ Reviews
+
+The simplest way to help us out is to leave a review on the extension stores, either on
+[Firefox addons](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/),
+[Chrome webstore](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd),
+[Apple App Store](https://apps.apple.com/app/bonjourr-startpage/id1615431236)
+or even
+[Edge Addons](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid). You can also tell your friends about Bonjourr, because if you love it, they probably will too.
+
+## 🌎 Translations
+
+Thanks to our contributors, Bonjourr is currently available in __43 languages__!
+
+You might find that these translations aren't always perfect, especially when we update Bonjourr. Good news though: you can probably help!
+
+### How to create or update a language
+
+Translations are located in the
+[/\_locales/](https://github.com/victrme/Bonjourr/tree/master/_locales)
+folder on Github. Each language folder contains these three files:
+
+- <code class="inline-code">translations.json</code> for the main translation.
+- <code class="inline-code">messages.json</code> for the extension's title and subtitle.
+- <code class="inline-code">overview.md</code> for the full description on store pages.
+
+To add a new language, copy the `en` folder to your desired language. You also need to add the [country code](https://wikipedia.org/wiki/List_of_ISO_639_language_codes) and name to the list in
+[/src/scripts/langs.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts). If you are familiar with GitHub, you can create a pull request. If not, you can directly send us the modified files
+[via email](mailto:bonjourr.app@protonmail.com)
+or to
+[our Discord server](https://discord.gg/CCAR9J4qVg).
+
+<Aside type="tip">Don't forget to join your name and link so we can credit you!</Aside>
+
+### How to test your translation
+
+This is an optional part, but if you want to see what your translation looks like in Bonjourr, you can follow these steps.
+
+<Steps>
+
+1. ### Visit Bonjourr online
+
+    Go to [online.bonjourr.fr](https://online.bonjourr.fr) and select your language.
+
+2. ### Open the developer console
+   Using one of the following keybinds:
+   <kbd>F12</kbd>, <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>, or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
+
+3. ### Insert your translation
+    Add your translation to this command and paste it into the console:
+
+   ```js
+    const myTranslationFile = "/* copy and paste translations.json here */";
+    localStorage.translations = JSON.stringify(myTranslationFile)
+   ```
+
+4. ### Reload the page
+    You should see your new strings!
+</Steps>
+
+## 🧑‍💻 New features
+
+You have some coding skills and and would like to contribute to Bonjourr's codebase? Check out the issues [on GitHub](https://github.com/victrme/Bonjourr/issues) to see if something inspires your, or create a new one so we can discuss of your new feature's implementation.
+
+If you're feeling creative, you can also suggest or create
+[CSS snippets](/docs/styles) & [custom profiles](/docs/profiles).

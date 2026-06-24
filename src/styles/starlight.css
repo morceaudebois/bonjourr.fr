@@ -53,3 +53,19 @@ html .container-group-link {
 .container-main .main video {
 	border-radius: var(--radius);
 }
+
+h1#_top {
+	font-size: 2.25rem;
+}
+
+.container-main h2 {
+	font-size: 1.75rem;
+}
+
+.container-main .level-h3 {
+	margin-top: calc(var(--spacing) * 6);
+}
+
+.container-main .level-h4 {
+	margin-top: calc(var(--spacing) * 4);
+}

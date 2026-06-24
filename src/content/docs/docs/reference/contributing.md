@@ -1,5 +1,0 @@
----
-title: Contribute
-# description:
-# thumbnail:
----
