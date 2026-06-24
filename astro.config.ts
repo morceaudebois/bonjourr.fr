@@ -71,7 +71,7 @@ export default defineConfig({
 						"docs/customisation/tab-appearance",
 						"docs/customisation/profiles",
 						"docs/customisation/css-snippets",
-						"docs/customisation/hidden-settings",
+						"docs/customisation/hidden-features",
 					],
 				},
 
