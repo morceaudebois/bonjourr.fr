@@ -27,6 +27,10 @@ export default defineConfig({
 			title: "My delightful docs site",
 			favicon: "/favicon-32x32.png",
 			disable404Route: true,
+			lastUpdated: true,
+			editLink: {
+				baseUrl: "https://github.com/morceaudebois/bonjourr.fr/tree/starlight-doc/",
+			},
 			plugins: [lucode()],
 			customCss: ["./src/styles/starlight.css"],
 			components: {
