@@ -28,17 +28,9 @@ export default defineConfig({
 			favicon: "/favicon-32x32.png",
 			disable404Route: true,
 			plugins: [lucode()],
-			// expressiveCode: {
-			// 	themes: ["catppuccin-latte", "github-dark"],
-			// },
-			customCss: [
-				// Relative path to your custom CSS file
-				"./src/styles/starlight.css",
-			],
+			customCss: ["./src/styles/starlight.css"],
 			components: {
 				PageFrame: "./src/components/CustomPageFrame.astro",
-				// ThemeProvider: "@astrojs/starlight/components/ThemeProvider.astro",
-				// ThemeSelect: "@astrojs/starlight/components/ThemeSelect.astro",
 			},
 			sidebar: [
 				{
