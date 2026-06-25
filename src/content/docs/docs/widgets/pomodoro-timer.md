@@ -8,6 +8,8 @@ The Pomodoro widget allows you to use the [Pomodoro Technique](https://en.wikipe
 
 <img src="/documentation/overview/pomodoro.png" alt="The Pomodoro widget" loading="lazy" />
 
+## How to use the pomodoro?
+
 The widget shall be used as per the original technique:
 
 1. Decide on the task to be done.

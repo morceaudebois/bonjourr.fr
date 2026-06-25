@@ -15,7 +15,7 @@ Pressing the <kbd>alt</kbd> key in Bonjourr gives you access to useful features 
 
 ## Advanced settings
 
-Bonjourr 22.3 introduced some advanced settings you can access directly from the JSON area at the bottom of the settings panel. Simply turn them from false to true and apply the changes to enable them.
+Bonjourr 22.3 introduced some advanced settings you can access directly from the JSON area at the bottom of the settings panel. Simply turn them from `false` to `true` and apply the changes to enable them.
 
 <img
 	src="/documentation/customisation/advanced-json.jpg"
@@ -26,8 +26,8 @@ Bonjourr 22.3 introduced some advanced settings you can access directly from the
 
 The advanced settings currently include:
 
-- `altMode` pass it to false to disable all features of the Alt mode.
-- `escKey`: pass it to false to disable the ability to open the settings panel with the <kbd>esc</kbd> key.
+- **`altMode`**: pass it to `false` to disable all features of the Alt mode.
+- **`escKey`**: pass it to `false` to disable the ability to open the settings panel with the <kbd>esc</kbd> key.
 
 These might be useful in certain workflows that require these keys without Bonjourr's interferences.
 

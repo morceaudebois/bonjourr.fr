@@ -20,6 +20,6 @@ The emoji option might be limited by your browser:
 
 Here is how you can write emojis:
 
-- Windows: `WIN + .` (Windows Key + dot)
-- macOS: `CTRL + CMD + Space`
+- Windows: <kbd>WIN</kbd> + <kbd>.</kbd>
+- macOS: <kbd>Ctrl</kbd> + <kbd>Cmd</kbd> + <kbd>Space bar</kbd>
 - You can also copy and paste them from the Internet: [unicode.org/emoji/charts/full-emoji-list](https://unicode.org/emoji/charts/full-emoji-list.html).
