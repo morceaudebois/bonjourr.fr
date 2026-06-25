@@ -1,0 +1,26 @@
+---
+import { Icon } from "@astrojs/starlight/components"
+---
+
+<button id="custom-open-search" type="button" aria-label="Search">
+	<Icon name="magnifier" />
+</button>
+
+<script>
+	document.getElementById("custom-open-search")?.addEventListener("click", (event) => {
+		event.stopPropagation()
+		document.querySelector("button[data-open-modal]")?.click()
+	})
+</script>
+
+<style>
+	#custom-open-search {
+		margin-right: 0.5em;
+		background: unset;
+		border: unset;
+		font-size: 2em;
+		color: white;
+
+		display: flex;
+	}
+</style>

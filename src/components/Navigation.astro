@@ -1,4 +1,5 @@
 ---
+import CustomOpenSearch from "./CustomOpenSearch.astro"
 import Link from "./Link.astro"
 import Sidebar from "@astrojs/starlight/components/Sidebar.astro"
 const isFrench = Astro.url.pathname.startsWith("/fr")
@@ -141,6 +142,8 @@ try {
 				</span>
 			</a>
 		</div>
+
+		{isStarlightPage ? <CustomOpenSearch /> : ""}
 
 		<button class="hamburger" aria-label="Open navigation menu" open-button>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -498,7 +501,10 @@ try {
 		font-weight: 500;
 		padding: 8px 12px;
 		border-radius: 8px;
-		transition: 0.075s ease-in;
+		transition:
+			background-color 0.075s ease-in,
+			backdrop-filter 0.075s ease-in,
+			outline 0.075s ease-in;
 		outline: 1px solid rgba(255, 255, 255, 0);
 	}
 
