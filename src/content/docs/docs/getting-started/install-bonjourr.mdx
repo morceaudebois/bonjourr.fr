@@ -2,24 +2,24 @@
 title: Install Bonjourr
 ---
 
-import { CardGrid, LinkCard, Aside } from "@astrojs/starlight/components"
+import { CardGrid, LinkCard, Aside, LinkButton, Steps, Code } from "@astrojs/starlight/components"
  
 <div class="store-grid">
   <a
-    class="store-card"
+    class="sl-link-card"
     href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
   >
     <img src="/browsers/chrome.svg" alt="" aria-hidden="true" />
     <span class="store-card-title">Chrome</span>
     <span class="store-card-desc">Chrome Web Store</span>
   </a>
-  <a class="store-card" href="https://addons.mozilla.org/firefox/addon/bonjourr-startpage/">
+  <a class="sl-link-card" href="https://addons.mozilla.org/firefox/addon/bonjourr-startpage/">
     <img src="/browsers/firefox.svg" alt="" aria-hidden="true" />
     <span class="store-card-title">Firefox</span>
     <span class="store-card-desc">Firefox Add-ons</span>
   </a>
   <a
-    class="store-card"
+    class="sl-link-card"
     href="https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid"
   >
     <img src="/browsers/edge.svg" alt="" aria-hidden="true" />
@@ -28,32 +28,113 @@ import { CardGrid, LinkCard, Aside } from "@astrojs/starlight/components"
   </a>
 </div>
 
-
 ## Using Bonjourr on Chrome
-<Aside type="tip">
-    Be sure to right click -> Hide footer on the New tab page to hide the bottom bar added by Chrome.
-</Aside>
 
-## Desktop
+Be sure to remove Chrome's automatically added new tab footer for a cleaner look:
 
-### Safari
+<video autoplay controls loop muted playsinline>
+	<source src="/documentation/getting-started/chrome_footer.mp4" type="video/mp4" />
+	Your browser does not support the video tag.
+</video>
 
-### Brave
-
-### Zen 
-
-### Opera
-
-### Orion
-
-## Mobile
+## Other desktop browsers
 
 ### Safari
 
-### Non-Safari browsers on iOS
-
-### Chrome for Android 
-
-### Firefox for Android
-
+Bonjourr can be installed on Safari for macOS in just a few seconds:
  
+<Steps>
+1. #### Open Safari's preferences
+    Hit <kbd>Cmd</kbd> + <kbd>Comma</kbd> and open the "General" tab
+2. #### Switch to Homepage
+    Set "New windows open with" and "New tabs open with" to "Homepage".
+3. #### Change your homepage
+    Set the Homepage text area to: <Code code={"https://online.bonjourr.fr"} />
+</Steps>
+
+<video src="/documentation/overview/safari-online-install.mp4" controls></video>
+
+<Aside type="note">Safari was available on the App Store for a few years (including for iOS & iPadOS) but has been [discontinued since May 2026](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5).</Aside>
+
+### ✅ Brave
+
+Being a Chromium based browser, Brave has the ability to install any Chrome extension. You can download Bonjourr [from the Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) and start using it right away.
+
+### ✅ Zen
+
+Zen is based on Firefox, which means you can install any Firefox extension on it, including [Bonjourr](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/). Zen works a little differently than other browsers though, so you need to set a few things to make sure you take full advantage of Bonjourr:
+
+1. After installation, open Zen's settings and make sure Bonjourr is set for both <bjr>Homepage and new windows</bjr> and <bjr>New tabs</bjr>.
+2. Then, head to `about:config` in your URL bar, click "Accept the risk" and search for `zen.urlbar.replace-newtab`. Switch the value to `false` using the button on the right, and close the page. This ensures that Bonjourr actually shows up when you open new Zen tabs.
+3. Lastly, click on a Bonjourr tab in Zen and select <bjr>Add to essentials</bjr>. This is optional, but allows you to access Bonjourr more easily.
+    <video src="/documentation/overview/zen-config.webm" controls></video>
+
+Additionally, Bonjourr supports transparency in Zen using a [CSS snippet](/docs/styles#plain-background) to paste in the Custom styles settings.
+
+### 🟡 Opera (and Opera GX)
+
+Opera does not allow extensions to modify its new tab. While there is no official statement, we believe this is because ads on their Speed Dial is a good revenue source for them.
+
+A workaround constists of installing an extension and use the online version of Bonjourr:
+
+<Steps>
+  1. Empty your current Speed Dial so that it shows a dark blank page.
+
+  2. You then need to install a third-party extension that can replace your current active tab. For now, we found that only [New Tab Start Page](https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj) works correctly. We are not affiliated with them.
+
+  3. Click on the Bonjourr icon, it should reveal its full URL in the address bar.
+
+  4. Setup the third-party extension to <bjr>https://online.bonjourr.fr</bjr>, and we're done!
+</Steps>
+
+### ✅ Vivaldi
+
+Vivaldi used to not work that well with New tab page extensions, but their recent updates have made things a lot better. Once Bonjourr is installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd), you'll need to change two settings in Vivaldi:
+
+<Steps>
+1. #### General tab
+    Look for the "Startup with" section and check the "Specific Pages" box. Then, copy this into Startup Pages text input before hitting <kbd>Add</kbd>:
+    <Code code={"chrome-extension://dlnejlppicbjfcfcedcflplfjajinajd/index.html"} lang="json" />
+    ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-general.jpg)
+2. #### Tabs tab
+    Make sure the New Tab Page can be Controlled by Extension: ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-tabs.jpg)
+</Steps>
+
+### 🟡 Orion
+
+While you can install Bonjourr on Orion (either Chrome or Firefox versions work), stability in our experience is hit or miss. This will likely improve with time as Orion gets developed more.
+
+<LinkButton
+	href="https://github.com/victrme/Bonjourr/issues/657"
+	variant="secondary"
+	icon="github"
+	iconPlacement="start"
+>
+	GitHub issue for Orion
+</LinkButton>
+
+## Mobile browsers
+
+If you're lucky, your
+
+### 🟡 Safari (iOS and iPadOS)
+
+### 🟡 Non-Safari browsers on iOS
+
+There is no way for non-Safari browsers on iOS to install extensions.
+
+Some of them however (like [Firefox](https://apps.apple.com/app/navigateur-firefox-rapide-s%C3%BBr/id989804926)) will allow you to set a custom URL for when you open new tabs in which you can set `https://online.bonjourr.fr`. Even if this is the online version of Bonjourr, its data will be stored in cache which means it'll still be plenty fast.
+
+### ❌ Chrome for Android
+
+The Android version of Chrome is lacking an extension system, which makes it impossible to install Bonjourr on.
+
+The only way you were able to install Bonjourr on Android was by using Kiwi Browser, which allowed its users to install regular Chrome extensions on it. This is not possible anymore since Kiwi was discontinued.
+
+<Aside type="note">Some [recent developments](https://www.reddit.com/r/kiwibrowser/comments/1i89rje/kiwi_browser_extension_code_integrated_into/) note that Kiwi's source code was integrated into [Microsoft Edge for Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx). You might be able to install Bonjourr there, although we haven't tested.</Aside>
+
+### ❌ Firefox for Android
+
+Mozilla prevents extensions from editing the startpage on its Android version, which makes Bonjourr impossible to install. As long as they don't change that, we as developers are unable to do anything.
+
+Another way they could do it is by implementing a custom URL option. That would allow you to use the online version of Bonjourr. You can [vote for this](https://connect.mozilla.org/t5/ideas/add-option-to-set-custom-homepage-in-firefox-for-android/idi-p/83481) on their forum.
