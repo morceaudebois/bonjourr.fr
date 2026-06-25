@@ -68,6 +68,10 @@ h1#_top {
 	font-size: 1.75rem;
 }
 
+.container-main h3 {
+	font-size: 1.325rem;
+}
+
 .container-main .level-h3 {
 	margin-top: calc(var(--spacing) * 6);
 }

@@ -4,8 +4,23 @@ title: Settings panel
 # thumbnail:
 ---
 
-Bonjourr allows you to export all your settings into a file. You can use this feature if you want to save them or share them to someone. You will in turn be able to import said settings into any instance of Bonjourr.
+## Accessing the settings panel
 
-To do so, simply go to the bottom of your settings pannel, then click the <bjrbtn>Export</bjrbtn> button in the settings management. Your file will be downloaded. On your other instance of Bonjourr, click the <bjrbtn>Import</bjrbtn> button and select your previously exported file. Bonjourr will reload and all your settings will be applied.
+There are two ways you can access the settings of Bonjourr:
 
-The settings include everything you've ever modified in Bonjourr, except for the local files you've uploaded (backgrounds and icons).
+- Click on the ⚙️ icon in the bottom right corner.
+- Hit the `esc` key of your keyboard (while focused on the page).
+- Right click on the page to access the context menu
+
+## Show all settings
+
+Bonjourr has lots of settings. To make it easier for newcomers, we hide most of the more advanced ones by default. You can enable them by toggling <bjr>Show all settings</bjr> at the very top of the settings panel.
+
+## Hide settings icon
+
+When toggling the <bjr>Hide settings icon</bjr> option, the icon is still clickable at the same position as before.
+
+<video autoplay loop muted playsinline>
+  <source src="/documentation/overview/hide-icon.webm" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>

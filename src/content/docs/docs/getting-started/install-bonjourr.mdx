@@ -39,7 +39,11 @@ Be sure to remove Chrome's automatically added new tab footer for a cleaner look
 
 ## Other desktop browsers
 
-### Safari
+### ✅ Brave
+
+Being a Chromium based browser, Brave has the ability to install any Chrome extension. You can download Bonjourr [from the Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) and start using it right away.
+
+### ✅ Safari
 
 Bonjourr can be installed on Safari for macOS in just a few seconds:
  
@@ -56,10 +60,6 @@ Bonjourr can be installed on Safari for macOS in just a few seconds:
 
 <Aside type="note">Safari was available on the App Store for a few years (including for iOS & iPadOS) but has been [discontinued since May 2026](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5).</Aside>
 
-### ✅ Brave
-
-Being a Chromium based browser, Brave has the ability to install any Chrome extension. You can download Bonjourr [from the Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) and start using it right away.
-
 ### ✅ Zen
 
 Zen is based on Firefox, which means you can install any Firefox extension on it, including [Bonjourr](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/). Zen works a little differently than other browsers though, so you need to set a few things to make sure you take full advantage of Bonjourr:
@@ -70,6 +70,19 @@ Zen is based on Firefox, which means you can install any Firefox extension on it
     <video src="/documentation/overview/zen-config.webm" controls></video>
 
 Additionally, Bonjourr supports transparency in Zen using a [CSS snippet](/docs/styles#plain-background) to paste in the Custom styles settings.
+
+### ✅ Vivaldi
+
+Vivaldi used to not work that well with New tab page extensions, but their recent updates have made things a lot better. Once Bonjourr is installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd), you'll need to change two settings in Vivaldi:
+
+<Steps>
+1. #### General tab
+    Look for the "Startup with" section and check the "Specific Pages" box. Then, copy this into the Startup Pages text input before hitting <kbd>Add</kbd>:
+    <Code code={"chrome-extension://dlnejlppicbjfcfcedcflplfjajinajd/index.html"} lang="json" />
+    ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-general.jpg)
+2. #### Tabs tab
+    Make sure the New Tab Page can be Controlled by Extension: ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-tabs.jpg)
+</Steps>
 
 ### 🟡 Opera (and Opera GX)
 
@@ -87,19 +100,6 @@ A workaround constists of installing an extension and use the online version of 
   4. Setup the third-party extension to <bjr>https://online.bonjourr.fr</bjr>, and we're done!
 </Steps>
 
-### ✅ Vivaldi
-
-Vivaldi used to not work that well with New tab page extensions, but their recent updates have made things a lot better. Once Bonjourr is installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd), you'll need to change two settings in Vivaldi:
-
-<Steps>
-1. #### General tab
-    Look for the "Startup with" section and check the "Specific Pages" box. Then, copy this into Startup Pages text input before hitting <kbd>Add</kbd>:
-    <Code code={"chrome-extension://dlnejlppicbjfcfcedcflplfjajinajd/index.html"} lang="json" />
-    ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-general.jpg)
-2. #### Tabs tab
-    Make sure the New Tab Page can be Controlled by Extension: ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-tabs.jpg)
-</Steps>
-
 ### 🟡 Orion
 
 While you can install Bonjourr on Orion (either Chrome or Firefox versions work), stability in our experience is hit or miss. This will likely improve with time as Orion gets developed more.
@@ -115,9 +115,13 @@ While you can install Bonjourr on Orion (either Chrome or Firefox versions work)
 
 ## Mobile browsers
 
-If you're lucky, your
+New tab page extensions support is not the best on mobile, but there are still some ways to get Bonjourr running on phones and tablets (and smart fridges).
 
 ### 🟡 Safari (iOS and iPadOS)
+
+On iOS and iPadOS, Apple only allows App Store apps to change Safari's new tab page. Although [we don't have one anymore](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5), there still is a way to use Bonjourr on Safari using the [Homepage for Safari](https://apps.apple.com/app/homepage-for-safari/id6481118559) open source app.
+
+This app essentially allows you to set any URL are your new tab page in Safari. If you use it to set `https://online.bonjourr.fr`, then you'll get Bonjourr.
 
 ### 🟡 Non-Safari browsers on iOS
 
