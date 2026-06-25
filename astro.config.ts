@@ -43,11 +43,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: "Getting started",
-					items: [
-						"docs/getting-started/install-bonjourr",
-						"docs/getting-started/interface-overview",
-						"docs/getting-started/settings-panel",
-					],
+					items: ["docs", "docs/interface-overview", "docs/settings-panel"],
 				},
 
 				{
