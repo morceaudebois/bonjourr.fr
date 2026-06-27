@@ -4,10 +4,12 @@ title: 🗣 Quotes
 # thumbnail:
 ---
 
+import { Code } from "@astrojs/starlight/components"
+
 The quotes widget can fetch quotes from multiple sources:
 
 - By default, our **[open source quotes API](https://github.com/victrme/i18n-quotes)** available in multiple languages. These are general motivational or inspirational quotes that the community can manage through pull requests.
-- The **[InspiroBot](https://inspirobot.me/) API**, an AI that generates seemingly inspirational quotes, but with a humorous twist. It parodies traditional motivational quotes from the point of view of an AI. Although we are not affiliated with InspiroBot, we've always found this service fun and thought it'd be nice to have it in Bonjourr. It is important to note that it's at least 10 years old and <u>**has nothing to do with the recent generative AI trend**</u>.
+- The **[InspiroBot](https://inspirobot.me/) API**, an old school non-generative AI that generates seemingly inspirational quotes, but with a humorous twist. It parodies traditional motivational quotes from the point of view of an AI. Although we are not affiliated with InspiroBot, we've always found this service fun and thought it'd be nice to have it in Bonjourr. It is important to note that it's at least 10 years old and <u>**has nothing to do with the recent generative AI trend**</u>.
 - The **[Kaamelott API](https://github.com/sin0light/api-kaamelott)**, quotes from a french comedy TV show. Only available in French.
 - **Stoic** quotes that reflect the [Stoicism philosophy](https://en.wikipedia.org/wiki/Stoicism).
 - **Hitokoto**, japanese inspirational quotes.
@@ -18,10 +20,10 @@ The quotes widget can fetch quotes from multiple sources:
 
 There are two ways you can import your own quotes: directly from Bonjourr, or from a distant URL. In both cases, here is the formatting your quotes need to adopt:
 
-```json
-Author, Your quote.
-Author, Your second quote\nThis time with a line break!
-```
+<Code
+	code={"Author, Your quote.\nAuthor, Your second quote\\nThis time with a line break!"}
+	lang="json"
+/>
 
 #### With the custom quotes option
 
@@ -44,6 +46,6 @@ The easiest way to do this is to use GitHub Gist, a service that allows you to v
 7. Click the <bjrbtn>Raw</bjrbtn> button, copy the URL of the page that opens and paste it in the URL input of Bonjourr. Voilà!
 
 <video autoplay loop muted playsinline>
-  <source src="/documentation/overview/quotes-gist.webm" type="video/mp4" />
-  Your browser does not support the video tag.
+	<source src="/documentation/overview/quotes-gist.webm" type="video/mp4" />
+	Your browser does not support the video tag.
 </video>

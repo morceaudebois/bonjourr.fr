@@ -22,12 +22,12 @@ Currently, other Markdown features, such as italics, are not supported.
 
 ### Keybindings
 
-You can use these keyboard shortcuts while editing your Note. Replace `Ctrl` with `cmd` on macOS.
+You can use these keyboard shortcuts while editing your Note.
 
-| Keys                 | Action                |
-| -------------------- | --------------------- |
-| Ctrl/cmd + Shift + 1 | Create large heading  |
-| Ctrl/cmd + Shift + 2 | Create medium heading |
-| Ctrl/cmd + Shift + 3 | Create small heading  |
-| Ctrl/cmd + Shift + 4 | Create bullet list    |
-| Ctrl/cmd + Shift + 5 | Create todo list      |
+| Keys                                                             | Action                |
+| ---------------------------------------------------------------- | --------------------- |
+| <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> | Create large heading  |
+| <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd> | Create medium heading |
+| <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd> | Create small heading  |
+| <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> | Create bullet list    |
+| <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> | Create todo list      |

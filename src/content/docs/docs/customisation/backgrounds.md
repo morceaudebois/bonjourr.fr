@@ -48,7 +48,7 @@ Additionally, we try to go out of our way to never integrate AI generated conten
 
 #### Bonjourr Daylight
 
-Just like [with images](#images-bonjourr-daylight), Bonjourr also offers curated video backgrounds that change with the time of day.
+Just like [with images](/docs/customisation/backgrounds/#bonjourr-daylight), Bonjourr also offers curated video backgrounds that change with the time of day.
 
 #### Pixabay Search
 
