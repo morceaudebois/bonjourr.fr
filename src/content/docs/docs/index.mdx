@@ -30,8 +30,7 @@ import { CardGrid, LinkCard, Aside, LinkButton, Steps, Code } from "@astrojs/sta
 
 ## Using Bonjourr on Chrome
 
-Be sure to remove Chrome's automatically added new tab footer for a cleaner look:
-
+⚠️ Chrome adds a footer to all extension-based new tabs by default. It isn't part of Bonjourr, and can be removed through a right click for a much cleaner experience:
 <video autoplay controls loop muted playsinline>
 	<source src="/documentation/getting-started/chrome_footer.mp4" type="video/mp4" />
 	Your browser does not support the video tag.
@@ -41,7 +40,7 @@ Be sure to remove Chrome's automatically added new tab footer for a cleaner look
 
 ### ✅ Brave
 
-Being a Chromium based browser, Brave has the ability to install any Chrome extension. You can download Bonjourr [from the Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) and start using it right away.
+Being a Chromium based browser, Brave has the ability to install any Chrome extension. You can [download Bonjourr](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) and start using it right away.
 
 ### ✅ Safari
 
@@ -52,28 +51,39 @@ Bonjourr can be installed on Safari for macOS in just a few seconds:
     Hit <kbd>Cmd</kbd> + <kbd>Comma</kbd> and open the "General" tab
 2. #### Switch to Homepage
     Set "New windows open with" and "New tabs open with" to "Homepage".
-3. #### Change your homepage
+3. #### Set your homepage
     Set the Homepage text area to: <Code code={"https://online.bonjourr.fr"} />
 </Steps>
 
+Video walkthrough:
 <video src="/documentation/overview/safari-online-install.mp4" controls></video>
 
-<Aside type="note">Safari was available on the App Store for a few years (including for iOS & iPadOS) but has been [discontinued since May 2026](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5).</Aside>
+<Aside type="note">Bonjourr for Safari was available on the App Store for a few years (including for iOS & iPadOS) but has been [discontinued since May 2026](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5).</Aside>
 
 ### ✅ Zen
 
-Zen is based on Firefox, which means you can install any Firefox extension on it, including [Bonjourr](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/). Zen works a little differently than other browsers though, so you need to set a few things to make sure you take full advantage of Bonjourr:
+Zen is based on Firefox, which means you can install any Firefox extension on it, including [Bonjourr](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/). Zen requires a couple of extra settings before Bonjourr fully replaces new tabs.
 
-1. After installation, open Zen's settings and make sure Bonjourr is set for both <bjr>Homepage and new windows</bjr> and <bjr>New tabs</bjr>.
-2. Then, head to `about:config` in your URL bar, click "Accept the risk" and search for `zen.urlbar.replace-newtab`. Switch the value to `false` using the button on the right, and close the page. This ensures that Bonjourr actually shows up when you open new Zen tabs.
-3. Lastly, click on a Bonjourr tab in Zen and select <bjr>Add to essentials</bjr>. This is optional, but allows you to access Bonjourr more easily.
-    <video src="/documentation/overview/zen-config.webm" controls></video>
+<Steps>
+1. #### Set Bonjourr as your homepage and new tab
 
-Additionally, Bonjourr supports transparency in Zen using a [CSS snippet](/docs/styles#plain-background) to paste in the Custom styles settings.
+   Open Zen's settings and make sure Bonjourr is selected for both **Homepage and new windows** and **New tabs**.
+
+2. #### Disable Zen's custom new tab
+
+   Open `about:config`, click **Accept the risk**, then search for `zen.urlbar.replace-newtab`. Set its value to `false` using the toggle button on the right. This ensures Bonjourr is shown whenever you open a new tab.
+
+3. #### (Optional) Add Bonjourr to Essentials
+
+   Open a Bonjourr tab, then click **Add to Essentials**. This keeps Bonjourr easily accessible from Zen's sidebar.
+</Steps>
+
+Video walkthrough:
+<video src="/documentation/overview/zen-config.webm" controls></video>
 
 ### ✅ Vivaldi
 
-Vivaldi used to not work that well with New tab page extensions, but their recent updates have made things a lot better. Once Bonjourr is installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd), you'll need to change two settings in Vivaldi:
+Vivaldi's support for new tab page extensions has improved significantly in recent releases. Once Bonjourr is installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd), you'll need to change two settings:
 
 <Steps>
 1. #### General tab
@@ -88,7 +98,7 @@ Vivaldi used to not work that well with New tab page extensions, but their recen
 
 Opera does not allow extensions to modify its new tab. While there is no official statement, we believe this is because ads on their Speed Dial is a good revenue source for them.
 
-A workaround constists of installing an extension and use the online version of Bonjourr:
+A workaround consists of installing an extension and use the online version of Bonjourr:
 
 <Steps>
   1. Empty your current Speed Dial so that it shows a dark blank page.
@@ -97,7 +107,7 @@ A workaround constists of installing an extension and use the online version of 
 
   3. Click on the Bonjourr icon, it should reveal its full URL in the address bar.
 
-  4. Setup the third-party extension to <bjr>https://online.bonjourr.fr</bjr>, and we're done!
+  4. Set up the third-party extension to <bjr>https://online.bonjourr.fr</bjr>, and we're done!
 </Steps>
 
 ### 🟡 Orion
@@ -121,7 +131,7 @@ New tab page extensions support is not the best on mobile, but there are still s
 
 On iOS and iPadOS, Apple only allows App Store apps to change Safari's new tab page. Although [we don't have one anymore](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5), there still is a way to use Bonjourr on Safari using the [Homepage for Safari](https://apps.apple.com/app/homepage-for-safari/id6481118559) open source app.
 
-This app essentially allows you to set any URL are your new tab page in Safari. If you use it to set `https://online.bonjourr.fr`, then you'll get Bonjourr.
+This app essentially allows you to set any URL as your new tab page in Safari. If you use it to set `https://online.bonjourr.fr`, then you'll get Bonjourr.
 
 ### 🟡 Non-Safari browsers on iOS
 

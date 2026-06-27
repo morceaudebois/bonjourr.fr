@@ -24,7 +24,7 @@ export default defineConfig({
 			},
 		}),
 		starlight({
-			title: "My delightful docs site",
+			title: "Bonjourr's Documentation",
 			favicon: "/favicon-32x32.png",
 			disable404Route: true,
 			lastUpdated: true,

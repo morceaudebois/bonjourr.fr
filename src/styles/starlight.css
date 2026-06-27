@@ -89,6 +89,16 @@ h1#_top {
 	margin-bottom: unset;
 }
 
+.container-mobile .top-level {
+	margin-inline-start: var(--sl-sidebar-item-padding-inline);
+}
+
+@media (prefers-color-scheme: dark) {
+	.container-mobile a[aria-current="page"] {
+		color: black;
+	}
+}
+
 /* install cards on getting started page */
 .store-grid {
 	display: grid;
