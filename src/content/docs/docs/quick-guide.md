@@ -28,12 +28,12 @@ Drag one icon onto another:
 
 ## How do I add my most visited sites?
 
-Use the <kbd>Import</kbd> button in the settings:
+Use the <kbd>Import</kbd> button in the Quick links settings:
 <video src="/documentation/quick-guide/most-visited.mp4" autoplay loop controls></video>
 
 ## How do I change my background?
 
-Use the **Local files** option in the settings to import your own:
+Use the **Local files** option in the Background settings to import your own:
 <video src="/documentation/quick-guide/change-bg.mp4" autoplay loop controls></video>
 
 ## How do I add a search bar?
@@ -55,15 +55,3 @@ Toggle **Show all settings** on at the top of the settings:
 
 You've probably toggled **Hide settings icon** on. You can still access the settings icon in the same way as before:
 <video src="/documentation/quick-guide/hide-settings-icon.mp4" autoplay loop controls></video>
-
-## The settings panel
-
-All of Bonjourr's options are located in the settings panel. There's multiples ways to access it:
-
-- Click on the ⚙️ icon in the bottom right corner.
-- Hit the <kbd>esc</kbd> key of your keyboard (while focused on the page).
-- Right click on the page to access the context menu
-
-### Show all settings
-
-Bonjourr has lots of settings. To make it easier for newcomers, we hide most of the more advanced ones by default. You can enable them by toggling **Show all settings** at the very top of the settings panel.
