@@ -39,7 +39,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: "Getting started",
-					items: ["docs", "docs/interface-overview", "docs/settings-panel"],
+					items: ["docs", "docs/quick-guide"],
 				},
 
 				{
