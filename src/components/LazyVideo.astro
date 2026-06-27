@@ -1,0 +1,29 @@
+---
+interface Props {
+	src: string
+	poster?: string
+	loop?: boolean
+	muted?: boolean
+	controls?: boolean
+	class?: string
+}
+
+const { src, poster, loop = true, muted = true, controls = true, class: className } = Astro.props
+---
+
+<video
+	class={["lazy-video", className].filter(Boolean).join(" ")}
+	data-src={src}
+	poster={poster}
+	loop={loop}
+	muted={muted}
+	controls={controls}
+	autoplay></video>
+
+<script>
+	import LazyLoad from "vanilla-lazyload"
+
+	new LazyLoad({
+		elements_selector: ".lazy-video",
+	})
+</script>

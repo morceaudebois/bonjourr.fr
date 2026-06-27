@@ -43,6 +43,7 @@
 	},
 	"dependencies": {
 		"@astrojs/starlight": "^0.40.0",
-		"lucode-starlight": "^0.1.6"
+		"lucode-starlight": "^0.1.6",
+		"vanilla-lazyload": "^19.1.3"
 	}
 }
