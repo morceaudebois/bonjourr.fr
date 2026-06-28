@@ -1,6 +1,7 @@
 ---
 title: ⌚️ Time and date
 description: Time and Date settings let you customise the analog clock appearance and enable world clocks to display multiple time zones.
+image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 The analog clock feature has many options you can play around with and get to really cool styles.

@@ -1,6 +1,7 @@
 ---
 title: Hidden features
 description: Bonjourr's got more than meets the eye 👀
+image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
 ## Background info

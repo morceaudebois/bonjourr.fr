@@ -1,5 +1,6 @@
 ---
 title: Politique de confidentialité
+image: /documentation/backgrounds/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
 ---
 
 <small><i>Dernière mise à jour : 21 nov. 2024, version 20.3.0</i></small>

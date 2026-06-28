@@ -1,11 +1,14 @@
 ---
 import Navigation from "./Navigation.astro"
 import Search from "@astrojs/starlight/components/Search.astro"
+
+const { entry } = Astro.locals.starlightRoute
+const bg = entry.data.image ?? "/documentation/backgrounds/saad-chaudhry-sAJlWye9at8-unsplash.jpg"
 ---
 
 <Navigation />
 
-<div style={`background-image: url('/documentation/backgrounds/saad-chaudhry-sAJlWye9at8.jpg`}>
+<div style={`background-image: url('${bg}')`}>
 	<h1>Documentation</h1>
 	<Search />
 </div>
