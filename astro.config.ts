@@ -12,6 +12,16 @@ export default defineConfig({
 	image: {
 		service: sharpImageService(),
 	},
+	redirects: {
+		"/privacy": {
+			status: 301,
+			destination: "/docs/reference/privacy-policy/",
+		},
+		"/fr/privacy": {
+			status: 301,
+			destination: "/fr/docs/reference/privacy-policy/",
+		},
+	},
 	integrations: [
 		icon(),
 		sitemap({
