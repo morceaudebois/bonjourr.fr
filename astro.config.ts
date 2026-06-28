@@ -41,6 +41,7 @@ export default defineConfig({
 			editLink: {
 				baseUrl: "https://github.com/morceaudebois/bonjourr.fr/tree/starlight-doc/",
 			},
+			routeMiddleware: "./src/routeData.ts",
 			plugins: [lucode()],
 			customCss: ["./src/styles/starlight.css"],
 			components: {
