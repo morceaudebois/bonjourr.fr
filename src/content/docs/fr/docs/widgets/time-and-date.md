@@ -1,23 +1,23 @@
 ---
-title: ⌚️ Time and date
-description: Time and Date settings let you customise the analog clock appearance and enable world clocks to display multiple time zones.
+title: ⌚️ Heure et date
+description: Les réglages Heure et date permettent de personnaliser l’horloge analogique et d’afficher plusieurs fuseaux horaires avec les horloges mondiales.
 ---
 
-The analog clock feature has many options you can play around with and get to really cool styles.
+L’horloge analogique propose de nombreuses options permettant de créer des styles très variés.
 
-<img src="/documentation/overview/clock-styles.png" alt="Bonjourr's clock styles" loading="lazy" />
+<img src="/documentation/overview/clock-styles.png" alt="Styles d’horloge de Bonjourr" loading="lazy" />
 
-Some things to know:
+À savoir :
 
-- Clicking the 🌙/☀️ icons on the sliders will switch from black to white.
-- The analog clock background is blurred when its opacity is above 0.
+- Cliquer sur les icônes 🌙/☀️ des curseurs permet de passer rapidement du noir au blanc.
+- Le fond de l’horloge analogique devient flou lorsque son opacité est supérieure à 0.
 
-### World clocks
+### Horloges mondiales
 
 <img
   src="/documentation/overview/world-clocks.png"
-  alt="Bonjourr's world clock feature"
+  alt="Fonction horloges mondiales de Bonjourr"
   loading="lazy"
 />
 
-**World clocks** allows you to add multiple clocks with different time zones. Removing the name of a world clock will remove the clock entirely.
+Les **horloges mondiales** permettent d’ajouter plusieurs horloges affichant différents fuseaux horaires. Supprimer le nom d’une horloge mondiale supprime également l’horloge associée.

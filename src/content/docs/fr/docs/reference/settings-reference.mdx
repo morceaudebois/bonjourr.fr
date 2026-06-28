@@ -1,6 +1,6 @@
 ---
-title: Settings reference
-description: Bonjourr's settings are stored in JSON formatting, which you can see in the settings management section. Use this page to know which JSON property refers to what. Last updated for version 22.0.0
+title: Référence des paramètres
+description: Les paramètres de Bonjourr sont stockés au format JSON, que vous pouvez consulter dans la section de gestion des paramètres. Cette page explique à quoi correspond chaque propriété JSON. Dernière mise à jour pour la version 22.0.0.
 ---
 
 import { Code } from "astro-expressive-code/components"
@@ -19,33 +19,33 @@ import moveitems from "@assets/documentation/reference/moveitems.txt?raw"
 import linkselem from "@assets/documentation/reference/linkselem.txt?raw"
 import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 
-## General
+## Général
 
 <Code lang="jsonc" code={general} />
 
-## Backgrounds
+## Arrière-plans
 
-Collections names in "images" & "videos" are tied to our server and cannot be changed or guessed.
+Les noms des collections dans `images` et `videos` sont liés à notre serveur et ne peuvent ni être modifiés ni être devinés.
 
 <Code lang="jsonc" code={backgrounds} />
 
-## Clock
+## Horloge
 
 <Code lang="jsonc" code={clock} />
 
-## Links
+## Liens rapides
 
-General settings for quick links.
+Paramètres généraux des liens rapides.
 
 <Code lang="jsonc" code={links} />
 
-When adding a quick link
+Lors de l'ajout d'un lien rapide :
 
 <Code lang="jsonc" code={linkselem} />
 
-## Notes, Search bar, and Quotes
+## Notes, barre de recherche et citations
 
-These widgets behave pretty similarly: basic key-val.
+Ces widgets fonctionnent de manière très similaire : une simple structure clé-valeur.
 
 <Code lang="jsonc" code={notes} />
 
@@ -53,29 +53,29 @@ These widgets behave pretty similarly: basic key-val.
 
 <Code lang="jsonc" code={pomodoro} />
 
-## Fonts
+## Polices
 
-Most fields in fonts are set automatically by Bonjourr and cannot easily be modified manually.
+La plupart des champs liés aux polices sont définis automatiquement par Bonjourr et ne peuvent pas être modifiés facilement à la main.
 
 <Code lang="jsonc" code={fonts} />
 
-## Weather
+## Météo
 
 <Code lang="jsonc" code={weather} />
 
-## Greetings
+## Salutations
 
 <Code lang="jsonc" code={greetings} />
 
-## Hide
+## Éléments masqués
 
-Specify which element on the page you want to hide.
+Permet de définir quels éléments de la page doivent être masqués.
 
 <Code lang="jsonc" code={hide} />
 
-## Page layout
+## Mise en page
 
-Page layouts are pretty complex. Grids are tables, items are widget alignments.
+La structure de la mise en page est relativement complexe. Les grilles correspondent aux colonnes, tandis que les éléments définissent l'alignement des widgets.
 
 <Code lang="jsonc" code={move} />
 

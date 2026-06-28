@@ -1,97 +1,99 @@
 ---
-title: Backgrounds
-description: Backgrounds lets you customize your new tab appearance using curated image and video sources, Unsplash integrations, local files, remote URLs, solid colors, and texture overlays.
+title: Arrière-plans
+description: Les arrière-plans permettent de personnaliser l’apparence de votre nouvel onglet grâce à des images et vidéos sélectionnées, des intégrations Unsplash, des fichiers locaux, des URL distantes, des couleurs unies et des superpositions de textures.
 ---
 
 import LazyVideo from "@components/LazyVideo.astro"
 
-Bonjourr lets you fully customise your new tab experience with beautiful and dynamic backgrounds. Whether you prefer curated photos, immersive videos, or your own local files, there are plenty of options to make it feel personal.
+Bonjourr permet de personnaliser entièrement votre nouvel onglet avec des arrière-plans à la fois beaux et dynamiques. Que vous préfériez des photos sélectionnées, des vidéos immersives ou vos propres fichiers, plusieurs options permettent d’adapter l’interface à votre style.
 
 ## Images
 
-Bonjourr offers several ways to customize your background with beautiful images. Here's how it works!
+Bonjourr propose plusieurs façons de personnaliser l’arrière-plan avec des images.
 
 ### Bonjourr Daylight
 
-By default, Bonjourr uses the [Unsplash API](https://unsplash.com/developers) to fetch its backgrounds from a feature we call Bonjourr Daylight. We select them manually and store them in four different collections that change according to the time of the day:
+Par défaut, Bonjourr utilise l’API [Unsplash](https://unsplash.com/developers) pour afficher des arrière-plans via une fonctionnalité appelée Bonjourr Daylight. Les images sont sélectionnées manuellement et réparties en quatre collections selon le moment de la journée :
 
-- One for [the morning](<https://unsplash.com/collections/GD4aOSg4yQE/bonjourr-backgrounds-(noon)>) (2h around sunrise).
-- One for [the day](<https://unsplash.com/collections/o8uX55RbBPs/bonjourr-backgrounds-(day)>).
-- One for [the evening](<https://unsplash.com/collections/3M2rKTckZaQ/bonjourr-backgrounds-(evening)>) (2h around sunset).
-- And one for [the night](<https://unsplash.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)>).
+- Une pour [le matin](<https://unsplash.com/collections/GD4aOSg4yQE/bonjourr-backgrounds-(noon)>) (environ 2h autour du lever du soleil).
+- Une pour [la journée](<https://unsplash.com/collections/o8uX55RbBPs/bonjourr-backgrounds-(day)>).
+- Une pour [le soir](<https://unsplash.com/collections/3M2rKTckZaQ/bonjourr-backgrounds-(evening)>) (environ 2h autour du coucher du soleil).
+- Et une pour [la nuit](<https://unsplash.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)>).
 
-### Unsplash Collections
+### Collections Unsplash
 
-You can use any collection on Unsplash as a background source in Bonjourr. This allows you to carefully curate your own images from Unsplash. To do so:
+Il est possible d’utiliser n’importe quelle collection Unsplash comme source d’arrière-plan dans Bonjourr. Cela permet de créer ses propres sélections d’images.
 
-1. Find one you like by going to [unsplash.com](https://unsplash.com), search for a subject and go to the Collections tab.
-2. Once you've clicked on the collection you want, check out its URL. What you want is the ID, which is the string of random letters and numbers. For example, if your collection's URL is `https://unsplash.com/collections/2170139/wolfdogs-of-unsplash`, the ID is `2170139`.
-3. Head back to Bonjourr and after having checked [**Show all settings**](/docs/quick-guide/#i-think-some-options-are-missing-what-do-i-do) at the top of the settings panel, paste the ID in the **Unsplash collection** field. You can add multiple collections by separating them with a comma.
+Pour cela :
+
+1. Trouver une collection sur [unsplash.com](https://unsplash.com), en recherchant un thème puis en allant dans l’onglet Collections.
+2. Ouvrir la collection choisie et récupérer son URL. L’élément important est l’ID, c’est-à-dire la suite de lettres et chiffres. Par exemple, dans `https://unsplash.com/collections/2170139/wolfdogs-of-unsplash`, l’ID est `2170139`.
+3. Dans Bonjourr, après avoir activé [**Afficher tous les réglages**](/docs/quick-guide/#i-think-some-options-are-missing-what-do-i-do), coller cet ID dans le champ **Collection Unsplash**. Plusieurs collections peuvent être ajoutées en les séparant par une virgule.
 
 <LazyVideo src="/documentation/overview/custom-unsplash-collection.webm" autoplay={false} />
 
-### Unsplash Search
+### Recherche Unsplash
 
-If you have a theme in mind, you can use the Unsplash Search feature and let Unsplash do the work for you: just type in a keyword and it will start fetching backgrounds related to that keyword. You can even set several of them by separating them with a comma.
+Si un thème précis est en tête, la recherche Unsplash permet de laisser la plateforme trouver automatiquement des images correspondantes. Plusieurs mots-clés peuvent être ajoutés en les séparant par une virgule.
 
-## Videos
+## Vidéos
 
-Thanks to [Pixabay](https://pixabay.com/)'s free video library, Bonjourr lets you set videos as your backgrounds. They're fun, dynamic, and bring your homepage to life in a way static images can't.
+Grâce à la bibliothèque gratuite de [Pixabay](https://pixabay.com/), Bonjourr permet d’utiliser des vidéos en arrière-plan. Elles apportent un rendu plus vivant et dynamique qu’une image fixe.
 
-However, videos can be more demanding on your device. They require more processing power, which can slow things down and drain battery faster. Also, since video files are larger than images, a fast internet connection is recommended for a smooth experience.
+Les vidéos demandent toutefois plus de ressources : elles peuvent ralentir certains appareils et consommer davantage de batterie. Une connexion internet rapide est également recommandée.
 
-Additionally, we try to go out of our way to never integrate AI generated content to our background collections. If anything AI were to slip through, be sure to tell us about it [via email](mailto:bonjourr.app@protonmail.com) and we'll gladly remove it.
+Par ailleurs, aucune image générée par IA n’est volontairement intégrée aux collections. Si un contenu de ce type est détecté, il peut être signalé par email à [bonjourr.app@protonmail.com](mailto:bonjourr.app@protonmail.com) afin d’être retiré.
 
 ### Bonjourr Daylight
 
-Just like [with images](/docs/customisation/backgrounds/#bonjourr-daylight), Bonjourr also offers curated video backgrounds that change with the time of day.
+Comme pour les [images](/docs/customisation/backgrounds/#bonjourr-daylight), Bonjourr propose également des vidéos sélectionnées qui changent selon le moment de la journée.
 
-### Pixabay Search
+### Recherche Pixabay
 
-Similar to [Unsplash Search](#unsplash-search), you can enter keywords in Bonjourr to fetch related videos from Pixabay's library.
+De la même manière que la recherche Unsplash, il est possible de saisir des mots-clés pour récupérer des vidéos depuis Pixabay.
 
-## Local files
+## Fichiers locaux
 
-The local files option allows you to easily set images or videos from your device to Bonjourr.
+L’option fichiers locaux permet d’utiliser directement des images ou vidéos présentes sur votre appareil.
 
-Click <kbd>+ Add new</kbd> to import files from your computer. Most video and image file formats are supported, and Bonjourr will handle duplicates if need be.
+Cliquez sur <kbd>+ Ajouter</kbd> pour importer des fichiers depuis votre ordinateur. La plupart des formats image et vidéo sont supportés, et les doublons sont gérés automatiquement.
 
 <img
 	src="/documentation/overview/local-files.png"
-	alt="Bonjourr's local files section"
+	alt="Section fichiers locaux de Bonjourr"
 	loading="lazy"
 	style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
 />
 
-By selecting an image/video and clicking <bjrbtn>Options</bjrbtn>, you can individually adjust the positioning, size and playback speed of each file. Reducing the zoom to its minimum sets the size automatically.
+En sélectionnant un fichier puis en cliquant sur <bjrbtn>Options</bjrbtn>, il est possible d’ajuster individuellement le positionnement, la taille et la vitesse de lecture. Réduire le zoom au minimum permet un ajustement automatique de la taille.
 
-A drawback of local files is that they can't be synced between devices; this is a technical limit and security browsers have set up when it comes to extensions.
+L’inconvénient des fichiers locaux est qu’ils ne peuvent pas être synchronisés entre appareils, en raison de limitations techniques et de sécurité imposées par les navigateurs.
 
 ## URLs
 
-The URLs option is another way to import your own images into Bonjourr, but instead of having them on your computer, you source them from a remote server.
+L’option URLs permet d’utiliser des images distantes hébergées sur un serveur.
 
 <img
 	src="/documentation/overview/background-urls.png"
-	alt="Bonjourr's background URLs option"
+	alt="Option URLs des arrière-plans dans Bonjourr"
 	loading="lazy"
 	style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
 />
 
-This is great if you want more flexibility. If you're a power user, you could do something like setting up a dynamic URL where the backgrounds change according to your exact preferences, such as certain times of the day or month.
+Cette option offre davantage de flexibilité. Il est par exemple possible de créer une URL dynamique pour changer les arrière-plans selon l’heure, le jour ou d’autres critères.
 
-Additionaly, the background URLs options has another great perk over Local files: it can be synced across browsers.
+Autre avantage par rapport aux fichiers locaux : cette option peut être synchronisée entre navigateurs.
 
-## Solid color
+## Couleur unie
 
-The solid color option allows you to choose a specific color for your background if you like to keep things especially minimalist.
+L’option couleur unie permet de définir une couleur fixe comme arrière-plan, pour une interface minimaliste.
 
-## Texture overlay
+## Superposition de texture
 
-Textures are overlays on top of any background. There are many types you can try, and they will typically look better over a blurred background or a solid color.
+Les textures sont des couches appliquées par-dessus l’arrière-plan. Plusieurs styles sont disponibles et fonctionnent particulièrement bien sur des images floutées ou des couleurs unies.
 
-Most textures can be edited through their color, opacity and density to get to the perfect result.
+La plupart des textures peuvent être personnalisées (couleur, opacité, densité) afin d’obtenir un rendu adapté.
 
-## Fade in time
+## Temps de fondu
 
-You can specify the speed at which the backgrounds fade in when you open a new tab. Color backgrounds are always at 0ms. Reducing the fade in time to 0 will make the new tab page flicker, because the background image needs to load.
+Il est possible de régler la vitesse d’apparition des arrière-plans lors de l’ouverture d’un nouvel onglet. Les arrière-plans unis apparaissent instantanément (0 ms). Une durée trop faible peut provoquer un effet de clignotement si l’image n’a pas encore été chargée.

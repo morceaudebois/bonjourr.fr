@@ -1,98 +1,96 @@
 ---
-title: Privacy policy
+title: Politique de confidentialité
 ---
 
-<small><i>Last update: 21 nov. 2024, version 20.3.0</i></small>
+<small><i>Dernière mise à jour : 21 nov. 2024, version 20.3.0</i></small>
 
-## In short
+## En résumé
 
-We, or the Bonjourr team refers to [Tahoe Beetschen](https://github.com/morceaudebois/) & [Victor Azevedo](https://github.com/victrme/). We do not use collect, store, or share any data the user generates on Bonjourr. Data sent to our API is the minimum required for Bonjourr to work, is completely anonymous and cannot identify a user. The API does not save any logs or data.
+L'équipe de Bonjourr est composée de [Tahoe Beetschen](https://github.com/morceaudebois/) et de [Victor Azevedo](https://github.com/victrme/). Nous ne collectons, ne stockons et ne partageons aucune des données que vous créez dans Bonjourr. Les informations envoyées à notre API sont strictement limitées au nécessaire pour faire fonctionner Bonjourr, sont entièrement anonymes et ne permettent pas de vous identifier. Notre API ne conserve ni journaux ni données.
 
-## External services
+## Services externes
 
-To enjoy every feature, Bonjourr has to communicate with external services. All data your page sends goes to [our open source API](https://github.com/victrme/bonjourr-apis) before accessing the relevent services. This offers a layer of anonymity for the users, much like a VPN.
+Pour profiter de toutes les fonctionnalités, Bonjourr doit communiquer avec différents services externes. Toutes les données envoyées par votre page transitent d'abord par [notre API open source](https://github.com/victrme/bonjourr-apis) avant d'accéder aux services concernés. Cela ajoute une couche d'anonymat pour les utilisateurs, un peu à la manière d'un VPN.
 
-This API is deployed on Cloudflare Workers, which means we have access to Cloudflare's automatic [account analytics](https://developers.cloudflare.com/analytics/account-and-zone-analytics/account-analytics/#summary-of-metrics) and [worker metrics](https://developers.cloudflare.com/workers/observability/metrics-and-analytics/). These analytics are general info about network traffic, error rates, and bandwidth usage. We can use these metrics to debug potential issues.
+Cette API est déployée sur Cloudflare Workers. Nous avons donc accès aux [statistiques de compte](https://developers.cloudflare.com/analytics/account-and-zone-analytics/account-analytics/#summary-of-metrics) et aux [métriques des Workers](https://developers.cloudflare.com/workers/observability/metrics-and-analytics/) fournies automatiquement par Cloudflare. Ces données concernent uniquement le trafic réseau, les taux d'erreur et l'utilisation de la bande passante, et nous servent uniquement à diagnostiquer d'éventuels problèmes.
 
-Nothing is stored on our end, however we cannot control how the service providers are using your data. You can refer to the privacy policy of each providers below:
+Nous ne stockons aucune donnée de notre côté. En revanche, nous ne pouvons pas contrôler la manière dont les fournisseurs de services utilisent les informations qu'ils reçoivent. Vous pouvez consulter leur politique de confidentialité via les liens ci-dessous.
 
-### Active on first start
+### Actifs dès le premier lancement
 
 #### api.bonjourr.fr
 
 - **Unsplash**
-  Fetches background images. On startup and on collection change.
-  [API terms](https://unsplash.com/api-terms)
+  Récupère les images d'arrière-plan. Au démarrage et lors d'un changement de collection.
+  [Conditions d'utilisation de l'API](https://unsplash.com/api-terms)
 - **Racle météo**
-  Fetches weather data by accessing Accuweather's and/or Foreca's webpages. Triggers every ~40min when tab is active. On location or Language change.
-  [Source code](https://github.com/victrme/racle-meteo)
+  Récupère les données météo via les pages d'Accuweather et/ou de Foreca. Se déclenche environ toutes les 40 minutes lorsque l'onglet est actif, ainsi qu'en cas de changement de localisation ou de langue.
+  [Code source](https://github.com/victrme/racle-meteo)
 - **Quotes**
-  Gets a random list of quotes. Once at startup, and after changing quote type or every 20 quotes.
-  [Source code](https://github.com/victrme/i18n-quotes)
+  Récupère une liste aléatoire de citations. Au démarrage, puis après un changement de source ou toutes les 20 citations.
+  [Code source](https://github.com/victrme/i18n-quotes)
 
 #### image.unsplash.com
 
-- **Unsplash Image**
-  Serves the background image. On startup & every hour by default. On collection change. When losing cache.
+- **Images Unsplash**
+  Sert l'image d'arrière-plan. Au démarrage, puis toutes les heures par défaut, lors d'un changement de collection ou si le cache est perdu.
 
-### Optional
+### Optionnels
 
 #### api.bonjourr.fr
 
 - **Fontsource**
-  Fetches list of most popular fonts. On "font family" input focus. When losing cache.
-  [More info](https://fontsource.org/docs/getting-started/introduction)
+  Récupère la liste des polices les plus populaires lorsque le champ « Famille de police » reçoit le focus ou si le cache est perdu.
+  [En savoir plus](https://fontsource.org/docs/getting-started/introduction)
 - **Favicon fetcher**
-  Retrieves the favicon of websites. Fires when adding a new favorites.
-  [Source code](https://github.com/victrme/favicon-fetcher)
-- **Search Suggestions**
-  Gets search suggestions from Google, Duckduckgo and others. The API is a web scraper and does not directly use the services of these providers.
-  [Source code](https://github.com/victrme/search-suggestions)
+  Récupère les favicons des sites web lors de l'ajout d'un nouveau favori.
+  [Code source](https://github.com/victrme/favicon-fetcher)
+- **Suggestions de recherche**
+  Fournit des suggestions issues de Google, DuckDuckGo et d'autres moteurs. Cette API fonctionne comme un scraper web et ne communique pas directement avec les services de ces fournisseurs.
+  [Code source](https://github.com/victrme/search-suggestions)
 
 #### cdn.jsdelivr.net
 
-- **Fontsource CDN**
-  Serves the font file. When changing font or losing cache.
-  [CDN info](https://fontsource.org/docs/getting-started/cdn)
+- **CDN Fontsource**
+  Fournit les fichiers de police lors d'un changement de police ou si le cache est perdu.
+  [En savoir plus](https://fontsource.org/docs/getting-started/cdn)
 
 #### api.github.com
 
-- **Github Gist API**
-  Read and write a Gist. After using the "Github Gist" synchronization type, when opening the settings menu, receiving or sending a saved config.
-  [API documentation](https://docs.github.com/en/rest/gists/gists#list-gists-for-the-authenticated-user)
+- **API GitHub Gist**
+  Lit et écrit un Gist lorsque vous utilisez le mode de synchronisation « GitHub Gist », à l'ouverture des paramètres ou lors de l'envoi/récupération d'une configuration enregistrée.
+  [Documentation de l'API](https://docs.github.com/en/rest/gists/gists#list-gists-for-the-authenticated-user)
 
-## Permissions
+## Autorisations
 
-Extensions are more secured than webpages, that means Bonjourr needs to ask for permission to function properly. More about permissions on
+Les extensions de navigateur sont plus sécurisées que les pages web, ce qui signifie que Bonjourr doit demander certaines autorisations pour fonctionner correctement. Plus d'informations sur les autorisations sont disponibles sur
 [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
 
-### Required
+### Requises
 
-- **Storage**
-  Access the local and synchronized extension storage. More info below. On every tab and settings change.
+- **Stockage**
+  Accès au stockage local et synchronisé de l'extension. Voir plus bas. Utilisé à chaque ouverture d'onglet et lors des modifications des paramètres.
 
-### Optional
+### Optionnelles
 
-- **Bookmarks**
-  Get a list of browser bookmarks. Only requested when using bookmark import option.
-- **Top sites**
-  Get a list of most visited. Requested when using bookmark import option, used on every new tab when adding most visited sites to links.
+- **Favoris**
+  Permet de récupérer les favoris du navigateur. Demandée uniquement lors de l'utilisation de l'importation des favoris.
+- **Sites les plus visités**
+  Permet de récupérer la liste des sites les plus visités. Demandée lors de l'importation et utilisée à chaque nouvel onglet lorsque cette fonctionnalité est activée.
 
-## Settings storage
+## Stockage des paramètres
 
-We do not have access to any of your settings. Settings are stored in the browser using the [extension storage API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage). This storage system is not encrypted so users need to be responsible. Bonjourr will never ask for or store any personal or identifiable data.
+Nous n'avons aucun accès à vos paramètres. Ceux-ci sont stockés dans le navigateur via l'[API de stockage des extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage). Ce système de stockage n'est pas chiffré : il appartient donc à chaque utilisateur d'en tenir compte. Bonjourr ne demande ni ne stocke jamais de données personnelles ou permettant de vous identifier.
 
-By default, Bonjourr will synchronize its settings with your browser account if available. You can opt out by selecting "Disabled" on the "Synchronization" option, or by following these steps:
+Par défaut, Bonjourr synchronise ses paramètres avec votre compte navigateur lorsqu'il est disponible. Vous pouvez désactiver cette synchronisation en sélectionnant « Désactivée » dans l'option « Synchronisation », ou selon les modalités suivantes :
 
-- **Chrome extension**
-  Synced to your Google account if you are signed in to Chrome with your account & have sync enabled with "Extensions" option enabled in the "Manage what you sync" tab.
-- **Firefox extension**
-  Synced to your Firefox account the same way as Chrome. "Add-ons" must be enabled in the "Choose what to sync" tab.
-- **Online and Safari**
-  Settings are stored locally using the Web Storage API and cannot be synced.
+- **Extension Chrome**
+  Les paramètres sont synchronisés avec votre compte Google si vous êtes connecté à Chrome et que la synchronisation est activée avec l'option « Extensions » dans « Gérer ce que vous synchronisez ».
+- **Extension Firefox**
+  Fonctionne de la même manière avec votre compte Firefox. L'option « Modules complémentaires » doit être activée dans « Choisir les éléments à synchroniser ».
+- **Version en ligne et Safari**
+  Les paramètres sont stockés localement via la Web Storage API et ne peuvent pas être synchronisés.
 
-## Background service
+## Service d'arrière-plan
 
-When using the extension, Bonjourr
-[background service](https://github.com/victrme/Bonjourr/blob/master/src/scripts/services/background.js) can open a tab on install, uninstall and when clicking on its toolbar icon. Nothing else runs in the background of your browser. Since the upgrade to manifest v3, the background worker even
-[shuts down after 30s of inactivity](https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle#idle-shutdown) all by itself.
+Lorsque vous utilisez l'extension, le [service d'arrière-plan](https://github.com/victrme/Bonjourr/blob/master/src/scripts/services/background.js) de Bonjourr peut ouvrir un onglet lors de l'installation, de la désinstallation ou lorsque vous cliquez sur son icône dans la barre d'outils. Aucun autre processus ne s'exécute en arrière-plan dans votre navigateur. Depuis le passage au Manifest V3, le service d'arrière-plan [s'arrête automatiquement après 30 secondes d'inactivité](https://developer.chrome.com/docs/extensions/develop/concepts/service-workers/lifecycle#idle-shutdown).

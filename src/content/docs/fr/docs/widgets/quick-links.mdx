@@ -1,92 +1,93 @@
 ---
-title: 🔗 Quick Links
-description: Quick Links  let you save, organize, and manage frequently visited websites directly on your start page, with support for folders, groups, import from browser, and custom icons.
+title: 🔗 Liens rapides
+description: Les Liens rapides permettent d’enregistrer, organiser et gérer vos sites favoris directement sur la page d’accueil, avec dossiers, groupes, import depuis le navigateur et icônes personnalisées.
 ---
 
 import { Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-## Basic usage
+## Utilisation de base
 
-To add Quick Links, right-click on the page or open the Quick Links section in the settings. They are editable if you right-click on them (or long press on mobile), which allows you to change their titles, URLs, icons and delete them.
+Pour ajouter des Liens rapides, faites un clic droit sur la page ou ouvrez la section correspondante dans les paramètres. Une fois créés, ils peuvent être modifiés via clic droit (ou appui long sur mobile), ce qui permet de changer le titre, l’URL, l’icône ou de les supprimer.
 
 <LazyVideo src="/documentation/overview/links-usage.webm" />
 
-You can easily reorder your links through drag and drop, just like you would do on a phone. Additionally, dropping a link on another link will create a folder that contains them both. You can also edit that folder via right-click.
+Les liens peuvent être réorganisés par glisser-déposer, comme sur un smartphone. Déposer un lien sur un autre crée automatiquement un dossier contenant les deux. Ce dossier reste ensuite modifiable via clic droit.
 
 <Aside type="tip">
-	A mouse middle click on a folder will open all its contained links at once.
+	Un clic sur la molette de la souris sur un dossier permet d’ouvrir tous ses liens en une seule
+	fois.
 </Aside>
 
-## Importing your links
+## Import de liens
 
-Bonjourr integrates a way to import the existing links from your browser. To access it, click the <bjrbtn>Import bookmarks</bjrbtn> button. Depending on your browser, you will be shown multiple groups of links you will be able to import, such as your most visited websites and your bookmarks toolbars.
+Bonjourr permet d’importer les liens déjà présents dans votre navigateur. Pour y accéder, cliquez sur <bjrbtn>Importer mes favoris</bjrbtn>. Selon le navigateur, plusieurs groupes seront proposés, comme les sites les plus visités ou la barre de favoris.
 
 <img
 	src="/documentation/overview/bookmarks-modal.png"
-	alt="Bonjourr's bookmarks modal"
+	alt="Fenêtre d’import des favoris de Bonjourr"
 	loading="lazy"
 />
 
-You can select one or multiple groups, and then import them.
+Il est possible de sélectionner un ou plusieurs groupes, puis de les importer.
 
-### Syncing
+### Synchronisation
 
-Some importable groups, such as bookmarks, can be synced with your browser if you decide to click on <bjrbtn>Sync with browser</bjrbtn> before importing. This means they won't be editable in Bonjourr, but Bonjourr will update its links whenever you edit your bookmarks directly in the browser.
+Certains groupes importables, comme les favoris, peuvent être synchronisés avec le navigateur en cliquant sur <bjrbtn>Synchroniser avec le navigateur</bjrbtn> avant l’import. Dans ce cas, ils ne sont plus modifiables dans Bonjourr, mais se mettent automatiquement à jour lorsque les favoris du navigateur changent.
 
-Some groups (like the "Most visited" on Chrome) are only importable while synced and will get updated in Bonjourr whenever your browser decides to do so.
+Certains groupes (comme les “plus visités” sur Chrome) ne sont disponibles qu’en mode synchronisé et se mettent à jour automatiquement selon le navigateur.
 
-### Google Apps
+### Applications Google
 
-If you use Chrome, Bonjourr will offer you to import Google Apps as a way to replicate Chrome's default startpage's behaviour.
+Sur Chrome, Bonjourr propose également d’importer les applications Google afin de reproduire le comportement de la page de nouvel onglet par défaut.
 
-## Link groups
+## Groupes de liens
 
-You can organize your links with link groups, an optional feature you can enable in settings. To add a group, hover to the right of the group titles until you see the `+` icon. You can rename and delete groups by right-clicking on them. Deleting a group will delete all the links it contains.
+Les liens peuvent être organisés en groupes, une fonctionnalité optionnelle activable dans les paramètres. Pour ajouter un groupe, survolez la droite des titres de groupe jusqu’à voir apparaître le bouton `+`. Les groupes peuvent être renommés ou supprimés via clic droit. Supprimer un groupe supprime également tous les liens qu’il contient.
 
-Just like with folders, you can:
+Comme pour les dossiers, il est possible de :
 
-- Drag and drop links from group to group.
-- Drag and drop groups to reorder them.
-- Rename a group by right-clicking it.
+- Glisser-déposer des liens d’un groupe à un autre.
+- Réorganiser les groupes par glisser-déposer.
+- Renommer un groupe via clic droit.
 
-You can pin groups by selecting <bjrbtn>Pin this group</bjrbtn> after opening the context menu from the group title. This will make it so the group is always visible.
+Un groupe peut être épinglé via l’option <bjrbtn>Épingler ce groupe</bjrbtn> dans le menu contextuel du titre. Il reste alors toujours visible.
 
 <img
 	style="max-width: 400px; margin-inline: auto; display: block"
 	src="/documentation/overview/link-groups.gif"
-	alt="Bonjourr's link groups"
+	alt="Groupes de liens dans Bonjourr"
 	loading="lazy"
 />
 
-## Link icons
+## Icônes des liens
 
-You can configure your links' icons from three different modes.
+Les icônes des liens peuvent être configurées de trois façons.
 
-### Website favicon (default)
+### Favicon du site (par défaut)
 
-In the default mode, icons are automatically retrieved from our homemade service [favicon-fetcher](https://github.com/victrme/favicon-fetcher). If you find that a website is missing its icon, you can create an issue [on GitHub](https://github.com/victrme/Bonjourr/issues) or send us an email, and we will do our best to fix it.
+Par défaut, les icônes sont récupérées automatiquement via notre service maison [favicon-fetcher](https://github.com/victrme/favicon-fetcher). Si une icône est manquante, il est possible de signaler le problème via GitHub ou par email afin de l’ajouter.
 
-### Local files
+### Fichiers locaux
 
-Easily customize you link icons by importing them directly from your computer. Most image file formats are allowed, such as JPG, PNG, WebP, (non animated) GIF, and SVG.
+Les icônes peuvent être importées directement depuis l’ordinateur. La plupart des formats sont pris en charge : JPG, PNG, WebP, GIF non animé et SVG.
 
-### Remote URL
+### URL distante
 
-This mode allows you to set a remote URL to any image file you want on the Internet. This URL can be:
+Ce mode permet d’utiliser n’importe quelle image disponible en ligne comme icône. Les formats suivants sont acceptés :
 
-- A remote URL: `https://en.wikipedia.org/favicon.ico`.
-- A locally hosted URL: `http://127.0.0.1:4321/favicon.ico`.
-- A [Data URI](https://dopiaza.org/tools/datauri/index.php) smaller than 8kb: `data:image/gif;base64,R0lGOD...AA7`.
+- URL externe : `https://en.wikipedia.org/favicon.ico`
+- URL locale : `http://127.0.0.1:4321/favicon.ico`
+- [Data URI](https://dopiaza.org/tools/datauri/index.php) de moins de 8 ko : `data:image/gif;base64,R0lGOD...AA7`
 
-But not a:
+Mais pas :
 
-- File path: `file:///Users/Me/Pictures/flowers.png`.
+- Chemin fichier : `file:///Users/Me/Pictures/flowers.png`
 
-### Cache policy
+### Politique de cache
 
-Icons from [favicon-fetcher](https://github.com/victrme/favicon-fetcher) are stored in the browser cache for a year. As long as the browser cache is not cleared, icons are not fetched (or updated) by the page. However, if the browser cache is often cleared or storage space is limited on your device, icons will have to be fetched from our service again.
+Les icônes provenant de [favicon-fetcher](https://github.com/victrme/favicon-fetcher) sont mises en cache dans le navigateur pendant un an. Tant que le cache n’est pas vidé, elles ne sont pas redemandées. En revanche, si le cache est supprimé ou limité, elles seront rechargées depuis le service.
 
-Icons you add manually from a remote URL will have a different cache policy that we are not in control of, which might cause the icon to be fetched often or even every time.
+Les icônes définies via une URL distante suivent une politique de cache différente, non contrôlée, ce qui peut entraîner des rechargements fréquents.
 
-⚠️ _Notice_: as a security measure, local paths like `file://`, browser settings links like `about:config` or `chrome://extensions` can't be added. However, `localhost:` links will work just fine.
+⚠️ _Note_ : pour des raisons de sécurité, les chemins locaux (`file://`), les pages internes du navigateur (`about:config`, `chrome://extensions`) ne sont pas autorisés. En revanche, les liens `localhost:` fonctionnent normalement.

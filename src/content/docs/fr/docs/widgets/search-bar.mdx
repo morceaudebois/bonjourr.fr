@@ -1,6 +1,6 @@
 ---
-title: 🔎 Search bar
-description: Search bar settings let you choose and customize search engines, use built-in suggestions, and quickly focus the search field with a keyboard shortcut.
+title: 🔎 Barre de recherche
+description: Les réglages de la barre de recherche permettent de choisir et personnaliser les moteurs de recherche, d’utiliser les suggestions intégrées et de focaliser rapidement le champ de recherche via un raccourci clavier.
 ---
 
 import { Aside } from "@astrojs/starlight/components"
@@ -8,22 +8,26 @@ import LazyVideo from "@components/LazyVideo.astro"
 
 ## Suggestions
 
-Suggestions are provided by our own API. You can learn all about it and its source code [here](https://github.com/victrme/search-suggestions).
+Les suggestions sont fournies par notre propre API. Vous pouvez consulter son fonctionnement et son code source [ici](https://github.com/victrme/search-suggestions).
 
-## Custom search engine
+## Moteur de recherche personnalisé
 
-There are many search engines available by default in Bonjourr, and you can even add others if needed. To do so, select **Custom** in the Search engine option of the search bar. When the **URL request** input appears, simply paste in the URL of the search engine and replace the search query by `%s`.
+Bonjourr propose plusieurs moteurs de recherche par défaut, et il est également possible d’en ajouter d’autres.
 
-For example, if you search "coffee" on YouTube, you'll see that the URL will be `https://www.youtube.com/results?search_query=coffee`.
+Pour cela, sélectionnez **Personnalisé** dans l’option moteur de recherche. Une fois le champ **URL de requête** affiché, collez l’URL du moteur et remplacez la requête de recherche par `%s`.
 
-In this case, you just need to replace `coffee` with `%s`, giving you this result: `https://www.youtube.com/results?search_query=%s`.
+Par exemple, une recherche “coffee” sur YouTube donne une URL de ce type :
+`https://www.youtube.com/results?search_query=coffee`
 
-Paste it in the input and you'll now be able to use the corresponding search engine from Bonjourr.
+Il suffit alors de remplacer `coffee` par `%s`, ce qui donne :
+`https://www.youtube.com/results?search_query=%s`
+
+Collez ensuite cette URL dans le champ, et le moteur sera utilisable directement dans Bonjourr.
 
 <LazyVideo src="/documentation/overview/custom-search.webm" autoplay={false} />
 
-This method will work with the vast majority of search engines, making Bonjourr compatible with almost all of them.
+Cette méthode fonctionne avec la grande majorité des moteurs de recherche, ce qui rend Bonjourr compatible avec presque tous les services existants.
 
 <Aside type="tip">
-	Hitting the <kbd>/</kbd> key will focus on the search bar.
+	Appuyer sur la touche <kbd>/</kbd> permet de focaliser directement la barre de recherche.
 </Aside>

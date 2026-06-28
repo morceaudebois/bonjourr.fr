@@ -1,49 +1,49 @@
 ---
-title: Frequently asked questions
-description: Frequently Asked Questions covers common browser-specific behaviors, limitations, and workarounds when using Bonjourr, including Firefox UI restrictions and search bar focus behavior.
+title: Questions fréquentes
+description: Retrouvez les réponses aux questions les plus courantes sur Bonjourr, les limitations de certains navigateurs et les solutions de contournement disponibles.
 ---
 
 import { Code } from "astro-expressive-code/components"
 import userchrome from "@assets/documentation/snippets/userchrome.txt?raw"
 
-## 🦊 How do I get rid of "Extension (B...t Startpage)" on Firefox?
+## 🦊 Comment supprimer « Extension (B...t Startpage) » sur Firefox ?
 
-When using **Bonjourr on Firefox**, you might notice that it adds a button that says **"Extension (B...t Startpage)"** at the start of your search bar of your new tabs.
+Lorsque vous utilisez **Bonjourr avec Firefox**, un bouton intitulé **« Extension (B...t Startpage) »** peut apparaître au début de la barre de recherche des nouveaux onglets.
 
 <img
 	src="/documentation/faq/firefox-extension-info.png"
-	alt="Firefox informs you about which extension is creating the page"
+	alt="Firefox indique quelle extension génère la page"
 	style="max-width: 600px; margin-inline: auto; margin-block: 2em; display: block;"
 	loading="lazy"
 />
 
-This is a **security measure** taken by Mozilla to help you identify where the page is coming from. If you had installed an extension that had some malicious intentions, it could be very handy to know which extension generates the malicious page.
+Il s'agit d'une **mesure de sécurité** mise en place par Mozilla afin de vous indiquer quelle extension est à l'origine de la page affichée. Si une extension malveillante modifiait vos nouveaux onglets, cette information pourrait s'avérer très utile.
 
-Although this label isn't necessary for Bonjourr, there's **unfortunately no easy way to disable it**, and we have **no control over it** as developers.
+Même si cet indicateur n'est pas vraiment nécessaire avec Bonjourr, **il n'existe malheureusement pas de moyen simple de le désactiver**, et nous **n'avons aucun contrôle dessus**.
 
-### ...but there's a way?
+### ...mais il y a quand même une solution ?
 
-If there's a will, there' a way! Although a slightly hacky one in this case. It involves the **`userChrome.css`** file, which is essentially a CSS stylesheet you can create that can style the **entire UI of Firefox**.
+Quand on cherche un peu, on finit souvent par trouver. Ici, la solution passe par le fichier **`userChrome.css`**, une feuille de style qui permet de personnaliser **toute l'interface de Firefox**.
 
 <img
 	src="/documentation/faq/firefox-no-more-extension-box.png"
-	alt="Extension box is gone"
+	alt="L'encart de l'extension a disparu"
 	style="max-width: 600px; margin-inline: auto; margin-block: 2em; display: block;"
 	loading="lazy"
 />
 
-You can set it up in a few minutes following [this tutorial](https://www.userchrome.org/). Then, simply add this to the file and the extension box will disappear after a browser restart:
+Vous pouvez le configurer en quelques minutes en suivant [ce tutoriel](https://www.userchrome.org/). Ajoutez ensuite le code suivant dans le fichier, puis redémarrez Firefox pour faire disparaître l'encart :
 
 <Code lang="css" code={userchrome} />
 
-## 🔎 Is there a way to automatically focus on Bonjourr's searchbar?
+## 🔎 Peut-on mettre automatiquement le curseur dans la barre de recherche de Bonjourr ?
 
-The default behaviour of most browsers is to **focus on their native searchbar** whenever you open a new tab. Even if you have Bonjourr's searchbar enabled, you'll quickly notice that this behaviour doesn't change, which means you have to **manually click** on Bonjourr's searchbar every time if you want to use it.
+Par défaut, la plupart des navigateurs **placent le curseur dans leur propre barre d'adresse ou de recherche** lorsque vous ouvrez un nouvel onglet. Même si la barre de recherche de Bonjourr est activée, ce comportement ne change pas, ce qui signifie qu'il faut **cliquer dessus manuellement** avant de pouvoir l'utiliser.
 
-A workaround you could do is hit the <kbd>esc</kbd> key which will focus on Bonjourr, then hit the <kbd>/</kbd> key to focus on its search bar.
+La solution de contournement consiste à appuyer sur <kbd>Échap</kbd> pour donner le focus à Bonjourr, puis sur <kbd>/</kbd> pour sélectionner sa barre de recherche.
 
-We understand this isn't ideal, however, there currently is **no way to change this behaviour**.
+Nous savons que ce n'est pas idéal, mais **il n'existe actuellement aucun moyen de modifier ce comportement**.
 
-The idea is that since this is **native to the browser** and happens _"outside"_ of Bonjourr, it occurs **before Bonjourr has even loaded**, which implies we don't have control over it and can't override it in any way. Some other extensions, like [**New Tab Override**](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/), get around this problem by asking for **additional permissions**, which we might do as an **optional feature** in the future.
+En effet, cette gestion est **intégrée directement au navigateur** et se produit _avant même que Bonjourr ne soit chargé_. Nous n'avons donc aucun moyen de l'intercepter ou de la remplacer. Certaines extensions, comme [**New Tab Override**](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/), contournent cette limitation en demandant **des permissions supplémentaires**. C'est une approche que nous pourrions proposer **en option** à l'avenir.
 
-You can follow the development of this feature on [**this GitHub issue**](https://github.com/victrme/Bonjourr/issues/503).
+Vous pouvez suivre l'avancement de cette fonctionnalité sur [**ce ticket GitHub**](https://github.com/victrme/Bonjourr/issues/503).

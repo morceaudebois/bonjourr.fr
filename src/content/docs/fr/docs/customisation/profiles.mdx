@@ -1,6 +1,6 @@
 ---
-title: Profiles
-description: Pre-made Bonjourr theme profiles you can import directly into your settings.
+title: Profils
+description: Profils de thème Bonjourr prêts à l’emploi que vous pouvez importer directement dans vos paramètres.
 ---
 
 import { Code } from "@astrojs/starlight/components"
@@ -12,73 +12,73 @@ import space from "@assets/documentation/profiles/space.json?raw"
 export const toDataHref = (code) =>
 	`data:application/json;charset=utf-8,${encodeURIComponent(code)}`
 
-_Want your own custom profile here?
-[Contact us!](/#contact)_
+_Vous souhaitez proposer votre propre profil personnalisé ?
+[Contactez-nous !](/#contact)_
 
 ## Cyberpunk 2077
 
-One of the original custom profiles we've made for Bonjourr, inspired by CD Projekt Red's hit game. Some CSS was used to create the fun text effects, and an Unsplash collection with some Cyberpunk inspired vibes was set up.
+L’un des premiers profils personnalisés créés pour Bonjourr, inspiré du jeu à succès de CD Projekt Red. Du CSS a été utilisé pour créer des effets de texte, et une collection Unsplash a été configurée avec une ambiance cyberpunk.
 
 <picture>
-	<img src="/documentation/profiles/cyberpunk.webp" alt="Cyberpunk 2077 Bonjourr theme" />
+	<img src="/documentation/profiles/cyberpunk.webp" alt="Thème Cyberpunk 2077 pour Bonjourr" />
 </picture>
 
 <a href={toDataHref(cyberpunk)} download="bonjourr-profile-cyberpunk.json">
-	Download import file
+	Télécharger le fichier d’import
 </a>
 
 <details>
-	<summary>View raw settings</summary>
+	<summary>Voir les paramètres bruts</summary>
 	<Code lang="json" code={cyberpunk} />
 </details>
 
 ## The Space Enthusiast
 
-One of the original custom profiles we've made for Bonjourr, fitting for any space nerd out there. It uses the appropriately named Space Mono font and a bunch of CSS to color the text and customise the layout.
+L’un des profils originaux de Bonjourr, pensé pour les passionnés d’espace. Il utilise la police Space Mono et plusieurs règles CSS pour colorer le texte et adapter la mise en page.
 
 <picture>
-	<img src="/documentation/profiles/space.webp" alt="Space Bonjourr theme" />
+	<img src="/documentation/profiles/space.webp" alt="Thème Space pour Bonjourr" />
 </picture>
 
 <a href={toDataHref(space)} download="bonjourr-profile-space.json">
-	Download import file
+	Télécharger le fichier d’import
 </a>
 
 <details>
-	<summary>View raw settings</summary>
+	<summary>Voir les paramètres bruts</summary>
 	<Code lang="json" code={space} />
 </details>
 
 ## Floral
 
-One of the original custom profiles we've made for Bonjourr. It's very minimal and aesthetic. It uses the DM Serif Display font with a bit of CSS to color the text, as well as a custom Unsplash collection.
+L’un des profils originaux de Bonjourr, avec une approche minimaliste et esthétique. Il utilise la police DM Serif Display, quelques ajustements CSS pour les couleurs, ainsi qu’une collection Unsplash dédiée.
 
 <picture>
-	<img src="/documentation/profiles/floral.webp" alt="Floral Bonjourr theme" />
+	<img src="/documentation/profiles/floral.webp" alt="Thème Floral pour Bonjourr" />
 </picture>
 
 <a href={toDataHref(floral)} download="bonjourr-profile-floral.json">
-	Download import file
+	Télécharger le fichier d’import
 </a>
 
 <details>
-	<summary>View raw settings</summary>
+	<summary>Voir les paramètres bruts</summary>
 	<Code lang="json" code={floral} />
 </details>
 
 ## Not Momentum
 
-One of the original custom profiles we've made for Bonjourr, inspired by one of our oldest competitors (although more minimal). Some CSS and an Unsplash collection are used to reproduce the exact style.
+L’un des profils originaux de Bonjourr, inspiré de l’un de nos anciens concurrents (dans une version plus épurée). Du CSS et une collection Unsplash sont utilisés pour reproduire ce style.
 
 <picture>
-	<img src="/documentation/profiles/not-momentum.webp" alt="Not Momentum Bonjourr theme" />
+	<img src="/documentation/profiles/not-momentum.webp" alt="Thème Not Momentum pour Bonjourr" />
 </picture>
 
 <a href={toDataHref(notmomentum)} download="bonjourr-profile-not-momentum.json">
-	Download import file
+	Télécharger le fichier d’import
 </a>
 
 <details>
-	<summary>View raw settings</summary>
+	<summary>Voir les paramètres bruts</summary>
 	<Code lang="json" code={notmomentum} />
 </details>

@@ -50,11 +50,17 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: "Getting started",
+					translations: {
+						fr: "Premiers pas",
+					},
 					items: ["docs", "docs/quick-guide"],
 				},
 
 				{
 					label: "Widgets",
+					translations: {
+						fr: "Widgets",
+					},
 					items: [
 						"docs/widgets/quick-links",
 						"docs/widgets/time-and-date",
@@ -68,6 +74,9 @@ export default defineConfig({
 
 				{
 					label: "Customisation",
+					translations: {
+						fr: "Personnalisation",
+					},
 					items: [
 						"docs/customisation/backgrounds",
 						"docs/customisation/layout-and-fonts",
@@ -80,6 +89,9 @@ export default defineConfig({
 
 				{
 					label: "Managing Bonjourr",
+					translations: {
+						fr: "Gestion de Bonjourr",
+					},
 					items: [
 						"docs/settings-management/import-and-export",
 						"docs/settings-management/syncing",
@@ -89,6 +101,9 @@ export default defineConfig({
 
 				{
 					label: "Reference",
+					translations: {
+						fr: "Références",
+					},
 					items: [
 						"docs/reference/faq",
 						"docs/reference/settings-reference",

@@ -1,6 +1,6 @@
 ---
-title: CSS snippets
-description: CSS snippets
+title: Extraits CSS
+description: Extraits CSS
 ---
 
 import { Code } from "astro-expressive-code/components"
@@ -19,38 +19,38 @@ import MostVisitedLimit from "@assets/documentation/snippets/most-visited-limit.
 import weatherIcons from "@assets/documentation/snippets/weather-icons.txt?raw"
 import settingsIcon from "@assets/documentation/snippets/settings-icon.txt?raw"
 
-Bonjourr is customizable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
+Bonjourr est personnalisable via son interface de réglages, mais il est possible d’aller encore plus loin. Copiez et collez ces extraits de style dans la section dédiée des paramètres pour débloquer de nouvelles possibilités.
 
-Want your own style snippet here?
-[Contact us!](/#contact)
+Vous souhaitez proposer votre propre extrait CSS ?
+[Contactez-nous !](/#contact)
 
-## Backgrounds
+## Arrière-plans
 
-### Portrait background
+### Arrière-plan portrait
 
 <Code lang="css" code={portraitBackground} />
 
-### Transparent backgrounds (Zen browser)
+### Arrière-plans transparents (Zen browser)
 
 <Code lang="css" code={transparentBackground} />
 
-## Colors and icons
+## Couleurs et icônes
 
-### Add or change some colors
+### Ajouter ou modifier des couleurs
 
 <Code lang="css" code={colors} />
 
-### Custom weather icons
+### Icônes météo personnalisées
 
 <Code lang="css" code={weatherIcons} />
 
 <table>
   <thead>
     <tr>
-      <th>Icon</th>
+      <th>Icône</th>
       <th>Condition</th>
-      <th>Day ID</th>
-      <th>Night ID</th>
+      <th>ID jour</th>
+      <th>ID nuit</th>
     </tr>
   </thead>
   <tbody>
@@ -60,7 +60,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-brokenclouds"></use>
         </svg>
       </td>
-      <td>Broken clouds</td>
+      <td>Nuages fragmentés</td>
       <td>weather-day-brokenclouds</td>
       <td>weather-night-brokenclouds</td>
     </tr>
@@ -71,7 +71,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-clearsky"></use>
         </svg>
       </td>
-      <td>Clear sky</td>
+      <td>Ciel dégagé</td>
       <td>weather-day-clearsky</td>
       <td>weather-night-clearsky</td>
     </tr>
@@ -82,7 +82,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-fewclouds"></use>
         </svg>
       </td>
-      <td>Few clouds</td>
+      <td>Quelques nuages</td>
       <td>weather-day-fewclouds</td>
       <td>weather-night-fewclouds</td>
     </tr>
@@ -93,7 +93,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-lightrain"></use>
         </svg>
       </td>
-      <td>Light rain</td>
+      <td>Pluie légère</td>
       <td>weather-day-lightrain</td>
       <td>weather-night-lightrain</td>
     </tr>
@@ -104,7 +104,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-mist"></use>
         </svg>
       </td>
-      <td>Mist</td>
+      <td>Brouillard</td>
       <td>weather-day-mist</td>
       <td>weather-night-mist</td>
     </tr>
@@ -115,7 +115,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-overcastclouds"></use>
         </svg>
       </td>
-      <td>Overcast clouds</td>
+      <td>Ciel couvert</td>
       <td>weather-day-overcastclouds</td>
       <td>weather-night-overcastclouds</td>
     </tr>
@@ -126,7 +126,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-rain"></use>
         </svg>
       </td>
-      <td>Rain</td>
+      <td>Pluie</td>
       <td>weather-day-rain</td>
       <td>weather-night-rain</td>
     </tr>
@@ -137,7 +137,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-snow"></use>
         </svg>
       </td>
-      <td>Snow</td>
+      <td>Neige</td>
       <td>weather-day-snow</td>
       <td>weather-night-snow</td>
     </tr>
@@ -148,7 +148,7 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-sunnyrain"></use>
         </svg>
       </td>
-      <td>Sunny rain</td>
+      <td>Averses ensoleillées</td>
       <td>weather-day-sunnyrain</td>
       <td></td>
     </tr>
@@ -159,32 +159,33 @@ Want your own style snippet here?
           <use href="/documentation/weather-sprites.svg#weather-day-thunderstorm"></use>
         </svg>
       </td>
-      <td>Thunderstorm</td>
+      <td>Orage</td>
       <td>weather-day-thunderstorm</td>
       <td>weather-night-thunderstorm</td>
     </tr>
+
   </tbody>
 </table>
 
-### Custom settings icon
+### Icône de paramètres personnalisée
 
 <Code lang="css" code={settingsIcon} />
 
-## Colors
+## Couleurs
 
-### Add or change some colors
+### Ajouter ou modifier des couleurs
 
 <Code lang="css" code={colors} />
 
-## Quick links
+## Liens rapides
 
-### Limit my most visited
+### Limiter les sites les plus visités
 
 <Code lang="css" code={MostVisitedLimit} />
 
-## Clock
+## Horloge
 
-### I like my clocks thick
+### J’aime les horloges plus épaisses
 
 <Code lang="css" code={clockWidth} />
 
@@ -192,28 +193,28 @@ Want your own style snippet here?
 
 <Code lang="css" code={rolex} />
 
-## Search bar
+## Barre de recherche
 
-### Centering the searchbar placeholder
+### Centrer le texte indicatif de la barre de recherche
 
 <Code lang="css" code={centerSearchbar} />
 
-### Adding a logo to the left of the searchbar
+### Ajouter un logo à gauche de la barre de recherche
 
 <Code lang="css" code={searchbarLogo} />
 
-*Submitted by [Kim Visnes](https://bsky.app/profile/visn.es)*
+_Proposé par [Kim Visnes](https://bsky.app/profile/visn.es)_
 
-## Other
+## Autre
 
-### I don't care about artist exposure
+### Je ne me soucie pas de la visibilité des artistes
 
 <Code lang="css" code={noCredits} />
 
-### No GPU, only CPU 😠
+### Pas de GPU, uniquement CPU 😠
 
 <Code lang="css" code={noGpu} />
 
-### For laggy computers
+### Pour les ordinateurs peu puissants
 
 <Code lang="css" code={potato} />

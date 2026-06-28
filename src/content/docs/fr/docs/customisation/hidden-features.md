@@ -1,67 +1,67 @@
 ---
-title: Hidden features
-description: Bonjourr's got more than meets the eye 👀
+title: Fonctionnalités cachées
+description: Bonjourr cache plus de choses qu’il n’y paraît 👀
 ---
 
-## Background info
+## Infos sur les arrière-plans
 
-When using the default backgrounds, hover your mouse on the background credits at the bottom left corner of Bonjourr to get the EXIF info of the photo (when available).
+Avec les arrière-plans par défaut, il est possible d’obtenir les informations EXIF d’une image en survolant les crédits affichés en bas à gauche de Bonjourr (quand elles sont disponibles).
 
 <img
   src="/documentation/overview/exif.png"
-  alt="Bonjourr's infos on the current photo"
+  alt="Informations de l’image actuelle dans Bonjourr"
   style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
   loading="lazy"
 />
 
-## Context menu
+## Menu contextuel
 
-Bonjourr integrates a custom right-click context menu on most of its interface. Use it to add new quick links, access widget settings easily and control the background.
+Bonjourr intègre un menu contextuel personnalisé accessible par clic droit dans la plupart de l’interface. Il permet d’ajouter des liens rapides, d’accéder aux réglages des widgets ou de contrôler l’arrière-plan plus facilement.
 
 <img
   src="/documentation/overview/context-menu.png"
-  alt="Bonjourr's context menu"
+  alt="Menu contextuel de Bonjourr"
   style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
   loading="lazy"
 />
 
-You can override Bonjourr's context menu to get to the regular one in two ways:
+Le menu natif du navigateur reste accessible de deux façons :
 
-- press <kbd>alt</kbd> + right-click,
-- have some text selected on the page.
+- en maintenant <kbd>alt</kbd> puis clic droit,
+- en sélectionnant du texte sur la page.
 
-## Alt mode
+## Mode Alt
 
-![Bonjourr's alt mode on quick links](/documentation/customisation/alt-mode.jpg)
+![Mode Alt de Bonjourr sur les liens rapides](/documentation/customisation/alt-mode.jpg)
 
-Pressing the <kbd>alt</kbd> key in Bonjourr gives you access to useful features such as:
+En maintenant la touche <kbd>alt</kbd> dans Bonjourr, plusieurs actions rapides deviennent disponibles :
 
-- <kbd>alt</kbd> + <kbd>number</kbd> to open the corresponding quick link (much like switching browser tabs with <kbd>cmd</kbd> / <kbd>Ctrl</kbd> + <kbd>number</kbd>)
-- <kbd>alt</kbd> + right-click to override Bonjourr's context menu and get the native one instead.
-- <kbd>alt</kbd> + <kbd>n</kbd> to create a new quick link.
+- <kbd>alt</kbd> + <kbd>numéro</kbd> ouvre le lien rapide correspondant (comme pour changer d’onglet avec <kbd>cmd</kbd> / <kbd>Ctrl</kbd> + <kbd>numéro</kbd>)
+- <kbd>alt</kbd> + clic droit affiche le menu du navigateur à la place de celui de Bonjourr
+- <kbd>alt</kbd> + <kbd>n</kbd> crée un nouveau lien rapide
 
-## Advanced settings
+## Réglages avancés
 
-Bonjourr 22.3 introduced some advanced settings you can access directly from the JSON area at the bottom of the settings panel. Simply turn them from `false` to `true` and apply the changes to enable them.
+Depuis la version 22.3, Bonjourr propose des réglages avancés accessibles via la zone JSON en bas du panneau de configuration. Il suffit de passer les valeurs de `false` à `true` puis d’appliquer les changements.
 
 <img
 	src="/documentation/customisation/advanced-json.jpg"
-	alt="The advanced options in Bonjourr"
+	alt="Options avancées de Bonjourr"
 	loading="lazy"
 	style="max-width: 400px; margin-inline: auto; margin-block: 2em;"
 />
 
-The advanced settings currently include:
+Les options avancées disponibles actuellement :
 
-- **`altMode`**: pass it to `false` to disable all features of the Alt mode.
-- **`escKey`**: pass it to `false` to disable the ability to open the settings panel with the <kbd>esc</kbd> key.
+- **`altMode`** : passer à `false` pour désactiver toutes les fonctionnalités du mode Alt
+- **`escKey`** : passer à `false` pour désactiver l’ouverture des paramètres avec la touche <kbd>esc</kbd>
 
-These might be useful in certain workflows that require these keys without Bonjourr's interferences.
+Ces options peuvent être utiles dans certains environnements où ces raccourcis entrent en conflit avec d’autres usages.
 
-## Help mode
+## Mode d’assistance
 
-When Bonjourr crashes, it triggers the Help Mode page that guides you through troubleshooting and presents valuable information such as Bonjourr's server statuses and different storage types.
+Lorsqu’une erreur survient, Bonjourr affiche une page d’assistance permettant de diagnostiquer le problème. Elle donne notamment accès aux informations de statut des services et aux différents types de stockage utilisés.
 
-![Bonjourr's help mode page](/documentation/customisation/help-mode.png)
+![Page d’assistance de Bonjourr](/documentation/customisation/help-mode.png)
 
-You can access this page at any time with the <kbd>cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>shift</kbd> + <kbd>?</kbd> keybind.
+Cette page peut aussi être ouverte à tout moment avec le raccourci <kbd>cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>shift</kbd> + <kbd>?</kbd>.

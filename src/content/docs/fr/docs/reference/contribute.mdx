@@ -1,80 +1,80 @@
 ---
-title: Contribute
-description: Learn how to support us and how to make Bonjourr better.
+title: Contribuer
+description: Découvrez comment soutenir le projet et contribuer à améliorer Bonjourr.
 ---
 
 import { Aside, Steps, LinkButton, LinkCard } from "@astrojs/starlight/components"
 
-## ❤️ Donations
+## ❤️ Dons
 
-Bonjourr is built and maintained by just the two of us in our spare time. We love working on it, and our goal is to spend even more time improving the project in the future.
+Bonjourr est développé et maintenu par deux personnes, sur leur temps libre. Le projet est une vraie passion, et l’objectif est de pouvoir y consacrer de plus en plus de temps à l’avenir.
 
+Les dons permettent de couvrir les coûts du projet, de soutenir le développement, et de se rapprocher d’un modèle où le travail sur l’open source peut devenir plus durable. Chaque contribution, même petite, fait une différence (et permet d’avoir son nom dans Bonjourr le mois suivant !).
 
-Donations help cover project costs, support ongoing development, and bring us a little closer to making open source work a larger part of our lives. Every contribution, no matter the amount, makes a difference (and will [get your name in Bonjourr](#) next month!).
+<LinkCard title="✨ Faire un don sur Ko-fi" href="https://ko-fi.com/bonjourr" />
 
-<LinkCard title="✨ Donate on Ko-fi" href="https://ko-fi.com/bonjourr" />
+## ⭐️ Avis
 
-## ⭐️ Reviews
+Laisser un avis est l’un des moyens les plus simples de soutenir Bonjourr. Les notes positives aident le projet à être découvert et encouragent les boutiques de navigateurs à le recommander.
 
-Leaving a review is one of the easiest ways to support Bonjourr. Positive reviews help more people discover the project and encourage browser stores to recommend it to new users.
 - [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/)
 - [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd)
 - [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid)
 
-You can also tell your friends and family about Bonjourr, because if you love it, they probably will too!
+Il est aussi possible d’en parler autour de soi : si Bonjourr plaît, il y a de bonnes chances qu’il plaise aussi à d’autres.
 
-## 🌎 Translations
+## 🌎 Traductions
 
-Thanks to our contributors, Bonjourr is currently available in __43 languages__!
+Grâce aux contributeurs, Bonjourr est aujourd’hui disponible en __43 langues__.
 
-You might find that these translations aren't always perfect, especially when we update Bonjourr. Good news though: you can probably help!
+Les traductions ne sont pas toujours parfaitement à jour, surtout lors de nouvelles versions. Bonne nouvelle : il est possible de les améliorer.
 
-### How to create or update a language
+### Créer ou mettre à jour une langue
 
-Translations are located in the
+Les traductions se trouvent dans le dossier
 [/\_locales/](https://github.com/victrme/Bonjourr/tree/master/_locales)
-folder on Github. Each language folder contains these three files:
+sur GitHub. Chaque langue contient trois fichiers :
 
-- <code class="inline-code">translations.json</code> for the main translation.
-- <code class="inline-code">messages.json</code> for the extension's title and subtitle.
-- <code class="inline-code">overview.md</code> for the full description on store pages.
+- <code class="inline-code">translations.json</code> pour les textes principaux.
+- <code class="inline-code">messages.json</code> pour le titre et le sous-titre de l’extension.
+- <code class="inline-code">overview.md</code> pour la description utilisée sur les stores.
 
-To add a new language, copy the `en` folder to your desired language. You also need to add the [country code](https://wikipedia.org/wiki/List_of_ISO_639_language_codes) and name to the list in
-[/src/scripts/langs.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts). If you are familiar with GitHub, you can create a pull request. If not, you can directly send us the modified files
+Pour ajouter une nouvelle langue, il suffit de copier le dossier `en` et de l’adapter à la langue souhaitée. Il faut aussi ajouter le code langue et son nom dans la liste située dans
+[/src/scripts/langs.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts). Une pull request peut ensuite être envoyée sur GitHub. Sinon, il est aussi possible d’envoyer les fichiers modifiés
+par email
 [via email](mailto:bonjourr.app@protonmail.com)
-or to
-[our Discord server](https://discord.gg/CCAR9J4qVg).
+ou sur
+[le serveur Discord](https://discord.gg/CCAR9J4qVg).
 
-<Aside type="tip">Don't forget to join your name and link so we can credit you!</Aside>
+<Aside type="tip">Pensez à ajouter votre nom et un lien pour être crédité.</Aside>
 
-### How to test your translation
+### Tester une traduction
 
-This is an optional part, but if you want to see what your translation looks like in Bonjourr, you can follow these steps.
+Cette étape est optionnelle, mais permet de voir le rendu d’une traduction directement dans Bonjourr.
 
 <Steps>
+1. #### Ouvrir Bonjourr en ligne
+    Aller sur [online.bonjourr.fr](https://online.bonjourr.fr) et sélectionner la langue souhaitée.
 
-1. #### Visit Bonjourr online
-    Go to [online.bonjourr.fr](https://online.bonjourr.fr) and select your language.
+2. #### Ouvrir la console développeur
+   Utiliser l’un des raccourcis suivants :
+   <kbd>F12</kbd>, <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> ou <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
 
-2. #### Open the developer console
-   Using one of the following keybinds:
-   <kbd>F12</kbd>, <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>, or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
-
-3. #### Insert your translation
-    Add your translation to this command and paste it into the console:
+3. #### Injecter la traduction
+    Copier la traduction dans la commande suivante et la coller dans la console :
 
    ```js
-    const myTranslationFile = "/* copy and paste translations.json here */";
+    const myTranslationFile = "/* coller ici translations.json */";
     localStorage.translations = JSON.stringify(myTranslationFile)
-   ```
+    ```
 
-4. #### Reload the page
-    You should see your new strings!
+4.  #### Recharger la page
+        Les nouvelles traductions devraient apparaître.
+
 </Steps>
 
 ## 🧑‍💻 New features & bug fixes
 
-You have some coding skills and and would like to contribute to Bonjourr's codebase? Check out the issues [on GitHub](https://github.com/victrme/Bonjourr/issues) to see if something inspires you, or create a new one so we can discuss of your new feature's implementation.
+Les développeurs souhaitant contribuer au code de Bonjourr peuvent consulter les issues sur GitHub afin de trouver des idées de fonctionnalités ou de corrections.
 
-If you're feeling creative, you can also suggest or create
-[CSS snippets](/docs/customisation/css-snippets/) & [custom profiles](/docs/customisation/profiles/).
+Il est aussi possible de proposer ou créer des [extraits CSS](/fr/docs/customisation/styles/) et des [profils personnalisés](/fr/docs/customisation/profiles/).
