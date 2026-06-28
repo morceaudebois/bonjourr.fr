@@ -6,9 +6,18 @@ interface Props {
 	muted?: boolean
 	controls?: boolean
 	class?: string
+	autoplay?: boolean
 }
 
-const { src, poster, loop = true, muted = true, controls = true, class: className } = Astro.props
+const {
+	src,
+	poster,
+	loop = true,
+	muted = true,
+	controls = true,
+	class: className,
+	autoplay = true,
+} = Astro.props
 ---
 
 <video
@@ -18,7 +27,7 @@ const { src, poster, loop = true, muted = true, controls = true, class: classNam
 	loop={loop}
 	muted={muted}
 	controls={controls}
-	autoplay></video>
+	{...autoplay ? { autoplay: true } : {}}></video>
 
 <script>
 	import LazyLoad from "vanilla-lazyload"

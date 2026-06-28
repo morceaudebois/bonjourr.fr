@@ -16,7 +16,7 @@ When using the default backgrounds, hover your mouse on the background credits a
 
 ## Context menu
 
-Bonjourr integrates a custom right click context menu on most of its interface. Use it to add new quick links, access widget settings easily and control the background.
+Bonjourr integrates a custom right-click context menu on most of its interface. Use it to add new quick links, access widget settings easily and control the background.
 
 <img
   src="/documentation/overview/context-menu.png"
@@ -27,7 +27,7 @@ Bonjourr integrates a custom right click context menu on most of its interface. 
 
 You can override Bonjourr's context menu to get to the regular one in two ways:
 
-- press <kbd>alt</kbd> + right click,
+- press <kbd>alt</kbd> + right-click,
 - have some text selected on the page.
 
 ## Alt mode
@@ -37,7 +37,7 @@ You can override Bonjourr's context menu to get to the regular one in two ways:
 Pressing the <kbd>alt</kbd> key in Bonjourr gives you access to useful features such as:
 
 - <kbd>alt</kbd> + <kbd>number</kbd> to open the corresponding quick link (much like switching browser tabs with <kbd>cmd</kbd> / <kbd>Ctrl</kbd> + <kbd>number</kbd>)
-- <kbd>alt</kbd> + right click to override Bonjourr's context menu and get the native one instead.
+- <kbd>alt</kbd> + right-click to override Bonjourr's context menu and get the native one instead.
 - <kbd>alt</kbd> + <kbd>n</kbd> to create a new quick link.
 
 ## Advanced settings

@@ -36,6 +36,17 @@ export default defineConfig({
 			components: {
 				PageFrame: "./src/components/CustomPageFrame.astro",
 			},
+			defaultLocale: "root",
+			locales: {
+				root: {
+					label: "English",
+					lang: "en",
+				},
+				fr: {
+					label: "Français",
+					lang: "fr",
+				},
+			},
 			sidebar: [
 				{
 					label: "Getting started",

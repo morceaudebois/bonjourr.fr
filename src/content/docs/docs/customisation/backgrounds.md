@@ -73,7 +73,7 @@ A drawback of local files is that they can't be synced between devices; this is 
 
 ### URLs
 
-The URLs option is another way to import your own images into Bonjourr, but instead of having them on your computer, you source them from a distant server.
+The URLs option is another way to import your own images into Bonjourr, but instead of having them on your computer, you source them from a remote server.
 
 <img
   src="/documentation/overview/background-urls.png"

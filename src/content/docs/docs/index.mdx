@@ -3,6 +3,7 @@ title: Install Bonjourr
 ---
 
 import { CardGrid, LinkCard, Aside, LinkButton, Steps, Code } from "@astrojs/starlight/components"
+import LazyVideo from "@components/LazyVideo.astro"
  
 <div class="store-grid">
   <a
@@ -30,17 +31,21 @@ import { CardGrid, LinkCard, Aside, LinkButton, Steps, Code } from "@astrojs/sta
 
 ## Using Bonjourr on Chrome
 
-⚠️ Chrome adds a footer to all extension-based new tabs by default. It isn't part of Bonjourr, and can be removed through a right click for a much cleaner experience:
-<video autoplay controls loop muted playsinline>
-	<source src="/documentation/getting-started/chrome_footer.mp4" type="video/mp4" />
-	Your browser does not support the video tag.
-</video>
+⚠️ Chrome adds a footer to all extension-based new tabs by default. It isn't part of Bonjourr, and can be removed by right-clicking for a much cleaner experience:
+<LazyVideo
+	src="/documentation/getting-started/chrome_footer.mp4"
+	autoplay
+	controls
+	loop
+	muted
+	playsinline
+/>
 
 ## Other desktop browsers
 
 ### ✅ Brave
 
-Being a Chromium based browser, Brave has the ability to install any Chrome extension. You can [download Bonjourr](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) and start using it right away.
+Being a Chromium-based browser, Brave has the ability to install any Chrome extension. You can [download Bonjourr](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) and start using it right away.
 
 ### ✅ Safari (macOS)
 
@@ -56,7 +61,10 @@ Bonjourr can be installed on Safari for macOS in just a few seconds:
 </Steps>
 
 Video walkthrough:
-<video src="/documentation/overview/safari-online-install.mp4" controls></video>
+<LazyVideo
+	src="/documentation/overview/safari-online-install.mp4"
+  autoplay={false}
+/>
 
 <Aside type="note">Bonjourr for Safari was available on the App Store for a few years (including for iOS & iPadOS) but has been [discontinued since May 2026](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5).</Aside>
 
@@ -79,7 +87,10 @@ Zen is based on Firefox, which means you can install any Firefox extension on it
 </Steps>
 
 Video walkthrough:
-<video src="/documentation/overview/zen-config.webm" controls></video>
+<LazyVideo
+	src="/documentation/overview/zen-config.webm"
+  autoplay={false}
+/>
 
 ### ✅ Vivaldi
 
@@ -89,9 +100,9 @@ Vivaldi's support for new tab page extensions has improved significantly in rece
 1. #### General tab
     Look for the "Startup with" section and check the "Specific Pages" box. Then, copy this into the Startup Pages text input before hitting <kbd>Add</kbd>:
     <Code code={"chrome-extension://dlnejlppicbjfcfcedcflplfjajinajd/index.html"} lang="json" />
-    ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-general.jpg)
+    ![Vivaldi's General settings tab](/documentation/getting-started/vivaldi-general.jpg)
 2. #### Tabs tab
-    Make sure the New Tab Page can be Controlled by Extension: ![Bonjourr's alt mode on quick links](/documentation/getting-started/vivaldi-tabs.jpg)
+    Make sure the New Tab Page can be Controlled by Extension: ![Vivaldi's Tabs settings tab](/documentation/getting-started/vivaldi-tabs.jpg)
 </Steps>
 
 ### 🟡 Opera (and Opera GX)
@@ -141,7 +152,7 @@ Some of them however (like [Firefox](https://apps.apple.com/app/navigateur-firef
 
 ### ❌ Chrome for Android
 
-The Android version of Chrome is lacking an extension system, which makes it impossible to install Bonjourr on.
+The Android version of Chrome is lacking an extension system, which makes it impossible to install Bonjourr.
 
 The only way you were able to install Bonjourr on Android was by using Kiwi Browser, which allowed its users to install regular Chrome extensions on it. This is not possible anymore since Kiwi was discontinued.
 
