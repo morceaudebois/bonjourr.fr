@@ -65,6 +65,10 @@ import Glitter from "./Glitter.astro"
 		</div>
 	</section>
 
+	<section id="blog">
+		<slot name="blog" />
+	</section>
+
 	<section id="further">
 		<div class="section-wrapper">
 			<slot name="further" />
@@ -133,12 +137,6 @@ import Glitter from "./Glitter.astro"
 		min-height: 700px;
 	}
 
-	#further {
-		min-height: 900px;
-		max-width: 600px;
-		margin-inline: auto;
-	}
-
 	#donate .buttons {
 		display: flex;
 		flex-wrap: wrap;
@@ -168,12 +166,6 @@ import Glitter from "./Glitter.astro"
 
 		#donate h2 {
 			margin-top: unset;
-		}
-	}
-
-	@media only screen and (max-width: 390px) {
-		#further .section-wrapper {
-			padding: 2em 1em;
 		}
 	}
 </style>

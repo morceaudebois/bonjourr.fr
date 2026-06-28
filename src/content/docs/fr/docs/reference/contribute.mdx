@@ -1,0 +1,80 @@
+---
+title: Contribuer
+description: Découvrez comment soutenir le projet et contribuer à améliorer Bonjourr.
+---
+
+import { Aside, Steps, LinkButton, LinkCard } from "@astrojs/starlight/components"
+
+## ❤️ Dons
+
+Bonjourr est développé et maintenu par deux personnes, sur leur temps libre. Le projet est une vraie passion, et l’objectif est de pouvoir y consacrer de plus en plus de temps à l’avenir.
+
+Les dons permettent de couvrir les coûts du projet, de soutenir le développement, et de se rapprocher d’un modèle où le travail sur l’open source peut devenir plus durable. Chaque contribution, même petite, fait une différence (et permet d’avoir son nom dans Bonjourr le mois suivant !).
+
+<LinkCard title="✨ Faire un don sur Ko-fi" href="https://ko-fi.com/bonjourr" />
+
+## ⭐️ Avis
+
+Laisser un avis est l’un des moyens les plus simples de soutenir Bonjourr. Les notes positives aident le projet à être découvert et encouragent les boutiques de navigateurs à le recommander.
+
+- [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/)
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd)
+- [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid)
+
+Il est aussi possible d’en parler autour de soi : si Bonjourr plaît, il y a de bonnes chances qu’il plaise aussi à d’autres.
+
+## 🌎 Traductions
+
+Grâce aux contributeurs, Bonjourr est aujourd’hui disponible en __43 langues__.
+
+Les traductions ne sont pas toujours parfaitement à jour, surtout lors de nouvelles versions. Bonne nouvelle : il est possible de les améliorer.
+
+### Créer ou mettre à jour une langue
+
+Les traductions se trouvent dans le dossier
+[/\_locales/](https://github.com/victrme/Bonjourr/tree/master/_locales)
+sur GitHub. Chaque langue contient trois fichiers :
+
+- <code class="inline-code">translations.json</code> pour les textes principaux.
+- <code class="inline-code">messages.json</code> pour le titre et le sous-titre de l’extension.
+- <code class="inline-code">overview.md</code> pour la description utilisée sur les stores.
+
+Pour ajouter une nouvelle langue, il suffit de copier le dossier `en` et de l’adapter à la langue souhaitée. Il faut aussi ajouter le code langue et son nom dans la liste située dans
+[/src/scripts/langs.ts](https://github.com/victrme/Bonjourr/blob/master/src/scripts/langs.ts). Une pull request peut ensuite être envoyée sur GitHub. Sinon, il est aussi possible d’envoyer les fichiers modifiés
+par email
+[via email](mailto:bonjourr.app@protonmail.com)
+ou sur
+[le serveur Discord](https://discord.gg/CCAR9J4qVg).
+
+<Aside type="tip">Pensez à ajouter votre nom et un lien pour être crédité.</Aside>
+
+### Tester une traduction
+
+Cette étape est optionnelle, mais permet de voir le rendu d’une traduction directement dans Bonjourr.
+
+<Steps>
+1. #### Ouvrir Bonjourr en ligne
+    Aller sur [online.bonjourr.fr](https://online.bonjourr.fr) et sélectionner la langue souhaitée.
+
+2. #### Ouvrir la console développeur
+   Utiliser l’un des raccourcis suivants :
+   <kbd>F12</kbd>, <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> ou <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
+
+3. #### Injecter la traduction
+    Copier la traduction dans la commande suivante et la coller dans la console :
+
+   ```js
+    const myTranslationFile = "/* coller ici translations.json */";
+    localStorage.translations = JSON.stringify(myTranslationFile)
+    ```
+
+4.  #### Recharger la page
+        Les nouvelles traductions devraient apparaître.
+
+</Steps>
+
+## 🧑‍💻 Nouvelles fonctions et corrections de bugs
+
+Les développeurs souhaitant contribuer au code de Bonjourr peuvent consulter [les issues sur GitHub](https://github.com/victrme/Bonjourr/issues) afin de trouver des idées de fonctionnalités ou de corrections.
+
+Il est aussi possible de proposer ou créer des [extraits CSS](/fr/docs/customisation/styles/) et des [profils personnalisés](/fr/docs/customisation/profiles/).

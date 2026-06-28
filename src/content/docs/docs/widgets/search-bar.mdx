@@ -1,0 +1,29 @@
+---
+title: 🔎 Search bar
+description: Search bar settings let you choose and customize search engines, use built-in suggestions, and quickly focus the search field with a keyboard shortcut.
+---
+
+import { Aside } from "@astrojs/starlight/components"
+import LazyVideo from "@components/LazyVideo.astro"
+
+## Suggestions
+
+Suggestions are provided by our own API. You can learn all about it and its source code [here](https://github.com/victrme/search-suggestions).
+
+## Custom search engine
+
+There are many search engines available by default in Bonjourr, and you can even add others if needed. To do so, select **Custom** in the Search engine option of the search bar. When the **URL request** input appears, simply paste in the URL of the search engine and replace the search query by `%s`.
+
+For example, if you search "coffee" on YouTube, you'll see that the URL will be `https://www.youtube.com/results?search_query=coffee`.
+
+In this case, you just need to replace `coffee` with `%s`, giving you this result: `https://www.youtube.com/results?search_query=%s`.
+
+Paste it in the input and you'll now be able to use the corresponding search engine from Bonjourr.
+
+<LazyVideo src="/documentation/overview/custom-search.webm" autoplay={false} />
+
+This method will work with the vast majority of search engines, making Bonjourr compatible with almost all of them.
+
+<Aside type="tip">
+	Hitting the <kbd>/</kbd> key will focus on the search bar.
+</Aside>

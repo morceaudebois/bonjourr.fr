@@ -1,0 +1,84 @@
+---
+title: Référence des paramètres
+description: Les paramètres de Bonjourr sont stockés au format JSON, que vous pouvez consulter dans la section de gestion des paramètres. Cette page explique à quoi correspond chaque propriété JSON. Dernière mise à jour pour la version 22.0.0.
+---
+
+import { Code } from "astro-expressive-code/components"
+import hide from "@assets/documentation/reference/hide.txt?raw"
+import move from "@assets/documentation/reference/move.txt?raw"
+import clock from "@assets/documentation/reference/clock.txt?raw"
+import links from "@assets/documentation/reference/links.txt?raw"
+import notes from "@assets/documentation/reference/notes.txt?raw"
+import fonts from "@assets/documentation/reference/fonts.txt?raw"
+import general from "@assets/documentation/reference/general.txt?raw"
+import weather from "@assets/documentation/reference/weather.txt?raw"
+import pomodoro from "@assets/documentation/reference/pomodoro.txt?raw"
+import movegrid from "@assets/documentation/reference/movegrid.txt?raw"
+import greetings from "@assets/documentation/reference/greetings.txt?raw"
+import moveitems from "@assets/documentation/reference/moveitems.txt?raw"
+import linkselem from "@assets/documentation/reference/linkselem.txt?raw"
+import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
+
+## Général
+
+<Code lang="jsonc" code={general} />
+
+## Arrière-plans
+
+Les noms des collections dans `images` et `videos` sont liés à notre serveur et ne peuvent ni être modifiés ni être devinés.
+
+<Code lang="jsonc" code={backgrounds} />
+
+## Horloge
+
+<Code lang="jsonc" code={clock} />
+
+## Liens rapides
+
+Paramètres généraux des liens rapides.
+
+<Code lang="jsonc" code={links} />
+
+Lors de l'ajout d'un lien rapide :
+
+<Code lang="jsonc" code={linkselem} />
+
+## Notes, barre de recherche et citations
+
+Ces widgets fonctionnent de manière très similaire : une simple structure clé-valeur.
+
+<Code lang="jsonc" code={notes} />
+
+## Pomodoro
+
+<Code lang="jsonc" code={pomodoro} />
+
+## Polices
+
+La plupart des champs liés aux polices sont définis automatiquement par Bonjourr et ne peuvent pas être modifiés facilement à la main.
+
+<Code lang="jsonc" code={fonts} />
+
+## Météo
+
+<Code lang="jsonc" code={weather} />
+
+## Salutations
+
+<Code lang="jsonc" code={greetings} />
+
+## Éléments masqués
+
+Permet de définir quels éléments de la page doivent être masqués.
+
+<Code lang="jsonc" code={hide} />
+
+## Mise en page
+
+La structure de la mise en page est relativement complexe. Les grilles correspondent aux colonnes, tandis que les éléments définissent l'alignement des widgets.
+
+<Code lang="jsonc" code={move} />
+
+<Code lang="jsonc" code={movegrid} />
+
+<Code lang="jsonc" code={moveitems} />

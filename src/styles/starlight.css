@@ -1,0 +1,176 @@
+:root {
+	/* --sl-color-accent: #3187f2; */
+
+	--sl-nav-height: unset;
+	--accent: #3187f2;
+}
+
+header {
+	display: none;
+}
+
+.container-main .main {
+	padding-top: 3em;
+}
+
+.container-main .main a:not(.sl-link-button) {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
+}
+
+.sl-link-button:hover {
+	color: white;
+	border-color: var(--accent);
+}
+
+html sl-anchor-link body div[data-slot="layout"] {
+	padding-top: 3em;
+	min-height: 20svh;
+}
+
+html [data-slot="layout"] {
+	z-index: unset;
+}
+
+/* hides lucode's hard to remove footer from PageFrame.astro that seems to appear somehow sometimes */
+html [data-slot="layout"] footer {
+	display: none !important;
+}
+
+html .entry-link {
+	padding-left: 1em;
+	min-height: 1.875rem;
+	height: unset;
+}
+
+/* html .entry-link .entry-link-inner {
+	padding-block: calc(var(--spacing) * 2);
+} */
+
+html .entry-link[aria-current="page"] .entry-link-inner {
+	color: white;
+}
+
+html .container-group-link {
+	gap: 6px;
+}
+
+.toc {
+	padding-right: 1em;
+}
+
+.container-main .main img,
+.container-main .main video {
+	/* doesn't work on videos in Firefox over 1024px screen width for some reason???? */
+	border-radius: var(--radius);
+}
+
+h1#_top {
+	font-size: 2.25rem;
+}
+
+.container-main h2 {
+	font-size: 1.75rem;
+}
+
+.container-main h3 {
+	font-size: 1.325rem;
+}
+
+.container-main .level-h3 {
+	margin-top: calc(var(--spacing) * 6);
+}
+
+.container-main .level-h4 {
+	margin-top: calc(var(--spacing) * 4);
+}
+
+.sl-steps li :last-child {
+	margin-bottom: unset;
+}
+
+.container-main kbd {
+	margin-top: unset;
+	margin-bottom: unset;
+}
+
+.container-mobile .top-level {
+	margin-inline-start: var(--sl-sidebar-item-padding-inline);
+}
+
+@media (prefers-color-scheme: dark) {
+	.container-mobile a[aria-current="page"] {
+		color: black;
+	}
+}
+
+/* install cards on getting started page */
+.store-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+	gap: 0.75rem;
+	margin: 1.5rem 0 2rem;
+}
+
+.store-grid .sl-link-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1.5rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	transition:
+		border-color 0.15s ease,
+		transform 0.15s ease;
+}
+
+.store-grid .sl-link-card:hover {
+	border-color: var(--sl-color-text-accent);
+	transform: translateY(-2px);
+}
+
+.store-grid .sl-link-card img {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.store-card-title {
+	font-weight: 600;
+	font-size: var(--sl-text-base);
+	color: var(--sl-color-white);
+}
+
+.store-card-desc {
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-2);
+}
+
+@media (max-width: 50rem) {
+	site-search button {
+		display: none !important;
+	}
+}
+
+@media (min-width: 50rem) {
+	html #custom-open-search {
+		display: none;
+	}
+
+	site-search button {
+		backdrop-filter: blur(2em);
+		background-color: #0002;
+		border: 1px solid #fff1;
+		border-radius: 1em;
+		color: white;
+	}
+
+	html[data-theme="light"] site-search button {
+		background-color: #fff2;
+	}
+
+	site-search kbd.sl-hidden {
+		background-color: #fff2;
+		border: 1px solid #fff1;
+	}
+}

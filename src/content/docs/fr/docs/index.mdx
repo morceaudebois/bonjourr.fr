@@ -1,0 +1,164 @@
+---
+title: Installer Bonjourr
+---
+
+import { CardGrid, LinkCard, Aside, LinkButton, Steps, Code } from "@astrojs/starlight/components"
+import LazyVideo from "@components/LazyVideo.astro"
+ 
+<div class="store-grid">
+  <a
+    class="sl-link-card"
+    href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
+  >
+    <img src="/browsers/chrome.svg" alt="" aria-hidden="true" />
+    <span class="store-card-title">Chrome</span>
+    <span class="store-card-desc">Chrome Web Store</span>
+  </a>
+  <a class="sl-link-card" href="https://addons.mozilla.org/firefox/addon/bonjourr-startpage/">
+    <img src="/browsers/firefox.svg" alt="" aria-hidden="true" />
+    <span class="store-card-title">Firefox</span>
+    <span class="store-card-desc">Firefox Add-ons</span>
+  </a>
+  <a
+    class="sl-link-card"
+    href="https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid"
+  >
+    <img src="/browsers/edge.svg" alt="" aria-hidden="true" />
+    <span class="store-card-title">Edge</span>
+    <span class="store-card-desc">Edge Add-ons</span>
+  </a>
+</div>
+
+## Utiliser Bonjourr sur Chrome
+
+⚠️ Chrome ajoute un pied de page à tous les nouveaux onglets par défaut lorsqu’une extension est utilisée. Celui-ci ne fait pas partie de Bonjourr et peut être supprimé en faisant un clic droit pour une expérience plus propre :
+<LazyVideo
+	src="/documentation/getting-started/chrome_footer.mp4"
+	autoplay
+	controls
+	loop
+	muted
+	playsinline
+/>
+
+## Autres navigateurs desktop
+
+### ✅ Brave
+
+Étant basé sur Chromium, Brave peut installer n’importe quelle extension Chrome. Il suffit de [télécharger Bonjourr](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd) pour commencer à l’utiliser immédiatement.
+
+### ✅ Safari (macOS)
+
+Bonjourr peut être installé sur Safari pour macOS en quelques secondes :
+<Steps>
+1. #### Ouvrir les préférences de Safari
+    Appuyer sur <kbd>Cmd</kbd> + <kbd>Virgule</kbd> et ouvrir l’onglet "Général"
+2. #### Passer à la page d’accueil
+    Définir "Nouvelles fenêtres ouvertes avec" et "Nouveaux onglets ouverts avec" sur "Page d’accueil"
+3. #### Définir la page d’accueil
+    Définir le champ de page d’accueil sur : <Code code={"https://online.bonjourr.fr"} />
+</Steps>
+
+Vidéo explicative :
+<LazyVideo
+	src="/documentation/overview/safari-online-install.mp4"
+  autoplay={false}
+/>
+
+<Aside type="note">Bonjourr pour Safari était disponible sur l’App Store pendant quelques années (iOS & iPadOS inclus), mais a été [abandonné depuis mai 2026](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5).</Aside>
+
+### ✅ Zen
+
+Zen est basé sur Firefox, ce qui permet d’installer n’importe quelle extension Firefox, y compris [Bonjourr](https://addons.mozilla.org/firefox/addon/bonjourr-startpage/). Zen nécessite quelques réglages supplémentaires avant de remplacer complètement les nouveaux onglets.
+
+<Steps>
+1. #### Définir Bonjourr comme page d’accueil et nouvel onglet
+
+   Ouvrir les paramètres de Zen et vérifier que Bonjourr est sélectionné pour **Page d’accueil et nouvelles fenêtres** ainsi que **Nouveaux onglets**.
+
+2. #### Désactiver le nouvel onglet personnalisé de Zen
+
+   Ouvrir `about:config`, cliquer sur **Accepter le risque**, puis rechercher `zen.urlbar.replace-newtab`. Régler sa valeur sur `false` avec le bouton à droite. Cela garantit que Bonjourr s’affiche à chaque nouvel onglet.
+
+3. #### (Optionnel) Ajouter Bonjourr aux Essentials
+
+   Ouvrir un onglet Bonjourr, puis cliquer sur **Ajouter aux Essentials**. Cela permet de le garder accessible depuis la barre latérale de Zen.
+</Steps>
+
+Vidéo explicative :
+<LazyVideo
+	src="/documentation/overview/zen-config.webm"
+  autoplay={false}
+/>
+
+### ✅ Vivaldi
+
+Le support des extensions pour la page de nouvel onglet s’est fortement amélioré dans les versions récentes de Vivaldi. Une fois Bonjourr installé depuis le [Chrome Web Store](https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd), deux réglages sont nécessaires :
+
+<Steps>
+1. #### Onglet Général
+    Dans la section "Au démarrage", cocher "Pages spécifiques". Puis ajouter ceci dans le champ des pages de démarrage avant de cliquer sur <kbd>Ajouter</kbd> :
+    <Code code={"chrome-extension://dlnejlppicbjfcfcedcflplfjajinajd/index.html"} lang="json" />
+    ![Onglet des paramètres généraux de Vivaldi](/documentation/getting-started/vivaldi-general.jpg)
+2. #### Onglet Onglets
+    Vérifier que la page de nouvel onglet peut être contrôlée par une extension : ![Onglet des paramètres des onglets de Vivaldi](/documentation/getting-started/vivaldi-tabs.jpg)
+</Steps>
+
+### 🟡 Opera (et Opera GX)
+
+Opera n’autorise pas les extensions à modifier sa page de nouvel onglet. Bien qu’aucune déclaration officielle n’existe, cela semble lié au fait que la Speed Dial génère des revenus publicitaires.
+
+Une alternative consiste à installer une extension et à utiliser la version en ligne de Bonjourr :
+
+<Steps>
+  1. Vider la Speed Dial actuelle afin d’obtenir une page sombre et vide.
+
+  2. Installer une extension tierce capable de remplacer l’onglet actif. Pour l’instant, seule [New Tab Start Page](https://chromewebstore.google.com/detail/new-tab-start-page/mjfahldkpjhcnfbbmdhpjolcjpcfhcpj) fonctionne correctement. Elle n’est pas affiliée à Bonjourr.
+
+  3. Cliquer sur l’icône Bonjourr pour afficher son URL complète dans la barre d’adresse.
+
+  4. Configurer l’extension tierce avec <bjr>https://online.bonjourr.fr</bjr>, et c’est terminé !
+</Steps>
+
+### 🟡 Orion
+
+Bonjourr peut être installé sur Orion (versions Chrome ou Firefox), mais peut-être assez instables. Cela devrait s’améliorer avec le temps.
+
+<LinkButton
+	href="https://github.com/victrme/Bonjourr/issues/657"
+	variant="secondary"
+	icon="github"
+	iconPlacement="start"
+>
+	Discussion GitHub pour Orion
+</LinkButton>
+
+## Navigateurs mobiles
+
+Le support des extensions pour les nouveaux onglets reste limité sur mobile, mais il existe encore quelques moyens d’utiliser Bonjourr sur téléphone, tablette (et même frigo connecté).
+
+### 🟡 Safari (iOS et iPadOS)
+
+Sur iOS et iPadOS, Apple n’autorise que les applications de l’App Store à modifier la page de nouvel onglet de Safari. Bien qu’il n’existe plus d’application officielle [depuis mai 2026](https://ko-fi.com/post/On-why-we-wont-be-renewing-our-Apple-Developer-ac-W7W31WQTJ5), il est encore possible d’utiliser Bonjourr via l’application open source [Homepage for Safari](https://apps.apple.com/app/homepage-for-safari/id6481118559).
+
+Cette application permet de définir n’importe quelle URL comme nouvel onglet dans Safari. En utilisant `https://online.bonjourr.fr`, Bonjourr fonctionne normalement.
+
+### 🟡 Navigateurs iOS autres que Safari
+
+Les navigateurs non-Safari sur iOS ne permettent pas d’installer d’extensions.
+
+Certains (comme [Firefox](https://apps.apple.com/app/navigateur-firefox-rapide-s%C3%BBr/id989804926)) permettent toutefois de définir une URL personnalisée pour les nouveaux onglets, où `https://online.bonjourr.fr` peut être utilisée. Même s’il s’agit de la version en ligne, les données restent en cache, ce qui conserve de bonnes performances.
+
+### ❌ Chrome sur Android
+
+La version Android de Chrome ne prend pas en charge les extensions, ce qui empêche l’installation de Bonjourr.
+
+La seule solution auparavant était Kiwi Browser, qui permettait d’utiliser des extensions Chrome. Ce n’est désormais plus possible depuis son arrêt.
+
+<Aside type="note">Certaines [évolutions récentes](https://www.reddit.com/r/kiwibrowser/comments/1i89rje/kiwi_browser_extension_code_integrated_into/) indiquent que le code de Kiwi a été intégré à [Microsoft Edge pour Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx). L’installation de Bonjourr pourrait être possible, mais cela n’a pas été testé.</Aside>
+
+### ❌ Firefox sur Android
+
+Mozilla empêche les extensions de modifier la page de démarrage sur Android, ce qui rend Bonjourr impossible à installer. Tant que cela reste en place, aucune solution côté développeur n’est possible.
+
+Une autre option serait l’ajout d’un champ d’URL personnalisée, permettant d’utiliser la version en ligne de Bonjourr. Il est possible de [voter pour cette demande](https://connect.mozilla.org/t5/ideas/add-option-to-set-custom-homepage-in-firefox-for-android/idi-p/83481) sur leur forum.

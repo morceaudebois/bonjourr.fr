@@ -1,0 +1,64 @@
+---
+import BlogGrid from "@components/BlogGrid.astro"
+const { readMoreLabel = "Read more →" } = Astro.props
+---
+
+<div id="blog">
+	<div class="section-wrapper">
+		<h2>
+			<slot name="blog-title" />
+		</h2>
+		<p>
+			<slot name="blog-desc" />
+		</p>
+
+		<BlogGrid slot="BlogGrid" postsIndex="3" readMoreLabel={readMoreLabel} />
+
+		<div class="blog-action">
+			<a
+				class="button btn-themed"
+				href="https://ko-fi.com/bonjourr/posts"
+				rel="noopener noreferrer"
+			>
+				<slot name="blog-read-all" /></a
+			>
+		</div>
+	</div>
+</div>
+
+<style>
+	#blog {
+		background: var(--color-background);
+	}
+
+	.section-wrapper {
+		max-width: 1200px;
+		margin-inline: auto;
+		padding: 5em 2em;
+	}
+
+	.section-wrapper > p {
+		text-align: center;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	p {
+		margin-bottom: 2rem;
+	}
+
+	.blog-action {
+		margin-top: 2rem;
+		text-align: center;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	@media (max-width: 900px) {
+		#blog .section-wrapper {
+			padding: 64px 1.5rem;
+		}
+	}
+</style>

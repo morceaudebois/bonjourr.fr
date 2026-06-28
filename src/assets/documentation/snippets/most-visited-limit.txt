@@ -1,0 +1,5 @@
+/* Sets a limit to your most visited links (replace 5 with how many links you want) */
+
+.synced .link-list > :nth-child(n+5) {
+  display: none;
+}

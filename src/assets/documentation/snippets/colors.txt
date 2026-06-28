@@ -1,0 +1,17 @@
+:root {
+	/* overrides the built-in font color option (only rgb values) */
+	--font-color: 60 45 40!important;
+	
+	/* for text on blurry elements (notes, searchbar... (only rgb values)) */
+	--font-on-blur-color: 60 45 40;
+	
+	/* weather & settings icon (any kind of color code) */
+	--icon-color: #c26d3b;
+
+	/* the following are mostly just for the settings ⤵️ */
+	/* blue accents all over (only rgb values) */
+	--accent-color: 234 88 12;
+
+	/* settings toggles (only rgb values) */
+	--color-green: 245 158 11;
+}

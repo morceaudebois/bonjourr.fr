@@ -5,6 +5,7 @@ import Frontpage from "@components/Frontpage/Frontpage.astro"
 import Landing from "@components/Frontpage/Landing.astro"
 import Further from "@components/Frontpage/Further.astro"
 import Showcase from "@components/Frontpage/Showcase.astro"
+import Blog from "@components/Frontpage/Blog.astro"
 ---
 
 <Layout
@@ -58,7 +59,7 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 			<li slot="more-no-ai">No generative AI</li>
 		</Showcase>
 
-		<h2 slot="open-title">🔒 Free, open source and privacy focused</h2>
+		<h2 slot="open-title">🔒 Open source and privacy focused</h2>
 		<p slot="open-text">
 			Bonjourr is created by two independent developers who love things well made and <i
 				>actually</i
@@ -71,14 +72,14 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 
 			<span slot="contact-title">Contact</span>
 			<span slot="contact-desc">
-				Come and hang out with us on Bluesky or Telegram. You can tell us about your ideas
+				Come and hang out with us on Bluesky or Discord. You can tell us about your ideas
 				and read about the latest news about its development. Or you can send us <a
 					style="text-decoration: underline"
 					href="mailto:bonjourr.app@protonmail.com">an email</a
 				>!
 			</span>
 			<span slot="contact-button-bluesky">Bluesky</span>
-			<span slot="contact-button-telegram">Telegram</span>
+			<span slot="contact-button-discord">Discord</span>
 
 			<span slot="docs-title">Documentation</span>
 			<span slot="docs-desc">
@@ -86,14 +87,16 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 				know how you can contribute to the project and go even further into customization.
 			</span>
 			<span slot="docs-button">Documentation</span>
-
-			<span slot="repo-title">Fork Bonjourr</span>
-			<span slot="repo-desc">
-				Fork Bonjourr and add your own features on our GitHub repositories. We’re open to
-				pull requests!
-			</span>
-			<span slot="repo-button">GitHub repository</span>
 		</Further>
+
+		<Blog slot="blog" readMoreLabel="Read more →">
+			<span slot="blog-title">Latest updates</span>
+			<span slot="blog-desc"
+				>Read the latest Bonjourr news, development updates, and release announcements.</span
+			>
+
+			<span slot="blog-read-all">See all updates</span>
+		</Blog>
 
 		<h2 slot="donate-title">✨ Donate ✨</h2>
 		<p slot="donate-text">

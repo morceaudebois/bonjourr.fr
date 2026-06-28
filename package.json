@@ -11,11 +11,18 @@
 		"@astrojs/sitemap": "^3.7.2",
 		"@biomejs/biome": "2.4.15",
 		"@cloudflare/workers-types": "^4.20260426.1",
-		"astro": "^6.1.9",
+		"@iconify-json/fa7-brands": "^1.2.2",
+		"@iconify-json/heroicons": "^1.2.3",
+		"astro": "^6.4.8",
 		"astro-expressive-code": "^0.41.7",
+		"astro-icon": "^1.1.5",
 		"detect-browser": "^5.3.0",
 		"sharp": "^0.34.5",
-		"vite": "^8.0.10"
+		"typescript": "^6.0.3",
+		"vite": "^7.0.0"
+	},
+	"overrides": {
+		"vite": "^7.0.0"
 	},
 	"prettier": {
 		"semi": false,
@@ -34,5 +41,10 @@
 				}
 			}
 		]
+	},
+	"dependencies": {
+		"@astrojs/starlight": "^0.40.0",
+		"lucode-starlight": "^0.1.6",
+		"vanilla-lazyload": "^19.1.3"
 	}
 }

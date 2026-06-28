@@ -1,6 +1,7 @@
 ---
+import CustomOpenSearch from "./CustomOpenSearch.astro"
 import Link from "./Link.astro"
-
+import Sidebar from "@astrojs/starlight/components/Sidebar.astro"
 const isFrench = Astro.url.pathname.startsWith("/fr")
 const path = Astro.url.pathname
 
@@ -8,26 +9,34 @@ const en = {
 	Home: "Home",
 	Donate: "Donate",
 	Try: "Try online",
-	Download: "Download for",
+	Install: "Install on",
 	Socials: "Socials",
 }
 const fr = {
 	Home: "Accueil",
 	Donate: "Dons",
 	Try: "Démo en ligne",
-	Download: "Télécharger pour",
+	Install: "Installer sur",
 	Socials: "Réseaux sociaux",
 }
 const trans = isFrench ? fr : en
+
+let isStarlightPage = false
+try {
+	Astro.locals.starlightRoute
+	isStarlightPage = true
+} catch {
+	isStarlightPage = false
+}
 ---
 
-<nav>
+<nav id="bonjourrNav">
 	<div class="container">
-		<ul class="links desktop-nav">
-			<li><Link href="/" id="homeLink" title="Homepage">{trans.Home}</Link></li><li>
-				<a href="https://online.bonjourr.fr">Online</a>
-			</li><li>
+		<ul class="links nav-left desktop-nav">
+			<li>
 				<Link href="/docs" title="Documentation">Docs</Link>
+			</li><li>
+				<Link href="/#blog" title="Blog">Blog</Link>
 			</li><li>
 				<Link href="/#further" title="Get in touch">Contact</Link>
 			</li><li>
@@ -35,34 +44,35 @@ const trans = isFrench ? fr : en
 			</li>
 		</ul>
 
+		<div class="nav-center">
+			<Link href="/" id="homeLink" title="Homepage">Bonjourr</Link>
+		</div>
+
 		<div class="nav-right">
 			<ul class="socials desktop-nav">
 				<li>
-					<a href="https://t.me/BonjourrStartpage" title="Bonjourr's Telegram group">
+					<a
+						href="https://discord.gg/CCAR9J4qVg"
+						title="Bonjourr's Discord server"
+						rel="me"
+					>
 						<svg
-							role="img"
-							fill="none"
-							viewBox="0 0 48 48"
+							height="800"
+							preserveAspectRatio="xMidYMid"
+							viewBox="0 -28.5 256 256"
+							width="800"
 							xmlns="http://www.w3.org/2000/svg"
 							><path
-								d="m41.4193 7.30899s3.8853-1.515 3.5615 2.16429c-.1079 1.51502-1.0792 6.81752-1.8347 12.55292l-2.5902 16.9897s-.2158 2.4889-2.1585 2.9218c-1.9427.4328-4.8566-1.515-5.3963-1.9479-.4317-.3246-8.0943-5.1943-10.7925-7.575-.7555-.6493-1.6189-1.9479.1079-3.4629l11.3322-10.8214c1.2951-1.2986 2.5902-4.3286-2.8061-.6493l-15.1095 10.2804s-1.7268 1.0821-4.9645.1082l-7.01518-2.1643s-2.59021-1.6232 1.83473-3.2465c10.79255-5.0861 24.06735-10.2804 35.83115-15.15001z"
-								fill="#fff"></path></svg
+								d="m216.856339 16.5966031c-16.571337-7.75331645-34.290195-13.3881043-52.814775-16.5966031-2.275041 4.11318106-4.93294 9.64549908-6.765465 14.0464379-19.692104-2.9614483-39.203132-2.9614483-58.5330827 0-1.8321746-4.40093882-4.5504325-9.93325684-6.8458268-14.0464379-18.5445827 3.2084988-36.2837946 8.86399117-52.8551312 16.6376612-33.42453537 50.5088528-42.4853774 99.7631518-37.95494761 148.3180598 22.16890891 16.555194 43.65325271 26.611976 64.77502181 33.192855 5.2150826-7.17745 9.8662303-14.807241 13.8730814-22.848315-7.6311949-2.899686-14.9402415-6.478059-21.8464273-10.632298 1.8321746-1.357374 3.6243438-2.776511 5.3558032-4.236706 42.1228202 19.70193 87.8903382 19.70193 129.5099332 0 1.751813 1.460195 3.543631 2.879332 5.355803 4.236706-6.926539 4.174593-14.255589 7.752966-21.886784 10.653002 4.006851 8.02037 8.637996 15.670866 13.873082 22.847965 21.142122-6.580879 42.646399-16.637311 64.815325-33.213209 5.315798-56.28752-9.080862-105.0894778-38.05561-148.3591179zm-131.3824638 118.4982869c-12.6448471 0-23.0146535-11.804735-23.0146535-26.179989 0-14.3752538 10.1483733-26.2003423 23.0146535-26.2003423 12.8666312 0 23.2360868 11.804384 23.0146538 26.2003423.020002 14.375254-10.1480226 26.179989-23.0146538 26.179989zm85.0513618 0c-12.644847 0-23.014653-11.804735-23.014653-26.179989 0-14.3752538 10.148022-26.2003423 23.014653-26.2003423 12.866281 0 23.236087 11.804384 23.014654 26.2003423 0 14.375254-10.148373 26.179989-23.014654 26.179989z"
+								fill="currentColor"></path></svg
 						>
 					</a>
-				</li><li>
-					<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
-						<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-							><path
-								role="img"
-								clip-rule="evenodd"
-								d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z"
-								fill="#fff"
-								fill-rule="evenodd"
-								transform="scale(64)"></path></svg
-						>
-					</a>
-				</li><li>
-					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
+
+					<a
+						href="https://bsky.app/profile/bonjourr.fr"
+						title="Join us on Bluesky"
+						rel="me"
+					>
 						<svg
 							role="img"
 							clip-rule="evenodd"
@@ -79,7 +89,7 @@ const trans = isFrench ? fr : en
 						>
 					</a>
 				</li>
-				<!-- <li>
+				<li>
 					<a href="https://twitter.com/BonjourrTeam" title="Join us on Twitter">
 						<svg
 							viewBox="0 0 300.00006 244.18703"
@@ -91,9 +101,24 @@ const trans = isFrench ? fr : en
 								transform="translate(-539.17946 -568.85777)"></path></svg
 						>
 					</a>
-				</li> -->
+				</li><li>
+					<a
+						href="https://github.com/victrme/Bonjourr"
+						title="Our GitHub repository"
+						rel="me"
+					>
+						<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+							><path
+								role="img"
+								clip-rule="evenodd"
+								d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z"
+								fill="#fff"
+								fill-rule="evenodd"
+								transform="scale(64)"></path></svg
+						>
+					</a>
+				</li>
 			</ul>
-
 			<a
 				class="language desktop-nav"
 				href={isFrench ? path.substring(3) : "/fr" + path}
@@ -116,16 +141,18 @@ const trans = isFrench ? fr : en
 					{isFrench ? "en" : "fr"}
 				</span>
 			</a>
-
-			<button class="hamburger" aria-label="Open navigation menu" open-button>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-					<path
-						fill-rule="evenodd"
-						d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-						clip-rule="evenodd"></path>
-				</svg>
-			</button>
 		</div>
+
+		{isStarlightPage ? <CustomOpenSearch /> : ""}
+
+		<button class="hamburger" aria-label="Open navigation menu" open-button>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
+					clip-rule="evenodd"></path>
+			</svg>
+		</button>
 	</div>
 </nav>
 
@@ -150,8 +177,27 @@ const trans = isFrench ? fr : en
 				<li>
 					<a href="https://online.bonjourr.fr">{trans.Try}</a>
 				</li>
+
+				{
+					isStarlightPage ? (
+						<li>
+							<Link href="/docs" title="Documentation">
+								Documentation
+							</Link>
+						</li>
+						
+						<Sidebar />
+					) : (
+						<li>
+							<Link href="/docs" title="Documentation">
+								Documentation
+							</Link>
+						</li>
+					)
+				}
+
 				<li>
-					<Link href="/docs" title="Documentation">Documentation</Link>
+					<Link href="/blog" title="Blog">Blog</Link>
 				</li>
 				<li>
 					<Link href="/#further" title="Get in touch">Contact</Link>
@@ -164,7 +210,7 @@ const trans = isFrench ? fr : en
 				</li>
 			</ul>
 
-			<h2>{trans.Download}</h2>
+			<h2>{trans.Install}</h2>
 
 			<ul>
 				<li>
@@ -186,10 +232,7 @@ const trans = isFrench ? fr : en
 					</a>
 				</li>
 				<li>
-					<a
-						href="https://apps.apple.com/app/bonjourr-startpage/id1615431236"
-						title="Download Bonjourr for Safari"
-					>
+					<a href="/docs#-safari-macos" title="Install Bonjourr on Safari">
 						<img src="/browsers/safari.svg" alt="" />
 						<span>Safari</span>
 					</a>
@@ -209,7 +252,31 @@ const trans = isFrench ? fr : en
 
 			<ul>
 				<li>
-					<a href="https://github.com/victrme/Bonjourr" title="Our GitHub repository">
+					<a
+						href="https://discord.gg/CCAR9J4qVg"
+						title="Bonjourr's Discord server"
+						rel="me"
+					>
+						<img src="/frontpage/discord.svg" alt="Discord icon" />
+						<span>Discord</span>
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://bsky.app/profile/bonjourr.fr"
+						title="Join us on Bluesky"
+						rel="me"
+					>
+						<img src="/frontpage/bluesky-blue.svg" alt="Bluesky icon" />
+						<span>Bluesky</span>
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://github.com/victrme/Bonjourr"
+						title="Our GitHub repository"
+						rel="me"
+					>
 						<picture>
 							<source
 								srcset="/frontpage/github-dark.svg"
@@ -225,29 +292,13 @@ const trans = isFrench ? fr : en
 						<span>GitHub</span>
 					</a>
 				</li>
+
 				<li>
-					<a href="https://t.me/BonjourrStartpage" title="Our Telegram group">
-						<img src="/frontpage/telegram.svg" alt="Telegram icon" />
-						<span>Telegram</span>
-					</a>
-				</li>
-				<li>
-					<a href="https://bsky.app/profile/bonjourr.fr" title="Join us on Bluesky">
-						<img src="/frontpage/bluesky-blue.svg" alt="Bluesky icon" />
-						<span>Bluesky</span>
-					</a>
-				</li>
-				<!-- <li>
 					<a href="https://twitter.com/BonjourrTeam" title="Joins us on Twitter">
-						<svg viewBox="0 0 300.00006 244.18703" xmlns="http://www.w3.org/2000/svg"
-							><path
-								d="m633.89823 812.04479c112.46038 0 173.95627-93.16765 173.95627-173.95625 0-2.64628-.0539-5.28062-.1726-7.90305 11.93799-8.63016 22.31446-19.39999 30.49762-31.65984-10.95459 4.86937-22.74358 8.14741-35.11071 9.62551 12.62341-7.56929 22.31446-19.54304 26.88583-33.81739-11.81284 7.00307-24.89517 12.09297-38.82383 14.84055-11.15723-11.88436-27.04079-19.31655-44.62892-19.31655-33.76374 0-61.14426 27.38052-61.14426 61.13233 0 4.79784.5364 9.46458 1.58538 13.94057-50.81546-2.55686-95.87353-26.88582-126.02546-63.87991-5.25082 9.03545-8.27852 19.53111-8.27852 30.73006 0 21.21186 10.79366 39.93837 27.20766 50.89296-10.03077-.30992-19.45363-3.06348-27.69044-7.64676-.009.25652-.009.50661-.009.78077 0 29.60957 21.07478 54.3319 49.0513 59.93435-5.13757 1.40062-10.54335 2.15158-16.12196 2.15158-3.93364 0-7.76596-.38716-11.49099-1.1026 7.78383 24.2932 30.35457 41.97073 57.11525 42.46543-20.92578 16.40207-47.28712 26.17062-75.93712 26.17062-4.92898 0-9.79834-.28036-14.58427-.84634 27.05868 17.34379 59.18936 27.46396 93.72193 27.46396"
-								fill="currentColor"
-								transform="translate(-539.17946 -568.85777)"></path></svg
-						>
+						<img src="/frontpage/twitter.svg" alt="Twitter icon" />
 						<span>Twitter</span>
 					</a>
-				</li> -->
+				</li>
 			</ul>
 
 			<a
@@ -407,11 +458,13 @@ const trans = isFrench ? fr : en
 		text-decoration: none;
 		background-color: #fff2;
 		backdrop-filter: blur(1em);
+		outline: 1px solid #ffffff30;
 	}
 
 	nav a:active {
 		background-color: #fff3;
 		backdrop-filter: blur(1em);
+		outline: 1px solid #ffffff30;
 	}
 
 	nav svg {
@@ -419,16 +472,50 @@ const trans = isFrench ? fr : en
 		vertical-align: middle;
 	}
 
+	body:not(#blog-post) nav .desktop-nav svg {
+		filter: drop-shadow(1px 2px 6px rgba(0, 0, 0, 0.3));
+	}
+
+	nav .nav-left {
+		width: 100%;
+		max-width: 40vw;
+		flex: 1;
+	}
+
+	nav .nav-center {
+		font-size: 30px;
+		font-weight: 400;
+		flex: 0.2;
+		text-align: center;
+	}
+
 	nav .nav-right {
 		display: flex;
 		align-items: center;
+		max-width: 40vw;
+		width: 100%;
+		justify-content: flex-end;
+		flex: 1;
+	}
+
+	nav .nav-right,
+	nav .nav-left {
+		flex: 1;
 	}
 
 	nav a {
 		font-weight: 500;
 		padding: 8px 12px;
 		border-radius: 8px;
-		transition: background-color 0.075s ease-in;
+		transition:
+			background-color 0.075s ease-in,
+			backdrop-filter 0.075s ease-in,
+			outline 0.075s ease-in;
+		outline: 1px solid rgba(255, 255, 255, 0);
+	}
+
+	body:not(#blog-post) nav .desktop-nav a {
+		text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
 	}
 
 	a img,
@@ -494,17 +581,23 @@ const trans = isFrench ? fr : en
 		nav .container {
 			padding: 3em 2em;
 		}
-	}
 
-	@media only screen and (max-width: 700px) {
 		button[open-button] {
 			display: flex;
 		}
 
 		nav .container {
-			padding: 35px;
+			padding: 0;
+			padding-inline: 1.5rem;
+			padding: 1.5rem 1rem;
 			display: flex;
 			justify-content: flex-end;
+		}
+
+		nav .nav-center {
+			text-align: unset;
+			font-size: 24px;
+			flex: 1;
 		}
 
 		nav .desktop-nav {

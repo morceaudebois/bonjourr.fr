@@ -1,0 +1,3 @@
+#identity-box.extensionPage:has(label[value*="Bonjourr"]) {
+    display: none !important;
+}

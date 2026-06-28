@@ -1,0 +1,33 @@
+---
+title: 🔎 Barre de recherche
+description: Les réglages de la barre de recherche permettent de choisir et personnaliser les moteurs de recherche, d’utiliser les suggestions intégrées et de focaliser rapidement le champ de recherche via un raccourci clavier.
+---
+
+import { Aside } from "@astrojs/starlight/components"
+import LazyVideo from "@components/LazyVideo.astro"
+
+## Suggestions
+
+Les suggestions sont fournies par notre propre API. Vous pouvez consulter son fonctionnement et son code source [ici](https://github.com/victrme/search-suggestions).
+
+## Moteur de recherche personnalisé
+
+Bonjourr propose plusieurs moteurs de recherche par défaut, et il est également possible d’en ajouter d’autres.
+
+Pour cela, sélectionnez **Personnalisé** dans l’option moteur de recherche. Une fois le champ **URL de requête** affiché, collez l’URL du moteur et remplacez la requête de recherche par `%s`.
+
+Par exemple, une recherche “coffee” sur YouTube donne une URL de ce type :
+`https://www.youtube.com/results?search_query=coffee`
+
+Il suffit alors de remplacer `coffee` par `%s`, ce qui donne :
+`https://www.youtube.com/results?search_query=%s`
+
+Collez ensuite cette URL dans le champ, et le moteur sera utilisable directement dans Bonjourr.
+
+<LazyVideo src="/documentation/overview/custom-search.webm" autoplay={false} />
+
+Cette méthode fonctionne avec la grande majorité des moteurs de recherche, ce qui rend Bonjourr compatible avec presque tous les services existants.
+
+<Aside type="tip">
+	Appuyer sur la touche <kbd>/</kbd> permet de focaliser directement la barre de recherche.
+</Aside>

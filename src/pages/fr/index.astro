@@ -5,6 +5,7 @@ import Frontpage from "@components/Frontpage/Frontpage.astro"
 import Landing from "@components/Frontpage/Landing.astro"
 import Further from "@components/Frontpage/Further.astro"
 import Showcase from "@components/Frontpage/Showcase.astro"
+import Blog from "@components/Frontpage/Blog.astro"
 ---
 
 <Layout
@@ -58,7 +59,7 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 			<li slot="more-no-ai">Pas d'IA générative</li>
 		</Showcase>
 
-		<h2 slot="open-title">🔒 Gratuit, open source et confidentiel</h2>
+		<h2 slot="open-title">🔒 Open source et respectueux de votre vie privée</h2>
 		<p slot="open-text">
 			Bonjourr est développé en France par deux développeurs indépendants qui aiment les
 			choses bien faites et pensent (réellement) que la confidentialité est importante. C'est
@@ -66,12 +67,22 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 			car nous ne collectons ni ne vendons aucune donnée.
 		</p>
 
+		<Blog slot="blog" readMoreLabel="Lire la suite →">
+			<span slot="blog-title">Derniers articles</span>
+			<span slot="blog-desc"
+				>Découvrez les dernières actus de Bonjourr, les mises à jour et les nouvelles
+				versions.</span
+			>
+
+			<span slot="blog-read-all">Voir tous les articles</span>
+		</Blog>
+
 		<Further slot="further">
 			<span slot="title">Aller plus loin</span>
 
 			<span slot="contact-title">Contact</span>
 			<span slot="contact-desc">
-				Venez nous dire bonjour sur Bluesky ou notre groupe Telegram. On pourra y parler de
+				Venez nous dire bonjour sur Bluesky ou notre serveur Discord. On pourra y parler de
 				vos idées ainsi que des dernières nouvelles de Bonjourr et de son développement.
 				Vous pouvez aussi nous contacter <a
 					style="text-decoration: underline"
@@ -79,7 +90,7 @@ import Showcase from "@components/Frontpage/Showcase.astro"
 				>.
 			</span>
 			<span slot="contact-button-bluesky">Bluesky</span>
-			<span slot="contact-button-telegram">Telegram</span>
+			<span slot="contact-button-discord">Discord</span>
 
 			<span slot="docs-title">Documentation</span>
 			<span slot="docs-desc">

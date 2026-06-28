@@ -1,0 +1,31 @@
+---
+title: ✍️ Notes
+description: Le widget Notes permet d’écrire du contenu simple en Markdown avec titres, listes et cases à cocher, ainsi que des raccourcis clavier pour gagner du temps.
+---
+
+import LazyVideo from "@components/LazyVideo.astro"
+
+Les Notes utilisent une syntaxe proche du [Markdown](https://www.markdownguide.org/cheat-sheet/) pour créer des titres, listes et cases à cocher. Pour transformer une ligne, il suffit d’ajouter les caractères suivants au début :
+
+- `#` titre principal
+- `##` titre moyen
+- `###` petit titre
+- `-` liste classique
+- `[ ]` case à cocher (attention à l’espace entre les crochets)
+- `[x]` case cochée
+
+<LazyVideo src="/documentation/overview/notes.webm" />
+
+Pour l’instant, certaines fonctionnalités Markdown comme l’italique ne sont pas prises en charge.
+
+### Raccourcis clavier
+
+Voici les raccourcis disponibles dans l’éditeur de Notes :
+
+| Touches                                                            | Action                    |
+| ------------------------------------------------------------------ | ------------------------- |
+| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> | Créer un grand titre      |
+| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd> | Créer un titre moyen      |
+| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd> | Créer un petit titre      |
+| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> | Créer une liste           |
+| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> | Créer une liste de tâches |

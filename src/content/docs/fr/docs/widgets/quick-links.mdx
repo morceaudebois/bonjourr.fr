@@ -1,0 +1,93 @@
+---
+title: 🔗 Liens rapides
+description: Les Liens rapides permettent d’enregistrer, organiser et gérer vos sites favoris directement sur la page d’accueil, avec dossiers, groupes, import depuis le navigateur et icônes personnalisées.
+---
+
+import { Aside } from "@astrojs/starlight/components"
+import LazyVideo from "@components/LazyVideo.astro"
+
+## Utilisation de base
+
+Pour ajouter des Liens rapides, faites un clic droit sur la page ou ouvrez la section correspondante dans les paramètres. Une fois créés, ils peuvent être modifiés via clic droit (ou appui long sur mobile), ce qui permet de changer le titre, l’URL, l’icône ou de les supprimer.
+
+<LazyVideo src="/documentation/overview/links-usage.webm" />
+
+Les liens peuvent être réorganisés par glisser-déposer, comme sur un smartphone. Déposer un lien sur un autre crée automatiquement un dossier contenant les deux. Ce dossier reste ensuite modifiable via clic droit.
+
+<Aside type="tip">
+	Un clic sur la molette de la souris sur un dossier permet d’ouvrir tous ses liens en une seule
+	fois.
+</Aside>
+
+## Import de liens
+
+Bonjourr permet d’importer les liens déjà présents dans votre navigateur. Pour y accéder, cliquez sur <bjrbtn>Importer mes favoris</bjrbtn>. Selon le navigateur, plusieurs groupes seront proposés, comme les sites les plus visités ou la barre de favoris.
+
+<img
+	src="/documentation/overview/bookmarks-modal.png"
+	alt="Fenêtre d’import des favoris de Bonjourr"
+	loading="lazy"
+/>
+
+Il est possible de sélectionner un ou plusieurs groupes, puis de les importer.
+
+### Synchronisation
+
+Certains groupes importables, comme les favoris, peuvent être synchronisés avec le navigateur en cliquant sur <bjrbtn>Synchroniser avec le navigateur</bjrbtn> avant l’import. Dans ce cas, ils ne sont plus modifiables dans Bonjourr, mais se mettent automatiquement à jour lorsque les favoris du navigateur changent.
+
+Certains groupes (comme les “plus visités” sur Chrome) ne sont disponibles qu’en mode synchronisé et se mettent à jour automatiquement selon le navigateur.
+
+### Applications Google
+
+Sur Chrome, Bonjourr propose également d’importer les applications Google afin de reproduire le comportement de la page de nouvel onglet par défaut.
+
+## Groupes de liens
+
+Les liens peuvent être organisés en groupes, une fonctionnalité optionnelle activable dans les paramètres. Pour ajouter un groupe, survolez la droite des titres de groupe jusqu’à voir apparaître le bouton `+`. Les groupes peuvent être renommés ou supprimés via clic droit. Supprimer un groupe supprime également tous les liens qu’il contient.
+
+Comme pour les dossiers, il est possible de :
+
+- Glisser-déposer des liens d’un groupe à un autre.
+- Réorganiser les groupes par glisser-déposer.
+- Renommer un groupe via clic droit.
+
+Un groupe peut être épinglé via l’option <bjrbtn>Épingler ce groupe</bjrbtn> dans le menu contextuel du titre. Il reste alors toujours visible.
+
+<img
+	style="max-width: 400px; margin-inline: auto; display: block"
+	src="/documentation/overview/link-groups.gif"
+	alt="Groupes de liens dans Bonjourr"
+	loading="lazy"
+/>
+
+## Icônes des liens
+
+Les icônes des liens peuvent être configurées de trois façons.
+
+### Favicon du site (par défaut)
+
+Par défaut, les icônes sont récupérées automatiquement via notre service maison [favicon-fetcher](https://github.com/victrme/favicon-fetcher). Si une icône est manquante, il est possible de signaler le problème via GitHub ou par email afin de l’ajouter.
+
+### Fichiers locaux
+
+Les icônes peuvent être importées directement depuis l’ordinateur. La plupart des formats sont pris en charge : JPG, PNG, WebP, GIF non animé et SVG.
+
+### URL distante
+
+Ce mode permet d’utiliser n’importe quelle image disponible en ligne comme icône. Les formats suivants sont acceptés :
+
+- URL externe : `https://en.wikipedia.org/favicon.ico`
+- URL locale : `http://127.0.0.1:4321/favicon.ico`
+- [Data URI](https://dopiaza.org/tools/datauri/index.php) de moins de 8 ko : `data:image/gif;base64,R0lGOD...AA7`
+
+Mais pas :
+
+- Chemin fichier : `file:///Users/Me/Pictures/flowers.png`
+
+### Politique de cache
+
+Les icônes provenant de [favicon-fetcher](https://github.com/victrme/favicon-fetcher) sont mises en cache dans le navigateur pendant un an. Tant que le cache n’est pas vidé, elles ne sont pas redemandées. En revanche, si le cache est supprimé ou limité, elles seront rechargées depuis le service.
+
+Les icônes définies via une URL distante suivent une politique de cache différente, non contrôlée, ce qui peut entraîner des rechargements fréquents.
+
+⚠️ _Note_ : pour des raisons de sécurité, les chemins locaux (`file://`), les pages internes du navigateur (`about:config`, `chrome://extensions`) ne sont pas autorisés. En revanche, les liens `localhost:` fonctionnent normalement.

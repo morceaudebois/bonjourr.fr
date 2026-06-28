@@ -1,9 +1,0 @@
-/* Changes font color. */
-/* "black" can be any CSS-safe color or hexadecimal code. */
-
-#linkblocks span,
-#interface,
-#credit,
-#credit a {
-	color: black;
-}

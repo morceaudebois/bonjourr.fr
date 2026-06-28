@@ -1,0 +1,220 @@
+---
+title: Extraits CSS
+description: Extraits CSS
+---
+
+import { Code } from "astro-expressive-code/components"
+
+import rolex from "@assets/documentation/snippets/rolex.txt?raw"
+import noGpu from "@assets/documentation/snippets/no-gpu.txt?raw"
+import potato from "@assets/documentation/snippets/potato.txt?raw"
+import noCredits from "@assets/documentation/snippets/no-credits.txt?raw"
+import clockWidth from "@assets/documentation/snippets/clock-width.txt?raw"
+import colors from "@assets/documentation/snippets/colors.txt?raw"
+import transparentBackground from "@assets/documentation/snippets/transparent-background.txt?raw"
+import portraitBackground from "@assets/documentation/snippets/portrait-background.txt?raw"
+import centerSearchbar from "@assets/documentation/snippets/center-searchbar.txt?raw"
+import searchbarLogo from "@assets/documentation/snippets/searchbar-logo.txt?raw"
+import MostVisitedLimit from "@assets/documentation/snippets/most-visited-limit.txt?raw"
+import weatherIcons from "@assets/documentation/snippets/weather-icons.txt?raw"
+import settingsIcon from "@assets/documentation/snippets/settings-icon.txt?raw"
+
+Bonjourr est personnalisable via son interface de réglages, mais il est possible d’aller encore plus loin. Copiez et collez ces extraits de style dans la section dédiée des paramètres pour débloquer de nouvelles possibilités.
+
+Vous souhaitez proposer votre propre extrait CSS ?
+[Contactez-nous !](/#contact)
+
+## Arrière-plans
+
+### Arrière-plan portrait
+
+<Code lang="css" code={portraitBackground} />
+
+### Arrière-plans transparents (Zen browser)
+
+<Code lang="css" code={transparentBackground} />
+
+## Couleurs et icônes
+
+### Ajouter ou modifier des couleurs
+
+<Code lang="css" code={colors} />
+
+### Icônes météo personnalisées
+
+<Code lang="css" code={weatherIcons} />
+
+<table>
+  <thead>
+    <tr>
+      <th>Icône</th>
+      <th>Condition</th>
+      <th>ID jour</th>
+      <th>ID nuit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-brokenclouds"></use>
+        </svg>
+      </td>
+      <td>Nuages fragmentés</td>
+      <td>weather-day-brokenclouds</td>
+      <td>weather-night-brokenclouds</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-clearsky"></use>
+        </svg>
+      </td>
+      <td>Ciel dégagé</td>
+      <td>weather-day-clearsky</td>
+      <td>weather-night-clearsky</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-fewclouds"></use>
+        </svg>
+      </td>
+      <td>Quelques nuages</td>
+      <td>weather-day-fewclouds</td>
+      <td>weather-night-fewclouds</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-lightrain"></use>
+        </svg>
+      </td>
+      <td>Pluie légère</td>
+      <td>weather-day-lightrain</td>
+      <td>weather-night-lightrain</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-mist"></use>
+        </svg>
+      </td>
+      <td>Brouillard</td>
+      <td>weather-day-mist</td>
+      <td>weather-night-mist</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-overcastclouds"></use>
+        </svg>
+      </td>
+      <td>Ciel couvert</td>
+      <td>weather-day-overcastclouds</td>
+      <td>weather-night-overcastclouds</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-rain"></use>
+        </svg>
+      </td>
+      <td>Pluie</td>
+      <td>weather-day-rain</td>
+      <td>weather-night-rain</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-snow"></use>
+        </svg>
+      </td>
+      <td>Neige</td>
+      <td>weather-day-snow</td>
+      <td>weather-night-snow</td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-sunnyrain"></use>
+        </svg>
+      </td>
+      <td>Averses ensoleillées</td>
+      <td>weather-day-sunnyrain</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <use href="/documentation/weather-sprites.svg#weather-day-thunderstorm"></use>
+        </svg>
+      </td>
+      <td>Orage</td>
+      <td>weather-day-thunderstorm</td>
+      <td>weather-night-thunderstorm</td>
+    </tr>
+
+  </tbody>
+</table>
+
+### Icône de paramètres personnalisée
+
+<Code lang="css" code={settingsIcon} />
+
+## Couleurs
+
+### Ajouter ou modifier des couleurs
+
+<Code lang="css" code={colors} />
+
+## Liens rapides
+
+### Limiter les sites les plus visités
+
+<Code lang="css" code={MostVisitedLimit} />
+
+## Horloge
+
+### J’aime les horloges plus épaisses
+
+<Code lang="css" code={clockWidth} />
+
+### Rolex 😎
+
+<Code lang="css" code={rolex} />
+
+## Barre de recherche
+
+### Centrer le texte indicatif de la barre de recherche
+
+<Code lang="css" code={centerSearchbar} />
+
+### Ajouter un logo à gauche de la barre de recherche
+
+<Code lang="css" code={searchbarLogo} />
+
+_Proposé par [Kim Visnes](https://bsky.app/profile/visn.es)_
+
+## Autre
+
+### Je ne me soucie pas de la visibilité des artistes
+
+<Code lang="css" code={noCredits} />
+
+### Pas de GPU, uniquement CPU 😠
+
+<Code lang="css" code={noGpu} />
+
+### Pour les ordinateurs peu puissants
+
+<Code lang="css" code={potato} />

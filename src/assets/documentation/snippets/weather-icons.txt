@@ -1,0 +1,12 @@
+/* overrides the default weather icons */ 
+
+/* replaces the day clear sky icon */
+.weather-icon#weather-day-clearsky {
+    /* replace the link with any other direct URL to an image */ 
+    background-image: url("");
+}
+
+/* you only need this once for all icons*/ 
+.weather-icon * {
+    display: none;
+}
