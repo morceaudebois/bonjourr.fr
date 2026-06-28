@@ -34,8 +34,8 @@ export const { getStaticPaths, GET } = await OGImageRoute({
 		)
 
 		return {
-			title: page.data.title.replace(/\p{Emoji}/gu, "").trim(),
-			description: page.data.description,
+			title: `Bonjourr · ${page.data.title.replace(/\p{Emoji}\s*/gu, "").trim()}`,
+			description: page.data.description?.replace(/\p{Emoji}\s*/gu, "").trim(),
 			padding: 120,
 			fonts: [
 				"https://api.fontsource.org/v1/fonts/inter/latin-400-normal.ttf",
