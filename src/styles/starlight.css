@@ -89,6 +89,11 @@ h1#_top {
 	margin-bottom: unset;
 }
 
+.sl-markdown-content .sl-steps > li > .sl-heading-wrapper {
+	height: unset;
+	min-height: unset;
+}
+
 .container-main kbd {
 	margin-top: unset;
 	margin-bottom: unset;
