@@ -1,31 +1,51 @@
-// stolen here: https://hideoo.dev/notes/starlight-og-images/#customize-head-route-data
-
 import { getCollection } from "astro:content"
 import { OGImageRoute } from "astro-og-canvas"
+import path from "node:path"
+import sharp from "sharp"
+import os from "node:os"
 
-// Get all entries from the `docs` content collection.
 const entries = await getCollection("docs")
-
-// Map the entry array to an object with the page ID as key and the
-// frontmatter data as value.
 const pages = Object.fromEntries(entries.map(({ data, id }) => [id, { data }]))
 
+async function darkenImage(imagePath: string): Promise<string> {
+	const input = path.join(process.cwd(), "public", imagePath)
+	const tmpFile = path.join(os.tmpdir(), path.basename(imagePath))
+
+	await sharp(input)
+		.composite([
+			{
+				input: Buffer.from([0, 0, 0, 110]), // RGBA: black at ~55% opacity
+				raw: { width: 1, height: 1, channels: 4 },
+				tile: true,
+				blend: "over",
+			},
+		])
+		.toFile(tmpFile)
+
+	return tmpFile
+}
+
 export const { getStaticPaths, GET } = await OGImageRoute({
-	// Pass down the documentation pages.
 	pages,
-	// Define the name of the parameter used in the endpoint path, here `slug`
-	// as the file is named `[...slug].ts`.
 	param: "slug",
-	// Define a function called for each page to customize the generated image.
-	getImageOptions: (_id, page: (typeof pages)[number]) => {
+	getImageOptions: async (_id, page: (typeof pages)[number]) => {
+		const bgImagePath = await darkenImage(
+			page.data.image ?? "/documentation/backgrounds/saad-chaudhry-sAJlWye9at8-unsplash.jpg",
+		)
+
 		return {
-			// Use the page title and description as the image title and description.
-			title: page.data.title,
+			title: page.data.title.replace(/\p{Emoji}/gu, "").trim(),
 			description: page.data.description,
-			// Customize various colors and add a border.
-			bgGradient: [[24, 24, 27]],
-			border: { color: [63, 63, 70], width: 20 },
 			padding: 120,
+			fonts: [
+				"https://api.fontsource.org/v1/fonts/inter/latin-400-normal.ttf",
+				"https://api.fontsource.org/v1/fonts/inter/latin-700-normal.ttf",
+			],
+			font: {
+				title: { families: ["Inter"], color: [255, 255, 255], weight: "Bold" },
+				description: { families: ["Inter"], color: [255, 255, 255] },
+			},
+			bgImage: { path: bgImagePath },
 		}
 	},
 })
