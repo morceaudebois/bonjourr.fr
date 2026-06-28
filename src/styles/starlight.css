@@ -9,6 +9,11 @@ header {
 	display: none;
 }
 
+a, button {
+	/* hides tap highlight indication as we our custom one already */
+	-webkit-tap-highlight-color: transparent;
+}
+
 .container-main .main {
 	padding-top: 3em;
 }
