@@ -22,6 +22,8 @@ export default defineConfig({
 			destination: "/fr/docs/reference/privacy-policy/",
 		},
 	},
+	// re-enables HTML whitespaces after Astro 7 update https://github.com/withastro/astro/commit/57ead0d5938e5988e3f896f3d6f8ef4516c4923f
+	compressHTML: false,
 	integrations: [
 		icon(),
 		sitemap({
