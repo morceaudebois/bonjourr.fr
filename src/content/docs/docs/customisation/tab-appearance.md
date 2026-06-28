@@ -1,7 +1,6 @@
 ---
 title: Tab appearance
-# description:
-# thumbnail:
+description: Tab Appearance lets you customize Bonjourr’s browser tab title and favicon using text and emojis, with browser-specific limitations.
 ---
 
 You can customize the text and icon (called favicon) your browser uses for Bonjourr. Text is limited to 80 characters, and icons can only be emojis.

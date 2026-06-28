@@ -1,7 +1,6 @@
 ---
 title: ⌚️ Time and date
-# description:
-# thumbnail:
+description: Time and Date settings let you customise the analog clock appearance and enable world clocks to display multiple time zones.
 ---
 
 The analog clock feature has many options you can play around with and get to really cool styles.
@@ -21,4 +20,4 @@ Some things to know:
   loading="lazy"
 />
 
-<bjr>World clocks</bjr> allows you to add multiple clocks with different timezones. Removing the name of a world clock will remove the clock entirely.
+**World clocks** allows you to add multiple clocks with different time zones. Removing the name of a world clock will remove the clock entirely.
