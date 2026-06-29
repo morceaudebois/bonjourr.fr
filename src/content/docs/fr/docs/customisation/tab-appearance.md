@@ -1,6 +1,7 @@
 ---
 title: Apparence de l’onglet
 description: L’apparence de l’onglet permet de personnaliser le titre et le favicon de Bonjourr dans le navigateur, à l’aide de texte et d’emojis, avec certaines limites selon les navigateurs.
+image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
 Il est possible de personnaliser le texte et l’icône (favicon) affichés par le navigateur pour Bonjourr. Le texte est limité à 80 caractères, et les icônes peuvent uniquement être des emojis.

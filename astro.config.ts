@@ -21,7 +21,18 @@ export default defineConfig({
 			status: 301,
 			destination: "/fr/docs/reference/privacy-policy/",
 		},
+		"/docs/styles": {
+			status: 301,
+			destination: "/docs/customisation/styles/",
+		},
+		"/fr/docs/styles": {
+			status: 301,
+			destination: "/fr/docs/customisation/styles/",
+		},
+		// there's a bunch more in Cloudflare rules
 	},
+	// re-enables HTML whitespaces after Astro 7 update https://github.com/withastro/astro/commit/57ead0d5938e5988e3f896f3d6f8ef4516c4923f
+	compressHTML: false,
 	integrations: [
 		icon(),
 		sitemap({
@@ -41,6 +52,7 @@ export default defineConfig({
 			editLink: {
 				baseUrl: "https://github.com/morceaudebois/bonjourr.fr/tree/starlight-doc/",
 			},
+			routeMiddleware: "./src/routeData.ts",
 			plugins: [lucode()],
 			customCss: ["./src/styles/starlight.css"],
 			components: {

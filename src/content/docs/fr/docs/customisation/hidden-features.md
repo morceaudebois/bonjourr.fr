@@ -1,6 +1,7 @@
 ---
 title: Fonctionnalités cachées
 description: Bonjourr cache plus de choses qu’il n’y paraît 👀
+image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
 ## Infos sur les arrière-plans

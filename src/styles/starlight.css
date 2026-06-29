@@ -68,6 +68,7 @@ html .container-group-link {
 .container-main .main video {
 	/* doesn't work on videos in Firefox over 1024px screen width for some reason???? */
 	border-radius: var(--radius);
+	width: 100%;
 }
 
 h1#_top {
@@ -92,6 +93,11 @@ h1#_top {
 
 .sl-steps li :last-child {
 	margin-bottom: unset;
+}
+
+.sl-markdown-content .sl-steps > li > .sl-heading-wrapper {
+	height: unset;
+	min-height: unset;
 }
 
 .container-main kbd {
