@@ -168,20 +168,29 @@ h1#_top {
 		display: none;
 	}
 
-	site-search button {
-		backdrop-filter: blur(2em);
-		background-color: #0002;
-		border: 1px solid #fff1;
-		border-radius: 1em;
-		color: white;
-	}
+.astro-orxnmiqx, .store-grid .sl-link-card,
+#browser_links:where(.astro-jo6i4kqk) ul:where(.astro-jo6i4kqk), .socials,
+.entry-link, .entry-link-inner {
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
 
-	html[data-theme="light"] site-search button {
-		background-color: #fff2;
-	}
+site-search button {
+	backdrop-filter: blur(2em);
+	background-color: #0002;
+	border: 1px solid #fff1;
+	border-radius: 1em;
+	color: white;
+}
 
-	site-search kbd.sl-hidden {
-		background-color: #fff2;
-		border: 1px solid #fff1;
-	}
+html[data-theme="light"] site-search button {
+	background-color: #fff2;
+}
+
+site-search kbd.sl-hidden {
+	background-color: #fff2;
+	border: 1px solid #fff1;
+}
 }
