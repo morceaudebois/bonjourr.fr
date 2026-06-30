@@ -9,7 +9,8 @@ header {
 	display: none;
 }
 
-a, button {
+a,
+button {
 	/* hides tap highlight indication as we our custom one already */
 	-webkit-tap-highlight-color: transparent;
 }
@@ -157,6 +158,17 @@ h1#_top {
 	color: var(--sl-color-gray-2);
 }
 
+.store-grid .sl-link-card,
+#browser_links a,
+.socials,
+.entry-link,
+.entry-link-inner {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 @media (max-width: 50rem) {
 	site-search button {
 		display: none !important;
@@ -168,29 +180,20 @@ h1#_top {
 		display: none;
 	}
 
-.astro-orxnmiqx, .store-grid .sl-link-card,
-#browser_links:where(.astro-jo6i4kqk) ul:where(.astro-jo6i4kqk), .socials,
-.entry-link, .entry-link-inner {
-	-webkit-user-select: none;
-  	-moz-user-select: none;
-  	-ms-user-select: none;
-  	user-select: none;
-}
+	site-search button {
+		backdrop-filter: blur(2em);
+		background-color: #0002;
+		border: 1px solid #fff1;
+		border-radius: 1em;
+		color: white;
+	}
 
-site-search button {
-	backdrop-filter: blur(2em);
-	background-color: #0002;
-	border: 1px solid #fff1;
-	border-radius: 1em;
-	color: white;
-}
+	html[data-theme="light"] site-search button {
+		background-color: #fff2;
+	}
 
-html[data-theme="light"] site-search button {
-	background-color: #fff2;
-}
-
-site-search kbd.sl-hidden {
-	background-color: #fff2;
-	border: 1px solid #fff1;
-}
+	site-search kbd.sl-hidden {
+		background-color: #fff2;
+		border: 1px solid #fff1;
+	}
 }
