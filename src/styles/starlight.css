@@ -175,6 +175,10 @@ h1#_top {
 	}
 }
 
+body .mobile-preferences {
+	display: none;
+}
+
 @media (min-width: 50rem) {
 	html #custom-open-search {
 		display: none;
