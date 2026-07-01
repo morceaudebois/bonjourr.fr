@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import { getLangFromUrl } from "../i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const href = (lang === "en" ? "" : `/${lang}`) + Astro.props.href
