@@ -11,9 +11,10 @@ Custom implementation of Starlight and Lucode. Automatic thumbnails through astr
 
 ## How to add a new language
 
-Things to edit:
+Find your [language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes).
 
-- `astro.config.ts` `(`locales`and`sidebar`)
-- `LanguageSelect.astro`
-- For site, duplicate `/src/pages/fr/` into its own folder and change its name to the desired lang code
-- For documentation, duplicate `/src/content/docs/fr/` into its own folder, and change its name to the desired lang code
+Files to edit:
+- `astro.config.ts` `(`locales` and `sidebar`)
+- `/src/i18n/ui.ts` for (mostly) UI strings
+- For site pages, do like `/src/pages/fr` or `/src/pages/ru` with your matching
+- For documentation pages, do like `/src/content/docs/fr/`
