@@ -14,7 +14,7 @@ Custom implementation of Starlight and Lucode. Automatic thumbnails through astr
 Find your [language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes).
 
 Files to edit:
-- `astro.config.ts` `(`locales` and `sidebar`)
+- `astro.config.ts` (`locales` and `sidebar`)
 - `/src/i18n/ui.ts` for (mostly) UI strings
 - For site pages, do like `/src/pages/fr` or `/src/pages/ru` with your matching
 - For documentation pages, do like `/src/content/docs/fr/`
