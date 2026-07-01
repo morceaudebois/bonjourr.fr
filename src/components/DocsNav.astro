@@ -1,6 +1,10 @@
 ---
 import Navigation from "./Navigation.astro"
 import Search from "@astrojs/starlight/components/Search.astro"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 const { entry } = Astro.locals.starlightRoute
 const bg = entry.data.image ?? "/documentation/backgrounds/saad-chaudhry-sAJlWye9at8-unsplash.jpg"
@@ -9,7 +13,7 @@ const bg = entry.data.image ?? "/documentation/backgrounds/saad-chaudhry-sAJlWye
 <Navigation />
 
 <div style={`background-image: url('${bg}')`}>
-	<h1>Documentation</h1>
+	<h1>{t("Documentation")}</h1>
 	<Search />
 </div>
 
