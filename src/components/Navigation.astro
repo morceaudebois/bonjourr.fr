@@ -5,6 +5,7 @@ import Sidebar from "@astrojs/starlight/components/Sidebar.astro"
 const isFrench = Astro.url.pathname.startsWith("/fr")
 const path = Astro.url.pathname
 import LanguageSelect from '../components/LanguageSelect.astro';
+import { hostname } from "astro:schema"
 const en = {
 	Home: "Home",
 	Donate: "Donate",
@@ -19,7 +20,14 @@ const fr = {
 	Install: "Installer sur",
 	Socials: "Réseaux sociaux",
 }
-const trans = isFrench ? fr : en
+const ru = {
+	Home: "Главная",
+	Donate: "Пожертвовать",
+	Try: "Попробовать онлайн",
+	Install: "Установить",
+	Socials: "Соцсети",
+}
+const trans = isFrench ? fr : en || ru
 
 let isStarlightPage = false
 try {
