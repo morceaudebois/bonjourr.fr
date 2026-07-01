@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro"
-
+import Link from "@components/Link.astro"
 import Frontpage from "@components/Frontpage/Frontpage.astro"
 import Landing from "@components/Frontpage/Landing.astro"
 import Further from "@components/Frontpage/Further.astro"
@@ -112,12 +112,13 @@ import Blog from "@components/Frontpage/Blog.astro"
 			données, les dons sont le seul moyen de soutenir notre travail.<br /><br /> Grâce à votre
 			aide, nous pouvons consacrer plus de temps à Bonjourr et poursuivre notre rêve de travailler
 			à plein temps dessus. En remerciement, si vous faites un don maintenant, votre nom apparaîtra
-			dans Bonjourr le mois prochain ! (<a
+			dans Bonjourr le mois prochain ! (<Link
 				style="text-decoration: underline"
-				href="/docs/overview#supporters-notification">Plus d'info</a
+				href="/docs/settings-management/notifications/#%EF%B8%8F-notification-des-donateurs"
+				>Plus d'info</Link
 			>)
 		</p>
 
-		<span slot="donate-fiat">Dons sur Ko-Fi</span>
+		<span slot="donate-fiat">Faire un don</span>
 	</Frontpage>
 </Layout>

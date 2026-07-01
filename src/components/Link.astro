@@ -1,6 +1,8 @@
 ---
-const isFrench = Astro.url.pathname.startsWith("/fr")
-const href = (isFrench ? "/fr" : "") + Astro.props.href
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const href = (lang === "en" ? "" : `/${lang}`) + Astro.props.href
 ---
 
 <a href={href} {...Astro.props}><slot /></a>
