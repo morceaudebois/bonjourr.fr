@@ -3,8 +3,10 @@ import Footer from "@components/Footer.astro"
 import Navigation from "@components/Navigation.astro"
 import Notice from "@components/Notice.astro"
 
-const { title, ogtitle, desc, lang, id, canonical, ogImage, type, publishedTime, author } =
-	Astro.props
+import { getLangFromUrl } from "../i18n/utils"
+const lang = getLangFromUrl(Astro.url)
+
+const { title, ogtitle, desc, id, canonical, ogImage, type, publishedTime, author } = Astro.props
 const siteUrl = Astro.site ?? "https://bonjourr.fr"
 const pageUrl = canonical ?? siteUrl
 const pageImage = ogImage ?? "https://bonjourr.fr/twitter.jpg"

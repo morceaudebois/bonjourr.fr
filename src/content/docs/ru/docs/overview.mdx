@@ -1,0 +1,39 @@
+---
+title: Overview
+description: Redirecting...
+pagefind: false
+---
+
+{/* redirecting the old overview page from the previous doc. It had all the widgets on one page with IDs going to each section. New doc has one page per section (server-side redirection with IDs ain't possible). */}
+
+<script is:inline>
+	{`
+  const redirects = {
+    "#newtab-title": "/docs/customisation/tab-appearance/",
+    "#hide-settings": "/docs/quick-guide/#my-settings-icon-is-gone-what-do-i-do",
+    "#collection": "/docs/customisation/backgrounds/#unsplash-collections",
+    "#quick-links": "/docs/widgets/quick-links/",
+    "#detailed-weather": "/docs/widgets/weather/#detailed-weather",
+    "#notes": "/docs/widgets/notes/",
+    "#searchbar": "/docs/widgets/search-bar/",
+    "#quotes": "/docs/widgets/quotes/",
+    "#pomodoro": "/docs/widgets/pomodoro/",
+    "#page-layouts": "/docs/customisation/layout-and-fonts/#page-layouts",
+    "#supporters-notification": "/docs/settings-management/notifications/#%EF%B8%8F-supporters-notification",
+    "#settings-management": "/docs/settings-management/import-and-export/"
+  };
+
+  const target = redirects[window.location.hash];
+
+  if (target) {
+    window.location.replace(target);
+  } else {
+    window.location.replace("/docs/quick-guide/");
+  }
+`}
+</script>
+
+<noscript>
+	This page has moved.
+	<a href="/docs/quick-guide/">Go to documentation</a>
+</noscript>

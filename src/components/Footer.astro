@@ -1,59 +1,10 @@
 ---
 import Link from "./Link.astro"
 import { Icon } from "astro-icon/components"
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
 
-const isFrench = Astro.url.pathname.startsWith("/fr")
-
-const en = {
-	trusted: "Trusted by 300k+ users worldwide",
-	crafted: "Crafted in France with ❤️",
-	"Privacy policy": "Privacy policy",
-	"Source code": "Source code",
-	"Contact us": "Contact us",
-	FAQ: "FAQ",
-	by: "by",
-	"Email support": "Email support",
-	"GitHub issues": "GitHub issues",
-	Documentation: "Documentation",
-	"Beautiful customizable backgrounds": "Beautiful customizable backgrounds",
-	"Quick access to your favorite sites": "Quick access to your favorite sites",
-	"Notes with markdown": "Notes with markdown",
-	"Search bar": "Search bar",
-	"Pomodoro timer": "Pomodoro timer",
-	"Weather & quotes": "Weather & quotes",
-	Features: "Features",
-	Resources: "Resources",
-	Community: "Community",
-	desc: "Bonjourr is a minimalist and open source browser startpage inspired by iOS. Private, lightweight and customizable, it is designed for a calmer browsing experience.",
-	"Install on:": "Install on:",
-}
-
-const fr = {
-	trusted: "Adopté par plus de 300 000 utilisateurs dans le monde",
-	crafted: "Fabriqué en France avec ❤️",
-	"Privacy policy": "Politique de confidentialité",
-	"Source code": "Code source",
-	"Contact us": "Nous contacter",
-	FAQ: "FAQ",
-	by: "par",
-	"Email support": "Support par email",
-	"GitHub issues": "Tickets GitHub",
-	Documentation: "Documentation",
-
-	"Beautiful customizable backgrounds": "Arrière-plans personnalisables",
-	"Quick access to your favorite sites": "Accès rapide à vos sites favoris",
-	"Notes with markdown": "Notes avec Markdown",
-	"Search bar": "Barre de recherche",
-	"Pomodoro timer": "Minuteur pomodoro",
-	"Weather & quotes": "Météo quotidienne",
-	Features: "Fonctionnalités",
-	Resources: "Ressources",
-	Community: "Communauté",
-	desc: "Bonjourr est une page d’accueil de navigateur minimaliste et open source inspirée d’iOS. Privée, légère et personnalisable, elle offre une expérience de navigation plus calme et plus agréable.",
-	"Install on:": "Installer sur :",
-}
-
-const trans = isFrench ? fr : en
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 const currentYear = new Date().getFullYear()
 ---
@@ -75,11 +26,11 @@ const currentYear = new Date().getFullYear()
 			>
 
 			<p>
-				{trans["desc"]}
+				{t("desc")}
 			</p>
 
 			<div id="browser_links">
-				<p>{trans["Install on:"]}</p>
+				<p>{t("Install on:")}</p>
 
 				<ul>
 					<li>
@@ -116,92 +67,90 @@ const currentYear = new Date().getFullYear()
 
 			<p>
 				© 2019 - {currentYear} ·
-				<a href="https://github.com/victrme/Bonjourr">
-					<span>{trans["Source code"]}</span></a
-				>
+				<a href="https://github.com/victrme/Bonjourr"> <span>{t("Source code")}</span></a>
 			</p>
 		</div>
 
 		<div>
-			<h3>{trans["Features"]}</h3>
+			<h3>{t("Features")}</h3>
 			<ul>
 				<li>
 					<Link href="/docs/customisation/backgrounds/">
 						<Icon name="heroicons:photo" />
-						<span>{trans["Beautiful customizable backgrounds"]}</span>
+						<span>{t("Beautiful customizable backgrounds")}</span>
 					</Link>
 				</li>
 				<li>
 					<Link href="/docs/widgets/quick-links/">
 						<Icon name="heroicons:link" />
-						<span>{trans["Quick access to your favorite sites"]}</span>
+						<span>{t("Quick access to your favorite sites")}</span>
 					</Link>
 				</li>
 				<li>
 					<Link href="/docs/widgets/notes/">
 						<Icon name="heroicons:pencil" />
-						<span>{trans["Notes with markdown"]}</span>
+						<span>{t("Notes with markdown")}</span>
 					</Link>
 				</li>
 				<li>
 					<Link href="/docs/widgets/search-bar/">
 						<Icon name="heroicons:magnifying-glass" />
-						<span>{trans["Search bar"]}</span>
+						<span>{t("Search bar")}</span>
 					</Link>
 				</li>
 				<li>
 					<Link href="/docs/widgets/pomodoro">
 						<Icon name="heroicons:clock" />
-						<span>{trans["Pomodoro timer"]}</span>
+						<span>{t("Pomodoro timer")}</span>
 					</Link>
 				</li>
 				<li>
 					<Link href="/docs/widgets/weather">
 						<Icon name="heroicons:sun" />
-						<span>{trans["Weather & quotes"]}</span>
+						<span>{t("Weather & quotes")}</span>
 					</Link>
 				</li>
 			</ul>
 		</div>
 
 		<div>
-			<h3>{trans["Resources"]}</h3>
+			<h3>{t("Resources")}</h3>
 			<ul>
 				<li>
 					<Link href="/docs">
 						<Icon name="heroicons:book-open" />
-						<span>{trans["Documentation"]}</span>
+						<span>{t("Documentation")}</span>
 					</Link>
 				</li>
 				<li>
 					<a href="mailto:bonjourr.app@protonmail.com">
 						<Icon name="heroicons:envelope" />
-						<span>{trans["Email support"]}</span>
+						<span>{t("Email support")}</span>
 					</a>
 				</li>
 				<li>
 					<a href="https://github.com/victrme/Bonjourr/issues">
 						<Icon name="heroicons:bug-ant" />
-						<span>{trans["GitHub issues"]}</span>
+						<span>{t("GitHub issues")}</span>
 					</a>
 				</li>
 				<li>
 					<Link href="/docs/reference/faq/">
 						<Icon name="heroicons:question-mark-circle" />
-						<span>{trans["FAQ"]}</span>
+						<span>{t("FAQ")}</span>
 					</Link>
 				</li>
 				<li>
 					<Link href="/docs/reference/privacy-policy/">
 						<Icon name="heroicons:shield-check" />
-						<span>{trans["Privacy policy"]}</span>
+						<span>{t("Privacy policy")}</span>
 					</Link>
 				</li>
 			</ul>
 		</div>
 
 		<div>
-			<h3>{trans["Community"]}</h3>
+			<h3>{t("Community")}</h3>
 			<ul>
 				<li>
 					<a href="https://ko-fi.com/bonjourr" rel="me">
@@ -240,11 +189,11 @@ const currentYear = new Date().getFullYear()
 	<div class="bottom">
 		<hr />
 		<div id="signature">
-			<p id="trusted">~ {trans["trusted"]} ~</p>
+			<p id="trusted">~ {t("trusted")} ~</p>
 
-			<p>{trans["crafted"]}</p>
+			<p>{t("crafted")}</p>
 			<p>
-				<span>{trans.by}</span>
+				<span>{t("by")}</span>
 
 				<span id="signature_span">
 					<a href="https://victr.me" title="Victor's portfolio"

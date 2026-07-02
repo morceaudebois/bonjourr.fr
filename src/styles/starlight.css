@@ -10,8 +10,9 @@ header {
 }
 
 a,
-button {
-	/* hides tap highlight indication as we our custom one already */
+button,
+summary {
+	/* hides tap highlight indication as we have our custom one already */
 	-webkit-tap-highlight-color: transparent;
 }
 

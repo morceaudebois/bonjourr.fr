@@ -11,9 +11,16 @@ Custom implementation of Starlight and Lucode. Automatic thumbnails through astr
 
 ## How to add a new language
 
-Things to edit:
+__Step by step:__
+1. Find your [language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes).
+2. Add your language to `astro.config.ts` (`locales` and `sidebar`).
+3. Translate UI strings in `/src/i18n/ui.ts`.
+4. For site pages, `/src/pages/fr` and `/src/pages/ru` are good examples.
+5. For documentation pages, `/src/content/docs/fr/` is a good example.
 
-- `astro.config.ts` `(`locales`and`sidebar`)
-- `LanguageSelect.astro`
-- For site, duplicate `/src/pages/fr/` into its own folder and change its name to the desired lang code
-- For documentation, duplicate `/src/content/docs/fr/` into its own folder, and change its name to the desired lang code
+The Widgets and Customisation categories of the documentation are likely to change a lot in the coming weeks/months, so don't bother translating them for now. The rest should be pretty stable.
+
+__⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `translations.json` file](https://github.com/victrme/Bonjourr/tree/master/_locales) from your language as a reference. This way, your translation will use the same wording for settings and buttons as Bonjourr does, making it way more accurate.__
+
+
+
