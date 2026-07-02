@@ -1,0 +1,72 @@
+---
+title: Synchroniser ses paramètres
+description: Bonjourr propose plusieurs méthodes pour synchroniser les paramètres entre appareils et navigateurs.
+image: /documentation/backgrounds/michal-mikulec-6gezJoRAM-E-unsplash.jpg
+---
+
+import { Aside, Steps } from "@astrojs/starlight/components"
+
+Synchroniser ses paramètres permet de répliquer automatiquement les changements effectués dans Bonjourr d’une instance à une autre.
+
+<Aside type="caution">
+	Lorsqu’elle est correctement configurée, la synchronisation couvre l’ensemble des paramètres de Bonjourr, à une exception près : les fichiers locaux utilisés comme arrière-plan.
+</Aside>
+
+## Synchronisation au sein d’un même navigateur
+
+Par défaut, si Bonjourr est installé en tant qu’extension, l’option de synchronisation correspond au navigateur utilisé : **[Chrome Sync](https://support.google.com/chrome/answer/185277)**, **[Firefox Sync](https://www.firefox.com/features/sync/)** ou **[Edge Sync](https://support.microsoft.com/edge/sign-in-to-sync-microsoft-edge-across-devices)**.
+
+Cela fonctionne si :
+
+- Bonjourr est installé sur plusieurs ordinateurs dans le même navigateur (par exemple Firefox sur un ordinateur portable et Firefox sur un ordinateur fixe),
+- vous êtes connecté au même compte de navigateur sur ces appareils,
+
+Dans ce cas, les instances de Bonjourr se synchronisent automatiquement.
+
+## Synchronisation entre navigateurs
+
+Deux méthodes permettent de synchroniser Bonjourr entre différents navigateurs.
+
+### GitHub Gist
+
+Bonjourr peut utiliser GitHub Gist pour partager ses paramètres entre plusieurs navigateurs (par exemple Chrome et Firefox).
+
+<img
+	src="/documentation/overview/github-sync.png"
+	alt="Exemple de synchronisation via GitHub Gist"
+	loading="lazy"
+	style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
+/>
+
+Étapes de configuration :
+
+<Steps>
+
+1.  #### Sélectionner <kbd>GitHub Gist</kbd> dans le type de synchronisation
+
+2.  #### Créer un jeton d’accès GitHub
+
+    Se connecter à [GitHub](https://github.com/) puis créer un jeton d’authentification en suivant [ce guide sur docs.github.com](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token), ou en suivant la procédure ci-dessous :
+
+    <video controls loop muted playsinline>
+    	<source src="/documentation/overview/gist-sync.webm" type="video/mp4" />
+    	Votre navigateur ne supporte pas la lecture vidéo.
+    </video>
+
+3.  #### Coller le jeton dans Bonjourr
+
+    Revenir dans Bonjourr et coller le jeton dans le champ <kbd>Jeton d'authentification</kbd>. Le même jeton doit être utilisé sur chaque instance à synchroniser.
+
+4.  #### Synchroniser !
+            À partir de là, il est possible de récupérer les paramètres avec le bouton <kbd>Recevoir</kbd> ou de les envoyer avec le bouton <kbd>Envoyer</kbd>. La zone <kbd>État du serveur</kbd> indique la date de dernière synchronisation.
+</Steps>
+
+Bonjourr n’est pas affilié à GitHub, et aucune connexion à `api.github.com` n’est effectuée tant que cette option n’est pas activée et qu’un jeton valide n’a pas été fourni. Plus d’informations sur la [page de confidentialité](/docs/reference/privacy-policy/).
+
+### URL distante
+
+Cette option est la plus manuelle : elle nécessite une action pour chaque synchronisation.
+
+Elle fonctionne comme l’import d’un fichier de paramètres, mais via une URL distante. Cela permet d’éviter de transférer manuellement le fichier entre appareils.
+
+Il suffit d’héberger le fichier de configuration (par exemple sur [pastebin.com](https://pastebin.com/)), de coller l’URL directe dans Bonjourr, puis de cliquer sur <kbd>Recevoir</kbd>.
