@@ -25,5 +25,21 @@ The Widgets and Customisation categories of the documentation are likely to chan
 
 __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `translations.json` file](https://github.com/victrme/Bonjourr/tree/master/_locales) from your language as a reference. This way, your translation will use the same wording for settings and buttons as Bonjourr does, making it way more accurate.__
 
-
-
+## To do list
+- [ ] Improve navigation layout on mobile/narrow screens/other languages
+- [ ] Complete docs pages:
+    - [x] Quick links
+    - [x] Time and date
+    - [ ] Weather
+    - [ ] Notes
+    - [ ] Search bar
+    - [ ] Quotes
+    - [ ] Pomodoro
+    - [ ] Backgrounds
+    - [ ] Layout
+    - [ ] Tab appearance
+    - [ ] Profiles
+    - [ ] CSS snippets
+- [ ] Android support 
+- [ ] Import update docs pages to French
+- [ ] Add custom heading IDs to French
