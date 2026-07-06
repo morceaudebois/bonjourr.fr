@@ -18,6 +18,9 @@ __Step by step:__
 4. For site pages, `/src/pages/fr` and `/src/pages/ru` are good examples.
 5. For documentation pages, `/src/content/docs/fr/` is a good example.
 
+Headings on translated documentation pages need to have their IDs set manually based on the English version, like so: 
+`## Utiliser Bonjourr sur Chrome {#using-bonjourr-on-chrome}`
+
 The Widgets and Customisation categories of the documentation are likely to change a lot in the coming weeks/months, so don't bother translating them for now. The rest should be pretty stable.
 
 __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `translations.json` file](https://github.com/victrme/Bonjourr/tree/master/_locales) from your language as a reference. This way, your translation will use the same wording for settings and buttons as Bonjourr does, making it way more accurate.__
