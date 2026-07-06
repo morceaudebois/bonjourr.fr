@@ -1,8 +1,3 @@
-# otherwise it messes up <Steps/>
-src/content/docs/docs/index.mdx
-src/content/docs/docs/settings-management/syncing.mdx
-src/content/docs/docs/reference/contribute.mdx
-src/content/docs/fr/docs/index.mdx
-src/content/docs/fr/docs/settings-management/syncing.mdx
-src/content/docs/fr/docs/reference/contribute.mdx
-readme.md
+# otherwise it messes up <Steps/> and other stuff
+**/*.mdx
+**/*.md
