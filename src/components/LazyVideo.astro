@@ -7,6 +7,7 @@ interface Props {
 	controls?: boolean
 	class?: string
 	autoplay?: boolean
+	playsinline?: boolean
 }
 
 const {
@@ -17,6 +18,7 @@ const {
 	controls = true,
 	class: className,
 	autoplay = true,
+	playsinline = true,
 } = Astro.props
 ---
 
@@ -27,6 +29,7 @@ const {
 	loop={loop}
 	muted={muted}
 	controls={controls}
+	playsinline={playsinline}
 	{...autoplay ? { autoplay: true } : {}}></video>
 
 <script>
