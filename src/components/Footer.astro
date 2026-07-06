@@ -66,8 +66,10 @@ const currentYear = new Date().getFullYear()
 			</div>
 
 			<p>
-				© 2019 - {currentYear} ·
-				<a href="https://github.com/victrme/Bonjourr"> <span>{t("Source code")}</span></a>
+				© 2019 - {currentYear} · <span>{t("Source codes")}:</span>
+				<a href="https://github.com/victrme/Bonjourr">{t("extension")}</a>, <a
+					href="https://github.com/victrme/Bonjourr">{t("website")}</a
+				>
 			</p>
 		</div>
 
@@ -298,6 +300,8 @@ const currentYear = new Date().getFullYear()
 		text-decoration: none;
 	}
 
+	.branding p a:hover,
+	.branding p a:focus-visible,
 	footer a:hover span,
 	footer a:focus-visible span {
 		text-decoration: underline;
