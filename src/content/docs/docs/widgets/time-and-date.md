@@ -8,7 +8,7 @@ image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 
 Right-click the clock and date widget to open its settings. From there, you can adjust time zones, date format, size, and other display options.
 
-## Regular (digital) clock
+## Digital clock
 
 The default digital clock includes standard configuration options such as 12/24-hour format, seconds display, and AM/PM indicators.
 

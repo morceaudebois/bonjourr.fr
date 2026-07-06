@@ -2,8 +2,10 @@ import { defineConfig, sharpImageService } from "astro/config"
 import sitemap from "@astrojs/sitemap"
 import icon from "astro-icon"
 import starlight from "@astrojs/starlight"
-
 import lucode from "lucode-starlight"
+import { unified } from "@astrojs/markdown-remark"
+import { remarkHeadingId } from "remark-custom-heading-id"
+
 export default defineConfig({
 	site: "https://bonjourr.fr",
 	devToolbar: {
@@ -33,6 +35,11 @@ export default defineConfig({
 	},
 	// re-enables HTML whitespaces after Astro 7 update https://github.com/withastro/astro/commit/57ead0d5938e5988e3f896f3d6f8ef4516c4923f
 	compressHTML: false,
+	markdown: {
+		processor: unified({
+			remarkPlugins: [remarkHeadingId],
+		}),
+	},
 	integrations: [
 		icon(),
 		sitemap({
