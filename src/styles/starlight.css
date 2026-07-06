@@ -40,9 +40,9 @@ html [data-slot="layout"] {
 }
 
 /* hides lucode's hard to remove footer from PageFrame.astro that seems to appear somehow sometimes */
-html [data-slot="layout"] footer {
+/* html [data-slot="layout"] footer {
 	display: none !important;
-}
+} */
 
 html .entry-link {
 	padding-left: 1em;
