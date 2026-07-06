@@ -33,7 +33,7 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
     - [x] Quick links
     - [x] Time and date
     - [x] Weather
-    - [ ] Notes
+    - [x] Notes
     - [ ] Search bar
     - [ ] Quotes
     - [ ] Pomodoro
