@@ -77,6 +77,13 @@ h1#_top {
 	font-size: 2.25rem;
 }
 
+/* "content not available in your language" orange message */
+/* using astro class cause there's nothing else available */
+p.astro-6n7vrl6i {
+	width: 100%;
+	border-radius: var(--radius);
+}
+
 .container-main h2 {
 	font-size: 1.75rem;
 }
