@@ -1,6 +1,6 @@
 ---
 title: Privacy policy
-image: /documentation/backgrounds/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
+image: /documentation/docs-headers/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
 ---
 
 <small><i>Last update: 21 nov. 2024, version 20.3.0</i></small>

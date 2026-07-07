@@ -1,12 +1,12 @@
 ---
 title: ⏱️ Pomodoro timer
 description: Pomodoro timer helps you apply the Pomodoro Technique by tracking focused work sessions and breaks directly in Bonjourr, with customizable durations and optional focus mode.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 The Pomodoro widget allows you to use the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) in Bonjourr, a time management method designed to help you work more efficiently.
 
-<img src="/documentation/overview/pomodoro.png" alt="The Pomodoro widget" loading="lazy" />
+![The Pomodoro widget](@assets/documentation/widgets/pomodoro.png)
 
 ## How to use the pomodoro?
 

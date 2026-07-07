@@ -5,8 +5,14 @@ If you're looking for Bonjourr's source code, head this way: https://github.com/
 
 The blog section is a basic JSON file that links to Ko-fi posts. In case of a new post, add it to `src/content/kofi-posts.json`. Thumbnails should ideally be hosted here (900px width).
 
-## Documentation
+## Images, videos and other assets
 
+- Most images are stored in `/src/assets/` so they can go through Astro's automatic optimisation pipeline.
+- Videos and other file types are stored in `/public`
+
+You can use the `@assets/` alias.
+
+## Documentation`
 Custom implementation of Starlight and Lucode. Automatic thumbnails through astro-og-canvas configured in `[...slug].ts`.
 
 ## How to add a new language
@@ -27,6 +33,8 @@ The Widgets and Customisation categories of the documentation are likely to chan
 
 __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `translations.json` file](https://github.com/victrme/Bonjourr/tree/master/_locales) from your language as a reference. This way, your translation will use the same wording for settings and buttons as Bonjourr does, making it way more accurate.__
 
+---
+
 ## To do list
 - [ ] Improve navigation layout on mobile/narrow screens/other languages
 - [ ] Complete docs pages:
@@ -44,4 +52,9 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
     - [ ] CSS snippets
 - [ ] Import updated docs pages to French
 - [ ] Add custom heading IDs to French
-- [ ] Android support 
+
+### Will be done but not a priority
+- [ ] Better Android support install section
+- [ ] Back to top button on docs pages
+- [ ] Slightly remake the homepage screenshots
+- [ ] Improve mobile hero section (needs screenshot, to bland rn)

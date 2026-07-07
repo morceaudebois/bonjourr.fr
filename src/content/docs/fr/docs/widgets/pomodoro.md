@@ -1,7 +1,7 @@
 ---
 title: ⏱️ Minuteur Pomodoro
 description: Le minuteur Pomodoro permet d’appliquer la technique Pomodoro directement dans Bonjourr en alternant sessions de travail et pauses, avec des durées personnalisables et un mode concentration optionnel.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 Le widget Pomodoro permet d’utiliser la [technique Pomodoro](https://fr.wikipedia.org/wiki/Technique_Pomodoro), une méthode de gestion du temps conçue pour améliorer la concentration et la productivité.

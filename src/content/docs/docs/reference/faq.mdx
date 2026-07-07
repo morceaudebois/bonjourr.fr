@@ -1,22 +1,18 @@
 ---
 title: Frequently asked questions
 description: Frequently Asked Questions covers common browser-specific behaviors, limitations, and workarounds when using Bonjourr, including Firefox UI restrictions and search bar focus behavior.
-image: /documentation/backgrounds/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
+image: /documentation/docs-headers/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
 ---
 
 import { Code } from "astro-expressive-code/components"
-import userchrome from "@assets/documentation/snippets/userchrome.txt?raw"
+import userchrome from "@assets/documentation/reference/userchrome.txt?raw"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
 ## 🦊 How do I get rid of "Extension (B...t Startpage)" on Firefox?
 
 When using **Bonjourr on Firefox**, you might notice that it adds a button that says **"Extension (B...t Startpage)"** at the start of your search bar of your new tabs.
 
-<img
-	src="/documentation/faq/firefox-extension-info.png"
-	alt="Firefox informs you about which extension is creating the page"
-	style="max-width: 600px; width: 100%; margin-inline: auto; margin-block: 2em; display: block;"
-	loading="lazy"
-/>
+![Firefox informs you about which extension is creating the page](@assets/documentation/reference/firefox-extension-info.png)
 
 This is a **security measure** taken by Mozilla to help you identify where the page is coming from. If you had installed an extension that had some malicious intentions, it could be very handy to know which extension generates the malicious page.
 
@@ -26,12 +22,7 @@ Although this label isn't necessary for Bonjourr, there's **unfortunately no eas
 
 If there's a will, there' a way! Although a slightly hacky one in this case. It involves the **`userChrome.css`** file, which is essentially a CSS stylesheet you can create that can style the **entire UI of Firefox**.
 
-<img
-	src="/documentation/faq/firefox-no-more-extension-box.png"
-	alt="Extension box is gone"
-	style="max-width: 600px; width: 100%; margin-inline: auto; margin-block: 2em; display: block;"
-	loading="lazy"
-/>
+![Extension box is gone](@assets/documentation/reference/firefox-no-more-extension-box.png)
 
 You can set it up in a few minutes following [this tutorial](https://www.userchrome.org/). Then, simply add this to the file and the extension box will disappear after a browser restart:
 

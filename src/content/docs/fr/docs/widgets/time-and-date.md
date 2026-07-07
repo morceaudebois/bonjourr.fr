@@ -1,7 +1,7 @@
 ---
 title: ⌚️ Heure et date
 description: Les réglages Heure et date permettent de personnaliser l’horloge analogique et d’afficher plusieurs fuseaux horaires avec les horloges mondiales.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 L’horloge analogique propose de nombreuses options permettant de créer des styles très variés.

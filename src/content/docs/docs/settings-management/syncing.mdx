@@ -1,10 +1,11 @@
 ---
 title: Sync your settings
 description: Bonjourr supports multiple ways to sync your settings through browsers.
-image: /documentation/backgrounds/michal-mikulec-6gezJoRAM-E-unsplash.jpg
+image: /documentation/docs-headers/michal-mikulec-6gezJoRAM-E-unsplash.jpg
 ---
 
 import { Aside, Steps } from "@astrojs/starlight/components"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
 Syncing your settings means that if you change something in Bonjourr on one instance of a browser, it'll be replicated automatically in another browser.
 
@@ -32,12 +33,9 @@ Bonjourr has two ways to share its settings between multiple browsers.
 
 Bonjourr also has a way to synchronise its data accross multiple browsers thanks to GitHub Gist (for example, if you use Chrome and Firefox at the same time).
 
-<img
-	src="/documentation/overview/github-sync.png"
-	alt="A configured example of GitHub Gist synchronization"
-	loading="lazy"
-	style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
-/>
+<SmallDocsImage>
+  ![A configured example of GitHub Gist synchronization](@assets/documentation/settings-management/github-sync.png)
+</SmallDocsImage>
 
 Here's a step by step guide on how to configure it:
 
@@ -50,7 +48,7 @@ Here's a step by step guide on how to configure it:
     Log in to [GitHub](https://github.com/) and create an authentification token by following [this guide on docs.github.com](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token), or by following the steps shown below:
 
     <video controls loop muted playsinline>
-    	<source src="/documentation/overview/gist-sync.webm" type="video/mp4" />
+    	<source src="/documentation/settings-management/gist-sync.mp4" type="video/mp4" />
     	Your browser does not support the video tag.
     </video>
 

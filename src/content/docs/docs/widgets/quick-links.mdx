@@ -1,17 +1,18 @@
 ---
 title: 🔗 Quick Links
 description: Organize and manage your favorite websites with folders, groups, import tools, and custom icons on your new tabs.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 import { Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
 ## Basic usage
 
 To add Quick Links, right-click on the page or open the Quick Links section in the settings. They are editable if you right-click on them (or long press on mobile), which allows you to change their titles, URLs, icons and delete them.
 
-<LazyVideo src="/documentation/overview/links-usage.mp4" />
+<LazyVideo src="/documentation/widgets/links-usage.mp4" />
 
 You can easily reorder your links through drag and drop, just like you would do on a phone. Additionally, dropping a link on another link will create a folder that contains them both. You can also edit that folder via right-click.
 
@@ -23,11 +24,7 @@ You can easily reorder your links through drag and drop, just like you would do 
 
 Bonjourr integrates a way to import the existing bookmarks from your browser. To access it, click the <kbd>Import</kbd> button in the Quick Links settings. Depending on your browser, you will be shown multiple groups of importable links such as your most visited websites or your bookmarks toolbars.
 
-<img
-	src="/documentation/overview/bookmarks-modal.png"
-	alt="Bonjourr's bookmarks modal"
-	loading="lazy"
-/>
+![Bonjourr's bookmarks modal](@assets/documentation/widgets/bookmarks-modal.png)
 
 You can select one or multiple groups, and then click <kbd>Import selection</kbd>.
 
@@ -45,12 +42,10 @@ If you use Chrome, Bonjourr will offer you to import Google Apps as a way to rep
 
 You can organize your links with link groups, an optional feature you can enable in settings. To add a group, hover to the right of the group titles until you see the <kbd>+</kbd> icon. You can rename and delete groups by right-clicking on them. Deleting a group will delete all the links it contains.
 
-<img
-	style="max-width: 400px; margin-inline: auto; display: block"
-	src="/documentation/overview/link-groups.gif"
-	alt="Bonjourr's link groups"
-	loading="lazy"
-/>
+
+<SmallDocsImage>
+![Bonjourr's link groups](/documentation/widgets/link-groups.gif)
+</SmallDocsImage>
 
 Just like with folders, you can:
 
@@ -64,7 +59,7 @@ You can pin groups by selecting <bjrbtn>Pin this group</bjrbtn> after opening th
 
 You can customise how large and round your links are using the "Icon corner radius" and "Style" options.
 
-<LazyVideo src="/documentation/overview/link-styles.mp4" />
+<LazyVideo src="/documentation/widgets/link-styles.mp4" />
 
 ## Link icons
 

@@ -1,10 +1,11 @@
 ---
 title: Manage your settings
 description: The basics of the settings management section.
-image: /documentation/backgrounds/michal-mikulec-6gezJoRAM-E-unsplash.jpg
+image: /documentation/docs-headers/michal-mikulec-6gezJoRAM-E-unsplash.jpg
 ---
 
 import { Aside } from "@astrojs/starlight/components"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
 ## How to export and import my settings?
 
@@ -12,12 +13,9 @@ Bonjourr allows you to export all your settings into a file. You can use this fe
 
 To do so, simply go to the bottom of your settings pannel, then click the <kbd>Export</kbd> button in the settings management. Your file will be downloaded. On your other instance of Bonjourr, click the <kbd>Import</kbd> button and select your previously exported file. Bonjourr will reload and all your settings will be applied.
 
-<img
-	src="/documentation/settings-management/settings-management-section.png"
-	alt="The settings management section in Bonjourr"
-	loading="lazy"
-	style="max-width: 400px; margin-inline: auto; margin-block: 2em;"
-/>
+<SmallDocsImage>
+  ![The settings management section in Bonjourr](@assets/documentation/settings-management/settings-management-section.png)
+</SmallDocsImage>
 
 <Aside type="caution">
 	The settings file includes everything you've ever modified in Bonjourr, except for the local
