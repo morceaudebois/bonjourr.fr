@@ -4,6 +4,7 @@ description: Write notes using simple Markdown syntax with headings, to-do lists
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
+import { LinkButton } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
 ## Using notes formatting
@@ -32,3 +33,16 @@ You can use these keyboard shortcuts while editing your Note.
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd> | Create small heading  |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> | Create bullet list    |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> | Create todo list      |
+
+---
+
+_Notes is powered by pocket editor, an open source WYSIWYG editor developed specifically for Bonjourr._
+
+<LinkButton
+	href="https://github.com/victrme/pocket-editor"
+	variant="secondary"
+	icon="github"
+	iconPlacement="start"
+>
+	View pocket-editor on GitHub
+</LinkButton>

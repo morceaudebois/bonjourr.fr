@@ -12,7 +12,7 @@ The blog section is a basic JSON file that links to Ko-fi posts. In case of a ne
 
 You can use the `@assets/` alias.
 
-## Documentation`
+## Documentation
 Custom implementation of Starlight and Lucode. Automatic thumbnails through astro-og-canvas configured in `[...slug].ts`.
 
 ## How to add a new language
@@ -54,8 +54,9 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
 - [ ] Import updated docs pages to French
 - [ ] Add custom heading IDs to French
 
-### Will be done but not a priority
+### Will be done but not a priority/not possible yet
 - [ ] Better Android support install section
 - [ ] Back to top button on docs pages
 - [ ] Slightly remake the homepage screenshots
-- [ ] Improve mobile hero section (needs screenshot, too bland rn)
+- [x] Improve mobile hero section (needs screenshot, too bland rn)
+- [ ] Switch GitHub/Ko-fi link buttons to LinkCards with icons [once Starlight supports it](https://github.com/withastro/starlight/discussions/970) 

@@ -57,6 +57,15 @@ import Illustration from "@assets/frontpage/illustration.png"
 			</h1>
 		</div>
 
+		<Image
+			src={Illustration}
+			densities={[2]}
+			loading="eager"
+			format="webp"
+			alt="Bonjourr screenshot"
+			id="illustration-mobile"
+		/>
+
 		<div class="container">
 			<a id="download-link" href="" class="button">
 				<div class="icon">
@@ -88,15 +97,15 @@ import Illustration from "@assets/frontpage/illustration.png"
 		</div>
 	</div>
 
-	<picture id="illustration">
-		<Image
-			src={Illustration}
-			densities={[2]}
-			loading="eager"
-			format="webp"
-			alt="Bonjourr screenshot"
-		/>
-	</picture>
+	<Image
+		src={Illustration}
+		densities={[2]}
+		loading="eager"
+		format="webp"
+		alt="Bonjourr screenshot"
+		id="illustration"
+		width="480"
+	/>
 </div>
 
 <style>
@@ -143,18 +152,16 @@ import Illustration from "@assets/frontpage/illustration.png"
 	}
 
 	#illustration {
-		background-size: cover;
-		color: transparent;
-		border-radius: 8px;
-		overflow: hidden;
-		width: 480px;
-		height: 295px;
+		border-radius: 10px;
 	}
 
-	#illustration img {
+	#illustration-mobile {
+		display: none;
 		width: 100%;
-		height: 100%;
-		image-rendering: optimizeQuality;
+		max-width: 444px;
+		height: unset;
+		border-radius: 10px;
+		margin-bottom: 2rem;
 	}
 
 	.title h1 {
@@ -208,6 +215,14 @@ import Illustration from "@assets/frontpage/illustration.png"
 		.title {
 			margin-bottom: 1em;
 		}
+
+		#illustration {
+			display: none;
+		}
+
+		#illustration-mobile {
+			display: block;
+		}
 	}
 
 	@media only screen and (max-width: 580px) {
@@ -217,16 +232,11 @@ import Illustration from "@assets/frontpage/illustration.png"
 
 		.title {
 			font-size: 1.4em;
-			margin-bottom: 3em;
 		}
 
 		.container {
 			align-items: center;
 			flex-direction: column;
-		}
-
-		#illustration {
-			display: none;
 		}
 	}
 </style>
