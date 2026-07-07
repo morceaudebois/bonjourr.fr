@@ -1,6 +1,6 @@
 ---
 title: ⏱️ Pomodoro timer
-description: Pomodoro timer helps you apply the Pomodoro Technique by tracking focused work sessions and breaks directly in Bonjourr, with customizable durations and optional focus mode.
+description: Use the Pomodoro Technique directly in Bonjourr with customisable work sessions, breaks, and focus mode.
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
@@ -20,3 +20,9 @@ The widget shall be used as per the original technique:
 6. After four pomodori are done, take a long break (typically 20 to 30 minutes) instead of a short break. Once the long break is finished, return to step 2.
 
 The Pomodoro widget keeps track of time even if you close Bonjourr (although won't ring if no Bonjourr tab is open). Use the **Focus mode** to avoid being tempted by your Quick Links or other widgets. You can edit the time of each mode in the widget's settings, when [**Show all settings**](/docs/quick-guide/#i-think-some-options-are-missing-what-do-i-do) is enabled.
+
+## Can I get usage statistics?
+
+Right-click the Pomodoro widget to get some statistics about your recent usage.
+
+![Pomodoro usage statistics on right-click](@assets/documentation/widgets/pomodoro-sessions.png)

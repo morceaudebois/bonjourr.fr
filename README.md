@@ -3,7 +3,7 @@ If you're looking for Bonjourr's source code, head this way: https://github.com/
 
 ## Blog
 
-The blog section is a basic JSON file that links to Ko-fi posts. In case of a new post, add it to `src/content/kofi-posts.json`. Thumbnails should ideally be hosted here (900px width).
+The blog section is a basic JSON file that links to Ko-fi posts. In case of a new post, add it to `src/content/kofi-posts.json`. Thumbnails should be hosted in `/public/blog/` (900px width).
 
 ## Images, videos and other assets
 
@@ -42,9 +42,10 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
     - [x] Time and date
     - [x] Weather
     - [x] Notes
-    - [ ] Search bar
-    - [ ] Quotes
-    - [ ] Pomodoro
+    - [x] Search bar
+    - [x] Quotes
+    - [x] Pomodoro
+    
     - [ ] Backgrounds
     - [ ] Layout
     - [ ] Tab appearance
@@ -57,4 +58,4 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
 - [ ] Better Android support install section
 - [ ] Back to top button on docs pages
 - [ ] Slightly remake the homepage screenshots
-- [ ] Improve mobile hero section (needs screenshot, to bland rn)
+- [ ] Improve mobile hero section (needs screenshot, too bland rn)

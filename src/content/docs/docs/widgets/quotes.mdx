@@ -1,13 +1,17 @@
 ---
 title: 🗣 Quotes
-description: Quotes lets you display inspirational or humorous quotes from multiple built-in sources, or import your own custom quotes via local input or remote CSV files.
+description: Display inspirational, humorous, or custom quotes from built-in sources or your own collections.
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
-import { Code } from "@astrojs/starlight/components"
+import { Code, Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-The quotes widget can fetch quotes from multiple sources:
+![Firefox informs you about which extension is creating the page](@assets/documentation/widgets/quotes.png)
+
+## Quote types
+
+The quotes widget can fetch quotes from multiple sources using the __Quotes type__ option:
 
 - By default, our **[open source quotes API](https://github.com/victrme/i18n-quotes)** available in multiple languages. These are general motivational or inspirational quotes that the community can manage through pull requests.
 - The **[InspiroBot](https://inspirobot.me/) API**, an old school AI that generates seemingly inspirational quotes, but with a humorous twist. It parodies traditional motivational quotes from the point of view of an AI. Although we are not affiliated with InspiroBot, we've always found this service fun and thought it'd be nice to have it in Bonjourr. It is important to note that it's at least 10 years old and <u>**has nothing to do with the recent generative AI trend**</u>.
@@ -16,6 +20,8 @@ The quotes widget can fetch quotes from multiple sources:
 - **Hitokoto**, Japanese inspirational quotes.
 - **Custom**, add your own quotes directly from Bonjourr's UI.
 - **URL**, add quotes from a remote CSV file.
+
+<Aside type="tip">Right-click on the quotes widget to skip to the next one.</Aside>
 
 ### Importing your own quotes
 
