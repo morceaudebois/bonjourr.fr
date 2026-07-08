@@ -156,7 +156,7 @@ try {
 				{isStarlightPage ? <Sidebar /> : ""}
 
 				<li>
-					<Link href="/blog" title={t("Blog")}>{t("Blog")}</Link>
+					<Link href="/#blog" title={t("Blog")}>{t("Blog")}</Link>
 				</li>
 				<li>
 					<Link href="/#further" title={t("Get in touch")}>{t("Contact")}</Link>
@@ -382,7 +382,6 @@ try {
 		max-width: 1200px;
 		margin: auto;
 		padding: 3em 1.5rem;
-		/* padding-block: 3em; */
 	}
 
 	nav ul {
@@ -428,7 +427,7 @@ try {
 	nav .nav-center {
 		font-size: 30px;
 		font-weight: 400;
-		flex: 0.2;
+		flex: 0.1;
 		text-align: center;
 	}
 
@@ -448,8 +447,8 @@ try {
 
 	nav a {
 		font-weight: 500;
-		padding: 8px 12px;
-		border-radius: 8px;
+		padding: 6px 10px;
+		border-radius: 10px;
 		transition:
 			background-color 0.075s ease-in,
 			backdrop-filter 0.075s ease-in,
@@ -530,9 +529,9 @@ try {
 		}
 	}
 
-	@media only screen and (max-width: 900px) {
+	@media only screen and (max-width: 1000px) {
 		nav .container {
-			padding: 3em 2em;
+			padding: 3em 0.5rem;
 		}
 
 		button[open-button] {

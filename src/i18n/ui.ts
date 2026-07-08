@@ -131,7 +131,7 @@ export const ui = {
 		Docs: "Документация",
 		Blog: "Блог",
 		"Get in touch": "Связаться с нами",
-		Contact: "Контакты",
+		Contact: "Связь",
 		"Support us on Ko-Fi": "Поддержите нас на Ko-Fi",
 		"Bonjourr's Discord server": "Сервер Bonjourr в Discord",
 		"Join us on Bluesky": "Мы в Bluesky",
