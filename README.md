@@ -43,5 +43,4 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
 - [ ] Better Android support install section
 - [ ] Back to top button on docs pages
 - [ ] Slightly remake the homepage screenshots
-- [x] Improve mobile hero section (needs screenshot, too bland rn)
 - [ ] Switch GitHub/Ko-fi link buttons to LinkCards with icons [once Starlight supports it](https://github.com/withastro/starlight/discussions/970) 
