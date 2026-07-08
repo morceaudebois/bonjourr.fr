@@ -5,6 +5,8 @@ image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
 import { Code } from "astro-expressive-code/components"
+import { Aside } from "@astrojs/starlight/components"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
 import rolex from "@assets/documentation/customisation/snippets/rolex.txt?raw"
 import noGpu from "@assets/documentation/customisation/snippets/no-gpu.txt?raw"
@@ -14,36 +16,40 @@ import clockWidth from "@assets/documentation/customisation/snippets/clock-width
 import colors from "@assets/documentation/customisation/snippets/colors.txt?raw"
 import transparentBackground from "@assets/documentation/customisation/snippets/transparent-background.txt?raw"
 import portraitBackground from "@assets/documentation/customisation/snippets/portrait-background.txt?raw"
-import centerSearchbar from "@assets/documentation/customisation/snippets/center-searchbar.txt?raw"
+import roundSearchbar from "@assets/documentation/customisation/snippets/round-searchbar.txt?raw"
 import searchbarLogo from "@assets/documentation/customisation/snippets/searchbar-logo.txt?raw"
 import MostVisitedLimit from "@assets/documentation/customisation/snippets/most-visited-limit.txt?raw"
 import weatherIcons from "@assets/documentation/customisation/snippets/weather-icons.txt?raw"
 import settingsIcon from "@assets/documentation/customisation/snippets/settings-icon.txt?raw"
 
-Bonjourr is customizable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
+Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
 
 Want your own style snippet here?
 [Contact us!](/#contact)
-
-## Backgrounds
-
-### Portrait background
-
-<Code lang="css" code={portraitBackground} />
-
-### Transparent backgrounds (Zen browser)
-
-<Code lang="css" code={transparentBackground} />
 
 ## Colors and icons
 
 ### Add or change some colors
 
-<Code lang="css" code={colors} />
+Using CSS variables, you can easily change the font and icon colors in Bonjourr.
+
+![Showcasing what the CSS variables can do with colors](@assets/documentation/customisation/snippets/colors.png)
+
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={colors} />
+</details>
 
 ### Custom weather icons
 
-<Code lang="css" code={weatherIcons} />
+<SmallDocsImage>
+  ![A custom settings icon in Bonjourr](@assets/documentation/customisation/snippets/weather-icons.png)
+</SmallDocsImage>
+
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={weatherIcons} />
+</details>
 
 <table>
   <thead>
@@ -169,13 +175,59 @@ Want your own style snippet here?
 
 ### Custom settings icon
 
-<Code lang="css" code={settingsIcon} />
+<SmallDocsImage>
+  ![A custom settings icon in Bonjourr](@assets/documentation/customisation/snippets/settings-icon.png)
+</SmallDocsImage>
 
-## Colors
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={settingsIcon} />
+</details>
 
-### Add or change some colors
+## Search bar
 
-<Code lang="css" code={colors} />
+### Making the search bar round
+
+![Round search bar in Bonjourr thanks to CSS](@assets/documentation/customisation/snippets/round-searchbar.png)
+
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={roundSearchbar} />
+</details>
+
+### Adding a logo to the left of the searchbar
+
+![Searchbar with a Google logo](@assets/documentation/customisation/snippets/searchbar-logo.png)
+
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={searchbarLogo} />
+</details>
+
+*Submitted by [Kim Visnes](https://bsky.app/profile/visn.es)*
+
+## Clock
+
+### I like my clocks thick
+
+_Makes the analog clock thicker._
+
+![Bonjourr with a thick clock](@assets/documentation/customisation/snippets/clock-width.png)
+
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={clockWidth} />
+</details>
+
+### Rolex 😎
+*Transforms the analog clock into a Rolex.*
+
+![A Rolex right in Bonjourr](@assets/documentation/customisation/snippets/rolex.png)
+
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={rolex} />
+</details>
 
 ## Quick links
 
@@ -183,29 +235,31 @@ Want your own style snippet here?
 
 <Code lang="css" code={MostVisitedLimit} />
 
-## Clock
+## Backgrounds
 
-### I like my clocks thick
+### Contain background (good for portrait images)
 
-<Code lang="css" code={clockWidth} />
+Sometimes if you want to use portrait images as your background, it can be nice to have them uncropped.
 
-### Rolex 😎
+![A contained portrait photo in Bonjourr with layout lightly edited](@assets/documentation/customisation/snippets/portrait-background.png)
 
-<Code lang="css" code={rolex} />
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={portraitBackground} />
+</details>
 
-## Search bar
+<Aside type="note">If you like this, you're gonna love our [upcoming frame mode](https://github.com/victrme/Bonjourr/issues/827)!</Aside>
 
-### Centering the searchbar placeholder
+### Transparent background (Zen browser)
 
-<Code lang="css" code={centerSearchbar} />
+![Bonjourr in Zen with a transparent background](@assets/documentation/customisation/snippets/transparent-background.png)
 
-### Adding a logo to the left of the searchbar
+<details>
+	<summary>See CSS snippet</summary>
+	<Code lang="css" code={transparentBackground} />
+</details>
 
-<Code lang="css" code={searchbarLogo} />
-
-*Submitted by [Kim Visnes](https://bsky.app/profile/visn.es)*
-
-## Other
+## Miscellaneous
 
 ### I don't care about artist exposure
 
@@ -216,5 +270,6 @@ Want your own style snippet here?
 <Code lang="css" code={noGpu} />
 
 ### For laggy computers
+_This can improve Bonjourr's performance on older hardware_
 
 <Code lang="css" code={potato} />

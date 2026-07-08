@@ -1,5 +1,4 @@
 /* Disables most settings transitions and animations. */
-
 #settings .as,
 #settings,
 .move-overlay {

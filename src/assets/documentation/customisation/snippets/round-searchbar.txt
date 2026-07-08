@@ -1,0 +1,4 @@
+/* round searchbar */
+#sb_container, #searchbar-wrapper {
+    border-radius: 100px;
+}

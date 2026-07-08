@@ -1,5 +1,0 @@
-/* centers the searchbar placeholder */
-
-#searchbar::placeholder {
-    text-align: center;
-}
