@@ -1,12 +1,13 @@
 ---
 title: CSS snippets
-description: CSS snippets
+description: Customise Bonjourr beyond the built-in settings with ready-to-use CSS snippets for colors, widgets, backgrounds, and more.
 image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
 import { Code } from "astro-expressive-code/components"
 import { Aside } from "@astrojs/starlight/components"
 import SmallDocsImage from "@components/SmallDocsImage.astro"
+import LazyVideo from "@components/LazyVideo.astro"
 
 import rolex from "@assets/documentation/customisation/snippets/rolex.txt?raw"
 import noGpu from "@assets/documentation/customisation/snippets/no-gpu.txt?raw"
@@ -22,10 +23,15 @@ import MostVisitedLimit from "@assets/documentation/customisation/snippets/most-
 import weatherIcons from "@assets/documentation/customisation/snippets/weather-icons.txt?raw"
 import settingsIcon from "@assets/documentation/customisation/snippets/settings-icon.txt?raw"
 
-Bonjourr is customisable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
+Bonjourr's built-in settings cover most customisation needs, but CSS snippets let you go even further. Simply copy and paste a snippet into the **Custom CSS** section to tweak or extend Bonjourr's appearance.
 
-Want your own style snippet here?
-[Contact us!](/#contact)
+<Aside type="tip" title="Get your own snippet here">
+  Have a useful CSS snippet to share? We'd love to include it in this collection. [Contact us!](/#contact)
+</Aside>
+
+## How to use CSS snippets?
+
+<LazyVideo src="/documentation/customisation/use-custom-css.mp4" />
 
 ## Colors and icons
 
@@ -229,12 +235,6 @@ _Makes the analog clock thicker._
 	<Code lang="css" code={rolex} />
 </details>
 
-## Quick links
-
-### Limit my most visited
-
-<Code lang="css" code={MostVisitedLimit} />
-
 ## Backgrounds
 
 ### Contain background (good for portrait images)
@@ -264,6 +264,10 @@ Sometimes if you want to use portrait images as your background, it can be nice 
 ### I don't care about artist exposure
 
 <Code lang="css" code={noCredits} />
+
+### Limit my most visited Quick Links
+
+<Code lang="css" code={MostVisitedLimit} />
 
 ### No GPU, only CPU 😠
 
