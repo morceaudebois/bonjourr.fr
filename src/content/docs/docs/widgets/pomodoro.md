@@ -19,7 +19,9 @@ The widget shall be used as per the original technique:
 5. Go back to Step 2 and repeat until you complete four pomodori.
 6. After four pomodori are done, take a long break (typically 20 to 30 minutes) instead of a short break. Once the long break is finished, return to step 2.
 
-The Pomodoro widget keeps track of time even if you close Bonjourr (although won't ring if no Bonjourr tab is open). Use the **Focus mode** to avoid being tempted by your Quick Links or other widgets. You can edit the time of each mode in the widget's settings, when [**Show all settings**](/docs/quick-guide/#i-think-some-options-are-missing-what-do-i-do) is enabled.
+The Pomodoro widget keeps track of time even if you close Bonjourr (although won't ring if no Bonjourr tab is open). Use the **Focus mode** to avoid being tempted by your Quick Links or other widgets.
+
+You can edit the time of each mode in the widget's settings, when [**Show all settings**](/docs/quick-guide/#i-think-some-options-are-missing-what-do-i-do) is enabled. Similarly, you can change the alarm's tune and volume from the settings.
 
 ## Can I get usage statistics?
 

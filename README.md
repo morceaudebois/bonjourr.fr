@@ -36,21 +36,6 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
 ---
 
 ## To do list
-- [ ] Improve navigation layout on mobile/narrow screens/other languages
-- [ ] Complete docs pages:
-    - [x] Quick links
-    - [x] Time and date
-    - [x] Weather
-    - [x] Notes
-    - [x] Search bar
-    - [x] Quotes
-    - [x] Pomodoro
-    
-    - [ ] Backgrounds
-    - [ ] Layout
-    - [ ] Tab appearance
-    - [ ] Profiles
-    - [ ] CSS snippets
 - [ ] Import updated docs pages to French
 - [ ] Add custom heading IDs to French
 
