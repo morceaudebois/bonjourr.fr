@@ -1,34 +1,64 @@
 ---
 title: 🔎 Barre de recherche
-description: Les réglages de la barre de recherche permettent de choisir et personnaliser les moteurs de recherche, d’utiliser les suggestions intégrées et de focaliser rapidement le champ de recherche via un raccourci clavier.
+description: Personnalisez votre barre de recherche avec plusieurs moteurs de recherche, des suggestions et la prise en charge d'URL de recherche personnalisées.
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
-import { Aside } from "@astrojs/starlight/components"
+import { Aside, Steps, LinkButton } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
+
+Bonjourr inclut une barre de recherche personnalisable avec des suggestions et la prise en charge de vos moteurs de recherche favoris.
 
 ## Suggestions
 
-Les suggestions sont fournies par notre propre API. Vous pouvez consulter son fonctionnement et son code source [ici](https://github.com/victrme/search-suggestions).
+Les suggestions de recherche sont activées par défaut et sont fournies par notre propre API.  
+Vous pouvez en apprendre plus sur leur fonctionnement, consulter le code source ou signaler des problèmes sur GitHub.
 
-## Moteur de recherche personnalisé
+<LinkButton
+	href="https://github.com/victrme/search-suggestions"
+	variant="secondary"
+	icon="github"
+	iconPlacement="start"
+>
+	Voir search-suggestions sur GitHub
+</LinkButton>
 
-Bonjourr propose plusieurs moteurs de recherche par défaut, et il est également possible d’en ajouter d’autres.
+![Présentation du widget de moteur de recherche avec suggestions](@assets/documentation/widgets/search-suggestions.png)
 
-Pour cela, sélectionnez **Personnalisé** dans l’option moteur de recherche. Une fois le champ **URL de requête** affiché, collez l’URL du moteur et remplacez la requête de recherche par `%s`.
+Les suggestions peuvent être désactivées depuis les réglages de la barre de recherche.
 
-Par exemple, une recherche “coffee” sur YouTube donne une URL de ce type :
-`https://www.youtube.com/results?search_query=coffee`
+## Moteurs de recherche personnalisés
 
-Il suffit alors de remplacer `coffee` par `%s`, ce qui donne :
-`https://www.youtube.com/results?search_query=%s`
+Bonjourr intègre de nombreux moteurs de recherche, mais vous pouvez également ajouter **les vôtres**.
 
-Collez ensuite cette URL dans le champ, et le moteur sera utilisable directement dans Bonjourr.
+<LazyVideo src="/documentation/widgets/custom-search.mp4" autoplay={false} />
 
-<LazyVideo src="/documentation/overview/custom-search.webm" autoplay={false} />
+<Steps>
+1. #### Sélectionnez **Personnalisé** comme moteur de recherche
 
-Cette méthode fonctionne avec la grande majorité des moteurs de recherche, ce qui rend Bonjourr compatible avec presque tous les services existants.
+   Ouvrez les réglages de Bonjourr, allez dans l'option **Moteur de recherche** et sélectionnez **Personnalisé**. Un champ **URL de requête** apparaîtra.
+
+2. #### Trouvez l'URL de recherche
+   Ouvrez le moteur de recherche que vous souhaitez ajouter et effectuez une recherche. Copiez l'URL depuis la barre d'adresse de votre navigateur.
+
+   Par exemple, une recherche de « café » sur YouTube donne :
+
+   `https://www.youtube.com/results?search_query=coffee`
+
+3. #### Remplacez la requête par `%s`
+
+   Remplacez le terme recherché par `%s` afin que Bonjourr sache où insérer votre requête.
+
+   Exemple : `https://www.youtube.com/results?search_query=%s`
+
+4. #### Collez l'URL dans Bonjourr
+
+   Collez l'URL modifiée dans le champ **URL de requête**. Votre moteur de recherche personnalisé est maintenant prêt à être utilisé.
+
+</Steps>
+
+Cette méthode fonctionne avec la plupart des moteurs de recherche, ce qui rend Bonjourr compatible avec _presque tous_ les services prenant en charge les recherches via URL.
 
 <Aside type="tip">
-	Appuyer sur la touche <kbd>/</kbd> permet de focaliser directement la barre de recherche.
+	Appuyez sur <kbd>/</kbd> à tout moment pour placer le curseur dans la barre de recherche.
 </Aside>

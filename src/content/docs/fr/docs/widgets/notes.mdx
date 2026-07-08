@@ -1,32 +1,48 @@
 ---
 title: ✍️ Notes
-description: Le widget Notes permet d’écrire du contenu simple en Markdown avec titres, listes et cases à cocher, ainsi que des raccourcis clavier pour gagner du temps.
+description: Écrivez des notes grâce à une syntaxe Markdown simple avec des titres, des listes de tâches, des cases à cocher et des raccourcis clavier.
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
+import { LinkButton } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-Les Notes utilisent une syntaxe proche du [Markdown](https://www.markdownguide.org/cheat-sheet/) pour créer des titres, listes et cases à cocher. Pour transformer une ligne, il suffit d’ajouter les caractères suivants au début :
+## Utiliser le formatage des notes
 
-- `#` titre principal
+Notes utilise une syntaxe similaire au [Markdown](https://www.markdownguide.org/cheat-sheet/) pour créer des titres, des listes et des cases à cocher. Pour formater une ligne, ajoutez simplement ces caractères au début de celle-ci :
+
+- `#` grand titre
 - `##` titre moyen
 - `###` petit titre
-- `-` liste classique
-- `[ ]` case à cocher (attention à l’espace entre les crochets)
-- `[x]` case cochée
+- `-` liste à puces
+- `[ ]` case à cocher (notez l'espace entre les crochets)
+- `[x]` case à cocher activée
 
-<LazyVideo src="/documentation/overview/notes.webm" />
+<LazyVideo src="/documentation/widgets/notes.mp4" />
 
-Pour l’instant, certaines fonctionnalités Markdown comme l’italique ne sont pas prises en charge.
+**D'autres fonctionnalités Markdown, comme le gras, l'italique et les liens, ne sont actuellement pas prises en charge.**
 
 ### Raccourcis clavier
 
-Voici les raccourcis disponibles dans l’éditeur de Notes :
+Vous pouvez utiliser ces raccourcis clavier lorsque vous modifiez votre note.
 
 | Touches                                                            | Action                    |
 | ------------------------------------------------------------------ | ------------------------- |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> | Créer un grand titre      |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd> | Créer un titre moyen      |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd> | Créer un petit titre      |
-| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> | Créer une liste           |
+| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> | Créer une liste à puces   |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> | Créer une liste de tâches |
+
+---
+
+_Notes utilise pocket editor, un éditeur WYSIWYG open source développé spécifiquement pour Bonjourr._
+
+<LinkButton
+	href="https://github.com/victrme/pocket-editor"
+	variant="secondary"
+	icon="github"
+	iconPlacement="start"
+>
+	Voir pocket-editor sur GitHub
+</LinkButton>

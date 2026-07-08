@@ -1,0 +1,61 @@
+---
+title: Fonctionnalités cachées
+description: Bonjourr cache bien plus que ce que l'on pourrait croire 👀
+image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
+---
+
+import SmallDocsImage from "@components/SmallDocsImage.astro"
+
+## Informations sur l'arrière-plan
+
+Lorsque vous utilisez les arrière-plans par défaut, passez votre souris sur les crédits photo en bas à gauche de Bonjourr pour obtenir les informations EXIF de la photo (lorsqu'elles sont disponibles).
+
+<SmallDocsImage>
+  ![Les informations de Bonjourr sur la photo actuelle](@assets/documentation/customisation/exif.png)
+</SmallDocsImage>
+
+## Menu contextuel
+
+Bonjourr intègre un menu contextuel personnalisé accessible avec un clic droit sur la plupart de son interface. Utilisez-le pour ajouter de nouveaux liens rapides, accéder facilement aux réglages des widgets et contrôler l'arrière-plan.
+
+<SmallDocsImage>
+  ![Le menu contextuel de Bonjourr](@assets/documentation/customisation/context-menu.png)
+</SmallDocsImage>
+
+Vous pouvez remplacer le menu contextuel de Bonjourr par celui du navigateur de deux façons :
+
+- appuyez sur <kbd>alt</kbd> + clic droit,
+- sélectionnez du texte sur la page.
+
+## Mode Alt
+
+![Le mode Alt de Bonjourr sur les liens rapides](@assets/documentation/customisation/alt-mode.jpg)
+
+Appuyer sur la touche <kbd>alt</kbd> dans Bonjourr donne accès à plusieurs fonctionnalités utiles :
+
+- <kbd>alt</kbd> + <kbd>nombre</kbd> pour ouvrir le lien rapide correspondant (un peu comme pour changer d'onglet avec <kbd>cmd</kbd> / <kbd>Ctrl</kbd> + <kbd>nombre</kbd>)
+- <kbd>alt</kbd> + clic droit pour remplacer le menu contextuel de Bonjourr par celui du navigateur.
+- <kbd>alt</kbd> + <kbd>n</kbd> pour créer un nouveau lien rapide.
+
+## Paramètres avancés
+
+Bonjourr 22.3 a introduit des paramètres avancés accessibles directement depuis la zone JSON en bas du panneau des paramètres. Passez simplement leur valeur de `false` à `true` puis appliquez les modifications pour les activer.
+
+<SmallDocsImage>
+  ![Les options avancées dans Bonjourr](@assets/documentation/customisation/advanced-json.jpg)
+</SmallDocsImage>
+
+Les paramètres avancés comprennent actuellement :
+
+- **`altMode`** : passez-le à `false` pour désactiver toutes les fonctionnalités du mode Alt.
+- **`escKey`** : passez-le à `false` pour désactiver la possibilité d'ouvrir le panneau des paramètres avec la touche <kbd>esc</kbd>.
+
+Ces options peuvent être utiles dans certains environnements de travail nécessitant l'utilisation de ces touches sans interférence de Bonjourr.
+
+## Mode d'aide
+
+Lorsque Bonjourr rencontre un problème, le mode d'aide s'affiche et vous guide dans le dépannage tout en présentant des informations utiles comme l'état des serveurs de Bonjourr et les différents types de stockage.
+
+![La page du mode d'aide de Bonjourr](@assets/documentation/customisation/help-mode.png)
+
+Vous pouvez accéder à cette page à tout moment avec le raccourci <kbd>cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>shift</kbd> + <kbd>?</kbd>.

@@ -1,24 +1,29 @@
 ---
 title: ⏱️ Minuteur Pomodoro
-description: Le minuteur Pomodoro permet d’appliquer la technique Pomodoro directement dans Bonjourr en alternant sessions de travail et pauses, avec des durées personnalisables et un mode concentration optionnel.
+description: Utilisez la technique Pomodoro directement dans Bonjourr avec des sessions de travail, des pauses et un mode concentration personnalisables.
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
-Le widget Pomodoro permet d’utiliser la [technique Pomodoro](https://fr.wikipedia.org/wiki/Technique_Pomodoro), une méthode de gestion du temps conçue pour améliorer la concentration et la productivité.
+Le widget Pomodoro vous permet d'utiliser la [technique Pomodoro](https://fr.wikipedia.org/wiki/Technique_Pomodoro?useskin=vector) dans Bonjourr, une méthode de gestion du temps conçue pour vous aider à travailler plus efficacement.
 
-<img src="/documentation/overview/pomodoro.png" alt="Widget Pomodoro de Bonjourr" loading="lazy" />
+![Le widget Pomodoro](@assets/documentation/widgets/pomodoro.png)
 
 ## Comment utiliser le Pomodoro ?
 
-Le widget s’utilise selon le principe de la méthode originale :
+Le widget doit être utilisé comme prévu par la technique originale :
 
-1. Définir la tâche à accomplir.
-2. Lancer le minuteur (généralement 25 minutes).
-3. Travailler sur la tâche.
-4. À la fin du timer, faire une courte pause (5 à 10 minutes).
-5. Reprendre à l’étape 2 et répéter jusqu’à compléter quatre pomodori.
-6. Après quatre pomodori, prendre une pause longue (20 à 30 minutes) à la place de la pause courte. Une fois terminée, recommencer le cycle.
+1. Décider de la tâche à effectuer
+2. Régler le pomodoro (minuteur) sur 25 minutes
+3. Travailler sur la tâche jusqu'à ce que le minuteur sonne et la noter comme faite
+4. Prendre une courte pause (5-10 minutes) 
+5. Tous les trois à quatre pomodori prendre une pause un peu plus longue (20-25 minutes).
 
-Le minuteur continue de fonctionner même si Bonjourr est fermé (mais ne déclenchera pas d’alerte si aucun onglet Bonjourr n’est ouvert). Le **mode concentration** permet d’éviter les distractions liées aux liens rapides ou aux autres widgets.
+Le widget Pomodoro continue de suivre le temps même si vous fermez Bonjourr (il ne sonnera cependant pas si aucun onglet Bonjourr n'est ouvert). Utilisez le **mode concentration** pour éviter d'être tenté par vos liens rapides ou autres widgets.
 
-Les durées de chaque phase peuvent être ajustées dans les réglages du widget, lorsque l’option [**Afficher tous les réglages**](/fr/docs/quick-guide/#i-think-some-options-are-missing-what-do-i-do) est activée.
+Vous pouvez modifier la durée de chaque mode dans les réglages du widget, lorsque [**Afficher tous les réglages**](/fr/docs/quick-guide/#je-pense-quil-manque-des-options-que-faire) est activé. De la même manière, vous pouvez modifier la mélodie et le volume de l'alarme depuis les réglages.
+
+## Puis-je obtenir des statistiques d'utilisation ?
+
+Faites un clic droit sur le widget Pomodoro pour obtenir des statistiques sur votre utilisation récente.
+
+![Statistiques d'utilisation du Pomodoro au clic droit](@assets/documentation/widgets/pomodoro-sessions.png)

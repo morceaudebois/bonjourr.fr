@@ -1,94 +1,94 @@
 ---
 title: 🔗 Liens rapides
-description: Les Liens rapides permettent d’enregistrer, organiser et gérer vos sites favoris directement sur la page d’accueil, avec dossiers, groupes, import depuis le navigateur et icônes personnalisées.
+description: Organisez et gérez vos sites favoris avec des dossiers, des groupes, des outils d'importation et des icônes personnalisées dans vos nouveaux onglets.
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 import { Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
-## Utilisation de base
+## Utilisation basique
 
-Pour ajouter des Liens rapides, faites un clic droit sur la page ou ouvrez la section correspondante dans les paramètres. Une fois créés, ils peuvent être modifiés via clic droit (ou appui long sur mobile), ce qui permet de changer le titre, l’URL, l’icône ou de les supprimer.
+Pour ajouter des liens rapides, faites un clic droit sur la page ou ouvrez la section Liens rapides dans les réglages. Ils peuvent être modifiés en faisant un clic droit dessus (ou un appui long sur mobile), ce qui vous permet de changer leurs titres, leurs URL, leurs icônes et de les supprimer.
 
-<LazyVideo src="/documentation/overview/links-usage.webm" />
+<LazyVideo src="/documentation/widgets/links-usage.mp4" />
 
-Les liens peuvent être réorganisés par glisser-déposer, comme sur un smartphone. Déposer un lien sur un autre crée automatiquement un dossier contenant les deux. Ce dossier reste ensuite modifiable via clic droit.
+Vous pouvez facilement réorganiser vos liens par glisser-déposer, comme vous le feriez sur un téléphone. De plus, déposer un lien sur un autre créera un dossier contenant les deux liens. Vous pouvez également modifier ce dossier avec un clic droit.
 
 <Aside type="tip">
-	Un clic sur la molette de la souris sur un dossier permet d’ouvrir tous ses liens en une seule
-	fois.
+	Un clic avec le bouton du milieu de la souris sur un dossier ouvrira tous les liens qu'il contient en même temps.
 </Aside>
 
-## Import de liens
+## Importer et synchroniser vos liens
 
-Bonjourr permet d’importer les liens déjà présents dans votre navigateur. Pour y accéder, cliquez sur <bjrbtn>Importer mes favoris</bjrbtn>. Selon le navigateur, plusieurs groupes seront proposés, comme les sites les plus visités ou la barre de favoris.
+Bonjourr intègre une fonctionnalité permettant d'importer les favoris existants de votre navigateur. Pour y accéder, cliquez sur le bouton <kbd>Importer</kbd> dans les réglages des liens rapides. Selon votre navigateur, plusieurs groupes de liens importables vous seront proposés, comme vos sites les plus visités ou vos barres de favoris.
 
-<img
-	src="/documentation/overview/bookmarks-modal.png"
-	alt="Fenêtre d’import des favoris de Bonjourr"
-	loading="lazy"
-/>
+![Fenêtre d'importation des favoris de Bonjourr](@assets/documentation/widgets/bookmarks-modal.png)
 
-Il est possible de sélectionner un ou plusieurs groupes, puis de les importer.
+Vous pouvez sélectionner un ou plusieurs groupes, puis cliquer sur <kbd>Importer la sélection</kbd>.
 
 ### Synchronisation
 
-Certains groupes importables, comme les favoris, peuvent être synchronisés avec le navigateur en cliquant sur <bjrbtn>Synchroniser avec le navigateur</bjrbtn> avant l’import. Dans ce cas, ils ne sont plus modifiables dans Bonjourr, mais se mettent automatiquement à jour lorsque les favoris du navigateur changent.
+Certains groupes importables, comme les favoris, peuvent être synchronisés avec votre navigateur si vous choisissez de cliquer sur <kbd>Synchroniser avec le navigateur</kbd> avant l'importation. Cela signifie qu'ils **ne pourront pas être modifiés dans Bonjourr**, mais Bonjourr mettra à jour ses liens automatiquement lorsque vous modifierez vos favoris directement dans le navigateur.
 
-Certains groupes (comme les “plus visités” sur Chrome) ne sont disponibles qu’en mode synchronisé et se mettent à jour automatiquement selon le navigateur.
+Certains groupes (comme « Les plus visités » dans Chrome) peuvent uniquement être importés lorsqu'ils sont synchronisés et seront mis à jour dans Bonjourr lorsque votre navigateur le décidera.
 
 ### Applications Google
 
-Sur Chrome, Bonjourr propose également d’importer les applications Google afin de reproduire le comportement de la page de nouvel onglet par défaut.
+Si vous utilisez Chrome, Bonjourr vous proposera d'importer les applications Google afin de reproduire le comportement de la page d'accueil par défaut de Chrome.
 
 ## Groupes de liens
 
-Les liens peuvent être organisés en groupes, une fonctionnalité optionnelle activable dans les paramètres. Pour ajouter un groupe, survolez la droite des titres de groupe jusqu’à voir apparaître le bouton `+`. Les groupes peuvent être renommés ou supprimés via clic droit. Supprimer un groupe supprime également tous les liens qu’il contient.
+Vous pouvez organiser vos liens avec des groupes de liens, une fonctionnalité optionnelle activable dans les réglages. Pour ajouter un groupe, survolez la droite des titres de groupes jusqu'à voir apparaître l'icône <kbd>+</kbd>. Vous pouvez renommer et supprimer des groupes en faisant un clic droit dessus. La suppression d'un groupe supprimera tous les liens qu'il contient.
 
-Comme pour les dossiers, il est possible de :
 
-- Glisser-déposer des liens d’un groupe à un autre.
-- Réorganiser les groupes par glisser-déposer.
-- Renommer un groupe via clic droit.
+<SmallDocsImage>
+![Groupes de liens de Bonjourr](/documentation/widgets/link-groups.gif)
+</SmallDocsImage>
 
-Un groupe peut être épinglé via l’option <bjrbtn>Épingler ce groupe</bjrbtn> dans le menu contextuel du titre. Il reste alors toujours visible.
+Comme avec les dossiers, vous pouvez :
 
-<img
-	style="max-width: 400px; margin-inline: auto; display: block"
-	src="/documentation/overview/link-groups.gif"
-	alt="Groupes de liens dans Bonjourr"
-	loading="lazy"
-/>
+- Glisser-déposer des liens d'un groupe à un autre.
+- Glisser-déposer des groupes pour les réorganiser.
+- Renommer un groupe en faisant un clic droit dessus.
+
+Vous pouvez épingler des groupes en sélectionnant "Épingler ce groupe" après avoir ouvert le menu contextuel depuis le titre du groupe. Le groupe restera alors toujours visible.
+
+## Modifier l'apparence de vos liens
+
+Vous pouvez personnaliser la taille et l'arrondi de vos liens grâce aux options « Arrondi de l'icône » et « Apparence ».
+
+<LazyVideo src="/documentation/widgets/link-styles.mp4" />
 
 ## Icônes des liens
 
-Les icônes des liens peuvent être configurées de trois façons.
+Vous pouvez configurer les icônes de vos liens avec trois modes différents.
 
-### Favicon du site (par défaut)
+### Favicon du site web (par défaut)
 
-Par défaut, les icônes sont récupérées automatiquement via notre service maison [favicon-fetcher](https://github.com/victrme/favicon-fetcher). Si une icône est manquante, il est possible de signaler le problème via GitHub ou par email afin de l’ajouter.
+Dans le mode par défaut, les icônes sont automatiquement récupérées grâce à notre service maison [favicon-fetcher](https://github.com/victrme/favicon-fetcher). Si vous constatez qu'un site n'a pas d'icône, vous pouvez créer un problème [sur GitHub](https://github.com/victrme/Bonjourr/issues) ou nous envoyer un e-mail, et nous ferons de notre mieux pour le corriger.
 
 ### Fichiers locaux
 
-Les icônes peuvent être importées directement depuis l’ordinateur. La plupart des formats sont pris en charge : JPG, PNG, WebP, GIF non animé et SVG.
+Personnalisez facilement les icônes de vos liens en les important directement depuis votre ordinateur. La plupart des formats d'image sont acceptés, comme JPG, PNG, WebP, GIF (non animé) et SVG.
 
 ### URL distante
 
-Ce mode permet d’utiliser n’importe quelle image disponible en ligne comme icône. Les formats suivants sont acceptés :
+Ce mode vous permet de définir l'URL distante de **n'importe quel fichier image** disponible sur Internet. Cette URL peut être :
 
-- URL externe : `https://en.wikipedia.org/favicon.ico`
-- URL locale : `http://127.0.0.1:4321/favicon.ico`
-- [Data URI](https://dopiaza.org/tools/datauri/index.php) de moins de 8 ko : `data:image/gif;base64,R0lGOD...AA7`
+- Une URL distante : `https://en.wikipedia.org/favicon.ico`.
+- Une URL hébergée localement : `http://127.0.0.1:4321/favicon.ico`.
+- Une [Data URI](https://dopiaza.org/tools/datauri/index.php) de moins de 8 ko : `data:image/gif;base64,R0lGOD...AA7`.
 
 Mais pas :
 
-- Chemin fichier : `file:///Users/Me/Pictures/flowers.png`
+- Un chemin de fichier : `file:///Users/Me/Pictures/flowers.png`.
 
-### Politique de cache
+### Politique de cache des icônes de liens rapides
 
-Les icônes provenant de [favicon-fetcher](https://github.com/victrme/favicon-fetcher) sont mises en cache dans le navigateur pendant un an. Tant que le cache n’est pas vidé, elles ne sont pas redemandées. En revanche, si le cache est supprimé ou limité, elles seront rechargées depuis le service.
+Les icônes provenant de [favicon-fetcher](https://github.com/victrme/favicon-fetcher) sont stockées dans le cache du navigateur pendant un an. Tant que le cache du navigateur n'est pas vidé, les icônes ne sont pas récupérées (ou mises à jour) par la page. Cependant, si le cache est souvent vidé ou que l'espace de stockage de votre appareil est limité, les icônes devront être récupérées à nouveau depuis notre service.
 
-Les icônes définies via une URL distante suivent une politique de cache différente, non contrôlée, ce qui peut entraîner des rechargements fréquents.
+Les icônes que vous ajoutez manuellement depuis une URL distante ont une politique de cache différente, que nous ne contrôlons pas. Cela peut entraîner une récupération fréquente de l'icône, voire à chaque utilisation.
 
-⚠️ _Note_ : pour des raisons de sécurité, les chemins locaux (`file://`), les pages internes du navigateur (`about:config`, `chrome://extensions`) ne sont pas autorisés. En revanche, les liens `localhost:` fonctionnent normalement.
+⚠️ _Remarque_ : par mesure de sécurité, les chemins locaux comme `file://`, les liens de paramètres du navigateur comme `about:config` ou `chrome://extensions` ne peuvent pas être ajoutés. En revanche, les liens `localhost:` fonctionnent parfaitement.

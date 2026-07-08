@@ -4,7 +4,7 @@ description: Pre-made Bonjourr theme profiles you can import directly into your 
 image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
-import { Code, LinkButton, Button } from "@astrojs/starlight/components"
+import { Code, LinkButton, Button, Aside } from "@astrojs/starlight/components"
 import notmomentum from "@assets/documentation/customisation/profiles/not-momentum.json?raw"
 import cyberpunk from "@assets/documentation/customisation/profiles/cyberpunk.json?raw"
 import floral from "@assets/documentation/customisation/profiles/floral.json?raw"
@@ -13,8 +13,10 @@ import space from "@assets/documentation/customisation/profiles/space.json?raw"
 export const toDataHref = (code) =>
 	`data:application/json;charset=utf-8,${encodeURIComponent(code)}`
 
-_Want your own custom profile here?
-[Contact us!](/#contact)_
+
+<Aside type="tip" title="Showcase your creativity">
+  _Want your own custom profile here? [Contact us!](/#contact)_
+</Aside>
 
 
 ## Cyberpunk 2077
