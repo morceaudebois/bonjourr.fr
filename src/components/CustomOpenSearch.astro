@@ -9,7 +9,8 @@ import { Icon } from "@astrojs/starlight/components"
 <script>
 	document.getElementById("custom-open-search")?.addEventListener("click", (event) => {
 		event.stopPropagation()
-		document.querySelector("button[data-open-modal]")?.click()
+		const openModalButton = document.querySelector<HTMLButtonElement>("button[data-open-modal]")
+		openModalButton?.click()
 	})
 </script>
 
