@@ -4,7 +4,7 @@ description: Affichez des citations inspirantes, humoristiques ou personnalisée
 image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
-import { Code, Aside } from "@astrojs/starlight/components"
+import { Code, Aside, Steps } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
 ![Firefox vous informe de l'extension qui crée la page](@assets/documentation/widgets/quotes.png)
@@ -44,12 +44,34 @@ Sélectionnez l'option URL pour relier Bonjourr à l'URL directe d'un fichier CS
 
 La méthode la plus simple consiste à utiliser GitHub Gist, un service qui permet de créer et d'héberger très facilement un fichier :
 
-1. Créez un compte [sur GitHub](https://github.com) si vous n'en avez pas déjà un, puis connectez-vous.
-2. Rendez-vous sur la [page GitHub Gist](https://gist.github.com/).
-3. Donnez une description à votre fichier, comme « Mes citations Bonjourr ».
-4. Donnez-lui un nom de fichier, comme `bonjourr_quotes.csv`. Il peut être quelconque tant qu'il se termine par `.csv`.
-5. Commencez à saisir vos citations en utilisant le format indiqué ci-dessus (vous pourrez les modifier plus tard si vous le souhaitez).
-6. Une fois terminé, cliquez sur le bouton **Create secret gist**. Le fichier sera enregistré et affiché sous forme de tableau.
-7. Cliquez sur le bouton <kbd>Raw</kbd>, copiez l'URL de la page qui s'ouvre et collez-la dans le champ URL de Bonjourr. Voilà !
-
 <LazyVideo src="/documentation/widgets/quotes-gist.mp4" autoplay={false} />
+
+<Steps>
+1. #### Créer un compte GitHub
+
+   Créez un compte [sur GitHub](https://github.com) si vous n'en avez pas déjà un, puis connectez-vous.
+
+2. #### Créer un GitHub Gist
+
+   Rendez-vous sur la [page GitHub Gist](https://gist.github.com/).
+
+   Donnez une description à votre fichier, comme `Mes citations Bonjourr`, puis choisissez un nom de fichier comme `bonjourr_quotes.csv`. Le nom peut être n'importe lequel tant qu'il se termine par `.csv`.
+
+3. #### Ajouter vos citations
+
+   Commencez à écrire vos citations en utilisant le formatage indiqué ci-dessus. Vous pourrez les modifier plus tard si vous le souhaitez.
+
+4. #### Créer le Gist
+
+   Une fois terminé, cliquez sur le bouton **Create secret gist**. Le fichier sera enregistré et affiché sous forme de tableau.
+
+5. #### Copier l'URL brute
+
+   Cliquez sur le bouton <kbd>Raw</kbd>, puis copiez l'URL de la page qui s'ouvre.
+
+6. #### L'ajouter dans Bonjourr
+
+   Collez l'URL dans le champ "URL" de Bonjourr. Voilà !
+</Steps>
+
+

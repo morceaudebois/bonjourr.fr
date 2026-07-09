@@ -6,6 +6,7 @@ image: /documentation/docs-headers/michal-mikulec-6gezJoRAM-E-unsplash.jpg
 
 import { Aside, Steps } from "@astrojs/starlight/components"
 import SmallDocsImage from "@components/SmallDocsImage.astro"
+import LazyVideo from "@components/LazyVideo.astro"
 
 La synchronisation de vos paramètres signifie que si vous modifiez quelque chose dans Bonjourr sur une instance d'un navigateur, la modification sera automatiquement répercutée sur une autre instance.
 
@@ -46,10 +47,10 @@ Voici un guide étape par étape pour le configurer :
 
     Connectez-vous à [GitHub](https://github.com/) et créez un token d'authentification en suivant [ce guide sur docs.github.com](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token), ou en suivant les étapes montrées ci-dessous :
 
-    <video controls loop muted playsinline>
-    	<source src="/documentation/settings-management/gist-sync.mp4" type="video/mp4" />
-    	Votre navigateur ne prend pas en charge la balise vidéo.
-    </video>
+    <LazyVideo
+        src="/documentation/settings-management/gist-sync.mp4"
+        autoplay={false}
+    />
 
 3.  #### Collez votre token dans Bonjourr
 

@@ -6,6 +6,7 @@ image: /documentation/docs-headers/michal-mikulec-6gezJoRAM-E-unsplash.jpg
 
 import { Aside, Steps } from "@astrojs/starlight/components"
 import SmallDocsImage from "@components/SmallDocsImage.astro"
+import LazyVideo from "@components/LazyVideo.astro"
 
 Syncing your settings means that if you change something in Bonjourr on one instance of a browser, it'll be replicated automatically in another browser.
 
@@ -13,7 +14,7 @@ Syncing your settings means that if you change something in Bonjourr on one inst
 	If set up correctly, syncing synchronises all of Bonjourr's settings, with one notable exception: local files uploaded as backgrounds or link icons. This is a technical limit and security browsers have set up when it comes to extensions.
 </Aside>
 
-## Same-browser syncing
+## Same-browser syncing {#same-browser-syncing}
 
 By default if you've installed Bonjourr as an extension, you'll see that your synchronisation type option matches your browser: **[Chrome Sync](https://support.google.com/chrome/answer/185277)**, **[Firefox Sync](https://www.firefox.com/features/sync/)** or **[Edge Sync](https://support.microsoft.com/edge/sign-in-to-sync-microsoft-edge-across-devices)**.
 
@@ -24,11 +25,11 @@ This means that if:
 
 Then both instances of Bonjourr will have their settings synchronised.
 
-## Cross-browser syncing
+## Cross-browser syncing {#cross-browser-syncing}
 
 Bonjourr has two ways to share its settings between multiple browsers.
 
-### Github Gist
+### Github Gist {#github-gist}
 
 Bonjourr also has a way to synchronise its data across multiple browsers thanks to GitHub Gist (for example, if you use Chrome and Firefox at the same time).
 
@@ -46,10 +47,10 @@ Here's a step by step guide on how to configure it:
 
     Log in to [GitHub](https://github.com/) and create an authentification token by following [this guide on docs.github.com](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token), or by following the steps shown below:
 
-    <video controls loop muted playsinline>
-    	<source src="/documentation/settings-management/gist-sync.mp4" type="video/mp4" />
-    	Your browser does not support the video tag.
-    </video>
+    <LazyVideo
+        src="/documentation/settings-management/gist-sync.mp4"
+        autoplay={false}
+    />
 
 3.  #### Paste your token in Bonjourr
 
@@ -61,7 +62,7 @@ Here's a step by step guide on how to configure it:
 
 Bonjourr is not affiliated with GitHub, and no connections to `api.github.com` are made until you select this option AND enter a valid token. More details on our [privacy page](/docs/reference/privacy-policy/).
 
-### Remote URL
+### Remote URL {#remote-url}
 
 This option is the most manual of the bunch, as it requires intervention for the syncing to happen.
 

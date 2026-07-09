@@ -5,11 +5,11 @@ image: /documentation/docs-headers/marcsilino-padayachee-tpxOICMarz0-unsplash.jp
 
 <small><i>Last update: 21 nov. 2024, version 20.3.0</i></small>
 
-## In short
+## In short {#in-short}
 
 We, or the Bonjourr team refers to [Tahoe Beetschen](https://github.com/morceaudebois/) & [Victor Azevedo](https://github.com/victrme/). We do not use collect, store, or share any data the user generates on Bonjourr. Data sent to our API is the minimum required for Bonjourr to work, is completely anonymous and cannot identify a user. The API does not save any logs or data.
 
-## External services
+## External services {#external-services}
 
 To enjoy every feature, Bonjourr has to communicate with external services. All data your page sends goes to [our open source API](https://github.com/victrme/bonjourr-apis) before accessing the relevent services. This offers a layer of anonymity for the users, much like a VPN.
 
@@ -17,9 +17,9 @@ This API is deployed on Cloudflare Workers, which means we have access to Cloudf
 
 Nothing is stored on our end, however we cannot control how the service providers are using your data. You can refer to the privacy policy of each providers below:
 
-### Active on first start
+### Active on first start {#active-on-first-start}
 
-#### api.bonjourr.fr
+#### api.bonjourr.fr {#apibonjourrfr}
 
 - **Unsplash**
   Fetches background images. On startup and on collection change.
@@ -31,14 +31,14 @@ Nothing is stored on our end, however we cannot control how the service provider
   Gets a random list of quotes. Once at startup, and after changing quote type or every 20 quotes.
   [Source code](https://github.com/victrme/i18n-quotes)
 
-#### image.unsplash.com
+#### image.unsplash.com {#imageunsplashcom}
 
 - **Unsplash Image**
   Serves the background image. On startup & every hour by default. On collection change. When losing cache.
 
-### Optional
+### Optional {#imageunsplashcom}
 
-#### api.bonjourr.fr
+#### api.bonjourr.fr {#apibonjourrfr-1}
 
 - **Fontsource**
   Fetches list of most popular fonts. On "font family" input focus. When losing cache.
@@ -50,36 +50,36 @@ Nothing is stored on our end, however we cannot control how the service provider
   Gets search suggestions from Google, Duckduckgo and others. The API is a web scraper and does not directly use the services of these providers.
   [Source code](https://github.com/victrme/search-suggestions)
 
-#### cdn.jsdelivr.net
+#### cdn.jsdelivr.net {#cdnjsdelivrnet}
 
 - **Fontsource CDN**
   Serves the font file. When changing font or losing cache.
   [CDN info](https://fontsource.org/docs/getting-started/cdn)
 
-#### api.github.com
+#### api.github.com {#apigithubcom}
 
 - **Github Gist API**
   Read and write a Gist. After using the "Github Gist" synchronization type, when opening the settings menu, receiving or sending a saved config.
   [API documentation](https://docs.github.com/en/rest/gists/gists#list-gists-for-the-authenticated-user)
 
-## Permissions
+## Permissions {#permissions}
 
 Extensions are more secured than webpages, that means Bonjourr needs to ask for permission to function properly. More about permissions on
 [developer.chrome.com](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
 
-### Required
+### Required {#required}
 
 - **Storage**
   Access the local and synchronized extension storage. More info below. On every tab and settings change.
 
-### Optional
+### Optional {#optional-1}
 
 - **Bookmarks**
   Get a list of browser bookmarks. Only requested when using bookmark import option.
 - **Top sites**
   Get a list of most visited. Requested when using bookmark import option, used on every new tab when adding most visited sites to links.
 
-## Settings storage
+## Settings storage {#settings-storage}
 
 We do not have access to any of your settings. Settings are stored in the browser using the [extension storage API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage). This storage system is not encrypted so users need to be responsible. Bonjourr will never ask for or store any personal or identifiable data.
 
@@ -92,7 +92,7 @@ By default, Bonjourr will synchronize its settings with your browser account if 
 - **Online and Safari**
   Settings are stored locally using the Web Storage API and cannot be synced.
 
-## Background service
+## Background service {#background-service}
 
 When using the extension, Bonjourr
 [background service](https://github.com/victrme/Bonjourr/blob/master/src/scripts/services/background.js) can open a tab on install, uninstall and when clicking on its toolbar icon. Nothing else runs in the background of your browser. Since the upgrade to manifest v3, the background worker even
