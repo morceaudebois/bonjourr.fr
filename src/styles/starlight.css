@@ -78,8 +78,8 @@ h1#_top {
 }
 
 /* "content not available in your language" orange message */
-/* using astro class cause there's nothing else available */
-p.astro-6n7vrl6i {
+/* messy selector cause it doesn't have a usable id/class */
+main > p.sl-flex:has(> svg):has(+ .markdown-wrapper) {
 	width: 100%;
 	border-radius: var(--radius);
 }
@@ -92,13 +92,13 @@ p.astro-6n7vrl6i {
 	font-size: 1.325rem;
 }
 
-.container-main .level-h3 {
+/* .container-main .level-h3 {
 	margin-top: calc(var(--spacing) * 6);
-}
+} */
 
-.container-main .level-h4 {
+/* .container-main .level-h4 {
 	margin-top: calc(var(--spacing) * 4);
-}
+} */
 
 .sl-steps li :last-child {
 	margin-bottom: unset;

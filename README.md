@@ -36,7 +36,7 @@ __⚠️ If you're using AI to assist your translation, do give it [Bonjourr's `
 ---
 
 ## To do list
-- [ ] Import updated docs pages to French
+- [x] Import updated docs pages to French
 - [ ] Add custom heading IDs to French
 
 ### Will be done but not a priority/not possible yet
