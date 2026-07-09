@@ -2,11 +2,11 @@
 _If you're looking for Bonjourr's source code, head this way: https://github.com/victrme/Bonjourr/_
 
 ## 🧑‍💻 How to run the site locally (no coding experience needed!)
-1. **Get the code.** Download this repository (green code button → Download ZIP), or use [GitHub Desktop](https://desktop.github.com) if you're comfortable with git.
+1. **Get the code.** [Download this repository](https://github.com/morceaudebois/bonjourr.fr/archive/refs/heads/master.zip) or use [GitHub Desktop](https://desktop.github.com) if you're comfortable with git.
 2. **Install Node.js.** Download the LTS version from https://nodejs.org and run the installer. You might need to restart the computer once installed.
 3. **Open a terminal in the project folder.**
    - On Mac: right-click the folder → "Services" → "New Terminal at Folder" (or use the Terminal app)
-   - On Windows: open the folder, then type `cmd` in the address bar and press Enter
+   - On Windows: shift + right click the folder → "Open PowerShell window here"
    - On Linux: you already know
 4. **Install pnpm** (only needed once):
 ```
