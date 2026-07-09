@@ -7,23 +7,23 @@ image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 import LazyVideo from "@components/LazyVideo.astro"
 import { Aside, LinkCard } from "@astrojs/starlight/components"
 
-## Météo
+## Météo {#weather}
 
 Faites un clic droit sur le widget Météo & bienvenue pour ouvrir ses réglages. Vous pourrez notamment modifier la géolocalisation, les unités de température, la façon dont Bonjourr vous accueille et quelques autres options.
 
 ![Widget météo et bienvenue légèrement personnalisé dans Bonjourr](@assets/documentation/widgets/weather.png)
 
-### Géolocalisation
+### Géolocalisation {#geolocation}
 
-#### Approximative
+#### Approximative {#approximate}
 
 Géolocalisation basée sur l'adresse IP, pas très précise mais suffisante dans la plupart des cas et **ne nécessitant aucune autorisation.**
 
-#### Précise
+#### Précise {#precise}
 
 Géolocalisation plus précise mais **nécessitant une autorisation.** Certains navigateurs (notamment Safari) peuvent avoir des problèmes avec celle-ci, c'est pourquoi nous recommandons de choisir Manuelle à la place.
 
-#### Manuelle
+#### Manuelle {#manual}
 
 Choisissez la ville dont vous souhaitez afficher la météo. C'est probablement le meilleur choix si vous voulez de la précision et que vous ne changez pas souvent de lieu.
 
@@ -31,7 +31,7 @@ Choisissez la ville dont vous souhaitez afficher la météo. C'est probablement 
 Si plusieurs villes portent le même nom, essayez de sélectionner une ville plus grande à proximité avec un identifiant unique afin d'obtenir des résultats précis.
 </Aside>
 
-### Météo détaillée
+### Météo détaillée {#detailed-weather}
 
 La « Météo détaillée » vous permet d'accéder facilement au site d'un fournisseur météo pour obtenir un rapport complet. Une fois activée, vous pouvez cliquer sur le widget météo pour accéder au site de votre choix.
 
@@ -39,7 +39,7 @@ La « Météo détaillée » vous permet d'accéder facilement au site d'un four
 
 ⚠️ **Bonjourr n'est pas affilié** à MSN, AccuWeather, Yahoo! ou Windy.com.
 
-### Personnaliser les icônes météo
+### Personnaliser les icônes météo {#customise-weather-icons}
 
 <LinkCard
   title="🌤️ Personnaliser vos icônes météo"
@@ -47,11 +47,11 @@ La « Météo détaillée » vous permet d'accéder facilement au site d'un four
   description="Modifiez les couleurs des icônes ou remplacez-les entièrement grâce à du CSS personnalisé."
 />
 
-## Bienvenue
+## Bienvenue {#greetings}
 
 Personnalisez la façon dont Bonjourr vous accueille tout au long de la journée.
 
-### Message de bienvenue personnalisé
+### Message de bienvenue personnalisé {#custom-greeting}
 
 Passez le mode de bienvenue sur **Personnalisé** pour définir exactement l'affichage des messages. Utilisez la variable `$name` pour insérer automatiquement votre nom configuré.
 

@@ -9,7 +9,7 @@ import LazyVideo from "@components/LazyVideo.astro"
 
 ![Firefox vous informe de l'extension qui crée la page](@assets/documentation/widgets/quotes.png)
 
-## Types de citations
+## Types de citations {#quote-types}
 
 Le widget Citations peut récupérer des citations depuis plusieurs sources grâce à l'option __Type de citations__ :
 
@@ -23,7 +23,7 @@ Le widget Citations peut récupérer des citations depuis plusieurs sources grâ
 
 <Aside type="tip">Faites un clic droit sur le widget Citations pour passer à la suivante.</Aside>
 
-### Importer vos propres citations
+### Importer vos propres citations {#importing-your-own-quotes}
 
 Il existe deux façons d'importer vos propres citations : directement depuis Bonjourr ou depuis une URL distante. Dans les deux cas, voici le format que vos citations doivent respecter :
 
@@ -32,13 +32,13 @@ Il existe deux façons d'importer vos propres citations : directement depuis Bon
 	lang="json"
 />
 
-#### Avec l'option citations personnalisées
+#### Avec l'option citations personnalisées {#with-the-custom-quotes-option}
 
 Une fois l'option citations personnalisées sélectionnée, vous pouvez simplement ajouter des citations en respectant le format indiqué ci-dessus.
 
 Cette option est limitée à 8 ko de texte, soit environ 50 citations de taille standard. Cela est dû au fait que Bonjourr utilise [storage.sync](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) pour stocker les données, et que chaque objet est limité à 8 ko. **Si vous avez besoin de plus de citations, nous vous conseillons plutôt d'utiliser l'option URL.**
 
-#### Avec l'option URL (fichier CSV)
+#### Avec l'option URL (fichier CSV) {#with-the-url-option-csv-file}
 
 Sélectionnez l'option URL pour relier Bonjourr à l'URL directe d'un fichier CSV contenant toutes vos citations.
 
@@ -59,7 +59,7 @@ La méthode la plus simple consiste à utiliser GitHub Gist, un service qui perm
 
 3. #### Ajouter vos citations
 
-   Commencez à écrire vos citations en utilisant le formatage indiqué ci-dessus. Vous pourrez les modifier plus tard si vous le souhaitez.
+   Commencez à écrire vos citations en utilisant [le formatage indiqué ci-dessus](#importing-your-own-quotes). Vous pourrez les modifier plus tard si vous le souhaitez.
 
 4. #### Créer le Gist
 

@@ -8,7 +8,7 @@ import { Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 import SmallDocsImage from "@components/SmallDocsImage.astro"
 
-## Utilisation basique
+## Utilisation basique {#basic-usage}
 
 Pour ajouter des liens rapides, faites un clic droit sur la page ou ouvrez la section Liens rapides dans les réglages. Ils peuvent être modifiés en faisant un clic droit dessus (ou un appui long sur mobile), ce qui vous permet de changer leurs titres, leurs URL, leurs icônes et de les supprimer.
 
@@ -20,7 +20,7 @@ Vous pouvez facilement réorganiser vos liens par glisser-déposer, comme vous l
 	Un clic avec le bouton du milieu de la souris sur un dossier ouvrira tous les liens qu'il contient en même temps.
 </Aside>
 
-## Importer et synchroniser vos liens
+## Importer et synchroniser vos liens {#importing-and-syncing-your-links}
 
 Bonjourr intègre une fonctionnalité permettant d'importer les favoris existants de votre navigateur. Pour y accéder, cliquez sur le bouton <kbd>Importer</kbd> dans les réglages des liens rapides. Selon votre navigateur, plusieurs groupes de liens importables vous seront proposés, comme vos sites les plus visités ou vos barres de favoris.
 
@@ -28,17 +28,17 @@ Bonjourr intègre une fonctionnalité permettant d'importer les favoris existant
 
 Vous pouvez sélectionner un ou plusieurs groupes, puis cliquer sur <kbd>Importer la sélection</kbd>.
 
-### Synchronisation
+### Synchronisation {#syncing}
 
 Certains groupes importables, comme les favoris, peuvent être synchronisés avec votre navigateur si vous choisissez de cliquer sur <kbd>Synchroniser avec le navigateur</kbd> avant l'importation. Cela signifie qu'ils **ne pourront pas être modifiés dans Bonjourr**, mais Bonjourr mettra à jour ses liens automatiquement lorsque vous modifierez vos favoris directement dans le navigateur.
 
 Certains groupes (comme « Les plus visités » dans Chrome) peuvent uniquement être importés lorsqu'ils sont synchronisés et seront mis à jour dans Bonjourr lorsque votre navigateur le décidera.
 
-### Applications Google
+### Applications Google {#google-apps}
 
 Si vous utilisez Chrome, Bonjourr vous proposera d'importer les applications Google afin de reproduire le comportement de la page d'accueil par défaut de Chrome.
 
-## Groupes de liens
+## Groupes de liens {#link-groups}
 
 Vous pouvez organiser vos liens avec des groupes de liens, une fonctionnalité optionnelle activable dans les réglages. Pour ajouter un groupe, survolez la droite des titres de groupes jusqu'à voir apparaître l'icône <kbd>+</kbd>. Vous pouvez renommer et supprimer des groupes en faisant un clic droit dessus. La suppression d'un groupe supprimera tous les liens qu'il contient.
 
@@ -55,25 +55,25 @@ Comme avec les dossiers, vous pouvez :
 
 Vous pouvez épingler des groupes en sélectionnant "Épingler ce groupe" après avoir ouvert le menu contextuel depuis le titre du groupe. Le groupe restera alors toujours visible.
 
-## Modifier l'apparence de vos liens
+## Modifier l'apparence de vos liens {#change-the-look-of-your-links}
 
 Vous pouvez personnaliser la taille et l'arrondi de vos liens grâce aux options « Arrondi de l'icône » et « Apparence ».
 
 <LazyVideo src="/documentation/widgets/link-styles.mp4" />
 
-## Icônes des liens
+## Icônes des liens {#link-icons}
 
 Vous pouvez configurer les icônes de vos liens avec trois modes différents.
 
-### Favicon du site web (par défaut)
+### Favicon du site web (par défaut) {#website-favicon-default}
 
 Dans le mode par défaut, les icônes sont automatiquement récupérées grâce à notre service maison [favicon-fetcher](https://github.com/victrme/favicon-fetcher). Si vous constatez qu'un site n'a pas d'icône, vous pouvez créer un problème [sur GitHub](https://github.com/victrme/Bonjourr/issues) ou nous envoyer un e-mail, et nous ferons de notre mieux pour le corriger.
 
-### Fichiers locaux
+### Fichiers locaux {#local-files}
 
 Personnalisez facilement les icônes de vos liens en les important directement depuis votre ordinateur. La plupart des formats d'image sont acceptés, comme JPG, PNG, WebP, GIF (non animé) et SVG.
 
-### URL distante
+### URL distante {#remote-url}
 
 Ce mode vous permet de définir l'URL distante de **n'importe quel fichier image** disponible sur Internet. Cette URL peut être :
 
@@ -85,7 +85,7 @@ Mais pas :
 
 - Un chemin de fichier : `file:///Users/Me/Pictures/flowers.png`.
 
-### Politique de cache des icônes de liens rapides
+### Politique de cache des icônes de liens rapides {#cache-policy-on-quick-links-icons}
 
 Les icônes provenant de [favicon-fetcher](https://github.com/victrme/favicon-fetcher) sont stockées dans le cache du navigateur pendant un an. Tant que le cache du navigateur n'est pas vidé, les icônes ne sont pas récupérées (ou mises à jour) par la page. Cependant, si le cache est souvent vidé ou que l'espace de stockage de votre appareil est limité, les icônes devront être récupérées à nouveau depuis notre service.
 

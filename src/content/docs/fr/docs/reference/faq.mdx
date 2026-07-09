@@ -7,7 +7,7 @@ image: /documentation/docs-headers/marcsilino-padayachee-tpxOICMarz0-unsplash.jp
 import { Code } from "astro-expressive-code/components"
 import userchrome from "@assets/documentation/reference/userchrome.txt?raw"
 
-## 🦊 Comment supprimer « Extension (B...t Startpage) » sur Firefox ?
+## 🦊 Comment supprimer « Extension (B...t Startpage) » sur Firefox ? {#remove-firefox-source-button}
 
 Lorsque vous utilisez **Bonjourr avec Firefox**, un bouton intitulé **« Extension (B...t Startpage) »** peut apparaître au début de la barre de recherche des nouveaux onglets.
 
@@ -17,7 +17,7 @@ Il s'agit d'une **mesure de sécurité** mise en place par Mozilla afin de vous 
 
 Même si cet indicateur n'est pas vraiment nécessaire avec Bonjourr, **il n'existe malheureusement pas de moyen simple de le désactiver**, et nous **n'avons aucun contrôle dessus**.
 
-### ...mais il y a quand même une solution ?
+### ...mais il y a quand même une solution ? {#but-theres-a-way}
 
 Quand on cherche un peu, on finit souvent par trouver. Ici, la solution passe par le fichier **`userChrome.css`**, une feuille de style qui permet de personnaliser **toute l'interface de Firefox**.
 
@@ -27,7 +27,7 @@ Vous pouvez le configurer en quelques minutes en suivant [ce tutoriel](https://w
 
 <Code lang="css" code={userchrome} />
 
-## 🔎 Peut-on mettre automatiquement le curseur dans la barre de recherche de Bonjourr ?
+## 🔎 Peut-on mettre automatiquement le curseur dans la barre de recherche de Bonjourr ? {#focus-searchbar-automatically}
 
 Par défaut, la plupart des navigateurs **placent le curseur dans leur propre barre d'adresse ou de recherche** lorsque vous ouvrez un nouvel onglet. Même si la barre de recherche de Bonjourr est activée, ce comportement ne change pas, ce qui signifie qu'il faut **cliquer dessus manuellement** avant de pouvoir l'utiliser.
 
