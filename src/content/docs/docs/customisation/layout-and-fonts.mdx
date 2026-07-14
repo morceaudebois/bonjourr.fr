@@ -29,7 +29,7 @@ To preview the available fonts, visit [fontsource.org](https://fontsource.org/).
 
 [![Preview Bonjourr's fonts from Fontsource](@assets/documentation/customisation/fontsource.png)](https://fontsource.org/)
 
-### But what about other fonts?
+### But what about other fonts? {#other-custom-fonts}
 
 Use CSS in the **Custom Style** field and apply to Bonjourr [any font that's installed on your computer](https://wordmark.it/). For instance:
 ```css
@@ -39,4 +39,17 @@ Use CSS in the **Custom Style** field and apply to Bonjourr [any font that's ins
 }
 ```
 
-<Aside type="tip">You can even use the `@font-face` or `@import` properties to import fonts from a remote URL coming from Google Fonts or any other font service. [Learn more](https://css-tricks.com/almanac/rules/f/font-face/)</Aside>
+You can even use the `@import` or `@font-face` properties to import fonts from a remote URL coming from [Google Fonts](https://fonts.google.com) or any other font service:
+
+```css
+/* sets a custom font from Google Fonts on all widgets */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+#interface {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+```
+
+![Bonjourr with a custom font from Google Fonts](@assets/documentation/customisation/google-fonts.png)
