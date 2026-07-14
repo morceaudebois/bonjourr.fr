@@ -19,7 +19,7 @@ The following settings are saved separately for each layout:
 
 <LazyVideo src="/documentation/customisation/move-elem.mp4" />
 
-<Aside type="note"> The page layout system is _currently being redesigned_ to make it more stable and easier to use. You can follow the progress <a href="https://github.com/victrme/Bonjourr/issues/804">here</a>.</Aside>
+<Aside type="note">The page layout system is _currently being redesigned_ to make it more stable and easier to use. You can follow the progress <a href="https://github.com/victrme/Bonjourr/issues/804">here</a>.</Aside>
 
 ## 📚 Fonts {#fonts}
 
@@ -28,3 +28,15 @@ Bonjourr uses fonts from Fontsource, an **open-source** font catalog. You can ch
 To preview the available fonts, visit [fontsource.org](https://fontsource.org/).
 
 [![Preview Bonjourr's fonts from Fontsource](@assets/documentation/customisation/fontsource.png)](https://fontsource.org/)
+
+### But what about other fonts?
+
+Use CSS in the **Custom Style** field and apply to Bonjourr [any font that's installed on your computer](https://wordmark.it/). For instance:
+```css
+/* sets a custom font on all widgets */
+#interface {
+    font-family: Comic Sans MS;
+}
+```
+
+<Aside type="tip">You can even use the `@font-face` property to import a font from a remote URL coming from Google Fonts or any other font service. [Learn more](https://css-tricks.com/almanac/rules/f/font-face/)</Aside>

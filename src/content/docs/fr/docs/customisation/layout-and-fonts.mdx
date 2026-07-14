@@ -28,3 +28,16 @@ Bonjourr utilise les polices de Fontsource, un catalogue de polices **open sourc
 Pour prévisualiser les polices disponibles, rendez-vous sur [fontsource.org](https://fontsource.org/).
 
 [![Prévisualisez les polices de Bonjourr depuis Fontsource](@assets/documentation/customisation/fontsource.png)](https://fontsource.org/)
+
+### Et les autres polices ?
+
+Utilisez du CSS dans le champ **Style personnalisé** pour appliquer à Bonjourr [n'importe quelle police installée sur votre ordinateur](https://wordmark.it/). Par exemple :
+
+```css
+/* applique une police personnalisée à tous les widgets */
+#interface {
+    font-family: Comic Sans MS;
+}
+```
+
+<Aside type="tip">Vous pouvez même utiliser la propriété `@font-face` pour importer une police depuis une URL distante provenant de Google Fonts ou de tout autre service de polices. [En savoir plus](https://css-tricks.com/almanac/rules/f/font-face/)</Aside>
