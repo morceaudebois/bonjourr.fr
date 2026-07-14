@@ -1,0 +1,5 @@
+.backgrounds .link .link-icon {
+    background-color: #fff2;
+    backdrop-filter: blur(2em);
+    border: 1px solid #fff1;
+}
