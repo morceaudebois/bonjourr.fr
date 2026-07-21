@@ -1,0 +1,11 @@
+{
+  greeting: ''            // Your greeting name
+  greetingsize: ''        // font-size in em
+  greetingsmode: ''       // auto | custom
+  greetingscustom: {
+    morning: ''           // any string
+    afternoon: ''         // any string
+    evening: ''           // any string
+    night: ''             // any string
+  }
+}

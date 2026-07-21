@@ -1,0 +1,19 @@
+{
+pomodoro: {
+  on: false,            // true | false
+  mode: 'pomodoro',     // pomodoro | break | longbreak
+  pause: 0,             // timestamp
+  end: 0,               // timestamp
+  timeFor: {
+    pomodoro: 1500,     // in seconds
+    break: 300,         // in seconds
+    longbreak: 1200,    // in seconds
+  },
+  focus: false,         // true | false
+  sound: true,          // true | false
+  history: [{
+    endedAt: ''         // date string
+    duration: 0         // in seconds
+  }],
+}
+}

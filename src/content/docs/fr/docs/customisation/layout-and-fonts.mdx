@@ -1,23 +1,56 @@
 ---
-title: Mise en page & polices
-description: Les réglages de mise en page et de typographie permettent de modifier la structure des widgets avec différents agencements en colonnes et de choisir parmi une sélection de polices Fontsource.
-image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
+title: Mise en page & Polices
+description: Personnalisez la mise en page de votre nouvel onglet avec différentes dispositions de widgets et choisissez parmi des centaines de polices.
+image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
+import { Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-## 📄 Mise en page
+## 📄 Mises en page {#page-layouts}
 
-Trois types de mise en page sont disponibles : une, deux ou trois colonnes. Chaque configuration conserve indépendamment la position et l’alignement des widgets.
+Bonjourr propose trois mises en page : une, deux ou trois colonnes. Chaque mise en page possède ses propres positions de widgets et réglages d'alignement, ce qui vous permet de créer différentes configurations et de passer de l'une à l'autre.
 
-Ces options n’affectent que la mise en page active :
+Les paramètres suivants sont enregistrés séparément pour chaque mise en page :
 
-- Activation ou désactivation des widgets
-- Tous les réglages du module de grille
-- Réinitialisation de la mise en page
+- Activation des widgets (interrupteurs)
+- Toutes les options de l'outil de grille
+- Réinitialiser la mise en page
 
-<LazyVideo src="/documentation/overview/move-elem.webm" />
+<LazyVideo src="/documentation/customisation/move-elem.mp4" />
 
-## 📚 Polices
+<Aside type="note"> Le système de mise en page est _actuellement en cours de refonte_ afin de le rendre plus stable et plus facile à utiliser. Vous pouvez suivre son avancement <a href="https://github.com/victrme/Bonjourr/issues/804">ici</a>.</Aside>
 
-Bonjourr utilise les polices proposées par Fontsource. Pour visualiser l’ensemble des typographies disponibles, il est possible de consulter [fontsource.org](https://fontsource.org/).
+## 📚 Polices {#fonts}
+
+Bonjourr utilise les polices de Fontsource, un catalogue de polices **open source**. Vous pouvez choisir parmi des centaines de polices pour personnaliser l'apparence de votre nouvel onglet.
+
+Pour prévisualiser les polices disponibles, rendez-vous sur [fontsource.org](https://fontsource.org/).
+
+[![Prévisualisez les polices de Bonjourr depuis Fontsource](@assets/documentation/customisation/fontsource.png)](https://fontsource.org/)
+
+### Et les autres polices ? {#other-custom-fonts}
+
+Utilisez du CSS dans le champ **Style personnalisé** pour appliquer à Bonjourr [n'importe quelle police installée sur votre ordinateur](https://wordmark.it/). Par exemple :
+
+```css
+/* applique une police personnalisée à tous les widgets */
+#interface {
+    font-family: Comic Sans MS;
+}
+```
+
+Vous pouvez même utiliser les propriétés `@import` ou `@font-face` pour importer des polices depuis une URL distante provenant de [Google Fonts](https://fonts.google.com) ou de tout autre service de polices.
+
+```css
+/* applique une police Google Fonts à tous les widgets */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+#interface, #pomodoro_container {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+```
+
+![Bonjourr avec une police personnalisée Google Fonts](@assets/documentation/customisation/google-fonts.png)

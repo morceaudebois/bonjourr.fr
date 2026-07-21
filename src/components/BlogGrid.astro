@@ -1,4 +1,5 @@
 ---
+// someday it would be nice to use Astro's workflow for images here (automatic optimisation)
 const { postsIndex, readMoreLabel = "Read more →" } = Astro.props
 
 import posts from "../content/kofi-posts.json"
@@ -62,6 +63,7 @@ const latestPosts = posts
 		transform: translateY(-4px);
 		border-color: rgba(255, 255, 255, 0.22);
 		background: rgba(255, 255, 255, 0.08);
+		text-decoration: none;
 	}
 
 	.blog-card img {

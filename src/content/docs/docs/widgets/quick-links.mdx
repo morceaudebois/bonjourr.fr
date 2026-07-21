@@ -1,17 +1,18 @@
 ---
 title: 🔗 Quick Links
-description: Quick Links  let you save, organize, and manage frequently visited websites directly on your start page, with support for folders, groups, import from browser, and custom icons.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+description: Organize and manage your favorite websites with folders, groups, import tools, and custom icons on your new tabs.
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 import { Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
-## Basic usage
+## Basic usage {#basic-usage}
 
 To add Quick Links, right-click on the page or open the Quick Links section in the settings. They are editable if you right-click on them (or long press on mobile), which allows you to change their titles, URLs, icons and delete them.
 
-<LazyVideo src="/documentation/overview/links-usage.webm" />
+<LazyVideo src="/documentation/widgets/links-usage.mp4" />
 
 You can easily reorder your links through drag and drop, just like you would do on a phone. Additionally, dropping a link on another link will create a folder that contains them both. You can also edit that folder via right-click.
 
@@ -19,31 +20,32 @@ You can easily reorder your links through drag and drop, just like you would do 
 	A mouse middle click on a folder will open all its contained links at once.
 </Aside>
 
-## Importing your links
+## Importing and syncing your links {#importing-and-syncing-your-links}
 
-Bonjourr integrates a way to import the existing links from your browser. To access it, click the <bjrbtn>Import bookmarks</bjrbtn> button. Depending on your browser, you will be shown multiple groups of links you will be able to import, such as your most visited websites and your bookmarks toolbars.
+Bonjourr integrates a way to import the existing bookmarks from your browser. To access it, click the <kbd>Import</kbd> button in the Quick Links settings. Depending on your browser, you will be shown multiple groups of importable links such as your most visited websites or your bookmarks toolbars.
 
-<img
-	src="/documentation/overview/bookmarks-modal.png"
-	alt="Bonjourr's bookmarks modal"
-	loading="lazy"
-/>
+![Bonjourr's bookmarks modal](@assets/documentation/widgets/bookmarks-modal.png)
 
-You can select one or multiple groups, and then import them.
+You can select one or multiple groups, and then click <kbd>Import selection</kbd>.
 
-### Syncing
+### Syncing {#syncing}
 
-Some importable groups, such as bookmarks, can be synced with your browser if you decide to click on <bjrbtn>Sync with browser</bjrbtn> before importing. This means they won't be editable in Bonjourr, but Bonjourr will update its links whenever you edit your bookmarks directly in the browser.
+Some importable groups, such as bookmarks, can be synced with your browser if you decide to click on <kbd>Sync with browser</kbd> before importing. This means they **won't be editable in Bonjourr**, but Bonjourr will update its links whenever you edit your bookmarks directly in the browser.
 
 Some groups (like the "Most visited" on Chrome) are only importable while synced and will get updated in Bonjourr whenever your browser decides to do so.
 
-### Google Apps
+### Google Apps {#google-apps}
 
 If you use Chrome, Bonjourr will offer you to import Google Apps as a way to replicate Chrome's default startpage's behaviour.
 
-## Link groups
+## Link groups {#link-groups}
 
-You can organize your links with link groups, an optional feature you can enable in settings. To add a group, hover to the right of the group titles until you see the `+` icon. You can rename and delete groups by right-clicking on them. Deleting a group will delete all the links it contains.
+You can organize your links with link groups, an optional feature you can enable in settings. To add a group, hover to the right of the group titles until you see the <kbd>+</kbd> icon. You can rename and delete groups by right-clicking on them. Deleting a group will delete all the links it contains.
+
+
+<SmallDocsImage>
+![Bonjourr's link groups](/documentation/widgets/link-groups.gif)
+</SmallDocsImage>
 
 Just like with folders, you can:
 
@@ -51,30 +53,31 @@ Just like with folders, you can:
 - Drag and drop groups to reorder them.
 - Rename a group by right-clicking it.
 
-You can pin groups by selecting <bjrbtn>Pin this group</bjrbtn> after opening the context menu from the group title. This will make it so the group is always visible.
+You can pin groups by selecting "Pin this group" after opening the context menu from the group title. This will make it so the group is always visible.
 
-<img
-	style="max-width: 400px; margin-inline: auto; display: block"
-	src="/documentation/overview/link-groups.gif"
-	alt="Bonjourr's link groups"
-	loading="lazy"
-/>
+## Change the look of your links {#change-the-look-of-your-links}
 
-## Link icons
+You can customise how large and round your links are using the "Icon corner radius" and "Style" options.
+
+<LazyVideo src="/documentation/widgets/link-styles.mp4" />
+
+## Link icons {#link-icons}
 
 You can configure your links' icons from three different modes.
 
-### Website favicon (default)
+### Website favicon (default) {#website-favicon-default}
 
 In the default mode, icons are automatically retrieved from our homemade service [favicon-fetcher](https://github.com/victrme/favicon-fetcher). If you find that a website is missing its icon, you can create an issue [on GitHub](https://github.com/victrme/Bonjourr/issues) or send us an email, and we will do our best to fix it.
 
-### Local files
+### Local files {#local-files}
 
-Easily customize you link icons by importing them directly from your computer. Most image file formats are allowed, such as JPG, PNG, WebP, (non animated) GIF, and SVG.
+<LazyVideo src="/documentation/widgets/quick-links-local-files-gif.mp4" />
 
-### Remote URL
+Easily customise your link icons by importing them directly from your computer. Most image file formats are allowed, such as JPG, PNG, WebP, (non animated) GIF, and SVG.
 
-This mode allows you to set a remote URL to any image file you want on the Internet. This URL can be:
+### Remote URL {#remote-url}
+
+This mode allows you to set a remote URL to **any image file** you want on the Internet. This URL can be:
 
 - A remote URL: `https://en.wikipedia.org/favicon.ico`.
 - A locally hosted URL: `http://127.0.0.1:4321/favicon.ico`.
@@ -84,7 +87,7 @@ But not a:
 
 - File path: `file:///Users/Me/Pictures/flowers.png`.
 
-### Cache policy
+### Cache policy on quick links icons {#cache-policy-on-quick-links-icons}
 
 Icons from [favicon-fetcher](https://github.com/victrme/favicon-fetcher) are stored in the browser cache for a year. As long as the browser cache is not cleared, icons are not fetched (or updated) by the page. However, if the browser cache is often cleared or storage space is limited on your device, icons will have to be fetched from our service again.
 

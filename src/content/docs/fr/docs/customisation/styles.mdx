@@ -1,49 +1,63 @@
 ---
 title: Extraits CSS
-description: Extraits CSS
-image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
+description: Personnalisez Bonjourr au-delà des réglages intégrés avec des extraits CSS prêts à l'emploi pour les couleurs, les widgets, les arrière-plans et plus encore.
+image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
 import { Code } from "astro-expressive-code/components"
+import { Aside } from "@astrojs/starlight/components"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
+import LazyVideo from "@components/LazyVideo.astro"
 
-import rolex from "@assets/documentation/snippets/rolex.txt?raw"
-import noGpu from "@assets/documentation/snippets/no-gpu.txt?raw"
-import potato from "@assets/documentation/snippets/potato.txt?raw"
-import noCredits from "@assets/documentation/snippets/no-credits.txt?raw"
-import clockWidth from "@assets/documentation/snippets/clock-width.txt?raw"
-import colors from "@assets/documentation/snippets/colors.txt?raw"
-import transparentBackground from "@assets/documentation/snippets/transparent-background.txt?raw"
-import portraitBackground from "@assets/documentation/snippets/portrait-background.txt?raw"
-import centerSearchbar from "@assets/documentation/snippets/center-searchbar.txt?raw"
-import searchbarLogo from "@assets/documentation/snippets/searchbar-logo.txt?raw"
-import MostVisitedLimit from "@assets/documentation/snippets/most-visited-limit.txt?raw"
-import weatherIcons from "@assets/documentation/snippets/weather-icons.txt?raw"
-import settingsIcon from "@assets/documentation/snippets/settings-icon.txt?raw"
+import rolex from "@assets/documentation/customisation/snippets/rolex.txt?raw"
+import noGpu from "@assets/documentation/customisation/snippets/no-gpu.txt?raw"
+import potato from "@assets/documentation/customisation/snippets/potato.txt?raw"
+import noCredits from "@assets/documentation/customisation/snippets/no-credits.txt?raw"
+import clockWidth from "@assets/documentation/customisation/snippets/clock-width.txt?raw"
+import colors from "@assets/documentation/customisation/snippets/colors.txt?raw"
+import transparentBackground from "@assets/documentation/customisation/snippets/transparent-background.txt?raw"
+import portraitBackground from "@assets/documentation/customisation/snippets/portrait-background.txt?raw"
+import roundSearchbar from "@assets/documentation/customisation/snippets/round-searchbar.txt?raw"
+import searchbarLogo from "@assets/documentation/customisation/snippets/searchbar-logo.txt?raw"
+import MostVisitedLimit from "@assets/documentation/customisation/snippets/most-visited-limit.txt?raw"
+import weatherIcons from "@assets/documentation/customisation/snippets/weather-icons.txt?raw"
+import settingsIcon from "@assets/documentation/customisation/snippets/settings-icon.txt?raw"
+import clockFont from "@assets/documentation/customisation/snippets/clock-font.txt?raw"
+import glassyIcon from "@assets/documentation/customisation/snippets/glassy-icons.txt?raw"
 
-Bonjourr est personnalisable via son interface de réglages, mais il est possible d’aller encore plus loin. Copiez et collez ces extraits de style dans la section dédiée des paramètres pour débloquer de nouvelles possibilités.
+Les réglages intégrés de Bonjourr couvrent la plupart des besoins de personnalisation, mais les extraits CSS permettent d'aller encore plus loin. Copiez-collez simplement un extrait dans la section **CSS personnalisé** pour modifier ou étendre l'apparence de Bonjourr.
 
-Vous souhaitez proposer votre propre extrait CSS ?
-[Contactez-nous !](/#contact)
+<Aside type="tip" title="Proposez votre propre extrait">
+  Vous avez un extrait CSS utile à partager ? Nous serions ravis de l'ajouter à cette collection. [Contactez-nous !](/fr/#further)
+</Aside>
 
-## Arrière-plans
+## Comment utiliser les extraits CSS ? {#how-to-use-css-snippets}
 
-### Arrière-plan portrait
+<LazyVideo src="/documentation/customisation/use-custom-css.mp4" />
 
-<Code lang="css" code={portraitBackground} />
+## Couleurs et icônes {#colors-and-icons}
 
-### Arrière-plans transparents (Zen browser)
+### Ajouter ou modifier des couleurs {#add-or-change-some-colors}
 
-<Code lang="css" code={transparentBackground} />
+Grâce aux variables CSS, vous pouvez facilement modifier les couleurs des polices et des icônes dans Bonjourr.
 
-## Couleurs et icônes
+![Aperçu de ce que les variables CSS permettent de faire avec les couleurs](@assets/documentation/customisation/snippets/colors.png)
 
-### Ajouter ou modifier des couleurs
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={colors} />
+</details>
 
-<Code lang="css" code={colors} />
+### Icônes météo personnalisées {#custom-weather-icons}
 
-### Icônes météo personnalisées
+<SmallDocsImage>
+  ![Une icône météo personnalisée dans Bonjourr](@assets/documentation/customisation/snippets/weather-icons.png)
+</SmallDocsImage>
 
-<Code lang="css" code={weatherIcons} />
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={weatherIcons} />
+</details>
 
 <table>
   <thead>
@@ -58,7 +72,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-brokenclouds"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-brokenclouds"></use>
         </svg>
       </td>
       <td>Nuages fragmentés</td>
@@ -69,7 +83,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-clearsky"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-clearsky"></use>
         </svg>
       </td>
       <td>Ciel dégagé</td>
@@ -80,7 +94,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-fewclouds"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-fewclouds"></use>
         </svg>
       </td>
       <td>Quelques nuages</td>
@@ -91,7 +105,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-lightrain"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-lightrain"></use>
         </svg>
       </td>
       <td>Pluie légère</td>
@@ -102,7 +116,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-mist"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-mist"></use>
         </svg>
       </td>
       <td>Brouillard</td>
@@ -113,7 +127,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-overcastclouds"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-overcastclouds"></use>
         </svg>
       </td>
       <td>Ciel couvert</td>
@@ -124,7 +138,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-rain"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-rain"></use>
         </svg>
       </td>
       <td>Pluie</td>
@@ -135,7 +149,7 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-snow"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-snow"></use>
         </svg>
       </td>
       <td>Neige</td>
@@ -146,10 +160,10 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-sunnyrain"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-sunnyrain"></use>
         </svg>
       </td>
-      <td>Averses ensoleillées</td>
+      <td>Pluie et soleil</td>
       <td>weather-day-sunnyrain</td>
       <td></td>
     </tr>
@@ -157,65 +171,135 @@ Vous souhaitez proposer votre propre extrait CSS ?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-thunderstorm"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-thunderstorm"></use>
         </svg>
       </td>
       <td>Orage</td>
       <td>weather-day-thunderstorm</td>
       <td>weather-night-thunderstorm</td>
     </tr>
-
   </tbody>
 </table>
 
-### Icône de paramètres personnalisée
+### Icône des paramètres personnalisée {#custom-settings-icon}
 
-<Code lang="css" code={settingsIcon} />
+<SmallDocsImage>
+  ![Une icône des paramètres personnalisée dans Bonjourr](@assets/documentation/customisation/snippets/settings-icon.png)
+</SmallDocsImage>
 
-## Couleurs
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={settingsIcon} />
+</details>
 
-### Ajouter ou modifier des couleurs
+## Barre de recherche {#search-bar}
 
-<Code lang="css" code={colors} />
+### Arrondir la barre de recherche {#making-the-search-bar-round}
 
-## Liens rapides
+![Barre de recherche arrondie dans Bonjourr grâce au CSS](@assets/documentation/customisation/snippets/round-searchbar.png)
 
-### Limiter les sites les plus visités
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={roundSearchbar} />
+</details>
+
+### Ajouter un logo à gauche de la barre de recherche {#adding-a-logo-to-the-left-of-the-searchbar}
+
+![Barre de recherche avec un logo Google](@assets/documentation/customisation/snippets/searchbar-logo.png)
+
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={searchbarLogo} />
+</details>
+
+*Proposé par [Kim Visnes](https://bsky.app/profile/visn.es)*
+
+## Horloge {#clock}
+
+### Police personnalisée pour l'horloge
+
+Remplacez les noms des polices par n'importe quelle police installée sur votre ordinateur. [En savoir plus](/fr/docs/customisation/layout-and-fonts/#other-custom-fonts)
+
+![Bonjourr avec des polices originales](@assets/documentation/customisation/snippets/clock-font.png)
+
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={clockFont} />
+</details>
+
+### J'aime mes horloges épaisses {#i-like-my-clocks-thick}
+
+_Rend l'horloge analogique plus épaisse._
+
+![Bonjourr avec une horloge épaisse](@assets/documentation/customisation/snippets/clock-width.png)
+
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={clockWidth} />
+</details>
+
+### Rolex 😎 {#rolex-}
+*Transforme l'horloge analogique en Rolex.*
+
+![Une Rolex directement dans Bonjourr](@assets/documentation/customisation/snippets/rolex.png)
+
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={rolex} />
+</details>
+
+## Liens rapides {#quick-links}
+
+### Effet verre dépoli sur les liens
+
+Vous en avez assez du fond blanc des icônes, mais vous souhaitez tout de même conserver un arrière-plan pour vos liens ? Cet effet de verre dépoli pourrait davantage vous plaire.
+
+![Liens rapides avec un arrière-plan en verre dépoli](@assets/documentation/customisation/snippets/glassy-icons.png)
+
+<details>
+  <summary>Voir l'extrait CSS</summary>
+  <Code lang="css" code={glassyIcon} />
+</details>
+
+### Limiter mes liens rapides les plus visités {#limit-my-most-visited-quick-links}
 
 <Code lang="css" code={MostVisitedLimit} />
 
-## Horloge
+## Arrière-plans {#backgrounds}
 
-### J’aime les horloges plus épaisses
+### Contenir l'arrière-plan (utile pour les images en portrait) {#contain-background-good-for-portrait-images}
 
-<Code lang="css" code={clockWidth} />
+Lorsque vous souhaitez utiliser des images en portrait comme arrière-plan, il peut être intéressant de les afficher sans les recadrer.
 
-### Rolex 😎
+![Une photo en portrait contenue dans Bonjourr avec une mise en page légèrement modifiée](@assets/documentation/customisation/snippets/portrait-background.png)
 
-<Code lang="css" code={rolex} />
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={portraitBackground} />
+</details>
 
-## Barre de recherche
+<Aside type="note">Si vous aimez ça, vous allez adorer notre [futur mode cadre](/fr/documentation/customisation/backgrounds/#bonjourr-daylight) !</Aside>
 
-### Centrer le texte indicatif de la barre de recherche
+### Arrière-plan transparent (navigateur Zen) {#transparent-background-zen-browser}
 
-<Code lang="css" code={centerSearchbar} />
+![Bonjourr dans Zen avec un arrière-plan transparent](@assets/documentation/customisation/snippets/transparent-background.png)
 
-### Ajouter un logo à gauche de la barre de recherche
+<details>
+	<summary>Voir l'extrait CSS</summary>
+	<Code lang="css" code={transparentBackground} />
+</details>
 
-<Code lang="css" code={searchbarLogo} />
+## Divers {#miscellaneous}
 
-_Proposé par [Kim Visnes](https://bsky.app/profile/visn.es)_
-
-## Autre
-
-### Je ne me soucie pas de la visibilité des artistes
+### Je me fiche de la mise en avant des artistes {#i-dont-care-about-artist-exposure}
 
 <Code lang="css" code={noCredits} />
 
-### Pas de GPU, uniquement CPU 😠
+### Pas de GPU, uniquement le CPU 😠 {#no-gpu-only-cpu-}
 
 <Code lang="css" code={noGpu} />
 
-### Pour les ordinateurs peu puissants
+### Pour les ordinateurs peu puissants {#for-laggy-computers}
+_Cela peut améliorer les performances de Bonjourr sur du matériel plus ancien_
 
 <Code lang="css" code={potato} />

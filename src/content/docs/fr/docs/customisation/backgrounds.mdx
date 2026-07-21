@@ -1,100 +1,118 @@
 ---
 title: Arrière-plans
-description: Les arrière-plans permettent de personnaliser l’apparence de votre nouvel onglet grâce à des images et vidéos sélectionnées, des intégrations Unsplash, des fichiers locaux, des URL distantes, des couleurs unies et des superpositions de textures.
-image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
+description: Personnalisez votre arrière-plan avec des images et vidéos sélectionnées, des fichiers locaux, des URL distantes ou des couleurs unies.
+image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
+import { Aside, Steps } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
 
-Bonjourr permet de personnaliser entièrement votre nouvel onglet avec des arrière-plans à la fois beaux et dynamiques. Que vous préfériez des photos sélectionnées, des vidéos immersives ou vos propres fichiers, plusieurs options permettent d’adapter l’interface à votre style.
+Bonjourr vous permet de personnaliser votre nouvel onglet avec des arrière-plans dynamiques. Choisissez parmi des collections d'images et de vidéos sélectionnées, vos propres fichiers, des URL distantes, des couleurs unies et bien plus.
 
-## Images
+![Une configuration minimaliste de Bonjourr avec une horloge et un arrière-plan épuré](@assets/documentation/customisation/backgrounds.png)
 
-Bonjourr propose plusieurs façons de personnaliser l’arrière-plan avec des images.
+## Images {#images}
 
-### Bonjourr Daylight
+Utilisez vos propres sources d'images ou laissez Bonjourr vous proposer des photographies sélectionnées grâce à Unsplash.
 
-Par défaut, Bonjourr utilise l’API [Unsplash](https://unsplash.com/developers) pour afficher des arrière-plans via une fonctionnalité appelée Bonjourr Daylight. Les images sont sélectionnées manuellement et réparties en quatre collections selon le moment de la journée :
+### Bonjourr Daylight {#bonjourr-daylight-images}
 
-- Une pour [le matin](<https://unsplash.com/collections/GD4aOSg4yQE/bonjourr-backgrounds-(noon)>) (environ 2h autour du lever du soleil).
+Par défaut, Bonjourr utilise l'[API Unsplash](https://unsplash.com/developers) pour récupérer ses arrière-plans grâce à une fonctionnalité appelée Bonjourr Daylight. Les images sont sélectionnées manuellement dans quatre collections qui changent selon le moment de la journée :
+
+- Une pour [le matin](<https://unsplash.com/collections/GD4aOSg4yQE/bonjourr-backgrounds-(noon)>) (2 heures autour du lever du soleil).
 - Une pour [la journée](<https://unsplash.com/collections/o8uX55RbBPs/bonjourr-backgrounds-(day)>).
-- Une pour [le soir](<https://unsplash.com/collections/3M2rKTckZaQ/bonjourr-backgrounds-(evening)>) (environ 2h autour du coucher du soleil).
+- Une pour [le soir](<https://unsplash.com/collections/3M2rKTckZaQ/bonjourr-backgrounds-(evening)>) (2 heures autour du coucher du soleil).
 - Et une pour [la nuit](<https://unsplash.com/collections/bHDh4Ae7O8o/bonjourr-backgrounds-(night)>).
 
-### Collections Unsplash
+<Aside type="tip">Faites un clic droit sur la page pour passer à l'arrière-plan suivant.</Aside>
 
-Il est possible d’utiliser n’importe quelle collection Unsplash comme source d’arrière-plan dans Bonjourr. Cela permet de créer ses propres sélections d’images.
+### Collections Unsplash {#unsplash-collections}
 
-Pour cela :
+Vous pouvez utiliser n'importe quelle collection Unsplash comme source d'arrière-plans dans Bonjourr. Cela vous permet de sélectionner soigneusement vos propres images depuis Unsplash.
 
-1. Trouver une collection sur [unsplash.com](https://unsplash.com), en recherchant un thème puis en allant dans l’onglet Collections.
-2. Ouvrir la collection choisie et récupérer son URL. L’élément important est l’ID, c’est-à-dire la suite de lettres et chiffres. Par exemple, dans `https://unsplash.com/collections/2170139/wolfdogs-of-unsplash`, l’ID est `2170139`.
-3. Dans Bonjourr, après avoir activé [**Afficher tous les réglages**](/docs/quick-guide/#i-think-some-options-are-missing-what-do-i-do), coller cet ID dans le champ **Collection Unsplash**. Plusieurs collections peuvent être ajoutées en les séparant par une virgule.
+<LazyVideo src="/documentation/customisation/custom-unsplash-collection.mp4" autoplay={false} />
 
-<LazyVideo src="/documentation/overview/custom-unsplash-collection.webm" autoplay={false} />
+<Steps>
+1. #### Trouvez une collection Unsplash
 
-### Recherche Unsplash
+   Rendez-vous sur <a href="https://unsplash.com/">**unsplash.com**</a>, recherchez un sujet qui vous intéresse, puis ouvrez l'onglet **Collections** et choisissez une collection.
 
-Si un thème précis est en tête, la recherche Unsplash permet de laisser la plateforme trouver automatiquement des images correspondantes. Plusieurs mots-clés peuvent être ajoutés en les séparant par une virgule.
+2. #### Copiez l'identifiant de la collection
 
-## Vidéos
+   L'identifiant de la collection fait partie de l'URL. Par exemple, si l'URL est :
 
-Grâce à la bibliothèque gratuite de [Pixabay](https://pixabay.com/), Bonjourr permet d’utiliser des vidéos en arrière-plan. Elles apportent un rendu plus vivant et dynamique qu’une image fixe.
+   `https://unsplash.com/collections/2170139/wolfdogs-of-unsplash`,
 
-Les vidéos demandent toutefois plus de ressources : elles peuvent ralentir certains appareils et consommer davantage de batterie. Une connexion internet rapide est également recommandée.
+   alors l'identifiant de la collection est : `2170139`
 
-Par ailleurs, aucune image générée par IA n’est volontairement intégrée aux collections. Si un contenu de ce type est détecté, il peut être signalé par email à [bonjourr.app@protonmail.com](mailto:bonjourr.app@protonmail.com) afin d’être retiré.
+3. #### Collez l'identifiant dans Bonjourr
 
-### Bonjourr Daylight
+   Dans Bonjourr, activez **Afficher tous les réglages** en haut du panneau des réglages. Collez l'identifiant de la collection dans le champ **Collection Unsplash**. Vous pouvez utiliser plusieurs collections en séparant leurs identifiants par des virgules.
 
-Comme pour les [images](/docs/customisation/backgrounds/#bonjourr-daylight), Bonjourr propose également des vidéos sélectionnées qui changent selon le moment de la journée.
+</Steps>
 
-### Recherche Pixabay
+### Recherche Unsplash {#unsplash-search}
 
-De la même manière que la recherche Unsplash, il est possible de saisir des mots-clés pour récupérer des vidéos depuis Pixabay.
+Si vous avez un thème en tête, vous pouvez utiliser la fonction Recherche Unsplash et laisser Unsplash faire le travail : saisissez simplement un mot-clé et Bonjourr récupérera des arrière-plans associés à ce dernier. Vous pouvez même en définir plusieurs en les séparant par une virgule.
 
-## Fichiers locaux
+### URL {#urls}
 
-L’option fichiers locaux permet d’utiliser directement des images ou vidéos présentes sur votre appareil.
+L'option URL est une autre façon d'importer vos propres images dans Bonjourr, mais au lieu de les avoir sur votre ordinateur, vous les récupérez depuis un serveur distant.
 
-Cliquez sur <kbd>+ Ajouter</kbd> pour importer des fichiers depuis votre ordinateur. La plupart des formats image et vidéo sont supportés, et les doublons sont gérés automatiquement.
+<SmallDocsImage>
+	![Option des URL d'arrière-plan de Bonjourr](@assets/documentation/customisation/background-urls.png)
+</SmallDocsImage>
 
-<img
-	src="/documentation/overview/local-files.png"
-	alt="Section fichiers locaux de Bonjourr"
-	loading="lazy"
-	style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
-/>
+Cette option est idéale si vous recherchez **davantage de flexibilité**. Si vous êtes un utilisateur avancé, vous pouvez par exemple configurer une URL dynamique dont les arrière-plans changent selon vos préférences exactes, comme certaines heures de la journée ou certains mois.
 
-En sélectionnant un fichier puis en cliquant sur <bjrbtn>Options</bjrbtn>, il est possible d’ajuster individuellement le positionnement, la taille et la vitesse de lecture. Réduire le zoom au minimum permet un ajustement automatique de la taille.
+L'option URL d'arrière-plan possède un autre avantage par rapport aux Fichiers locaux : elle peut être synchronisée entre navigateurs.
 
-L’inconvénient des fichiers locaux est qu’ils ne peuvent pas être synchronisés entre appareils, en raison de limitations techniques et de sécurité imposées par les navigateurs.
+## Vidéos {#videos}
 
-## URLs
+Grâce à la bibliothèque de vidéos gratuites de [Pixabay](https://pixabay.com/), Bonjourr vous permet de définir des vidéos comme arrière-plans. Les arrière-plans vidéo ajoutent du mouvement à votre nouvel onglet, mais ils demandent davantage de puissance de calcul que les images et peuvent augmenter la consommation de batterie.
 
-L’option URLs permet d’utiliser des images distantes hébergées sur un serveur.
+De plus, nous faisons notre possible pour ne jamais intégrer de contenu généré par IA dans nos collections d'arrière-plans. Si du contenu généré par IA venait à passer entre les mailles du filet, n'hésitez pas à nous le signaler [par e-mail](mailto:bonjourr.app@protonmail.com) et nous le retirerons volontiers.
 
-<img
-	src="/documentation/overview/background-urls.png"
-	alt="Option URLs des arrière-plans dans Bonjourr"
-	loading="lazy"
-	style="max-width: 400px; margin-inline: auto; margin-block: 2em; display: block;"
-/>
+### Bonjourr Daylight {#bonjourr-daylight-videos}
 
-Cette option offre davantage de flexibilité. Il est par exemple possible de créer une URL dynamique pour changer les arrière-plans selon l’heure, le jour ou d’autres critères.
+Tout comme [pour les images](/fr/docs/customisation/backgrounds/#bonjourr-daylight), Bonjourr propose également des arrière-plans vidéo sélectionnés qui changent selon le moment de la journée.
 
-Autre avantage par rapport aux fichiers locaux : cette option peut être synchronisée entre navigateurs.
+### Recherche Pixabay {#pixabay-search}
 
-## Couleur unie
+Comme pour la [Recherche Unsplash](#unsplash-search), vous pouvez saisir des mots-clés dans Bonjourr pour récupérer des vidéos correspondantes depuis la bibliothèque de Pixabay.
 
-L’option couleur unie permet de définir une couleur fixe comme arrière-plan, pour une interface minimaliste.
+## Fichiers locaux (images et vidéos) {#local-files}
 
-## Superposition de texture
+L'option Fichiers locaux vous permet facilement de définir des images ou vidéos de votre appareil comme arrière-plans dans Bonjourr.
 
-Les textures sont des couches appliquées par-dessus l’arrière-plan. Plusieurs styles sont disponibles et fonctionnent particulièrement bien sur des images floutées ou des couleurs unies.
+Cliquez sur <kbd>+ Ajouter</kbd> pour importer des fichiers depuis votre ordinateur. La plupart des formats vidéo et image sont pris en charge, et Bonjourr gérera les doublons si nécessaire.
 
-La plupart des textures peuvent être personnalisées (couleur, opacité, densité) afin d’obtenir un rendu adapté.
+<LazyVideo src="/documentation/customisation/local-files-video-gif.mp4" />
 
-## Temps de fondu
+En sélectionnant une image ou une vidéo puis en cliquant sur « Options », vous pouvez ajuster individuellement le positionnement, la taille et la vitesse de lecture de chaque fichier. Réduire le zoom au minimum définit automatiquement la taille.
 
-Il est possible de régler la vitesse d’apparition des arrière-plans lors de l’ouverture d’un nouvel onglet. Les arrière-plans unis apparaissent instantanément (0 ms). Une durée trop faible peut provoquer un effet de clignotement si l’image n’a pas encore été chargée.
+<Aside type="caution">
+	**Les fichiers locaux ne sont pas synchronisés entre les appareils et ne sont pas inclus dans le fichier d'exportation.** Si vous avez besoin de synchronisation, utilisez plutôt l'option <a href="#urls">URL</a>.
+</Aside>
+
+
+## Couleur unie {#solid-color}
+
+L'option Couleur unie vous permet de choisir une couleur spécifique pour votre arrière-plan si vous souhaitez garder une apparence particulièrement minimaliste.
+
+## Texture {#texture-overlay}
+
+Les textures sont des motifs décoratifs appliqués par-dessus n'importe quel arrière-plan. Il en existe de nombreux types à essayer, et elles rendent généralement mieux sur un arrière-plan flouté ou une couleur unie.
+
+![Présentation des possibilités offertes par les textures de Bonjourr](@assets/documentation/customisation/textures.png)
+
+La plupart des textures peuvent être modifiées grâce à leur couleur, leur opacité et leur densité afin d'obtenir le résultat parfait.
+
+## Temps de fondu {#fade-in-time}
+
+Contrôlez la durée du fondu d'apparition de l'arrière-plan lors de l'ouverture d'un nouvel onglet.
+
+Régler le curseur au minimum désactive la transition. Cela peut provoquer un bref scintillement pendant le chargement des arrière-plans image et vidéo.
+
+<Aside type="note">Comme ils n'ont pas besoin d'être chargés, les arrière-plans en couleur unie s'affichent toujours instantanément.</Aside>

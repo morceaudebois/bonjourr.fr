@@ -2,24 +2,11 @@
 import CustomOpenSearch from "./CustomOpenSearch.astro"
 import Link from "./Link.astro"
 import Sidebar from "@astrojs/starlight/components/Sidebar.astro"
-const isFrench = Astro.url.pathname.startsWith("/fr")
-const path = Astro.url.pathname
-import LanguageSelect from '../components/LanguageSelect.astro';
-const en = {
-	Home: "Home",
-	Donate: "Donate",
-	Try: "Try online",
-	Install: "Install on",
-	Socials: "Socials",
-}
-const fr = {
-	Home: "Accueil",
-	Donate: "Dons",
-	Try: "Démo en ligne",
-	Install: "Installer sur",
-	Socials: "Réseaux sociaux",
-}
-const trans = isFrench ? fr : en
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import LanguageSelect from "../components/LanguageSelect.astro"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 let isStarlightPage = false
 try {
@@ -34,13 +21,15 @@ try {
 	<div class="container">
 		<ul class="links nav-left desktop-nav">
 			<li>
-				<Link href="/docs" title="Documentation">Docs</Link>
+				<Link href="/docs" title={t("Documentation")}>{t("Docs")}</Link>
 			</li><li>
-				<Link href="/#blog" title="Blog">Blog</Link>
+				<Link href="/#blog" title={t("Blog")}>{t("Blog")}</Link>
 			</li><li>
-				<Link href="/#further" title="Get in touch">Contact</Link>
+				<Link href="/#further" title={t("Get in touch")}>{t("Contact")}</Link>
 			</li><li>
-				<a href="https://ko-fi.com/bonjourr" title="Support us on Ko-Fi">{trans.Donate}</a>
+				<a href="https://ko-fi.com/bonjourr" title={t("Support us on Ko-Fi")}
+					>✨ {t("Donate")} ✨</a
+				>
 			</li>
 		</ul>
 
@@ -53,7 +42,7 @@ try {
 				<li>
 					<a
 						href="https://discord.gg/CCAR9J4qVg"
-						title="Bonjourr's Discord server"
+						title={t("Bonjourr's Discord server")}
 						rel="me"
 					>
 						<svg
@@ -70,7 +59,7 @@ try {
 
 					<a
 						href="https://bsky.app/profile/bonjourr.fr"
-						title="Join us on Bluesky"
+						title={t("Join us on Bluesky")}
 						rel="me"
 					>
 						<svg
@@ -90,7 +79,7 @@ try {
 					</a>
 				</li>
 				<li>
-					<a href="https://twitter.com/BonjourrTeam" title="Join us on Twitter">
+					<a href="https://twitter.com/BonjourrTeam" title={t("Join us on Twitter")}>
 						<svg
 							viewBox="0 0 300.00006 244.18703"
 							xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +93,7 @@ try {
 				</li><li>
 					<a
 						href="https://github.com/victrme/Bonjourr"
-						title="Our GitHub repository"
+						title={t("Our GitHub repository")}
 						rel="me"
 					>
 						<svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
@@ -119,13 +108,13 @@ try {
 					</a>
 				</li>
 			</ul>
-			
+
 			<LanguageSelect {...Astro.props} />
 		</div>
 
 		{isStarlightPage ? <CustomOpenSearch /> : ""}
 
-		<button class="hamburger" aria-label="Open navigation menu" open-button>
+		<button class="hamburger" aria-label={t("Open navigation menu")} open-button>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -140,7 +129,7 @@ try {
 	<div class="overlay"></div>
 
 	<aside tabindex="-1">
-		<button aria-label="Close navigation menu" close-button>
+		<button aria-label={t("Close navigation menu")} close-button>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -152,51 +141,41 @@ try {
 		<nav>
 			<ul class="links">
 				<li>
-					<Link href="/" id="homeLink" title="Homepage">{trans.Home}</Link>
+					<Link href="/" id="homeLink" title={t("Homepage")}>{t("Home")}</Link>
 				</li>
 				<li>
-					<a href="https://online.bonjourr.fr">{trans.Try}</a>
+					<a href="https://online.bonjourr.fr">{t("Try")}</a>
 				</li>
 
-				{
-					isStarlightPage ? (
-						<li>
-							<Link href="/docs" title="Documentation">
-								Documentation
-							</Link>
-						</li>
-						
-						<Sidebar />
-					) : (
-						<li>
-							<Link href="/docs" title="Documentation">
-								Documentation
-							</Link>
-						</li>
-					)
-				}
+				<li>
+					<Link href="/docs" title={t("Documentation")}>
+						{t("Documentation")}
+					</Link>
+				</li>
+
+				{isStarlightPage ? <Sidebar /> : ""}
 
 				<li>
-					<Link href="/blog" title="Blog">Blog</Link>
+					<Link href="/#blog" title={t("Blog")}>{t("Blog")}</Link>
 				</li>
 				<li>
-					<Link href="/#further" title="Get in touch">Contact</Link>
+					<Link href="/#further" title={t("Get in touch")}>{t("Contact")}</Link>
 				</li>
 				<li>
-					<a href="https://ko-fi.com/bonjourr" title="Support us on Ko-Fi">
+					<a href="https://ko-fi.com/bonjourr" title={t("Support us on Ko-Fi")}>
 						<img src="/frontpage/ko-fi.svg" alt="" />
-						<span>{trans.Donate}</span>
+						<span>{t("Donate")} ✨</span>
 					</a>
 				</li>
 			</ul>
 
-			<h2>{trans.Install}</h2>
+			<h2>{t("Install")}</h2>
 
 			<ul>
 				<li>
 					<a
 						href="https://addons.mozilla.org/firefox/addon/bonjourr-startpage/"
-						title="Download for Firefox"
+						title={t("Download for Firefox")}
 					>
 						<img src="/browsers/firefox.svg" alt="" />
 						<span>Firefox</span>
@@ -205,14 +184,14 @@ try {
 				<li>
 					<a
 						href="https://chrome.google.com/webstore/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd"
-						title="Download Bonjourr for Chrome"
+						title={t("Download Bonjourr for Chrome")}
 					>
 						<img src="/browsers/chrome.svg" alt="" />
 						<span>Chrome</span>
 					</a>
 				</li>
 				<li>
-					<a href="/docs#-safari-macos" title="Install Bonjourr on Safari">
+					<a href="/docs#-safari-macos" title={t("Install Bonjourr on Safari")}>
 						<img src="/browsers/safari.svg" alt="" />
 						<span>Safari</span>
 					</a>
@@ -220,7 +199,7 @@ try {
 				<li>
 					<a
 						href="https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid"
-						title="Download Bonjourr for Edge"
+						title={t("Download Bonjourr for Edge")}
 					>
 						<img src="/browsers/edge.svg" alt="" />
 						<span>Edge</span>
@@ -228,13 +207,13 @@ try {
 				</li>
 			</ul>
 
-			<h2>{trans.Socials}</h2>
+			<h2>{t("Socials")}</h2>
 
 			<ul>
 				<li>
 					<a
 						href="https://discord.gg/CCAR9J4qVg"
-						title="Bonjourr's Discord server"
+						title={t("Bonjourr's Discord server")}
 						rel="me"
 					>
 						<img src="/frontpage/discord.svg" alt="Discord icon" />
@@ -244,7 +223,7 @@ try {
 				<li>
 					<a
 						href="https://bsky.app/profile/bonjourr.fr"
-						title="Join us on Bluesky"
+						title={t("Join us on Bluesky")}
 						rel="me"
 					>
 						<img src="/frontpage/bluesky-blue.svg" alt="Bluesky icon" />
@@ -254,8 +233,7 @@ try {
 				<li>
 					<a
 						href="https://github.com/victrme/Bonjourr"
-						title="Our GitHub repository"
-						rel="me"
+						title={t("Our GitHub repository")}
 					>
 						<picture>
 							<source
@@ -274,7 +252,7 @@ try {
 				</li>
 
 				<li>
-					<a href="https://twitter.com/BonjourrTeam" title="Joins us on Twitter">
+					<a href="https://twitter.com/BonjourrTeam" title={t("Join us on Twitter")}>
 						<img src="/frontpage/twitter.svg" alt="Twitter icon" />
 						<span>Twitter</span>
 					</a>
@@ -363,7 +341,7 @@ try {
 	}
 
 	.hamburger svg {
-		height: 2.5em;
+		height: 2em;
 	}
 
 	button[open-button] {
@@ -387,7 +365,7 @@ try {
 	}
 
 	button svg {
-		width: 2.5em;
+		width: 2em;
 		filter: drop-shadow(0 1px 0 rgb(0 0 0 / 0.2));
 	}
 
@@ -403,7 +381,7 @@ try {
 		justify-content: space-between;
 		max-width: 1200px;
 		margin: auto;
-		padding: 3em 4em;
+		padding: 3em 1.5rem;
 	}
 
 	nav ul {
@@ -443,12 +421,13 @@ try {
 		width: 100%;
 		max-width: 40vw;
 		flex: 1;
+		line-height: 3rem;
 	}
 
 	nav .nav-center {
 		font-size: 30px;
 		font-weight: 400;
-		flex: 0.2;
+		flex: 0.1;
 		text-align: center;
 	}
 
@@ -468,8 +447,8 @@ try {
 
 	nav a {
 		font-weight: 500;
-		padding: 8px 12px;
-		border-radius: 8px;
+		padding: 6px 10px;
+		border-radius: 10px;
 		transition:
 			background-color 0.075s ease-in,
 			backdrop-filter 0.075s ease-in,
@@ -538,11 +517,21 @@ try {
 		aside button {
 			color: #555;
 		}
+
+		:global(aside lang-select label),
+		:global(aside lang-select select) {
+			color: #555;
+		}
+
+		:global(aside lang-select label:hover),
+		:global(aside lang-select select:hover) {
+			color: black;
+		}
 	}
 
-	@media only screen and (max-width: 900px) {
+	@media only screen and (max-width: 1000px) {
 		nav .container {
-			padding: 3em 2em;
+			padding: 3em 0.5rem;
 		}
 
 		button[open-button] {
@@ -551,7 +540,6 @@ try {
 
 		nav .container {
 			padding: 0;
-			padding-inline: 1.5rem;
 			padding: 1.5rem 1rem;
 			display: flex;
 			justify-content: flex-end;

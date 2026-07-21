@@ -1,0 +1,48 @@
+{
+	"about": {
+		"version": "22.3.0"
+	},
+	"showall": true,
+	"dark": "enable",
+	"favicon": "🕷",
+	"greeting": "Hornet",
+	"greetingsize": "1.5",
+	"greetingsmode": "custom",
+	"textShadow": 0.5,
+	"css": ":root {\n  /* blue accents all over (only rgb values) */\n  --accent-color: 191 45 50;\n\n  /* settings toggles (only rgb values) */\n  --color-green: 175 85 37;\n}\n\n@font-face {\n    font-family: 'Trajan Pro';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Trajan Pro'), url('https://fonts.cdnfonts.com/s/14928/TrajanPro-Regular.woff') format('woff');\n    /* this fixes txhe bad baseline*/\n    ascent-override: 110%;\n}\n\n@font-face {\n    font-family: 'Trajan Pro';\n    font-style: bold;\n    font-weight: 700;\n    src: local('Trajan Pro'), url('https://fonts.cdnfonts.com/s/14928/TrajanPro-Bold.woff') format('woff');\n}\n\n@font-face {\n    font-family: 'Perpetua';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Perpetua'), url('https://cdn.wikimg.net/en/hkwiki/images/7/74/Perpetua.TTF') format('truetype');\n}\n\n#interface, #pomodoro_container.clone {\n\tfont-family: Trajan Pro;\n}\n\n#quotes_container, #notes_container, #linkblocks, #contextmenu, #weather #description {\n\tfont-family: Perpetua;\n}\n\ndialog#contextmenu {\n    padding: 10px;\n    background-color: #000000d1;\n}\n\n#contextmenu button {\n\tfont-size: 1.1em;\n    border-radius: 1px;\n}\n\n/* custom settings icon */\n#show-settings svg {\n  background-image: url(\"https://i.imgur.com/n6C8rGA.png\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: contain;\n}\n\n#show-settings svg * {\n  display: none;\n}\n\n/* fleur for time */\n.digital:after {\n\tcontent: '';\n\tbackground: url(https://i.imgur.com/pjF5HP7.png) center/contain no-repeat;\n\tdisplay: block;\n\taspect-ratio: 330 / 66;\n\tbackground-repeat: no-repeat;\n}\n\n.link-list {\n\tcolumn-gap: 20px;\n\trow-gap: 70px\n}\n\n.link {\n\tposition: relative;\n\toverflow: visible;\n}\n\n/* fleur for links */\n.link:after {\n\tcontent: \"\";\n\tbackground: url(https://i.imgur.com/gDkXXh8.png) center/contain no-repeat;\n\taspect-ratio: 114 / 163;\n\tdisplay: block;\n\tposition: absolute;\n\twidth: 80px;\n    left: 50%;\n    transform: translateX(-50%) translateY(-50%);\n    top: 50%;\n}\n\n@media (max-height: 900px) {\n    .link:after {\n        width: 64px;\n    }\n}\n\n.link-group.in-folder .link-list {\n\tpadding-block: 50px;\n}\n\n#link-mini {\n\tpadding-top: 3em\n}\n\n#quotes_container {\n\twidth: 63vw;\n\tmax-width: unset;\n} \n\n/* pomodoro */\n#focus-toggle .trn {\n    visibility: hidden;\n    position: relative;\n}\n\n#focus-toggle .trn:after {\n    visibility: visible;\n    position: absolute;\n    top: 0;\n    left: 0;\n    content: \"Bind\";\n}\n\n#notes_container {\n\tposition: relative;\n}\n\n#pocket-editor {\n    padding: 1.5em;\n}\n\n/* top notes fleur */\n#notes_container:before {\n    width: clamp(200px, 40vw, 400px);\n    aspect-ratio: 79 / 10;\n    background: url(https://i.imgur.com/4Bja4E1.png);\n    top: -1.35rem;\n}\n\n/* bottom notes fleur */\n#notes_container:after {\n    width: clamp(100px, 30vw, 300px);\n    aspect-ratio: 417 / 34;\n    background: url(https://i.imgur.com/BnbjKyH.png);\n    bottom: -0.75rem;\n}\n\n#notes_container:before, #notes_container:after {\n    content: \"\";\n    display: block;\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    position: absolute;\n    left: 50%;\n    transform: translateX(-50%);\n    z-index: 1;\n}\n\n/* dark background that would be blur */\n#pocket-editor, #searchbar-wrapper, #sb-suggestions, #linkblocks .link-folder .link-icon, #linkblocks.backgrounds .link-folder .link-icon, .link-group.in-folder .link-list, dialog {\n    border: 0px;\n    backdrop-filter: unset;\n    box-shadow: unset;\n    background-color: #000000b3;\n}\n\n/* square blur */\n#pocket-editor, #searchbar-wrapper, #sb-suggestions, .link-group.in-folder .link-list, dialog {\n    border-radius: 1px;\n            /* blurry edges */\n    -webkit-mask-image:\n        linear-gradient(to top,    transparent, black 3px),\n        linear-gradient(to bottom, transparent, black 3px),\n        linear-gradient(to left,   transparent, black 3px),\n        linear-gradient(to right,  transparent, black 3px);\n    mask-image:\n        linear-gradient(to top,    transparent, black 3px),\n        linear-gradient(to bottom, transparent, black 3px),\n        linear-gradient(to left,   transparent, black 3px),\n        linear-gradient(to right,  transparent, black 3px);\n\n    mask-composite: intersect;\n    -webkit-mask-composite: source-in;\n}\n\n/* round blur (links) */\n#linkblocks .link-folder .link-icon, #linkblocks.backgrounds .link-folder .link-icon {\n    mask-image: radial-gradient(\n        closest-side,\n        black calc(100% - 3px),\n        transparent\n    );\n\n    -webkit-mask-image: radial-gradient(\n        closest-side,\n        black calc(100% - 3px),\n        transparent\n    );\n\n}\n\n/* adds logo to the searchbar */\n#searchbar {\n  background: url(https://i.imgur.com/gMKSMMa.png) no-repeat 15px center;\n  background-size: 23px;\n  padding-left: 47px;\n}\n\n#sb_container {\n    box-shadow: unset;\n    border-radius: unset;\n}\n\n#searchbar-wrapper {\n    padding: 5px;\n}\n\n/* credits */\n#made-in:after {\n    content: \"— Silksong theme by Tahoe —\\A\"\n    \"Silksong and all related artwork belong to Team Cherry.\";\n    white-space: pre-line;\n    display: block;\n    margin-top: 10px;\n    font-weight: bold;\n}",
+	"clock": {
+		"size": 1,
+		"analog": false
+	},
+	"linkstyle": "medium",
+	"linktitles": false,
+	"linkbackgrounds": true,
+	"linksrow": 6,
+	"linkiconradius": "2.4",
+	"backgrounds": {
+		"type": "urls",
+		"fadein": 300,
+		"blur": 0,
+		"bright": 0.79,
+		"urls": "https://i.imgur.com/L2A3CSw.jpeg\nhttps://i.imgur.com/JB89hIp.jpeg\nhttps://i.imgur.com/wKJrBSj.jpeg",
+		"images": "bonjourr-images-daylight",
+		"videos": "bonjourr-videos-daylight"
+	},
+	"greetingscustom": {
+		"morning": "Awake. The journey resumes.",
+		"afternoon": "The path of Pharloom unfolds.",
+		"evening": "The world quiets, but the thread remains.",
+		"night": "Silence wraps the Citadel."
+	},
+	"searchbar": {
+		"placeholder": "Search the web"
+	},
+	"quotes": {
+		"type": "user",
+		"author": true,
+		"userlist": "From \"Pharloom's Folly\" by the Conductor Romino, They see your beauty, so frail and fine,\\nThey see your peace, woven of faith and toil,\\nThey forget your heart, bound in slumber and servitude,\\nWhen you wake they shall see your truth,\\nA beast's nature bare to all.,\nFrom \"Elegy for Hallownest\" by Monomon the Teacher, In wilds beyond they speak your name with reverence and regret,\\nFor none could tame our savage souls yet you the challenge met,\\nUnder palest watch, you taught, we changed, base instincts were redeemed,\\nA world you gave to bug and beast as they had never dreamed."
+	},
+	"font": {
+		"size": "14"
+	}
+}

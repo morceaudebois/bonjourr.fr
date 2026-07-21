@@ -1,21 +1,60 @@
 ---
-title: 🌤️ Météo
-description: Les réglages météo permettent d’afficher les conditions actuelles selon votre localisation et, si besoin, d’accéder à des prévisions détaillées via des services externes.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+title: 🌤️ Météo & bienvenue
+description: Affichez la météo actuelle selon votre localisation et personnalisez les messages de bienvenue affichés dans vos nouveaux onglets.
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
 import LazyVideo from "@components/LazyVideo.astro"
+import { Aside, LinkCard } from "@astrojs/starlight/components"
 
-La géolocalisation précise nécessite l’accès à la position de votre appareil. Certains navigateurs ou systèmes peuvent bloquer cette autorisation selon les réglages de confidentialité. macOS / Safari pose parfois problème à ce niveau.
+## Météo {#weather}
 
-Si plusieurs villes portent le même nom dans un pays, cela peut entraîner des erreurs. Dans ce cas, il est conseillé de choisir la ville la plus proche avec un nom unique.
+Faites un clic droit sur le widget Météo & bienvenue pour ouvrir ses réglages. Vous pourrez notamment modifier la géolocalisation, les unités de température, la façon dont Bonjourr vous accueille et quelques autres options.
 
-Bonjourr ne propose pas encore de bouton de rafraîchissement manuel pour la météo. Il est toutefois possible de forcer une mise à jour en alternant les unités (Celsius → Fahrenheit → Celsius).
+![Widget météo et bienvenue légèrement personnalisé dans Bonjourr](@assets/documentation/widgets/weather.png)
 
-### Météo détaillée
+### Géolocalisation {#geolocation}
 
-La **météo détaillée** permet d’accéder rapidement à un site météo externe pour consulter un rapport plus complet. Une fois activée, un clic sur le widget météo ouvre directement le service choisi.
+#### Approximative {#approximate}
 
-<LazyVideo src="/documentation/overview/weather-report.webm" autoplay={false} />
+Géolocalisation basée sur l'adresse IP, pas très précise mais suffisante dans la plupart des cas et **ne nécessitant aucune autorisation.**
 
-⚠️ Bonjourr n’est affilié à aucun de ces services (MSN, AccuWeather, Yahoo! ou Windy.com). Ces sites utilisent des sources de données différentes, ce qui explique les choix proposés.
+#### Précise {#precise}
+
+Géolocalisation plus précise mais **nécessitant une autorisation.** Certains navigateurs (notamment Safari) peuvent avoir des problèmes avec celle-ci, c'est pourquoi nous recommandons de choisir Manuelle à la place.
+
+#### Manuelle {#manual}
+
+Choisissez la ville dont vous souhaitez afficher la météo. C'est probablement le meilleur choix si vous voulez de la précision et que vous ne changez pas souvent de lieu.
+
+<Aside type="note" icon="information" title="Astuce pour les noms de villes ambigus">
+Si plusieurs villes portent le même nom, essayez de sélectionner une ville plus grande à proximité avec un identifiant unique afin d'obtenir des résultats précis.
+</Aside>
+
+### Météo détaillée {#detailed-weather}
+
+La « Météo détaillée » vous permet d'accéder facilement au site d'un fournisseur météo pour obtenir un rapport complet. Une fois activée, vous pouvez cliquer sur le widget météo pour accéder au site de votre choix.
+
+<LazyVideo src="/documentation/widgets/weather-report.mp4" autoplay={false} />
+
+⚠️ **Bonjourr n'est pas affilié** à MSN, AccuWeather, Yahoo! ou Windy.com.
+
+### Personnaliser les icônes météo {#customise-weather-icons}
+
+<LinkCard
+  title="🌤️ Personnaliser vos icônes météo"
+  href="/fr/docs/customisation/styles/#custom-weather-icons"
+  description="Modifiez les couleurs des icônes ou remplacez-les entièrement grâce à du CSS personnalisé."
+/>
+
+## Bienvenue {#greetings}
+
+Personnalisez la façon dont Bonjourr vous accueille tout au long de la journée.
+
+### Message de bienvenue personnalisé {#custom-greeting}
+
+![Showing off Bonjourr's custom greetings](@assets/documentation/widgets/greetings.png)
+
+Passez le mode de bienvenue sur **Personnalisé** pour définir exactement l'affichage des messages. Utilisez la variable `$name` pour insérer automatiquement votre nom configuré.
+
+Exemple : `Bienvenue chez vous, $name !` → `Bienvenue chez vous, Jean !`

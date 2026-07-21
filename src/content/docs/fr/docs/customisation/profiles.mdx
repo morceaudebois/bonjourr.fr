@@ -1,32 +1,37 @@
 ---
 title: Profils
-description: Profils de thème Bonjourr prêts à l’emploi que vous pouvez importer directement dans vos paramètres.
-image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
+description: Des profils de thèmes Bonjourr prêts à l'emploi que vous pouvez importer directement dans vos paramètres.
+image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
-import { Code } from "@astrojs/starlight/components"
-import notmomentum from "@assets/documentation/profiles/not-momentum.json?raw"
-import cyberpunk from "@assets/documentation/profiles/cyberpunk.json?raw"
-import floral from "@assets/documentation/profiles/floral.json?raw"
-import space from "@assets/documentation/profiles/space.json?raw"
+import { Code, LinkButton, Aside } from "@astrojs/starlight/components"
+import notmomentum from "@assets/documentation/customisation/profiles/not-momentum.json?raw"
+import cyberpunk from "@assets/documentation/customisation/profiles/cyberpunk.json?raw"
+import floral from "@assets/documentation/customisation/profiles/floral.json?raw"
+import space from "@assets/documentation/customisation/profiles/space.json?raw"
 
 export const toDataHref = (code) =>
 	`data:application/json;charset=utf-8,${encodeURIComponent(code)}`
 
-_Vous souhaitez proposer votre propre profil personnalisé ?
-[Contactez-nous !](/#contact)_
+<Aside type="tip" title="Partagez votre créativité">
+  Vous voulez votre propre profil personnalisé ici ? [Contactez-nous !](/fr/#contact)
+</Aside>
 
 ## Cyberpunk 2077
 
-L’un des premiers profils personnalisés créés pour Bonjourr, inspiré du jeu à succès de CD Projekt Red. Du CSS a été utilisé pour créer des effets de texte, et une collection Unsplash a été configurée avec une ambiance cyberpunk.
+L'un des premiers profils personnalisés que nous avons créés pour Bonjourr, inspiré du célèbre jeu de CD Projekt Red. Du CSS a été utilisé pour créer des effets de texte amusants, ainsi qu'une collection Unsplash aux ambiances inspirées de Cyberpunk.
 
-<picture>
-	<img src="/documentation/profiles/cyberpunk.webp" alt="Thème Cyberpunk 2077 pour Bonjourr" />
-</picture>
+![Thème Cyberpunk 2077 pour Bonjourr](@assets/documentation/customisation/profiles/cyberpunk.jpeg)
 
-<a href={toDataHref(cyberpunk)} download="bonjourr-profile-cyberpunk.json">
-	Télécharger le fichier d’import
-</a>
+<LinkButton
+	href={toDataHref(cyberpunk)}
+	download="bonjourr-profile-cyberpunk.json"
+	variant="secondary"
+	icon="download"
+	iconPlacement="start"
+>
+	Télécharger le fichier d'importation
+</LinkButton>
 
 <details>
 	<summary>Voir les paramètres bruts</summary>
@@ -35,15 +40,19 @@ L’un des premiers profils personnalisés créés pour Bonjourr, inspiré du je
 
 ## The Space Enthusiast
 
-L’un des profils originaux de Bonjourr, pensé pour les passionnés d’espace. Il utilise la police Space Mono et plusieurs règles CSS pour colorer le texte et adapter la mise en page.
+L'un des premiers profils personnalisés que nous avons créés pour Bonjourr, idéal pour les passionnés d'espace. Il utilise la police Space Mono, au nom approprié, ainsi que plusieurs personnalisations CSS pour colorer le texte et modifier la mise en page.
 
-<picture>
-	<img src="/documentation/profiles/space.webp" alt="Thème Space pour Bonjourr" />
-</picture>
+![Thème Space pour Bonjourr](@assets/documentation/customisation/profiles/space.jpeg)
 
-<a href={toDataHref(space)} download="bonjourr-profile-space.json">
-	Télécharger le fichier d’import
-</a>
+<LinkButton
+	href={toDataHref(space)}
+	download="bonjourr-profile-space.json"
+	variant="secondary"
+	icon="download"
+	iconPlacement="start"
+>
+	Télécharger le fichier d'importation
+</LinkButton>
 
 <details>
 	<summary>Voir les paramètres bruts</summary>
@@ -52,15 +61,19 @@ L’un des profils originaux de Bonjourr, pensé pour les passionnés d’espace
 
 ## Floral
 
-L’un des profils originaux de Bonjourr, avec une approche minimaliste et esthétique. Il utilise la police DM Serif Display, quelques ajustements CSS pour les couleurs, ainsi qu’une collection Unsplash dédiée.
+L'un des premiers profils personnalisés que nous avons créés pour Bonjourr. Il est très minimaliste et esthétique. Il utilise la police DM Serif Display avec quelques lignes de CSS pour colorer le texte, ainsi qu'une collection Unsplash personnalisée.
 
-<picture>
-	<img src="/documentation/profiles/floral.webp" alt="Thème Floral pour Bonjourr" />
-</picture>
+![Thème Floral pour Bonjourr](@assets/documentation/customisation/profiles/floral.jpeg)
 
-<a href={toDataHref(floral)} download="bonjourr-profile-floral.json">
-	Télécharger le fichier d’import
-</a>
+<LinkButton
+	href={toDataHref(floral)}
+	download="bonjourr-profile-floral.json"
+	variant="secondary"
+	icon="download"
+	iconPlacement="start"
+>
+	Télécharger le fichier d'importation
+</LinkButton>
 
 <details>
 	<summary>Voir les paramètres bruts</summary>
@@ -69,15 +82,19 @@ L’un des profils originaux de Bonjourr, avec une approche minimaliste et esth�
 
 ## Not Momentum
 
-L’un des profils originaux de Bonjourr, inspiré de l’un de nos anciens concurrents (dans une version plus épurée). Du CSS et une collection Unsplash sont utilisés pour reproduire ce style.
+L'un des premiers profils personnalisés que nous avons créés pour Bonjourr, inspiré par l'un de nos plus anciens concurrents (mais en version plus minimaliste). Du CSS et une collection Unsplash sont utilisés pour reproduire exactement ce style.
 
-<picture>
-	<img src="/documentation/profiles/not-momentum.webp" alt="Thème Not Momentum pour Bonjourr" />
-</picture>
+![Thème Not Momentum pour Bonjourr](@assets/documentation/customisation/profiles/not-momentum.jpeg)
 
-<a href={toDataHref(notmomentum)} download="bonjourr-profile-not-momentum.json">
-	Télécharger le fichier d’import
-</a>
+<LinkButton
+	href={toDataHref(notmomentum)}
+	download="bonjourr-profile-not-momentum.json"
+	variant="secondary"
+	icon="download"
+	iconPlacement="start"
+>
+	Télécharger le fichier d'importation
+</LinkButton>
 
 <details>
 	<summary>Voir les paramètres bruts</summary>

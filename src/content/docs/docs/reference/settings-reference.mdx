@@ -1,7 +1,7 @@
 ---
 title: Settings reference
-description: Bonjourr's settings are stored in JSON formatting, which you can see in the settings management section. Use this page to know which JSON property refers to what. Last updated for version 22.0.0
-image: /documentation/backgrounds/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
+description: Reference of Bonjourr's JSON settings structure, including available properties and their values.
+image: /documentation/docs-headers/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
 ---
 
 import { Code } from "astro-expressive-code/components"
@@ -20,21 +20,23 @@ import moveitems from "@assets/documentation/reference/moveitems.txt?raw"
 import linkselem from "@assets/documentation/reference/linkselem.txt?raw"
 import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 
-## General
+_Last updated for version 22.0.0_
+
+## General {#general}
 
 <Code lang="jsonc" code={general} />
 
-## Backgrounds
+## Backgrounds {#backgrounds}
 
 Collections names in "images" & "videos" are tied to our server and cannot be changed or guessed.
 
 <Code lang="jsonc" code={backgrounds} />
 
-## Clock
+## Clock {#clock}
 
 <Code lang="jsonc" code={clock} />
 
-## Links
+## Links {#links}
 
 General settings for quick links.
 
@@ -44,37 +46,37 @@ When adding a quick link
 
 <Code lang="jsonc" code={linkselem} />
 
-## Notes, Search bar, and Quotes
+## Notes, Search bar, and Quotes {#notes-search-bar-and-quotes}
 
 These widgets behave pretty similarly: basic key-val.
 
 <Code lang="jsonc" code={notes} />
 
-## Pomodoro
+## Pomodoro {#pomodoro}
 
 <Code lang="jsonc" code={pomodoro} />
 
-## Fonts
+## Fonts {#fonts}
 
-Most fields in fonts are set automatically by Bonjourr and cannot easily be modified manually.
+Most fields in fonts are set **automatically** by Bonjourr and _cannot easily_ be modified manually.
 
 <Code lang="jsonc" code={fonts} />
 
-## Weather
+## Weather {#weather}
 
 <Code lang="jsonc" code={weather} />
 
-## Greetings
+## Greetings {#greetings}
 
 <Code lang="jsonc" code={greetings} />
 
-## Hide
+## Hide {#hide}
 
 Specify which element on the page you want to hide.
 
 <Code lang="jsonc" code={hide} />
 
-## Page layout
+## Page layout {#page-layout}
 
 Page layouts are pretty complex. Grids are tables, items are widget alignments.
 

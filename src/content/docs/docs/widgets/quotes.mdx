@@ -1,13 +1,17 @@
 ---
 title: 🗣 Quotes
-description: Quotes lets you display inspirational or humorous quotes from multiple built-in sources, or import your own custom quotes via local input or remote CSV files.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+description: Display inspirational, humorous, or custom quotes from built-in sources or your own collections.
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
-import { Code } from "@astrojs/starlight/components"
+import { Code, Aside, Steps } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-The quotes widget can fetch quotes from multiple sources:
+![Firefox informs you about which extension is creating the page](@assets/documentation/widgets/quotes.png)
+
+## Quote types {#quote-types}
+
+The quotes widget can fetch quotes from multiple sources using the __Quotes type__ option:
 
 - By default, our **[open source quotes API](https://github.com/victrme/i18n-quotes)** available in multiple languages. These are general motivational or inspirational quotes that the community can manage through pull requests.
 - The **[InspiroBot](https://inspirobot.me/) API**, an old school AI that generates seemingly inspirational quotes, but with a humorous twist. It parodies traditional motivational quotes from the point of view of an AI. Although we are not affiliated with InspiroBot, we've always found this service fun and thought it'd be nice to have it in Bonjourr. It is important to note that it's at least 10 years old and <u>**has nothing to do with the recent generative AI trend**</u>.
@@ -17,7 +21,9 @@ The quotes widget can fetch quotes from multiple sources:
 - **Custom**, add your own quotes directly from Bonjourr's UI.
 - **URL**, add quotes from a remote CSV file.
 
-### Importing your own quotes
+<Aside type="tip">Right-click on the quotes widget to skip to the next one.</Aside>
+
+### Importing your own quotes {#importing-your-own-quotes}
 
 There are two ways you can import your own quotes: directly from Bonjourr, or from a remote URL. In both cases, here is the formatting your quotes need to adopt:
 
@@ -26,24 +32,45 @@ There are two ways you can import your own quotes: directly from Bonjourr, or fr
 	lang="json"
 />
 
-#### With the custom quotes option
+#### With the custom quotes option {#with-the-custom-quotes-option}
 
 Once the custom quotes option is selected, you can simply add quotes to it by respecting the formatting shown above.
 
 This option is limited to 8kB of text, which is about 50 regularly sized quotes. This is because Bonjourr uses [storage.sync](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) to store data, and each object is limited to 8kB. **If you need more quotes, we advise using the URL option instead.**
 
-#### With the URL option (CSV file)
+#### With the URL option (CSV file) {#with-the-url-option-csv-file}
 
 Select the URL option to link Bonjourr to the direct URL of a CSV file that contains all your quotes.
 
 The easiest way to do this is to use GitHub Gist, a service that allows you to very easily create and host a file:
 
-1. Create an account [on GitHub](https://github.com) if you don't already have one, and log in.
-2. Head to the [GitHub Gist page.](https://gist.github.com/)
-3. Give your file a description, like "My Bonjourr quotes".
-4. Give it a filename, like `bonjourr_quotes.csv`. It can be anything as long as it ends with `.csv`.
-5. Start typing your quotes with the formatting shown above (you'll be able to edit them later if you want).
-6. Once done, you can hit the **Create secret gist** button. It will save the file and show you what it looks like as a table.
-7. Click the <kbd>Raw</kbd> button, copy the URL of the page that opens and paste it in the URL input of Bonjourr. Voilà!
+<LazyVideo src="/documentation/widgets/quotes-gist.mp4" autoplay={false} />
 
-<LazyVideo src="/documentation/overview/quotes-gist.webm" autoplay={false} />
+<Steps>
+1. #### Create a GitHub account
+
+   Create an account [on GitHub](https://github.com) if you don't already have one, and log in.
+
+2. #### Create a GitHub Gist
+
+   Head to the [GitHub Gist page](https://gist.github.com/).
+
+   Give your file a description, like `My Bonjourr quotes`, and choose a filename like `bonjourr_quotes.csv`. It can be anything as long as it ends with `.csv`.
+
+3. #### Add your quotes
+
+   Start typing your quotes using [the formatting shown above](#importing-your-own-quotes). You’ll be able to edit them later if you want.
+
+4. #### Create the Gist
+
+   Once done, hit the **Create secret gist** button. It will save the file and show you what it looks like as a table.
+
+5. #### Copy the raw URL
+
+   Click the <kbd>Raw</kbd> button and copy the URL of the page that opens.
+
+6. #### Add it to Bonjourr
+
+   Paste the URL into the "URL" input in Bonjourr. Voilà!
+
+</Steps>

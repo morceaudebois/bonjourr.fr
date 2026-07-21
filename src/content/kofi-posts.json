@@ -14,10 +14,17 @@
 		"pubDate": "2025-12-15"
 	},
 	{
-		"title": " Bonjourr 21: the background update 🖼️",
+		"title": "Bonjourr 21: the background update 🖼️",
 		"description": "Bonjourr 21 overhauls backgrounds with new customization tools and improved visual flexibility.",
 		"url": "https://ko-fi.com/post/Bonjourr-21-the-background-update-R6R61FLG0Z",
 		"image": "/blog/bonjourr-21.jpg",
 		"pubDate": "2025-06-03"
+	},
+	{
+		"title": "After weeks of work, our overhauled docs are here!",
+		"description": "We’ve completely revamped our documentation with a new design, better navigation, helpful guides, and fresh content.",
+		"url": "https://ko-fi.com/i/IT5D122WEA4",
+		"image": "/blog/starlight-docs-ko-fi.jpg",
+		"pubDate": "2026-07-11"
 	}
 ]

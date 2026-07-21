@@ -1,25 +1,28 @@
 ---
 title: ✍️ Notes
-description: Notes lets you write simple Markdown-based content with headings, lists, and checkboxes, including keyboard shortcuts for faster formatting.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+description: Write notes using simple Markdown syntax with headings, to-do lists, checkboxes, and keyboard shortcuts.
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
+import { LinkButton } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-Notes uses a [Markdown](https://www.markdownguide.org/cheat-sheet/)-like syntax to create titles, lists, and checkboxes. To transform a line, just add these characters at the start of a line:
+## Using notes formatting {#using-notes-formatting}
+
+Notes uses a [Markdown](https://www.markdownguide.org/cheat-sheet/)-like syntax to create headings, lists, and checkboxes. To format a line, just add these characters at the start of a line:
 
 - `#` large heading
 - `##` medium heading
 - `###` small heading
-- `-` classic list
+- `-` bulleted list
 - `[ ]` checkbox (notice the space between the brackets)
 - `[x]` checkbox, checked
 
-<LazyVideo src="/documentation/overview/notes.webm" />
+<LazyVideo src="/documentation/widgets/notes.mp4" />
 
-Currently, other Markdown features, such as italics, are not supported.
+**Other Markdown features, such as bold, italics, and links, are currently not supported.**
 
-### Keybindings
+### Keybindings {#keybindings}
 
 You can use these keyboard shortcuts while editing your Note.
 
@@ -30,3 +33,16 @@ You can use these keyboard shortcuts while editing your Note.
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd> | Create small heading  |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> | Create bullet list    |
 | <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> | Create todo list      |
+
+---
+
+_Notes is powered by pocket editor, an open source WYSIWYG editor developed specifically for Bonjourr._
+
+<LinkButton
+	href="https://github.com/victrme/pocket-editor"
+	variant="secondary"
+	icon="github"
+	iconPlacement="start"
+>
+	View pocket-editor on GitHub
+</LinkButton>

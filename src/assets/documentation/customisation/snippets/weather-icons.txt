@@ -1,0 +1,12 @@
+    /* overrides the default weather icons */ 
+
+/* replaces the day clear sky icon */
+.weather-icon#weather-day-clearsky {
+    /* set any direct URL to an image */ 
+    background-image: url("https://i.imgur.com/OYUvHWD.png");
+}
+
+/* hides the default weather icon */ 
+.weather-icon * {
+    display: none;
+}

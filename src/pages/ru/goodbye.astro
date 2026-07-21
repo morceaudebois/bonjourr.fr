@@ -1,0 +1,20 @@
+---
+import Layout from "@layouts/Layout.astro"
+import GoodbyeForm from "@components/Goodbye.astro"
+---
+
+<Layout title={`Bonjourr удалён из вашего браузера`}>
+	<GoodbyeForm>
+		<span slot="title">Спасибо, что пользовались Bonjourr.</span>
+		<span slot="desc">
+			Нам жаль, что вы уходите. Если у вас есть время, расскажите, что помогло бы сделать
+			Bonjourr лучше, спасибо! 😊
+		</span>
+
+		<span slot="label-message">Ваше сообщение</span>
+		<span slot="submit">Отправить</span>
+
+		<span slot="sent">Ваше сообщение было отправлено, спасибо!</span>
+		<span slot="back">Вернуться на главную</span>
+	</GoodbyeForm>
+</Layout>

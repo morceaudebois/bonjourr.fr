@@ -1,0 +1,13 @@
+/* change analog clock width */
+.analog {
+	border: calc(var(--clock-size) * 0.4) solid;
+}
+
+.analog-minutes, .analog-hours, .analog-seconds {
+	width: calc(var(--clock-size) * 0.4);
+}
+
+.analog-center {
+	width: calc(var(--clock-size) * 0.7);
+	height: calc(var(--clock-size) * 0.7);
+}

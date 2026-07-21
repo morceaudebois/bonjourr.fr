@@ -1,0 +1,11 @@
+.digital {
+	font-family: "Courier New";
+	/* the higher the number, the bolder */ 
+	font-weight: 400;
+}
+
+/* You can do the same with the date */
+.clock-date {
+	font-family: "Comic Sans MS";
+	font-weight: 400;
+}

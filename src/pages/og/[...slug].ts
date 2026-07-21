@@ -30,7 +30,7 @@ export const { getStaticPaths, GET } = await OGImageRoute({
 	param: "slug",
 	getImageOptions: async (_id, page: (typeof pages)[number]) => {
 		const bgImagePath = await darkenImage(
-			page.data.image ?? "/documentation/backgrounds/saad-chaudhry-sAJlWye9at8-unsplash.jpg",
+			page.data.image ?? "/documentation/docs-headers/saad-chaudhry-sAJlWye9at8-unsplash.jpg",
 		)
 
 		return {

@@ -1,51 +1,77 @@
 ---
 title: 🗣 Citations
-description: Le widget Citations permet d’afficher des phrases inspirantes ou humoristiques issues de plusieurs sources intégrées, ou d’importer vos propres citations via un fichier local ou une URL distante au format CSV.
-image: /documentation/backgrounds/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
+description: Affichez des citations inspirantes, humoristiques ou personnalisées provenant de sources intégrées ou de vos propres collections.
+image: /documentation/docs-headers/mathieu-odin-CjGsv2QjVbo-unsplash.jpg
 ---
 
-import { Code } from "@astrojs/starlight/components"
+import { Code, Aside, Steps } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-Le widget de citations peut récupérer des phrases depuis plusieurs sources :
+![Firefox vous informe de l'extension qui crée la page](@assets/documentation/widgets/quotes.png)
 
-- Par défaut, notre **[API open source de citations](https://github.com/victrme/i18n-quotes)** disponible en plusieurs langues. Il s’agit de citations motivationnelles ou inspirantes que la communauté peut enrichir via des pull requests.
-- L’API **[InspiroBot](https://inspirobot.me/)**, une IA “old school” qui génère des citations pseudo-inspirantes avec une touche humoristique. Elle détourne les citations de motivation classiques en les transformant en parodies générées par une IA. Même si nous ne sommes pas affiliés à InspiroBot, ce service a toujours été apprécié et a été intégré pour son côté décalé. Il est important de noter qu’il a plus de 10 ans et <u>**n’a aucun lien avec les tendances actuelles autour de l’IA générative**</u>.
-- L’API **[Kaamelott](https://github.com/sin0light/api-kaamelott)**, qui propose des répliques issues d’une série comique française. Disponible uniquement en français.
-- Des citations **stoïques**, inspirées de la philosophie du [stoïcisme](https://en.wikipedia.org/wiki/Stoicism).
+## Types de citations {#quote-types}
+
+Le widget Citations peut récupérer des citations depuis plusieurs sources grâce à l'option __Type de citations__ :
+
+- Par défaut, notre **[API de citations open source](https://github.com/victrme/i18n-quotes)** disponible dans plusieurs langues. Ce sont des citations générales motivantes ou inspirantes que la communauté peut gérer via des pull requests.
+- L'**API [InspiroBot](https://inspirobot.me/)**, une ancienne IA qui génère des citations apparemment inspirantes, mais avec une touche humoristique. Elle parodie les citations de motivation traditionnelles du point de vue d'une IA. Bien que nous ne soyons pas affiliés à InspiroBot, nous avons toujours trouvé ce service amusant et avons pensé qu'il serait intéressant de l'intégrer à Bonjourr. Il est important de noter qu'elle a au moins 10 ans et <u>**n'a rien à voir avec la tendance récente de l'IA générative**</u>.
+- L'**API [Kaamelott](https://github.com/sin0light/api-kaamelott)**, des citations issues d'une série télévisée humoristique française. Disponible uniquement en français.
+- Des citations **Stoïciennes** qui reflètent la [philosophie du stoïcisme](https://en.wikipedia.org/wiki/Stoicism).
 - **Hitokoto**, des citations inspirantes japonaises.
-- **Personnalisé**, pour ajouter ses propres citations directement depuis l’interface de Bonjourr.
-- **URL**, pour importer des citations depuis un fichier CSV distant.
+- **Personnalisé**, ajoutez vos propres citations directement depuis l'interface de Bonjourr.
+- **URL**, ajoutez des citations depuis un fichier CSV distant.
 
-### Importer ses propres citations
+<Aside type="tip">Faites un clic droit sur le widget Citations pour passer à la suivante.</Aside>
 
-Deux méthodes permettent d’importer ses citations : directement depuis Bonjourr ou via une URL distante. Dans les deux cas, le format attendu est le suivant :
+### Importer vos propres citations {#importing-your-own-quotes}
+
+Il existe deux façons d'importer vos propres citations : directement depuis Bonjourr ou depuis une URL distante. Dans les deux cas, voici le format que vos citations doivent respecter :
 
 <Code
-	code={
-		"Auteur, Votre citation.\nAuteur, Votre deuxième citation\\nAvec un retour à la ligne dans la citation !"
-	}
+	code={"Auteur, Votre citation.\nAuteur, Votre seconde citation\\nCette fois avec un saut de ligne !"}
 	lang="json"
 />
 
-#### Avec l’option de citations personnalisées
+#### Avec l'option citations personnalisées {#with-the-custom-quotes-option}
 
-Une fois l’option activée, il suffit d’ajouter les citations en respectant le format indiqué ci-dessus.
+Une fois l'option citations personnalisées sélectionnée, vous pouvez simplement ajouter des citations en respectant le format indiqué ci-dessus.
 
-Cette option est limitée à 8 kB de texte, soit environ 50 citations de taille standard. Cela s’explique par l’utilisation de [storage.sync](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync), qui impose cette limite par objet. **Pour des bibliothèques plus volumineuses, il est recommandé d’utiliser l’option URL.**
+Cette option est limitée à 8 ko de texte, soit environ 50 citations de taille standard. Cela est dû au fait que Bonjourr utilise [storage.sync](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) pour stocker les données, et que chaque objet est limité à 8 ko. **Si vous avez besoin de plus de citations, nous vous conseillons plutôt d'utiliser l'option URL.**
 
-#### Avec l’option URL (fichier CSV)
+#### Avec l'option URL (fichier CSV) {#with-the-url-option-csv-file}
 
-L’option URL permet de connecter Bonjourr à un fichier CSV distant contenant les citations.
+Sélectionnez l'option URL pour relier Bonjourr à l'URL directe d'un fichier CSV contenant toutes vos citations.
 
-La méthode la plus simple consiste à utiliser GitHub Gist, un service permettant d’héberger facilement un fichier :
+La méthode la plus simple consiste à utiliser GitHub Gist, un service qui permet de créer et d'héberger très facilement un fichier :
 
-1. Créer un compte sur [GitHub](https://github.com) si nécessaire, puis se connecter.
-2. Aller sur la page [GitHub Gist](https://gist.github.com/).
-3. Donner une description au fichier, par exemple “Mes citations Bonjourr”.
-4. Nommer le fichier, par exemple `bonjourr_quotes.csv`. Le nom peut être libre tant qu’il se termine par `.csv`.
-5. Ajouter les citations en respectant le format indiqué plus haut (elles pourront être modifiées ensuite).
-6. Une fois terminé, cliquer sur **Create secret gist**. Le fichier est alors créé et affiché sous forme de tableau.
-7. Cliquer sur le bouton <kbd>Raw</kbd>, copier l’URL de la page qui s’ouvre et la coller dans le champ URL de Bonjourr. Voilà !
+<LazyVideo src="/documentation/widgets/quotes-gist.mp4" autoplay={false} />
 
-<LazyVideo src="/documentation/overview/quotes-gist.webm" autoplay={false} />
+<Steps>
+1. #### Créer un compte GitHub
+
+   Créez un compte [sur GitHub](https://github.com) si vous n'en avez pas déjà un, puis connectez-vous.
+
+2. #### Créer un GitHub Gist
+
+   Rendez-vous sur la [page GitHub Gist](https://gist.github.com/).
+
+   Donnez une description à votre fichier, comme `Mes citations Bonjourr`, puis choisissez un nom de fichier comme `bonjourr_quotes.csv`. Le nom peut être n'importe lequel tant qu'il se termine par `.csv`.
+
+3. #### Ajouter vos citations
+
+   Commencez à écrire vos citations en utilisant [le formatage indiqué ci-dessus](#importing-your-own-quotes). Vous pourrez les modifier plus tard si vous le souhaitez.
+
+4. #### Créer le Gist
+
+   Une fois terminé, cliquez sur le bouton **Create secret gist**. Le fichier sera enregistré et affiché sous forme de tableau.
+
+5. #### Copier l'URL brute
+
+   Cliquez sur le bouton <kbd>Raw</kbd>, puis copiez l'URL de la page qui s'ouvre.
+
+6. #### L'ajouter dans Bonjourr
+
+   Collez l'URL dans le champ "URL" de Bonjourr. Voilà !
+</Steps>
+
+

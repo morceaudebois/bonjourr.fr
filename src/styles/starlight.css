@@ -10,8 +10,9 @@ header {
 }
 
 a,
-button {
-	/* hides tap highlight indication as we our custom one already */
+button,
+summary {
+	/* hides tap highlight indication as we have our custom one already */
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -39,9 +40,9 @@ html [data-slot="layout"] {
 }
 
 /* hides lucode's hard to remove footer from PageFrame.astro that seems to appear somehow sometimes */
-html [data-slot="layout"] footer {
+/* html [data-slot="layout"] footer {
 	display: none !important;
-}
+} */
 
 html .entry-link {
 	padding-left: 1em;
@@ -76,6 +77,13 @@ h1#_top {
 	font-size: 2.25rem;
 }
 
+/* "content not available in your language" orange message */
+/* messy selector cause it doesn't have a usable id/class */
+main > p.sl-flex:has(> svg):has(+ .markdown-wrapper) {
+	width: 100%;
+	border-radius: var(--radius);
+}
+
 .container-main h2 {
 	font-size: 1.75rem;
 }
@@ -84,13 +92,13 @@ h1#_top {
 	font-size: 1.325rem;
 }
 
-.container-main .level-h3 {
+/* .container-main .level-h3 {
 	margin-top: calc(var(--spacing) * 6);
-}
+} */
 
-.container-main .level-h4 {
+/* .container-main .level-h4 {
 	margin-top: calc(var(--spacing) * 4);
-}
+} */
 
 .sl-steps li :last-child {
 	margin-bottom: unset;

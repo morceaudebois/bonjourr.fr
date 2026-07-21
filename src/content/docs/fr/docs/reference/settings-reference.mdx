@@ -1,7 +1,7 @@
 ---
 title: Référence des paramètres
 description: Les paramètres de Bonjourr sont stockés au format JSON, que vous pouvez consulter dans la section de gestion des paramètres. Cette page explique à quoi correspond chaque propriété JSON. Dernière mise à jour pour la version 22.0.0.
-image: /documentation/backgrounds/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
+image: /documentation/docs-headers/marcsilino-padayachee-tpxOICMarz0-unsplash.jpg
 ---
 
 import { Code } from "astro-expressive-code/components"
@@ -25,38 +25,38 @@ import backgrounds from "@assets/documentation/reference/backgrounds.txt?raw"
 <Code lang="jsonc" code={general} />
 
 ## Arrière-plans
-
+## Général {#general}
 Les noms des collections dans `images` et `videos` sont liés à notre serveur et ne peuvent ni être modifiés ni être devinés.
 
-<Code lang="jsonc" code={backgrounds} />
+## Arrière-plans {#backgrounds}
 
 ## Horloge
-
+## Horloge {#clock}
 <Code lang="jsonc" code={clock} />
 
-## Liens rapides
+## Liens rapides {#links}
 
 Paramètres généraux des liens rapides.
-
+## Notes, barre de recherche et citations {#notes-search-bar-and-quotes}
 <Code lang="jsonc" code={links} />
 
-Lors de l'ajout d'un lien rapide :
+## Pomodoro {#pomodoro}
 
 <Code lang="jsonc" code={linkselem} />
-
+## Polices {#fonts}
 ## Notes, barre de recherche et citations
 
-Ces widgets fonctionnent de manière très similaire : une simple structure clé-valeur.
+## Météo {#weather}
 
 <Code lang="jsonc" code={notes} />
-
+## Salutations {#greetings}
 ## Pomodoro
 
-<Code lang="jsonc" code={pomodoro} />
+## Éléments masqués {#hide}
 
 ## Polices
-
-La plupart des champs liés aux polices sont définis automatiquement par Bonjourr et ne peuvent pas être modifiés facilement à la main.
+## Mise en page {#page-layout}
+La structure de la mise en page est relativement complexe. Les grilles correspondent aux colonnes, tandis que les éléments définissent l'alignement des widgets.
 
 <Code lang="jsonc" code={fonts} />
 

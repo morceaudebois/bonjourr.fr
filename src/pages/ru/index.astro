@@ -1,0 +1,120 @@
+---
+import Layout from "@layouts/Layout.astro"
+import Link from "@components/Link.astro"
+import Frontpage from "@components/Frontpage/Frontpage.astro"
+import Landing from "@components/Frontpage/Landing.astro"
+import Further from "@components/Frontpage/Further.astro"
+import Showcase from "@components/Frontpage/Showcase.astro"
+import Blog from "@components/Frontpage/Blog.astro"
+---
+
+<Layout
+	id="frontpage"
+	title="Bonjourr · Минималистичная и настраиваемая стартовая страница"
+	ogtitle="Bonjourr · Минималистичная и настраиваемая стартовая страница"
+	desc="Bonjourr превращает новые вкладки вашего браузера в красивую, настраиваемую и лёгкую стартовую страницу, вдохновлённую iOS. Просто, быстро и элегантно."
+>
+	<Frontpage>
+		<Landing slot="landing">
+			<span slot="subtitle">Минималистичная новая вкладка</span>
+			<span slot="download">Установить</span>
+			<span slot="online">Попробовать онлайн</span>
+			<span slot="other">Ищете для других браузеров?</span>
+		</Landing>
+
+		<Showcase slot="showcase">
+			<span slot="title">Минималистичная & лёгкая новая вкладка</span>
+			<p slot="desc">
+				Bonjourr заменяет стандартную страницу новой вкладки на нечто более утонченное и
+				минималистичное. Мы вдохновлялись языком дизайна Apple, чтобы создать стартовую
+				страницу, которая отлично выглядит и которой приятно пользоваться каждый день.
+			</p>
+
+			<span slot="dynamic-title">Динамичные фоны</span>
+			<p slot="dynamic-desc">
+				Bonjourr использует вручную отобранную коллекцию лучших фотографий, которые может
+				предложить Unsplash. Настроение снимков меняется в зависимости от времени суток: от
+				полудня до глубокой ночи.
+			</p>
+
+			<span slot="custom-title">Персонализируемый</span>
+			<p slot="custom-desc">
+				Минимализм не означает отсутствие возможностей, поэтому Bonjourr полон разнообразных
+				настроек. Добавьте индивидуальности: меняйте шрифт, загружайте свои фоны,
+				настраивайте внешний вид часов, включайте виджеты и многое другое.
+			</p>
+
+			<span slot="more-title">Ещё несколько функций</span>
+			<li slot="more-links">Быстрые ссылки</li>
+			<li slot="more-searchbar">Поисковая строка</li>
+			<li slot="more-fonts">Собственные шрифты</li>
+			<li slot="more-langs">Многоязычность</li>
+			<li slot="more-pomodoro">Помидоро</li>
+
+			<li slot="more-darkmode">Тёмный режим</li>
+			<li slot="more-notes">Заметки и списки дел</li>
+			<li slot="more-quotes">Цитаты</li>
+			<li slot="more-css">Пользовательский стиль</li>
+			<li slot="more-no-ai">Без генеративного ИИ</li>
+		</Showcase>
+
+		<h2 slot="open-title">🔒 Открытый исходный код и упор на конфиденциальность</h2>
+		<p slot="open-text">
+			Bonjourr создан двумя независимыми разработчиками, которые любят качественные вещи и <i
+				>на самом деле</i
+			> считают конфиденциальность важной. Мы принципиально не собираем личные данные наших пользователей,
+			поэтому вы можете начать пользоваться Bonjourr сразу, без необходимости регистрироваться или
+			входить в аккаунт.
+		</p>
+
+		<Further slot="further">
+			<span slot="title">Хотите пойти дальше?</span>
+
+			<span slot="contact-title">Связаться с нами</span>
+			<span slot="contact-desc">
+				Присоединяйтесь к нам в Bluesky или Discord. Вы можете поделиться своими идеями и
+				узнать последние новости о разработке. Или же отправьте нам <a
+					style="text-decoration: underline"
+					href="mailto:bonjourr.app@protonmail.com">письмо по почте</a
+				>!
+			</span>
+			<span slot="contact-button-bluesky">Bluesky</span>
+			<span slot="contact-button-discord">Discord</span>
+
+			<span slot="docs-title">Документация</span>
+			<span slot="docs-desc">
+				Узнайте всё о Bonjourr и его возможностях из нашей иллюстрированной документации.
+				Познакомьтесь с тем, как можно внести вклад в проект и расширить возможности
+				настройки.
+			</span>
+			<span slot="docs-button">Документация</span>
+		</Further>
+
+		<Blog slot="blog" readMoreLabel="Read more →">
+			<span slot="blog-title">Последние обновления</span>
+			<span slot="blog-desc"
+				>Читайте свежие новости Bonjourr, информацию о ходе разработки и анонсы новых
+				версий.</span
+			>
+
+			<span slot="blog-read-all">Все обновления</span>
+		</Blog>
+
+		<h2 slot="donate-title">✨ Поддержать проект ✨</h2>
+		<p slot="donate-text">
+			Поскольку Bonjourr — бесплатный продукт, который уважает конфиденциальность и не
+			собирает и не продает ваши данные, пожертвования остаются единственным способом
+			поддерживать его работу.<br /><br />
+
+			Ваша поддержка позволяет нам уделять больше времени Bonjourr и воплощать в жизнь мечту
+			заниматься этим проектом на постоянной основе. В знак благодарности: если вы сделаете
+			пожертвование сейчас, ваше имя появится в Bonjourr в следующем месяце! (<Link
+				style="text-decoration: underline"
+				href="/docs/settings-management/notifications/#%EF%B8%8F-notification-des-donateurs"
+				>Подробнее</Link
+			>)
+		</p>
+
+		<span slot="donate-fiat">Поддержать на Ko-Fi</span>
+	</Frontpage>
+</Layout>

@@ -1,0 +1,15 @@
+---
+// SmallDocsImage.astro
+---
+
+<div class="small-docs-image">
+	<slot />
+</div>
+
+<style>
+	.small-docs-image :global(img) {
+		display: block;
+		max-width: 400px;
+		margin-inline: auto;
+	}
+</style>

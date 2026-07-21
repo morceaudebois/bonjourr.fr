@@ -1,49 +1,63 @@
 ---
 title: CSS snippets
-description: CSS snippets
-image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
+description: Customise Bonjourr beyond the built-in settings with ready-to-use CSS snippets for colors, widgets, backgrounds, and more.
+image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
 import { Code } from "astro-expressive-code/components"
+import { Aside } from "@astrojs/starlight/components"
+import SmallDocsImage from "@components/SmallDocsImage.astro"
+import LazyVideo from "@components/LazyVideo.astro"
 
-import rolex from "@assets/documentation/snippets/rolex.txt?raw"
-import noGpu from "@assets/documentation/snippets/no-gpu.txt?raw"
-import potato from "@assets/documentation/snippets/potato.txt?raw"
-import noCredits from "@assets/documentation/snippets/no-credits.txt?raw"
-import clockWidth from "@assets/documentation/snippets/clock-width.txt?raw"
-import colors from "@assets/documentation/snippets/colors.txt?raw"
-import transparentBackground from "@assets/documentation/snippets/transparent-background.txt?raw"
-import portraitBackground from "@assets/documentation/snippets/portrait-background.txt?raw"
-import centerSearchbar from "@assets/documentation/snippets/center-searchbar.txt?raw"
-import searchbarLogo from "@assets/documentation/snippets/searchbar-logo.txt?raw"
-import MostVisitedLimit from "@assets/documentation/snippets/most-visited-limit.txt?raw"
-import weatherIcons from "@assets/documentation/snippets/weather-icons.txt?raw"
-import settingsIcon from "@assets/documentation/snippets/settings-icon.txt?raw"
+import rolex from "@assets/documentation/customisation/snippets/rolex.txt?raw"
+import noGpu from "@assets/documentation/customisation/snippets/no-gpu.txt?raw"
+import potato from "@assets/documentation/customisation/snippets/potato.txt?raw"
+import noCredits from "@assets/documentation/customisation/snippets/no-credits.txt?raw"
+import clockWidth from "@assets/documentation/customisation/snippets/clock-width.txt?raw"
+import colors from "@assets/documentation/customisation/snippets/colors.txt?raw"
+import transparentBackground from "@assets/documentation/customisation/snippets/transparent-background.txt?raw"
+import portraitBackground from "@assets/documentation/customisation/snippets/portrait-background.txt?raw"
+import roundSearchbar from "@assets/documentation/customisation/snippets/round-searchbar.txt?raw"
+import searchbarLogo from "@assets/documentation/customisation/snippets/searchbar-logo.txt?raw"
+import MostVisitedLimit from "@assets/documentation/customisation/snippets/most-visited-limit.txt?raw"
+import weatherIcons from "@assets/documentation/customisation/snippets/weather-icons.txt?raw"
+import settingsIcon from "@assets/documentation/customisation/snippets/settings-icon.txt?raw"
+import clockFont from "@assets/documentation/customisation/snippets/clock-font.txt?raw"
+import glassyIcon from "@assets/documentation/customisation/snippets/glassy-icons.txt?raw"
 
-Bonjourr is customizable through its settings interface, but there are many more things you can do! Copy and paste those style snippets in their dedicated section of the settings to unlock some new possibilities.
+Bonjourr's built-in settings cover most customisation needs, but CSS snippets let you go even further. Simply copy and paste a snippet into the **Custom CSS** section to tweak or extend Bonjourr's appearance.
 
-Want your own style snippet here?
-[Contact us!](/#contact)
+<Aside type="tip" title="Get your own snippet here">
+  Have a useful CSS snippet to share? We'd love to include it in this collection. [Contact us!](/#further)
+</Aside>
 
-## Backgrounds
+## How to use CSS snippets? {#how-to-use-css-snippets}
 
-### Portrait background
+<LazyVideo src="/documentation/customisation/use-custom-css.mp4" />
 
-<Code lang="css" code={portraitBackground} />
+## Colors and icons {#colors-and-icons}
 
-### Transparent backgrounds (Zen browser)
+### Add or change some colors {#add-or-change-some-colors}
 
-<Code lang="css" code={transparentBackground} />
+Using CSS variables, you can easily change the font and icon colors in Bonjourr.
 
-## Colors and icons
+![Showcasing what the CSS variables can do with colors](@assets/documentation/customisation/snippets/colors.png)
 
-### Add or change some colors
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={colors} />
+</details>
 
-<Code lang="css" code={colors} />
+### Custom weather icons {#custom-weather-icons}
 
-### Custom weather icons
+<SmallDocsImage>
+  ![A custom settings icon in Bonjourr](@assets/documentation/customisation/snippets/weather-icons.png)
+</SmallDocsImage>
 
-<Code lang="css" code={weatherIcons} />
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={weatherIcons} />
+</details>
 
 <table>
   <thead>
@@ -58,7 +72,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-brokenclouds"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-brokenclouds"></use>
         </svg>
       </td>
       <td>Broken clouds</td>
@@ -69,7 +83,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-clearsky"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-clearsky"></use>
         </svg>
       </td>
       <td>Clear sky</td>
@@ -80,7 +94,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-fewclouds"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-fewclouds"></use>
         </svg>
       </td>
       <td>Few clouds</td>
@@ -91,7 +105,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-lightrain"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-lightrain"></use>
         </svg>
       </td>
       <td>Light rain</td>
@@ -102,7 +116,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-mist"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-mist"></use>
         </svg>
       </td>
       <td>Mist</td>
@@ -113,7 +127,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-overcastclouds"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-overcastclouds"></use>
         </svg>
       </td>
       <td>Overcast clouds</td>
@@ -124,7 +138,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-rain"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-rain"></use>
         </svg>
       </td>
       <td>Rain</td>
@@ -135,7 +149,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-snow"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-snow"></use>
         </svg>
       </td>
       <td>Snow</td>
@@ -146,7 +160,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-sunnyrain"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-sunnyrain"></use>
         </svg>
       </td>
       <td>Sunny rain</td>
@@ -157,7 +171,7 @@ Want your own style snippet here?
     <tr>
       <td>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <use href="/documentation/weather-sprites.svg#weather-day-thunderstorm"></use>
+          <use href="/documentation/customisation/weather-sprites.svg#weather-day-thunderstorm"></use>
         </svg>
       </td>
       <td>Thunderstorm</td>
@@ -167,54 +181,125 @@ Want your own style snippet here?
   </tbody>
 </table>
 
-### Custom settings icon
+### Custom settings icon {#custom-settings-icon}
 
-<Code lang="css" code={settingsIcon} />
+<SmallDocsImage>
+  ![A custom settings icon in Bonjourr](@assets/documentation/customisation/snippets/settings-icon.png)
+</SmallDocsImage>
 
-## Colors
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={settingsIcon} />
+</details>
 
-### Add or change some colors
+## Search bar {#search-bar}
 
-<Code lang="css" code={colors} />
+### Making the search bar round {#making-the-search-bar-round}
 
-## Quick links
+![Round search bar in Bonjourr thanks to CSS](@assets/documentation/customisation/snippets/round-searchbar.png)
 
-### Limit my most visited
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={roundSearchbar} />
+</details>
 
-<Code lang="css" code={MostVisitedLimit} />
+### Adding a logo to the left of the searchbar {#adding-a-logo-to-the-left-of-the-searchbar}
 
-## Clock
+![Searchbar with a Google logo](@assets/documentation/customisation/snippets/searchbar-logo.png)
 
-### I like my clocks thick
-
-<Code lang="css" code={clockWidth} />
-
-### Rolex 😎
-
-<Code lang="css" code={rolex} />
-
-## Search bar
-
-### Centering the searchbar placeholder
-
-<Code lang="css" code={centerSearchbar} />
-
-### Adding a logo to the left of the searchbar
-
-<Code lang="css" code={searchbarLogo} />
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={searchbarLogo} />
+</details>
 
 *Submitted by [Kim Visnes](https://bsky.app/profile/visn.es)*
 
-## Other
+## Clock {#clock}
 
-### I don't care about artist exposure
+### Custom clock font
+
+Replace the font names with any font installed on your computer. [Learn more](/docs/customisation/layout-and-fonts/#other-custom-fonts)
+
+![Bonjourr with funky fonts](@assets/documentation/customisation/snippets/clock-font.png)
+
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={clockFont} />
+</details>
+
+### I like my clocks thick {#i-like-my-clocks-thick}
+
+_Makes the analog clock thicker._
+
+![Bonjourr with a thick clock](@assets/documentation/customisation/snippets/clock-width.png)
+
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={clockWidth} />
+</details>
+
+### Rolex 😎 {#rolex-}
+*Transforms the analog clock into a Rolex.*
+
+![A Rolex right in Bonjourr](@assets/documentation/customisation/snippets/rolex.png)
+
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={rolex} />
+</details>
+
+## Quick Links {#quick-links}
+
+### Glassy icon background
+
+Bored of the white icon background but still want a background for your links? This frosted glass effect might suit you better.
+
+![Quick links with frosted glass background](@assets/documentation/customisation/snippets/glassy-icons.png)
+
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={glassyIcon} />
+</details>
+
+### Limit my most visited Quick Links {#limit-my-most-visited-quick-links}
+
+<Code lang="css" code={MostVisitedLimit} />
+
+## Backgrounds {#backgrounds}
+
+### Contain background (good for portrait images) {#contain-background-good-for-portrait-images}
+
+Sometimes if you want to use portrait images as your background, it can be nice to have them uncropped.
+
+![A contained portrait photo in Bonjourr with layout lightly edited](@assets/documentation/customisation/snippets/portrait-background.png)
+
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={portraitBackground} />
+</details>
+
+<Aside type="note">If you like this, you're gonna love our [upcoming frame mode](https://github.com/victrme/Bonjourr/issues/827)!</Aside>
+
+### Transparent background (Zen browser) {#transparent-background-zen-browser}
+
+![Bonjourr in Zen with a transparent background](@assets/documentation/customisation/snippets/transparent-background.png)
+
+<details>
+	<summary>Reveal CSS snippet</summary>
+	<Code lang="css" code={transparentBackground} />
+</details>
+
+## Miscellaneous {#miscellaneous}
+
+### I don't care about artist exposure {#i-dont-care-about-artist-exposure}
 
 <Code lang="css" code={noCredits} />
 
-### No GPU, only CPU 😠
+### No GPU, only CPU 😠 {#no-gpu-only-cpu-}
 
 <Code lang="css" code={noGpu} />
 
-### For laggy computers
+### For laggy computers {#for-laggy-computers}
+_This can improve Bonjourr's performance on older hardware_
 
 <Code lang="css" code={potato} />

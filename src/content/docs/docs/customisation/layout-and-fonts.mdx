@@ -1,23 +1,55 @@
 ---
 title: Layout & Fonts
-description: Layout & Fonts lets you change the page structure of widgets using different column layouts and choose typography from a range of Fontsource fonts.
-image: /documentation/backgrounds/su-san-lee-g3PyXO4A0yc-unsplash.jpg
+description: Customise your new tab layout with different widget arrangements and choose from hundreds of fonts.
+image: /documentation/docs-headers/su-san-lee-g3PyXO4A0yc-unsplash.jpg
 ---
 
+import { Aside } from "@astrojs/starlight/components"
 import LazyVideo from "@components/LazyVideo.astro"
 
-## 📄 Page layouts
+## 📄 Page layouts {#page-layouts}
 
-There are 3 different page layouts to choose from: single, double and triple column. Each layout saves the position and alignment of your widgets independently.
+Bonjourr offers three page layouts: single, double, and triple column. Each layout has its own widget positions and alignment settings, allowing you to create different setups and switch between them.
 
-These options only affect the current layout:
+The following settings are saved separately for each layout:
 
 - Widget toggle (enable switches)
 - All options in grid toolbox
 - Reset layout
 
-<LazyVideo src="/documentation/overview/move-elem.webm" />
+<LazyVideo src="/documentation/customisation/move-elem.mp4" />
 
-## 📚 Fonts
+<Aside type="note">The page layout system is _currently being redesigned_ to make it more stable and easier to use. You can follow the progress <a href="https://github.com/victrme/Bonjourr/issues/804">here</a>.</Aside>
 
-Bonjourr gets its fonts from Fontsource. If you want to see previews of the fonts Bonjourr offers, please visit [fontsource.org](https://fontsource.org/).
+## 📚 Fonts {#fonts}
+
+Bonjourr uses fonts from Fontsource, an **open-source** font catalog. You can choose from hundreds of typefaces to customise the look and feel of your new tab page.
+
+To preview the available fonts, visit [fontsource.org](https://fontsource.org/).
+
+[![Preview Bonjourr's fonts from Fontsource](@assets/documentation/customisation/fontsource.png)](https://fontsource.org/)
+
+### But what about other fonts? {#other-custom-fonts}
+
+Use CSS in the **Custom Style** field and apply to Bonjourr [any font that's installed on your computer](https://wordmark.it/). For instance:
+```css
+/* sets a custom font on all widgets */
+#interface {
+    font-family: Comic Sans MS;
+}
+```
+
+You can even use the `@import` or `@font-face` properties to import fonts from a remote URL coming from [Google Fonts](https://fonts.google.com) or any other font service:
+
+```css
+/* sets a custom font from Google Fonts on all widgets */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
+#interface, #pomodoro_container {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+```
+
+![Bonjourr with a custom font from Google Fonts](@assets/documentation/customisation/google-fonts.png)

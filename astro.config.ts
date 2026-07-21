@@ -2,8 +2,10 @@ import { defineConfig, sharpImageService } from "astro/config"
 import sitemap from "@astrojs/sitemap"
 import icon from "astro-icon"
 import starlight from "@astrojs/starlight"
-
 import lucode from "lucode-starlight"
+import { unified } from "@astrojs/markdown-remark"
+import { remarkHeadingId } from "remark-custom-heading-id"
+
 export default defineConfig({
 	site: "https://bonjourr.fr",
 	devToolbar: {
@@ -33,6 +35,11 @@ export default defineConfig({
 	},
 	// re-enables HTML whitespaces after Astro 7 update https://github.com/withastro/astro/commit/57ead0d5938e5988e3f896f3d6f8ef4516c4923f
 	compressHTML: false,
+	markdown: {
+		processor: unified({
+			remarkPlugins: [remarkHeadingId],
+		}),
+	},
 	integrations: [
 		icon(),
 		sitemap({
@@ -42,6 +49,7 @@ export default defineConfig({
 					en: "en",
 					fr: "fr",
 					be: "be",
+					ru: "ru",
 				},
 			},
 		}),
@@ -72,6 +80,9 @@ export default defineConfig({
 				be: {
 					label: "Беларуская",
 					lang: "be",
+				ru: {
+					label: "Русский",
+					lang: "ru",
 				},
 			},
 			sidebar: [
@@ -80,6 +91,7 @@ export default defineConfig({
 					translations: {
 						fr: "Premiers pas",
 						be: "У пачатку",
+						ru: "Первые шаги",
 					},
 					items: ["docs", "docs/quick-guide"],
 				},
@@ -89,6 +101,7 @@ export default defineConfig({
 					translations: {
 						fr: "Widgets",
 						be: "Віджэты",
+						ru: "Виджеты",
 					},
 					items: [
 						"docs/widgets/quick-links",
@@ -106,6 +119,7 @@ export default defineConfig({
 					translations: {
 						fr: "Personnalisation",
 						be: "Дапасаванне",
+						ru: "Персонализация",
 					},
 					items: [
 						"docs/customisation/backgrounds",
@@ -122,6 +136,7 @@ export default defineConfig({
 					translations: {
 						fr: "Gestion de Bonjourr",
 						be: "Кіраванне Bonjourr",
+						ru: "Настройка Bonjourr",
 					},
 					items: [
 						"docs/settings-management/import-and-export",
@@ -135,6 +150,7 @@ export default defineConfig({
 					translations: {
 						fr: "Références",
 						be: "Карыснае",
+						ru: "Ресурсы",
 					},
 					items: [
 						"docs/reference/faq",
