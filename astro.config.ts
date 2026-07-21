@@ -80,6 +80,7 @@ export default defineConfig({
 				be: {
 					label: "Беларуская",
 					lang: "be",
+				},
 				ru: {
 					label: "Русский",
 					lang: "ru",
