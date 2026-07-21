@@ -146,7 +146,7 @@ export const ui = {
 		"Install Bonjourr on Safari": "Установить Bonjourr для Safari",
 		"Download Bonjourr for Edge": "Скачать Bonjourr для Edge",
 	},
-	en: {
+	be: {
 		trusted: "Больш за 300 тыс. карыстальнікаў з усяго свету",
 		crafted: "Створана ў Францыі з ❤️",
 		"Privacy policy": "Палітыка прыватнасці",
