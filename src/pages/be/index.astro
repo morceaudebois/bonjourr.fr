@@ -1,0 +1,115 @@
+---
+import Layout from "@layouts/Layout.astro"
+
+import Frontpage from "@components/Frontpage/Frontpage.astro"
+import Landing from "@components/Frontpage/Landing.astro"
+import Further from "@components/Frontpage/Further.astro"
+import Showcase from "@components/Frontpage/Showcase.astro"
+import Blog from "@components/Frontpage/Blog.astro"
+---
+
+<Layout
+	id="frontpage"
+	title="Bonjourr · Мінімалістычная пачатковая старонка"
+	ogtitle="Bonjourr · Мінімалістычная пачатковая старонка"
+	desc="Bonjourr зробіць новую картку вашага браўзера прыгажэйшай і лягчэйшай. Вы зможаце дапасаваць яе да свайго густу. Проста, хутка, элегантна."
+>
+	<Frontpage>
+		<Landing slot="landing">
+			<span slot="subtitle">Мінімалістычная пачатковая старонка</span>
+			<span slot="download">Сцягнуць</span>
+			<span slot="online">Вэб-версія</span>
+			<span slot="other">Шукаеце для іншага браўзера?</span>
+		</Landing>
+
+		<Showcase slot="showcase">
+			<span slot="title">Мінімалістычная і лёгкая пачатковая старонка</span>
+			<p slot="desc">
+				Bonjourr заменіць вашу новую картку чымсьці больш вытанчаным і мінімалістычным.
+				Каб стварыць пачатковую старонку, якая мае файны выгляд і якую, адначасова з тым,
+				прыемна выкарыстоўваць, мы натхняліся прынцыпамі дызайну Apple.
+			</p>
+
+			<span slot="dynamic-title">Дынамічныя фоны</span>
+			<p slot="dynamic-desc">
+				Мы ўласнаручна збіраем калекцыю найлепшых фотаздымкаў, якія толькі ёсць на Unsplash.
+				На працягу сутак іх настрой мяняецца, адпавядаючы часіне дня: ад поўдня да самай 
+				позняй ночы.
+			</p>
+
+			<span slot="custom-title">Поўны кантроль</span>
+			<p slot="custom-desc">
+				Мінімалізм нельга прыраўноўваць да браку функцый, і таму Bonjourr цалкам імі
+				напоўнены. Зрабіце так, каб усё адпавядала вашаму густу: мяняйце шрыфты, дадавайце
+				свае фоны, змяняйце выгляд гадзінніка, уключайце віджэты і не толькі.
+			</p>
+
+			<span slot="more-title">Яшчэ некалькі асаблівасцяў</span>
+			<li slot="more-links">Хуткія спасылкі</li>
+			<li slot="more-searchbar">Радок пошуку</li>
+			<li slot="more-fonts">Уласныя шрыфты</li>
+			<li slot="more-langs">Шматмоўе</li>
+			<li slot="more-pomodoro">Таймер «памідор»</li>
+
+			<li slot="more-darkmode">Цёмная тэма</li>
+			<li slot="more-notes">Нататкі, спісы спраў</li>
+			<li slot="more-quotes">Цытаты</li>
+			<li slot="more-css">Уласны CSS</li>
+			<li slot="more-no-ai">Без генератыўнага ШІ</li>
+		</Showcase>
+
+		<h2 slot="open-title">🔒 Прыватнасць і адкрыты зыходны код</h2>
+		<p slot="open-text">
+			Bonjourr створаны двума незалежнымі распрацоўнікамі, якія любяць добра зробленыя рэчы
+			і <i>насамрэч</i> вераць у важнасць прыватнасці. Нам не патрэбныя асабістыя звесткі пра
+			нашых карыстальнікаў, таму вы можаце пачаць карыстацца Bonjourr адразу пасля
+			ўсталявання. Для таго вам не спатрэбіцца ствараць уліковы запіс.
+		</p>
+
+		<Blog slot="blog" readMoreLabel="Чытаць далей →">
+			<span slot="blog-title">Апошнія навіны</span>
+			<span slot="blog-desc"
+				>Чытайце апошнія навіны пра распрацоўванне, новыя версіі Bonjourr і пра сам дадатак.</span
+			>
+
+			<span slot="blog-read-all">Усе навіны</span>
+		</Blog>
+
+		<Further slot="further">
+			<span slot="title">Чагосьці не стае?</span>
+
+			<span slot="contact-title">Сувязь</span>
+			<span slot="contact-desc">
+				Заходзьце да нас у Bluesky або на сервер у Discord. Там вы можаце выказаць нам свае
+				ідэі ці пачытаць апошнія навіны пра распрацоўванне дадатку. Альбо дашліце нам <a
+					style="text-decoration: underline"
+					href="mailto:bonjourr.app@protonmail.com">ліст</a
+				>!
+			</span>
+			<span slot="contact-button-bluesky">Bluesky</span>
+			<span slot="contact-button-discord">Discord</span>
+
+			<span slot="docs-title">Дакументацыя</span>
+			<span slot="docs-desc">
+				Калі вы хочаце ведаць усё пра Bonjourr і яго функцыі, скраыстайцеся нашай
+				ілюстраванай дакументацыяй. Ёсць наборы налад CSS!
+			</span>
+			<span slot="docs-button">Дакументацыя</span>
+		</Further>
+
+		<h2 slot="donate-title">✨ Падтрымайце нас ✨</h2>
+		<p slot="donate-text">
+			Bonjorr — бясплатны дадатак, які шануе вашу прыватнасць і не збірае вашы даныя, таму адзіны
+			спосаб падтрымаць яго распрацоўку і існаванне — грашовая падтрымка.<br /><br />
+			
+			Дзякуючы ёй мы зможам вылучаць больш часу нашаму дадатку і здзейсніць нашу мару — працаваць
+			над ім афіцыйна і на поўную стаўку. Калі вы зараз ахвяруеце нам грошы, то ў якасці падзякі
+			ў наступным месяцы ваша імя з'явіцца ў самім Bonjourr! (<a
+				style="text-decoration: underline"
+				href="/docs/overview#supporters-notification">Даведацца больш</a
+			>)
+		</p>
+
+		<span slot="donate-fiat">Падтрымайце нас на Ko-Fi</span>
+	</Frontpage>
+</Layout>
