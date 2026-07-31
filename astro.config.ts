@@ -48,6 +48,7 @@ export default defineConfig({
 				locales: {
 					en: "en",
 					fr: "fr",
+					be: "be",
 					ru: "ru",
 				},
 			},
@@ -76,6 +77,10 @@ export default defineConfig({
 					label: "Français",
 					lang: "fr",
 				},
+				be: {
+					label: "Беларуская",
+					lang: "be",
+				},
 				ru: {
 					label: "Русский",
 					lang: "ru",
@@ -86,6 +91,7 @@ export default defineConfig({
 					label: "Getting started",
 					translations: {
 						fr: "Premiers pas",
+						be: "У пачатку",
 						ru: "Первые шаги",
 					},
 					items: ["docs", "docs/quick-guide"],
@@ -95,6 +101,7 @@ export default defineConfig({
 					label: "Widgets",
 					translations: {
 						fr: "Widgets",
+						be: "Віджэты",
 						ru: "Виджеты",
 					},
 					items: [
@@ -112,6 +119,7 @@ export default defineConfig({
 					label: "Customisation",
 					translations: {
 						fr: "Personnalisation",
+						be: "Дапасаванне",
 						ru: "Персонализация",
 					},
 					items: [
@@ -128,6 +136,7 @@ export default defineConfig({
 					label: "Managing Bonjourr",
 					translations: {
 						fr: "Gestion de Bonjourr",
+						be: "Кіраванне Bonjourr",
 						ru: "Настройка Bonjourr",
 					},
 					items: [
@@ -141,6 +150,7 @@ export default defineConfig({
 					label: "Reference",
 					translations: {
 						fr: "Références",
+						be: "Карыснае",
 						ru: "Ресурсы",
 					},
 					items: [
