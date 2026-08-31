@@ -11,7 +11,7 @@
 		"@iconify-json/fa7-brands": "^1.2.2",
 		"@iconify-json/heroicons": "^1.2.3",
 		"astro": "^7.0.3",
-		"astro-expressive-code": "^0.41.7",
+		"astro-expressive-code": "^0.44.1",
 		"astro-icon": "^1.1.5",
 		"detect-browser": "^5.3.0",
 		"prettier": "^3.8.3",
