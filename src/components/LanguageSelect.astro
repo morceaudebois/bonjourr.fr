@@ -45,7 +45,7 @@ const pathWithoutLang = pathname.replace(/^\/[a-z]{2}(\/|$)/, "/")
 					const defaultLang = el.dataset.defaultLang
 					const lang = el.value
 
-					globalThis.location.href = lang === defaultLang ? path : `/${lang}${path}`
+					window.location.href = lang === defaultLang ? path : `/${lang}${path}`
 				})
 			}
 		})
