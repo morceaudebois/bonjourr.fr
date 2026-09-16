@@ -23,12 +23,12 @@ pagefind: false
     "#settings-management": "/fr/docs/settings-management/import-and-export/"
   };
 
-  const target = redirects[globalThis.location.hash];
+  const target = redirects[window.location.hash];
 
   if (target) {
-    globalThis.location.replace(target);
+    window.location.replace(target);
   } else {
-    globalThis.location.replace("/fr/docs/quick-guide/");
+    window.location.replace("/fr/docs/quick-guide/");
   }
 `}
 </script>
