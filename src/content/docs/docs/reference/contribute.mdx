@@ -61,15 +61,16 @@ This is an optional part, but if you want to see what your translation looks lik
    <kbd>F12</kbd>, <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>, or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>.
 
 3. #### Insert your translation
-    Add your translation to this command and paste it into the console:
+    Paste & run this JavaScript code below into the console and add your own `translations.json` file content into the text input `prompt();` (the webpage will reload automatically after you paste your own `translations.json` file content into the text input `prompt();` and confirm it) and you should see your new strings! :
 
    ```js
-    const myTranslationFile = "/* copy and paste translations.json here */";
-    localStorage.translations = JSON.stringify(myTranslationFile)
+    const myTranslationFile = prompt("Paste your own translations.json file content here");
+    if (myTranslationFile != null) {
+        window.localStorage?.setItem("translations", myTranslationFile);
+        window.location.reload();
+    }
    ```
 
-4. #### Reload the page
-    You should see your new strings!
 </Steps>
 
 ## 🧑‍💻 New features & bug fixes
