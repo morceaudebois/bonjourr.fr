@@ -1,0 +1,4 @@
+/* applies your custom font all over Bonjourr's UI, including the settings */ 
+body {
+	font-family: var(--font-family);
+}

@@ -1,0 +1,27 @@
+/* align settings icon to the top left */
+#show-settings {
+	top: 0;
+	left: 0;
+	bottom: unset;
+	right: unset;
+	padding: 20px 0 0 20px;
+}
+
+#show-settings::after {
+	top: unset;
+	left: 70px
+}
+
+/* align settings icon to the top right (choose either) */
+#show-settings {
+	top: 0;
+	right: 0;
+	bottom: unset;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+#show-settings::after {
+	top: unset;
+}
